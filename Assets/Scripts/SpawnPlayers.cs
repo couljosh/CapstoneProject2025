@@ -12,8 +12,9 @@ public class SpawnPlayers : MonoBehaviour
     public GameObject Spawn3;
     public GameObject Spawn4;
 
-    void Start()
+    private void Start()
     {
+        Debug.Log("Hit");
         int i = 0;
 
         foreach (var gamePad in Gamepad.all)
