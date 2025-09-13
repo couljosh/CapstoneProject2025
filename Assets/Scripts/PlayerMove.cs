@@ -11,9 +11,8 @@ public class PlayerMove : MonoBehaviour
 
     //Actions
     private InputAction moveAction;
-    private InputAction lookAction;
     private InputAction kickAction;
-    private InputAction interactAction;
+    private InputAction spawnBombAction;
 
     //Movement Value
     private Vector3 moveAmt = Vector3.zero;
@@ -43,8 +42,9 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
+        spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
         //lookAction = inputActions.FindActionMap("Player" + playerNum).FindAction("Look");
-        //kickAction = inputActions.FindActionMap("Player" + playerNum).FindAction("Kick");
+        kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
         //interactAction = inputActions.FindActionMap("Player" + playerNum).FindAction("Spawn Bomb");
 
         rb = GetComponent<Rigidbody>();
@@ -53,16 +53,10 @@ public class PlayerMove : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveAmt = context.ReadValue<Vector2>();
-        print("called");
     }
 
     void Update()
     {
-        //Debug.Log(kickAction);
-        Debug.Log(moveAction + " " + gameObject.name);
-
-
-
         //Kick Functionality
         Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
 
@@ -72,11 +66,11 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
 
-            //if (kickAction.WasPressedThisFrame())
-            //{
-            //    Debug.Log("reached");
-            //    hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * kickStrength);
-            //}
+            if (kickAction.WasPressedThisFrame())
+            {
+                Debug.Log("reached");
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * kickStrength);
+            }
         }
     }
 

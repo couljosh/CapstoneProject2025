@@ -14,13 +14,10 @@ public class SpawnPlayers : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Hit");
         int i = 0;
 
         foreach (var gamePad in Gamepad.all)
         {
-            print(gamePad.name);
-
             PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
             i++;
         }
