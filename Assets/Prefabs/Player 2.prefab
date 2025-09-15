@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: -8130815133573332991}
   - component: {fileID: 4523866319423858330}
   - component: {fileID: 111248737947078388}
+  - component: {fileID: 6375792539722515905}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: ObjectDestroyer
@@ -468,6 +469,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &6375792539722515905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118915545251881927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnDelay: 3
+  spawnNum: 2
+  playerMesh: {fileID: 6057071280188953176}
+  playerInput: {fileID: 5208972760965963325}
+  playerLight: {fileID: 189264627241786446}
+  bombText: {fileID: 5920519289481015260}
 --- !u!1 &4963036882003696991
 GameObject:
   m_ObjectHideFlags: 0

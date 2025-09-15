@@ -6,20 +6,45 @@ public class PlayerDeath : MonoBehaviour
 {
 
     public float respawnDelay;
-    public BombExplode bombExplosionScript;
     public int spawnNum;
+
+    public MeshRenderer playerMesh;
+    public PlayerInput playerInput;
+    public Light playerLight;
+    public GameObject bombText;
+
+   
+
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
 
     }
 
-    public IEnumerator PlayerDie()
+    public void PlayerDie()
     {
-        gameObject.SetActive(false);
-        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
-        yield return new WaitForSeconds(respawnDelay);
-        gameObject.SetActive(true);
+        StartCoroutine(PlayerDieOrder());   
     }
 
+    public IEnumerator PlayerDieOrder()
+    {
+        Debug.Log("reached1");
+        playerMesh.enabled = false;
+        playerInput.enabled = false;
+        playerLight.gameObject.SetActive(false);
+        bombText.SetActive(false);
+        Debug.Log("reached2");
+        yield return new WaitForSeconds(respawnDelay);
+        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+        playerMesh.enabled = true;
+        playerInput.enabled = true;
+        playerLight.gameObject.SetActive(true);
+        bombText.SetActive(true);
+        Debug.Log("reached3");
+
+    }
 }

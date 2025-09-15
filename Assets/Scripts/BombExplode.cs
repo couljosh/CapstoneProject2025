@@ -11,6 +11,7 @@ public class BombExplode : MonoBehaviour
     public LayerMask kickableMask;
     public LayerMask playerMask;
     private BlockDestruction blockDestruction;
+    private PlayerDeath playerDeathScript;
     public float forceStrength;
 
     void Start()
@@ -46,7 +47,7 @@ public class BombExplode : MonoBehaviour
             //look for player
             if(col.gameObject.GetComponent<PlayerMove>()) //a script only players have
             {
-                Destroy(col.gameObject);
+                col.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             }
 
             //look for other bombs

@@ -166,10 +166,11 @@ GameObject:
   - component: {fileID: 3909969008973954251}
   - component: {fileID: 4806280122476170944}
   - component: {fileID: 5898320196082057187}
-  - component: {fileID: 7071372508467383774}
   - component: {fileID: 8620095879880935457}
   - component: {fileID: 7258981957616231407}
   - component: {fileID: 8215734786529892059}
+  - component: {fileID: 7071372508467383774}
+  - component: {fileID: 4756858654633455137}
   m_Layer: 8
   m_Name: Player 3
   m_TagString: ObjectDestroyer
@@ -320,6 +321,55 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   kickStrength: 70000
+--- !u!114 &8620095879880935457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ad8e897f6513b4da064bf3c1ae0360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnNum: 3
+--- !u!114 &7258981957616231407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
+  bombCountText: {fileID: 7672107513123323838}
+  playerNum: 1
+  bombRegenTime: 2
+  bombUseCooldown: 0.2
+  maxBombsHeld: 3
+--- !u!114 &8215734786529892059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0.13242912, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &7071372508467383774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +500,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8620095879880935457
+--- !u!114 &4756858654633455137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,46 +509,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2887584843794151332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ad8e897f6513b4da064bf3c1ae0360, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnDelay: 3
   spawnNum: 3
---- !u!114 &7258981957616231407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
-  bombCountText: {fileID: 7672107513123323838}
-  playerNum: 1
-  bombRegenTime: 2
-  bombUseCooldown: 0.2
-  maxBombsHeld: 3
---- !u!114 &8215734786529892059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0.13242912, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
+  playerMesh: {fileID: 3016761805067118768}
+  playerInput: {fileID: 7071372508467383774}
+  playerLight: {fileID: 2822127922221191590}
+  bombText: {fileID: 7672107513123323838}
 --- !u!1 &7672107513123323838
 GameObject:
   m_ObjectHideFlags: 0
