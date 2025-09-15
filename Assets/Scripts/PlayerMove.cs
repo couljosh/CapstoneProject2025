@@ -55,23 +55,24 @@ public class PlayerMove : MonoBehaviour
         moveAmt = context.ReadValue<Vector2>();
     }
 
-    void Update()
+    public void OnKick(InputAction.CallbackContext context)
     {
-        //Kick Functionality
-        Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
-
         RaycastHit hit;
 
         if (Physics.Raycast(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable))
         {
             Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-
-            if (kickAction.WasPressedThisFrame())
-            {
                 Debug.Log("reached");
                 hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * kickStrength);
-            }
+            
         }
+    }
+
+    void Update()
+    {
+        Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
+
+       
     }
 
     public void FixedUpdate()

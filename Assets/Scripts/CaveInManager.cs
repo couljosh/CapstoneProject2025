@@ -43,12 +43,12 @@ public class CaveInManager : MonoBehaviour
         }
 
         //debug spawn
-        if (Input.GetButtonDown("Fire3"))
-        {
-            print("spawned terrain");
-            GameObject.Instantiate(notificationPrefab, canvas.transform);
-            StartCoroutine(spawnTerrain());
-        }
+        //if (Input.GetButtonDown("Fire3"))
+        //{
+        //    print("spawned terrain");
+        //    GameObject.Instantiate(notificationPrefab, canvas.transform);
+        //    StartCoroutine(spawnTerrain());
+        //}
     }
 
     

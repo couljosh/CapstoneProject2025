@@ -318,7 +318,7 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 0
-  kickStrength: 20
+  kickStrength: 70000
 --- !u!114 &7071372508467383774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +428,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9b0bd179-b3ce-4f0a-aab7-6b5f9f1495f0
     m_ActionName: 'Player1/Spawn Bomb[/DualSenseGamepadHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5898320196082057187}
+        m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+        m_MethodName: OnKick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7da19706-279a-4d2b-8cf3-2c0cf16fc329
+    m_ActionName: 'Player1/Kick[/DualSenseGamepadHID/buttonSouth]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player1

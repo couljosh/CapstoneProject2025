@@ -52,6 +52,7 @@ public class BombExplode : MonoBehaviour
             //look for other bombs
             if(col.gameObject.tag == "Bomb")
             {
+                print("bomb found");
                 Vector3 forceVector = col.gameObject.transform.position - transform.position;
                 col.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrength, ForceMode.Impulse);
             }

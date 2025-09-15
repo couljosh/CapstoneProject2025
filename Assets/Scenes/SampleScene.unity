@@ -14191,7 +14191,7 @@ MonoBehaviour:
   floor: {fileID: 633275272}
   canvas: {fileID: 591973927}
   notificationPrefab: {fileID: 2498503887632607413, guid: 448a547ed29c52e418e38df33442f604, type: 3}
-  chancePerSecond: 10
+  chancePerSecond: 3
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
