@@ -36,7 +36,6 @@ public class PlayerMove : MonoBehaviour
 
     private void OnDisable()
     {
-        inputActions.FindActionMap("Player1").Disable();
     }
 
     private void Start()

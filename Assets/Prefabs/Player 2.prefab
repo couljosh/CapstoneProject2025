@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 5208972760965963325}
   - component: {fileID: -8130815133573332991}
   - component: {fileID: 4523866319423858330}
+  - component: {fileID: 111248737947078388}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: ObjectDestroyer
@@ -154,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 3118915545251881927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.63, y: 1, z: 27.79}
+  m_LocalPosition: {x: -16.72, y: 1, z: 3.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -449,6 +450,24 @@ MonoBehaviour:
   bombRegenTime: 2
   bombUseCooldown: 0.2
   maxBombsHeld: 3
+--- !u!114 &111248737947078388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118915545251881927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4963036882003696991
 GameObject:
   m_ObjectHideFlags: 0

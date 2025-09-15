@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using Unity.VisualScripting;
+
 
 public class SpawnPlayers : MonoBehaviour
 {
@@ -7,10 +10,7 @@ public class SpawnPlayers : MonoBehaviour
     public PlayerInputManager playerInputManager;
     public GameObject[] Players;
 
-    public GameObject Spawn1;
-    public GameObject Spawn2;
-    public GameObject Spawn3;
-    public GameObject Spawn4;
+    public float respawnDelay;
 
     private void Start()
     {

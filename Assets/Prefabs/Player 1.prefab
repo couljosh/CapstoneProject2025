@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 1630251052995215303}
   - component: {fileID: 7976989412786637625}
   - component: {fileID: 1931101412896608550}
+  - component: {fileID: -3152859555391173462}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: ObjectDestroyer
@@ -640,6 +641,24 @@ MonoBehaviour:
   bombRegenTime: 2
   bombUseCooldown: 0.2
   maxBombsHeld: 3
+--- !u!114 &-3152859555391173462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261414448945768688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &3926277327152463818
 GameObject:
   m_ObjectHideFlags: 0
