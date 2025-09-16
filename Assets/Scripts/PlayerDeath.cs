@@ -33,13 +33,11 @@ public class PlayerDeath : MonoBehaviour
     public IEnumerator PlayerDieOrder()
     {
         playerMesh.enabled = false;
-        playerInput.enabled = false;
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
         yield return new WaitForSeconds(respawnDelay);
         transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
         playerMesh.enabled = true;
-        playerInput.enabled = true;
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);
 

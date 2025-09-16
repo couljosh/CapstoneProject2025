@@ -453,9 +453,9 @@ MonoBehaviour:
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombCountText: {fileID: 5920519289481015260}
   playerNum: 1
-  bombRegenTime: 2
+  bombRegenTime: 4
   bombUseCooldown: 0.2
-  maxBombsHeld: 3
+  maxBombsHeld: 2
 --- !u!114 &111248737947078388
 MonoBehaviour:
   m_ObjectHideFlags: 0
