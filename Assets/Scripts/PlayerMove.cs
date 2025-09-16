@@ -24,27 +24,21 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Kick Variables")]
     public float rayLength;
-    public GameObject rayStartPos;
+    public GameObject rayStartPosOne;
+    public GameObject rayStartPosTwo;
+    public GameObject rayStartPosThree;
     public LayerMask kickable;
     public float kickStrength;
 
 
-    private void OnEnable()
-    {
-        inputActions.FindActionMap("Player1").Enable();
-    }
 
-    private void OnDisable()
-    {
-    }
-
-    private void Start()
+    private void Awake()
     {
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
+
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
-        //lookAction = inputActions.FindActionMap("Player" + playerNum).FindAction("Look");
+
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
-        //interactAction = inputActions.FindActionMap("Player" + playerNum).FindAction("Spawn Bomb");
 
         rb = GetComponent<Rigidbody>();
     }
@@ -58,9 +52,13 @@ public class PlayerMove : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable))
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable))
         {
-            Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
+            Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
+            Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
+            Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
                 Debug.Log("reached");
                 hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * kickStrength);
             
@@ -69,7 +67,9 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(rayStartPos.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
+        Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
+        Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
+        Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
 
        
     }
