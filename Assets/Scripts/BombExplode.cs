@@ -10,6 +10,7 @@ public class BombExplode : MonoBehaviour
     public LayerMask terrainMask;
     public LayerMask kickableMask;
     public LayerMask playerMask;
+    public LayerMask gemMask;
     private BlockDestruction blockDestruction;
     private PlayerDeath playerDeathScript;
     public float forceStrength;
@@ -35,7 +36,7 @@ public class BombExplode : MonoBehaviour
 
     public void GetExplosionRadius(Vector3 center)
     {
-        Collider[] hitblocks = Physics.OverlapSphere(center, radius, terrainMask | kickableMask | playerMask);
+        Collider[] hitblocks = Physics.OverlapSphere(center, radius, terrainMask | kickableMask | playerMask | gemMask);
         foreach (Collider col in hitblocks)
         {
             //look for destructible objects
@@ -51,7 +52,7 @@ public class BombExplode : MonoBehaviour
             }
 
             //look for other bombs
-            if(col.gameObject.tag == "Bomb")
+            if(col.gameObject.tag == "Bomb" || col.gameObject.tag == "Gem")
             {
                 print("bomb found");
                 Vector3 forceVector = col.gameObject.transform.position - transform.position;

@@ -134,6 +134,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 256
+  gemMask:
+    serializedVersion: 2
+    m_Bits: 512
   forceStrength: 4000
 --- !u!54 &1345251030674072925
 Rigidbody:
