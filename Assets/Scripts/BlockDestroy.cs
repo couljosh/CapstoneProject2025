@@ -29,7 +29,7 @@ public class BlockDestroy : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
 
         //make box trigger only
-        gameObject.GetComponent<BoxCollider>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     public void enableCube()
@@ -38,6 +38,6 @@ public class BlockDestroy : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = true;
 
         //re-enable collision
-        gameObject.GetComponent<BoxCollider>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 }
