@@ -15,7 +15,7 @@ public class SceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //change this to when the game is finished.
         {
             print("new scene");
             SceneManager.LoadScene(sceneNumber);
