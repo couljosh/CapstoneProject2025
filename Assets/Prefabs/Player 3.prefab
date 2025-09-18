@@ -587,7 +587,9 @@ MonoBehaviour:
   playerLight: {fileID: 2822127922221191590}
   bombText: {fileID: 7672107513123323838}
   collectedGems: []
+  gemPrefab: {fileID: 0}
   gemCount: 0
+  scatterForce: 50000
 --- !u!1 &5131605351460886873
 GameObject:
   m_ObjectHideFlags: 0
