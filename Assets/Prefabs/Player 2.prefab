@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 4523866319423858330}
   - component: {fileID: 111248737947078388}
   - component: {fileID: 6375792539722515905}
+  - component: {fileID: -6266177740654586316}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: ObjectDestroyer
@@ -490,8 +491,25 @@ MonoBehaviour:
   spawnNum: 2
   playerMesh: {fileID: 6057071280188953176}
   playerInput: {fileID: 5208972760965963325}
+  playerCollider: {fileID: 5215254673009193428}
   playerLight: {fileID: 189264627241786446}
   bombText: {fileID: 5920519289481015260}
+  collectedGems: []
+  gemPrefab: {fileID: 0}
+  gemCount: 0
+  scatterForce: 50000
+--- !u!114 &-6266177740654586316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118915545251881927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2e745914001344faf96e82adc39ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4286716305031785844
 GameObject:
   m_ObjectHideFlags: 0

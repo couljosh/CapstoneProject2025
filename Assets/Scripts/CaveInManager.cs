@@ -69,7 +69,10 @@ public class CaveInManager : MonoBehaviour
             foreach(Collider col in hitblocks)
             {
                 if (col.gameObject.GetComponent<MeshRenderer>().enabled == false) //if the box is invisible
-                col.gameObject.GetComponent<BlockDestroy>().enableCube();
+                {
+                    col.gameObject.GetComponent<BlockDestroy>().enableCube();
+                }    
+               
             }
 
         }
