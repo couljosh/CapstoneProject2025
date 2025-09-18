@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class GemCollection : MonoBehaviour
 {
-    public UnityEvent gemCollected;
 
     public float radius;
     public LayerMask terrainMask;
@@ -14,6 +13,7 @@ public class GemCollection : MonoBehaviour
     public float collectTime;
     private float elapsedTime;
     private bool isReleased;
+    private bool isCollected;
 
 
     private Vector3 collectedPos;
@@ -74,8 +74,11 @@ public class GemCollection : MonoBehaviour
 
         if (lerpPercent >= 1 || gemDist <= 0.5)
         {
-           //GemCollected();
-           gemCollected.Invoke();
+                if (isCollected)
+                {
+                    GemCollected();
+                    isCollected = false;
+                }
         } 
         }
     }
@@ -96,6 +99,8 @@ public class GemCollection : MonoBehaviour
 
     void GemCollected()
     {
-        Destroy(gameObject);
+
+        Collecter.GetComponent<PointSystem>().gemCount += 1;
+        isCollected = true;
     }
 }
