@@ -7,6 +7,10 @@ public class BlockDestroy : MonoBehaviour
 
     public float destroyDelay;
 
+    private void Start()
+    {
+        
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -29,7 +33,7 @@ public class BlockDestroy : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
 
         //make box trigger only
-        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().isTrigger = true;
     }
 
     public void enableCube()
@@ -38,6 +42,6 @@ public class BlockDestroy : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = true;
 
         //re-enable collision
-        gameObject.GetComponent<BoxCollider>().enabled = true;
+        gameObject.GetComponent<BoxCollider>().isTrigger = false;
     }
 }

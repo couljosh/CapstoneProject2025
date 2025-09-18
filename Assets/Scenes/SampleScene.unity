@@ -14769,7 +14769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2e745914001344faf96e82adc39ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemCollectionScript: {fileID: 0}
+  gemCount: 0
 --- !u!4 &1519781458
 Transform:
   m_ObjectHideFlags: 0
@@ -14794,7 +14794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1534712055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
