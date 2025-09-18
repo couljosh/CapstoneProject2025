@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6300526740077056103}
   - component: {fileID: 7511138525300281431}
+  - component: {fileID: 6191220467940381236}
   - component: {fileID: 4881049840861052736}
   - component: {fileID: 2930091263916310480}
-  - component: {fileID: 6191220467940381236}
   m_Layer: 9
   m_Name: Gem
   m_TagString: Gem
@@ -58,6 +58,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.18
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &6191220467940381236
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122791135550930985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4881049840861052736
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,6 +118,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59452334948a87143bb7a71af163a11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   radius: 0.7
   terrainMask:
     serializedVersion: 2
@@ -104,27 +140,6 @@ MonoBehaviour:
   rb: {fileID: 4881049840861052736}
   collectTime: 0.7
   pickupDelay: 0.5
---- !u!135 &6191220467940381236
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122791135550930985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7767108392003761976
 GameObject:
   m_ObjectHideFlags: 0

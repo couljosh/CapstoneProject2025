@@ -1,8 +1,12 @@
+using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Events;
 
 public class GemCollection : MonoBehaviour
 {
+    public UnityEvent gemCollected;
+
     public float radius;
     public LayerMask terrainMask;
     public Rigidbody rb;
@@ -70,7 +74,8 @@ public class GemCollection : MonoBehaviour
 
         if (lerpPercent >= 1 || gemDist <= 0.5)
         {
-           GemCollected();
+           //GemCollected();
+           gemCollected.Invoke();
         } 
         }
     }
