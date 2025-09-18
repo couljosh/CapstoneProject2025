@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 public class PointSystem : MonoBehaviour
 {
-    public int gemCount;
 
     void Start()
     {
@@ -14,4 +13,6 @@ public class PointSystem : MonoBehaviour
     {
         
     }
+
+
 }

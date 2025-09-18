@@ -560,8 +560,11 @@ MonoBehaviour:
   spawnNum: 4
   playerMesh: {fileID: 2043691989178532213}
   playerInput: {fileID: 7848877375522014343}
+  playerCollider: {fileID: 8774528382084606259}
   playerLight: {fileID: 3513481764980957644}
   bombText: {fileID: 570445374732610714}
+  collectedGems: []
+  gemCount: 0
 --- !u!1 &1844389104051878003
 GameObject:
   m_ObjectHideFlags: 0

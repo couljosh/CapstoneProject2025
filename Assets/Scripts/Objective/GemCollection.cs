@@ -13,7 +13,9 @@ public class GemCollection : MonoBehaviour
     public float collectTime;
     private float elapsedTime;
     private bool isReleased;
-    private bool isCollected;
+    public bool isCollecting;
+
+    public GameObject gemPrefab;
 
 
     private Vector3 collectedPos;
@@ -34,7 +36,7 @@ public class GemCollection : MonoBehaviour
 
         if (!isReleased)
         {
-            Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask);
+            Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask, QueryTriggerInteraction.Ignore);
 
             if (hitblocks.Length == 0)
             {
@@ -57,8 +59,8 @@ public class GemCollection : MonoBehaviour
     }
 
     public void RecieveGem()
-    {
-        if(Time.time > releasedTime + pickupDelay)
+    {   
+        if(Time.time > releasedTime + pickupDelay && isCollecting)
         {
         elapsedTime += Time.deltaTime;
 
@@ -67,18 +69,14 @@ public class GemCollection : MonoBehaviour
         
         float lerpPercent = elapsedTime / collectTime;
 
-        Debug.Log(collectedPos);
 
         transform.position = Vector3.Slerp(collectedPos, Collecter.transform.position, lerpPercent);
         float gemDist = Vector3.Distance(transform.position, Collecter.transform.position);
 
-        if (lerpPercent >= 1 || gemDist <= 0.5)
+            if (lerpPercent >= 1 || gemDist <= 0.5)
         {
-                if (isCollected)
-                {
-                    GemCollected();
-                    isCollected = false;
-                }
+                GemCollected();
+                isCollecting = false;
         } 
         }
     }
@@ -91,6 +89,7 @@ public class GemCollection : MonoBehaviour
             {                
                 collectedPos = gameObject.transform.position;
                 Collecter = other.gameObject;
+                isCollecting = true;
             }
         }
     }
@@ -99,8 +98,8 @@ public class GemCollection : MonoBehaviour
 
     void GemCollected()
     {
-
-        Collecter.GetComponent<PointSystem>().gemCount += 1;
-        isCollected = true;
+        Collecter.GetComponent<PlayerDeath>().collectedGems.Add(gemPrefab.gameObject);
+        rb.useGravity = true;
+        gameObject.SetActive(false);
     }
 }

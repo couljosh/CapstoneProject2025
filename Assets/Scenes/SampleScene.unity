@@ -18553,6 +18553,8 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   playerLight: {fileID: 0}
   bombText: {fileID: 0}
+  collectedGems: []
+  gemCount: 0
 --- !u!4 &2056526949
 Transform:
   m_ObjectHideFlags: 0
@@ -18579,6 +18581,10 @@ PrefabInstance:
     - target: {fileID: 1122791135550930985, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
       propertyPath: m_Name
       value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881049840861052736, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
+      propertyPath: m_Mass
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
       propertyPath: m_LocalPosition.x
