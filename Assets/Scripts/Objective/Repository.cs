@@ -2,6 +2,7 @@ using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class Repository : MonoBehaviour
 {
@@ -9,13 +10,16 @@ public class Repository : MonoBehaviour
     public float depositTime;
     public float elaspedTime;
 
+    public GameObject gemCountText;
+
     void Start()
     {
-        
+        depositTotal = 0;
     }
     void Update()
     {
-        
+        gemCountText.GetComponent<TextMeshPro>().text = depositTotal.ToString();  
+
     }
     private void OnTriggerEnter(Collider other)
     {
