@@ -138,6 +138,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   forceStrength: 4000
+  rayLength: 2
+  degreeShift: 10
+  rayOffset: 0.5
 --- !u!54 &1345251030674072925
 Rigidbody:
   m_ObjectHideFlags: 0
