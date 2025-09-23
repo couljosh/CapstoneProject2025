@@ -343,6 +343,9 @@ MonoBehaviour:
   depositTime: 1.5
   elaspedTime: 0
   gemCountText: {fileID: 912433164967714320}
+  repoLight: {fileID: 4103709788926188442}
+  flickerSpeed: 40
+  isIncrease: 0
 --- !u!114 &2985539006568890845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +408,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 4.8
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 41.081966
   m_InnerSpotAngle: 41.08196
