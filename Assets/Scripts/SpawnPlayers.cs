@@ -12,6 +12,11 @@ public class SpawnPlayers : MonoBehaviour
 
     public float respawnDelay;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     private void Start()
     {
         int i = 0;
