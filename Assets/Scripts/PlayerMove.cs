@@ -1,7 +1,8 @@
+using FMODUnity;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-using UnityEngine.Events;
 public class PlayerMove : MonoBehaviour
 {
 
@@ -86,6 +87,7 @@ public class PlayerMove : MonoBehaviour
         {
             Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
+
         }
 
     }

@@ -212,7 +212,7 @@ MonoBehaviour:
       Data4: -1738363911
     Path: event:/SFX_Bomb/BombExplode
   Event: 
-  EventPlayTrigger: 2
+  EventPlayTrigger: 0
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0

@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,8 @@ public class BombExplode : MonoBehaviour
 
         GetExplosionDetection(transform.position);
         GetExplosionDetection(new Vector3(0,rayOffset,0));
+
+        RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
 
         Destroy(gameObject);
 
