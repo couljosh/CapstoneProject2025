@@ -54,7 +54,11 @@ public class Repository : MonoBehaviour
             elaspedTime = 0;
         }
 
-        repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
+        if(playerDeath != null && playerDeath.collectedGems.Count > 0)
+        {
+            repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
+        }
+
     }
 
     private void OnTriggerExit(Collider other)

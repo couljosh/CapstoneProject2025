@@ -267,9 +267,9 @@ GameObject:
   - component: {fileID: 27218046}
   - component: {fileID: 27218045}
   - component: {fileID: 27218044}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,9 +688,9 @@ GameObject:
   - component: {fileID: 206840055}
   - component: {fileID: 206840054}
   - component: {fileID: 206840053}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,9 +872,9 @@ GameObject:
   - component: {fileID: 311601697}
   - component: {fileID: 311601696}
   - component: {fileID: 311601695}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3469,9 +3469,9 @@ GameObject:
   - component: {fileID: 495288578}
   - component: {fileID: 495288577}
   - component: {fileID: 495288576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11978,9 +11978,9 @@ GameObject:
   - component: {fileID: 1083327111}
   - component: {fileID: 1083327110}
   - component: {fileID: 1083327109}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12086,9 +12086,9 @@ GameObject:
   - component: {fileID: 1122643081}
   - component: {fileID: 1122643080}
   - component: {fileID: 1122643079}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17265,9 +17265,9 @@ GameObject:
   - component: {fileID: 1534841619}
   - component: {fileID: 1534841618}
   - component: {fileID: 1534841617}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17495,9 +17495,9 @@ GameObject:
   - component: {fileID: 1621821850}
   - component: {fileID: 1621821849}
   - component: {fileID: 1621821848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19247,9 +19247,9 @@ GameObject:
   - component: {fileID: 1856126324}
   - component: {fileID: 1856126323}
   - component: {fileID: 1856126322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Bedrock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19401,7 +19401,7 @@ PrefabInstance:
       objectReference: {fileID: 200029390}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText

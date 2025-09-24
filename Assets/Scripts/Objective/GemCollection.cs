@@ -77,6 +77,7 @@ public class GemCollection : MonoBehaviour
         {
                 GemCollected();
                 isCollecting = false;
+                elapsedTime = 0;
         } 
         }
     }

@@ -138,7 +138,10 @@ MonoBehaviour:
   gemMask:
     serializedVersion: 2
     m_Bits: 512
-  forceStrength: 4000
+  bedrock:
+    serializedVersion: 2
+    m_Bits: 1024
+  forceStrength: 2000
   rayLength: 2
   degreeShift: 10
   rayOffset: 0.5
