@@ -1619,14 +1619,20 @@ Transform:
   m_PrefabInstance: {fileID: 871050243}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 --- !u!1 &206840051
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &173157541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
   m_PrefabInstance: {fileID: 387610615}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &187072705
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
   - component: {fileID: 206840052}
   - component: {fileID: 206840055}
   - component: {fileID: 206840054}
@@ -1643,11 +1650,16 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (10)
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
   - component: {fileID: 187072706}
   - component: {fileID: 187072708}
   - component: {fileID: 187072707}
   m_Layer: 5
   m_Name: Team2WinsText
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,8 +1667,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 --- !u!4 &206840052
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!224 &187072706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1792,12 +1807,16 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &205655856
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
   m_GameObject: {fileID: 206840051}
   serializedVersion: 2
@@ -1883,6 +1902,8 @@ MeshFilter:
   m_GameObject: {fileID: 206840051}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
   m_GameObject: {fileID: 205655855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1950,6 +1971,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 453136111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &227825098 stripped
 Transform:
@@ -2397,7 +2421,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
   m_LocalPosition: {x: -6.31, y: 20, z: -2.02}
+=======
+  m_LocalPosition: {x: -6.061, y: 27, z: -3}
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 =======
   m_LocalPosition: {x: -6.061, y: 27, z: -3}
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
@@ -6944,6 +6972,7 @@ Transform:
   m_PrefabInstance: {fileID: 900662313}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
   serializedVersion: 6
   m_Component:
   - component: {fileID: 591973931}
@@ -7384,6 +7413,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
 --- !u!1001 &789956464
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1001 &602291917
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 PrefabInstance:
@@ -9097,6 +9128,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771206343}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &793699063 stripped
 Transform:
@@ -11274,6 +11308,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
   m_PrefabInstance: {fileID: 1742468985}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &921004403 stripped
 Transform:
@@ -12238,7 +12275,10 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0badc303e438a684cb3f5554eeb7dc64, type: 3}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &936546665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
@@ -13435,6 +13475,7 @@ MeshFilter:
   m_GameObject: {fileID: 1083327107}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 --- !u!1 &1122643077
 GameObject:
   m_ObjectHideFlags: 0
@@ -13544,6 +13585,8 @@ MeshFilter:
   m_GameObject: {fileID: 1122643077}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1001 &1163482181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13612,6 +13655,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1671439494}
   m_SourcePrefab: {fileID: 100100000, guid: aae57309483c1654c8b45aeda0b96146, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1001 &1171919133
 PrefabInstance:
@@ -15641,8 +15687,11 @@ Transform:
   m_PrefabInstance: {fileID: 1051000120}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 --- !u!1001 &1285251711
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1 &1268626287
 GameObject:
   m_ObjectHideFlags: 0
@@ -16900,9 +16949,21 @@ PrefabInstance:
       value: 1.5378451
       objectReference: {fileID: 0}
     - target: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5378451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5378451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
       value: -7.438045
+=======
+      value: 0.8276
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 =======
       value: 0.8276
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
@@ -16914,7 +16975,11 @@ PrefabInstance:
     - target: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
       value: 4.7241163
+=======
+      value: 2.4877944
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 =======
       value: 2.4877944
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
@@ -18873,6 +18938,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0badc303e438a684cb3f5554eeb7dc64, type: 3}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1 &1519781456
 GameObject:
@@ -21624,6 +21692,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647381871}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1 &1649402369
 GameObject:
@@ -25216,6 +25287,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6300526740077056103, guid: 2f7f67ad9028e474ba329213c9def297, type: 3}
   m_PrefabInstance: {fileID: 1986575116}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
+=======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!4 &1975665904 stripped
 Transform:
@@ -26408,7 +26482,10 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
 =======
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 --- !u!1 &2062713398
 GameObject:
   m_ObjectHideFlags: 0
@@ -28619,6 +28696,7 @@ SceneRoots:
   - {fileID: 1670730268}
   - {fileID: 2056526949}
 <<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
+<<<<<<< Updated upstream:Assets/Scenes/Round Test.unity
   - {fileID: 595346645648173323}
   - {fileID: 1388093956}
   - {fileID: 1793384478}
@@ -28630,6 +28708,8 @@ SceneRoots:
   - {fileID: 753779494}
   - {fileID: 315161080}
   - {fileID: 387610615}
+=======
+>>>>>>> Stashed changes:Assets/Scenes/Level2.unity
 =======
 >>>>>>> Stashed changes:Assets/Scenes/Level2.unity
   - {fileID: 1519781458}
