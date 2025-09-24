@@ -21,7 +21,7 @@ public class BagGrowWithGemsHeld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(startingPosition.z * (1 + (playerDeath.gemCount * (percentageChangePerGem / 100) / 2)));
+        //print(startingPosition.z * (1 + (playerDeath.gemCount * (percentageChangePerGem / 100) / 2)));
 
         if (playerDeath.gemCount > 0 && playerDeath.gemCount != gemsLastFrame) //gems are more than zero, and the gem count has changed since last frame
             //change size based on gem count

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2161455577680048981}
   - component: {fileID: 6713519523818572442}
+  - component: {fileID: 4230729663388130016}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -47,3 +48,27 @@ MonoBehaviour:
   scene:
     m_Handle: 0
   sceneNumber: 1
+  roundTime: 0
+  endOfRoundDelay: 0
+  redRepository: {fileID: 0}
+  blueRepository: {fileID: 0}
+  teamOneWinText: {fileID: 0}
+  teamTwoWinText: {fileID: 0}
+  drawText: {fileID: 0}
+  tint: {fileID: 0}
+  timerText: {fileID: 0}
+--- !u!114 &4230729663388130016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572955040075578291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752415ec687a61498d42c7cafb9d36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterPrefabs: []
+  gemPrefabs: []
+  terrainPieces: []

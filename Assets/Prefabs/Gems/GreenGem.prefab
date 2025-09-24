@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4881049840861052736}
   - component: {fileID: 2930091263916310480}
   m_Layer: 9
-  m_Name: Start Gem
+  m_Name: GreenGem
   m_TagString: Gem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1122791135550930985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.83, y: 1.1, z: -0.53}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.537845, y: 1.537845, z: 1.537845}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -191,7 +191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a83c1eb616f6e7849b58115cdc366ce7, type: 2}
+  - {fileID: 2100000, guid: 3e954c3675b073d4aa587bbdf9a34542, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,7 +277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1990b437fe2aacb4b84783d27726c5fe, type: 2}
+  - {fileID: 2100000, guid: dcd9c9e67998634429ad3d237e751072, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
