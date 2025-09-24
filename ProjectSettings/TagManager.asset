@@ -7,6 +7,8 @@ TagManager:
   - ObjectDestroyer
   - Bomb
   - Gem
+  - Terrain
+  - Bedrock
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - terrain
   - player
   - gem
-  - 
+  - bedrock
   - 
   - 
   - 
