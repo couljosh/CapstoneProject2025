@@ -307,8 +307,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../FMODProjects/CapstoneProject2025/CapstoneProject2025.fspro
-  sourceBankPath: ../../FMODProjects/CapstoneProject2025/Build
+  sourceProjectPath: Assets/Plugins/FMOD/CapstoneProject2025/CapstoneProject2025.fspro
+  sourceBankPath: Assets/Plugins/FMOD/CapstoneProject2025/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -320,6 +320,7 @@ MonoBehaviour:
   TargetAssetPath: FMODBanks
   TargetBankFolder: 
   EventLinkage: 0
+  SerializeGUIDsOnly: 0
   LoggingLevel: 2
   SpeakerModeSettings: []
   SampleRateSettings: []
@@ -342,22 +343,22 @@ MonoBehaviour:
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  CurrentVersion: 131632
-  HideSetupWizard: 1
+  CurrentVersion: 131849
+  HideSetupWizard: 0
   LastEventReferenceScanVersion: 131632
   Platforms:
-  - {fileID: 494529857631734882}
-  - {fileID: 8874400737893247738}
-  - {fileID: -5972378862989318763}
-  - {fileID: -1546788353127664303}
   - {fileID: -6687355425336244650}
-  - {fileID: 8602192697812529247}
-  - {fileID: 7978163449536003242}
+  - {fileID: -5972378862989318763}
+  - {fileID: -2203513872725022257}
+  - {fileID: -1546788353127664303}
+  - {fileID: 494529857631734882}
+  - {fileID: 627251787479699754}
   - {fileID: 2579735618136704641}
   - {fileID: 2911515952627100001}
   - {fileID: 3625518122520229771}
-  - {fileID: 627251787479699754}
-  - {fileID: -2203513872725022257}
+  - {fileID: 7978163449536003242}
+  - {fileID: 8602192697812529247}
+  - {fileID: 8874400737893247738}
   MigratedPlatforms: 0500000000000000060000000a0000000800000009000000120000000c000000150000000b0000000200000001000000
 --- !u!114 &494529857631734882
 MonoBehaviour:
@@ -940,16 +941,16 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 52eb9df5db46521439908db3a29a1bbb
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - 46fbfdf3fc43db0458918377fd40293e
+  - de700ef3f37a49b58a57ae3addf01ad9
   - 2c5177b11d81d824dbb064f9ac8527da
   - b7716510a1f36934c87976f3a81dbf3d
   - c88d16e5272a4e241b0ef0ac2e53b73d
-  - de700ef3f37a49b58a57ae3addf01ad9
-  - fd7c55dab0fce234b8c25f6ffca523c1
+  - 52eb9df5db46521439908db3a29a1bbb
+  - e7a046c753c3c3d4aacc91f6597f310d
   codecChannels:
     Value: []
     HasValue: 0
