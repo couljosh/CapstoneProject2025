@@ -17,6 +17,8 @@ public class Repository : MonoBehaviour
 
     public bool isIncrease;
 
+    public bool depositAll = false;
+
     void Start()
     {
         depositTotal = 0;
@@ -48,10 +50,20 @@ public class Repository : MonoBehaviour
 
         if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0)
         {
+            if (depositAll)
+            {
 
-            playerDeath.collectedGems.RemoveAt(0);
-            depositTotal += 1;
-            elaspedTime = 0;
+                depositTotal += playerDeath.collectedGems.Count;
+                playerDeath.collectedGems.Clear();
+                elaspedTime = 0;
+            }
+            else
+            {
+                playerDeath.collectedGems.RemoveAt(0);
+                depositTotal += 1;
+                elaspedTime = 0;
+            }
+             
         }
 
         if(playerDeath != null && playerDeath.collectedGems.Count > 0)
