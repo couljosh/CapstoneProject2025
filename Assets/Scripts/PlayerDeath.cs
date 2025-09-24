@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
 
     public float respawnDelay;
     public int spawnNum;
+    [HideInInspector] public bool isPlayerDead;
 
     public MeshRenderer playerMesh;
     public PlayerInput playerInput;
@@ -42,6 +44,8 @@ public class PlayerDeath : MonoBehaviour
 
     public IEnumerator PlayerDieOrder()
     {
+        isPlayerDead = true;
+
         //Turn the player off
         playerMesh.enabled = false;
         playerCollider.enabled = false;
@@ -60,6 +64,7 @@ public class PlayerDeath : MonoBehaviour
         playerCollider.enabled = true;
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);
+        isPlayerDead = false;
 
     }
 
