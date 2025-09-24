@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour
 
     public int playerNum;
 
+
     [Header("Kick Variables")]
     public float rayLength;
     public GameObject rayStartPosOne;

@@ -287,7 +287,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveSpeed: 10
   rotateSpeed: 10
-  playerNum: 1
+  playerNum: 2
   rayLength: 1
   rayStartPosOne: {fileID: 6907275532527671633}
   rayStartPosTwo: {fileID: 7017057214183428279}
@@ -489,6 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnDelay: 3
   spawnNum: 2
+  isPlayerDead: 0
   playerMesh: {fileID: 6057071280188953176}
   playerInput: {fileID: 5208972760965963325}
   playerLight: {fileID: 189264627241786446}
