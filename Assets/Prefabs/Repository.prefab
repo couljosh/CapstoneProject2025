@@ -340,12 +340,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositTotal: 0
-  depositTime: 1.5
+  depositTime: 5
   elaspedTime: 0
   gemCountText: {fileID: 912433164967714320}
   repoLight: {fileID: 4103709788926188442}
   flickerSpeed: 40
   isIncrease: 0
+  depositAll: 1
 --- !u!114 &2985539006568890845
 MonoBehaviour:
   m_ObjectHideFlags: 0

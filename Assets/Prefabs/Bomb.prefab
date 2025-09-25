@@ -141,7 +141,7 @@ MonoBehaviour:
   bedrock:
     serializedVersion: 2
     m_Bits: 1024
-  forceStrength: 2000
+  forceStrength: 1250
   rayLength: 2
   degreeShift: 10
   rayOffset: 0.5
@@ -153,8 +153,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2306722039232007320}
   serializedVersion: 4
-  m_Mass: 100
-  m_Drag: 4
+  m_Mass: 75
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2306722039232007320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 

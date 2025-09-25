@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  moveSpeed: 10
+  moveSpeed: 6
   rotateSpeed: 10
   playerNum: 1
   rayLength: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 64
-  kickStrength: 70000
+  kickStrength: 50000
 --- !u!114 &5208972760965963325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnDelay: 3
   spawnNum: 2
+  isPlayerDead: 0
   playerMesh: {fileID: 6057071280188953176}
   playerInput: {fileID: 5208972760965963325}
   playerCollider: {fileID: 5215254673009193428}

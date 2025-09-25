@@ -12,7 +12,7 @@ public class GemCollection : MonoBehaviour
 
     public float collectTime;
     private float elapsedTime;
-    private bool isReleased;
+    public bool isReleased;
     public bool isCollecting;
 
     public GameObject gemPrefab;

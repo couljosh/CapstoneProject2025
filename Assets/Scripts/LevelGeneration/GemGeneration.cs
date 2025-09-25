@@ -5,8 +5,11 @@ using UnityEngine;
 public class GemGeneration : MonoBehaviour
 {
     public List<GameObject> clusterPrefabs = new List<GameObject>();
-    public List<GameObject> gemPrefabs = new List<GameObject>();
     public List<GameObject> spawnLocations = new List<GameObject>();
+
+    public List<GameObject> spawnedGems = new List<GameObject>();
+
+
 
     public GameObject[] terrainPieces;
 
@@ -21,6 +24,7 @@ public class GemGeneration : MonoBehaviour
         ChooseLocations();
 
         SpawnClusters();
+            
     }
 
     void Update()
@@ -45,8 +49,25 @@ public class GemGeneration : MonoBehaviour
         {
             int i = Random.Range(0, 3);
             Instantiate(clusterPrefabs[i], location.gameObject.transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
+            spawnedGems.Add(clusterPrefabs[i]);
             Debug.Log(transform.position);
         }
     }
+
+    //public void DestroyLooseGems()
+    //{
+    //    foreach (GameObject gem in spawnedGems)
+    //    {
+    //        if (gem != null && spawnedGems != null)
+    //        {
+
+    //            if (gem.gameObject.GetComponent<GemCollection>().isReleased)
+    //            {
+    //                Destroy(gem.gameObject);
+
+    //            }
+    //        }
+    //    }
+    //}
   
 }

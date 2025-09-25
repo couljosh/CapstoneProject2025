@@ -44,7 +44,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122791135550930985}
-  m_Material: {fileID: 13400000, guid: a2c62ff084403b1488aea00ffd9f3be4, type: 2}
+  m_Material: {fileID: 13400000, guid: 67ac2465c40a52d4ca2a44a85c3f57dc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -88,8 +88,8 @@ Rigidbody:
   m_GameObject: {fileID: 1122791135550930985}
   serializedVersion: 4
   m_Mass: 200
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -124,6 +124,7 @@ MonoBehaviour:
     m_Bits: 128
   rb: {fileID: 4881049840861052736}
   collectTime: 0.7
+  isReleased: 0
   isCollecting: 0
   gemPrefab: {fileID: 1122791135550930985}
   pickupDelay: 0.5

@@ -87,7 +87,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122791135550930985}
   serializedVersion: 4
-  m_Mass: 200
+  m_Mass: 300
   m_Drag: 20
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
     m_Bits: 128
   rb: {fileID: 4881049840861052736}
   collectTime: 0.7
+  isReleased: 0
   isCollecting: 0
   gemPrefab: {fileID: 1122791135550930985}
   pickupDelay: 0.5
