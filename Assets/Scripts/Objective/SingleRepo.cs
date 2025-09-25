@@ -13,6 +13,7 @@ public class SingleRepo : MonoBehaviour
 
     public GameObject gemCountText;
     public Light repoLight;
+    public float intensity;
     public float flickerSpeed;
 
     public bool isIncrease;
@@ -114,7 +115,7 @@ public class SingleRepo : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        repoLight.intensity = 5;
+        repoLight.intensity = intensity;
         repoLight.color = originalColor;
     }
 
