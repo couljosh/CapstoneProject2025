@@ -13,7 +13,7 @@ public class SingleRepo : MonoBehaviour
 
     public GameObject gemCountText;
     public Light repoLight;
-    public float intensity;
+    public float intensity = 15;
     public float flickerSpeed;
 
     public bool isIncrease;
@@ -38,6 +38,7 @@ public class SingleRepo : MonoBehaviour
         else
         {
             repoLight.enabled = true;
+           
         }
 
     }
@@ -53,23 +54,29 @@ public class SingleRepo : MonoBehaviour
         PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
         PlayerMove playerMove = other.gameObject.GetComponent<PlayerMove>();
 
-        if (playerMove.playerNum <= 2)
-        {
-            repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
-        }
-        else
-        {
-            repoLight.color = Color.Lerp(originalColor, Color.blue, depositTime - 1);
-        }
+        
+    
 
 
         if (other.gameObject.tag == "ObjectDestroyer")
         {
             elaspedTime += Time.deltaTime;
-        }
+
+            
+         }
 
         if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0 && active)
         {
+            if (playerMove.playerNum > 2)
+            {
+                repoLight.color = Color.Lerp(originalColor, Color.blue, (float)(depositTime - 0.5));
+            }
+
+            else
+            {
+                repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
+            }
+
             if (depositAll)
             {
                 //If the player is on the red team
