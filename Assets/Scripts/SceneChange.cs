@@ -12,8 +12,13 @@ public class SceneChange : MonoBehaviour
     public float roundTime;
     public float endOfRoundDelay;
 
+   
+    public int redTotal;
+    public int blueTotal;
+
     public GameObject redRepository;
     public GameObject blueRepository;
+    //public GameObject singleRepository;
 
     public GameObject teamOneWinText;
     public GameObject teamTwoWinText;
@@ -22,17 +27,26 @@ public class SceneChange : MonoBehaviour
 
     public TextMeshProUGUI timerText;
 
+    public TextMeshProUGUI redScore;
+    public TextMeshProUGUI blueScore;
+
 
     void Start()
     {
+
         teamOneWinText.SetActive(false);
         teamTwoWinText.SetActive(false);
         drawText.SetActive(false);
         tint.SetActive(false);
+
     }
 
     void Update()
     {
+        //Show the score for both teams
+        redScore.text = redTotal.ToString();
+        blueScore.text = blueTotal.ToString();
+
         //Timer Counts down
         roundTime -= Time.deltaTime;
 
@@ -63,11 +77,11 @@ public class SceneChange : MonoBehaviour
         tint.SetActive(true);
         timerText.gameObject.SetActive(false);
 
-        if (redRepository.GetComponent<Repository>().depositTotal > blueRepository.GetComponent<Repository>().depositTotal)
+        if (redRepository.GetComponent<Repository>().depositTotal > blueRepository.GetComponent<Repository>().depositTotal || redTotal > blueTotal)
         {
             teamOneWinText.SetActive(true);
         }
-        else if (redRepository.GetComponent<Repository>().depositTotal < blueRepository.GetComponent<Repository>().depositTotal)
+        else if (redRepository.GetComponent<Repository>().depositTotal < blueRepository.GetComponent<Repository>().depositTotal || redTotal < blueTotal)
         {
             teamTwoWinText.SetActive(true);
         }

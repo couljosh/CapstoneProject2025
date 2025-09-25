@@ -380,7 +380,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveSpeed: 6
   rotateSpeed: 10
-  playerNum: 1
+  playerNum: 3
   rayLength: 1
   rayStartPosOne: {fileID: 444764914538337988}
   rayStartPosTwo: {fileID: 1932163249982284501}
