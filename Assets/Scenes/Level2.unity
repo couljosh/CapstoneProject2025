@@ -1578,6 +1578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3032114281639169779, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9962709
+      objectReference: {fileID: 0}
     - target: {fileID: 4922602563702568010, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_Name
       value: Single Repository (1)
@@ -1596,6 +1600,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: depositAll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.g
+      value: 0.9548862
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8807,8 +8823,8 @@ MonoBehaviour:
   playerInputManager: {fileID: 620504095}
   Players:
   - {fileID: 3261414448945768688, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
-  - {fileID: 3118915545251881927, guid: 76b216a10ae3d1d43ba1e4df75554d73, type: 3}
   - {fileID: 2887584843794151332, guid: 333325fa384aad7448b686578ffedccb, type: 3}
+  - {fileID: 3118915545251881927, guid: 76b216a10ae3d1d43ba1e4df75554d73, type: 3}
   - {fileID: 1561325781355804542, guid: 2df2aceffc924fe4884e44db56bbfefb, type: 3}
   respawnDelay: 0
 --- !u!114 &620504095
@@ -19188,7 +19204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
@@ -19492,6 +19508,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1492009916}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: sceneNumber
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: teamOneWinText
       value: 
@@ -22230,7 +22250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1761893108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30872,6 +30892,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3032114281639169779, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032114281639169779, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9430288
+      objectReference: {fileID: 0}
     - target: {fileID: 4922602563702568010, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_Name
       value: Single Repository
@@ -30890,6 +30918,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: depositAll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.g
+      value: 0.89809704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: originalColor.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

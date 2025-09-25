@@ -20,6 +20,8 @@ public class SingleRepo : MonoBehaviour
     public bool depositAll = false;
     public bool active = true;
 
+    public Color originalColor;
+
     void Start()
     {
         //depositTotal = 0;
@@ -49,6 +51,15 @@ public class SingleRepo : MonoBehaviour
     {
         PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
         PlayerMove playerMove = other.gameObject.GetComponent<PlayerMove>();
+
+        if (playerMove.playerNum <= 2)
+        {
+            repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
+        }
+        else
+        {
+            repoLight.color = Color.Lerp(originalColor, Color.blue, depositTime - 1);
+        }
 
 
         if (other.gameObject.tag == "ObjectDestroyer")
@@ -104,6 +115,7 @@ public class SingleRepo : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         repoLight.intensity = 5;
+        repoLight.color = originalColor;
     }
 
 }
