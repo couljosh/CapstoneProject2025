@@ -44,8 +44,8 @@ public class SceneChange : MonoBehaviour
     void Update()
     {
         //Show the score for both teams
-        //redScore.text = redTotal.ToString();
-        //blueScore.text = blueTotal.ToString();
+        redScore.text = redTotal.ToString();
+        blueScore.text = blueTotal.ToString();
 
         //Timer Counts down
         roundTime -= Time.deltaTime;

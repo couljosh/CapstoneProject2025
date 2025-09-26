@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SingleRepo : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SingleRepo : MonoBehaviour
 
     public float depositTime;
     public float elaspedTime;
+
+    public Image progressBar;
 
     public GameObject gemCountText;
     public Light repoLight;
@@ -25,8 +28,9 @@ public class SingleRepo : MonoBehaviour
 
     void Start()
     {
+        repoLight.intensity = intensity;
         //depositTotal = 0;
-        
+        progressBar.fillAmount = 0;
     }
     void Update()
     {
@@ -116,6 +120,11 @@ public class SingleRepo : MonoBehaviour
         if (playerDeath != null && playerDeath.collectedGems.Count > 0)
         {
             repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
+            progressBar.fillAmount = elaspedTime / depositTime;
+        }
+        else
+        {
+            progressBar.fillAmount = 0;
         }
 
     }
@@ -124,6 +133,7 @@ public class SingleRepo : MonoBehaviour
     {
         repoLight.intensity = intensity;
         repoLight.color = originalColor;
+        progressBar.fillAmount = 0;
     }
 
 }
