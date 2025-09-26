@@ -26,7 +26,7 @@ public class CavePocketGeneration : MonoBehaviour
 
     public void ChooseLocations()
     {
-        for (int i = 0; i < pocketSpawnAmt; i++)
+        for (int i = 0; i < pocketSpawnAmt - 1; i++)
         {
             int chosenIndex = Random.Range(0, terrainPieces.Length);
             GameObject chosenPiece = terrainPieces[chosenIndex];

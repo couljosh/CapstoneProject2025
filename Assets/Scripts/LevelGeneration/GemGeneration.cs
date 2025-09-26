@@ -34,7 +34,7 @@ public class GemGeneration : MonoBehaviour
 
     public void ChooseLocations()
     {
-        for(int i = 0;  i < clusterSpawnAmt; i++)
+        for(int i = 0;  i < clusterSpawnAmt -1; i++)
         {
             int chosenIndex = Random.Range(0, terrainPieces.Length);
             GameObject chosenPiece = terrainPieces[chosenIndex];

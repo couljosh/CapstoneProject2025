@@ -98,6 +98,7 @@ public class SingleRepo : MonoBehaviour
                 }
 
                 playerDeath.collectedGems.Clear();
+                playerDeath.gemCount = 0;
                 elaspedTime = 0;
             }
             //Deposits one gem at a time
@@ -120,7 +121,12 @@ public class SingleRepo : MonoBehaviour
         if (playerDeath != null && playerDeath.collectedGems.Count > 0)
         {
             repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
-            progressBar.fillAmount = elaspedTime / depositTime;
+
+            if (active)
+            {
+                 progressBar.fillAmount = elaspedTime / depositTime;
+
+            }
         }
         else
         {
