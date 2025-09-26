@@ -1000,4 +1000,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf54b3e6bb79c045a2aa042b02bec62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentageChangePerGem: 5
+  sizeChangePerGem: 0.01
