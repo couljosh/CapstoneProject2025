@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookTime: 3
   radius: 2.5
+  innerRadius: 0.5
   terrainMask:
     serializedVersion: 2
     m_Bits: 128

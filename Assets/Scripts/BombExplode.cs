@@ -10,6 +10,9 @@ public class BombExplode : MonoBehaviour
 
     public float cookTime;
     public float radius;
+    public float innerRadius;
+
+
     public LayerMask terrainMask;
     public LayerMask kickableMask;
     public LayerMask playerMask;
@@ -137,7 +140,18 @@ public class BombExplode : MonoBehaviour
     public void Explode(Collider[] colliding)
     {
 
-        foreach(Collider hit in colliding)
+        // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
+        Collider[] interiorHits = Physics.OverlapSphere(transform.position, innerRadius, terrainMask);
+        Debug.DrawRay(transform.position, Vector3.forward * innerRadius, Color.red, 5);
+
+        foreach (Collider innerHit in interiorHits)
+        {
+            innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay();
+        }
+
+
+        // Main Bomb Detection
+        foreach (Collider hit in colliding)
         {
             RaycastHit[] hits = Physics.RaycastAll(transform.position, hit.transform.position - transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask);
             foreach(RaycastHit raycastHit in hits)
