@@ -39,7 +39,6 @@ public class GemGeneration : MonoBehaviour
             int chosenIndex = Random.Range(0, terrainPieces.Length);
             GameObject chosenPiece = terrainPieces[chosenIndex];
             spawnLocations.Add(chosenPiece);
-            Debug.Log("reached");
         }
     }
 
@@ -47,10 +46,9 @@ public class GemGeneration : MonoBehaviour
     {
         foreach(GameObject location in spawnLocations)
         {
-            int i = Random.Range(0, 3);
+            int i = Random.Range(0, clusterPrefabs.Count);
             Instantiate(clusterPrefabs[i], location.gameObject.transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
             spawnedGems.Add(clusterPrefabs[i]);
-            Debug.Log(transform.position);
         }
     }
 

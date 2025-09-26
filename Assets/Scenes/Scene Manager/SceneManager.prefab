@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2161455577680048981}
   - component: {fileID: 6713519523818572442}
   - component: {fileID: 4230729663388130016}
+  - component: {fileID: 2115062935216473557}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -70,5 +71,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clusterPrefabs: []
-  gemPrefabs: []
+  spawnLocations: []
+  spawnedGems: []
   terrainPieces: []
+  clusterSpawnAmt: 0
+--- !u!114 &2115062935216473557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572955040075578291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498e945d9c19754a89c1d1e3c2d6982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pocketPrefabs: []
+  spawnLocations: []
+  terrainPieces: []
+  pocketSpawnAmt: 0

@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 using TMPro;
 using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.UI;
 
 public class Repository : MonoBehaviour
 {
@@ -11,7 +11,8 @@ public class Repository : MonoBehaviour
     public float depositTime;
     public float elaspedTime;
 
-    public GameObject gemCountText;
+    public Image progressBar;
+
     public Light repoLight;
     public float flickerSpeed;
 
@@ -19,14 +20,15 @@ public class Repository : MonoBehaviour
 
     public bool depositAll = false;
 
+
     void Start()
     {
         depositTotal = 0;
+        progressBar.fillAmount = 0;
     }
     void Update()
     {
-        gemCountText.GetComponent<TextMeshPro>().text = depositTotal.ToString();
-
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -36,7 +38,8 @@ public class Repository : MonoBehaviour
 
 
     private void OnTriggerStay(Collider other)
-    {
+    {       
+
         PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
 
         if (other.gameObject.tag == "ObjectDestroyer")
@@ -63,12 +66,17 @@ public class Repository : MonoBehaviour
                 depositTotal += 1;
                 elaspedTime = 0;
             }
-             
+
         }
 
         if(playerDeath != null && playerDeath.collectedGems.Count > 0)
         {
             repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
+            progressBar.fillAmount = elaspedTime / depositTime;                   
+
+        } else
+        {
+            progressBar.fillAmount = 0;
         }
 
     }
@@ -76,6 +84,7 @@ public class Repository : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         repoLight.intensity = 5;
+        progressBar.fillAmount = 0;
     }
 
 }

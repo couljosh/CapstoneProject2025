@@ -17,6 +17,8 @@ public class CaveInManager : MonoBehaviour
     private float randomNum;
     public int terrainChunksToSpawn;
 
+    public GemGeneration gemGenerationScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -75,6 +77,8 @@ public class CaveInManager : MonoBehaviour
                
             }
 
+        int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
+        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], pos + Vector3.up, Quaternion.Euler(0, Random.Range(0, 360), 0));
         }
     }
 }
