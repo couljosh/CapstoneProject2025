@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: -3152859555391173462}
   - component: {fileID: -6544643910849356735}
   - component: {fileID: 6345285583510232017}
+  - component: {fileID: 2157015550122162584}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: ObjectDestroyer
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  moveSpeed: 6
+  initialMoveSpeed: 6
   rotateSpeed: 10
   playerNum: 1
   rayLength: 1
@@ -548,7 +549,12 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 64
-  kickStrength: 50000
+  initialKickStrength: 55000
+  maximumKickMultiplier: 3.5
+  timeToMaxStrength: 1.3
+  timeBeforePlayerSlowWhenCharge: 0.2
+  maxPlayerChargeSlowdown: 1
+  chargingKick: 0
 --- !u!114 &1630251052995215303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +680,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7da19706-279a-4d2b-8cf3-2c0cf16fc329
     m_ActionName: 'Player1/Kick[/DualSenseGamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f973f3ba-8ac7-48b0-a47e-2abac8f97b05
+    m_ActionName: 'Menu/StartGame[/DualSenseGamepadHID/buttonSouth,/DualSenseGamepadHID/buttonWest,/DualSenseGamepadHID/buttonNorth,/DualSenseGamepadHID/buttonEast]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player1
@@ -764,6 +774,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2e745914001344faf96e82adc39ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2157015550122162584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261414448945768688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 1753689672031981144}
+  chargingMaxKick: 0
+  flashInterval: 0.1
 --- !u!1 &3926277327152463818
 GameObject:
   m_ObjectHideFlags: 0
