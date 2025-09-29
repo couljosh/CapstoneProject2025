@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,6 +18,15 @@ public class PlayerDeath : MonoBehaviour
     public Light playerLight;
     public GameObject bombText;
     private Vector3 deathPos;
+
+    [Header("Invinciblity Variables")]
+    private bool isInvincible = false;
+    public float invincibleDuration = 3;
+    public float invincibleTimer = 0;
+    public float blinkInterval = 0.5f;    // How fast it blinks
+
+    private MeshRenderer meshRenderer;
+
     //Gem
     public List<GameObject> collectedGems = new List<GameObject>();
     public GameObject gemPrefab;
@@ -29,16 +39,36 @@ public class PlayerDeath : MonoBehaviour
     public int gemCount;
     public float scatterForce;
 
+    private void Start()
+    {
+        invincibleTimer = invincibleDuration;
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
+
 
     private void Update()
     {
         gemCount = collectedGems.Count;
+
+        if (invincibleTimer < invincibleDuration)
+        {
+            isInvincible = true;
+            StartCoroutine(BlinkEffect());
+        }
+        else
+        {
+            isInvincible = false;
+        }
+            invincibleTimer += Time.deltaTime;
     }
 
 
     public void PlayerDie()
     {
-        StartCoroutine(PlayerDieOrder());   
+        if (!isInvincible)
+        {
+            StartCoroutine(PlayerDieOrder());
+        }
     }
 
 
@@ -65,7 +95,28 @@ public class PlayerDeath : MonoBehaviour
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);
         isPlayerDead = false;
+        isInvincible = true;
+        invincibleTimer = 0;
     }
+
+    public IEnumerator BlinkEffect()
+    {
+        float timer = 0f;
+        print("BlinkFucker");
+        while (timer < invincibleDuration)
+        {
+            meshRenderer.enabled = false;
+            yield return new WaitForSeconds(blinkInterval / 2f);
+            meshRenderer.enabled = true;  // Show
+            yield return new WaitForSeconds(blinkInterval / 2f);
+
+            timer += blinkInterval;
+        }
+
+        // Ensure character is visible at the end
+        meshRenderer.enabled = true;
+    }
+
 
 
     //Drop Gem Sequence
