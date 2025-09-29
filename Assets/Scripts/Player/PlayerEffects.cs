@@ -35,7 +35,7 @@ public class PlayerEffects : MonoBehaviour
         {
             chargingMaxKick = false;
         }
-            
+
     }
 
     private void Update()

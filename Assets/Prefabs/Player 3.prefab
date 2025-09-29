@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  initialMoveSpeed: 0
+  initialMoveSpeed: 6
   rotateSpeed: 10
   playerNum: 3
   rayLength: 1
@@ -557,7 +557,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5898320196082057187}
         m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
-        m_MethodName: OnKick
+        m_MethodName: KickPerformed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -596,6 +596,9 @@ MonoBehaviour:
   playerCollider: {fileID: 3909969008973954251}
   playerLight: {fileID: 2822127922221191590}
   bombText: {fileID: 7672107513123323838}
+  invincibleDuration: 3
+  invincibleTimer: 0
+  blinkInterval: 0.5
   collectedGems: []
   gemPrefab: {fileID: 0}
   respawnDelay: 3

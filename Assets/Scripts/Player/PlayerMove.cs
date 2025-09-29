@@ -42,7 +42,6 @@ public class PlayerMove : MonoBehaviour
     //Effects Handling
     private PlayerEffects playerEffects;
 
-
     private void Awake()
     {
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
@@ -50,8 +49,10 @@ public class PlayerMove : MonoBehaviour
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
 
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
-        kickAction.performed += KickPerformed;
-        kickAction.canceled += KickCanceled;
+        
+        
+        //kickAction.performed += KickPerformed;
+        //kickAction.canceled += KickCanceled;
 
         rb = GetComponent<Rigidbody>();
 
@@ -66,11 +67,18 @@ public class PlayerMove : MonoBehaviour
     //called when the player presses down the kick button
     public void KickPerformed(InputAction.CallbackContext context)
     {
-        chargingKick = true;
+        if (context.performed)
+        {
+            chargingKick = true;
+        }
+        else if(context.canceled)
+        {
+            KickCanceled(context);
+        }
     }
 
     //called when the player releases the kick button
-    public void KickCanceled(InputAction.CallbackContext context)
+    private void KickCanceled(InputAction.CallbackContext context)
     {
         RaycastHit hit;
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||

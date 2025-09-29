@@ -415,7 +415,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8174341890788258120}
         m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
-        m_MethodName: OnKick
+        m_MethodName: KickPerformed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -503,6 +503,9 @@ MonoBehaviour:
   playerCollider: {fileID: 5215254673009193428}
   playerLight: {fileID: 189264627241786446}
   bombText: {fileID: 5920519289481015260}
+  invincibleDuration: 3
+  invincibleTimer: 0
+  blinkInterval: 0.5
   collectedGems: []
   gemPrefab: {fileID: 0}
   respawnDelay: 3
