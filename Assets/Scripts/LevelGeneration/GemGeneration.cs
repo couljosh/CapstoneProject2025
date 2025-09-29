@@ -4,34 +4,26 @@ using UnityEngine;
 
 public class GemGeneration : MonoBehaviour
 {
+    [Header("Gem Generation Customization")]
     public List<GameObject> clusterPrefabs = new List<GameObject>();
-    public List<GameObject> spawnLocations = new List<GameObject>();
-
-    public List<GameObject> spawnedGems = new List<GameObject>();
-
-
-
-    public GameObject[] terrainPieces;
-
     public int clusterSpawnAmt;
 
-    
+    [Header("Stored References")]
+    public List<GameObject> spawnedGems = new List<GameObject>();
+    public List<GameObject> spawnLocations = new List<GameObject>();
+    public GameObject[] terrainPieces;
 
     void Start()
     {
         terrainPieces = GameObject.FindGameObjectsWithTag("Terrain");
-
+        
+        //Trigger Gem Generation In Order
         ChooseLocations();
-
         SpawnClusters();
             
     }
 
-    void Update()
-    {
-        
-    }
-
+    //Chooses Gem Locations
     public void ChooseLocations()
     {
         for(int i = 0;  i < clusterSpawnAmt -1; i++)
@@ -42,6 +34,7 @@ public class GemGeneration : MonoBehaviour
         }
     }
 
+    //Spawn Gems/Clusters
     public void SpawnClusters()
     {
         foreach(GameObject location in spawnLocations)
@@ -51,21 +44,4 @@ public class GemGeneration : MonoBehaviour
             spawnedGems.Add(clusterPrefabs[i]);
         }
     }
-
-    //public void DestroyLooseGems()
-    //{
-    //    foreach (GameObject gem in spawnedGems)
-    //    {
-    //        if (gem != null && spawnedGems != null)
-    //        {
-
-    //            if (gem.gameObject.GetComponent<GemCollection>().isReleased)
-    //            {
-    //                Destroy(gem.gameObject);
-
-    //            }
-    //        }
-    //    }
-    //}
-  
 }

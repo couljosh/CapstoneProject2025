@@ -5,22 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public int levelOneIndex;
-
+    [Header("Stored References")]
     public InputActionAsset playerControls;
-
     private InputAction startGameAction;
-
     public TextMeshProUGUI pressButtonText;
 
+    [Header("Menu Customization")]
     public float fadingSpeed;
     public float fadingDelay;
+    public int levelOneIndex;
 
-    public void StartGame()
-    {
-
-    }
-
+    //Enable Input for Active Controllers
     private void OnEnable()
     {
         foreach (var controller in Gamepad.all)
@@ -30,6 +25,8 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+
+    //Scene Switch on Button Press
     private void Update()
     {
         if (startGameAction != null)
@@ -45,11 +42,14 @@ public class MainMenu : MonoBehaviour
     }
 
 
+    //Quit Applcation Event
     public void QuitGame()
     {
         Application.Quit();
     }
 
+
+    //Button Flash Effect
     public void PressAnyButtonFading()
     {
         pressButtonText.alpha = Mathf.PingPong(Time.time * fadingSpeed, fadingDelay);

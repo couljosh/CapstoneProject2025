@@ -4,37 +4,35 @@ using UnityEngine.UI;
 
 public class SingleRepo : MonoBehaviour
 {
-    //public int depositTotal;
-    
-
+    [Header("Stored References")]
     public SceneChange score;
-
-    public float depositTime;
-    public float elaspedTime;
-
     public Image progressBar;
-
     public GameObject gemCountText;
     public Light repoLight;
-    public float intensity = 15;
-    public float flickerSpeed;
 
+    [Header("Repository Checks")]
     public bool isIncrease;
-
     public bool depositAll = false;
     public bool active = true;
 
+    [Header("Repository Customization")]
+    public float depositTime;
+    public float elaspedTime;
+    public float intensity = 15;
+    public float flickerSpeed;
     public Color originalColor;
+
 
     void Start()
     {
         repoLight.intensity = intensity;
-        //depositTotal = 0;
         progressBar.fillAmount = 0;
     }
+
+
     void Update()
     {
-        //gemCountText.GetComponent<TextMeshPro>().text = depositTotal.ToString();
+        //Active Repository Signifier
         if (!active)
         {
             repoLight.enabled = false;
@@ -42,33 +40,29 @@ public class SingleRepo : MonoBehaviour
         else
         {
             repoLight.enabled = true;
-           
-        }
 
+        }
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
         elaspedTime = 0;
 
     }
 
-
+    //Actively Depositing Check
     private void OnTriggerStay(Collider other)
     {
         PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
         PlayerMove playerMove = other.gameObject.GetComponent<PlayerMove>();
 
-        
-    
-
-
         if (other.gameObject.tag == "ObjectDestroyer")
         {
             elaspedTime += Time.deltaTime;
+        }
 
-            
-         }
-
+        //Depositing Team Signifier
         if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0 && active)
         {
             if (playerMove.playerNum > 2)
@@ -81,6 +75,8 @@ public class SingleRepo : MonoBehaviour
                 repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
             }
 
+
+            //Deposit Gem Check
             if (depositAll)
             {
                 //If the player is on the red team
@@ -88,13 +84,13 @@ public class SingleRepo : MonoBehaviour
                 {
                     print("successfully scored");
                     score.redTotal += playerDeath.collectedGems.Count;
-                    
+
                 }
                 //If the player is on the blue team
                 else
                 {
                     score.blueTotal += playerDeath.collectedGems.Count;
-                    
+
                 }
 
                 playerDeath.collectedGems.Clear();
@@ -115,16 +111,16 @@ public class SingleRepo : MonoBehaviour
                 }
                 elaspedTime = 0;
             }
-
         }
 
+        //Deposit Progress Signifier
         if (playerDeath != null && playerDeath.collectedGems.Count > 0)
         {
             repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
 
             if (active)
             {
-                 progressBar.fillAmount = elaspedTime / depositTime;
+                progressBar.fillAmount = elaspedTime / depositTime;
 
             }
         }
@@ -132,9 +128,9 @@ public class SingleRepo : MonoBehaviour
         {
             progressBar.fillAmount = 0;
         }
-
     }
 
+    //Trigger Deposit Stopped
     private void OnTriggerExit(Collider other)
     {
         repoLight.intensity = intensity;

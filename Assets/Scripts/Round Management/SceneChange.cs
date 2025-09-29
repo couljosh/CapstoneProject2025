@@ -2,44 +2,45 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
 
 
 public class SceneChange : MonoBehaviour
 {
-    public Scene scene;
     public int sceneNumber;
 
+    [Header("Round Customization")]
     public float roundTime;
     public float endOfRoundDelay;
 
-   
     public int redTotal;
     public int blueTotal;
 
+    [Header("Stored References")]
     public GameObject redRepository;
     public GameObject blueRepository;
-    //public GameObject singleRepository;
+    public Scene scene;
 
+    [Header("UI References")]
     public GameObject teamOneWinText;
     public GameObject teamTwoWinText;
-    public GameObject drawText;
-    public GameObject tint;
-
-    public TextMeshProUGUI timerText;
-
     public TextMeshProUGUI redScore;
     public TextMeshProUGUI blueScore;
+
+    public GameObject drawText;
+    public GameObject tint;
+    public TextMeshProUGUI timerText;
 
 
     void Start()
     {
-
         teamOneWinText.SetActive(false);
         teamTwoWinText.SetActive(false);
         drawText.SetActive(false);
         tint.SetActive(false);
 
     }
+
 
     void Update()
     {
@@ -64,14 +65,14 @@ public class SceneChange : MonoBehaviour
             timerText.color = Color.red;
         }
 
-
-
         if (roundTime <= 0) //change this to when the game is finished.
         {
             StartCoroutine(checkScore());
         }
     }
 
+
+    //Winning Team Display
     public IEnumerator checkScore()
     {
         tint.SetActive(true);
@@ -94,6 +95,4 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene(sceneNumber);
 
     }
-
-
 }

@@ -6,7 +6,6 @@ public class PreventChildRotation : MonoBehaviour
 
     void Update()
     {
-        
         this.transform.rotation = Quaternion.Euler(rotationToMaintain);
     }
 }

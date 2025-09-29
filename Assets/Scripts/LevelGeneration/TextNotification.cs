@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TextNotification : MonoBehaviour
 {
+    [Header("Notification Customization")]
     private float timer = 0;
     public float timeToFlash;
     public int flashesBeforeDestroy;
@@ -10,7 +11,7 @@ public class TextNotification : MonoBehaviour
     public Color32 firstFlashColor;
     public Color32 secondFlashColor;
 
-    // Update is called once per frame
+    // Notification Sequence
     void Update()
     {
         timer += Time.deltaTime;
