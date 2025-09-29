@@ -77,8 +77,8 @@ public class BombExplode : MonoBehaviour
                         raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
                     }
 
-                    //Loock for Gem / bombs
-                    if (raycastHit.collider.tag == "Gem" || raycastHit.collider.tag == "Bomb")
+                    //Loock for Gem / bombs / Cart
+                    if (raycastHit.collider.tag == "Gem" || raycastHit.collider.tag == "Bomb" || raycastHit.collider.tag == "Cart")
                     {
                         Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
                         raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrength, ForceMode.Impulse);
