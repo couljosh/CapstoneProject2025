@@ -21,7 +21,6 @@ public class RepoMover : MonoBehaviour
         foreach (var repo in respositories)
         {
             respositories[i].GetComponent<SingleRepo>().active = false;
-            print("light off");
             i++;
         }
         currentRepository = respositories[Random.Range(0, respositories.Length)];
