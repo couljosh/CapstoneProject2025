@@ -46,7 +46,6 @@ public class BagGrowWithGemsHeld : MonoBehaviour
             
         if (playerDeath.gemCount == 0)
         {
-            print("size reset");
             gameObject.transform.localScale = startingSize;
             gameObject.transform.localPosition = startingPosition;
             sizeChanges = 0;
