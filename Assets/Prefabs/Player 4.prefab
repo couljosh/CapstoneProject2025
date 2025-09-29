@@ -531,9 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 1
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombCountText: {fileID: 570445374732610714}
-  playerNum: 1
   bombRegenTime: 4
   bombUseCooldown: 0.2
   maxBombsHeld: 2
@@ -567,9 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 3
   spawnNum: 4
-  isPlayerDead: 0
   playerMesh: {fileID: 2043691989178532213}
   playerInput: {fileID: 7848877375522014343}
   playerCollider: {fileID: 8774528382084606259}
@@ -577,6 +575,8 @@ MonoBehaviour:
   bombText: {fileID: 570445374732610714}
   collectedGems: []
   gemPrefab: {fileID: 0}
+  respawnDelay: 3
+  isPlayerDead: 0
   gemCount: 0
   scatterForce: 50000
 --- !u!114 &7953595675016775014
@@ -1026,4 +1026,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeChangePerGem: 0.01
-  allowedSizeChanges: 0
+  allowedSizeChanges: 75

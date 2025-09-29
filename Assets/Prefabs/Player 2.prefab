@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 4523866319423858330}
   - component: {fileID: 111248737947078388}
   - component: {fileID: 6375792539722515905}
-  - component: {fileID: -6266177740654586316}
   - component: {fileID: -6492875282590318157}
   m_Layer: 8
   m_Name: Player 2
@@ -462,9 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 1
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombCountText: {fileID: 5920519289481015260}
-  playerNum: 1
   bombRegenTime: 4
   bombUseCooldown: 0.2
   maxBombsHeld: 2
@@ -498,9 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 3
   spawnNum: 2
-  isPlayerDead: 0
   playerMesh: {fileID: 6057071280188953176}
   playerInput: {fileID: 5208972760965963325}
   playerCollider: {fileID: 5215254673009193428}
@@ -508,20 +505,10 @@ MonoBehaviour:
   bombText: {fileID: 5920519289481015260}
   collectedGems: []
   gemPrefab: {fileID: 0}
+  respawnDelay: 3
+  isPlayerDead: 0
   gemCount: 0
   scatterForce: 50000
---- !u!114 &-6266177740654586316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3118915545251881927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2e745914001344faf96e82adc39ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6492875282590318157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeChangePerGem: 0.01
-  allowedSizeChanges: 25
+  allowedSizeChanges: 75
 --- !u!1 &4286716305031785844
 GameObject:
   m_ObjectHideFlags: 0
