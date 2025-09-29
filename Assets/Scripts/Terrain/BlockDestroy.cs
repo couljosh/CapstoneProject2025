@@ -1,17 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class BlockDestroy : MonoBehaviour
 {
-
+    [Header("Terrain Destruction Customization")]
     public float destroyDelay;
 
-    private void Start()
-    {
-        
-    }
 
+    //Dectruction on Collsion
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "ObjectDestroyer")
@@ -20,10 +16,12 @@ public class BlockDestroy : MonoBehaviour
         }
     }
 
+
     public void disableCubeAfterDelay()
     {
         StartCoroutine(disableCube());
     }
+
 
     public IEnumerator disableCube()
     {
@@ -35,6 +33,7 @@ public class BlockDestroy : MonoBehaviour
         //make box trigger only
         gameObject.GetComponent<BoxCollider>().isTrigger = true;
     }
+
 
     public void enableCube()
     {

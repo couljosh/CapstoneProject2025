@@ -3,18 +3,7 @@ using UnityEngine;
 
 public class BlockDestruction : MonoBehaviour
 {
-
     public float destroyDelay;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

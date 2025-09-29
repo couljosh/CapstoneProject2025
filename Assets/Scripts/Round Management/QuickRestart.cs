@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class QuickRestart : MonoBehaviour
 {
+    //Restart Game to Menu
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))

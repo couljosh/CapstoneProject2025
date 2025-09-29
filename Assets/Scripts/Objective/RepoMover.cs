@@ -3,18 +3,17 @@ using UnityEngine;
 
 public class RepoMover : MonoBehaviour
 {
+    [Header("Stored Refenences")]
     public GameObject currentRepository;
     public GameObject[] respositories;
-    
     private GameObject newRepository;
 
-    public float moveInterval = 10;
-    private float elaspedTime = 0;
+    [Header("Repository Customization")]
+    public float moveInterval;
+    private float elaspedTime;
 
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Active Repository on Start
     void Start()
     {
         int i = 0;
@@ -27,11 +26,10 @@ public class RepoMover : MonoBehaviour
         currentRepository.GetComponent<SingleRepo>().active = true;
     }
 
-    // Update is called once per frame
+
+    //Active Repository Switch
     void Update()
     {
-        
-
         elaspedTime += Time.deltaTime;
 
         if (elaspedTime > moveInterval)
@@ -42,7 +40,7 @@ public class RepoMover : MonoBehaviour
 
             while (newRepository == currentRepository)
             {
-               newRepository = respositories[Random.Range(0, respositories.Length)];
+                newRepository = respositories[Random.Range(0, respositories.Length)];
             }
 
             currentRepository = newRepository;
@@ -50,9 +48,5 @@ public class RepoMover : MonoBehaviour
 
             elaspedTime = 0;
         }
-
-
-
     }
-
- }
+}

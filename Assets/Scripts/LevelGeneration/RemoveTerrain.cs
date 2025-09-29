@@ -3,17 +3,7 @@ using UnityEngine;
 public class RemoveTerrain : MonoBehaviour
 {
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
-
+    //Destory Terrain in bedrock (avoids gems getting stuck)
     private void OnCollisionEnter(Collision collision)
     {
 

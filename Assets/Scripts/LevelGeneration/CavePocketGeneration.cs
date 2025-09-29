@@ -3,27 +3,25 @@ using UnityEngine;
 
 public class CavePocketGeneration : MonoBehaviour
 {
+    [Header("Cave Pocket Customization")]
     public List<GameObject> pocketPrefabs = new List<GameObject>();
-    public List<GameObject> spawnLocations = new List<GameObject>();
+    public int pocketSpawnAmt;
 
+    [Header("Stored References")]
+    public List<GameObject> spawnLocations = new List<GameObject>();
     public GameObject[] terrainPieces;
 
-    public int pocketSpawnAmt;
 
     void Start()
     {
         terrainPieces = GameObject.FindGameObjectsWithTag("Terrain");
 
+        //Trigger Pocket Generation In Order
         ChooseLocations();
-
-        SpawnClusters();
+        SpawnPockets();
     }
 
-    void Update()
-    {
-        
-    }
-
+    //Chooses Pocket Locations
     public void ChooseLocations()
     {
         for (int i = 0; i < pocketSpawnAmt - 1; i++)
@@ -34,10 +32,10 @@ public class CavePocketGeneration : MonoBehaviour
         }
     }
 
-    public void SpawnClusters()
-    {
-         
 
+    //Generates Pockets
+    public void SpawnPockets()
+    {
         foreach (GameObject location in spawnLocations)
         {
             int i = Random.Range(0, pocketPrefabs.Count);

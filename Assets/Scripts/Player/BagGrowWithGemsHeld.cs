@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class BagGrowWithGemsHeld : MonoBehaviour
 {
+    [Header("Stored References")]
     private PlayerDeath playerDeath; //script where gems are kept track of
+
+    [Header("Bag Customization")]
     public float sizeChangePerGem;
-    private float gemsLastFrame;
     public int allowedSizeChanges;
     private int sizeChanges;
     private Vector3 startingSize;
     private Vector3 startingPosition;
-    //public float growthSizeMaxPercent; 
+    private float gemsLastFrame;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         playerDeath = gameObject.GetComponentInParent<PlayerDeath>();
@@ -20,7 +22,7 @@ public class BagGrowWithGemsHeld : MonoBehaviour
         startingSize = gameObject.transform.localScale;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (sizeChanges < allowedSizeChanges)
@@ -41,10 +43,8 @@ public class BagGrowWithGemsHeld : MonoBehaviour
                 sizeChanges++;
                 gameObject.transform.localPosition -= new Vector3(0, 0, (playerDeath.gemCount * sizeChangePerGem) / 2);
             }
-        }
+        }     
             
-            
-
         else if (playerDeath.gemCount == 0)
             gameObject.transform.localPosition = startingPosition;
 

@@ -4,29 +4,33 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class BombSpawn : MonoBehaviour
-{
+{    
+    public int playerNum;
+
+    [Header("Gameobject References")]
     public GameObject bombPrefab;
     public GameObject bombCountText;
-    public int playerNum;
+
+    [Header("Bomb Cooldown Variables")]
     public float bombRegenTime;
     public float bombUseCooldown;
     private float regenTimer;
-    private float useTimer;
 
+    [Header("Bombs Held Variables")]
     private int bombsHeld;
     public int maxBombsHeld;
 
     void Start()
     {
         bombsHeld = 0;
-       
+    
     }
 
     void Update()
     {
         regenTimer += Time.deltaTime;
-        //useTimer += Time.deltaTime;
 
+        //Give Bomb based on Cooldown
         if (regenTimer > bombRegenTime && bombsHeld < maxBombsHeld)
         {
             bombsHeld++;
@@ -36,6 +40,7 @@ public class BombSpawn : MonoBehaviour
         bombCountText.GetComponent<TextMeshPro>().text = bombsHeld.ToString();
     }
 
+    //Spawn Bomb
     public void OnSpawnBomb(InputAction.CallbackContext context)
     {
         if (bombsHeld > 0 && context.performed)

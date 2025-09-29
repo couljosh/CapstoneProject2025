@@ -5,35 +5,30 @@ using UnityEngine.Events;
 
 public class GemCollection : MonoBehaviour
 {
-
+    [Header("Gem Collection Customization")]
     public float radius;
-    public LayerMask terrainMask;
-    public Rigidbody rb;
-
     public float collectTime;
     private float elapsedTime;
+    public float pickupDelay;
+    private float releasedTime;
+
+    [Header("Checks")]
     public bool isReleased;
     public bool isCollecting;
 
+    [Header("Stored References")]
+    private GameObject Collecter;
     public GameObject gemPrefab;
+    public Rigidbody rb;
 
+    [Header("Layer To Detect")]
+    public LayerMask terrainMask;
 
     private Vector3 collectedPos;
 
-    private GameObject Collecter;
-    public float pickupDelay;
-
-    private float releasedTime;
-
-    void Start()
-    {
-
-    }
-
     void Update()
     {
-
-
+        //Release Gem on Check
         if (!isReleased)
         {
             Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask, QueryTriggerInteraction.Ignore);
@@ -45,49 +40,56 @@ public class GemCollection : MonoBehaviour
             }
         }
 
+        //Recieve Gem on Check
         if (Collecter != null && collectedPos != null)
         {
-             RecieveGem();
+            RecieveGem();
         }
 
     }
 
+
+    //Release Gem
     public void ReleaseGem()
     {
         rb.isKinematic = false;
         releasedTime = Time.time;
     }
 
+
+    //Recieve Gem
     public void RecieveGem()
-    {   
-        if(Time.time > releasedTime + pickupDelay && isCollecting)
+    {
+        if (Time.time > releasedTime + pickupDelay && isCollecting)
         {
-        elapsedTime += Time.deltaTime;
+            elapsedTime += Time.deltaTime;
 
-        GetComponent<Collider>().enabled = false;
-        GetComponent<Rigidbody>().useGravity = false;
-        
-        float lerpPercent = elapsedTime / collectTime;
+            GetComponent<Collider>().enabled = false;
+            GetComponent<Rigidbody>().useGravity = false;
+
+            float lerpPercent = elapsedTime / collectTime;
 
 
-        transform.position = Vector3.Slerp(collectedPos, Collecter.transform.position, lerpPercent);
-        float gemDist = Vector3.Distance(transform.position, Collecter.transform.position);
+            transform.position = Vector3.Slerp(collectedPos, Collecter.transform.position, lerpPercent);
+            float gemDist = Vector3.Distance(transform.position, Collecter.transform.position);
 
             if (lerpPercent >= 1 || gemDist <= 0.5)
-        {
+            {
                 GemCollected();
                 isCollecting = false;
                 elapsedTime = 0;
-        } 
+            }
         }
     }
 
+
+    //Player Who Collected Check
     private void OnTriggerEnter(Collider other)
     {
         if (isReleased)
         {
             if (other.gameObject.tag == "ObjectDestroyer")
-            {                
+            {
                 collectedPos = gameObject.transform.position;
                 Collecter = other.gameObject;
                 isCollecting = true;
@@ -95,8 +97,8 @@ public class GemCollection : MonoBehaviour
         }
     }
 
-    
 
+    //Gem Collected
     void GemCollected()
     {
         Collecter.GetComponent<PlayerDeath>().collectedGems.Add(gemPrefab.gameObject);

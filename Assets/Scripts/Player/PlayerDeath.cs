@@ -6,41 +6,41 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerDeath : MonoBehaviour
-{
-
-    public float respawnDelay;
+{    
     public int spawnNum;
-    [HideInInspector] public bool isPlayerDead;
 
+    [Header("Stored References")]
+    //Player Respawn
     public MeshRenderer playerMesh;
     public PlayerInput playerInput;
     public Collider playerCollider;
     public Light playerLight;
     public GameObject bombText;
-    public List<GameObject> collectedGems = new List<GameObject>();
-
-    public GameObject gemPrefab;
     private Vector3 deathPos;
+    //Gem
+    public List<GameObject> collectedGems = new List<GameObject>();
+    public GameObject gemPrefab;
 
+    [Header("Respawn Customizaiton/Check")]
+    public float respawnDelay;
+    [HideInInspector] public bool isPlayerDead;
+
+    [Header("Gem Drop Customization/Check")]
     public int gemCount;
-
     public float scatterForce;
-   
 
-    private void Start()
-    {
-
-    }
 
     private void Update()
     {
         gemCount = collectedGems.Count;
     }
 
+
     public void PlayerDie()
     {
         StartCoroutine(PlayerDieOrder());   
     }
+
 
     public IEnumerator PlayerDieOrder()
     {
@@ -65,9 +65,10 @@ public class PlayerDeath : MonoBehaviour
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);
         isPlayerDead = false;
-
     }
 
+
+    //Drop Gem Sequence
     public void DropGems()
     {
         foreach(GameObject gems in collectedGems)
