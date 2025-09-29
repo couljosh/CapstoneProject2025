@@ -18,8 +18,9 @@ public class PlayerMove : MonoBehaviour
     //Movement Value
     private Vector3 moveAmt = Vector3.zero;
     private Rigidbody rb;
-    public float moveSpeed;
+    public float initialMoveSpeed;
     public float rotateSpeed;
+    private float finalMoveSpeed;
 
     public int playerNum;
 
@@ -29,8 +30,17 @@ public class PlayerMove : MonoBehaviour
     public GameObject rayStartPosTwo;
     public GameObject rayStartPosThree;
     public LayerMask kickable;
-    public float kickStrength;
+    public float initialKickStrength;
+    public float maximumKickMultiplier;
+    public float timeToMaxStrength;
+    public float timeBeforePlayerSlowWhenCharge;
+    public float maxPlayerChargeSlowdown;
+    private float currentKickStrength;
+    private float kickStrengthTimer = 0;
+    [HideInInspector] public bool chargingKick = false;
 
+    //Effects Handling
+    private PlayerEffects playerEffects;
 
 
     private void Awake()
@@ -40,8 +50,12 @@ public class PlayerMove : MonoBehaviour
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
 
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
+        kickAction.performed += KickPerformed;
+        kickAction.canceled += KickCanceled;
 
         rb = GetComponent<Rigidbody>();
+
+        playerEffects = GetComponent<PlayerEffects>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -49,10 +63,16 @@ public class PlayerMove : MonoBehaviour
         moveAmt = context.ReadValue<Vector2>();
     }
 
-    public void OnKick(InputAction.CallbackContext context)
+    //called when the player presses down the kick button
+    public void KickPerformed(InputAction.CallbackContext context)
+    {
+        chargingKick = true;
+    }
+
+    //called when the player releases the kick button
+    public void KickCanceled(InputAction.CallbackContext context)
     {
         RaycastHit hit;
-
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
             Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
             Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable))
@@ -60,10 +80,19 @@ public class PlayerMove : MonoBehaviour
             Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
             Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
             Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-                Debug.Log("reached");
-                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * kickStrength);
-            
+
+            hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
+           
         }
+
+        //reset to normal light length
+        playerEffects.KickEffects(1);
+        playerEffects.chargingMaxKick = false; 
+    
+        //reset charge tracking
+        chargingKick = false;
+        currentKickStrength = 0;
+        kickStrengthTimer = 0;
     }
 
     void Update()
@@ -72,7 +101,15 @@ public class PlayerMove : MonoBehaviour
         Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
         Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
 
-       
+        if(chargingKick)
+        {
+            kickStrengthTimer += Time.deltaTime;
+            currentKickStrength = initialKickStrength * (maximumKickMultiplier * kickStrengthTimer / timeToMaxStrength);
+            //Mathf.Clamp(currentKickStrength, initialKickStrength, maximumKickMultiplier * initialKickStrength);
+            kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
+            playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
+        }
+        
     }
 
     public void FixedUpdate()
@@ -82,7 +119,19 @@ public class PlayerMove : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
-        rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * moveSpeed;
+        //progressively dampen move speed by charging a kick
+        if(kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
+        {
+            finalMoveSpeed = initialMoveSpeed - (initialMoveSpeed * (kickStrengthTimer / timeToMaxStrength));
+            finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, maxPlayerChargeSlowdown, Mathf.Infinity);
+        }
+        else
+        {
+            finalMoveSpeed = initialMoveSpeed;
+        }
+
+
+            rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
         if (direction != Vector3.zero)
         {
             Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);

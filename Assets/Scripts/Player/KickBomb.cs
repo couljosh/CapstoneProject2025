@@ -8,6 +8,8 @@ public class KickBomb : MonoBehaviour
     public GameObject rayStartPos;
     public LayerMask kickable;
     public float kickStrength;
+    public float initialStrength;
+    public float maxChargeStrength;
 
     public int playerNum;
 
