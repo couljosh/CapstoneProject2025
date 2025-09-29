@@ -60,7 +60,7 @@ public class BombAnim : MonoBehaviour
         }
     }
 
-    // this shit doesnt work
+    // this shit work
     private void ToggleFlash()
     {
         flashing = !flashing;
