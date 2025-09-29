@@ -25,7 +25,7 @@ public class BagGrowWithGemsHeld : MonoBehaviour
 
     void Update()
     {
-        if (sizeChanges < allowedSizeChanges)
+        if (sizeChanges <= allowedSizeChanges)
         {
             if (playerDeath.gemCount > 0 && playerDeath.gemCount != gemsLastFrame) //gems are more than zero, and the gem count has changed since last frame
             {
@@ -33,8 +33,7 @@ public class BagGrowWithGemsHeld : MonoBehaviour
                 sizeChanges++;
                 gameObject.transform.localScale += new Vector3(playerDeath.gemCount * sizeChangePerGem, playerDeath.gemCount * sizeChangePerGem, playerDeath.gemCount * sizeChangePerGem);
             }
-            else if (playerDeath.gemCount == 0)
-                gameObject.transform.localScale = startingSize;
+                
 
             //ensure bag stays on back of player
             if (playerDeath.gemCount > 0 && playerDeath.gemCount != gemsLastFrame) //gems are more than zero, and the gem count has changed since last frame
@@ -45,8 +44,14 @@ public class BagGrowWithGemsHeld : MonoBehaviour
             }
         }     
             
-        else if (playerDeath.gemCount == 0)
+        if (playerDeath.gemCount == 0)
+        {
+            print("size reset");
+            gameObject.transform.localScale = startingSize;
             gameObject.transform.localPosition = startingPosition;
+            sizeChanges = 0;
+        }
+            
 
 
         //disable bag sprite if dead
