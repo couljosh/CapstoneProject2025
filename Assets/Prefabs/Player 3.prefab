@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 8215734786529892059}
   - component: {fileID: 7071372508467383774}
   - component: {fileID: 4756858654633455137}
+  - component: {fileID: 2955468753973523611}
   m_Layer: 8
   m_Name: Player 3
   m_TagString: ObjectDestroyer
@@ -378,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  moveSpeed: 6
+  initialMoveSpeed: 0
   rotateSpeed: 10
   playerNum: 3
   rayLength: 1
@@ -388,7 +389,12 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 64
-  kickStrength: 50000
+  initialKickStrength: 55000
+  maximumKickMultiplier: 3.5
+  timeToMaxStrength: 1.3
+  timeBeforePlayerSlowWhenCharge: 0.2
+  maxPlayerChargeSlowdown: 1
+  chargingKick: 0
 --- !u!114 &8620095879880935457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,9 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 1
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombCountText: {fileID: 7672107513123323838}
-  playerNum: 1
   bombRegenTime: 4
   bombUseCooldown: 0.2
   maxBombsHeld: 2
@@ -563,6 +569,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7da19706-279a-4d2b-8cf3-2c0cf16fc329
     m_ActionName: 'Player1/Kick[/DualSenseGamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f973f3ba-8ac7-48b0-a47e-2abac8f97b05
+    m_ActionName: 'Menu/StartGame[/DualSenseGamepadHID/buttonSouth,/DualSenseGamepadHID/buttonWest,/DualSenseGamepadHID/buttonNorth,/DualSenseGamepadHID/buttonEast]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player1
@@ -580,9 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 3
   spawnNum: 3
-  isPlayerDead: 0
   playerMesh: {fileID: 3016761805067118768}
   playerInput: {fileID: 7071372508467383774}
   playerCollider: {fileID: 3909969008973954251}
@@ -590,8 +598,25 @@ MonoBehaviour:
   bombText: {fileID: 7672107513123323838}
   collectedGems: []
   gemPrefab: {fileID: 0}
+  respawnDelay: 3
+  isPlayerDead: 0
   gemCount: 0
   scatterForce: 50000
+--- !u!114 &2955468753973523611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 1753689672031981144, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
+  chargingMaxKick: 0
+  flashInterval: 0.1
 --- !u!1 &5131605351460886873
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,8 +747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf54b3e6bb79c045a2aa042b02bec62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeChangePerGem: 0.01
-  allowedSizeChanges: 25
+  sizeChangePerGem: 0.005
+  allowedSizeChanges: 35
 --- !u!1 &7672107513123323838
 GameObject:
   m_ObjectHideFlags: 0
