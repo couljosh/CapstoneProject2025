@@ -347,7 +347,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2887584843794151332}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 25
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -390,10 +390,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   initialKickStrength: 55000
+  cartForceMultiplier: 2.5
   maximumKickMultiplier: 3.5
   timeToMaxStrength: 1.3
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
+  currentKickStrength: 0
   chargingKick: 0
 --- !u!114 &8620095879880935457
 MonoBehaviour:
@@ -605,6 +607,7 @@ MonoBehaviour:
   isPlayerDead: 0
   gemCount: 0
   scatterForce: 50000
+  gemDropDelay: 0.2
 --- !u!114 &2955468753973523611
 MonoBehaviour:
   m_ObjectHideFlags: 0

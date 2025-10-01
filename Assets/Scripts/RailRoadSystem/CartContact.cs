@@ -63,13 +63,12 @@ public class CartContact : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity * (1 - terrainSpeedReduction/100);
         }
 
-        if (collision.gameObject.tag == "Player" && rb.linearVelocity.magnitude > playerThreshold)
+        if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold)
         {
             print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
         }
-
     }
 
 

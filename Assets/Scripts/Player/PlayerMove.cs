@@ -31,11 +31,12 @@ public class PlayerMove : MonoBehaviour
     public GameObject rayStartPosThree;
     public LayerMask kickable;
     public float initialKickStrength;
+    public float cartForceMultiplier;
     public float maximumKickMultiplier;
     public float timeToMaxStrength;
     public float timeBeforePlayerSlowWhenCharge;
     public float maxPlayerChargeSlowdown;
-    private float currentKickStrength;
+    public float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
 
@@ -81,15 +82,25 @@ public class PlayerMove : MonoBehaviour
     private void KickCanceled(InputAction.CallbackContext context)
     {
         RaycastHit hit;
-        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
-            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable) ||
-            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable))
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore))
         {
             Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
             Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
             Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-            hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
-           
+            
+            if(hit.collider.gameObject.tag == "Bomb")
+            {
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
+
+            }
+            
+            if(hit.collider.gameObject.tag == "Cart")
+            {
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * cartForceMultiplier));
+
+            }
         }
 
         //reset to normal light length

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5320251176298724590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.903}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7937019, y: 0.7937019, z: 0.7937019}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,8 +108,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.23, y: 1, z: 0.5752396}
-  m_Center: {x: 0, y: 0, z: -0.21238105}
+  m_Size: {x: 2.3286548, y: 1, z: 2}
+  m_Center: {x: 0.034949854, y: 0, z: 0}
 --- !u!54 &4454483133691277787
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,9 +161,9 @@ MonoBehaviour:
   rayPosMid: {fileID: 0}
   rayPosRight: {fileID: 0}
   rb: {fileID: 6935507128066894879}
-  terrainThreshold: 9
-  playerThreshold: 2
-  terrainSpeedReduction: 10
+  terrainThreshold: 2
+  playerThreshold: 10
+  terrainSpeedReduction: 3
   playerSpeedReduction: 50
 --- !u!1 &6413094215018168897
 GameObject:
@@ -195,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 6413094215018168897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.096763, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1.3501884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -284,8 +284,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6413094215018168897}
   serializedVersion: 4
-  m_Mass: 100
-  m_Drag: 0
+  m_Mass: 500
+  m_Drag: 0.5
   m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}

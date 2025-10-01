@@ -38,6 +38,7 @@ public class PlayerDeath : MonoBehaviour
     [Header("Gem Drop Customization/Check")]
     public int gemCount;
     public float scatterForce;
+    public float gemDropDelay;
 
     private void Start()
     {
@@ -83,7 +84,7 @@ public class PlayerDeath : MonoBehaviour
         bombText.SetActive(false);
 
         //Drop gems then respawn
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(gemDropDelay);
         DropGems();
         collectedGems.Clear();
         yield return new WaitForSeconds(respawnDelay);

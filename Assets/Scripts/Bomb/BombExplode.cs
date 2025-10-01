@@ -11,7 +11,9 @@ public class BombExplode : MonoBehaviour
     public float cookTime;
     public float radius;
     public float innerRadius;
-    public float forceStrength;
+    public float forceStrengthGem;
+    public float forceStrengthCart;
+    public float forceStrengthBomb;
 
     [Header("Layers to Detect")]
     public LayerMask terrainMask;
@@ -77,11 +79,26 @@ public class BombExplode : MonoBehaviour
                         raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
                     }
 
-                    //Loock for Gem / bombs / Cart
-                    if (raycastHit.collider.tag == "Gem" || raycastHit.collider.tag == "Bomb" || raycastHit.collider.tag == "Cart")
+                    //Loock for Gem
+                    if (raycastHit.collider.tag == "Gem")
                     {
                         Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
-                        raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrength, ForceMode.Impulse);
+                        raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrengthGem, ForceMode.Impulse);
+                    }
+
+                    //Look for Bombs
+                    if (raycastHit.collider.tag == "Bomb")
+                    {
+                        Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
+                        raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrengthBomb, ForceMode.Impulse);
+                    }
+
+
+                    //Loock for Cart
+                    if (raycastHit.collider.tag == "Cart")
+                    {
+                        Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
+                        raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrengthCart, ForceMode.Impulse);
                     }
 
                     //Look for Terrain

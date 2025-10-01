@@ -12,6 +12,7 @@ public class MinecartMovement : MonoBehaviour
     void Start()
     {
          rb = GetComponent<Rigidbody>();
+        track = FindAnyObjectByType<SplineContainer>();
         currentSpline = track.Splines[0];
 
 

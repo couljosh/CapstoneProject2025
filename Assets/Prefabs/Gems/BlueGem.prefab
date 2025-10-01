@@ -87,7 +87,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423656114996915478}
   serializedVersion: 4
-  m_Mass: 200
+  m_Mass: 25
   m_Drag: 4
   m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -119,15 +119,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.32
-  terrainMask:
-    serializedVersion: 2
-    m_Bits: 128
-  rb: {fileID: 6542491902053624738}
   collectTime: 0.7
+  pickupDelay: 0.5
   isReleased: 0
   isCollecting: 0
   gemPrefab: {fileID: 1423656114996915478}
-  pickupDelay: 0.5
+  rb: {fileID: 6542491902053624738}
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1802317112042901708
 GameObject:
   m_ObjectHideFlags: 0
