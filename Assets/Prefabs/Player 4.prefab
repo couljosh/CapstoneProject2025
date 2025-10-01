@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLight: {fileID: 1753689672031981144, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
+  spotLight: {fileID: 3513481764980957644}
   chargingMaxKick: 0
   flashInterval: 0.1
 --- !u!1 &1844389104051878003
@@ -654,7 +654,7 @@ Transform:
   m_GameObject: {fileID: 3232888754263633577}
   serializedVersion: 2
   m_LocalRotation: {x: 9.604264e-10, y: -0, z: 0.38268346, w: 0.9238796}
-  m_LocalPosition: {x: -0.071, y: 0.078, z: 0.032}
+  m_LocalPosition: {x: -0.071, y: 0.078, z: -0.039}
   m_LocalScale: {x: 0.25, y: 0.24999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -852,7 +852,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0, g: 0.09941673, b: 1, a: 1}
-  m_Intensity: 20
+  m_Intensity: 639.4
   m_Range: 10
   m_SpotAngle: 90.0395
   m_InnerSpotAngle: 21.80208

@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLight: {fileID: 1753689672031981144, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
+  spotLight: {fileID: 189264627241786446}
   chargingMaxKick: 0
   flashInterval: 0.1
 --- !u!1 &3654783165088158231
@@ -685,7 +685,7 @@ Transform:
   m_GameObject: {fileID: 4963036882003696991}
   serializedVersion: 2
   m_LocalRotation: {x: 9.604264e-10, y: -0, z: 0.38268346, w: 0.9238796}
-  m_LocalPosition: {x: -0.071, y: 0.078, z: 0.032}
+  m_LocalPosition: {x: -0.071, y: 0.078, z: -0.039}
   m_LocalScale: {x: 0.25, y: 0.24999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

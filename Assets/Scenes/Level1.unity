@@ -18365,6 +18365,10 @@ PrefabInstance:
       propertyPath: track
       value: 
       objectReference: {fileID: 740027449}
+    - target: {fileID: 8037610539780481273, guid: 17ceb89695ef2b140b5001ae3bee1ce1, type: 3}
+      propertyPath: spawnPoint
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21043,7 +21047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
