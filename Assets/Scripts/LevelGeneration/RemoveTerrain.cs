@@ -7,7 +7,7 @@ public class RemoveTerrain : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.tag == "Terrain")
+        if (collision.gameObject.tag == "ActiveTerrain")
         {
             Destroy(collision.gameObject);
         }

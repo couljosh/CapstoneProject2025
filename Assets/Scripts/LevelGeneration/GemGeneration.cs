@@ -15,7 +15,7 @@ public class GemGeneration : MonoBehaviour
 
     void Start()
     {
-        terrainPieces = GameObject.FindGameObjectsWithTag("Terrain");
+        terrainPieces = GameObject.FindGameObjectsWithTag("ActiveTerrain");
         
         //Trigger Gem Generation In Order
         ChooseLocations();

@@ -14,7 +14,7 @@ public class CavePocketGeneration : MonoBehaviour
 
     void Start()
     {
-        terrainPieces = GameObject.FindGameObjectsWithTag("Terrain");
+        terrainPieces = GameObject.FindGameObjectsWithTag("ActiveTerrain");
 
         //Trigger Pocket Generation In Order
         ChooseLocations();

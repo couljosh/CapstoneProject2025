@@ -7,9 +7,10 @@ TagManager:
   - ObjectDestroyer
   - Bomb
   - Gem
-  - Terrain
   - Bedrock
   - Cart
+  - ActiveTerrain
+  - InactiveTerrain
   layers:
   - Default
   - TransparentFX

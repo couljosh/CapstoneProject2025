@@ -53,7 +53,7 @@ public class BombExplode : MonoBehaviour
 
         foreach (Collider innerHit in interiorHits)
         {
-            innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay();
+            innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
 
 
@@ -85,9 +85,9 @@ public class BombExplode : MonoBehaviour
                     }
 
                     //Look for Terrain
-                    if (raycastHit.collider.tag == "Terrain")
+                    if (raycastHit.collider.tag == "ActiveTerrain")
                     {
-                        raycastHit.collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay();
+                        raycastHit.collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
                     }
                 }
             }

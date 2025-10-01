@@ -22,7 +22,7 @@ public class CavePocket : MonoBehaviour
 
         foreach (Collider collider in terrainPieces)
         {
-            collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay();
+            collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
     }
 }
