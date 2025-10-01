@@ -104,6 +104,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        //print(gameObject.name + " " + chargingKick);
+
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
         Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
         Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);

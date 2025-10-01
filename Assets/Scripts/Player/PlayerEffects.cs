@@ -8,8 +8,8 @@ public class PlayerEffects : MonoBehaviour
     private PlayerMove playerMove;
 
     //light effects
-    public GameObject playerLight;
-    private Light spotLight;
+    //public GameObject playerLight;
+    public Light spotLight;
     private float initialRange;
     [HideInInspector] public bool chargingMaxKick = false;
     private float lightFlashTimer = 0;
@@ -18,9 +18,8 @@ public class PlayerEffects : MonoBehaviour
 
 
     private void Start()
-    { 
-        initialRange = playerLight.GetComponent<Light>().range;
-        spotLight = playerLight.GetComponent<Light>();
+    {
+        initialRange = spotLight.range;
         playerMove = gameObject.GetComponent<PlayerMove>();
     }
     public void KickEffects(float currentRatio)

@@ -27,10 +27,112 @@ public class SingleRepo : MonoBehaviour
     {
         repoLight.intensity = intensity;
         progressBar.fillAmount = 0;
+        repoLight.color = originalColor;
     }
 
 
     void Update()
+    {
+        SetLight();
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        elaspedTime = 0;
+        
+    }
+
+    //Actively Depositing Check
+    private void OnTriggerStay(Collider other)
+    {
+        PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
+        PlayerMove playerMove = other.gameObject.GetComponent<PlayerMove>();
+
+        //If the repository is active and a player is near
+        if (other.gameObject.tag == "ObjectDestroyer" && active)
+        {
+            //Start increasing timer
+            elaspedTime += Time.deltaTime;
+        }
+
+        //Deposit Progress Signifier
+        if (playerDeath != null && playerDeath.collectedGems.Count > 0)
+        {
+            repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
+
+            if (active)
+            {
+                progressBar.fillAmount = elaspedTime / depositTime;
+                ProgressSignifer(playerMove);
+            }
+        }
+        
+
+        //What happens for a successful deposit
+        if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0 && active)
+        {
+    
+            //Deposit Gem Check
+            DepositeAll(playerMove, playerDeath);
+     
+        }
+
+        
+    }
+
+    //Trigger Deposit Stopped
+    private void OnTriggerExit(Collider other)
+    {
+        //Resets the Repo
+        repoLight.intensity = intensity;
+        repoLight.color = originalColor;
+        progressBar.fillAmount = 0;
+
+    }
+
+
+
+
+
+    public void DepositeAll(PlayerMove move, PlayerDeath death)
+    {
+        //If the player is on the red team
+        if (move.playerNum <= 2)
+        {
+            print("successfully scored");
+            score.redTotal += death.collectedGems.Count;
+
+        }
+        //If the player is on the blue team
+        else
+        {
+            score.blueTotal += death.collectedGems.Count;
+
+        }
+
+        progressBar.color = Color.green;
+        death.collectedGems.Clear();
+        death.gemCount = 0;
+        elaspedTime = 0;
+    }
+
+    public void ProgressSignifer(PlayerMove playerMove)
+    {
+        if (playerMove.playerNum > 2)
+        {
+            repoLight.color = Color.Lerp(originalColor, Color.blue, (float)(depositTime - 0.5));
+            progressBar.color = Color.blue;
+        }
+
+        else
+        {
+            repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
+            progressBar.color = Color.red;
+        }
+    }
+
+    public void SetLight()
     {
         //Active Repository Signifier
         if (!active)
@@ -45,97 +147,5 @@ public class SingleRepo : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        elaspedTime = 0;
-
-    }
-
-    //Actively Depositing Check
-    private void OnTriggerStay(Collider other)
-    {
-        PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
-        PlayerMove playerMove = other.gameObject.GetComponent<PlayerMove>();
-
-        if (other.gameObject.tag == "ObjectDestroyer")
-        {
-            elaspedTime += Time.deltaTime;
-        }
-
-        //Depositing Team Signifier
-        if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0 && active)
-        {
-            if (playerMove.playerNum > 2)
-            {
-                repoLight.color = Color.Lerp(originalColor, Color.blue, (float)(depositTime - 0.5));
-            }
-
-            else
-            {
-                repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
-            }
-
-
-            //Deposit Gem Check
-            if (depositAll)
-            {
-                //If the player is on the red team
-                if (playerMove.playerNum <= 2)
-                {
-                    print("successfully scored");
-                    score.redTotal += playerDeath.collectedGems.Count;
-
-                }
-                //If the player is on the blue team
-                else
-                {
-                    score.blueTotal += playerDeath.collectedGems.Count;
-
-                }
-
-                playerDeath.collectedGems.Clear();
-                playerDeath.gemCount = 0;
-                elaspedTime = 0;
-            }
-            //Deposits one gem at a time
-            else
-            {
-                playerDeath.collectedGems.RemoveAt(0);
-                if (playerMove.playerNum <= 2)
-                {
-                    score.redTotal += 1;
-                }
-                else
-                {
-                    score.blueTotal += 1;
-                }
-                elaspedTime = 0;
-            }
-        }
-
-        //Deposit Progress Signifier
-        if (playerDeath != null && playerDeath.collectedGems.Count > 0)
-        {
-            repoLight.intensity = Mathf.PingPong(Time.time * flickerSpeed, 5);
-
-            if (active)
-            {
-                progressBar.fillAmount = elaspedTime / depositTime;
-
-            }
-        }
-        else
-        {
-            progressBar.fillAmount = 0;
-        }
-    }
-
-    //Trigger Deposit Stopped
-    private void OnTriggerExit(Collider other)
-    {
-        repoLight.intensity = intensity;
-        repoLight.color = originalColor;
-        progressBar.fillAmount = 0;
-    }
 
 }

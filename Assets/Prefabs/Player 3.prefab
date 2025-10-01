@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLight: {fileID: 1753689672031981144, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
+  spotLight: {fileID: 2822127922221191590}
   chargingMaxKick: 0
   flashInterval: 0.1
 --- !u!1 &5131605351460886873
