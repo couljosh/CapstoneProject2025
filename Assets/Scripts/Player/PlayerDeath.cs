@@ -17,7 +17,7 @@ public class PlayerDeath : MonoBehaviour
     public Collider playerCollider;
     public Light playerLight;
     public GameObject bombText;
-    private Vector3 deathPos;
+    private GameObject deathPos;
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
@@ -44,6 +44,7 @@ public class PlayerDeath : MonoBehaviour
     {
         invincibleTimer = invincibleDuration;
         meshRenderer = GetComponent<MeshRenderer>();
+        deathPos = GameObject.Find("DeathChamber");
     }
 
 
@@ -75,6 +76,7 @@ public class PlayerDeath : MonoBehaviour
 
     public IEnumerator PlayerDieOrder()
     {
+        
         isPlayerDead = true;
 
         //Turn the player off
@@ -87,6 +89,7 @@ public class PlayerDeath : MonoBehaviour
         yield return new WaitForSeconds(gemDropDelay);
         DropGems();
         collectedGems.Clear();
+        transform.position = deathPos.transform.position;
         yield return new WaitForSeconds(respawnDelay);
 
         //Turn player back on

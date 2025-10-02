@@ -10,6 +10,7 @@ public class BombSpawn : MonoBehaviour
     [Header("Gameobject References")]
     public GameObject bombPrefab;
     public GameObject bombCountText;
+    private PlayerDeath playerDeath;
 
     [Header("Bomb Cooldown Variables")]
     public float bombRegenTime;
@@ -23,7 +24,7 @@ public class BombSpawn : MonoBehaviour
     void Start()
     {
         bombsHeld = 0;
-    
+        playerDeath = GetComponent<PlayerDeath>();
     }
 
     void Update()
@@ -43,7 +44,7 @@ public class BombSpawn : MonoBehaviour
     //Spawn Bomb
     public void OnSpawnBomb(InputAction.CallbackContext context)
     {
-        if (bombsHeld > 0 && context.performed)
+        if (bombsHeld > 0 && context.performed && !playerDeath.isPlayerDead)
         {
             Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
             bombsHeld--;

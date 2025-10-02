@@ -7,8 +7,6 @@ public class PlayerEffects : MonoBehaviour
     //references to gameobject
     private PlayerMove playerMove;
 
-    //light effects
-    //public GameObject playerLight;
     public Light spotLight;
     private float initialRange;
     [HideInInspector] public bool chargingMaxKick = false;

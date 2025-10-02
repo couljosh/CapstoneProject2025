@@ -42,6 +42,7 @@ public class PlayerMove : MonoBehaviour
 
     //Effects Handling
     private PlayerEffects playerEffects;
+    private PlayerDeath playerDeath;
 
     private void Awake()
     {
@@ -52,12 +53,13 @@ public class PlayerMove : MonoBehaviour
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
         
         
-        //kickAction.performed += KickPerformed;
-        //kickAction.canceled += KickCanceled;
+        
 
         rb = GetComponent<Rigidbody>();
 
         playerEffects = GetComponent<PlayerEffects>();
+
+        playerDeath = GetComponent<PlayerDeath>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -68,14 +70,16 @@ public class PlayerMove : MonoBehaviour
     //called when the player presses down the kick button
     public void KickPerformed(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            chargingKick = true;
-        }
-        else if(context.canceled)
-        {
-            KickCanceled(context);
-        }
+        
+            if (context.performed && !playerDeath.isPlayerDead)
+            {
+                chargingKick = true;
+            }
+            else if (context.canceled)
+            {
+                KickCanceled(context);
+            }
+        
     }
 
     //called when the player releases the kick button
@@ -132,15 +136,25 @@ public class PlayerMove : MonoBehaviour
         
     }
 
+    
+
     public void FixedUpdate()
     {
-        Move(moveAmt);
+        if (!playerDeath.isPlayerDead)
+        {
+            Move(moveAmt);
+        }
+        else
+        {
+            chargingKick = false ;
+        }
     }
 
     public void Move(Vector3 direction)
     {
+       
         //progressively dampen move speed by charging a kick
-        if(kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
+        if (kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
         {
             finalMoveSpeed = initialMoveSpeed - (initialMoveSpeed * (kickStrengthTimer / timeToMaxStrength));
             finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, maxPlayerChargeSlowdown, Mathf.Infinity);
@@ -151,14 +165,14 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-            rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
+        rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
         if (direction != Vector3.zero)
         {
             Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
 
         }
-
     }
+    
 }
 
