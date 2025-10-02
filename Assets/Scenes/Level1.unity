@@ -3117,8 +3117,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
@@ -16840,12 +16840,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008156922}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.415569, y: -6.033477, z: 1.8389361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1160982260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1018225479 stripped
 MonoBehaviour:
@@ -17029,6 +17029,7 @@ Transform:
   - {fileID: 248289975}
   - {fileID: 2034542084}
   - {fileID: 594565868}
+  - {fileID: 1008156925}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1177449785
@@ -31457,7 +31458,6 @@ SceneRoots:
   - {fileID: 1379079826}
   - {fileID: 1349639124}
   - {fileID: 2013841745}
-  - {fileID: 1008156925}
   - {fileID: 1303679608}
   - {fileID: 1283142971}
   - {fileID: 649447513}
