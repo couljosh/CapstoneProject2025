@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Repository : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Repository : MonoBehaviour
     public bool isIncrease;
     public bool depositAll = false;
 
+    private List<GameObject> enteredPlayers = new List<GameObject>();
+    private bool canDepositContinue = true;
 
     void Start()
     {
@@ -33,6 +36,10 @@ public class Repository : MonoBehaviour
     {
         elaspedTime = 0;
 
+        if(other.gameObject.tag == "ObjectDestroyer")
+        {
+            enteredPlayers.Add(other.gameObject);
+        }
     }
 
     //Actively Depositing Check
@@ -44,7 +51,38 @@ public class Repository : MonoBehaviour
         //Player Check
         if (other.gameObject.tag == "ObjectDestroyer")
         {
-            elaspedTime += Time.deltaTime;
+            foreach (var player in enteredPlayers)
+            {
+                if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+                {
+                    if (other.GetComponent<PlayerMove>().playerNum != 1 || other.gameObject.GetComponent<PlayerMove>().playerNum != 2)
+                    {
+                        canDepositContinue = false;
+                        print("hit");
+                        return;
+                    }
+                    
+                }
+                else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+                {
+                    if (other.GetComponent<PlayerMove>().playerNum != 3 || other.gameObject.GetComponent<PlayerMove>().playerNum != 4)
+                    {
+                        canDepositContinue = false;
+                        print("hit");
+                        return;
+                    }
+                }
+                else
+                {
+                    canDepositContinue = true;
+                }
+            }
+
+            if(canDepositContinue)
+            {
+                elaspedTime += Time.deltaTime;
+            }
+
         }
         else
         {
@@ -88,5 +126,6 @@ public class Repository : MonoBehaviour
     {
         repoLight.intensity = 5;
         progressBar.fillAmount = 0;
+        enteredPlayers.Remove(other.gameObject);
     }
 }

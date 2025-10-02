@@ -45,7 +45,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 20
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 90.0395
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -289,7 +289,7 @@ MonoBehaviour:
   initialMoveSpeed: 6
   rotateSpeed: 10
   playerNum: 2
-  rayLength: 1
+  rayLength: 2
   rayStartPosOne: {fileID: 6907275532527671633}
   rayStartPosTwo: {fileID: 7017057214183428279}
   rayStartPosThree: {fileID: 4286716305031785844}

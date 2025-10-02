@@ -2810,7 +2810,7 @@ MonoBehaviour:
   respositories:
   - {fileID: 1379079827}
   - {fileID: 882766607}
-  moveInterval: 12
+  moveInterval: 1000
 --- !u!4 &264620534
 Transform:
   m_ObjectHideFlags: 0

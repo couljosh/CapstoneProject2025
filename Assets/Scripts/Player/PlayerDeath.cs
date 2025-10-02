@@ -81,7 +81,7 @@ public class PlayerDeath : MonoBehaviour
 
         //Turn the player off
         playerMesh.enabled = false;
-        playerCollider.enabled = false;
+        //playerCollider.enabled = false;
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
 

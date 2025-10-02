@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,10 @@ public class SingleRepo : MonoBehaviour
     public float flickerSpeed;
     public Color originalColor;
 
+    private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
+    private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
+    private bool canDepositContinue = true;
+    private int currentlyDepositingTeam;
 
     void Start()
     {
@@ -34,13 +39,33 @@ public class SingleRepo : MonoBehaviour
     void Update()
     {
         SetLight();
+
+        if (enteredPlayersTeam1.Count == 0 && enteredPlayersTeam2.Count == 0)
+        {
+            elaspedTime = 0; progressBar.fillAmount = 0;
+        }
+
+        if(enteredPlayersTeam1.Count > 0 && enteredPlayersTeam2.Count == 0)
+        {
+            currentlyDepositingTeam = 1;
+        }
+        if(enteredPlayersTeam1.Count == 0 && enteredPlayersTeam2.Count > 0)
+        {
+            currentlyDepositingTeam = 2;
+        }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        elaspedTime = 0;
-        
+        if (other.gameObject.tag == "ObjectDestroyer")
+        {
+            //add to list of players currently in range based on their team affiliation
+            if(other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Add(other.gameObject);
+            else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Add(other.gameObject);
+        }
     }
 
     //Actively Depositing Check
@@ -52,8 +77,17 @@ public class SingleRepo : MonoBehaviour
         //If the repository is active and a player is near
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            //Start increasing timer
-            elaspedTime += Time.deltaTime;
+            if (enteredPlayersTeam1.Count > 0 && enteredPlayersTeam2.Count > 0)
+            {
+                canDepositContinue = false;
+            }
+            else
+            {
+                canDepositContinue = true;
+            }
+
+            if (canDepositContinue)
+                elaspedTime += Time.deltaTime;
         }
 
         //Deposit Progress Signifier
@@ -67,65 +101,71 @@ public class SingleRepo : MonoBehaviour
                 ProgressSignifer(playerMove);
             }
         }
-        
+
 
         //What happens for a successful deposit
         if (elaspedTime >= depositTime && playerDeath != null && playerDeath.collectedGems.Count > 0 && active)
         {
-    
             //Deposit Gem Check
             DepositeAll(playerMove, playerDeath);
-     
-        }
-
-        
+        } 
     }
 
     //Trigger Deposit Stopped
     private void OnTriggerExit(Collider other)
     {
-        //Resets the Repo
-        repoLight.intensity = intensity;
-        repoLight.color = originalColor;
-        progressBar.fillAmount = 0;
+        if(other.gameObject.tag == "ObjectDestroyer")
+        {
+            //remove leaving player from list
+            if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
+                enteredPlayersTeam1.Remove(other.gameObject);
+            else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
+                enteredPlayersTeam2.Remove(other.gameObject);
 
+            //prevent opposing team inhereiting deposit progress if the previously depositing team fully leaves the radius
+            if (currentlyDepositingTeam == 1 && enteredPlayersTeam1.Count == 0)
+            {
+                elaspedTime = 0;
+                progressBar.fillAmount = 0;
+            }
+            if (currentlyDepositingTeam == 2 && enteredPlayersTeam2.Count == 0)
+            {
+                elaspedTime = 0;
+                progressBar.fillAmount = 0;
+            }
+        }
+        
     }
-
-
-
-
 
     public void DepositeAll(PlayerMove move, PlayerDeath death)
     {
         //If the player is on the red team
         if (move.playerNum <= 2)
         {
-            print("successfully scored");
             score.redTotal += death.collectedGems.Count;
-
         }
         //If the player is on the blue team
         else
         {
             score.blueTotal += death.collectedGems.Count;
-
         }
 
         progressBar.color = Color.green;
         death.collectedGems.Clear();
         death.gemCount = 0;
         elaspedTime = 0;
+        
     }
 
     public void ProgressSignifer(PlayerMove playerMove)
     {
-        if (playerMove.playerNum > 2)
+        if (playerMove.playerNum > 2 && canDepositContinue == true)
         {
             repoLight.color = Color.Lerp(originalColor, Color.blue, (float)(depositTime - 0.5));
             progressBar.color = Color.blue;
         }
 
-        else
+        else if (playerMove.playerNum <= 2 && canDepositContinue == true)
         {
             repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
             progressBar.color = Color.red;
@@ -142,7 +182,6 @@ public class SingleRepo : MonoBehaviour
         else
         {
             repoLight.enabled = true;
-
         }
     }
 
