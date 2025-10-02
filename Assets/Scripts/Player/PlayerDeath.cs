@@ -130,7 +130,7 @@ public class PlayerDeath : MonoBehaviour
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
             Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
-            gems.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * scatterForce);
+            gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
         }
     }
 }

@@ -55,7 +55,6 @@ public class CartContact : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        print(rb.linearVelocity.magnitude);
 
         if(collision.gameObject.tag == "ActiveTerrain" && rb.linearVelocity.magnitude > terrainThreshold)
         {
