@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
     private InputAction spawnBombAction;
 
     //Movement Value
-    private Vector3 moveAmt = Vector3.zero;
+    [HideInInspector] public Vector3 moveAmt = Vector3.zero;
     private Rigidbody rb;
     public float initialMoveSpeed;
     public float rotateSpeed;
