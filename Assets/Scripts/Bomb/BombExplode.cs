@@ -68,7 +68,7 @@ public class BombExplode : MonoBehaviour
                 if (raycastHit.collider.tag != null)
                 {
                     Debug.DrawRay(transform.position, raycastHit.collider.gameObject.transform.position - transform.position, Color.green, 5);
-                    if (raycastHit.collider.tag == "Bedrock")
+                    if (raycastHit.collider.tag == "Bedrock" || raycastHit.collider.tag == "Repository")
                     {
                         break;
                     }

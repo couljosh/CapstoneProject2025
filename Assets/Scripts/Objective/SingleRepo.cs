@@ -19,7 +19,7 @@ public class SingleRepo : MonoBehaviour
     [Header("Repository Customization")]
     public float depositTime;
     public float elaspedTime;
-    public float intensity = 15;
+    public float intensity;
     public float flickerSpeed;
     public Color originalColor;
 
@@ -130,12 +130,14 @@ public class SingleRepo : MonoBehaviour
                 elaspedTime = 0;
                 progressBar.fillAmount = 0;
                 repoLight.color = originalColor;
+                repoLight.intensity = intensity;
             }
             if (currentlyDepositingTeam == 2 && enteredPlayersTeam2.Count == 0)
             {
                 elaspedTime = 0;
                 progressBar.fillAmount = 0;
                 repoLight.color = originalColor;
+                repoLight.intensity = intensity;
 
             }
         }
