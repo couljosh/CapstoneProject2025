@@ -162,6 +162,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 799604430282299670}
   - {fileID: 7695686186938987994}
   - {fileID: 3848895406636095756}
   - {fileID: 6799969140618788889}
@@ -169,7 +170,6 @@ Transform:
   - {fileID: 3211029752548326495}
   - {fileID: 1347287334823156972}
   - {fileID: 4258469365122484192}
-  - {fileID: 799604430282299670}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8461699259116247893
@@ -187,7 +187,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118915545251881927}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveAmt: {x: 0, y: 0, z: 0}
-  initialMoveSpeed: 0
+  initialMoveSpeed: 6
   rotateSpeed: 10
   playerNum: 2
   rayLength: 1
@@ -537,7 +537,7 @@ Animator:
   m_GameObject: {fileID: 3118915545251881927}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3e1d792bf01c3ab499b81cf970739761, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53da1161bb382b04796d80c51b39f83c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1070,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e1d792bf01c3ab499b81cf970739761, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.989
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3e1d792bf01c3ab499b81cf970739761, type: 3}
       propertyPath: m_LocalPosition.z
