@@ -6,7 +6,7 @@ public class PlayerEffects : MonoBehaviour
 {
 
     //references to animators
-    [HideInInspector]public Animator copperAnimator;
+    [HideInInspector]public Animator copperAnimator; 
 
 
     //references to gameobject
@@ -29,6 +29,7 @@ public class PlayerEffects : MonoBehaviour
         playerMove = gameObject.GetComponent<PlayerMove>();
         copperAnimator = GetComponent<Animator>();
 
+        //Set all bool animators to false
         copperAnimator.SetBool("isRunning", false);
         copperAnimator.SetBool("isCharging", false);
     }

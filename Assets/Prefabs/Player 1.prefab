@@ -776,6 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ac976303ea398418e6b6a966c0ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copperAnimator: {fileID: 0}
   playerLight: {fileID: 1753689672031981144}
   chargingMaxKick: 0
   flashInterval: 0.1

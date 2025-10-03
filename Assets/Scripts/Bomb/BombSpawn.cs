@@ -20,8 +20,12 @@ public class BombSpawn : MonoBehaviour
     private int bombsHeld;
     public int maxBombsHeld;
 
+    [Header("Script Variables")]
+    private PlayerEffects playerEffects;
+
     void Start()
     {
+        playerEffects = gameObject.GetComponent<PlayerEffects>();
         bombsHeld = 0;
     
     }
@@ -45,9 +49,14 @@ public class BombSpawn : MonoBehaviour
     {
         if (bombsHeld > 0 && context.performed)
         {
+            playerEffects.copperAnimator.SetTrigger("Bomb");
             Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
             bombsHeld--;
             bombUseCooldown = 0;
+        }
+        else
+        {
+            playerEffects.copperAnimator.ResetTrigger("Bomb");
         }
     }
 }

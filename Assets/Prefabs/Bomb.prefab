@@ -218,6 +218,31 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  spawnGrowTime: 0.25
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   normalMaterial: {fileID: 2100000, guid: 6feb3146298570b4d9c30454ff871e54, type: 2}
   flashMaterial: {fileID: 2100000, guid: 45feb3ed36a69fc45833b3a87ce93459, type: 2}
   bombRenderer: {fileID: 2757232423904086685}
