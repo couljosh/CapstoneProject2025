@@ -66,6 +66,9 @@ public class PlayerMove : MonoBehaviour
     //called when the player presses down the kick button
     public void KickPerformed(InputAction.CallbackContext context)
     {
+        print("Kick!");
+        playerEffects.copperAnimator.SetBool("isCharging", false);
+        playerEffects.copperAnimator.SetTrigger("Kick");
         chargingKick = true;
     }
 
@@ -93,6 +96,9 @@ public class PlayerMove : MonoBehaviour
         chargingKick = false;
         currentKickStrength = 0;
         kickStrengthTimer = 0;
+
+        playerEffects.copperAnimator.ResetTrigger("Kick");
+        playerEffects.copperAnimator.SetBool("isCharging", false);
     }
 
     void Update()
@@ -103,11 +109,17 @@ public class PlayerMove : MonoBehaviour
 
         if(chargingKick)
         {
+            print("Charging Kick...");
+            playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
             currentKickStrength = initialKickStrength * (maximumKickMultiplier * kickStrengthTimer / timeToMaxStrength);
             //Mathf.Clamp(currentKickStrength, initialKickStrength, maximumKickMultiplier * initialKickStrength);
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
             playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
+        }
+        else
+        {
+            playerEffects.copperAnimator.SetBool("isCharging", false);
         }
         
     }

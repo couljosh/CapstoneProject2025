@@ -6,7 +6,7 @@ public class PlayerEffects : MonoBehaviour
 {
 
     //references to animators
-    private Animator copperAnimator;
+    [HideInInspector]public Animator copperAnimator;
 
 
     //references to gameobject
@@ -30,6 +30,7 @@ public class PlayerEffects : MonoBehaviour
         copperAnimator = GetComponent<Animator>();
 
         copperAnimator.SetBool("isRunning", false);
+        copperAnimator.SetBool("isCharging", false);
     }
     public void KickEffects(float currentRatio)
     {
