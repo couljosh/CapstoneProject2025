@@ -106,7 +106,6 @@ public class PlayerDeath : MonoBehaviour
     public IEnumerator BlinkEffect()
     {
         float timer = 0f;
-        print("BlinkFucker");
         while (timer < invincibleDuration)
         {
             meshRenderer.enabled = false;

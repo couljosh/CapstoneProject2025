@@ -160,6 +160,7 @@ MonoBehaviour:
   rayPosLeft: {fileID: 0}
   rayPosMid: {fileID: 0}
   rayPosRight: {fileID: 0}
+  startingPocket: {fileID: 3832181741272855735, guid: 486a7bba0bea60b41a99d1b901217a1c, type: 3}
   rb: {fileID: 6935507128066894879}
   terrainThreshold: 2
   playerThreshold: 10

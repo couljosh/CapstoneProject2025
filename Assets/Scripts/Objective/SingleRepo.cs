@@ -33,6 +33,8 @@ public class SingleRepo : MonoBehaviour
         repoLight.intensity = intensity;
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
+
+        score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
     }
 
 

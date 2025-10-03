@@ -1,4 +1,5 @@
 using FMODUnity;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -30,15 +31,21 @@ public class PlayerMove : MonoBehaviour
     public GameObject rayStartPosTwo;
     public GameObject rayStartPosThree;
     public LayerMask kickable;
+    public LayerMask player;
     public float initialKickStrength;
     public float cartForceMultiplier;
+    public float playerForceMultiplier;
     public float maximumKickMultiplier;
     public float timeToMaxStrength;
     public float timeBeforePlayerSlowWhenCharge;
     public float maxPlayerChargeSlowdown;
-    public float currentKickStrength;
+    private float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
+
+    public bool isStunned;
+    public float elapsedTime;
+    public float stunLength;
 
     //Effects Handling
     private PlayerEffects playerEffects;
@@ -105,6 +112,11 @@ public class PlayerMove : MonoBehaviour
                 hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * cartForceMultiplier));
 
             }
+
+            //if (hit.collider.gameObject.tag == "ObjectDestroyer")
+            //{
+            //   hit.collider.gameObject.GetComponent<PlayerMove>().isStunned = true;
+            //}
         }
 
         //reset to normal light length
@@ -133,7 +145,6 @@ public class PlayerMove : MonoBehaviour
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
             playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
         }
-        
     }
 
     
@@ -148,31 +159,34 @@ public class PlayerMove : MonoBehaviour
         {
             chargingKick = false ;
         }
+
     }
 
     public void Move(Vector3 direction)
     {
-       
-        //progressively dampen move speed by charging a kick
-        if (kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
+        if (!isStunned)
         {
-            finalMoveSpeed = initialMoveSpeed - (initialMoveSpeed * (kickStrengthTimer / timeToMaxStrength));
-            finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, maxPlayerChargeSlowdown, Mathf.Infinity);
-        }
-        else
-        {
-            finalMoveSpeed = initialMoveSpeed;
-        }
+            //progressively dampen move speed by charging a kick
+            if (kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
+            {
+                finalMoveSpeed = initialMoveSpeed - (initialMoveSpeed * (kickStrengthTimer / timeToMaxStrength));
+                finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, maxPlayerChargeSlowdown, Mathf.Infinity);
+            }
+            else
+            {
+                finalMoveSpeed = initialMoveSpeed;
+            }
 
 
-        rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
-        if (direction != Vector3.zero)
-        {
-            Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
+            rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
 
+            }
         }
     }
-    
+   
 }
 

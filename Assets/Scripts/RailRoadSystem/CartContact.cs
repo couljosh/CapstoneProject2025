@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.TerrainUtils;
+using static UnityEditor.PlayerSettings;
 
 public class CartContact : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CartContact : MonoBehaviour
     public GameObject rayPosLeft;
     public GameObject rayPosMid;
     public GameObject rayPosRight;
+    public GameObject startingPocket;
 
     public Rigidbody rb;
 
@@ -23,10 +25,12 @@ public class CartContact : MonoBehaviour
 
     private void Start()
     {
+        Invoke("ClearStartingArea", 0.1f);
     }
 
     void Update()
     {
+       
         //    RaycastHit hit;
 
         //    if (Physics.Raycast(rayPosLeft.transform.position, rayPosLeft.transform.TransformDirection(Vector3.forward), out hit, DetectionDist, terrainMask | playerMask, QueryTriggerInteraction.Ignore) |
@@ -67,7 +71,14 @@ public class CartContact : MonoBehaviour
             print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
+
         }
+    }
+
+    void ClearStartingArea()
+    {
+        Instantiate(startingPocket, transform.position, Quaternion.identity);
+
     }
 
 

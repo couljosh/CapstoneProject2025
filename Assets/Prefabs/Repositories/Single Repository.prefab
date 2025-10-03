@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 865828063015584987}
   - component: {fileID: 3032114281639169779}
   - component: {fileID: 9188964845906717920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 1888869109379050667}
   - component: {fileID: 6686551238687107371}
   - component: {fileID: 1449990963966495557}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 3847879592188157545}
   - component: {fileID: 2118880433924135027}
   - component: {fileID: 5161790247266330794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Single Repository
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,16 +390,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  depositTime: 4
-  elaspedTime: 0
   progressBar: {fileID: 7670775698564207120}
   gemCountText: {fileID: 0}
   repoLight: {fileID: 3032114281639169779}
-  intensity: 15
-  flickerSpeed: 40
   isIncrease: 0
   depositAll: 1
   active: 1
+  depositTime: 4
+  elaspedTime: 0
+  intensity: 15
+  flickerSpeed: 40
   originalColor: {r: 1, g: 0.7695999, b: 0, a: 0}
 --- !u!1 &7621282957498973594
 GameObject:
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 1855056307280375411}
   - component: {fileID: 4694075508491492189}
   - component: {fileID: 7670775698564207120}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: ProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

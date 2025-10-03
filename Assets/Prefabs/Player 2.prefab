@@ -254,7 +254,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118915545251881927}
   serializedVersion: 4
-  m_Mass: 25
+  m_Mass: 500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -268,9 +268,9 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &8174341890788258120
@@ -289,21 +289,27 @@ MonoBehaviour:
   initialMoveSpeed: 6
   rotateSpeed: 10
   playerNum: 2
-  rayLength: 2
+  rayLength: 1.5
   rayStartPosOne: {fileID: 6907275532527671633}
   rayStartPosTwo: {fileID: 7017057214183428279}
   rayStartPosThree: {fileID: 4286716305031785844}
   kickable:
     serializedVersion: 2
     m_Bits: 64
+  player:
+    serializedVersion: 2
+    m_Bits: 256
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
+  playerForceMultiplier: 0.5
   maximumKickMultiplier: 3.5
   timeToMaxStrength: 1.3
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
-  currentKickStrength: 0
   chargingKick: 0
+  isStunned: 0
+  elapsedTime: 0
+  stunLength: 0
 --- !u!114 &5208972760965963325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +662,7 @@ Transform:
   m_GameObject: {fileID: 4286716305031785844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.5, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,7 +1002,7 @@ Transform:
   m_GameObject: {fileID: 6907275532527671633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1027,7 +1033,7 @@ Transform:
   m_GameObject: {fileID: 7017057214183428279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
