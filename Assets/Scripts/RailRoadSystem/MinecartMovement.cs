@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -7,6 +8,8 @@ public class MinecartMovement : MonoBehaviour
     public SplineContainer track;
     public Rigidbody rb;
     public Spline currentSpline;
+
+    public float maxVelocity;
 
 
     void Start()
@@ -53,6 +56,8 @@ public class MinecartMovement : MonoBehaviour
             // Gradually steer velocity toward the forward direction
             Vector3 steeredVelocity = Vector3.Lerp(rb.linearVelocity, rb.linearVelocity.magnitude * forwardDir, 0.1f);
             rb.linearVelocity = steeredVelocity;
+
+            rb.maxLinearVelocity = maxVelocity;
         }
     }
 }

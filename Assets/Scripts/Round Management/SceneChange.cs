@@ -44,6 +44,7 @@ public class SceneChange : MonoBehaviour
 
     void Update()
     {
+
         //Show the score for both teams
         redScore.text = redTotal.ToString();
         blueScore.text = blueTotal.ToString();
@@ -67,7 +68,7 @@ public class SceneChange : MonoBehaviour
 
         if (roundTime <= 0) //change this to when the game is finished.
         {
-            StartCoroutine(checkScore());
+            StartCoroutine(checkScore()); 
         }
     }
 
@@ -78,18 +79,20 @@ public class SceneChange : MonoBehaviour
         tint.SetActive(true);
         timerText.gameObject.SetActive(false);
 
-        if (redRepository.GetComponent<Repository>().depositTotal > blueRepository.GetComponent<Repository>().depositTotal || redTotal > blueTotal)
-        {
-            teamOneWinText.SetActive(true);
-        }
-        else if (redRepository.GetComponent<Repository>().depositTotal < blueRepository.GetComponent<Repository>().depositTotal || redTotal < blueTotal)
-        {
-            teamTwoWinText.SetActive(true);
-        }
-        else
-        {
-            drawText.SetActive(true);
-        }
+
+        //TEMPORARILY TURNED OFF DUE TO ERRORS FROM OUDATED REPOSITORIES - REPLACE WITH NEW REPOSITORIES
+        //if (redRepository.GetComponent<Repository>().depositTotal > blueRepository.GetComponent<Repository>().depositTotal || redTotal > blueTotal)
+        //{
+        //    teamOneWinText.SetActive(true);
+        //}
+        //else if (redRepository.GetComponent<Repository>().depositTotal < blueRepository.GetComponent<Repository>().depositTotal || redTotal < blueTotal)
+        //{
+        //    teamTwoWinText.SetActive(true);
+        //}
+        //else
+        //{
+        //    drawText.SetActive(true);
+        //}
 
             yield return new WaitForSeconds(endOfRoundDelay);
         SceneManager.LoadScene(sceneNumber);

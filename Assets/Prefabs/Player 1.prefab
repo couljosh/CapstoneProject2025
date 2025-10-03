@@ -555,7 +555,7 @@ MonoBehaviour:
   cartForceMultiplier: 2.5
   playerForceMultiplier: 0.5
   maximumKickMultiplier: 3.5
-  timeToMaxStrength: 1.3
+  timeToMaxStrength: 1
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
   chargingKick: 0

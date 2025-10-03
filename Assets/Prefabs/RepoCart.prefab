@@ -163,7 +163,7 @@ MonoBehaviour:
   startingPocket: {fileID: 3832181741272855735, guid: 486a7bba0bea60b41a99d1b901217a1c, type: 3}
   rb: {fileID: 8373421050392336085}
   terrainThreshold: 2
-  playerThreshold: 10
+  playerThreshold: 6
   terrainSpeedReduction: 3
   playerSpeedReduction: 50
 --- !u!1 &7518114680105330107
@@ -332,6 +332,7 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
+  maxVelocity: 40
 --- !u!1001 &7760962201664636420
 PrefabInstance:
   m_ObjectHideFlags: 0
