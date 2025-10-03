@@ -159,6 +159,7 @@ public class SingleRepo : MonoBehaviour
         death.collectedGems.Clear();
         death.gemCount = 0;
         elaspedTime = 0;
+        repoLight.intensity = intensity;
         
     }
 
