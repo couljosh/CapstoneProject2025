@@ -9,21 +9,27 @@ public class RepoMover : MonoBehaviour
     private GameObject newRepository;
 
     [Header("Repository Customization")]
-    public float moveInterval;
-    private float elaspedTime;
+    public float switchInterval;
+    public float switchDelayMin;
+    public float switchDelayMax;
+    public float elaspedTime;
+    public int currentInd;
 
 
-    //Active Repository on Start
     void Start()
     {
-        int i = 0;
+        respositories = GameObject.FindGameObjectsWithTag("Repository");
+
+        //Turn off all repositories
         foreach (var repo in respositories)
         {
-            respositories[i].GetComponent<SingleRepo>().active = false;
-            i++;
+            repo.gameObject.GetComponent<SingleRepo>().active = false;
         }
+
+        //Activate Random Repository
         currentRepository = respositories[Random.Range(0, respositories.Length)];
         currentRepository.GetComponent<SingleRepo>().active = true;
+ 
     }
 
 
@@ -32,21 +38,33 @@ public class RepoMover : MonoBehaviour
     {
         elaspedTime += Time.deltaTime;
 
-        if (elaspedTime > moveInterval)
+        if (elaspedTime > switchInterval)
         {
             currentRepository.GetComponent<SingleRepo>().active = false;
-
-            newRepository = respositories[Random.Range(0, respositories.Length)];
-
-            while (newRepository == currentRepository)
-            {
-                newRepository = respositories[Random.Range(0, respositories.Length)];
-            }
-
-            currentRepository = newRepository;
-            currentRepository.GetComponent<SingleRepo>().active = true;
-
+            StartCoroutine(SwitchRepo());
             elaspedTime = 0;
+
+        }
+    }
+
+    public IEnumerator SwitchRepo()
+    {
+        yield return new WaitForSeconds(Random.Range(switchDelayMin, switchDelayMax));
+        currentInd = System.Array.IndexOf(respositories, currentRepository);
+
+        if(currentInd < respositories.Length - 1)
+        {
+            currentRepository = respositories[currentInd + 1];
+            currentRepository.GetComponent<SingleRepo>().active = true;
+            elaspedTime = 0;
+
+        }
+        else
+        {
+            currentRepository = respositories[0];
+            currentRepository.GetComponent<SingleRepo>().active = true;
+            elaspedTime = 0;
+
         }
     }
 }

@@ -129,11 +129,14 @@ public class SingleRepo : MonoBehaviour
             {
                 elaspedTime = 0;
                 progressBar.fillAmount = 0;
+                repoLight.color = originalColor;
             }
             if (currentlyDepositingTeam == 2 && enteredPlayersTeam2.Count == 0)
             {
                 elaspedTime = 0;
                 progressBar.fillAmount = 0;
+                repoLight.color = originalColor;
+
             }
         }
         
