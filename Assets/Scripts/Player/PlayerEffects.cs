@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerEffects : MonoBehaviour
 {
+
+    //references to animators
+    [HideInInspector] public Animator copperAnimator;
+
     //references to gameobject
     private PlayerMove playerMove;
 
@@ -19,6 +23,11 @@ public class PlayerEffects : MonoBehaviour
     {
         initialRange = spotLight.range;
         playerMove = gameObject.GetComponent<PlayerMove>();
+        copperAnimator = GetComponent<Animator>();
+
+        //Set all bool animators to false
+        copperAnimator.SetBool("isRunning", false);
+        copperAnimator.SetBool("isCharging", false);
     }
     public void KickEffects(float currentRatio)
     {
@@ -51,6 +60,15 @@ public class PlayerEffects : MonoBehaviour
         else
         {
             flashOn = true;
+        }
+        if (playerMove.moveAmt.magnitude > 0)
+        {
+            copperAnimator.SetBool("isRunning", true);
+        }
+        else if (playerMove.moveAmt.magnitude == 0)
+        {
+
+            copperAnimator.SetBool("isRunning", false);
         }
 
         spotLight.enabled = flashOn;
