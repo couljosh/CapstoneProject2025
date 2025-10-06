@@ -17,7 +17,8 @@ public class PlayerDeath : MonoBehaviour
     public Collider playerCollider;
     public Light playerLight;
     public GameObject bombText;
-    private GameObject deathPos;
+    public GameObject deathPos;
+    public GameObject copperModel;
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
@@ -55,7 +56,7 @@ public class PlayerDeath : MonoBehaviour
         if (invincibleTimer < invincibleDuration)
         {
             isInvincible = true;
-            StartCoroutine(BlinkEffect());
+            //StartCoroutine(BlinkEffect());
         }
         else
         {
@@ -81,9 +82,11 @@ public class PlayerDeath : MonoBehaviour
 
         //Turn the player off
         playerMesh.enabled = false;
-        //playerCollider.enabled = false;
+        playerCollider.enabled = false;
+        copperModel.SetActive(false);
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
+
 
         //Drop gems then respawn
         yield return new WaitForSeconds(gemDropDelay);
@@ -93,32 +96,33 @@ public class PlayerDeath : MonoBehaviour
         yield return new WaitForSeconds(respawnDelay);
 
         //Turn player back on
-        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
         playerMesh.enabled = true;
         playerCollider.enabled = true;
         playerLight.gameObject.SetActive(true);
+        copperModel.SetActive(true);
         bombText.SetActive(true);
         isPlayerDead = false;
         isInvincible = true;
         invincibleTimer = 0;
+        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
     }
 
-    public IEnumerator BlinkEffect()
-    {
-        float timer = 0f;
-        while (timer < invincibleDuration)
-        {
-            meshRenderer.enabled = false;
-            yield return new WaitForSeconds(blinkInterval / 2f);
-            meshRenderer.enabled = true;  // Show
-            yield return new WaitForSeconds(blinkInterval / 2f);
+    //public IEnumerator BlinkEffect()
+    //{
+    //    float timer = 0f;
+    //    while (timer < invincibleDuration)
+    //    {
+    //        copperModel.SetActive(false);
+    //        yield return new WaitForSeconds(blinkInterval / 2f);
+    //        copperModel.SetActive(true);  // Show
+    //        yield return new WaitForSeconds(blinkInterval / 2f);
 
-            timer += blinkInterval;
-        }
+    //        timer += blinkInterval;
+    //    }
 
-        // Ensure character is visible at the end
-        meshRenderer.enabled = true;
-    }
+    //    // Ensure character is visible at the end
+    //    copperModel.SetActive(true);
+    //}
 
 
 
@@ -130,7 +134,7 @@ public class PlayerDeath : MonoBehaviour
             gems.GetComponent<Collider>().enabled = true;
             gems.transform.position = transform.position;
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
-            Debug.Log(gems.transform.rotation);
+            //Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
             gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
         }
