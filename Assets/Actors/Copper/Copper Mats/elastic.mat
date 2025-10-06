@@ -26,7 +26,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - NORMAL_MAP_ON
-  - RIM_ON
   m_InvalidKeywords:
   - METALLIC_MAP_ON
   - _METALLICSPECGLOSSMAP
@@ -149,7 +148,7 @@ Material:
     - CUTOUT: 0
     - HEIGHT_COLORS: 0
     - PLANT_SWAY: 0
-    - RIM: 1
+    - RIM: 0
     - Vector1_1d1f6529f5744d9ab4b71e074ea7327c: 1
     - Vector1_3C537E84: 1
     - Vector1_4B9325ED: 1

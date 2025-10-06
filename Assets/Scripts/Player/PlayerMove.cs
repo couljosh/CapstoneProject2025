@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     private InputAction spawnBombAction;
 
     //Movement Value
-    private Vector3 moveAmt = Vector3.zero;
+    [HideInInspector] public Vector3 moveAmt = Vector3.zero;
     private Rigidbody rb;
     public float initialMoveSpeed;
     public float rotateSpeed;
@@ -80,6 +80,8 @@ public class PlayerMove : MonoBehaviour
         
             if (context.performed && !playerDeath.isPlayerDead)
             {
+                playerEffects.copperAnimator.SetBool("isCharging", false);
+                playerEffects.copperAnimator.SetTrigger("Kick");
                 chargingKick = true;
             }
             else if (context.canceled)
@@ -127,6 +129,9 @@ public class PlayerMove : MonoBehaviour
         chargingKick = false;
         currentKickStrength = 0;
         kickStrengthTimer = 0;
+
+        playerEffects.copperAnimator.ResetTrigger("Kick");
+        playerEffects.copperAnimator.SetBool("isCharging", false);
     }
 
     void Update()
@@ -139,11 +144,16 @@ public class PlayerMove : MonoBehaviour
 
         if(chargingKick)
         {
+            playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
             currentKickStrength = initialKickStrength * (maximumKickMultiplier * kickStrengthTimer / timeToMaxStrength);
             //Mathf.Clamp(currentKickStrength, initialKickStrength, maximumKickMultiplier * initialKickStrength);
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
             playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
+        }
+        else
+        {
+            playerEffects.copperAnimator.SetBool("isCharging", false);
         }
     }
 

@@ -21,8 +21,12 @@ public class BombSpawn : MonoBehaviour
     private int bombsHeld;
     public int maxBombsHeld;
 
+    [Header ("Script Variables")]
+    private PlayerEffects playerEffects;
+
     void Start()
     {
+        playerEffects = gameObject.GetComponent<PlayerEffects>();
         bombsHeld = 0;
         playerDeath = GetComponent<PlayerDeath>();
     }
@@ -44,11 +48,16 @@ public class BombSpawn : MonoBehaviour
     //Spawn Bomb
     public void OnSpawnBomb(InputAction.CallbackContext context)
     {
+        playerEffects.copperAnimator.SetTrigger("Bomb");
         if (bombsHeld > 0 && context.performed && !playerDeath.isPlayerDead)
         {
             Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
             bombsHeld--;
             bombUseCooldown = 0;
+        }
+        else
+        {
+            playerEffects.copperAnimator.ResetTrigger("Bomb");
         }
     }
 }
