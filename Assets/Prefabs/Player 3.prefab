@@ -607,6 +607,8 @@ MonoBehaviour:
   playerCollider: {fileID: 3909969008973954251}
   playerLight: {fileID: 2822127922221191590}
   bombText: {fileID: 7672107513123323838}
+  deathPos: {fileID: 0}
+  copperModel: {fileID: 6924247148663391826}
   invincibleDuration: 3
   invincibleTimer: 0
   blinkInterval: 0.5

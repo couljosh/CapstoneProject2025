@@ -94,14 +94,12 @@ public class BombAnim : MonoBehaviour
 
         if (flashing && flashMaterial != null)
         {
-            print("flash made");
             bombRenderer.material = flashMaterial;
         }
             
         else if (normalMaterial != null)
         {
             bombRenderer.material = normalMaterial;
-            print("flash off");
         }
             
     }
