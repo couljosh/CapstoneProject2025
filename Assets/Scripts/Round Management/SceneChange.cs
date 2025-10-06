@@ -80,21 +80,23 @@ public class SceneChange : MonoBehaviour
         timerText.gameObject.SetActive(false);
 
 
-        //TEMPORARILY TURNED OFF DUE TO ERRORS FROM OUDATED REPOSITORIES - REPLACE WITH NEW REPOSITORIES
-        //if (redRepository.GetComponent<Repository>().depositTotal > blueRepository.GetComponent<Repository>().depositTotal || redTotal > blueTotal)
-        //{
-        //    teamOneWinText.SetActive(true);
-        //}
-        //else if (redRepository.GetComponent<Repository>().depositTotal < blueRepository.GetComponent<Repository>().depositTotal || redTotal < blueTotal)
-        //{
-        //    teamTwoWinText.SetActive(true);
-        //}
-        //else
-        //{
-        //    drawText.SetActive(true);
-        //}
+        if (redTotal > blueTotal)
+        {
+            teamOneWinText.SetActive(true);
+        }
+        else if (redTotal < blueTotal)
+        {
+            teamTwoWinText.SetActive(true);
+        }
+        else
+        {
+            drawText.SetActive(true);
+        }
 
-            yield return new WaitForSeconds(endOfRoundDelay);
+
+
+
+        yield return new WaitForSeconds(endOfRoundDelay);
         SceneManager.LoadScene(sceneNumber);
 
     }

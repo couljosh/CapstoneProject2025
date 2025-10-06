@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         {
             if (startGameAction.IsPressed())
             {
-                SceneManager.LoadScene(levelOneIndex);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }
         }
