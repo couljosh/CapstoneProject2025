@@ -771,7 +771,7 @@ MonoBehaviour:
   respawnDelay: 3
   isPlayerDead: 0
   gemCount: 0
-  scatterForce: 25000
+  scatterForce: 10
   gemDropDelay: 0.2
 --- !u!114 &2157015550122162584
 MonoBehaviour:
