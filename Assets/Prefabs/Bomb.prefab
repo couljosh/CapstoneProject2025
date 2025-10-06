@@ -127,7 +127,7 @@ MonoBehaviour:
   cookTime: 3
   radius: 2.5
   innerRadius: 0.5
-  forceStrengthGem: 100
+  forceStrengthGem: 5
   forceStrengthCart: 4000
   forceStrengthBomb: 4000
   terrainMask:
