@@ -96,15 +96,15 @@ public class PlayerDeath : MonoBehaviour
         yield return new WaitForSeconds(respawnDelay);
 
         //Turn player back on
-        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
         playerMesh.enabled = true;
         playerCollider.enabled = true;
-        //playerLight.gameObject.SetActive(true);
+        playerLight.gameObject.SetActive(true);
         copperModel.SetActive(true);
-        //bombText.SetActive(true);
+        bombText.SetActive(true);
         isPlayerDead = false;
         isInvincible = true;
         invincibleTimer = 0;
+        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
     }
 
     //public IEnumerator BlinkEffect()
