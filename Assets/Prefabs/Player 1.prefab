@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf54b3e6bb79c045a2aa042b02bec62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeChangePerGem: 0.005
+  sizeChangePerGem: 0.01
   allowedSizeChanges: 35
 --- !u!1 &5291316379550694823
 GameObject:
