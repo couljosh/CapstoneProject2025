@@ -91,13 +91,14 @@ MonoBehaviour:
   - {fileID: 148110947907540480}
   EditorEvents:
   - {fileID: -6944278926269261428}
+  - {fileID: 1159516551155496074}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 638943093226972323
+  cacheTime: 638953741404097500
   SerializableEventsDict:
   - key: event:/SFX_Bomb/BombExplode
     index: 0
@@ -116,11 +117,38 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638943093226952314
+  lastModified: 638953741404067349
   FileSizes:
   - Name: Desktop
-    Value: 10592
+    Value: 112640
   Exists: 1
+--- !u!114 &1159516551155496074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Repository/Deposit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Repository/Deposit
+  Guid:
+    Data1: 894627605
+    Data2: 1255533337
+    Data3: -1397711480
+    Data4: 1785691742
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5002
 --- !u!114 &5976202062569123521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,10 +164,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638943093226972323
+  lastModified: 638953741404097500
   FileSizes:
   - Name: Desktop
-    Value: 782
+    Value: 842
   Exists: 1
 --- !u!114 &9142688076613399904
 MonoBehaviour:
