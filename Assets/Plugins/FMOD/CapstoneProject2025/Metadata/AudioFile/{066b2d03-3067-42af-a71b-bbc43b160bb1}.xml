@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{066b2d03-3067-42af-a71b-bbc43b160bb1}">
+		<property name="assetPath">
+			<value>Repository/SFX_RepositoryDeposit_Loop.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.4197052154195013</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1e3bdfc-6836-4ba6-a9b6-7be658ffccde}</destination>
+		</relationship>
+	</object>
+</objects>
