@@ -770,7 +770,7 @@ MonoBehaviour:
   bombText: {fileID: 752289995341863618}
   deathPos: {fileID: 0}
   copperModel: {fileID: 1673669748247325045}
-  invincibleDuration: 3
+  invincibleDuration: 6
   invincibleTimer: 0
   blinkInterval: 0.5
   collectedGems: []

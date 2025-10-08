@@ -639,7 +639,7 @@ MonoBehaviour:
   bombText: {fileID: 5920519289481015260}
   deathPos: {fileID: 0}
   copperModel: {fileID: 573361045551215832}
-  invincibleDuration: 3
+  invincibleDuration: 6
   invincibleTimer: 0
   blinkInterval: 0.5
   collectedGems: []
