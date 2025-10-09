@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TerrainUtils;
-using static UnityEditor.FilePathAttribute;
+///using static UnityEditor.FilePathAttribute;
 
 public class CavePocketGeneration : MonoBehaviour
 {
