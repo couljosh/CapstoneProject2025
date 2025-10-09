@@ -26290,7 +26290,7 @@ PrefabInstance:
       objectReference: {fileID: 1948333217}
     - target: {fileID: 4230729663388130016, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: clusterHalfAmt
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4230729663388130016, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: verticalOffset

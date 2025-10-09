@@ -23,8 +23,8 @@ public class SingleRepo : MonoBehaviour
     public float flickerSpeed;
     public Color originalColor;
 
-    private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
-    private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
+    public List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
+    public List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
     private bool canDepositContinue = true;
     private int currentlyDepositingTeam;
 
@@ -34,6 +34,8 @@ public class SingleRepo : MonoBehaviour
     public Image timerProgress;
 
     public RepoMover repoMoverScript;
+
+    private float elapsedTimeLastFrame;
 
 
     void Start()
@@ -81,6 +83,7 @@ public class SingleRepo : MonoBehaviour
     }
 
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ObjectDestroyer")
@@ -112,7 +115,15 @@ public class SingleRepo : MonoBehaviour
             }
 
             if (canDepositContinue)
+            {
                 elaspedTime += Time.deltaTime;
+            }
+
+            if (enteredPlayersTeam1.Count > 1 || enteredPlayersTeam2.Count > 1)
+            {
+                elaspedTime -= Time.deltaTime/2;
+            }
+
         }
 
         //Deposit Progress Signifier
@@ -185,7 +196,13 @@ public class SingleRepo : MonoBehaviour
         death.gemCount = 0;
         elaspedTime = 0;
         repoLight.intensity = intensity;
-        
+
+        //remove the player from being considered as still in the ring
+        if (death.GetComponent<PlayerMove>().playerNum == 1 || death.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Remove(death.gameObject);
+        else if (death.GetComponent<PlayerMove>().playerNum == 3 || death.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Remove(death.gameObject);
+
     }
 
     public void ProgressSignifer(PlayerMove playerMove)
