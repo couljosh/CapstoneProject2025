@@ -28,18 +28,32 @@ public class SingleRepo : MonoBehaviour
     private bool canDepositContinue = true;
     private int currentlyDepositingTeam;
 
+    public Color redTeamColor;
+    public Color blueTeamColor;
+
+    public Image timerProgress;
+
+    public RepoMover repoMoverScript;
+
+
     void Start()
     {
+        timerProgress.fillAmount = 1;
         repoLight.intensity = intensity;
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
 
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
-    }
+        repoMoverScript = GameObject.Find("RepoMover").GetComponent<RepoMover>();
+
+           }
 
 
     void Update()
     {
+       timerProgress.fillAmount = repoMoverScript.elaspedTime / repoMoverScript.switchInterval;
+        
+
         SetLight();
 
         if (enteredPlayersTeam1.Count == 0 && enteredPlayersTeam2.Count == 0)
@@ -55,6 +69,15 @@ public class SingleRepo : MonoBehaviour
         {
             currentlyDepositingTeam = 2;
         }
+
+        if(!active)
+        {
+            elaspedTime = 0;
+            progressBar.fillAmount = 0;
+            repoLight.color = originalColor;
+            repoLight.intensity = intensity;
+        }
+       
     }
 
 
@@ -169,15 +192,19 @@ public class SingleRepo : MonoBehaviour
     {
         if (playerMove.playerNum > 2 && canDepositContinue == true)
         {
-            repoLight.color = Color.Lerp(originalColor, Color.blue, (float)(depositTime - 0.5));
+            repoLight.color = Color.Lerp(originalColor, blueTeamColor, (float)(depositTime - 0.5));
+            repoLight.intensity = intensity * 4;
             progressBar.color = Color.blue;
         }
 
         else if (playerMove.playerNum <= 2 && canDepositContinue == true)
         {
-            repoLight.color = Color.Lerp(originalColor, Color.red, (float)(depositTime - 0.5));
+            repoLight.color = Color.Lerp(originalColor, redTeamColor, (float)(depositTime - 0.5));
+            repoLight.intensity = intensity * 4;
             progressBar.color = Color.red;
         }
+        else
+            repoLight.intensity = intensity / 4;
     }
 
     public void SetLight()
@@ -185,11 +212,13 @@ public class SingleRepo : MonoBehaviour
         //Active Repository Signifier
         if (!active)
         {
+            timerProgress.enabled = false;
             repoLight.enabled = false;
         }
         else
         {
             repoLight.enabled = true;
+            timerProgress.enabled = true;
         }
     }
 
