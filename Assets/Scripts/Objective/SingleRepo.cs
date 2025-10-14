@@ -119,10 +119,10 @@ public class SingleRepo : MonoBehaviour
                 elaspedTime += Time.deltaTime;
             }
 
-            if (enteredPlayersTeam1.Count > 1 || enteredPlayersTeam2.Count > 1)
-            {
-                elaspedTime -= Time.deltaTime/2;
-            }
+            //if (enteredPlayersTeam1.Count > 1 || enteredPlayersTeam2.Count > 1)
+            //{
+            //    elaspedTime -= Time.deltaTime/2;
+            //}
 
         }
 

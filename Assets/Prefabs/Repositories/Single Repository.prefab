@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 3847879592188157545}
   - component: {fileID: 2118880433924135027}
   - component: {fileID: 5161790247266330794}
+  - component: {fileID: 4710601319525801644}
   m_Layer: 10
   m_Name: Single Repository
   m_TagString: Repository
@@ -477,10 +478,47 @@ MonoBehaviour:
   intensity: 100
   flickerSpeed: 40
   originalColor: {r: 1, g: 0.7695999, b: 0, a: 1}
+  enteredPlayersTeam1: []
+  enteredPlayersTeam2: []
   redTeamColor: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
   blueTeamColor: {r: 0, g: 0.9436171, b: 1, a: 1}
   timerProgress: {fileID: 7344862857226076699}
   repoMoverScript: {fileID: 0}
+--- !u!114 &4710601319525801644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922602563702568010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9b683c87bf1c3468e56960c2967627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  progressBar: {fileID: 0}
+  gemCountText: {fileID: 0}
+  repoLight: {fileID: 0}
+  isIncrease: 0
+  depositAll: 0
+  active: 1
+  depositTime: 0
+  elaspedTime: 0
+  intensity: 0
+  flickerSpeed: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  enteredPlayersTeam1: []
+  enteredPlayersTeam2: []
+  redTeamColor: {r: 0, g: 0, b: 0, a: 0}
+  blueTeamColor: {r: 0, g: 0, b: 0, a: 0}
+  timerProgress: {fileID: 0}
+  repoMoverScript: {fileID: 0}
+  teamOneCanDepo: 0
+  teamTwoCanDepo: 0
+  isContested: 0
+  isEmpty: 0
+  depositProgress: 0
 --- !u!1 &7621282957498973594
 GameObject:
   m_ObjectHideFlags: 0
