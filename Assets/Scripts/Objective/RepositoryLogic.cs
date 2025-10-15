@@ -50,6 +50,8 @@ public class RepositoryLogic : MonoBehaviour
     public PlayerDeath depositor;
     public GameObject repoAlarm;
 
+    public List<GameObject> allEnteredPlayers = new List<GameObject>();
+
 
     void Start()
     {
@@ -69,6 +71,9 @@ public class RepositoryLogic : MonoBehaviour
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
         SetLight();
+
+        if(allEnteredPlayers.Count > 0)
+        depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
 
 
         // EMPTY //--------------------------------------------------------------------------------------------------
@@ -145,10 +150,12 @@ public class RepositoryLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       
+
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            if(depositor == null)
+            allEnteredPlayers.Add(other.gameObject);
+
+            if (depositor != other.gameObject || depositor == null)
             {
                 depositor = other.GetComponent<PlayerDeath>();
             }
@@ -164,9 +171,12 @@ public class RepositoryLogic : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
-    {
+    {   
+
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
+            allEnteredPlayers.Remove(other.gameObject);
+
             //remove leaving player from list
             if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
                 enteredPlayersTeam1.Remove(other.gameObject);
@@ -174,12 +184,13 @@ public class RepositoryLogic : MonoBehaviour
                 enteredPlayersTeam2.Remove(other.gameObject);
 
             ConditionCheck();
+
         }
         }
 
     public void ConditionCheck()
     {
-       
+
         //EMPTY
         if(enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
@@ -285,5 +296,10 @@ public class RepositoryLogic : MonoBehaviour
             timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
             repoAlarm.SetActive(true);
         }
+    }
+
+    void CheckDepositor()
+    {
+        
     }
 }
