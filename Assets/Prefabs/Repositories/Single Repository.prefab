@@ -862,35 +862,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
+  depositor: {fileID: 0}
+  repoMoverScript: {fileID: 0}
   progressBar: {fileID: 7670775698564207120}
   radiusImg: {fileID: 8042942160015208101}
-  gemCountText: {fileID: 0}
+  timerProgress: {fileID: 7344862857226076699}
   repoLight: {fileID: 3032114281639169779}
+  repoAlarm: {fileID: 1206098508903673587}
+  startingPocket: {fileID: 3832181741272855735, guid: 6e74cc43181038744b4e2e08999a93eb, type: 3}
   isIncrease: 0
   depositAll: 0
   active: 1
+  teamlastDepo: 0
+  singleCheck: 0
   depositTime: 5
-  elaspedTime: 0
-  intensity: 100
-  flickerSpeed: 40
+  increaseMult: 1
+  decreaseMult: 2
   originalColor: {r: 1, g: 0.76862746, b: 0, a: 1}
-  enteredPlayersTeam1: []
-  enteredPlayersTeam2: []
   redTeamColor: {r: 1, g: 0.42745098, b: 0.42745098, a: 1}
   blueTeamColor: {r: 0, g: 0.94509804, b: 1, a: 1}
-  timerProgress: {fileID: 7344862857226076699}
-  repoMoverScript: {fileID: 0}
   teamOneCanDepo: 0
   teamTwoCanDepo: 0
   isContested: 0
   isEmpty: 0
-  depositProgress: 0
-  increaseMult: 1
-  decreaseMult: 0.5
-  teamlastDepo: 0
-  depositor: {fileID: 0}
-  repoAlarm: {fileID: 1206098508903673587}
-  allEnteredPlayers: []
   depositRef:
     Guid:
       Data1: 894627605

@@ -10,74 +10,69 @@ using UnityEngine.Playables;
 
 public class RepositoryLogic : MonoBehaviour
 {
-    [Header("Stored References")]
+    [Header("Script References")]
     public SceneChange score;
+    public PlayerDeath depositor;
+    public RepoMover repoMoverScript;
+
+    [Header("UI References")]
     public Image progressBar;
     public Image radiusImg;
-    public GameObject gemCountText;
+    public Image timerProgress;
     public Light repoLight;
 
-    [Header("Repository Checks")]
+    [Header("Object References")]
+    public GameObject repoAlarm;
+    public GameObject startingPocket;
+    private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
+    private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
+    private List<GameObject> allEnteredPlayers = new List<GameObject>();
+
+    [Header("Deposit/Activity Checks")]
     public bool isIncrease;
     public bool depositAll = false;
     public bool active = true;
+    public int teamlastDepo;
+    public int singleCheck;
 
     [Header("Repository Customization")]
     public float depositTime;
-    public float elaspedTime;
-    public float intensity;
-    public float flickerSpeed;
+    public float increaseMult;
+    public float decreaseMult; //If a progress reduction is added when the radius is empty
+    private float depositProgress;
+
+    [Header("Color Customization")]
     public Color originalColor;
-
-    public List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
-    public List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
-    private bool canDepositContinue = true;
-    private int currentlyDepositingTeam;
-
     public Color redTeamColor;
     public Color blueTeamColor;
-    public Image timerProgress;
-    public RepoMover repoMoverScript;
-    private float elapsedTimeLastFrame;
 
-    [Header("Repository States")]
+    [Header("Repository State Checks")]
     public bool teamOneCanDepo;
     public bool teamTwoCanDepo;
     public bool isContested;
     public bool isEmpty;
 
-    public float depositProgress;
-    public float increaseMult;
-    public float decreaseMult;
-
-    public int teamlastDepo; //1 or 2
-
-    public PlayerDeath depositor;
-    public GameObject repoAlarm;
-
-    public List<GameObject> allEnteredPlayers = new List<GameObject>();
-
+    [Header("Sound Variables")]
     public EventReference depositRef;
     private FMOD.Studio.EventInstance instance;
     FMOD.Studio.PLAYBACK_STATE playBackState;
 
 
-
-    public int lastTeamCheck;
-
     void Start()
     {
+        //Script References
         repoMoverScript = GameObject.Find("RepoMover").GetComponent<RepoMover>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
 
+
+        //Start with default repository settings
         timerProgress.fillAmount = repoMoverScript.switchInterval;
-        repoLight.intensity = intensity;
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
+        ClearStartingArea();
 
+        //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
-        lastTeamCheck = 0;
-
     }
 
 
@@ -88,29 +83,25 @@ public class RepositoryLogic : MonoBehaviour
         SetLight();
         instance.getPlaybackState(out playBackState);
 
-        if(allEnteredPlayers.Count > 0)
-        depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
-
+        if (allEnteredPlayers.Count > 0)
+            depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
 
 
         // EMPTY //--------------------------------------------------------------------------------------------------
         if (isEmpty)
-        {            
-            //Reduce progress until 0
-            if(depositProgress > 0)
-            {
-               // depositProgress -= Time.deltaTime * decreaseMult;
-            }
+        {
+            //Reduces Progress
+            //if (depositProgress > 0)
+            //{
+            //    depositProgress -= Time.deltaTime * decreaseMult;
+            //}
 
-            //Set Signifiers to Neutral
-            repoLight.color = originalColor;
+            if (instance.isValid())
+                instance.setPaused(true);
 
-            if(instance.isValid())
-            instance.stop(STOP_MODE.IMMEDIATE);
-
-            //lastTeamCheck = 0;
-
-
+            //Resets last team checks
+            singleCheck = 0;
+            teamlastDepo = 0;
 
         }
 
@@ -124,15 +115,13 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
         if (teamOneCanDepo)
         {
-
             //Increase progress until full
             depositProgress += Time.deltaTime;
 
-            //Set signifiers to team one depositing
-            repoLight.color = Color.Lerp(originalColor, redTeamColor, (float)(depositTime - 0.5));
-            repoLight.intensity = intensity * 4;
+            //Team 1 Signifiers Active
             progressBar.color = Color.red;
-           
+
+            //Complete Deposit Check
             if (depositProgress >= depositTime)
             {
                 CompleteDeposit();
@@ -147,23 +136,21 @@ public class RepositoryLogic : MonoBehaviour
             //Increase progress until full
             depositProgress += Time.deltaTime;
 
-            //Set signifiers to team two depositing
-            repoLight.color = Color.Lerp(originalColor, blueTeamColor, (float)(depositTime - 0.5));
-            repoLight.intensity = intensity * 4;
+            //Team 2 Signifiers Active
             progressBar.color = Color.blue;
 
-
+            //Complete Deposit Check
             if (depositProgress >= depositTime)
             {
                 CompleteDeposit();
             }
-        }   
+        }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-
+        //Tracks Players Entered
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
             allEnteredPlayers.Add(other.gameObject);
@@ -173,19 +160,20 @@ public class RepositoryLogic : MonoBehaviour
                 depositor = other.GetComponent<PlayerDeath>();
             }
 
-            //add to list of players currently in range based on their team affiliation
+            //Add to list of players currently in range based on their team affiliation
             if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
                 enteredPlayersTeam1.Add(other.gameObject);
             else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
                 enteredPlayersTeam2.Add(other.gameObject);
 
+            //Checks Correct State
             ConditionCheck();
         }
     }
 
     private void OnTriggerExit(Collider other)
-    {   
-
+    {
+        //Tracks Players Exited
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
             allEnteredPlayers.Remove(other.gameObject);
@@ -196,18 +184,16 @@ public class RepositoryLogic : MonoBehaviour
             else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
                 enteredPlayersTeam2.Remove(other.gameObject);
 
+            //Checks Correct State
             ConditionCheck();
-
         }
-        }
+    }
 
     public void ConditionCheck()
     {
-
-        //EMPTY
-        if(enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
+        // EMPTY //--------------------------------------------------------------------------------------------------
+        if (enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
-          
             depositProgress = 0;
             isEmpty = true;
         }
@@ -216,53 +202,54 @@ public class RepositoryLogic : MonoBehaviour
             isEmpty = false;
         }
 
-        //CONTESTED
+        // CONTESTED //----------------------------------------------------------------------------------------------
         if (enteredPlayersTeam1.Count > 0 && enteredPlayersTeam2.Count > 0)
         {
             isContested = true;
-            //instance.setPaused(true);
 
-            //lastTeamCheck = teamlastDepo;
-
+            //Saves last team to determine what happens when deposit sound is played again
+            instance.setPaused(true);
+            singleCheck = teamlastDepo;
         }
         else
         {
             isContested = false;
         }
 
-        //TEAM 1 DEPOSITING
+        // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
         if (enteredPlayersTeam1.Count >= 1 && enteredPlayersTeam2.Count < 1 && depositor.collectedGems.Count > 0)
         {
             teamOneCanDepo = true;
 
-            if (teamlastDepo == 1)
-            {
-                depositProgress = 0;
-            }
-
-            teamlastDepo = 2;
-
-            //ConditionalSoundTrigger();
-        }
-        else
-        {
-            teamOneCanDepo = false;       
-        }
-
-        //TEAM 2 DEPOSITING
-        if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1 && depositor.collectedGems.Count > 0)
-        {
-            teamTwoCanDepo = true;
-           
+            //Sets as last team 
             if (teamlastDepo == 2)
             {
                 depositProgress = 0;
             }
-
             teamlastDepo = 1;
 
-           // ConditionalSoundTrigger();
+            //Deposit Sound Trigger
+            ConditionalSoundTrigger();
+        }
+        else
+        {
+            teamOneCanDepo = false;
+        }
 
+        // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
+        if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1 && depositor.collectedGems.Count > 0)
+        {
+            teamTwoCanDepo = true;
+
+            //Sets as last team 
+            if (teamlastDepo == 1)
+            {
+                depositProgress = 0;
+            }
+            teamlastDepo = 2;
+
+            //Deposit Sound Trigger
+            ConditionalSoundTrigger();
         }
         else
         {
@@ -275,54 +262,52 @@ public class RepositoryLogic : MonoBehaviour
     {
         depositProgress = 0;
 
+        //Add Red Score
         if (teamOneCanDepo)
         {
             score.redTotal += depositor.collectedGems.Count;
         }
 
+        //Add Blue Score
         if (teamTwoCanDepo)
         {
             score.blueTotal += depositor.collectedGems.Count;
         }
 
+        //Clear Inventory & Empty 
         depositor.collectedGems.Clear();
-        depositor.gemCount = 0;
+        depositor.gemCount = 0; 
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
-
-        repoLight.intensity = intensity;
-        repoLight.color = originalColor;
     }
 
 
     public void SetLight()
     {
-        //Active Repository Signifier
+        //Set Repository Aspects based on if its active vs not
         if (!active)
         {
-            // Disable all checks
             teamOneCanDepo = false;
             teamTwoCanDepo = false;
             isContested = false;
             isEmpty = false;
-            depositor = null;
 
+            depositor = null;
             enteredPlayersTeam1.Clear();
             enteredPlayersTeam2.Clear();
-            //lastTeamCheck = 0;
 
-
+            singleCheck = 0;
+            teamlastDepo = 0;
 
             timerProgress.enabled = false;
             radiusImg.enabled = false;
             repoLight.enabled = false;
             depositProgress = 0;
             repoLight.color = originalColor;
-            repoLight.intensity = intensity;
             timerProgress.fillAmount = repoMoverScript.switchInterval;
             repoAlarm.SetActive(false);
-          
+
         }
         else
         {
@@ -336,23 +321,34 @@ public class RepositoryLogic : MonoBehaviour
 
     void ConditionalSoundTrigger()
     {
-        //bool isPaused;
-        //RESULT r = instance.getPaused(out isPaused);
-        //{
-        //    if (r == RESULT.OK)
-        //        if (isPaused && teamlastDepo == lastTeamCheck)
-        //        {
-        //            instance.setPaused(false);
-                    
-        //        }
-                
+        bool isPaused;
+        RESULT r = instance.getPaused(out isPaused);
+        {
+            if (r == RESULT.OK)
+                //Sound for same team
+                if (isPaused && teamlastDepo == singleCheck)
+                {
+                    instance.setPaused(false);
+                }
 
-        //    if(teamlastDepo != lastTeamCheck)
-        //        {
-        //           // if (playBackState == PLAYBACK_STATE.STOPPED)
-        //                instance.start();
+            //Sound for new team
+            if (teamlastDepo != singleCheck)
+            {
+                PlaySound();
 
-        //        }
-        //}
+            }
+        }
+    }
+
+    void PlaySound()
+    {
+        instance.setPaused(false);
+        instance.start();
+    }
+
+    void ClearStartingArea()
+    {
+        Instantiate(startingPocket, transform.position, Quaternion.identity);
+
     }
 }
