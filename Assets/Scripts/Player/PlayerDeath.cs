@@ -82,7 +82,7 @@ public class PlayerDeath : MonoBehaviour
 
         //Turn the player off
         playerMesh.enabled = false;
-        playerCollider.enabled = false;
+        //playerCollider.enabled = false;
         copperModel.SetActive(false);
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
@@ -97,7 +97,7 @@ public class PlayerDeath : MonoBehaviour
 
         //Turn player back on
         playerMesh.enabled = true;
-        playerCollider.enabled = true;
+        //playerCollider.enabled = true;
         playerLight.gameObject.SetActive(true);
         copperModel.SetActive(true);
         bombText.SetActive(true);

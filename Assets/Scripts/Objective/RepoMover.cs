@@ -23,12 +23,12 @@ public class RepoMover : MonoBehaviour
         //Turn off all repositories
         foreach (var repo in respositories)
         {
-            repo.gameObject.GetComponent<SingleRepo>().active = false;
+            repo.gameObject.GetComponent<RepositoryLogic>().active = false;
         }
 
         //Activate Random Repository
         currentRepository = respositories[Random.Range(0, respositories.Length)];
-        currentRepository.GetComponent<SingleRepo>().active = true;
+        currentRepository.GetComponent<RepositoryLogic>().active = true;
  
     }
 
@@ -40,7 +40,7 @@ public class RepoMover : MonoBehaviour
 
         if (elaspedTime > switchInterval)
         {
-            currentRepository.GetComponent<SingleRepo>().active = false;
+            currentRepository.GetComponent<RepositoryLogic>().active = false;
             StartCoroutine(SwitchRepo());
             elaspedTime = 0;
 
@@ -55,14 +55,14 @@ public class RepoMover : MonoBehaviour
         if(currentInd < respositories.Length - 1)
         {
             currentRepository = respositories[currentInd + 1];
-            currentRepository.GetComponent<SingleRepo>().active = true;
+            currentRepository.GetComponent<RepositoryLogic>().active = true;
             elaspedTime = 0;
 
         }
         else
         {
             currentRepository = respositories[0];
-            currentRepository.GetComponent<SingleRepo>().active = true;
+            currentRepository.GetComponent<RepositoryLogic>().active = true;
             elaspedTime = 0;
 
         }

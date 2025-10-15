@@ -253,7 +253,7 @@ RectTransform:
   m_GameObject: {fileID: 274413475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.724965, y: 8.724965, z: 8.724965}
+  m_LocalScale: {x: 12.200139, y: 7.660998, z: 7.660998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 95058827}
@@ -276,14 +276,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.6205982, b: 0.4554112, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c3f919b98b5b0e4e86cd37cacf47490, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b109505cf1970b34e8c5ae1a561021b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -645,11 +645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04953cd44a7e7d4aaf316f143329dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelOneIndex: 1
   playerControls: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   pressButtonText: {fileID: 1580330382}
   fadingSpeed: 1
   fadingDelay: 0.8
+  levelOneIndex: 1
 --- !u!4 &1379631471
 Transform:
   m_ObjectHideFlags: 0

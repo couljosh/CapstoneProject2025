@@ -8,6 +8,7 @@ public class RepositoryLogic : MonoBehaviour
     [Header("Stored References")]
     public SceneChange score;
     public Image progressBar;
+    public Image radiusImg;
     public GameObject gemCountText;
     public Light repoLight;
 
@@ -41,53 +42,117 @@ public class RepositoryLogic : MonoBehaviour
     public bool isEmpty;
 
     public float depositProgress;
+    public float increaseMult;
+    public float decreaseMult;
+
+    public int teamlastDepo; //1 or 2
+
+    public PlayerDeath depositor;
+    public GameObject repoAlarm;
 
 
     void Start()
     {
+        repoMoverScript = GameObject.Find("RepoMover").GetComponent<RepoMover>();
+        score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
+
+        timerProgress.fillAmount = repoMoverScript.switchInterval;
+        repoLight.intensity = intensity;
+        progressBar.fillAmount = 0;
+        repoLight.color = originalColor;
 
     }
 
 
     void Update()
     {
+        // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
+        progressBar.fillAmount = depositProgress / depositTime;
+        SetLight();
+
+
+        // EMPTY //--------------------------------------------------------------------------------------------------
         if (isEmpty)
-        {
-            //Checks if no one is in radius 
+        {            
             //Reduce progress until 0
+            if(depositProgress > 0)
+            {
+               // depositProgress -= Time.deltaTime * decreaseMult;
+            }
+
             //Set Signifiers to Neutral
+            repoLight.color = originalColor;
         }
 
+
+        // CONTESTED //----------------------------------------------------------------------------------------------
         if (isContested)
         {
-            //Checks if both teams array to see if it should contest
-            //Pause progress
-            //Set signifiers to contested
-           
+
         }
 
+
+        // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
         if (teamOneCanDepo)
         {
-            //Checks if team one is in radius && they have gems
-            //Increase progress until full
-            //Set signifiers to team one depositing
+            if(teamlastDepo == 2)
+            {
+                depositProgress = 0;
+            }
 
-            //
+            teamlastDepo = 1;
+
+            //Increase progress until full
+            depositProgress += Time.deltaTime;
+
+            //Set signifiers to team one depositing
+            repoLight.color = Color.Lerp(originalColor, redTeamColor, (float)(depositTime - 0.5));
+            repoLight.intensity = intensity * 4;
+            progressBar.color = Color.red;
+
+            if(depositProgress >= depositTime)
+            {
+                CompleteDeposit();
+            }
         }
 
+
+        // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
         if (teamTwoCanDepo)
         {
-            //Checks if team two is in radius && they have gems
+            if (teamlastDepo == 1)
+            {
+                depositProgress = 0;
+            }
+
+            teamlastDepo = 2;
+
             //Increase progress until full
+            depositProgress += Time.deltaTime;
+
             //Set signifiers to team two depositing
-        }
+            repoLight.color = Color.Lerp(originalColor, blueTeamColor, (float)(depositTime - 0.5));
+            repoLight.intensity = intensity * 4;
+            progressBar.color = Color.blue;
+            
+            if (depositProgress >= depositTime)
+            {
+                CompleteDeposit();
+            }
+        }   
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ObjectDestroyer")
+       
+        if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
+            if(depositor == null)
+            {
+                depositor = other.GetComponent<PlayerDeath>();
+            }
+
             //add to list of players currently in range based on their team affiliation
             if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
                 enteredPlayersTeam1.Add(other.gameObject);
@@ -100,7 +165,7 @@ public class RepositoryLogic : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "ObjectDestroyer")
+        if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
             //remove leaving player from list
             if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
@@ -114,9 +179,11 @@ public class RepositoryLogic : MonoBehaviour
 
     public void ConditionCheck()
     {
+       
         //EMPTY
         if(enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
+            depositProgress = 0;
             isEmpty = true;
         }
         else
@@ -135,7 +202,7 @@ public class RepositoryLogic : MonoBehaviour
         }
 
         //TEAM 1 DEPOSITING
-        if (enteredPlayersTeam1.Count >= 1 && enteredPlayersTeam2.Count < 1)
+        if (enteredPlayersTeam1.Count >= 1 && enteredPlayersTeam2.Count < 1 && depositor.collectedGems.Count > 0)
         {
             teamOneCanDepo = true;
         }
@@ -145,7 +212,7 @@ public class RepositoryLogic : MonoBehaviour
         }
 
         //TEAM 2 DEPOSITING
-        if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1)
+        if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1 && depositor.collectedGems.Count > 0)
         {
             teamTwoCanDepo = true;
         }
@@ -155,9 +222,68 @@ public class RepositoryLogic : MonoBehaviour
         }
     }
 
-    public void CompleteDeposit(PlayerMove move, PlayerDeath death)
-    {
-        //Progress set back to 0
 
+    public void CompleteDeposit()
+    {
+        depositProgress = 0;
+
+        if (teamOneCanDepo)
+        {
+            score.redTotal += depositor.collectedGems.Count;
+        }
+
+        if (teamTwoCanDepo)
+        {
+            score.blueTotal += depositor.collectedGems.Count;
+        }
+
+        depositor.collectedGems.Clear();
+        depositor.gemCount = 0;
+
+        teamOneCanDepo = false;
+        teamTwoCanDepo = false;
+
+        repoLight.intensity = intensity;
+        repoLight.color = originalColor;
+    }
+
+
+    public void SetLight()
+    {
+        //Active Repository Signifier
+        if (!active)
+        {
+            // Disable all checks
+            teamOneCanDepo = false;
+            teamTwoCanDepo = false;
+            isContested = false;
+            isEmpty = false;
+            depositor = null;
+
+            enteredPlayersTeam1.Clear();
+            enteredPlayersTeam2.Clear();
+
+
+            timerProgress.enabled = false;
+            radiusImg.enabled = false;
+            repoLight.enabled = false;
+            depositProgress = 0;
+            repoLight.color = originalColor;
+            repoLight.intensity = intensity;
+            timerProgress.fillAmount = repoMoverScript.switchInterval;
+            repoAlarm.SetActive(false);
+            
+
+
+
+        }
+        else
+        {
+            repoLight.enabled = true;
+            timerProgress.enabled = true;
+            radiusImg.enabled = true;
+            timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
+            repoAlarm.SetActive(true);
+        }
     }
 }

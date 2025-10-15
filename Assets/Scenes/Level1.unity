@@ -644,13 +644,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1883645304231293949, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.961
       objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -690,9 +694,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4922602563702568010, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7489628106345202969, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21548,7 +21557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
@@ -27658,13 +27667,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1883645304231293949, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.12
       objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.961
       objectReference: {fileID: 0}
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27710,7 +27723,12 @@ PrefabInstance:
       propertyPath: timerProgress
       value: 
       objectReference: {fileID: 365774823}
-    m_RemovedComponents: []
+    - target: {fileID: 7489628106345202969, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5161790247266330794, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
