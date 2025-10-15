@@ -36,7 +36,7 @@ public class BombExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(cookTime);
 
-        Collider[] objectsDec = Physics.OverlapSphere(transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask);
+        Collider[] objectsDec = Physics.OverlapSphere(transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
         Explode(objectsDec);
 
         RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
@@ -62,7 +62,7 @@ public class BombExplode : MonoBehaviour
         //Bomb Detection
         foreach (Collider hit in colliding)
         {
-            RaycastHit[] hits = Physics.RaycastAll(transform.position, hit.transform.position - transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask);
+            RaycastHit[] hits = Physics.RaycastAll(transform.position, hit.transform.position - transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
             foreach (RaycastHit raycastHit in hits)
             {
                 if (raycastHit.collider.tag != null)
