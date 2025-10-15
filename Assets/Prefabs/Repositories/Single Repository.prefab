@@ -890,6 +890,14 @@ MonoBehaviour:
   teamlastDepo: 0
   depositor: {fileID: 0}
   repoAlarm: {fileID: 1206098508903673587}
+  allEnteredPlayers: []
+  depositRef:
+    Guid:
+      Data1: 894627605
+      Data2: 1255533337
+      Data3: -1397711480
+      Data4: 1785691742
+    Path: event:/SFX_Repository/Deposit
 --- !u!1 &7621282957498973594
 GameObject:
   m_ObjectHideFlags: 0

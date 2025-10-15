@@ -1,7 +1,12 @@
+using FMOD;
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
+using UnityEngine.Playables;
 
 public class RepositoryLogic : MonoBehaviour
 {
@@ -52,6 +57,13 @@ public class RepositoryLogic : MonoBehaviour
 
     public List<GameObject> allEnteredPlayers = new List<GameObject>();
 
+    public EventReference depositRef;
+    private FMOD.Studio.EventInstance instance;
+    FMOD.Studio.PLAYBACK_STATE playBackState;
+
+
+
+    public int lastTeamCheck;
 
     void Start()
     {
@@ -63,6 +75,9 @@ public class RepositoryLogic : MonoBehaviour
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
 
+        instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
+        lastTeamCheck = 0;
+
     }
 
 
@@ -71,9 +86,11 @@ public class RepositoryLogic : MonoBehaviour
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
         SetLight();
+        instance.getPlaybackState(out playBackState);
 
         if(allEnteredPlayers.Count > 0)
         depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
+
 
 
         // EMPTY //--------------------------------------------------------------------------------------------------
@@ -87,8 +104,15 @@ public class RepositoryLogic : MonoBehaviour
 
             //Set Signifiers to Neutral
             repoLight.color = originalColor;
-        }
 
+            if(instance.isValid())
+            instance.stop(STOP_MODE.IMMEDIATE);
+
+            //lastTeamCheck = 0;
+
+
+
+        }
 
         // CONTESTED //----------------------------------------------------------------------------------------------
         if (isContested)
@@ -100,12 +124,6 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
         if (teamOneCanDepo)
         {
-            if(teamlastDepo == 2)
-            {
-                depositProgress = 0;
-            }
-
-            teamlastDepo = 1;
 
             //Increase progress until full
             depositProgress += Time.deltaTime;
@@ -114,8 +132,8 @@ public class RepositoryLogic : MonoBehaviour
             repoLight.color = Color.Lerp(originalColor, redTeamColor, (float)(depositTime - 0.5));
             repoLight.intensity = intensity * 4;
             progressBar.color = Color.red;
-
-            if(depositProgress >= depositTime)
+           
+            if (depositProgress >= depositTime)
             {
                 CompleteDeposit();
             }
@@ -125,12 +143,6 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
         if (teamTwoCanDepo)
         {
-            if (teamlastDepo == 1)
-            {
-                depositProgress = 0;
-            }
-
-            teamlastDepo = 2;
 
             //Increase progress until full
             depositProgress += Time.deltaTime;
@@ -139,7 +151,8 @@ public class RepositoryLogic : MonoBehaviour
             repoLight.color = Color.Lerp(originalColor, blueTeamColor, (float)(depositTime - 0.5));
             repoLight.intensity = intensity * 4;
             progressBar.color = Color.blue;
-            
+
+
             if (depositProgress >= depositTime)
             {
                 CompleteDeposit();
@@ -194,6 +207,7 @@ public class RepositoryLogic : MonoBehaviour
         //EMPTY
         if(enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
+          
             depositProgress = 0;
             isEmpty = true;
         }
@@ -206,6 +220,10 @@ public class RepositoryLogic : MonoBehaviour
         if (enteredPlayersTeam1.Count > 0 && enteredPlayersTeam2.Count > 0)
         {
             isContested = true;
+            //instance.setPaused(true);
+
+            //lastTeamCheck = teamlastDepo;
+
         }
         else
         {
@@ -216,16 +234,35 @@ public class RepositoryLogic : MonoBehaviour
         if (enteredPlayersTeam1.Count >= 1 && enteredPlayersTeam2.Count < 1 && depositor.collectedGems.Count > 0)
         {
             teamOneCanDepo = true;
+
+            if (teamlastDepo == 1)
+            {
+                depositProgress = 0;
+            }
+
+            teamlastDepo = 2;
+
+            //ConditionalSoundTrigger();
         }
         else
         {
-            teamOneCanDepo = false;
+            teamOneCanDepo = false;       
         }
 
         //TEAM 2 DEPOSITING
         if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1 && depositor.collectedGems.Count > 0)
         {
             teamTwoCanDepo = true;
+           
+            if (teamlastDepo == 2)
+            {
+                depositProgress = 0;
+            }
+
+            teamlastDepo = 1;
+
+           // ConditionalSoundTrigger();
+
         }
         else
         {
@@ -273,6 +310,8 @@ public class RepositoryLogic : MonoBehaviour
 
             enteredPlayersTeam1.Clear();
             enteredPlayersTeam2.Clear();
+            //lastTeamCheck = 0;
+
 
 
             timerProgress.enabled = false;
@@ -283,10 +322,7 @@ public class RepositoryLogic : MonoBehaviour
             repoLight.intensity = intensity;
             timerProgress.fillAmount = repoMoverScript.switchInterval;
             repoAlarm.SetActive(false);
-            
-
-
-
+          
         }
         else
         {
@@ -298,8 +334,25 @@ public class RepositoryLogic : MonoBehaviour
         }
     }
 
-    void CheckDepositor()
+    void ConditionalSoundTrigger()
     {
-        
+        //bool isPaused;
+        //RESULT r = instance.getPaused(out isPaused);
+        //{
+        //    if (r == RESULT.OK)
+        //        if (isPaused && teamlastDepo == lastTeamCheck)
+        //        {
+        //            instance.setPaused(false);
+                    
+        //        }
+                
+
+        //    if(teamlastDepo != lastTeamCheck)
+        //        {
+        //           // if (playBackState == PLAYBACK_STATE.STOPPED)
+        //                instance.start();
+
+        //        }
+        //}
     }
 }
