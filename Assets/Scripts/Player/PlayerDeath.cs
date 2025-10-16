@@ -78,7 +78,7 @@ public class PlayerDeath : MonoBehaviour
 
     public IEnumerator PlayerDieOrder()
     {
-        //StartCoroutine(DeathEffect());
+        StartCoroutine(DeathEffect());
 
 
         isPlayerDead = true;
