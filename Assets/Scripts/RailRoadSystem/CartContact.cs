@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.TerrainUtils;
+using System.Threading;
 //using static UnityEditor.PlayerSettings;
 
 public class CartContact : MonoBehaviour
@@ -22,6 +24,8 @@ public class CartContact : MonoBehaviour
 
     public float terrainSpeedReduction;
     public float playerSpeedReduction;
+
+    public GameObject impactSphere;
 
     private void Start()
     {
@@ -71,7 +75,8 @@ public class CartContact : MonoBehaviour
             print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
-
+            
+            //Thread.Sleep(200);
         }
     }
 
@@ -80,6 +85,4 @@ public class CartContact : MonoBehaviour
         Instantiate(startingPocket, transform.position, Quaternion.identity);
 
     }
-
-
 }

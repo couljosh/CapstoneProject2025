@@ -770,6 +770,7 @@ MonoBehaviour:
   bombText: {fileID: 752289995341863618}
   deathPos: {fileID: 0}
   copperModel: {fileID: 1673669748247325045}
+  impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
   invincibleDuration: 6
   invincibleTimer: 0
   blinkInterval: 0.5
@@ -1097,7 +1098,7 @@ Transform:
   m_GameObject: {fileID: 5291316379550694823}
   serializedVersion: 2
   m_LocalRotation: {x: 9.604264e-10, y: -0, z: 0.38268346, w: 0.9238796}
-  m_LocalPosition: {x: -0.071, y: 0.078, z: -0.03}
+  m_LocalPosition: {x: -0.071, y: 0.078, z: 0.02}
   m_LocalScale: {x: 0.25, y: 0.24999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

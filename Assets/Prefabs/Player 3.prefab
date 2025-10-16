@@ -611,6 +611,7 @@ MonoBehaviour:
   bombText: {fileID: 7672107513123323838}
   deathPos: {fileID: 0}
   copperModel: {fileID: 6924247148663391826}
+  impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
   invincibleDuration: 6
   invincibleTimer: 0
   blinkInterval: 0.5

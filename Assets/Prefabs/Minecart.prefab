@@ -373,6 +373,7 @@ MonoBehaviour:
   playerThreshold: 6
   terrainSpeedReduction: 1
   playerSpeedReduction: 50
+  impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
 --- !u!1 &6413094215018168897
 GameObject:
   m_ObjectHideFlags: 0

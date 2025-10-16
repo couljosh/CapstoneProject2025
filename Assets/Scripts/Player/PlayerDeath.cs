@@ -19,6 +19,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject bombText;
     public GameObject deathPos;
     public GameObject copperModel;
+    public GameObject impactSphere;
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
@@ -77,7 +78,9 @@ public class PlayerDeath : MonoBehaviour
 
     public IEnumerator PlayerDieOrder()
     {
-        
+        //StartCoroutine(DeathEffect());
+
+
         isPlayerDead = true;
 
         //Turn the player off
@@ -138,5 +141,12 @@ public class PlayerDeath : MonoBehaviour
             gems.gameObject.SetActive(true);
             gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
         }
+    }
+
+    IEnumerator DeathEffect()
+    {
+        GameObject currentSphere = Instantiate(impactSphere, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        Destroy(currentSphere);
     }
 }
