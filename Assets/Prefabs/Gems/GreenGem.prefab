@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 6842362332081523121}
   - component: {fileID: 2706083795032821995}
   - component: {fileID: 6470172093254434400}
-  - component: {fileID: 3163907097378822391}
+  - component: {fileID: -7409019836309853859}
   m_Layer: 9
   m_Name: GreenGem
   m_TagString: Gem
@@ -401,7 +401,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3163907097378822391
+--- !u!114 &-7409019836309853859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

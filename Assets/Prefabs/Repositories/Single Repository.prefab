@@ -872,6 +872,8 @@ MonoBehaviour:
   startingPocket: {fileID: 3832181741272855735, guid: 6e74cc43181038744b4e2e08999a93eb, type: 3}
   allEnteredPlayers: []
   depositRadius: {fileID: 3847879592188157545}
+  largeGemsInRadius: []
+  largeGemValue: 50
   isIncrease: 0
   depositAll: 0
   active: 1

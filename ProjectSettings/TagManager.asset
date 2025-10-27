@@ -12,6 +12,7 @@ TagManager:
   - ActiveTerrain
   - InactiveTerrain
   - Repository
+  - LargeGem
   layers:
   - Default
   - TransparentFX
