@@ -11,13 +11,11 @@ public class MinecartMovement : MonoBehaviour
 
     public float maxVelocity;
 
-
     void Start()
     {
          rb = GetComponent<Rigidbody>();
-        track = FindAnyObjectByType<SplineContainer>();
-        currentSpline = track.Splines[0];
-
+         track = FindAnyObjectByType<SplineContainer>();
+         currentSpline = track.Splines[0];
 
     }
 
@@ -59,5 +57,7 @@ public class MinecartMovement : MonoBehaviour
 
             rb.maxLinearVelocity = maxVelocity;
         }
+
     }
+
 }

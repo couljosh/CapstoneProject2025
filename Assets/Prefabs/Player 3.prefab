@@ -399,6 +399,7 @@ MonoBehaviour:
     m_Bits: 256
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
+  rockForceMultiplier: 10
   playerForceMultiplier: 0.5
   maximumKickMultiplier: 3.5
   timeToMaxStrength: 1

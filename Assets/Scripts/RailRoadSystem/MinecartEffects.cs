@@ -14,6 +14,8 @@ public class MinecartEffects : MonoBehaviour
     public Color32 lowSpeedOutlineColor;
     public Color32 highSpeedOutlineColor;
 
+    public bool isPowered;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +28,7 @@ public class MinecartEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.linearVelocity.magnitude > cartContact.playerThreshold)
+        if (rb.linearVelocity.magnitude > cartContact.playerThreshold || isPowered)
         {
             modelMeshRenderer.material = playerKillSpeedMaterial;
             outline.OutlineColor = highSpeedOutlineColor;

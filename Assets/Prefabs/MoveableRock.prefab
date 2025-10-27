@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2224462895051237420}
   m_Layer: 6
   m_Name: MoveableRock
-  m_TagString: Bomb
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 1364100952594610085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.02, y: 0.69016534, z: 5.08}
-  m_LocalScale: {x: 1.497027, y: 1.497027, z: 1.497027}
+  m_LocalPosition: {x: -16.02, y: 0.446, z: 5.08}
+  m_LocalScale: {x: 1.497027, y: 1.0086968, z: 2.5429997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364100952594610085}
   serializedVersion: 4
-  m_Mass: 500
+  m_Mass: 3000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

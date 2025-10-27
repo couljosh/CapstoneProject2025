@@ -374,6 +374,7 @@ MonoBehaviour:
   terrainSpeedReduction: 1
   playerSpeedReduction: 50
   impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
+  isPowered: 1
 --- !u!1 &6413094215018168897
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,8 +390,9 @@ GameObject:
   - component: {fileID: 7307863316880256640}
   - component: {fileID: 6215791676165355425}
   - component: {fileID: 2075033072666377267}
+  - component: {fileID: 3836076184854098391}
   m_Layer: 6
-  m_Name: Minecart
+  m_Name: PoweredMinecart
   m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -449,7 +451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6413094215018168897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4f8f46d99f71544cbc715f2a937afe7, type: 3}
   m_Name: 
@@ -491,6 +493,7 @@ MonoBehaviour:
   highSpeedOutlineColor:
     serializedVersion: 2
     rgba: 4278236927
+  isPowered: 1
 --- !u!114 &7307863316880256640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,6 +541,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6413094215018168897}
   m_Mesh: {fileID: -1920499256442619652, guid: 29758570c7e5b9a4e86b742e3daac91d, type: 3}
+--- !u!114 &3836076184854098391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413094215018168897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 2
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &9203846135769378125
 GameObject:
   m_ObjectHideFlags: 0

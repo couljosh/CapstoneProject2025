@@ -27,6 +27,8 @@ public class CartContact : MonoBehaviour
 
     public GameObject impactSphere;
 
+    public bool isPowered;
+
     private void Start()
     {
         Invoke("ClearStartingArea", 0.1f);
@@ -59,6 +61,7 @@ public class CartContact : MonoBehaviour
         //    }
         //}
 
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -70,7 +73,7 @@ public class CartContact : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity * (1 - terrainSpeedReduction/100);
         }
 
-        if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold)
+        if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold || collision.gameObject.tag == "ObjectDestroyer" && isPowered)
         {
             print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
@@ -85,4 +88,6 @@ public class CartContact : MonoBehaviour
         Instantiate(startingPocket, transform.position, Quaternion.identity);
 
     }
+
+
 }
