@@ -34,6 +34,7 @@ public class PlayerMove : MonoBehaviour
     public LayerMask player;
     public float initialKickStrength;
     public float cartForceMultiplier;
+    public float rockForceMultiplier;
     public float playerForceMultiplier;
     public float maximumKickMultiplier;
     public float timeToMaxStrength;
@@ -120,6 +121,13 @@ public class PlayerMove : MonoBehaviour
                 hit.collider.GetComponentInParent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
 
             }
+
+            if (hit.collider.gameObject.tag == "RockObstacle")
+            {
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength * rockForceMultiplier);
+
+            }
+
 
             //if (hit.collider.gameObject.tag == "ObjectDestroyer")
             //{
