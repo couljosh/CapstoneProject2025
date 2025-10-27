@@ -25,7 +25,7 @@ public class LargeGem : MonoBehaviour
         {
             Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask, QueryTriggerInteraction.Ignore);
 
-            if (hitblocks.Length == 0)
+            if (hitblocks.Length < 7)
             {
                 ReleaseGem();
                 isReleased = true;
