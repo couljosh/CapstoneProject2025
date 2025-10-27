@@ -3075,7 +3075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRepository: {fileID: 0}
   respositories: []
-  switchInterval: 25
+  switchInterval: 500
   switchDelayMin: 3
   switchDelayMax: 8
   elaspedTime: 0
@@ -28337,7 +28337,7 @@ PrefabInstance:
       objectReference: {fileID: 439726531}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 150
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText

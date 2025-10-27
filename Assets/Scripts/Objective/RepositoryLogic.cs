@@ -4,9 +4,10 @@ using FMODUnity;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.TerrainUtils;
 using UnityEngine.UI;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
-using UnityEngine.Playables;
 
 public class RepositoryLogic : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class RepositoryLogic : MonoBehaviour
     public GameObject startingPocket;
     private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
     private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
-    private List<GameObject> allEnteredPlayers = new List<GameObject>();
+    public List<GameObject> allEnteredPlayers = new List<GameObject>();
+    public SphereCollider depositRadius;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -51,6 +53,7 @@ public class RepositoryLogic : MonoBehaviour
     public bool teamTwoCanDepo;
     public bool isContested;
     public bool isEmpty;
+    public LayerMask player;
 
     [Header("Sound Variables")]
     public EventReference depositRef;
@@ -78,9 +81,11 @@ public class RepositoryLogic : MonoBehaviour
 
     void Update()
     {
+
+        ConditionCheck();
+
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
-        SetLight();
         instance.getPlaybackState(out playBackState);
 
         if (allEnteredPlayers.Count > 0)
@@ -132,7 +137,6 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
         if (teamTwoCanDepo)
         {
-
             //Increase progress until full
             depositProgress += Time.deltaTime;
 
@@ -153,21 +157,7 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Entered
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            allEnteredPlayers.Add(other.gameObject);
-
-            if (depositor != other.gameObject || depositor == null)
-            {
-                depositor = other.GetComponent<PlayerDeath>();
-            }
-
-            //Add to list of players currently in range based on their team affiliation
-            if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
-                enteredPlayersTeam1.Add(other.gameObject);
-            else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
-                enteredPlayersTeam2.Add(other.gameObject);
-
-            //Checks Correct State
-            ConditionCheck();
+            addEnteredPlayer(other.gameObject);
         }
     }
 
@@ -176,16 +166,7 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Exited
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            allEnteredPlayers.Remove(other.gameObject);
-
-            //remove leaving player from list
-            if (other.GetComponent<PlayerMove>().playerNum == 1 || other.GetComponent<PlayerMove>().playerNum == 2)
-                enteredPlayersTeam1.Remove(other.gameObject);
-            else if (other.GetComponent<PlayerMove>().playerNum == 3 || other.GetComponent<PlayerMove>().playerNum == 4)
-                enteredPlayersTeam2.Remove(other.gameObject);
-
-            //Checks Correct State
-            ConditionCheck();
+            removeEnteredPlayer(other.gameObject);
         }
     }
 
@@ -194,6 +175,7 @@ public class RepositoryLogic : MonoBehaviour
         // EMPTY //--------------------------------------------------------------------------------------------------
         if (enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
+            depositor = null;
             depositProgress = 0;
             isEmpty = true;
         }
@@ -276,48 +258,51 @@ public class RepositoryLogic : MonoBehaviour
 
         //Clear Inventory & Empty 
         depositor.collectedGems.Clear();
-        depositor.gemCount = 0; 
+        depositor.gemCount = 0;
+
+        if (allEnteredPlayers.Count > 0)
+            allEnteredPlayers.RemoveAt(0);
+
+        repoMoverScript.elaspedTime = repoMoverScript.switchInterval;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
     }
 
 
-    public void SetLight()
+    public void DisableRepo()
     {
-        //Set Repository Aspects based on if its active vs not
-        if (!active)
-        {
-            teamOneCanDepo = false;
-            teamTwoCanDepo = false;
-            isContested = false;
-            isEmpty = false;
+        teamOneCanDepo = false;
+        teamTwoCanDepo = false;
+        isContested = false;
+        isEmpty = false;
 
-            depositor = null;
-            enteredPlayersTeam1.Clear();
-            enteredPlayersTeam2.Clear();
+        depositor = null;
+        enteredPlayersTeam1.Clear();
+        enteredPlayersTeam2.Clear();
 
-            singleCheck = 0;
-            teamlastDepo = 0;
+        singleCheck = 0;
+        teamlastDepo = 0;
 
-            timerProgress.enabled = false;
-            radiusImg.enabled = false;
-            repoLight.enabled = false;
-            depositProgress = 0;
-            repoLight.color = originalColor;
-            timerProgress.fillAmount = repoMoverScript.switchInterval;
-            repoAlarm.SetActive(false);
-
-        }
-        else
-        {
-            repoLight.enabled = true;
-            timerProgress.enabled = true;
-            radiusImg.enabled = true;
-            timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
-            repoAlarm.SetActive(true);
-        }
+        timerProgress.enabled = false;
+        radiusImg.enabled = false;
+        repoLight.enabled = false;
+        depositProgress = 0;
+        repoLight.color = originalColor;
+        timerProgress.fillAmount = repoMoverScript.switchInterval;
+        repoAlarm.SetActive(false);
     }
+
+    public void ActivateRepo()
+    {
+        repoLight.enabled = true;
+        timerProgress.enabled = true;
+        radiusImg.enabled = true;
+        timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
+        repoAlarm.SetActive(true);
+        CheckWhenSetActive();
+    }
+
 
     void ConditionalSoundTrigger()
     {
@@ -340,15 +325,64 @@ public class RepositoryLogic : MonoBehaviour
         }
     }
 
+
     void PlaySound()
     {
         instance.setPaused(false);
         instance.start();
     }
 
+
     void ClearStartingArea()
     {
         Instantiate(startingPocket, transform.position, Quaternion.identity);
 
+    }
+
+
+    void CheckWhenSetActive()
+    {
+        Collider[] playersHit = Physics.OverlapSphere(transform.position, depositRadius.radius, player, QueryTriggerInteraction.Ignore);
+
+        if (playersHit.Length > 0)
+        {
+            foreach (var detectedPlayer in playersHit)
+            {
+                if (detectedPlayer != null)
+                    addEnteredPlayer(detectedPlayer.gameObject);
+            }
+        }
+    }
+
+
+    void addEnteredPlayer(GameObject player)
+    {
+        allEnteredPlayers.Add(player);
+        //depositor != other.gameObject ||
+        if (depositor == null)
+        {
+            depositor = player.GetComponent<PlayerDeath>();
+        }
+
+        //Add to list of players currently in range based on their team affiliation
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Add(player.gameObject);
+        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Add(player.gameObject);
+    }
+
+
+    void removeEnteredPlayer(GameObject player)
+    {
+        allEnteredPlayers.Remove(player);
+
+        if (depositor != null && allEnteredPlayers.Count > 0)
+            depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
+
+        //remove leaving player from list
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Remove(player.gameObject);
+        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Remove(player.gameObject);
     }
 }

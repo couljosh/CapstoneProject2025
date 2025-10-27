@@ -870,6 +870,8 @@ MonoBehaviour:
   repoLight: {fileID: 3032114281639169779}
   repoAlarm: {fileID: 1206098508903673587}
   startingPocket: {fileID: 3832181741272855735, guid: 6e74cc43181038744b4e2e08999a93eb, type: 3}
+  allEnteredPlayers: []
+  depositRadius: {fileID: 3847879592188157545}
   isIncrease: 0
   depositAll: 0
   active: 1
@@ -885,6 +887,9 @@ MonoBehaviour:
   teamTwoCanDepo: 0
   isContested: 0
   isEmpty: 0
+  player:
+    serializedVersion: 2
+    m_Bits: 256
   depositRef:
     Guid:
       Data1: 894627605
