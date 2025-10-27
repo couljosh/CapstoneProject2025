@@ -115,6 +115,12 @@ public class PlayerMove : MonoBehaviour
 
             }
 
+            if (hit.collider.gameObject.tag == "LargeGem")
+            {
+                hit.collider.GetComponentInParent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
+
+            }
+
             //if (hit.collider.gameObject.tag == "ObjectDestroyer")
             //{
             //   hit.collider.gameObject.GetComponent<PlayerMove>().isStunned = true;

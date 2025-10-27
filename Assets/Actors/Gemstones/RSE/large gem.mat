@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ruby
+  m_Name: large gem
   m_Shader: {fileID: -6465566751694194690, guid: 5c42c2ae10c4d04408993ab15da9c222, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -199,15 +199,15 @@ Material:
     m_Colors:
     - Color_609458B3: {r: 1, g: 1, b: 1, a: 1}
     - Color_64110F2A: {r: 1, g: 1, b: 1, a: 1}
-    - Color_6B8DA992: {r: 0.990566, g: 0.4719206, b: 0.4719206, a: 0}
+    - Color_6B8DA992: {r: 1, g: 1, b: 1, a: 0}
     - Color_7941B3F: {r: 1, g: 1, b: 1, a: 1}
     - Color_C62668C6: {r: 0, g: 0, b: 0, a: 1}
     - Color_D6CD8104: {r: 1, g: 1, b: 1, a: 1}
     - Color_D9A456B0: {r: 1, g: 1, b: 1, a: 0}
-    - _BaseColor: {r: 1, g: 0.8066038, b: 0.8066038, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0.8066038, b: 0.8066038, a: 1}
     - _EmissionColor: {r: 0.3962264, g: 0, b: 0, a: 1}
-    - _EmissionColor2: {r: 0.9528302, g: 0, b: 0.038490277, a: 1}
+    - _EmissionColor2: {r: 0.3498194, g: 0, b: 0.8301887, a: 1}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

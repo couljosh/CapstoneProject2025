@@ -29,6 +29,8 @@ public class RepositoryLogic : MonoBehaviour
     private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
     public List<GameObject> allEnteredPlayers = new List<GameObject>();
     public SphereCollider depositRadius;
+    public List<GameObject> largeGemsInRadius = new List<GameObject>();
+    public int largeGemValue;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -83,6 +85,7 @@ public class RepositoryLogic : MonoBehaviour
     {
 
         ConditionCheck();
+        print(largeGemsInRadius.Count);
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
@@ -159,6 +162,12 @@ public class RepositoryLogic : MonoBehaviour
         {
             addEnteredPlayer(other.gameObject);
         }
+
+        if (other.gameObject.tag == "LargeGem" && active)
+        {
+            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = true;
+            largeGemsInRadius.Add(other.gameObject.transform.parent.gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -167,6 +176,12 @@ public class RepositoryLogic : MonoBehaviour
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
             removeEnteredPlayer(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "LargeGem" && active)
+        {
+            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = false;
+            largeGemsInRadius.Remove(other.gameObject.transform.parent.gameObject);
         }
     }
 
@@ -247,13 +262,13 @@ public class RepositoryLogic : MonoBehaviour
         //Add Red Score
         if (teamOneCanDepo)
         {
-            score.redTotal += depositor.collectedGems.Count;
+            score.redTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
         }
 
         //Add Blue Score
         if (teamTwoCanDepo)
         {
-            score.blueTotal += depositor.collectedGems.Count;
+            score.blueTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
         }
 
         //Clear Inventory & Empty 
@@ -262,6 +277,14 @@ public class RepositoryLogic : MonoBehaviour
 
         if (allEnteredPlayers.Count > 0)
             allEnteredPlayers.RemoveAt(0);
+
+        //get rid of any large gems
+        foreach (GameObject largeGem in largeGemsInRadius)
+        {
+            Destroy(largeGem);
+        }
+        largeGemsInRadius.Clear();
+
 
         repoMoverScript.elaspedTime = repoMoverScript.switchInterval;
 
