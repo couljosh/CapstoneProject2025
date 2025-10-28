@@ -80,6 +80,8 @@ public class PlayerDeath : MonoBehaviour
     {
         StartCoroutine(DeathEffect());
 
+        Gamepad.current.SetMotorSpeeds(1f, 1f);
+
 
         isPlayerDead = true;
 
@@ -93,6 +95,9 @@ public class PlayerDeath : MonoBehaviour
 
         //Drop gems then respawn
         yield return new WaitForSeconds(gemDropDelay);
+
+        Gamepad.current.SetMotorSpeeds(0f, 0f);
+
         DropGems();
         collectedGems.Clear();
         transform.position = deathPos.transform.position;

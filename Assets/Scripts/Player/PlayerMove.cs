@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
     public float timeToMaxStrength;
     public float timeBeforePlayerSlowWhenCharge;
     public float maxPlayerChargeSlowdown;
-    private float currentKickStrength;
+    public float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
 
@@ -48,6 +48,7 @@ public class PlayerMove : MonoBehaviour
     public float elapsedTime;
     public float stunLength;
 
+    public float normalizedRumble;
     //Effects Handling
     private PlayerEffects playerEffects;
     private PlayerDeath playerDeath;
@@ -59,9 +60,7 @@ public class PlayerMove : MonoBehaviour
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
 
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
-        
-        
-        
+
 
         rb = GetComponent<Rigidbody>();
 
@@ -84,8 +83,8 @@ public class PlayerMove : MonoBehaviour
                 playerEffects.copperAnimator.SetBool("isCharging", false);
                 playerEffects.copperAnimator.SetTrigger("Kick");
                 chargingKick = true;
-            }
-            else if (context.canceled)
+        }
+        else if (context.canceled)
             {
                 KickCanceled(context);
             }
@@ -95,6 +94,8 @@ public class PlayerMove : MonoBehaviour
     //called when the player releases the kick button
     private void KickCanceled(InputAction.CallbackContext context)
     {
+        //Gamepad.current.SetMotorSpeeds(0, 0);
+
         RaycastHit hit;
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
             Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
@@ -149,7 +150,8 @@ public class PlayerMove : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
+
         //print(gameObject.name + " " + chargingKick);
 
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
@@ -164,6 +166,10 @@ public class PlayerMove : MonoBehaviour
             //Mathf.Clamp(currentKickStrength, initialKickStrength, maximumKickMultiplier * initialKickStrength);
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
             playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
+
+            //Rumble increases as player charge kick (also sets it to 0 on canceled)
+            //normalizedRumble = ((currentKickStrength / 2 - 0) / ((initialKickStrength * maximumKickMultiplier) - 0)) / 10;
+            //Gamepad.current.SetMotorSpeeds(normalizedRumble, normalizedRumble);
         }
         else
         {

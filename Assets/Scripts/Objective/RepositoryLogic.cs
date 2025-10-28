@@ -85,7 +85,6 @@ public class RepositoryLogic : MonoBehaviour
     {
 
         ConditionCheck();
-        print(largeGemsInRadius.Count);
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
