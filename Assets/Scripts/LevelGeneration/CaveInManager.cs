@@ -2,6 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TerrainUtils;
 using System.Collections;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 public class CaveInManager : MonoBehaviour
 {
     [Header("References")]
@@ -21,6 +23,14 @@ public class CaveInManager : MonoBehaviour
     private float randomNum;
     public int terrainChunksToSpawn;
 
+    private ReadOnlyArray<Gamepad> gamepadArray;
+
+
+
+        private void Start()
+        {
+           gamepadArray = Gamepad.all;
+        }
 
     void Update()
     {
@@ -46,9 +56,19 @@ public class CaveInManager : MonoBehaviour
     // Cave-In Sequence 
     public IEnumerator spawnTerrain()
     {
+        foreach (var gamepad in gamepadArray)
+        {
+            gamepad.SetMotorSpeeds(0.1f, 0.1f);
+        }    
+
         yield return new WaitForSeconds(3);
 
-        for(int i = 0; i < terrainChunksToSpawn; i++)
+        foreach (var gamepad in gamepadArray)
+        {
+            gamepad.SetMotorSpeeds(0f, 0f);
+        }
+
+        for (int i = 0; i < terrainChunksToSpawn; i++)
         {
             //Random Location based on floor bounds
             var bounds = floor.GetComponent<MeshCollider>().bounds;

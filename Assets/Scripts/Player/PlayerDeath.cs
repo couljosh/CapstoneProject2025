@@ -42,11 +42,15 @@ public class PlayerDeath : MonoBehaviour
     public float scatterForce;
     public float gemDropDelay;
 
+    private Gamepad playerGamepad;
+
     private void Start()
     {
         invincibleTimer = invincibleDuration;
         meshRenderer = GetComponent<MeshRenderer>();
         deathPos = GameObject.Find("DeathChamber");
+
+        playerGamepad = (Gamepad)playerInput.devices[0];
     }
 
 
@@ -80,7 +84,9 @@ public class PlayerDeath : MonoBehaviour
     {
         StartCoroutine(DeathEffect());
 
-        Gamepad.current.SetMotorSpeeds(1f, 1f);
+
+        if(playerGamepad != null)
+        playerGamepad.SetMotorSpeeds(1f, 1f);
 
 
         isPlayerDead = true;
@@ -96,7 +102,8 @@ public class PlayerDeath : MonoBehaviour
         //Drop gems then respawn
         yield return new WaitForSeconds(gemDropDelay);
 
-        Gamepad.current.SetMotorSpeeds(0f, 0f);
+        if (playerGamepad != null)
+            playerGamepad.SetMotorSpeeds(0f, 0f);
 
         DropGems();
         collectedGems.Clear();

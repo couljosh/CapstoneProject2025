@@ -3075,7 +3075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRepository: {fileID: 0}
   respositories: []
-  switchInterval: 500
+  switchInterval: 25
   switchDelayMin: 3
   switchDelayMax: 8
   elaspedTime: 0
@@ -6580,7 +6580,6 @@ Transform:
   m_Children:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 620504096}
   - {fileID: 712869253}
   - {fileID: 1195652274}
   - {fileID: 2062400311}
@@ -10933,7 +10932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 474948664}
+  m_Father: {fileID: 669621982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &620504097
 MonoBehaviour:
@@ -12049,6 +12048,7 @@ Transform:
   - {fileID: 1391306159}
   - {fileID: 1670730268}
   - {fileID: 264620534}
+  - {fileID: 620504096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &681856771 stripped
@@ -20841,7 +20841,7 @@ Transform:
   m_GameObject: {fileID: 1208211168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -12.1728, y: 0, z: -54.0809}
+  m_LocalPosition: {x: -12.1728, y: 0.1, z: -54.1}
   m_LocalScale: {x: 56.39038, y: 5.0154, z: 35.44393}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28456,7 +28456,7 @@ PrefabInstance:
       objectReference: {fileID: 439726531}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 500
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText
