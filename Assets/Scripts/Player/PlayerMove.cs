@@ -1,5 +1,6 @@
 using FMODUnity;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -43,6 +44,9 @@ public class PlayerMove : MonoBehaviour
     public float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
+
+    public UnityEngine.UI.Image kickChargeBar;
+    public Gradient chargeGradient;
 
     public bool isStunned;
     public float elapsedTime;
@@ -170,10 +174,29 @@ public class PlayerMove : MonoBehaviour
             //Rumble increases as player charge kick (also sets it to 0 on canceled)
             //normalizedRumble = ((currentKickStrength / 2 - 0) / ((initialKickStrength * maximumKickMultiplier) - 0)) / 10;
             //Gamepad.current.SetMotorSpeeds(normalizedRumble, normalizedRumble);
+
+            //fill kick bar based off kick strength and max strength
+            kickChargeBar.fillAmount = kickStrengthTimer / timeToMaxStrength;
+
+            if ((kickChargeBar.fillAmount >= 0.45f) && (kickChargeBar.fillAmount < 0.85f))
+            {
+                kickChargeBar.color = new Color(50, 20, 20, 1.0f);
+            }
+
+            if (kickChargeBar.fillAmount >= 0.85f)
+            {
+                //Debug.Log("test");
+
+                kickChargeBar.color = Color.red;
+            }
         }
         else
         {
             playerEffects.copperAnimator.SetBool("isCharging", false);
+
+            //reset kick bar
+            kickChargeBar.fillAmount = 0f;
+            kickChargeBar.color = Color.white;
         }
     }
 
