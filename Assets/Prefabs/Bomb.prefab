@@ -130,6 +130,7 @@ MonoBehaviour:
   forceStrengthGem: 3
   forceStrengthCart: 4000
   forceStrengthBomb: 3000
+  forceStrengthLargeGem: 1500
   terrainMask:
     serializedVersion: 2
     m_Bits: 128

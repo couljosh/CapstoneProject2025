@@ -10,6 +10,9 @@ public class LargeGem : MonoBehaviour
     public LayerMask terrainMask;
     private float releasedTime;
     private Animator flashAnim;
+    public MeshRenderer gemMesh;
+    public Material outOfRadiusMaterial;
+    public Material inRadiusMaterial;
 
     public bool isInDepositRadius;
 
@@ -32,16 +35,18 @@ public class LargeGem : MonoBehaviour
             }
         }
 
-        if(isInDepositRadius)
+
+        //shining if in radius
+
+        if (isInDepositRadius)
         {
-            print("reached in");
-            gameObject.GetComponent<Animator>().enabled = true;
+            //not currently functioning
+            gemMesh.material = inRadiusMaterial;
         }
         else if (!isInDepositRadius)
         {
-            print("reached out");
-            gameObject.GetComponent<Animator>().playbackTime = 0;
-            gameObject.GetComponent<Animator>().enabled = false;
+            //not currently functioning
+            gemMesh.material = outOfRadiusMaterial;
         }
     }
 
