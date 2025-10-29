@@ -26,6 +26,13 @@ public class GroundMeshGeneration : MonoBehaviour
     private int[] triangles;
     private Vector3[] verticesArray;
 
+    [Header("Pit Variables")]
+    public int pitAmt;
+    public List<GameObject> pitPrefabs = new List<GameObject>();
+    public LayerMask groundMask;
+    public float pitRadius;
+    public float pitDepth;
+
     void Start()
     {
         //Chunk & subdivisions always even values
@@ -51,14 +58,13 @@ public class GroundMeshGeneration : MonoBehaviour
 
         yield return null;
 
-        Debug.Log("updating mesh");
-        UpdateMesh();
+        Debug.Log("Generating Pits");
+        SpawnPits();
 
         yield return null;
 
-        Debug.Log("Generating Pits");
-
-
+        Debug.Log("updating mesh");
+        UpdateMesh();
     }
 
     public void CalculateMesh()
@@ -114,16 +120,46 @@ public class GroundMeshGeneration : MonoBehaviour
         }
     }
 
+    public void SpawnPits()
+    {
+        for (int i = 0; i < pitAmt; i++)
+        {
+            int randInd = Random.Range(0, verticesArray.Length);
+            Vector3 chosenLocation = verticesArray[randInd];
 
-    //WILL BE USED TO SET PIT DEPTHS ************
+            for (int v = 0; v < verticesArray.Length; v++)
+            {
+                float dist = Vector3.Distance(chosenLocation, verticesArray[v]);
+                if (dist < pitRadius)
+                {
+                    Vector3 chosenLocationWorldPos = transform.TransformPoint(chosenLocation);
+                    Vector3 vertexWorldPos = transform.TransformPoint(verticesArray[v]);
+
+                    Instantiate(pitPrefabs[0], chosenLocationWorldPos, Quaternion.identity);
+                    Debug.DrawRay(chosenLocationWorldPos, vertexWorldPos - chosenLocationWorldPos, Color.green, 10);
+                    
+                    verticesArray[v].y -= pitDepth;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+    }
+
     //Clears the mesh and sets the proper vertecies, triangles, color, and normals
     public void UpdateMesh()
     {
 
-        mesh.Clear();
         mesh.vertices = verticesArray;
         mesh.triangles = triangles;
+
         mesh.RecalculateNormals();
+        mesh.RecalculateBounds();
+
+        meshCollider.sharedMesh = null;
         meshCollider.sharedMesh = mesh;
     }
 }
