@@ -542,7 +542,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &8777085710729310984
 MonoBehaviour:
@@ -571,6 +571,9 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 256
+  floor:
+    serializedVersion: 2
+    m_Bits: 2048
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
   rockForceMultiplier: 10
@@ -581,6 +584,7 @@ MonoBehaviour:
   maxPlayerChargeSlowdown: 1
   currentKickStrength: 0
   chargingKick: 0
+  gravity: 7
   kickChargeBar: {fileID: 6877065949877392940}
   chargeGradient:
     serializedVersion: 2
@@ -859,7 +863,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4e436c4e105cdc64499404e734abeaf1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0

@@ -33,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject rayStartPosThree;
     public LayerMask kickable;
     public LayerMask player;
+    public LayerMask floor;
     public float initialKickStrength;
     public float cartForceMultiplier;
     public float rockForceMultiplier;
@@ -44,6 +45,7 @@ public class PlayerMove : MonoBehaviour
     public float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
+    public float gravity;
 
     public UnityEngine.UI.Image kickChargeBar;
     public Gradient chargeGradient;
@@ -154,8 +156,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     void Update()
-    { 
-
+    {
         //print(gameObject.name + " " + chargingKick);
 
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
@@ -217,6 +218,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
+
         if (!isStunned)
         {
             //progressively dampen move speed by charging a kick
@@ -231,12 +233,21 @@ public class PlayerMove : MonoBehaviour
             }
 
 
-            rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
+            rb.linearVelocity = new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed;
+            
             if (direction != Vector3.zero)
             {
                 Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
 
+            }
+
+            //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
+
+            if(!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+            {
+                print("floor not seen");
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
             }
         }
     }
