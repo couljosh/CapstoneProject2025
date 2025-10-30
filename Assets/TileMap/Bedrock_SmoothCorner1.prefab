@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoother Triangle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: debc3f069894a4849ab51b0575201f98, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: debc3f069894a4849ab51b0575201f98, type: 3}
+      propertyPath: m_TagString
+      value: Bedrock
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -132,7 +140,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: debc3f069894a4849ab51b0575201f98, type: 3}
 --- !u!4 &6796519847169922674 stripped

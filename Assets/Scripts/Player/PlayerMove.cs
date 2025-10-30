@@ -101,6 +101,13 @@ public class PlayerMove : MonoBehaviour
     private void KickCanceled(InputAction.CallbackContext context)
     {
         //Gamepad.current.SetMotorSpeeds(0, 0);
+        RaycastHit playerHit;
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore))
+        {
+            playerHit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerForceMultiplier));
+        }
 
         RaycastHit hit;
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||

@@ -84,7 +84,6 @@ public class RepositoryLogic : MonoBehaviour
 
     void Update()
     {
-        print(timerProgress.fillAmount);
         ConditionCheck();
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------

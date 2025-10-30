@@ -75,58 +75,60 @@ public class PlayerDeath : MonoBehaviour
     {
         if (!isInvincible)
         {
-            StartCoroutine(PlayerDieOrder());
+            //   StartCoroutine(PlayerDieOrder());
+                 StartCoroutine(PlayerDeathSeq());
         }
     }
 
     //ignore invincibility
     public void ForcePlayerDie()
     {
-        StartCoroutine(PlayerDieOrder());
+        // StartCoroutine(PlayerDieOrder());
+           StartCoroutine(PlayerDeathSeq());
     }
 
 
-    public IEnumerator PlayerDieOrder()
-    {
-        StartCoroutine(DeathEffect());
+    //public IEnumerator PlayerDieOrder()
+    //{
+    //    StartCoroutine(DeathEffect());
 
 
-        if(playerGamepad != null)
-        playerGamepad.SetMotorSpeeds(1f, 1f);
+    //    if(playerGamepad != null)
+    //    playerGamepad.SetMotorSpeeds(1f, 1f);
 
 
-        isPlayerDead = true;
+    //    isPlayerDead = true;
 
-        //Turn the player off
-        playerMesh.enabled = false;
-        //playerCollider.enabled = false;
-        copperModel.SetActive(false);
-        playerLight.gameObject.SetActive(false);
-        bombText.SetActive(false);
+    //    //Turn the player off
+    //    playerMesh.enabled = false;
+    //    //playerCollider.enabled = false;
+    //    copperModel.SetActive(false);
+    //    playerLight.gameObject.SetActive(false);
+    //    bombText.SetActive(false);
 
 
-        //Drop gems then respawn
-        yield return new WaitForSeconds(gemDropDelay);
+    //    //Drop gems then respawn
+    //    yield return new WaitForSeconds(gemDropDelay);
 
-        if (playerGamepad != null)
-            playerGamepad.SetMotorSpeeds(0f, 0f);
+    //    if (playerGamepad != null)
+    //        playerGamepad.SetMotorSpeeds(0f, 0f);
 
-        DropGems();
-        collectedGems.Clear();
-        transform.position = deathPos.transform.position;
-        yield return new WaitForSeconds(respawnDelay);
+    //    DropGems();
+    //    collectedGems.Clear();
+    //    transform.position = deathPos.transform.position;
+    //    yield return new WaitForSeconds(respawnDelay);
 
-        //Turn player back on
-        playerMesh.enabled = true;
-        //playerCollider.enabled = true;
-        playerLight.gameObject.SetActive(true);
-        copperModel.SetActive(true);
-        bombText.SetActive(true);
-        isPlayerDead = false;
-        isInvincible = true;
-        invincibleTimer = 0;
-        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
-    }
+    //    //Turn player back on
+    //    playerMesh.enabled = true;
+    //    //playerCollider.enabled = true;
+    //    playerLight.gameObject.SetActive(true);
+    //    copperModel.SetActive(true);
+    //    bombText.SetActive(true);
+    //    isPlayerDead = false;
+    //    isInvincible = true;
+    //    invincibleTimer = 0;
+    //    transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+    //}
 
     //public IEnumerator BlinkEffect()
     //{
@@ -146,11 +148,44 @@ public class PlayerDeath : MonoBehaviour
     //}
 
 
+    IEnumerator DeathEffect()
+    {
+        GameObject currentSphere = Instantiate(impactSphere, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        Destroy(currentSphere);
+    }
 
-    //Drop Gem Sequence
+
+    public IEnumerator PlayerDeathSeq()
+    {
+        StartCoroutine(DeathEffect());
+        DisablePlayer();
+       
+        yield return new WaitForSeconds(gemDropDelay);
+        DropGems();
+
+        yield return new WaitForSeconds(respawnDelay);
+        EnablePlayer();
+    }
+
+
+    void DisablePlayer()
+    {
+        isPlayerDead = true;
+
+        //Turn the player off
+        playerMesh.enabled = false;
+        copperModel.SetActive(false);
+        playerCollider.enabled = false;
+
+        playerLight.gameObject.SetActive(false);
+        bombText.SetActive(false);
+    }
+
+
     public void DropGems()
     {
-        foreach(GameObject gems in collectedGems)
+        foreach (GameObject gems in collectedGems)
         {
             gems.GetComponent<Collider>().enabled = true;
             gems.transform.position = transform.position;
@@ -159,12 +194,26 @@ public class PlayerDeath : MonoBehaviour
             gems.gameObject.SetActive(true);
             gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
         }
+
+        collectedGems.Clear();
     }
 
-    IEnumerator DeathEffect()
+
+    void EnablePlayer()
     {
-        GameObject currentSphere = Instantiate(impactSphere, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
-        Destroy(currentSphere);
+        isPlayerDead = false;
+
+        //Turn player back on
+        playerMesh.enabled = true;
+        copperModel.SetActive(true);
+        playerCollider.enabled = true;
+
+        playerLight.gameObject.SetActive(true);
+        bombText.SetActive(true);
+
+        isInvincible = true;
+        invincibleTimer = 0;
+
+        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
     }
 }
