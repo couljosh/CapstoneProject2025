@@ -246,7 +246,6 @@ public class PlayerMove : MonoBehaviour
 
             if(!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
             {
-                print("floor not seen");
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
             }
         }

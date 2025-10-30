@@ -14,6 +14,8 @@ public class BombExplode : MonoBehaviour
     public float forceStrengthGem;
     public float forceStrengthCart;
     public float forceStrengthBomb;
+    public float forceStrengthLargeGem;
+    public GameObject explosionParticle; 
 
     [Header("Layers to Detect")]
     public LayerMask terrainMask;
@@ -21,6 +23,7 @@ public class BombExplode : MonoBehaviour
     public LayerMask playerMask;
     public LayerMask gemMask;
     public LayerMask bedrock;
+    
 
     [Header("Script References")]
     private BlockDestruction blockDestruction;
@@ -41,6 +44,7 @@ public class BombExplode : MonoBehaviour
 
         RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
 
+        GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
 
     }
@@ -77,6 +81,13 @@ public class BombExplode : MonoBehaviour
                     if (raycastHit.collider.tag == "ObjectDestroyer")
                     {
                         raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
+                    }
+
+                    if (raycastHit.collider.tag == "LargeGem")
+                    {
+                        print("hit large gem");
+                        Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
+                        raycastHit.collider.gameObject.gameObject.GetComponentInParent<Rigidbody>().AddForce(forceVector * forceStrengthLargeGem, ForceMode.Impulse);
                     }
 
                     //Loock for Gem

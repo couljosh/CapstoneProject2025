@@ -56,6 +56,7 @@ public class RepositoryLogic : MonoBehaviour
     public bool isContested;
     public bool isEmpty;
     public LayerMask player;
+    public LayerMask kickable;
 
     [Header("Sound Variables")]
     public EventReference depositRef;
@@ -313,6 +314,9 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.color = originalColor;
         timerProgress.fillAmount = repoMoverScript.switchInterval;
         repoAlarm.SetActive(false);
+
+        //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
+        largeGemsInRadius.Clear();
     }
 
     public void ActivateRepo()
@@ -364,6 +368,7 @@ public class RepositoryLogic : MonoBehaviour
 
     void CheckWhenSetActive()
     {
+        //check for players already in the radius
         Collider[] playersHit = Physics.OverlapSphere(transform.position, depositRadius.radius, player, QueryTriggerInteraction.Ignore);
 
         if (playersHit.Length > 0)
@@ -372,6 +377,23 @@ public class RepositoryLogic : MonoBehaviour
             {
                 if (detectedPlayer != null)
                     addEnteredPlayer(detectedPlayer.gameObject);
+            }
+        }
+
+        //check for large gems already in the radius
+        Collider[] gemsHit = Physics.OverlapSphere(transform.position, depositRadius.radius, kickable, QueryTriggerInteraction.Ignore);
+
+        if (gemsHit.Length > 0)
+        {
+            foreach (var detectedGem in gemsHit)
+            {
+                if (detectedGem != null && detectedGem.tag == "LargeGem")
+                {
+                    largeGemsInRadius.Add(detectedGem.gameObject.transform.parent.gameObject);
+                    detectedGem.gameObject.GetComponentInParent<LargeGem>().isInDepositRadius = true;
+                }
+                    
+
             }
         }
     }
