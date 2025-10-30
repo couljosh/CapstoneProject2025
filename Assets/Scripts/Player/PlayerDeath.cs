@@ -79,6 +79,12 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
+    //ignore invincibility
+    public void ForcePlayerDie()
+    {
+        StartCoroutine(PlayerDieOrder());
+    }
+
 
     public IEnumerator PlayerDieOrder()
     {
