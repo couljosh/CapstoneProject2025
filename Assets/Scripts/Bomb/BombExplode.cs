@@ -15,6 +15,7 @@ public class BombExplode : MonoBehaviour
     public float forceStrengthCart;
     public float forceStrengthBomb;
     public float forceStrengthLargeGem;
+    public GameObject explosionParticle; 
 
     [Header("Layers to Detect")]
     public LayerMask terrainMask;
@@ -43,6 +44,7 @@ public class BombExplode : MonoBehaviour
 
         RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
 
+        GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
 
     }

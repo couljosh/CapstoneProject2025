@@ -131,6 +131,7 @@ MonoBehaviour:
   forceStrengthCart: 4000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
+  explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
