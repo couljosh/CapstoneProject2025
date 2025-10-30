@@ -314,7 +314,7 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.enabled = false;
         depositProgress = 0;
         repoLight.color = originalColor;
-        timerProgress.fillAmount = repoMoverScript.switchInterval;
+        //timerProgress.fillAmount = repoMoverScript.switchInterval;
         repoAlarm.SetActive(false);
 
         //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
