@@ -159,9 +159,18 @@ public class PlayerDeath : MonoBehaviour
     public IEnumerator PlayerDeathSeq()
     {
         StartCoroutine(DeathEffect());
+
+
+        if (playerGamepad != null)
+        playerGamepad.SetMotorSpeeds(1f, 1f);
+
         DisablePlayer();
        
         yield return new WaitForSeconds(gemDropDelay);
+
+
+        if (playerGamepad != null)
+        playerGamepad.SetMotorSpeeds(0f, 0f);
         DropGems();
 
         yield return new WaitForSeconds(respawnDelay);
