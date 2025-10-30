@@ -51,6 +51,8 @@ public class PlayerDeath : MonoBehaviour
         deathPos = GameObject.Find("DeathChamber");
 
         playerGamepad = (Gamepad)playerInput.devices[0];
+
+
     }
 
 
@@ -165,7 +167,10 @@ public class PlayerDeath : MonoBehaviour
         playerGamepad.SetMotorSpeeds(1f, 1f);
 
         DisablePlayer();
-       
+
+        gameObject.GetComponent<Animator>().applyRootMotion = true;
+        transform.position = deathPos.transform.position;
+
         yield return new WaitForSeconds(gemDropDelay);
 
 
@@ -175,6 +180,9 @@ public class PlayerDeath : MonoBehaviour
 
         yield return new WaitForSeconds(respawnDelay);
         EnablePlayer();
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponent<Animator>().applyRootMotion = false;
+
     }
 
 
@@ -185,7 +193,7 @@ public class PlayerDeath : MonoBehaviour
         //Turn the player off
         playerMesh.enabled = false;
         copperModel.SetActive(false);
-        playerCollider.enabled = false;
+        //playerCollider.enabled = false;
 
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
@@ -210,19 +218,24 @@ public class PlayerDeath : MonoBehaviour
 
     void EnablePlayer()
     {
+        gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position; 
+
         isPlayerDead = false;
 
         //Turn player back on
         playerMesh.enabled = true;
         copperModel.SetActive(true);
-        playerCollider.enabled = true;
+        //playerCollider.enabled = true;
 
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);
 
         isInvincible = true;
         invincibleTimer = 0;
+    }
 
-        transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+    void MovePlayer()
+    {
+
     }
 }

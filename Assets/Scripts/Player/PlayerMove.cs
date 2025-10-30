@@ -54,6 +54,8 @@ public class PlayerMove : MonoBehaviour
     public float elapsedTime;
     public float stunLength;
 
+    private bool chargedEnough;
+
     public float normalizedRumble;
     //Effects Handling
     private PlayerEffects playerEffects;
@@ -106,6 +108,7 @@ public class PlayerMove : MonoBehaviour
             Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
             Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore))
         {
+            if(chargedEnough)
             playerHit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerForceMultiplier));
         }
 
@@ -189,6 +192,8 @@ public class PlayerMove : MonoBehaviour
             if ((kickChargeBar.fillAmount >= 0.45f) && (kickChargeBar.fillAmount < 0.85f))
             {
                 kickChargeBar.color = new Color(50, 20, 20, 1.0f);
+                chargedEnough = true;
+
             }
 
             if (kickChargeBar.fillAmount >= 0.85f)
@@ -196,7 +201,14 @@ public class PlayerMove : MonoBehaviour
                 //Debug.Log("test");
 
                 kickChargeBar.color = Color.red;
+                chargedEnough = true;
+
             }
+            else
+            {
+                chargedEnough = false;
+            }
+
         }
         else
         {
@@ -240,11 +252,15 @@ public class PlayerMove : MonoBehaviour
             }
 
 
-            rb.linearVelocity = new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed;
-            
+            if (rb.linearVelocity.magnitude < finalMoveSpeed)
+            {
+                rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed, ForceMode.VelocityChange);
+            }
+
+
             if (direction != Vector3.zero)
             {
-                Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
+                Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
 
             }
