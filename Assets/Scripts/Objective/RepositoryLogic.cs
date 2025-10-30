@@ -84,11 +84,14 @@ public class RepositoryLogic : MonoBehaviour
 
     void Update()
     {
-
+        print(timerProgress.fillAmount);
         ConditionCheck();
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
+        if(active)
+        timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
+
         instance.getPlaybackState(out playBackState);
 
         if (allEnteredPlayers.Count > 0)
@@ -324,9 +327,9 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.enabled = true;
         timerProgress.enabled = true;
         radiusImg.enabled = true;
-        timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
         repoAlarm.SetActive(true);
         CheckWhenSetActive();
+
     }
 
 

@@ -23,6 +23,8 @@ public class CaveInManager : MonoBehaviour
     private float randomNum;
     public int terrainChunksToSpawn;
 
+    public float gemVeritcalOffest;
+
     private ReadOnlyArray<Gamepad> gamepadArray;
 
 
@@ -75,7 +77,7 @@ public class CaveInManager : MonoBehaviour
             var px = Random.Range(bounds.min.x, bounds.max.x);
             var py = Random.Range(bounds.min.y, bounds.max.y);
             var pz = Random.Range(bounds.min.z, bounds.max.z);
-            Vector3 pos = new Vector3(px, py, pz);
+            Vector3 pos = new Vector3(px, py + gemVeritcalOffest, pz);
 
             Collider[] hitblocks = Physics.OverlapSphere(pos, radius, terrainMask);
             foreach(Collider col in hitblocks)
@@ -88,7 +90,7 @@ public class CaveInManager : MonoBehaviour
             }
 
         int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], pos + Vector3.up, Quaternion.Euler(0, Random.Range(0, 360), 0));
+        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], pos, Quaternion.Euler(0, Random.Range(0, 360), 0));
         }
     }
 }
