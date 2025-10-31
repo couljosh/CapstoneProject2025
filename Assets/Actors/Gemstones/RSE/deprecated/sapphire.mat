@@ -21,14 +21,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: sapphire
-  m_Shader: {fileID: -6465566751694194690, guid: 5c42c2ae10c4d04408993ab15da9c222, type: 3}
+  m_Shader: {fileID: 4800000, guid: f6fd14f5514cc894b957891f1cc76fcc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - REFLECTION_ON
-  - RIM_ON
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - METALLIC_MAP_ON
+  - REFLECTION_ON
+  - RIM_ON
   - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
@@ -54,6 +54,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: c9e9dcf0822a01b4d9c3a1a1d57560d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -98,6 +102,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 94bfb478fd1cfa9448d08cf0b5b4d7f9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: a0e00b860507fad41a4c6c2009e66ef7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -192,6 +200,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GlowIntensity: 6.5
+    - _IOR: 1.45
     - _Metallic: 1.26
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -199,11 +209,13 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionMaskWithRim: 0
+    - _RefractionStrength: 0.0699
     - _Rim_Intensity: 1
     - _Saturation: 1.54
     - _Smoothness: 2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularStrength: 0.952
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
@@ -218,7 +230,7 @@ Material:
     - Color_D6CD8104: {r: 1, g: 1, b: 1, a: 1}
     - Color_D9A456B0: {r: 0.43867922, g: 0.89571595, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.80784315, g: 0.80977356, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0.024866238, b: 0.39607844, a: 1}
     - _EmissionColor2: {r: 0, g: 0.06630122, b: 0.8301887, a: 1}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}

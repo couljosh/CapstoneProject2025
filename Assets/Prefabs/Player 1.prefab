@@ -512,8 +512,8 @@ Rigidbody:
   m_GameObject: {fileID: 3261414448945768688}
   serializedVersion: 4
   m_Mass: 5
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Drag: 15
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -557,16 +557,20 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 256
+  floor:
+    serializedVersion: 2
+    m_Bits: 2048
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
   rockForceMultiplier: 10
-  playerForceMultiplier: 0.5
+  playerForceMultiplier: 0.1
   maximumKickMultiplier: 3.5
   timeToMaxStrength: 1
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
   currentKickStrength: 0
   chargingKick: 0
+  gravity: 12
   kickChargeBar: {fileID: 8480096002392943036}
   chargeGradient:
     serializedVersion: 2
@@ -601,6 +605,7 @@ MonoBehaviour:
   isStunned: 0
   elapsedTime: 0
   stunLength: 1
+  coyoteTimeThreshold: 0.2
   normalizedRumble: 0
 --- !u!114 &1630251052995215303
 MonoBehaviour:
@@ -845,7 +850,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4e436c4e105cdc64499404e734abeaf1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0

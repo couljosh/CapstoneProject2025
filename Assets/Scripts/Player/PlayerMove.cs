@@ -1,6 +1,7 @@
 using FMODUnity;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -33,6 +34,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject rayStartPosThree;
     public LayerMask kickable;
     public LayerMask player;
+    public LayerMask floor;
     public float initialKickStrength;
     public float cartForceMultiplier;
     public float rockForceMultiplier;
@@ -44,6 +46,7 @@ public class PlayerMove : MonoBehaviour
     public float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
+    public float gravity;
 
     public UnityEngine.UI.Image kickChargeBar;
     public Gradient chargeGradient;
@@ -51,6 +54,10 @@ public class PlayerMove : MonoBehaviour
     public bool isStunned;
     public float elapsedTime;
     public float stunLength;
+    public float coyoteTimeThreshold;
+    private float coyoteTimer = 0;
+
+    private bool chargedEnough;
 
     public float normalizedRumble;
     //Effects Handling
@@ -99,6 +106,14 @@ public class PlayerMove : MonoBehaviour
     private void KickCanceled(InputAction.CallbackContext context)
     {
         //Gamepad.current.SetMotorSpeeds(0, 0);
+        RaycastHit playerHit;
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore))
+        {
+            if(chargedEnough)
+            playerHit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerForceMultiplier));
+        }
 
         RaycastHit hit;
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
@@ -154,8 +169,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     void Update()
-    { 
-
+    {
         //print(gameObject.name + " " + chargingKick);
 
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
@@ -181,6 +195,8 @@ public class PlayerMove : MonoBehaviour
             if ((kickChargeBar.fillAmount >= 0.45f) && (kickChargeBar.fillAmount < 0.85f))
             {
                 kickChargeBar.color = new Color(50, 20, 20, 1.0f);
+                chargedEnough = true;
+
             }
 
             if (kickChargeBar.fillAmount >= 0.85f)
@@ -188,7 +204,14 @@ public class PlayerMove : MonoBehaviour
                 //Debug.Log("test");
 
                 kickChargeBar.color = Color.red;
+                chargedEnough = true;
+
             }
+            else
+            {
+                chargedEnough = false;
+            }
+
         }
         else
         {
@@ -217,6 +240,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
+
         if (!isStunned)
         {
             //progressively dampen move speed by charging a kick
@@ -231,13 +255,34 @@ public class PlayerMove : MonoBehaviour
             }
 
 
-            rb.linearVelocity = new Vector3(direction.x, 0, direction.y) * finalMoveSpeed;
+            if (rb.linearVelocity.magnitude < finalMoveSpeed)
+            {
+                rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed, ForceMode.VelocityChange);
+            }
+
+
             if (direction != Vector3.zero)
             {
-                Quaternion targetRot = Quaternion.LookRotation(rb.linearVelocity, Vector3.up);
+                Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
 
             }
+
+            //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
+
+            if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+            {
+                coyoteTimer += Time.deltaTime;
+
+                if (coyoteTimer > coyoteTimeThreshold)
+                {
+                    print("player is falling");
+                    rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
+                }
+
+            }
+            else
+                coyoteTimer = 0;
         }
     }
    

@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 2052283449467792031}
   - component: {fileID: 1883645304231293949}
   - component: {fileID: 3486713235392514755}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 905191059105236422}
   - component: {fileID: 7489628106345202969}
   - component: {fileID: 5301699988296531213}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spot Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -892,6 +892,9 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 256
+  kickable:
+    serializedVersion: 2
+    m_Bits: 64
   depositRef:
     Guid:
       Data1: 894627605
