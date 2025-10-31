@@ -74,6 +74,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 782
   Exists: 1
+--- !u!114 &-571145880447691018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_CaveIns/Cave-InsSignifier
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_CaveIns/Cave-InsSignifier
+  Guid:
+    Data1: -1205898802
+    Data2: 1166208915
+    Data3: 895209894
+    Data4: 1535286940
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,18 +119,21 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -6944278926269261428}
   - {fileID: 1159516551155496074}
+  - {fileID: -571145880447691018}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 638973548276461465
+  cacheTime: 638974535633707811
   SerializableEventsDict:
   - key: event:/SFX_Bomb/BombExplode
     index: 0
   - key: event:/SFX_Repository/Deposit
     index: 1
+  - key: event:/SFX_CaveIns/Cave-InsSignifier
+    index: 2
 --- !u!114 &148110947907540480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,10 +149,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638973548276441456
+  lastModified: 638974535633672651
   FileSizes:
   - Name: Desktop
-    Value: 112640
+    Value: 170592
   Exists: 1
 --- !u!114 &1159516551155496074
 MonoBehaviour:
@@ -166,10 +196,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638973548276461465
+  lastModified: 638974535633707811
   FileSizes:
   - Name: Desktop
-    Value: 842
+    Value: 898
   Exists: 1
 --- !u!114 &9142688076613399904
 MonoBehaviour:
