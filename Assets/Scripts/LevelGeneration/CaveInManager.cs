@@ -24,6 +24,7 @@ public class CaveInManager : MonoBehaviour
     public int terrainChunksToSpawn;
 
     public float gemVeritcalOffest;
+    public int gemSpawnAmt;
 
     private ReadOnlyArray<Gamepad> gamepadArray;
 
@@ -58,6 +59,7 @@ public class CaveInManager : MonoBehaviour
     // Cave-In Sequence 
     public IEnumerator spawnTerrain()
     {
+
         foreach (var gamepad in gamepadArray)
         {
             gamepad.SetMotorSpeeds(0.1f, 0.1f);
@@ -81,16 +83,21 @@ public class CaveInManager : MonoBehaviour
 
             Collider[] hitblocks = Physics.OverlapSphere(pos, radius, terrainMask);
             foreach(Collider col in hitblocks)
-            {
+            {     
+                         
                 if (col.gameObject.GetComponent<MeshRenderer>().enabled == false) //if the box is invisible
                 {
                     col.gameObject.GetComponent<BlockDestroy>().enableCube();
-                }    
-               
+                }                 
             }
 
-        int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], pos, Quaternion.Euler(0, Random.Range(0, 360), 0));
+            for(int y = 0; y <= gemSpawnAmt; y++)
+            {
+                int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
+                int randPiece = Random.Range(0, hitblocks.Length -1);
+                Instantiate(gemGenerationScript.clusterPrefabs[randIndex], hitblocks[randPiece].transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
+
+            }
         }
     }
 }

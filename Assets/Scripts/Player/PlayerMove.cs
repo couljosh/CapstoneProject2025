@@ -276,7 +276,6 @@ public class PlayerMove : MonoBehaviour
 
                 if (coyoteTimer > coyoteTimeThreshold)
                 {
-                    print("player is falling");
                     rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
                 }
 

@@ -167,6 +167,7 @@ public class PlayerDeath : MonoBehaviour
         playerGamepad.SetMotorSpeeds(1f, 1f);
 
         DisablePlayer();
+        DropGems();
 
         gameObject.GetComponent<Animator>().applyRootMotion = true;
         transform.position = deathPos.transform.position;
@@ -176,7 +177,7 @@ public class PlayerDeath : MonoBehaviour
 
         if (playerGamepad != null)
         playerGamepad.SetMotorSpeeds(0f, 0f);
-        DropGems();
+        
 
         yield return new WaitForSeconds(respawnDelay);
         EnablePlayer();
@@ -193,7 +194,7 @@ public class PlayerDeath : MonoBehaviour
         //Turn the player off
         playerMesh.enabled = false;
         copperModel.SetActive(false);
-        //playerCollider.enabled = false;
+        playerCollider.enabled = false;
 
         playerLight.gameObject.SetActive(false);
         bombText.SetActive(false);
@@ -207,12 +208,15 @@ public class PlayerDeath : MonoBehaviour
             gems.GetComponent<Collider>().enabled = true;
             gems.transform.position = transform.position;
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
-            //Debug.Log(gems.transform.rotation);
+            Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
             gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
         }
 
         collectedGems.Clear();
+        gemCount = 0;
+        //gameObject.GetComponentInChildren<BagSize>().changeBagSize();
+
     }
 
 
@@ -225,7 +229,7 @@ public class PlayerDeath : MonoBehaviour
         //Turn player back on
         playerMesh.enabled = true;
         copperModel.SetActive(true);
-        //playerCollider.enabled = true;
+        playerCollider.enabled = true;
 
         playerLight.gameObject.SetActive(true);
         bombText.SetActive(true);

@@ -819,7 +819,7 @@ MonoBehaviour:
   respawnDelay: 3
   isPlayerDead: 0
   gemCount: 0
-  scatterForce: 10
+  scatterForce: 1000
   gemDropDelay: 0.2
 --- !u!114 &2157015550122162584
 MonoBehaviour:
@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 5215804247705733964}
   - component: {fileID: 3290161483521689848}
   - component: {fileID: 3769802686003808636}
-  - component: {fileID: 6123012231020537586}
+  - component: {fileID: 7113479509347535279}
   m_Layer: 0
   m_Name: GemBag
   m_TagString: Untagged
@@ -1312,8 +1312,8 @@ Transform:
   m_GameObject: {fileID: 5068856310098881598}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12585878, y: -0, z: -0, w: 0.99204814}
-  m_LocalPosition: {x: 0.00799942, y: 0.78, z: -0.7820015}
-  m_LocalScale: {x: 0.3093638, y: 0.5416938, z: 0.33813268}
+  m_LocalPosition: {x: 0.00799942, y: 0.803, z: -0.873}
+  m_LocalScale: {x: 0.5926263, y: 0.6624162, z: 0.6477368}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7975532360626289886}
@@ -1371,7 +1371,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6123012231020537586
+--- !u!114 &7113479509347535279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1380,11 +1380,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5068856310098881598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf54b3e6bb79c045a2aa042b02bec62, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d6fbc5f09509884c9f0f2b9a14be4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeChangePerGem: 0.01
-  allowedSizeChanges: 35
+  sizeChangePerGem: 0.02
+  sizeChangesAllowed: 100
 --- !u!1 &5291316379550694823
 GameObject:
   m_ObjectHideFlags: 0

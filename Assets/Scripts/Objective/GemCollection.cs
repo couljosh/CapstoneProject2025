@@ -104,5 +104,7 @@ public class GemCollection : MonoBehaviour
         Collecter.GetComponent<PlayerDeath>().collectedGems.Add(gemPrefab.gameObject);
         rb.useGravity = true;
         gameObject.SetActive(false);
+
+        //Collecter.GetComponentInChildren<BagSize>().changeBagSize();
     }
 }

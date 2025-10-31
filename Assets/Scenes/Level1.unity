@@ -37853,7 +37853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
@@ -40200,10 +40200,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   chancePerSecond: 8
-  radius: 5
+  radius: 4
   minTimeBetweenCaveIn: 20
-  terrainChunksToSpawn: 5
+  terrainChunksToSpawn: 10
   gemVeritcalOffest: -2
+  gemSpawnAmt: 2
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0
@@ -42820,7 +42821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230729663388130016, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: clusterPrefabs.Array.size
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4230729663388130016, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: 'clusterPrefabs.Array.data[0]'
