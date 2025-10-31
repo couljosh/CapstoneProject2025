@@ -605,6 +605,7 @@ MonoBehaviour:
   isStunned: 0
   elapsedTime: 0
   stunLength: 1
+  coyoteTimeThreshold: 0.2
   normalizedRumble: 0
 --- !u!114 &1630251052995215303
 MonoBehaviour:

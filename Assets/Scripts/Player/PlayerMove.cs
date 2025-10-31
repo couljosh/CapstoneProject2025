@@ -1,6 +1,7 @@
 using FMODUnity;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -53,6 +54,8 @@ public class PlayerMove : MonoBehaviour
     public bool isStunned;
     public float elapsedTime;
     public float stunLength;
+    public float coyoteTimeThreshold;
+    private float coyoteTimer = 0;
 
     private bool chargedEnough;
 
@@ -267,10 +270,19 @@ public class PlayerMove : MonoBehaviour
 
             //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
 
-            if(!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+            if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
             {
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
+                coyoteTimer += Time.deltaTime;
+
+                if (coyoteTimer > coyoteTimeThreshold)
+                {
+                    print("player is falling");
+                    rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
+                }
+
             }
+            else
+                coyoteTimer = 0;
         }
     }
    

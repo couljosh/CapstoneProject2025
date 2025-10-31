@@ -456,7 +456,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561325781355804542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -542,7 +542,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &8777085710729310984
 MonoBehaviour:
@@ -619,6 +619,7 @@ MonoBehaviour:
   isStunned: 0
   elapsedTime: 0
   stunLength: 0
+  coyoteTimeThreshold: 0.2
   normalizedRumble: 0
 --- !u!114 &7848877375522014343
 MonoBehaviour:
