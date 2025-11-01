@@ -165,7 +165,7 @@ public class RepositoryLogic : MonoBehaviour
             addEnteredPlayer(other.gameObject);
         }
 
-        if (other.gameObject.tag == "LargeGem" && active)
+        if (other.gameObject.tag == "LargeGem" && active && other.gameObject.GetComponentInParent<LargeGem>().isReleased == true)
         {
             other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = true;
             largeGemsInRadius.Add(other.gameObject.transform.parent.gameObject);
@@ -318,7 +318,13 @@ public class RepositoryLogic : MonoBehaviour
         repoAlarm.SetActive(false);
 
         //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
+        foreach (GameObject largeGem in largeGemsInRadius)
+        {
+            largeGem.GetComponentInParent<LargeGem>().isInDepositRadius = false;
+        }
+
         largeGemsInRadius.Clear();
+        
     }
 
     public void ActivateRepo()

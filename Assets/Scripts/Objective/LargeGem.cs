@@ -40,12 +40,10 @@ public class LargeGem : MonoBehaviour
 
         if (isInDepositRadius)
         {
-            //not currently functioning
             gemMesh.material = inRadiusMaterial;
         }
         else if (!isInDepositRadius)
         {
-            //not currently functioning
             gemMesh.material = outOfRadiusMaterial;
         }
     }
