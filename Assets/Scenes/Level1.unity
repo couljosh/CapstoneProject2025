@@ -695,6 +695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4710601319525801644, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: dynamicCamera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4922602563702568010, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_Name
       value: Single Repository
@@ -3306,8 +3310,10 @@ MonoBehaviour:
   repositories: []
   activeRepo: {fileID: 0}
   repoFocusDistance: 10
+  ZoomInTimer: 0
+  ZoomOutTimer: 0
   maxLerpTime: 1
-  zoomLimit: 3
+  zoomLimit: 8.5
 --- !u!1001 &348836152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37872,7 +37878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
@@ -44293,6 +44299,10 @@ PrefabInstance:
     - target: {fileID: 2900030775902182126, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710601319525801644, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
+      propertyPath: dynamicCamera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4922602563702568010, guid: 74b44f1079111754fbb34c573bfa543d, type: 3}
       propertyPath: m_Name

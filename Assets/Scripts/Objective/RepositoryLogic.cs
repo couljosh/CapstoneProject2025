@@ -31,7 +31,7 @@ public class RepositoryLogic : MonoBehaviour
     public SphereCollider depositRadius;
     public List<GameObject> largeGemsInRadius = new List<GameObject>();
     public int largeGemValue;
-    private DynamicCamera dynamicCamera;
+    public DynamicCamera dynamicCamera;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -67,6 +67,8 @@ public class RepositoryLogic : MonoBehaviour
 
     void Start()
     {
+        dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
+        print(dynamicCamera);
         //Script References
         repoMoverScript = GameObject.Find("RepoMover").GetComponent<RepoMover>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
@@ -81,7 +83,7 @@ public class RepositoryLogic : MonoBehaviour
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
 
-        dynamicCamera = GameObject.FindAnyObjectByType<DynamicCamera>();
+        
     }
 
 
@@ -180,6 +182,7 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Exited
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
+            print("player left zone");
             removeEnteredPlayer(other.gameObject);
         }
 
@@ -319,7 +322,6 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.enabled = false;
         depositProgress = 0;
         repoLight.color = originalColor;
-        //timerProgress.fillAmount = repoMoverScript.switchInterval;
         repoAlarm.SetActive(false);
 
         //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
@@ -339,6 +341,7 @@ public class RepositoryLogic : MonoBehaviour
     {
         repoLight.enabled = true;
         timerProgress.enabled = true;
+        timerProgress.fillAmount = repoMoverScript.switchInterval;
         radiusImg.enabled = true;
         repoAlarm.SetActive(true);
         CheckWhenSetActive();
