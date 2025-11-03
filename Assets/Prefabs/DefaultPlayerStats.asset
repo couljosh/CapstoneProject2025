@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edccf601eac936e4f93a38573693920f, type: 3}
+  m_Name: DefaultPlayerStats
+  m_EditorClassIdentifier: 
+  initialMoveSpeed: 6
+  rotateSpeed: 10
+  gravity: 12
+  coyoteTimeThreshold: 0.2
+  kickDectDist: 1.5
+  initialKickStrength: 55000
+  cartForceMultiplier: 2.5
+  rockForceMultiplier: 5
+  playerForceMultiplier: 0.1
+  maximumKickMultiplier: 3.5
+  timeToMaxStrength: 1
+  timeBeforePlayerSlowWhenCharge: 0.2
+  maxPlayerChargeSlowdown: 1
+  maxBombsHeld: 2
+  bombRegenTime: 4
+  bombUseCooldown: 0
+  invincibleDuration: 6
+  respawnDelay: 3
+  scatterForce: 1000
+  gemDropDelay: 0.2

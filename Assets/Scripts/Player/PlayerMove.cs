@@ -8,157 +8,124 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 public class PlayerMove : MonoBehaviour
 {
+    [Header("Reference Reference")]
+    public PlayerStats playerStats;
+    private PlayerEffects playerEffects;
+    private PlayerDeath playerDeath;
+    public int playerNum;
 
     [Header("Input Variables")]
-    //Action Map
     public InputActionAsset inputActions;
-
-    //Actions
     private InputAction moveAction;
     private InputAction kickAction;
     private InputAction spawnBombAction;
 
-    //Movement Value
+    [Header("Movement Variables")]
     [HideInInspector] public Vector3 moveAmt = Vector3.zero;
     private Rigidbody rb;
-    public float initialMoveSpeed;
-    public float rotateSpeed;
     private float finalMoveSpeed;
-
-    public int playerNum;
+    private float coyoteTimer = 0;
 
     [Header("Kick Variables")]
-    public float rayLength;
     public GameObject rayStartPosOne;
     public GameObject rayStartPosTwo;
     public GameObject rayStartPosThree;
     public LayerMask kickable;
     public LayerMask player;
     public LayerMask floor;
-    public float initialKickStrength;
-    public float cartForceMultiplier;
-    public float rockForceMultiplier;
-    public float playerForceMultiplier;
-    public float maximumKickMultiplier;
-    public float timeToMaxStrength;
-    public float timeBeforePlayerSlowWhenCharge;
-    public float maxPlayerChargeSlowdown;
-    public float currentKickStrength;
+
+    private float currentKickStrength;
     private float kickStrengthTimer = 0;
     [HideInInspector] public bool chargingKick = false;
-    public float gravity;
-
-    public UnityEngine.UI.Image kickChargeBar;
-    public Gradient chargeGradient;
-
-    public bool isStunned;
-    public float elapsedTime;
-    public float stunLength;
-    public float coyoteTimeThreshold;
-    private float coyoteTimer = 0;
-
     private bool chargedEnough;
 
-    public float normalizedRumble;
-    //Effects Handling
-    private PlayerEffects playerEffects;
-    private PlayerDeath playerDeath;
+    [Header("UI Variables")]
+    public UnityEngine.UI.Image kickChargeBar;
+
+    [Header("Controller Variables")]
+    private float normalizedRumble;
+
 
     private void Awake()
     {
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
-
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
-
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
 
-
         rb = GetComponent<Rigidbody>();
-
         playerEffects = GetComponent<PlayerEffects>();
-
         playerDeath = GetComponent<PlayerDeath>();
     }
+
 
     public void OnMove(InputAction.CallbackContext context)
     {
         moveAmt = context.ReadValue<Vector2>();
     }
 
-    //called when the player presses down the kick button
+
+    //Called when the player presses down the kick button
     public void KickPerformed(InputAction.CallbackContext context)
     {
-        
-            if (context.performed && !playerDeath.isPlayerDead)
-            {
-                playerEffects.copperAnimator.SetBool("isCharging", false);
-                playerEffects.copperAnimator.SetTrigger("Kick");
-                chargingKick = true;
+        if (context.performed && !playerDeath.isPlayerDead)
+        {
+            playerEffects.copperAnimator.SetBool("isCharging", false);
+            playerEffects.copperAnimator.SetTrigger("Kick");
+            chargingKick = true;
         }
         else if (context.canceled)
-            {
-                KickCanceled(context);
-            }
-        
+        {
+            KickCanceled(context);
+        }
     }
 
-    //called when the player releases the kick button
+    //Called when the player releases the kick button
     private void KickCanceled(InputAction.CallbackContext context)
     {
         //Gamepad.current.SetMotorSpeeds(0, 0);
         RaycastHit playerHit;
-        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
-            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore) ||
-            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, rayLength, player, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, playerStats.kickDectDist, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, playerStats.kickDectDist, player, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, playerStats.kickDectDist, player, QueryTriggerInteraction.Ignore))
         {
-            if(chargedEnough)
-            playerHit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerForceMultiplier));
+            if (chargedEnough)
+                playerHit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerStats.playerForceMultiplier));
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
-            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore) ||
-            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, rayLength, kickable, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out hit, playerStats.kickDectDist, kickable, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out hit, playerStats.kickDectDist, kickable, QueryTriggerInteraction.Ignore) ||
+            Physics.Raycast(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward), out hit, playerStats.kickDectDist, kickable, QueryTriggerInteraction.Ignore))
         {
-            Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-            Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-            Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.green);
-            
-            if(hit.collider.gameObject.tag == "Bomb")
+            Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.green);
+            Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.green);
+            Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.green);
+
+            if (hit.collider.gameObject.tag == "Bomb")
             {
                 hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
-
             }
-            
-            if(hit.collider.gameObject.tag == "Cart")
-            {
-                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * cartForceMultiplier));
 
+            if (hit.collider.gameObject.tag == "Cart")
+            {
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * (currentKickStrength * playerStats.cartForceMultiplier));
             }
 
             if (hit.collider.gameObject.tag == "LargeGem")
             {
                 hit.collider.GetComponentInParent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength);
-
             }
 
             if (hit.collider.gameObject.tag == "RockObstacle")
             {
-                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength * rockForceMultiplier);
-
+                hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength * playerStats.rockForceMultiplier);
             }
-
-
-            //if (hit.collider.gameObject.tag == "ObjectDestroyer")
-            //{
-            //   hit.collider.gameObject.GetComponent<PlayerMove>().isStunned = true;
-            //}
         }
 
         //reset to normal light length
         playerEffects.KickEffects(1);
-        playerEffects.chargingMaxKick = false; 
-    
+        playerEffects.chargingMaxKick = false;
+
         //reset charge tracking
         chargingKick = false;
         currentKickStrength = 0;
@@ -168,35 +135,32 @@ public class PlayerMove : MonoBehaviour
         playerEffects.copperAnimator.SetBool("isCharging", false);
     }
 
+
     void Update()
     {
-        //print(gameObject.name + " " + chargingKick);
+        Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
+        Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
+        Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
 
-        Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
-        Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
-        Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * rayLength, Color.red);
-
-        if(chargingKick)
+        if (chargingKick)
         {
             playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
-            currentKickStrength = initialKickStrength * (maximumKickMultiplier * kickStrengthTimer / timeToMaxStrength);
-            //Mathf.Clamp(currentKickStrength, initialKickStrength, maximumKickMultiplier * initialKickStrength);
-            kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, timeToMaxStrength);
-            playerEffects.KickEffects(kickStrengthTimer/timeToMaxStrength);
+            currentKickStrength = playerStats.initialKickStrength * (playerStats.maximumKickMultiplier * kickStrengthTimer / playerStats.timeToMaxStrength);
+            kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, playerStats.timeToMaxStrength);
+            playerEffects.KickEffects(kickStrengthTimer / playerStats.timeToMaxStrength);
 
             //Rumble increases as player charge kick (also sets it to 0 on canceled)
             //normalizedRumble = ((currentKickStrength / 2 - 0) / ((initialKickStrength * maximumKickMultiplier) - 0)) / 10;
             //Gamepad.current.SetMotorSpeeds(normalizedRumble, normalizedRumble);
 
             //fill kick bar based off kick strength and max strength
-            kickChargeBar.fillAmount = kickStrengthTimer / timeToMaxStrength;
+            kickChargeBar.fillAmount = kickStrengthTimer / playerStats.timeToMaxStrength;
 
             if ((kickChargeBar.fillAmount >= 0.45f) && (kickChargeBar.fillAmount < 0.85f))
             {
                 kickChargeBar.color = new Color(50, 20, 20, 1.0f);
                 chargedEnough = true;
-
             }
 
             if (kickChargeBar.fillAmount >= 0.85f)
@@ -205,13 +169,11 @@ public class PlayerMove : MonoBehaviour
 
                 kickChargeBar.color = Color.red;
                 chargedEnough = true;
-
             }
             else
             {
                 chargedEnough = false;
             }
-
         }
         else
         {
@@ -223,7 +185,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    
 
     public void FixedUpdate()
     {
@@ -233,57 +194,48 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            chargingKick = false ;
+            chargingKick = false;
         }
-
     }
+
 
     public void Move(Vector3 direction)
     {
-
-        if (!isStunned)
+        //progressively dampen move speed by charging a kick
+        if (kickStrengthTimer > playerStats.timeBeforePlayerSlowWhenCharge && chargingKick)
         {
-            //progressively dampen move speed by charging a kick
-            if (kickStrengthTimer > timeBeforePlayerSlowWhenCharge && chargingKick)
-            {
-                finalMoveSpeed = initialMoveSpeed - (initialMoveSpeed * (kickStrengthTimer / timeToMaxStrength));
-                finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, maxPlayerChargeSlowdown, Mathf.Infinity);
-            }
-            else
-            {
-                finalMoveSpeed = initialMoveSpeed;
-            }
-
-
-            if (rb.linearVelocity.magnitude < finalMoveSpeed)
-            {
-                rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed, ForceMode.VelocityChange);
-            }
-
-
-            if (direction != Vector3.zero)
-            {
-                Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotateSpeed);
-
-            }
-
-            //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
-
-            if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
-            {
-                coyoteTimer += Time.deltaTime;
-
-                if (coyoteTimer > coyoteTimeThreshold)
-                {
-                    rb.linearVelocity = new Vector3(rb.linearVelocity.x, -gravity, rb.linearVelocity.z);
-                }
-
-            }
-            else
-                coyoteTimer = 0;
+            finalMoveSpeed = playerStats.initialMoveSpeed - (playerStats.initialMoveSpeed * (kickStrengthTimer / playerStats.timeToMaxStrength));
+            finalMoveSpeed = Mathf.Clamp(finalMoveSpeed, playerStats.maxPlayerChargeSlowdown, Mathf.Infinity);
         }
+        else
+        {
+            finalMoveSpeed = playerStats.initialMoveSpeed;
+        }
+
+        if (rb.linearVelocity.magnitude < finalMoveSpeed)
+        {
+            rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed, ForceMode.VelocityChange);
+        }
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * playerStats.rotateSpeed);
+
+        }
+
+        //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
+        if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+        {
+            coyoteTimer += Time.deltaTime;
+
+            if (coyoteTimer > playerStats.coyoteTimeThreshold)
+            {
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity, rb.linearVelocity.z);
+            }
+        }
+        else   
+        coyoteTimer = 0;
     }
-   
 }
 

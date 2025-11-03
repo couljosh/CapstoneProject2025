@@ -7,51 +7,44 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerDeath : MonoBehaviour
-{    
-    public int spawnNum;
+{
 
-    [Header("Stored References")]
-    //Player Respawn
-    public MeshRenderer playerMesh;
+    [Header("References")]
+    public PlayerStats playerStats;
     public PlayerInput playerInput;
+    private Gamepad playerGamepad;
+
+    public MeshRenderer playerMesh;
+    private MeshRenderer meshRenderer;
+
     public Collider playerCollider;
     public Light playerLight;
     public GameObject bombText;
-    public GameObject deathPos;
+    private GameObject deathPos;
     public GameObject copperModel;
     public GameObject impactSphere;
+    public List<GameObject> collectedGems = new List<GameObject>();
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
-    public float invincibleDuration = 3;
-    public float invincibleTimer = 0;
-    public float blinkInterval = 0.5f;    // How fast it blinks
-
-    private MeshRenderer meshRenderer;
-
-    //Gem
-    public List<GameObject> collectedGems = new List<GameObject>();
-    public GameObject gemPrefab;
+    private float invincibleTimer = 0;
+    public float blinkInterval = 0.5f;
 
     [Header("Respawn Customizaiton/Check")]
-    public float respawnDelay;
     [HideInInspector] public bool isPlayerDead;
+    public int spawnNum;
 
     [Header("Gem Drop Customization/Check")]
     public int gemCount;
-    public float scatterForce;
-    public float gemDropDelay;
 
-    private Gamepad playerGamepad;
 
     private void Start()
     {
-        invincibleTimer = invincibleDuration;
+        invincibleTimer = playerStats.invincibleDuration;
         meshRenderer = GetComponent<MeshRenderer>();
         deathPos = GameObject.Find("DeathChamber");
 
         playerGamepad = (Gamepad)playerInput.devices[0];
-
 
     }
 
@@ -60,111 +53,42 @@ public class PlayerDeath : MonoBehaviour
     {
         gemCount = collectedGems.Count;
 
-        if (invincibleTimer < invincibleDuration)
+        if (invincibleTimer < playerStats.invincibleDuration)
         {
             isInvincible = true;
-            //StartCoroutine(BlinkEffect());
         }
         else
         {
             isInvincible = false;
         }
-            invincibleTimer += Time.deltaTime;
+
+        invincibleTimer += Time.deltaTime;
     }
 
-
+    // Death Triggers //----------------------------------------------------------------------------------------
     public void PlayerDie()
     {
         if (!isInvincible)
         {
-            //   StartCoroutine(PlayerDieOrder());
-                 StartCoroutine(PlayerDeathSeq());
+            StartCoroutine(PlayerDeathSeq());
         }
     }
 
-    //ignore invincibility
+    //Ignore invincibility
     public void ForcePlayerDie()
     {
-        // StartCoroutine(PlayerDieOrder());
-           StartCoroutine(PlayerDeathSeq());
+        StartCoroutine(PlayerDeathSeq());
     }
 
 
-    //public IEnumerator PlayerDieOrder()
-    //{
-    //    StartCoroutine(DeathEffect());
-
-
-    //    if(playerGamepad != null)
-    //    playerGamepad.SetMotorSpeeds(1f, 1f);
-
-
-    //    isPlayerDead = true;
-
-    //    //Turn the player off
-    //    playerMesh.enabled = false;
-    //    //playerCollider.enabled = false;
-    //    copperModel.SetActive(false);
-    //    playerLight.gameObject.SetActive(false);
-    //    bombText.SetActive(false);
-
-
-    //    //Drop gems then respawn
-    //    yield return new WaitForSeconds(gemDropDelay);
-
-    //    if (playerGamepad != null)
-    //        playerGamepad.SetMotorSpeeds(0f, 0f);
-
-    //    DropGems();
-    //    collectedGems.Clear();
-    //    transform.position = deathPos.transform.position;
-    //    yield return new WaitForSeconds(respawnDelay);
-
-    //    //Turn player back on
-    //    playerMesh.enabled = true;
-    //    //playerCollider.enabled = true;
-    //    playerLight.gameObject.SetActive(true);
-    //    copperModel.SetActive(true);
-    //    bombText.SetActive(true);
-    //    isPlayerDead = false;
-    //    isInvincible = true;
-    //    invincibleTimer = 0;
-    //    transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
-    //}
-
-    //public IEnumerator BlinkEffect()
-    //{
-    //    float timer = 0f;
-    //    while (timer < invincibleDuration)
-    //    {
-    //        copperModel.SetActive(false);
-    //        yield return new WaitForSeconds(blinkInterval / 2f);
-    //        copperModel.SetActive(true);  // Show
-    //        yield return new WaitForSeconds(blinkInterval / 2f);
-
-    //        timer += blinkInterval;
-    //    }
-
-    //    // Ensure character is visible at the end
-    //    copperModel.SetActive(true);
-    //}
-
-
-    IEnumerator DeathEffect()
-    {
-        GameObject currentSphere = Instantiate(impactSphere, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
-        Destroy(currentSphere);
-    }
-
-
+    // Death Sequence //----------------------------------------------------------------------------------------
     public IEnumerator PlayerDeathSeq()
     {
         StartCoroutine(DeathEffect());
 
 
         if (playerGamepad != null)
-        playerGamepad.SetMotorSpeeds(1f, 1f);
+            playerGamepad.SetMotorSpeeds(1f, 1f);
 
         DisablePlayer();
         DropGems();
@@ -172,14 +96,14 @@ public class PlayerDeath : MonoBehaviour
         gameObject.GetComponent<Animator>().applyRootMotion = true;
         transform.position = deathPos.transform.position;
 
-        yield return new WaitForSeconds(gemDropDelay);
+        yield return new WaitForSeconds(playerStats.gemDropDelay);
 
 
         if (playerGamepad != null)
-        playerGamepad.SetMotorSpeeds(0f, 0f);
-        
+            playerGamepad.SetMotorSpeeds(0f, 0f);
 
-        yield return new WaitForSeconds(respawnDelay);
+
+        yield return new WaitForSeconds(playerStats.respawnDelay);
         EnablePlayer();
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<Animator>().applyRootMotion = false;
@@ -187,11 +111,18 @@ public class PlayerDeath : MonoBehaviour
     }
 
 
+    // Player Death Stages  //----------------------------------------------------------------------------------------
+    IEnumerator DeathEffect()
+    {
+        GameObject currentSphere = Instantiate(impactSphere, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        Destroy(currentSphere);
+    }
+
     void DisablePlayer()
     {
         isPlayerDead = true;
 
-        //Turn the player off
         playerMesh.enabled = false;
         copperModel.SetActive(false);
         playerCollider.enabled = false;
@@ -210,23 +141,21 @@ public class PlayerDeath : MonoBehaviour
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
             Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
-            gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * scatterForce);
+            gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * playerStats.scatterForce);
         }
 
         collectedGems.Clear();
         gemCount = 0;
-        //gameObject.GetComponentInChildren<BagSize>().changeBagSize();
 
     }
 
 
     void EnablePlayer()
     {
-        gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position; 
+        gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
 
         isPlayerDead = false;
 
-        //Turn player back on
         playerMesh.enabled = true;
         copperModel.SetActive(true);
         playerCollider.enabled = true;
@@ -236,10 +165,5 @@ public class PlayerDeath : MonoBehaviour
 
         isInvincible = true;
         invincibleTimer = 0;
-    }
-
-    void MovePlayer()
-    {
-
     }
 }

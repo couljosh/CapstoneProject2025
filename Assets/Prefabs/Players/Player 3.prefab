@@ -329,14 +329,14 @@ GameObject:
   - component: {fileID: 3016761805067118768}
   - component: {fileID: 3909969008973954251}
   - component: {fileID: 4806280122476170944}
+  - component: {fileID: 7071372508467383774}
+  - component: {fileID: 6295832714986347172}
+  - component: {fileID: 8215734786529892059}
   - component: {fileID: 5898320196082057187}
   - component: {fileID: 8620095879880935457}
   - component: {fileID: 7258981957616231407}
-  - component: {fileID: 8215734786529892059}
-  - component: {fileID: 7071372508467383774}
   - component: {fileID: 4756858654633455137}
   - component: {fileID: 2955468753973523611}
-  - component: {fileID: 6295832714986347172}
   m_Layer: 8
   m_Name: Player 3
   m_TagString: ObjectDestroyer
@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 2887584843794151332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.16, y: 0, z: 20.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -473,132 +473,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5898320196082057187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd28e066f8b0f145be137f853a369ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  moveAmt: {x: 0, y: 0, z: 0}
-  initialMoveSpeed: 6
-  rotateSpeed: 10
-  playerNum: 3
-  rayLength: 1.5
-  rayStartPosOne: {fileID: 444764914538337988}
-  rayStartPosTwo: {fileID: 1932163249982284501}
-  rayStartPosThree: {fileID: 5131605351460886873}
-  kickable:
-    serializedVersion: 2
-    m_Bits: 64
-  player:
-    serializedVersion: 2
-    m_Bits: 256
-  floor:
-    serializedVersion: 2
-    m_Bits: 2048
-  initialKickStrength: 55000
-  cartForceMultiplier: 2.5
-  rockForceMultiplier: 10
-  playerForceMultiplier: 0.1
-  maximumKickMultiplier: 3.5
-  timeToMaxStrength: 1
-  timeBeforePlayerSlowWhenCharge: 0.2
-  maxPlayerChargeSlowdown: 1
-  currentKickStrength: 0
-  chargingKick: 0
-  gravity: 12
-  kickChargeBar: {fileID: 5606749824563962149}
-  chargeGradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  isStunned: 0
-  elapsedTime: 0
-  stunLength: 0
-  coyoteTimeThreshold: 0.2
-  normalizedRumble: 0
---- !u!114 &8620095879880935457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ad8e897f6513b4da064bf3c1ae0360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnNum: 3
---- !u!114 &7258981957616231407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNum: 1
-  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
-  bombCountText: {fileID: 7672107513123323838}
-  bombRegenTime: 4
-  bombUseCooldown: 0.2
-  maxBombsHeld: 2
---- !u!114 &8215734786529892059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0.13242912, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!114 &7071372508467383774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +607,156 @@ MonoBehaviour:
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &6295832714986347172
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 925a3a6c8efa5d942b38cf698d9220d9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4e436c4e105cdc64499404e734abeaf1, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 0
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8215734786529892059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0.13242912, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &5898320196082057187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd28e066f8b0f145be137f853a369ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  moveAmt: {x: 0, y: 0, z: 0}
+  initialMoveSpeed: 6
+  rotateSpeed: 10
+  playerNum: 3
+  rayLength: 1.5
+  rayStartPosOne: {fileID: 444764914538337988}
+  rayStartPosTwo: {fileID: 1932163249982284501}
+  rayStartPosThree: {fileID: 5131605351460886873}
+  kickable:
+    serializedVersion: 2
+    m_Bits: 64
+  player:
+    serializedVersion: 2
+    m_Bits: 256
+  floor:
+    serializedVersion: 2
+    m_Bits: 2048
+  initialKickStrength: 55000
+  cartForceMultiplier: 2.5
+  rockForceMultiplier: 10
+  playerForceMultiplier: 0.1
+  maximumKickMultiplier: 3.5
+  timeToMaxStrength: 1
+  timeBeforePlayerSlowWhenCharge: 0.2
+  maxPlayerChargeSlowdown: 1
+  currentKickStrength: 0
+  chargingKick: 0
+  gravity: 12
+  kickChargeBar: {fileID: 5606749824563962149}
+  chargeGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  isStunned: 0
+  elapsedTime: 0
+  stunLength: 0
+  coyoteTimeThreshold: 0.2
+  normalizedRumble: 0
+--- !u!114 &8620095879880935457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ad8e897f6513b4da064bf3c1ae0360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnNum: 3
+--- !u!114 &7258981957616231407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 1
+  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
+  bombCountText: {fileID: 7672107513123323838}
+  playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  bombRegenTime: 4
+  bombUseCooldown: 0.2
+  maxBombsHeld: 2
 --- !u!114 &4756858654633455137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,6 +772,7 @@ MonoBehaviour:
   spawnNum: 3
   playerMesh: {fileID: 6086381718473760436}
   playerInput: {fileID: 7071372508467383774}
+  playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
   playerCollider: {fileID: 3909969008973954251}
   playerLight: {fileID: 2822127922221191590}
   bombText: {fileID: 7672107513123323838}
@@ -780,28 +805,6 @@ MonoBehaviour:
   spotLight: {fileID: 2822127922221191590}
   chargingMaxKick: 0
   flashInterval: 0.1
---- !u!95 &6295832714986347172
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2887584843794151332}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 925a3a6c8efa5d942b38cf698d9220d9, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4e436c4e105cdc64499404e734abeaf1, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 0
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3125063713558313187
 GameObject:
   m_ObjectHideFlags: 0
