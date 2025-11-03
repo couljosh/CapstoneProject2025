@@ -8,6 +8,7 @@ public class MinecartMovement : MonoBehaviour
     public SplineContainer track;
     public Rigidbody rb;
     public Spline currentSpline;
+    public bool isForward;
 
     public float maxVelocity;
 
@@ -48,11 +49,15 @@ public class MinecartMovement : MonoBehaviour
             if (Vector3.Dot(rb.linearVelocity, transform.forward) < 0)
             {
                 forwardDir *= -1;
-
+                isForward = false;
+            }
+            else
+            {
+                isForward = true;
             }
 
-            // Gradually steer velocity toward the forward direction
-            Vector3 steeredVelocity = Vector3.Lerp(rb.linearVelocity, rb.linearVelocity.magnitude * forwardDir, 0.1f);
+                // Gradually steer velocity toward the forward direction
+                Vector3 steeredVelocity = Vector3.Lerp(rb.linearVelocity, rb.linearVelocity.magnitude * forwardDir, 0.1f);
             rb.linearVelocity = steeredVelocity;
 
             rb.maxLinearVelocity = maxVelocity;

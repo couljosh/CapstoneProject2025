@@ -106,8 +106,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   gemMesh: {fileID: 4213042522438796969}
-  outOfRadiusMaterial: {fileID: 2100000, guid: 073cd21204d0229449db301755eae5ae, type: 2}
-  inRadiusMaterial: {fileID: 2100000, guid: 4773a0b495d6c7f4f88cc555d25abfb6, type: 2}
+  outOfRadiusMaterial: {fileID: 2100000, guid: 618b736478baeab4fbc3aa29585d9d05, type: 2}
+  inRadiusMaterial: {fileID: 2100000, guid: 76552ae813c694f4886f7ed9b30a1e03, type: 2}
   isInDepositRadius: 0
 --- !u!1 &4509407780663519724
 GameObject:

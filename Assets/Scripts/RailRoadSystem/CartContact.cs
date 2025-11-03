@@ -6,15 +6,11 @@ using System.Threading;
 
 public class CartContact : MonoBehaviour
 {
+    public MinecartMovement minecartMovementScript;
 
-    public float DetectionDist;
-    public float verticalOffset;
     public LayerMask terrainMask;
     public LayerMask playerMask;
-    private Vector3 offsetPos;
-    public GameObject rayPosLeft;
-    public GameObject rayPosMid;
-    public GameObject rayPosRight;
+
     public GameObject startingPocket;
 
     public Rigidbody rb;
@@ -25,42 +21,14 @@ public class CartContact : MonoBehaviour
     public float terrainSpeedReduction;
     public float playerSpeedReduction;
 
-    public GameObject impactSphere;
-
     public bool isPowered;
+
+    public bool isForwardOne;
+    
 
     private void Start()
     {
         Invoke("ClearStartingArea", 0.1f);
-    }
-
-    void Update()
-    {
-       
-        //    RaycastHit hit;
-
-        //    if (Physics.Raycast(rayPosLeft.transform.position, rayPosLeft.transform.TransformDirection(Vector3.forward), out hit, DetectionDist, terrainMask | playerMask, QueryTriggerInteraction.Ignore) |
-        //        Physics.Raycast(rayPosMid.transform.position, rayPosMid.transform.TransformDirection(Vector3.forward), out hit, DetectionDist, terrainMask | playerMask, QueryTriggerInteraction.Ignore) |
-        //        Physics.Raycast(rayPosRight.transform.position, rayPosRight.transform.TransformDirection(Vector3.forward), out hit, DetectionDist, terrainMask | playerMask, QueryTriggerInteraction.Ignore))
-        //    {
-        //        Debug.DrawRay(rayPosLeft.transform.position, rayPosLeft.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.green);
-        //        Debug.DrawRay(rayPosMid.transform.position, rayPosMid.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.green);
-        //        Debug.DrawRay(rayPosRight.transform.position, rayPosRight.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.green);
-
-        //        if(hit.collider != null)
-        //        {
-        //            hit.collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay();
-
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Debug.DrawRay(rayPosLeft.transform.position, rayPosLeft.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.red);
-        //        Debug.DrawRay(rayPosMid.transform.position, rayPosMid.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.red);
-        //        Debug.DrawRay(rayPosRight.transforwm.position, rayPosRight.transform.TransformDirection(Vector3.forward) * DetectionDist, Color.red);
-        //    }
-        //}
-
 
     }
 
@@ -73,13 +41,15 @@ public class CartContact : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity * (1 - terrainSpeedReduction/100);
         }
 
-        if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold || collision.gameObject.tag == "ObjectDestroyer" && isPowered)
+        if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold 
+            && (isForwardOne && minecartMovementScript.isForward
+            || !isForwardOne && !minecartMovementScript.isForward)
+            || collision.gameObject.tag == "ObjectDestroyer" && isPowered)
         {
             print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
             
-            //Thread.Sleep(200);
         }
     }
 
