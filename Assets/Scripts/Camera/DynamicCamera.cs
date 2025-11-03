@@ -16,10 +16,13 @@ public class DynamicCamera : MonoBehaviour
     
     private float defaultCameraSize;
     private Vector3 defaultCameraPosition;
-    private float timer;
+    [HideInInspector] public float ZoomInTimer;
+    [HideInInspector] public float ZoomOutTimer;
     public float maxLerpTime;
     public float zoomLimit;
     private float offset;
+    private Vector3 currentRepoFocus;
+    private float currentZoom; //before zooming out
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,9 +30,7 @@ public class DynamicCamera : MonoBehaviour
         //set defaults
         defaultCameraSize = Camera.main.orthographicSize;
         defaultCameraPosition = gameObject.transform.position;
-
-        //calculate offset because camera is tilted
-        
+        ZoomOutTimer = maxLerpTime; //so it starts already done in the lerp
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class DynamicCamera : MonoBehaviour
     {
         if(players.Count == 0)
         {
-            //this  needs to be an array so we have to convert it
+            //this needs to be an array so we have to convert it
             var playersArray = GameObject.FindGameObjectsWithTag("ObjectDestroyer");
             foreach (var p in playersArray)
             {
@@ -57,8 +58,9 @@ public class DynamicCamera : MonoBehaviour
         {
             if (r.GetComponent<RepositoryLogic>().active)
             {
+                //this one is active, set and stop search early
                 activeRepo = r;
-                //print("Active Repository Found");
+                currentRepoFocus = new Vector3(activeRepo.transform.position.x, transform.position.y, activeRepo.transform.position.z - offset);
                 break;
             }
             else
@@ -78,6 +80,10 @@ public class DynamicCamera : MonoBehaviour
                 {
                    // print("At least one player is too far from the repository");
                     currentlyFocused = false;
+
+                    //register which repo to back out of (for zooming)
+                    currentRepoFocus = new Vector3(activeRepo.transform.position.x, transform.position.y, activeRepo.transform.position.z - offset);
+
                     break;
                 }
                 else
@@ -91,9 +97,7 @@ public class DynamicCamera : MonoBehaviour
         if (currentlyFocused)
         {
             //zoom into the repo
-            //print("Attempting to focus in on active repository");
-            
-            //Vector3 destinationPosition;
+            ZoomOutTimer = 0;
             boundsCalculation.size = Vector3.zero;
             boundsCalculation.center = activeRepo.transform.position;
             boundsCalculation.Encapsulate(activeRepo.transform.position);
@@ -108,12 +112,28 @@ public class DynamicCamera : MonoBehaviour
         else
         {
             //zoom back out and reset to whole map
-            //print("Zooming back out");
-            gameObject.transform.position = defaultCameraPosition;
-            boundsCalculation.center = Vector3.zero;
+            if (ZoomOutTimer <= 0) //first frame of zooming out
+            {
+                currentZoom = Camera.main.orthographicSize;
+                currentRepoFocus = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            }
 
-            //preset, make sure to change this
-            Camera.main.orthographicSize = defaultCameraSize;
+            ZoomOutTimer += Time.deltaTime;
+
+            //lerping process
+            if(ZoomOutTimer <= maxLerpTime)
+            {
+                Vector3 currentPosition = Vector3.Lerp(currentRepoFocus, defaultCameraPosition, ZoomOutTimer / maxLerpTime); //position in space
+                float currentSize = Mathf.Lerp(currentZoom, defaultCameraSize, ZoomOutTimer / maxLerpTime); //camera zoom
+                gameObject.transform.position = currentPosition;
+                boundsCalculation.center = Vector3.zero;
+                Camera.main.orthographicSize = currentSize;
+            }
+            else
+            {
+                gameObject.transform.position = defaultCameraPosition;
+            }
+            
 
         }
 
@@ -137,31 +157,32 @@ public class DynamicCamera : MonoBehaviour
         //    }
         //}
 
+        //zoom into a repository
         if(currentlyFocused)
         {
-            timer += Time.deltaTime;
-            //Mathf.Lerp(defaultCameraSize, boundsCalculation.size, timer)
+            ZoomInTimer += Time.deltaTime;
+
+            //calculate the destination size to zoom into
             Vector3 boundSize = boundsCalculation.size;
             float destinationSize = Mathf.Sqrt((boundSize.x * boundSize.x) + (boundSize.y * boundSize.y) + (boundSize.z * boundSize.z));
 
-            print(destinationSize);
-
-            float currentSize = Mathf.Lerp(defaultCameraSize, destinationSize, timer/maxLerpTime);
+            //handle the lerping between current and destination
+            float currentSize = Mathf.Lerp(defaultCameraSize, destinationSize, ZoomInTimer/maxLerpTime);
             currentSize = Mathf.Clamp(currentSize, zoomLimit, Mathf.Infinity);
             Camera.main.orthographicSize = currentSize;
 
+            //calculate offset between where the camera is looking to center the repository on the screen
             RaycastHit floor;
             if (Physics.Raycast(gameObject.transform.position, transform.forward, out floor, Mathf.Infinity))
-            {
                 offset = Vector3.Distance(floor.point, new Vector3(gameObject.transform.position.x, floor.point.y, gameObject.transform.position.z));
-                print(offset);
-            }
-
-            transform.position = new Vector3(activeRepo.transform.position.x, transform.position.y, activeRepo.transform.position.z - offset);
+            
+            Vector3 targetPosition = new Vector3(activeRepo.transform.position.x, transform.position.y, activeRepo.transform.position.z - offset);
+            Vector3 currentPosition = Vector3.Lerp(defaultCameraPosition, targetPosition, ZoomInTimer/maxLerpTime);
+            transform.position = currentPosition;
         }
         else
         {
-            timer = 0;
+            ZoomInTimer = 0;
         }
     }
 }

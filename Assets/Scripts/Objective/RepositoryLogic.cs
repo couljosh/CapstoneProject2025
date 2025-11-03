@@ -31,6 +31,7 @@ public class RepositoryLogic : MonoBehaviour
     public SphereCollider depositRadius;
     public List<GameObject> largeGemsInRadius = new List<GameObject>();
     public int largeGemValue;
+    private DynamicCamera dynamicCamera;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -79,6 +80,8 @@ public class RepositoryLogic : MonoBehaviour
 
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
+
+        dynamicCamera = GameObject.FindAnyObjectByType<DynamicCamera>();
     }
 
 
@@ -261,6 +264,8 @@ public class RepositoryLogic : MonoBehaviour
     {
         depositProgress = 0;
 
+        
+
         //Add Red Score
         if (teamOneCanDepo)
         {
@@ -324,7 +329,10 @@ public class RepositoryLogic : MonoBehaviour
         }
 
         largeGemsInRadius.Clear();
-        
+
+        //reset zoom state for dynamic camera
+        dynamicCamera.ZoomOutTimer = 0;
+
     }
 
     public void ActivateRepo()
