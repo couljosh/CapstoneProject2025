@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Switch;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -89,6 +90,15 @@ public class PlayerDeath : MonoBehaviour
 
         if (playerGamepad != null)
             playerGamepad.SetMotorSpeeds(1f, 1f);
+
+        /* Switch rumble has to be set uniquely because poor Nintendo absolutely had to have some
+        proprietary bullshit on top of HID. Even then, it only works over Bluetooth.*/
+
+        if (playerGamepad is SwitchProControllerHID)
+        {
+            Debug.Log("Switch rumble");
+            playerGamepad.SetMotorSpeeds(5f, 5f);
+        }
 
         DisablePlayer();
         DropGems();
