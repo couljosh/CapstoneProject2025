@@ -11,12 +11,12 @@ public class Loading : MonoBehaviour
 
     void Start()
     {
-        Timer();
+        
     }
 
     void Update()
     {
-       
+        Timer();
     }
 
     void LoadNextScene()
