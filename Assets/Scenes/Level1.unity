@@ -28015,6 +28015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoveableRock
       objectReference: {fileID: 0}
+    - target: {fileID: 1364100952594610085, guid: ddc533ce41916fd44bd448adae388846, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2224462895051237420, guid: ddc533ce41916fd44bd448adae388846, type: 3}
       propertyPath: m_Mass
       value: 5000
@@ -31333,6 +31337,10 @@ PrefabInstance:
     - target: {fileID: 1364100952594610085, guid: ddc533ce41916fd44bd448adae388846, type: 3}
       propertyPath: m_Name
       value: MoveableRock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364100952594610085, guid: ddc533ce41916fd44bd448adae388846, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2224462895051237420, guid: ddc533ce41916fd44bd448adae388846, type: 3}
       propertyPath: m_Mass
@@ -37788,7 +37796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1534712055
 Transform:
   m_ObjectHideFlags: 0
@@ -40008,8 +40016,8 @@ Transform:
   m_GameObject: {fileID: 1649402369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.18, y: 0, z: -11.43}
-  m_LocalScale: {x: 46.070904, y: 5.0154, z: 134.89102}
+  m_LocalPosition: {x: -48.0657, y: 0, z: -11.43}
+  m_LocalScale: {x: 46.301258, y: 5.0154, z: 134.89102}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 90608088}
@@ -42896,7 +42904,7 @@ PrefabInstance:
       objectReference: {fileID: 2114603354}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: endOfRoundDelay
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: m_Name

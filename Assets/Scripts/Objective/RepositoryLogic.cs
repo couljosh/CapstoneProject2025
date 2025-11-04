@@ -313,6 +313,7 @@ public class RepositoryLogic : MonoBehaviour
         depositor = null;
         enteredPlayersTeam1.Clear();
         enteredPlayersTeam2.Clear();
+        allEnteredPlayers.Clear();
 
         singleCheck = 0;
         teamlastDepo = 0;
