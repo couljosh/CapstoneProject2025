@@ -7,14 +7,14 @@ using Unity.VisualScripting;
 
 public class SceneChange : MonoBehaviour
 {
-    public int sceneNumber;
+    //public int sceneNumber;
 
     [Header("Round Customization")]
     public float roundTime;
     public float endOfRoundDelay;
 
-    public int redTotal;
-    public int blueTotal;
+    public int redRoundTotal;
+    public int blueRoundTotal;
 
     [Header("Stored References")]
     public GameObject redRepository;
@@ -31,6 +31,9 @@ public class SceneChange : MonoBehaviour
     public GameObject tint;
     public TextMeshProUGUI timerText;
 
+    public bool pointsAdded;
+
+
 
     void Start()
     {
@@ -46,8 +49,8 @@ public class SceneChange : MonoBehaviour
     {
 
         //Show the score for both teams
-        redScore.text = redTotal.ToString();
-        blueScore.text = blueTotal.ToString();
+        redScore.text = redRoundTotal.ToString();
+        blueScore.text = blueRoundTotal.ToString();
 
         //Timer Counts down
         roundTime -= Time.deltaTime;
@@ -66,7 +69,8 @@ public class SceneChange : MonoBehaviour
             timerText.color = Color.red;
         }
 
-        if (roundTime <= 0) //change this to when the game is finished.
+
+        if (roundTime <= 0 && !pointsAdded) //change this to when the game is finished.
         {
             StartCoroutine(checkScore()); 
         }
@@ -80,11 +84,11 @@ public class SceneChange : MonoBehaviour
         timerText.gameObject.SetActive(false);
 
 
-        if (redTotal > blueTotal)
+        if (redRoundTotal > blueRoundTotal)
         {
             teamOneWinText.SetActive(true);
         }
-        else if (redTotal < blueTotal)
+        else if (redRoundTotal < blueRoundTotal)
         {
             teamTwoWinText.SetActive(true);
         }
@@ -94,10 +98,11 @@ public class SceneChange : MonoBehaviour
         }
 
 
-
+        GameScore.AddScore(redRoundTotal, blueRoundTotal);
+        pointsAdded = true;
 
         yield return new WaitForSeconds(endOfRoundDelay);
-        SceneManager.LoadScene(sceneNumber);
 
+        SceneManager.LoadScene("EndScreen");
     }
 }

@@ -272,13 +272,13 @@ public class RepositoryLogic : MonoBehaviour
         //Add Red Score
         if (teamOneCanDepo)
         {
-            score.redTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
         }
 
         //Add Blue Score
         if (teamTwoCanDepo)
         {
-            score.blueTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
         }
 
         //Clear Inventory & Empty 

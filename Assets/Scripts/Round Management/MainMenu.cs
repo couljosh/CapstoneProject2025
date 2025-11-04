@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
     public float fadingDelay;
     public int levelOneIndex;
 
+    private void Start()
+    {
+        GameScore.ResetScore();
+    }
+
     //Enable Input for Active Controllers
     private void OnEnable()
     {

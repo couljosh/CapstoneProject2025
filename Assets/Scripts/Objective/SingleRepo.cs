@@ -183,12 +183,12 @@ public class SingleRepo : MonoBehaviour
         //If the player is on the red team
         if (move.playerNum <= 2)
         {
-            score.redTotal += death.collectedGems.Count;
+            score.redRoundTotal += death.collectedGems.Count;
         }
         //If the player is on the blue team
         else
         {
-            score.blueTotal += death.collectedGems.Count;
+            score.blueRoundTotal += death.collectedGems.Count;
         }
 
         progressBar.color = Color.green;
