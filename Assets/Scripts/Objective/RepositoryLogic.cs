@@ -334,7 +334,7 @@ public class RepositoryLogic : MonoBehaviour
         largeGemsInRadius.Clear();
 
         //reset zoom state for dynamic camera
-        dynamicCamera.ZoomOutTimer = 0;
+        //dynamicCamera.ZoomOutTimer = 0;
 
     }
 
