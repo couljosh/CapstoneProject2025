@@ -16,4 +16,10 @@ public class QuickRestart : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+
+    public void ReplayGame()
+    {
+        SceneManager.LoadScene(0);
+
+    }
 }

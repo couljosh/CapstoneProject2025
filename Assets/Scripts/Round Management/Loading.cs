@@ -1,17 +1,23 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
     public float loadingTime;
-    private float elapsedTime;
 
-    public int sceneIdx;
+    public TextMeshProUGUI countdownText;
+
+    private int currentScene;
+    private int endMatchScene;
 
 
     void Start()
     {
-        
+
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        endMatchScene = SceneManager.GetSceneByName("End Match").buildIndex;
+
     }
 
     void Update()
@@ -27,11 +33,21 @@ public class Loading : MonoBehaviour
 
     public void Timer()
     {
-        elapsedTime += Time.deltaTime;
+        loadingTime -= Time.deltaTime;
 
-        if(elapsedTime > loadingTime)
-        {
+        int timeAsInt = Mathf.RoundToInt(loadingTime);
+        countdownText.text = timeAsInt.ToString() + "...";
+
+
+        if (loadingTime <= 0 && currentScene == endMatchScene)
+            SceneManager.LoadScene(0);
+        
+
+
+
+        if (loadingTime <= 0 && currentScene != endMatchScene)
             LoadNextScene();
-        }
+        
+
     }
 }

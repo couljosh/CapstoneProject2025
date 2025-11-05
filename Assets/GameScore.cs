@@ -9,7 +9,8 @@ public class GameScore : MonoBehaviour
     public static int blueTotalScore;
     public static int roundNum;
 
-
+    public static int redScoreBeforeRound;
+    public static int blueScoreBeforeRound;
 
     public static void AddScore(int AddedRedPoints, int AddedBluePoints)
     {

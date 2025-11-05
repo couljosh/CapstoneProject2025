@@ -42,6 +42,8 @@ public class SceneChange : MonoBehaviour
         drawText.SetActive(false);
         tint.SetActive(false);
 
+        GameScore.redScoreBeforeRound = GameScore.redTotalScore;
+        GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
     }
 
 
@@ -70,39 +72,44 @@ public class SceneChange : MonoBehaviour
         }
 
 
-        if (roundTime <= 0 && !pointsAdded) //change this to when the game is finished.
+        if (roundTime < 1 && !pointsAdded) //change this to when the game is finished.
         {
-            StartCoroutine(checkScore()); 
+            roundTime = 0;
+            checkScore();
         }
     }
 
 
     //Winning Team Display
-    public IEnumerator checkScore()
+    public void checkScore()
     {
-        tint.SetActive(true);
-        timerText.gameObject.SetActive(false);
+        //tint.SetActive(true);
+        //timerText.gameObject.SetActive(false);
 
 
-        if (redRoundTotal > blueRoundTotal)
-        {
-            teamOneWinText.SetActive(true);
-        }
-        else if (redRoundTotal < blueRoundTotal)
-        {
-            teamTwoWinText.SetActive(true);
-        }
-        else
-        {
-            drawText.SetActive(true);
-        }
-
+        //if (redRoundTotal > blueRoundTotal)
+        //{
+        //    teamOneWinText.SetActive(true);
+        //}
+        //else if (redRoundTotal < blueRoundTotal)
+        //{
+        //    teamTwoWinText.SetActive(true);
+        //}
+        //else
+        //{
+        //    drawText.SetActive(true);
+        //}
 
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
 
-        yield return new WaitForSeconds(endOfRoundDelay);
 
-        SceneManager.LoadScene("EndScreen");
+        LoadNextScene();
+    }
+
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }
