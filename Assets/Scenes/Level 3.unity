@@ -31912,6 +31912,8 @@ MonoBehaviour:
   radius: 5
   minTimeBetweenCaveIn: 20
   terrainChunksToSpawn: 3
+  gemVeritcalOffest: 0
+  gemSpawnAmt: 0
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0
@@ -36257,7 +36259,7 @@ PrefabInstance:
       objectReference: {fileID: 439726531}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 120
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText

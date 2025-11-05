@@ -1509,7 +1509,11 @@ MonoBehaviour:
   respositories:
   - {fileID: 4610250852092993433}
   - {fileID: 262007634}
-  moveInterval: 10
+  switchInterval: 0
+  switchDelayMin: 0
+  switchDelayMax: 0
+  elaspedTime: 0
+  currentInd: 0
 --- !u!4 &127010678
 Transform:
   m_ObjectHideFlags: 0
@@ -19304,7 +19308,7 @@ PrefabInstance:
       objectReference: {fileID: 1796211519}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 120
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText
@@ -21705,17 +21709,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2cda9465fbc724b80c6914aea33dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainPrefab: {fileID: 0}
   floor: {fileID: 633275272}
   canvas: {fileID: 2111022223}
   notificationPrefab: {fileID: 2498503887632607413, guid: 448a547ed29c52e418e38df33442f604, type: 3}
-  chancePerSecond: 10
+  gemGenerationScript: {fileID: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  chancePerSecond: 10
   radius: 15
   minTimeBetweenCaveIn: 10
   terrainChunksToSpawn: 3
+  gemVeritcalOffest: 0
+  gemSpawnAmt: 0
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0
@@ -28641,18 +28647,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 0
-  spawnNum: 0
-  isPlayerDead: 0
-  playerMesh: {fileID: 0}
+  playerStats: {fileID: 0}
   playerInput: {fileID: 0}
+  playerMesh: {fileID: 0}
   playerCollider: {fileID: 0}
   playerLight: {fileID: 0}
   bombText: {fileID: 0}
+  copperModel: {fileID: 0}
+  impactSphere: {fileID: 0}
   collectedGems: []
-  gemPrefab: {fileID: 0}
+  blinkInterval: 0.5
+  isPlayerDead: 0
+  spawnNum: 0
   gemCount: 0
-  scatterForce: 0
 --- !u!4 &2056526949
 Transform:
   m_ObjectHideFlags: 0
