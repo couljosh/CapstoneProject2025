@@ -97,7 +97,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   - first: {x: -4, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -107,7 +107,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   - first: {x: -7, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -117,7 +117,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   - first: {x: -2, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -127,7 +127,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   - first: {x: -6, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -147,7 +147,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   - first: {x: -4, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -157,7 +157,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741826
+      m_AllTileFlags: 2147483650
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 6
@@ -189,7 +189,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray:
   - m_RefCount: 6
-    m_Data: {fileID: 8188270782028997157, guid: 9e77e9d5dc498b848b74521e6861229e, type: 3}
+    m_Data: {fileID: 3832181741272855735, guid: 8452207d5c20e364a8912bd7b9008ce6, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 8188270782028997157, guid: 3d387f4d6efd0eb40a12219cbe5d99f5, type: 3}
   m_AnimationFrameRate: 1
@@ -353,7 +353,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2175829300734385760, guid: 3d387f4d6efd0eb40a12219cbe5d99f5, type: 3}
   m_PrefabInstance: {fileID: 1168348127088382237}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8516422695830132300
+--- !u!114 &7836405819006063675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
