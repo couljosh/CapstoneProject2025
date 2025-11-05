@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScreen.unity
     guid: 16928fa1dfa35ea4686001a12378b0cc
   - enabled: 1
-    path: Assets/Scenes/Level 01.unity
+    path: Assets/Scenes/Levels/Level 01.unity
     guid: 9628ca954adbdc648b1af308ace819c3
   - enabled: 1
     path: Assets/Scenes/Intermission_1.unity
     guid: b3f7c4787f219934680b4f8d8aa2633c
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Base Level.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Intermission_2.unity
