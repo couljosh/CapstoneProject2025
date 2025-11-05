@@ -14,7 +14,7 @@ public class BombSpawn : MonoBehaviour
     public GameObject bombCountText;
 
     [Header("Bomb Variables")]
-    private float regenTimer;
+    public float regenTimer;
     private int bombsHeld;
 
 
@@ -48,7 +48,6 @@ public class BombSpawn : MonoBehaviour
         {
             Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
             bombsHeld--;
-            playerStats.bombUseCooldown = 0;
         }
         else
         {

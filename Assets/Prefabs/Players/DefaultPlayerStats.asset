@@ -27,7 +27,7 @@ MonoBehaviour:
   maxPlayerChargeSlowdown: 1
   maxBombsHeld: 2
   bombRegenTime: 4
-  bombUseCooldown: 0
+  bombUseCooldown: 1
   invincibleDuration: 6
   respawnDelay: 3
   scatterForce: 1000
