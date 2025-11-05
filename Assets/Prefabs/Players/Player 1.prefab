@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1931101412896608550}
   - component: {fileID: -6544643910849356735}
   - component: {fileID: 2157015550122162584}
+  - component: {fileID: 8212142854837358148}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: ObjectDestroyer
@@ -717,12 +718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  playerNum: 1
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveAmt: {x: 0, y: 0, z: 0}
-  initialMoveSpeed: 0
-  rotateSpeed: 0
-  playerNum: 1
-  rayLength: 1.5
   rayStartPosOne: {fileID: 3926277327152463818}
   rayStartPosTwo: {fileID: 2058437750723082412}
   rayStartPosThree: {fileID: 714431185384784868}
@@ -735,53 +733,9 @@ MonoBehaviour:
   floor:
     serializedVersion: 2
     m_Bits: 2048
-  initialKickStrength: 55000
-  cartForceMultiplier: 2.5
-  rockForceMultiplier: 10
-  playerForceMultiplier: 0.1
-  maximumKickMultiplier: 3.5
-  timeToMaxStrength: 1
-  timeBeforePlayerSlowWhenCharge: 0.2
-  maxPlayerChargeSlowdown: 1
-  currentKickStrength: 0
   chargingKick: 0
-  gravity: 12
   kickChargeBar: {fileID: 8480096002392943036}
-  chargeGradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  isStunned: 0
-  elapsedTime: 0
-  stunLength: 1
-  coyoteTimeThreshold: 0.2
-  normalizedRumble: 0
+  kickChargeBackground: {fileID: 1654654981082343114}
 --- !u!114 &7976989412786637625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,13 +761,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
+  playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombCountText: {fileID: 752289995341863618}
-  playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
-  bombRegenTime: 4
-  bombUseCooldown: 0.2
-  maxBombsHeld: 2
 --- !u!114 &-6544643910849356735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,26 +776,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnNum: 1
-  playerMesh: {fileID: 9049452840049607172}
-  playerInput: {fileID: 1630251052995215303}
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  playerInput: {fileID: 1630251052995215303}
+  playerMesh: {fileID: 9049452840049607172}
   playerCollider: {fileID: 3397230041979868816}
   playerLight: {fileID: 4651508488080368148}
   bombText: {fileID: 752289995341863618}
-  deathPos: {fileID: 0}
   copperModel: {fileID: 1673669748247325045}
   impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
-  invincibleDuration: 6
-  invincibleTimer: 0
-  blinkInterval: 0.5
   collectedGems: []
-  gemPrefab: {fileID: 0}
-  respawnDelay: 3
+  blinkInterval: 0.5
   isPlayerDead: 0
+  spawnNum: 1
   gemCount: 0
-  scatterForce: 1000
-  gemDropDelay: 0.2
 --- !u!114 &2157015550122162584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +805,93 @@ MonoBehaviour:
   spotLight: {fileID: 4651508488080368148}
   chargingMaxKick: 0
   flashInterval: 0.1
+--- !u!114 &8212142854837358148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261414448945768688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a31f002955a1224b90db33f00fb8d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 7975532360626289886}
+  mainCamera: {fileID: 0}
+  uiElement: {fileID: 2467006573704071968}
+--- !u!1 &3655345244629044269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728387266239249560}
+  - component: {fileID: 5732324765927396536}
+  - component: {fileID: 1654654981082343114}
+  m_Layer: 5
+  m_Name: Charge BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1728387266239249560
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655345244629044269}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -0.808}
+  m_LocalScale: {x: 0.012331513, y: 0.0025018384, z: 0.010037001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6355563404093318404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -959.91034, y: -538.19}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5732324765927396536
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655345244629044269}
+  m_CullTransparentMesh: 1
+--- !u!114 &1654654981082343114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655345244629044269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &3922679615757333762
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +903,7 @@ GameObject:
   - component: {fileID: 1569327103889115677}
   - component: {fileID: 302196960213693097}
   - component: {fileID: 8474193129863933408}
+  - component: {fileID: 7513128133026484397}
   m_Layer: 8
   m_Name: Charge Kick Bar
   m_TagString: Untagged
@@ -920,7 +951,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -958,6 +989,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationToMaintain: {x: -90, y: 0, z: 0}
+--- !u!114 &7513128133026484397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922679615757333762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a085bb0335fcb7348afad39460aa6359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7975532360626289886}
+  offset: {x: 0.2, y: 2, z: 0.7}
 --- !u!1 &3926277327152463818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,19 +1060,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4720139540463571608}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -827.90796}
-  m_LocalScale: {x: 1.5384616, y: 1.5384614, z: 1.5384614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1728387266239249560}
   - {fileID: 2467006573704071968}
   m_Father: {fileID: 1569327103889115677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1449.2231, y: -29.623201}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &7156777914981382904
 Canvas:
   m_ObjectHideFlags: 0
@@ -1037,7 +1083,7 @@ Canvas:
   m_GameObject: {fileID: 4720139540463571608}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1073,7 +1119,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5362815236231211780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,7 +1149,7 @@ GameObject:
   - component: {fileID: 5584345148027714224}
   - component: {fileID: 8480096002392943036}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Charge Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,15 +1163,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877196971277699108}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 19.423}
-  m_LocalScale: {x: 0.012626233, y: 0.010037, z: 0.010037}
+  m_LocalPosition: {x: 0, y: 0, z: -0.808}
+  m_LocalScale: {x: 0.012626233, y: 0.016674615, z: 0.010037}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6355563404093318404}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -941.82056, y: -538.18445}
+  m_AnchoredPosition: {x: -959.91034, y: -538.18}
   m_SizeDelta: {x: 100, y: 12.4254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5584345148027714224

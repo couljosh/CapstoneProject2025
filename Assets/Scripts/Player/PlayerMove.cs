@@ -41,6 +41,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("UI Variables")]
     public UnityEngine.UI.Image kickChargeBar;
+    public UnityEngine.UI.RawImage kickChargeBackground;
 
     [Header("Controller Variables")]
     private float normalizedRumble;
@@ -55,6 +56,8 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerEffects = GetComponent<PlayerEffects>();
         playerDeath = GetComponent<PlayerDeath>();
+
+        kickChargeBackground.enabled = false;
     }
 
 
@@ -144,6 +147,8 @@ public class PlayerMove : MonoBehaviour
 
         if (chargingKick)
         {
+            kickChargeBackground.enabled = true;
+
             playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
             currentKickStrength = playerStats.initialKickStrength * (playerStats.maximumKickMultiplier * kickStrengthTimer / playerStats.timeToMaxStrength);
@@ -182,6 +187,8 @@ public class PlayerMove : MonoBehaviour
             //reset kick bar
             kickChargeBar.fillAmount = 0f;
             kickChargeBar.color = Color.white;
+
+            kickChargeBackground.enabled = false;
         }
     }
 
