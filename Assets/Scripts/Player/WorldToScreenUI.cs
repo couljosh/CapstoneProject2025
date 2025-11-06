@@ -3,25 +3,38 @@ using UnityEngine.UI;
 
 public class WorldToScreenUI : MonoBehaviour
 {
-    public Transform target;
-    public Camera mainCamera;
-    public RectTransform barElement;
-    public RectTransform barBG;
+    [HideInInspector] public Transform target;
+    [HideInInspector] public RectTransform barElement;
+    [HideInInspector] public Vector3 uiOffset = new Vector3(0f, 2f, 0f); //offset
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Camera mainCamera;
+
     void Start()
     {
+        //find main camera
         mainCamera = Camera.main;
+        if (mainCamera == null)
+        {
+            Debug.LogError("WorldToScreenUI: Main Camera not found in the scene.");
+            enabled = false;
+        }
+
+        if (target == null || barElement == null)
+        {
+            Debug.LogError("WorldToScreenUI: Target or barElement is not set. Check PlayerUIManager.");
+            enabled = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate() //LateUpdate to make sure player movement is complete
     {
-        Vector3 screenPos = mainCamera.WorldToScreenPoint(target.position + Vector3.up * 2f); //convert to screen pos and lift it up
-        barElement.position = screenPos;
-        barBG.position = screenPos;
+        if (target != null && mainCamera != null)
+        {
+            //convert player world pos + offset to screen pos
+            Vector3 screenPos = mainCamera.WorldToScreenPoint(target.position + uiOffset);
 
-        
-        
+            //update UI position
+            barElement.position = screenPos;
+        }
     }
 }

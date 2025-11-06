@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-using Unity.VisualScripting;
-
 
 public class SpawnPlayers : MonoBehaviour
 {
@@ -12,9 +10,12 @@ public class SpawnPlayers : MonoBehaviour
 
     public float respawnDelay;
 
+    private PlayerUIManager uiManager; // ref for chargekick ui
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        uiManager = FindObjectOfType<PlayerUIManager>(); //find ui maanger for chargekick
     }
 
     private void Start()
@@ -23,7 +24,14 @@ public class SpawnPlayers : MonoBehaviour
 
         foreach (var gamePad in Gamepad.all)
         {
-            PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
+            PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
+
+            //register spawned player with UI manager
+            if (uiManager != null)
+            {
+                uiManager.RegisterPlayer(newPlayerInput.gameObject);
+            }
+
             i++;
         }
     }

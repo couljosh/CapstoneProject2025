@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+
 public class PlayerMove : MonoBehaviour
 {
     [Header("Reference Reference")]
@@ -13,6 +14,8 @@ public class PlayerMove : MonoBehaviour
     private PlayerEffects playerEffects;
     private PlayerDeath playerDeath;
     public int playerNum;
+
+    private KickChargeUI kickChargeUI; //ref to ui component for charge kick
 
     [Header("Input Variables")]
     public InputActionAsset inputActions;
@@ -39,10 +42,6 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector] public bool chargingKick = false;
     private bool chargedEnough;
 
-    [Header("UI Variables")]
-    public UnityEngine.UI.Image kickChargeBar;
-    public UnityEngine.UI.RawImage kickChargeBackground;
-
     [Header("Controller Variables")]
     private float normalizedRumble;
 
@@ -57,7 +56,12 @@ public class PlayerMove : MonoBehaviour
         playerEffects = GetComponent<PlayerEffects>();
         playerDeath = GetComponent<PlayerDeath>();
 
-        kickChargeBackground.enabled = false;
+        // kickChargeBackground.enabled = false; 
+    }
+
+    public void SetKickChargeUI(KickChargeUI ui)
+    {
+        kickChargeUI = ui;
     }
 
 
@@ -136,6 +140,12 @@ public class PlayerMove : MonoBehaviour
 
         playerEffects.copperAnimator.ResetTrigger("Kick");
         playerEffects.copperAnimator.SetBool("isCharging", false);
+
+        // NEW: Ensure UI is reset/hidden immediately on kick release
+        if (kickChargeUI != null)
+        {
+            kickChargeUI.UpdateChargeBar(0f, false);
+        }
     }
 
 
@@ -147,48 +157,47 @@ public class PlayerMove : MonoBehaviour
 
         if (chargingKick)
         {
-            kickChargeBackground.enabled = true;
+            //kickChargeBackground.enabled = true; // Moved to KickChargeUI.UpdateChargeBar
 
             playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
-            currentKickStrength = playerStats.initialKickStrength * (playerStats.maximumKickMultiplier * kickStrengthTimer / playerStats.timeToMaxStrength);
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, playerStats.timeToMaxStrength);
-            playerEffects.KickEffects(kickStrengthTimer / playerStats.timeToMaxStrength);
 
-            //Rumble increases as player charge kick (also sets it to 0 on canceled)
+            //normalize charge for UI and strength
+            float normalizedCharge = kickStrengthTimer / playerStats.timeToMaxStrength;
+
+            currentKickStrength = playerStats.initialKickStrength * (playerStats.maximumKickMultiplier * normalizedCharge);
+
+            playerEffects.KickEffects(normalizedCharge);
+
             //normalizedRumble = ((currentKickStrength / 2 - 0) / ((initialKickStrength * maximumKickMultiplier) - 0)) / 10;
             //Gamepad.current.SetMotorSpeeds(normalizedRumble, normalizedRumble);
 
-            //fill kick bar based off kick strength and max strength
-            kickChargeBar.fillAmount = kickStrengthTimer / playerStats.timeToMaxStrength;
-
-            if ((kickChargeBar.fillAmount >= 0.45f) && (kickChargeBar.fillAmount < 0.85f))
+            if (kickChargeUI != null)
             {
-                kickChargeBar.color = new Color(50, 20, 20, 1.0f);
-                chargedEnough = true;
+                kickChargeUI.UpdateChargeBar(normalizedCharge, true);
             }
 
-            if (kickChargeBar.fillAmount >= 0.85f)
+            if (normalizedCharge >= 0.45f)
             {
-                //Debug.Log("test");
-
-                kickChargeBar.color = Color.red;
                 chargedEnough = true;
+                playerEffects.chargingMaxKick = normalizedCharge >= 0.85f;
             }
             else
             {
                 chargedEnough = false;
+                playerEffects.chargingMaxKick = false;
             }
         }
         else
         {
             playerEffects.copperAnimator.SetBool("isCharging", false);
 
-            //reset kick bar
-            kickChargeBar.fillAmount = 0f;
-            kickChargeBar.color = Color.white;
+            if (kickChargeUI != null)
+            {
+                kickChargeUI.UpdateChargeBar(0f, false);
+            }
 
-            kickChargeBackground.enabled = false;
         }
     }
 
@@ -241,8 +250,7 @@ public class PlayerMove : MonoBehaviour
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity, rb.linearVelocity.z);
             }
         }
-        else   
-        coyoteTimer = 0;
+        else
+            coyoteTimer = 0;
     }
 }
-

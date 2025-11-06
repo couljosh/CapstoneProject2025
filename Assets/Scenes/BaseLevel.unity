@@ -40143,7 +40143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655097176}
-  - component: {fileID: 1655097175}
+  - component: {fileID: 1655097177}
   m_Layer: 0
   m_Name: Player UI Manager
   m_TagString: Untagged
@@ -40151,22 +40151,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1655097175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655097174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a31f002955a1224b90db33f00fb8d47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  mainCamera: {fileID: 0}
-  barElement: {fileID: 0}
-  barBG: {fileID: 0}
 --- !u!4 &1655097176
 Transform:
   m_ObjectHideFlags: 0
@@ -40182,6 +40166,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655097177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655097174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5cbf0c270c8b14198951ba3d5c6f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kickChargeUIPrefab: {fileID: 4527900770723067954, guid: 7383352d626bde64cbac763acc98a38a, type: 3}
+  mainCanvas: {fileID: 591973930}
+  uiOffset: {x: 0, y: 0, z: 1.5}
 --- !u!4 &1658127093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2624143283295706826, guid: dc19f758ea9e47a44a32a06891681df6, type: 3}
