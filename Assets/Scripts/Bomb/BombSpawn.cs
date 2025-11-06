@@ -12,7 +12,7 @@ public class BombSpawn : MonoBehaviour
     public GameObject bombPrefab;
 
     [Header("Bomb Variables")]
-    private float regenTimer;
+    public float regenTimer;
     private int bombsHeld;
 
     public int CurrentBombsHeld => bombsHeld;
