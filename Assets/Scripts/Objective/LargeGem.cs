@@ -28,6 +28,8 @@ public class LargeGem : MonoBehaviour
         {
             Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask, QueryTriggerInteraction.Ignore);
 
+            GetComponentInChildren<MeshCollider>().isTrigger = true;
+
             if (hitblocks.Length < 7)
             {
                 ReleaseGem();
@@ -56,6 +58,7 @@ public class LargeGem : MonoBehaviour
     {
         rb.isKinematic = false;
         releasedTime = Time.time;
+        GetComponentInChildren<MeshCollider>().isTrigger = false;
     }
 
     
