@@ -9,29 +9,38 @@ public class SpawnPlayers : MonoBehaviour
     public GameObject[] Players;
 
     public float respawnDelay;
-
-    private PlayerUIManager uiManager; // ref for chargekick ui
+    private PlayerUIManager uiManager;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        uiManager = FindObjectOfType<PlayerUIManager>(); //find ui maanger for chargekick
+        uiManager = FindObjectOfType<PlayerUIManager>();
+
+        if (playerInputManager != null)
+        {
+            playerInputManager.DisableJoining();
+        }
     }
 
     private void Start()
     {
         int i = 0;
-
         foreach (var gamePad in Gamepad.all)
         {
-            PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
+            if (i >= Players.Length) break;
+            PlayerInput newPlayerInput = PlayerInput.Instantiate(
+                Players[i],
+                controlScheme: "Gamepad",
+                pairWithDevice: gamePad
+            );
 
-            //register spawned player with UI manager
+            GameObject newPlayerObject = newPlayerInput.gameObject;
+
+            newPlayerObject.GetComponent<PlayerMove>().playerNum = i + 1;
             if (uiManager != null)
             {
-                uiManager.RegisterPlayer(newPlayerInput.gameObject);
+                uiManager.RegisterPlayer(newPlayerObject);
             }
-
             i++;
         }
     }

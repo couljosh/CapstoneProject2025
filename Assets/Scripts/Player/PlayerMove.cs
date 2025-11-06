@@ -141,7 +141,6 @@ public class PlayerMove : MonoBehaviour
         playerEffects.copperAnimator.ResetTrigger("Kick");
         playerEffects.copperAnimator.SetBool("isCharging", false);
 
-        // NEW: Ensure UI is reset/hidden immediately on kick release
         if (kickChargeUI != null)
         {
             kickChargeUI.UpdateChargeBar(0f, false);

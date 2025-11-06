@@ -10,14 +10,12 @@ public class KickChargeUI : MonoBehaviour
 
     private void Awake()
     {
-        //start hidden
         kickChargeBackground.enabled = false;
         kickChargeIcon.enabled = false;
         kickChargeBar.fillAmount = 0f;
         kickChargeBar.color = Color.white;
     }
 
-    //method for layerMove to call to update the UI
     public void UpdateChargeBar(float normalizedCharge, bool isCharging)
     {
         kickChargeIcon.enabled=isCharging;
@@ -27,7 +25,6 @@ public class KickChargeUI : MonoBehaviour
         {
             kickChargeBar.fillAmount = normalizedCharge;
 
-            //colour changes based on charge level
             if ((normalizedCharge >= 0.45f) && (normalizedCharge < 0.85f))
             {
             }

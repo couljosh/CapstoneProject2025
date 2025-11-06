@@ -5,13 +5,15 @@ public class WorldToScreenUI : MonoBehaviour
 {
     [HideInInspector] public Transform target;
     [HideInInspector] public RectTransform barElement;
-    [HideInInspector] public Vector3 uiOffset = new Vector3(0f, 2f, 0f); //offset
+
+    [Header("Screen Space Offset")]
+    [HideInInspector] public float screenHeightOffset;
 
     private Camera mainCamera;
 
     void Start()
     {
-        //find main camera
+        //main camera
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
@@ -19,21 +21,17 @@ public class WorldToScreenUI : MonoBehaviour
             enabled = false;
         }
 
-        if (target == null || barElement == null)
-        {
-            Debug.LogError("WorldToScreenUI: Target or barElement is not set. Check PlayerUIManager.");
-            enabled = false;
-        }
     }
 
-    void LateUpdate() //LateUpdate to make sure player movement is complete
+    //LateUpdate for after player movement
+    void LateUpdate()
     {
-        if (target != null && mainCamera != null)
+        if (target != null && mainCamera != null && barElement != null)
         {
-            //convert player world pos + offset to screen pos
-            Vector3 screenPos = mainCamera.WorldToScreenPoint(target.position + uiOffset);
+            Vector3 viewportPos = mainCamera.WorldToViewportPoint(target.position);
+            viewportPos.y += screenHeightOffset;
 
-            //update UI position
+            Vector3 screenPos = mainCamera.ViewportToScreenPoint(viewportPos);
             barElement.position = screenPos;
         }
     }

@@ -1,21 +1,22 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class BombSpawn : MonoBehaviour
-{    
+{
     [Header("References")]
     public PlayerStats playerStats;
     private PlayerDeath playerDeath;
     private PlayerEffects playerEffects;
 
     public GameObject bombPrefab;
-    public GameObject bombCountText;
 
     [Header("Bomb Variables")]
     private float regenTimer;
     private int bombsHeld;
+
+    public int CurrentBombsHeld => bombsHeld;
+    public float RegenerationProgress => regenTimer / playerStats.bombRegenTime;
 
 
     void Start()
@@ -28,31 +29,41 @@ public class BombSpawn : MonoBehaviour
 
     void Update()
     {
-        regenTimer += Time.deltaTime;
-
-        //Give Bomb based on Cooldown
-        if (regenTimer > playerStats.bombRegenTime && bombsHeld < playerStats.maxBombsHeld)
+        if (bombsHeld < playerStats.maxBombsHeld)
         {
-            bombsHeld++;
-            regenTimer = 0;
-        }
+            regenTimer += Time.deltaTime;
 
-        bombCountText.GetComponent<TextMeshPro>().text = bombsHeld.ToString();
-    }
-
-    // Bomb Spawning //----------------------------------------------------------------------------------------
-    public void OnSpawnBomb(InputAction.CallbackContext context)
-    {
-        playerEffects.copperAnimator.SetTrigger("Bomb");
-        if (bombsHeld > 0 && context.performed && !playerDeath.isPlayerDead)
-        {
-            Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
-            bombsHeld--;
-            playerStats.bombUseCooldown = 0;
+            if (regenTimer > playerStats.bombRegenTime)
+            {
+                bombsHeld++;
+                regenTimer = 0;
+            }
         }
         else
         {
-            playerEffects.copperAnimator.ResetTrigger("Bomb");
+            regenTimer = 0;
+        }
+    }
+
+    public void OnSpawnBomb(InputAction.CallbackContext context)
+    {
+        if (context.performed && !playerDeath.isPlayerDead)
+        {
+            if (bombsHeld > 0)
+            {
+                playerEffects.copperAnimator.SetTrigger("Bomb");
+                Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
+                bombsHeld--;
+
+                if (bombsHeld < playerStats.maxBombsHeld && regenTimer == 0)
+                {
+                    regenTimer = 0.001f;
+                }
+            }
+            else
+            {
+                playerEffects.copperAnimator.ResetTrigger("Bomb");
+            }
         }
     }
 }

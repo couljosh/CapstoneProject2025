@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &866937815792903054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -760,7 +760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
-  bombCountText: {fileID: 752289995341863618}
 --- !u!114 &-6544643910849356735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 7975532360626289886}
   barElement: {fileID: 0}
-  uiOffset: {x: 0, y: 2, z: 0}
+  screenHeightOffset: 0
 --- !u!1 &3926277327152463818
 GameObject:
   m_ObjectHideFlags: 0
