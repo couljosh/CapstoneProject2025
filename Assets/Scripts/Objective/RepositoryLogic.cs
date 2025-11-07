@@ -15,6 +15,7 @@ public class RepositoryLogic : MonoBehaviour
     public SceneChange score;
     public PlayerDeath depositor;
     public RepoMover repoMoverScript;
+    public Outline outlineScript;
 
     [Header("UI References")]
     public Image progressBar;
@@ -305,6 +306,9 @@ public class RepositoryLogic : MonoBehaviour
 
     public void DisableRepo()
     {
+
+        outlineScript.enabled = false;
+
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
         isContested = false;
@@ -340,6 +344,7 @@ public class RepositoryLogic : MonoBehaviour
 
     public void ActivateRepo()
     {
+        outlineScript.enabled = true;
         repoLight.enabled = true;
         timerProgress.enabled = true;
         timerProgress.fillAmount = repoMoverScript.switchInterval;

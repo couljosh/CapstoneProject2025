@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1235453237818841852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   score: {fileID: 0}
   depositor: {fileID: 0}
   repoMoverScript: {fileID: 0}
+  outlineScript: {fileID: 6533998643502780190}
   progressBar: {fileID: 1498521636583002264}
   radiusImg: {fileID: 7245904694463923810}
   timerProgress: {fileID: 71311517182912555}
