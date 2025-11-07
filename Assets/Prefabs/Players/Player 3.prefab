@@ -660,12 +660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  playerNum: 3
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveAmt: {x: 0, y: 0, z: 0}
-  initialMoveSpeed: 6
-  rotateSpeed: 10
-  playerNum: 3
-  rayLength: 1.5
   rayStartPosOne: {fileID: 444764914538337988}
   rayStartPosTwo: {fileID: 1932163249982284501}
   rayStartPosThree: {fileID: 5131605351460886873}
@@ -678,53 +675,7 @@ MonoBehaviour:
   floor:
     serializedVersion: 2
     m_Bits: 2048
-  initialKickStrength: 55000
-  cartForceMultiplier: 2.5
-  rockForceMultiplier: 10
-  playerForceMultiplier: 0.1
-  maximumKickMultiplier: 3.5
-  timeToMaxStrength: 1
-  timeBeforePlayerSlowWhenCharge: 0.2
-  maxPlayerChargeSlowdown: 1
-  currentKickStrength: 0
   chargingKick: 0
-  gravity: 12
-  kickChargeBar: {fileID: 5606749824563962149}
-  chargeGradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  isStunned: 0
-  elapsedTime: 0
-  stunLength: 0
-  coyoteTimeThreshold: 0.2
-  normalizedRumble: 0
 --- !u!114 &8620095879880935457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,13 +701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf8fb312c1b8a4a9275e002f34f3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
-  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
-  bombCountText: {fileID: 7672107513123323838}
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
-  bombRegenTime: 4
-  bombUseCooldown: 0.2
-  maxBombsHeld: 2
+  bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
+  regenTimer: 0
 --- !u!114 &4756858654633455137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,26 +716,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a41767bac5af4296ca64dae60bbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnNum: 3
-  playerMesh: {fileID: 6086381718473760436}
-  playerInput: {fileID: 7071372508467383774}
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  playerInput: {fileID: 7071372508467383774}
+  playerMesh: {fileID: 6086381718473760436}
   playerCollider: {fileID: 3909969008973954251}
   playerLight: {fileID: 2822127922221191590}
   bombText: {fileID: 7672107513123323838}
-  deathPos: {fileID: 0}
   copperModel: {fileID: 6924247148663391826}
   impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
-  invincibleDuration: 6
-  invincibleTimer: 0
-  blinkInterval: 0.5
   collectedGems: []
-  gemPrefab: {fileID: 0}
-  respawnDelay: 3
+  blinkInterval: 0.5
   isPlayerDead: 0
+  spawnNum: 3
   gemCount: 0
-  scatterForce: 1000
-  gemDropDelay: 0.2
 --- !u!114 &2955468753973523611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4841050689201941602
 RectTransform:
   m_ObjectHideFlags: 0

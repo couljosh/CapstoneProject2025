@@ -11281,11 +11281,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActions: {fileID: 0}
-  playerInputManager: {fileID: 620504095}
+  playerInputManager: {fileID: 0}
   Players:
   - {fileID: 3261414448945768688, guid: beb2c6683ac3e4f4ca65cf40f52c4278, type: 3}
-  - {fileID: 2887584843794151332, guid: 333325fa384aad7448b686578ffedccb, type: 3}
   - {fileID: 3118915545251881927, guid: 76b216a10ae3d1d43ba1e4df75554d73, type: 3}
+  - {fileID: 2887584843794151332, guid: 333325fa384aad7448b686578ffedccb, type: 3}
   - {fileID: 1561325781355804542, guid: 2df2aceffc924fe4884e44db56bbfefb, type: 3}
   respawnDelay: 0
 --- !u!114 &620504095
@@ -47873,6 +47873,7 @@ SceneRoots:
   - {fileID: 1337573912}
   - {fileID: 1856189221}
   - {fileID: 3154282121050927685}
+  - {fileID: 1670730268}
   - {fileID: 264620534}
   - {fileID: 620504096}
   - {fileID: 1720653497}
@@ -47898,4 +47899,3 @@ SceneRoots:
   - {fileID: 1996443083}
   - {fileID: 474849104}
   - {fileID: 1324731757}
-  - {fileID: 1670730268}

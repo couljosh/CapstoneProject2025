@@ -22,7 +22,7 @@ public class PlayerUIManager : MonoBehaviour
     {
         if (mainCanvas == null)
         {
-            mainCanvas = FindObjectOfType<Canvas>();
+            mainCanvas = Object.FindFirstObjectByType<Canvas>();
             if (mainCanvas == null)
             {
                 Debug.LogError("assign canvas in inspector");
