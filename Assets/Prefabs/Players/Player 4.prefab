@@ -707,7 +707,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561325781355804542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -816,6 +816,7 @@ MonoBehaviour:
   spotLight: {fileID: 3513481764980957644}
   chargingMaxKick: 0
   flashInterval: 0.1
+  chargeableKick: {fileID: 6217723747230292953, guid: 8139865a5aa05334e8848f22c7d10419, type: 3}
 --- !u!1 &1844389104051878003
 GameObject:
   m_ObjectHideFlags: 0
