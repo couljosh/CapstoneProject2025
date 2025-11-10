@@ -16,13 +16,13 @@ MonoBehaviour:
   rotateSpeed: 10
   gravity: 12
   coyoteTimeThreshold: 0.2
-  kickDectDist: 1.5
+  kickDectDist: 2
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
   rockForceMultiplier: 5
-  playerForceMultiplier: 0.1
-  maximumKickMultiplier: 3.5
-  timeToMaxStrength: 1
+  playerForceMultiplier: 0.2
+  maximumKickMultiplier: 4
+  timeToMaxStrength: 0.5
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
   maxBombsHeld: 2

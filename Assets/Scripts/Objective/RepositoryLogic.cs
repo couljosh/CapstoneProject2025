@@ -347,7 +347,7 @@ public class RepositoryLogic : MonoBehaviour
         outlineScript.enabled = true;
         repoLight.enabled = true;
         timerProgress.enabled = true;
-        timerProgress.fillAmount = repoMoverScript.switchInterval;
+        //timerProgress.fillAmount = repoMoverScript.switchInterval;
         radiusImg.enabled = true;
         repoAlarm.SetActive(true);
         CheckWhenSetActive();

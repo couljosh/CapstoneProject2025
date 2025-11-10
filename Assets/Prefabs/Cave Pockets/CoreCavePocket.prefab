@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2789ae9be244a944ea643210190e2fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRadius: 2
+  minRadius: 1
   maxRadius: 2
   terrainMask:
     serializedVersion: 2
