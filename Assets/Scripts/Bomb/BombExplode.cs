@@ -9,7 +9,7 @@ public class BombExplode : MonoBehaviour
 {
     [Header("Bomb Explosion Variables")]
     public float cookTime;
-    public float radius;
+    private float radius;
     public float innerRadius;
     public float forceStrengthGem;
     public float forceStrengthCart;
@@ -23,17 +23,45 @@ public class BombExplode : MonoBehaviour
     public LayerMask playerMask;
     public LayerMask gemMask;
     public LayerMask bedrock;
-    
 
     [Header("Script References")]
     private BlockDestruction blockDestruction;
     private PlayerDeath playerDeathScript;
 
+    public float elapsedTime;
+    public int sphereIterations;
+    public float sphereIncrease;
+    private bool isFinishedClearing = true;
+    public float timeToScan;
+    private bool readyToDie = false;
+    private float deleteTimer = 0;
+
+    public GameObject bombModel; 
+
     void Start()
     {
         StartCoroutine(Explosion());
+
+        radius = sphereIterations * sphereIncrease;
     }
 
+    private void Update()
+    {
+        if (!isFinishedClearing)
+        {
+            print("uadhlajdajdw");
+            ClearTerrain();
+        }
+
+        deleteTimer += Time.deltaTime;
+
+        if(deleteTimer > 10) //destroy if alive for way too long
+        {
+            print("Deleted bomb that was too old");
+            Destroy(gameObject);
+        }
+
+    }
 
     IEnumerator Explosion()
     {
@@ -45,7 +73,7 @@ public class BombExplode : MonoBehaviour
         RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
 
         GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        
 
     }
 
@@ -115,10 +143,62 @@ public class BombExplode : MonoBehaviour
                     //Look for Terrain
                     if (raycastHit.collider.tag == "ActiveTerrain")
                     {
-                        raycastHit.collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
+                        isFinishedClearing = false;
+                        
                     }
                 }
             }
         }
+        DisableBomb();
+
+    }
+
+    //Clears Pocket Terrain
+    public void ClearTerrain()
+    {
+        elapsedTime += Time.deltaTime;
+
+        
+
+        for (int i = 1; i <= sphereIterations; i++)
+        {
+            StartCoroutine(SphereTrigger(i));
+        }
+
+        isFinishedClearing = true;
+    }
+
+    public IEnumerator SphereTrigger(int y)
+    {
+        
+        yield return new WaitForSeconds(timeToScan * y);
+
+        Collider[] terrainPieces = Physics.OverlapSphere(transform.position, y * sphereIncrease, terrainMask);
+
+        foreach (Collider collider in terrainPieces)
+        {
+            collider.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        //destroy leftovers
+        Collider[] piecesToDestroy = Physics.OverlapSphere(transform.position, (y * sphereIncrease) - 0.5f, terrainMask);
+        foreach (Collider collider in piecesToDestroy)
+        {
+            Destroy(collider.gameObject);
+        }
+
+        if(y >= sphereIterations)
+        {
+            readyToDie = true; 
+        }
+    }
+
+    void DisableBomb()
+    {
+        //disable mesh and collider
+        bombModel.SetActive(false);
+        gameObject.GetComponent<SphereCollider>().enabled = false;
     }
 }

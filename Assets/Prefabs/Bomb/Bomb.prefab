@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookTime: 3
-  radius: 3
+  radius: 0
   innerRadius: 0.5
   forceStrengthGem: 15
   forceStrengthCart: 4000
@@ -147,6 +147,11 @@ MonoBehaviour:
   bedrock:
     serializedVersion: 2
     m_Bits: 1024
+  elapsedTime: 0
+  sphereIterations: 8
+  sphereIncrease: 0.33
+  timeToScan: 0.015
+  bombModel: {fileID: 3111875435980523336}
 --- !u!54 &1345251030674072925
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,6 +273,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
       propertyPath: m_Name
       value: roundBomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442510506162454399, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
