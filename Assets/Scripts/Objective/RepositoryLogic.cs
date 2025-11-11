@@ -46,6 +46,7 @@ public class RepositoryLogic : MonoBehaviour
     public float increaseMult;
     public float decreaseMult; //If a progress reduction is added when the radius is empty
     private float depositProgress;
+    public ParticleSystem depositParticles;
 
     [Header("Color Customization")]
     public Color originalColor;
@@ -84,7 +85,7 @@ public class RepositoryLogic : MonoBehaviour
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
 
-        
+        depositParticles.enableEmission = false;
     }
 
 
@@ -268,7 +269,20 @@ public class RepositoryLogic : MonoBehaviour
     {
         depositProgress = 0;
 
-        
+        if (teamlastDepo == 1)
+        {
+           //depositParticles.startColor = Color.blue;
+        }
+
+        if (teamlastDepo == 2)
+        {
+            //depositParticles.startColor = Color.blue;
+        }
+
+        depositParticles.enableEmission = true;
+        depositParticles.Clear();
+        depositParticles.Play();
+
 
         //Add Red Score
         if (teamOneCanDepo)
