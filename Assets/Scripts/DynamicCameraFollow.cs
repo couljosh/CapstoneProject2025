@@ -1,0 +1,142 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DynamicCameraFollow : MonoBehaviour
+{
+    public List<Transform> players = new List<Transform>();
+
+    public float smoothTime = 0.5f;
+    public float minHeight = 15f;
+    public float maxHeight = 40f;
+    public float padding = 5f;
+
+    private Vector3 velocity = Vector3.zero;
+    private float currentHeightVelocity;
+    private Camera cam;
+
+    public float verticalOffset = 0f;
+    public float horizontalOffset = -3f;
+
+    void Awake()
+    {
+        cam = GetComponent<Camera>();
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.2f); //this is to initiate it a little bit past runtime so the players are already spawned
+
+        for (int i = 1; i <= 4; i++)
+        {
+            string playerName = $"Player {i}(Clone)";
+            GameObject found = GameObject.Find(playerName);
+            if (found != null)
+            {
+                AddPlayer(found.transform);
+            }
+            else
+            {
+                Debug.LogWarning($"{playerName} not found in scene.");
+            }
+        }
+    }
+
+    public void AddPlayer(Transform playerTransform)
+    {
+        if (!players.Contains(playerTransform))
+        {
+            players.Add(playerTransform);
+        }
+
+        if (players.Count > 0 && !enabled)
+        {
+            enabled = true;
+            SnapToCenter();
+        }
+    }
+
+    private void SnapToCenter()
+    {
+        if (players.Count == 0) return;
+
+        Bounds bounds = GetPlayerBounds();
+        float targetHeight = CalculateRequiredHeight(bounds);
+
+        Vector3 targetPosition = new Vector3(
+            bounds.center.x + horizontalOffset,
+            targetHeight + verticalOffset,
+            bounds.center.z
+        );
+
+        transform.position = targetPosition;
+    }
+
+    void LateUpdate()
+    {
+        if (players.Count == 0) return;
+
+        Bounds bounds = GetPlayerBounds();
+        float targetHeight = CalculateRequiredHeight(bounds);
+
+        Vector3 targetPosition = new Vector3(
+            bounds.center.x,
+            targetHeight + verticalOffset,
+            bounds.center.z + horizontalOffset
+        );
+
+        transform.position = Vector3.SmoothDamp(
+            transform.position,
+            targetPosition,
+            ref velocity,
+            smoothTime
+        );
+
+        transform.position = new Vector3(
+            transform.position.x,
+            Mathf.SmoothDamp(transform.position.y, targetHeight + verticalOffset, ref currentHeightVelocity, smoothTime),
+            transform.position.z
+        );
+    }
+
+    private Bounds GetPlayerBounds()
+    {
+        if (players.Count == 0) return new Bounds(Vector3.zero, Vector3.zero);
+
+        Bounds bounds = new Bounds(players[0].position, Vector3.zero);
+
+        for (int i = 1; i < players.Count; i++)
+        {
+            if (players[i] != null)
+            {
+                bounds.Encapsulate(players[i].position);
+            }
+        }
+        return bounds;
+    }
+
+    private float CalculateRequiredHeight(Bounds bounds)
+    {
+        float requiredWidth = bounds.extents.x * 2f + padding;
+        float requiredDepth = bounds.extents.z * 2f + padding;
+
+        float halfFovRad = cam.fieldOfView * 0.5f * Mathf.Deg2Rad;
+
+        float heightByWidth = (requiredWidth / 2f) / Mathf.Tan(halfFovRad);
+
+        float aspect = cam.aspect;
+        float heightByDepth = (requiredDepth / 2f / aspect) / Mathf.Tan(halfFovRad);
+
+        float requiredHeight = Mathf.Max(heightByWidth, heightByDepth);
+
+        return Mathf.Clamp(requiredHeight, minHeight, maxHeight);
+    }
+
+    public void RemovePlayer(Transform playerTransform)
+    {
+        if (players.Contains(playerTransform)){
+
+            players.Remove(playerTransform);
+        }
+    }
+}

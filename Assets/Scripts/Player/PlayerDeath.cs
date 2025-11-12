@@ -25,6 +25,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject copperModel;
     public GameObject impactSphere;
     public List<GameObject> collectedGems = new List<GameObject>();
+    private DynamicCameraFollow dynamicCamera;
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
@@ -47,6 +48,7 @@ public class PlayerDeath : MonoBehaviour
 
         playerGamepad = (Gamepad)playerInput.devices[0];
 
+        dynamicCamera = Camera.main.GetComponent<DynamicCameraFollow>();
     }
 
 
@@ -104,6 +106,8 @@ public class PlayerDeath : MonoBehaviour
         DropGems();
 
         gameObject.GetComponent<Animator>().applyRootMotion = true;
+        
+        //remove player
         transform.position = deathPos.transform.position;
 
         yield return new WaitForSeconds(playerStats.gemDropDelay);
@@ -132,7 +136,7 @@ public class PlayerDeath : MonoBehaviour
     void DisablePlayer()
     {
         isPlayerDead = true;
-
+        dynamicCamera.RemovePlayer(transform);
         playerMesh.enabled = false;
         copperModel.SetActive(false);
         //playerCollider.enabled = false;
@@ -164,6 +168,8 @@ public class PlayerDeath : MonoBehaviour
     {
         gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
 
+        //add player back
+        dynamicCamera.AddPlayer(transform);
         isPlayerDead = false;
 
         playerMesh.enabled = true;
@@ -175,5 +181,7 @@ public class PlayerDeath : MonoBehaviour
 
         isInvincible = true;
         invincibleTimer = 0;
+
+        //re-enable tracking with dynamic camera
     }
 }
