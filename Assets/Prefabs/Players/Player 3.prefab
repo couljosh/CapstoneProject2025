@@ -704,6 +704,10 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   regenTimer: 0
+  bombRad: 0
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &4756858654633455137
 MonoBehaviour:
   m_ObjectHideFlags: 0

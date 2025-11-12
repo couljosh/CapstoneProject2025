@@ -20,6 +20,7 @@ public class GemCollection : MonoBehaviour
     private GameObject Collecter;
     public GameObject gemPrefab;
     public Rigidbody rb;
+    public SphereCollider sphereCollider;
 
     [Header("Layer To Detect")]
     public LayerMask terrainMask;
@@ -31,6 +32,8 @@ public class GemCollection : MonoBehaviour
         //Release Gem on Check
         if (!isReleased)
         {
+            sphereCollider.enabled = false;
+
             Collider[] hitblocks = Physics.OverlapSphere(transform.position, radius, terrainMask, QueryTriggerInteraction.Ignore);
 
             if (hitblocks.Length == 0)
@@ -52,6 +55,7 @@ public class GemCollection : MonoBehaviour
     //Release Gem
     public void ReleaseGem()
     {
+        sphereCollider.enabled = true;
         rb.isKinematic = false;
         releasedTime = Time.time;
     }

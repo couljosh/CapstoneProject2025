@@ -61,6 +61,17 @@ public class CaveInManager : MonoBehaviour
                 GameObject.Instantiate(notificationPrefab, canvas.transform);
                 timeSinceLastCaveIn = 0;
                 StartCoroutine(spawnTerrain());
+
+                CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+                cameraShake.CallShake();
+
+                cameraShake.caveinVFX.enableEmission = true;
+                cameraShake.caveinVFX.Clear();
+                cameraShake.caveinVFX.Play();
+
+                cameraShake.caveinVFX.Clear();
+                cameraShake.caveinVFX.Play();
+                //Debug.Log("test");
             }
         }
     }
@@ -68,7 +79,9 @@ public class CaveInManager : MonoBehaviour
     // Cave-In Sequence 
     public IEnumerator spawnTerrain()
     {
-        
+        CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+        cameraShake.CallShake();
+
 
         foreach (var gamepad in gamepadArray)
         {
@@ -96,7 +109,6 @@ public class CaveInManager : MonoBehaviour
 
             //NEW
             //start at pos, cast increasingly outwards
-            print(pos);
             StartCoroutine(terrainChunkSpawn(pos));
             foreach(Collider col in hitblocks)
             {     
@@ -139,7 +151,7 @@ public class CaveInManager : MonoBehaviour
                 {
                     //this is now the targeted tile co-ordinate
                     //wait a bit between each placement
-                    yield return new WaitForSeconds(Random.Range(0.001f, 0.005f));
+                    yield return new WaitForSeconds(Random.Range(0.001f, 0.002f));
                     
                     //lower chance to spawn the greater you go out from the center
                     float terrainSpawnRand = Random.Range(0, 100);

@@ -127,6 +127,7 @@ MonoBehaviour:
   isCollecting: 0
   gemPrefab: {fileID: 1423656114996915478}
   rb: {fileID: 6542491902053624738}
+  sphereCollider: {fileID: 5291631979930954478}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128

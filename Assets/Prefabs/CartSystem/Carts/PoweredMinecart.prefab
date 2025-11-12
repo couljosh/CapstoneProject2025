@@ -356,25 +356,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fbb9da84926964690434b585471856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionDist: 0
-  verticalOffset: 0
+  minecartMovementScript: {fileID: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
   playerMask:
     serializedVersion: 2
     m_Bits: 256
-  rayPosLeft: {fileID: 0}
-  rayPosMid: {fileID: 0}
-  rayPosRight: {fileID: 0}
   startingPocket: {fileID: 3832181741272855735, guid: 486a7bba0bea60b41a99d1b901217a1c, type: 3}
   rb: {fileID: 6935507128066894879}
   terrainThreshold: 0
   playerThreshold: 6
   terrainSpeedReduction: 1
   playerSpeedReduction: 50
-  impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
   isPowered: 1
+  isForwardOne: 0
 --- !u!1 &6413094215018168897
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +387,7 @@ GameObject:
   - component: {fileID: 6215791676165355425}
   - component: {fileID: 2075033072666377267}
   - component: {fileID: 3836076184854098391}
+  - component: {fileID: 2439645838035551542}
   m_Layer: 6
   m_Name: PoweredMinecart
   m_TagString: Cart
@@ -436,7 +433,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 10240
+    m_Bits: 10368
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -471,6 +468,7 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
+  isForward: 0
   maxVelocity: 40
 --- !u!114 &5680405510802071404
 MonoBehaviour:
@@ -564,6 +562,23 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
+--- !u!114 &2439645838035551542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413094215018168897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37317760c22fb143aeb8f7700f24ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rb: {fileID: 6935507128066894879}
 --- !u!1 &9203846135769378125
 GameObject:
   m_ObjectHideFlags: 0

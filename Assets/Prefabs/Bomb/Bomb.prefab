@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8829599945911858919}
   - component: {fileID: 1345251030674072925}
   - component: {fileID: -8870603890781628748}
+  - component: {fileID: 7414323281948182742}
   m_Layer: 6
   m_Name: Bomb
   m_TagString: Bomb
@@ -125,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookTime: 3
-  radius: 0
   innerRadius: 0.5
   forceStrengthGem: 15
   forceStrengthCart: 4000
@@ -210,6 +210,23 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &7414323281948182742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306722039232007320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37317760c22fb143aeb8f7700f24ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.89
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rb: {fileID: 1345251030674072925}
 --- !u!1001 &2877505395581991449
 PrefabInstance:
   m_ObjectHideFlags: 0

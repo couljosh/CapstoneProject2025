@@ -315,8 +315,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3286548, y: 1, z: 1.33}
-  m_Center: {x: 0, y: 0, z: -0.75}
+  m_Size: {x: 2.3286548, y: 1, z: 1.215322}
+  m_Center: {x: 0, y: 0, z: -0.692661}
 --- !u!54 &1755006035464704076
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 7307863316880256640}
   - component: {fileID: 6215791676165355425}
   - component: {fileID: 2075033072666377267}
+  - component: {fileID: 1044306632519966010}
   m_Layer: 6
   m_Name: PhysicsMinecart
   m_TagString: Cart
@@ -432,7 +433,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 10240
+    m_Bits: 10368
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -538,6 +539,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6413094215018168897}
   m_Mesh: {fileID: -1920499256442619652, guid: 29758570c7e5b9a4e86b742e3daac91d, type: 3}
+--- !u!114 &1044306632519966010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413094215018168897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37317760c22fb143aeb8f7700f24ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rb: {fileID: 6935507128066894879}
 --- !u!1 &8758155536088112359
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,8 +664,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3286548, y: 1, z: 1.33}
-  m_Center: {x: 0, y: 0, z: 0.75}
+  m_Size: {x: 2.3286548, y: 1, z: 1.2153223}
+  m_Center: {x: 0, y: 0, z: 0.69266105}
 --- !u!54 &7712915868575801089
 Rigidbody:
   m_ObjectHideFlags: 0

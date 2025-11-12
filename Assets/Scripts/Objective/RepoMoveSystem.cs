@@ -8,6 +8,7 @@ public class RepoMoveSystem : MonoBehaviour
     public GameObject repository;
     public GameObject[] repoSpawnNodes;
     public GameObject currentLoc;
+    private TerrainBlast terrainBlastScript;
 
     [Header("Repository Customization")]
     public float activeDuration;
@@ -41,6 +42,8 @@ public class RepoMoveSystem : MonoBehaviour
         // SYSTEM SETUP //---------------------------------------------------------------------------------------
         //Find All Nodes
         repoSpawnNodes = GameObject.FindGameObjectsWithTag("RepoSpawn");
+
+        terrainBlastScript = repository.GetComponent<TerrainBlast>();  
 
         //Ensure repo disabled
         repository.GetComponent<RepositoryLogic>().DisableRepo();
@@ -111,7 +114,10 @@ public class RepoMoveSystem : MonoBehaviour
         {
             raisingElapsedTime = 0;
             isRaising = false;
+            terrainBlastScript.isFinishedClearing = false;
             repository.GetComponent<RepositoryLogic>().ActivateRepo();
+
+
         }
     }
 
@@ -150,4 +156,5 @@ public class RepoMoveSystem : MonoBehaviour
         FindNewSpot();
 
     }
+
 }

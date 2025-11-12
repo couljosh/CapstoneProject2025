@@ -49,7 +49,6 @@ public class BombExplode : MonoBehaviour
     {
         if (!isFinishedClearing)
         {
-            print("uadhlajdajdw");
             ClearTerrain();
         }
 

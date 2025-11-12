@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TerrainUtils;
 
 public class BombSpawn : MonoBehaviour
 {
@@ -13,7 +14,11 @@ public class BombSpawn : MonoBehaviour
 
     [Header("Bomb Variables")]
     public float regenTimer;
+    public float bombRad;
     private int bombsHeld;
+
+    public LayerMask terrainMask;
+
 
     public int CurrentBombsHeld => bombsHeld;
     public float RegenerationProgress => regenTimer / playerStats.bombRegenTime;
@@ -24,6 +29,7 @@ public class BombSpawn : MonoBehaviour
         playerEffects = gameObject.GetComponent<PlayerEffects>();
         bombsHeld = 0;
         playerDeath = GetComponent<PlayerDeath>();
+       
     }
 
 
@@ -43,6 +49,7 @@ public class BombSpawn : MonoBehaviour
         {
             regenTimer = 0;
         }
+
     }
 
     public void OnSpawnBomb(InputAction.CallbackContext context)
@@ -51,6 +58,7 @@ public class BombSpawn : MonoBehaviour
         {
             if (bombsHeld > 0)
             {
+
                 playerEffects.copperAnimator.SetTrigger("Bomb");
                 Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
                 bombsHeld--;

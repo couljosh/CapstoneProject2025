@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: InnerBedrocl
-  m_Shader: {fileID: -6465566751694194690, guid: 5c42c2ae10c4d04408993ab15da9c222, type: 3}
-  m_Parent: {fileID: 2100000, guid: 7655fba678a6c874984b78957bd1633c, type: 2}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Parent: {fileID: 2100000, guid: bb78a5003c314894f9462f4b9365ee3a, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -30,7 +30,8 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -45,7 +46,7 @@ Material:
     m_Colors:
     - Color_D9A456B0: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.10154861, g: 0.053266283, b: 0.1981132, a: 1}
-    - _Color: {r: 0.4150943, g: 0.4053043, b: 0.4053043, a: 1}
+    - _Color: {r: 0.10154859, g: 0.053266257, b: 0.19811317, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4501167823085649596

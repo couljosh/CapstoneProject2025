@@ -1,33 +1,19 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.TerrainUtils;
+using System.Collections;
 
-public class CavePocket : MonoBehaviour
+public class TerrainBlast : MonoBehaviour
 {
-    [Header("Cave-Pocket Size Customization")]
-    public float minRadius;
-    public float maxRadius;
-    public float timeToScan;
-    public float elapsedTime;
-
-    [Header("Layer To Detect")]
-    public LayerMask terrainMask;
-
     public int sphereIterations;
     public float sphereIncrease;
-
-    public bool isFinishedClearing = false;
-
-    void Start()
-    {
-
-    }
+    public bool isFinishedClearing;
+    public float timeToScan;
+    public LayerMask terrainMask;
 
     private void Update()
     {
-        
 
-        if(!isFinishedClearing)
+        if (!isFinishedClearing)
         {
             ClearTerrain();
         }
@@ -37,7 +23,6 @@ public class CavePocket : MonoBehaviour
     //Clears Pocket Terrain
     public void ClearTerrain()
     {
-        elapsedTime += Time.deltaTime;
 
         for (int i = 1; i <= sphereIterations; i++)
         {
@@ -63,7 +48,7 @@ public class CavePocket : MonoBehaviour
             {
                 continue;
             }
-            
+
         }
 
         yield return new WaitForSeconds(0.1f);
@@ -76,3 +61,5 @@ public class CavePocket : MonoBehaviour
         }
     }
 }
+
+
