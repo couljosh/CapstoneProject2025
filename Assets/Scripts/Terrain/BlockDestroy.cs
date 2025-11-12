@@ -57,7 +57,7 @@ public class BlockDestroy : MonoBehaviour
         //make mesh invisible
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         //make box trigger only
-        gameObject.GetComponent<MeshCollider>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider>().isTrigger = true;
         terrainTileMap.SetTile(myCellLocation, null);
 
     }
@@ -70,7 +70,7 @@ public class BlockDestroy : MonoBehaviour
         //make mesh invisible
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         //make box trigger only
-        gameObject.GetComponent<MeshCollider>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider>().isTrigger = true;
 
         terrainTileMap.SetTile(myCellLocation, null);
     }
@@ -83,7 +83,7 @@ public class BlockDestroy : MonoBehaviour
         //make mesh invisible
         gameObject.GetComponent<MeshRenderer>().enabled = true;
         //re-enable collision
-        gameObject.GetComponent<MeshCollider>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider>().isTrigger = false;
     }
 
     public void RefreshTile(ref TileData t)

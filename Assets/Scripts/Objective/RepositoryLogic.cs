@@ -37,7 +37,7 @@ public class RepositoryLogic : MonoBehaviour
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
     public bool depositAll = false;
-    public bool active = true;
+    public bool active;
     public int teamlastDepo;
     public int singleCheck;
 
@@ -74,6 +74,7 @@ public class RepositoryLogic : MonoBehaviour
         repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
 
+        timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
 
         //Start with default repository settings
         progressBar.fillAmount = 0;
@@ -89,11 +90,15 @@ public class RepositoryLogic : MonoBehaviour
 
     void Update()
     {
+        print(timerProgress.fillAmount);
+
         ConditionCheck();
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
+        
         if(active)
+        timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
 
         instance.getPlaybackState(out playBackState);
 
@@ -105,10 +110,10 @@ public class RepositoryLogic : MonoBehaviour
         if (isEmpty)
         {
             //Reduces Progress
-            if (depositProgress > 0)
-            {
-                depositProgress -= Time.deltaTime * decreaseMult;
-            }
+            //if (depositProgress > 0)
+            //{
+            //    depositProgress -= Time.deltaTime * decreaseMult;
+            //}
 
             if (instance.isValid())
                 instance.setPaused(true);
@@ -197,7 +202,7 @@ public class RepositoryLogic : MonoBehaviour
         if (enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
             depositor = null;
-            //depositProgress = 0;  //TURN ON IF NOT USING DEPOSIT DECREASE WHEN EMPTY
+            depositProgress = 0;  //TURN ON IF NOT USING DEPOSIT DECREASE WHEN EMPTY
             isEmpty = true;
         }
         else
@@ -265,16 +270,6 @@ public class RepositoryLogic : MonoBehaviour
     {
         depositProgress = 0;
 
-        if (teamlastDepo == 1)
-        {
-           //depositParticles.startColor = Color.blue;
-        }
-
-        if (teamlastDepo == 2)
-        {
-            //depositParticles.startColor = Color.blue;
-        }
-
         depositParticles.enableEmission = true;
         depositParticles.Clear();
         depositParticles.Play();
@@ -306,7 +301,7 @@ public class RepositoryLogic : MonoBehaviour
         }
         largeGemsInRadius.Clear();
 
-        repoMoveSystemScript.depositComplete = true;
+        repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
@@ -346,6 +341,7 @@ public class RepositoryLogic : MonoBehaviour
 
         largeGemsInRadius.Clear();
 
+        active = false;
         //reset zoom state for dynamic camera
         //dynamicCamera.ZoomOutTimer = 0;
 
@@ -353,13 +349,14 @@ public class RepositoryLogic : MonoBehaviour
 
     public void ActivateRepo()
     {
+        active = true;
+        timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
         outlineScript.enabled = true;
         repoLight.enabled = true;
         timerProgress.enabled = true;
         radiusImg.enabled = true;
         repoAlarm.SetActive(true);
         CheckWhenSetActive();
-
     }
 
 

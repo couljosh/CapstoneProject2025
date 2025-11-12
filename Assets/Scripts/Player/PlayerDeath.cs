@@ -136,7 +136,7 @@ public class PlayerDeath : MonoBehaviour
     void DisablePlayer()
     {
         isPlayerDead = true;
-        dynamicCamera.RemovePlayer(transform);
+        //dynamicCamera.RemovePlayer(transform);
         playerMesh.enabled = false;
         copperModel.SetActive(false);
         //playerCollider.enabled = false;
@@ -169,7 +169,7 @@ public class PlayerDeath : MonoBehaviour
         gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
 
         //add player back
-        dynamicCamera.AddPlayer(transform);
+        //dynamicCamera.AddPlayer(transform);
         isPlayerDead = false;
 
         playerMesh.enabled = true;

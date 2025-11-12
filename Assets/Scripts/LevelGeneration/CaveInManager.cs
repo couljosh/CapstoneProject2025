@@ -18,6 +18,7 @@ public class CaveInManager : MonoBehaviour
     public Tilemap terrainTileMap;
     public RuleTile terrainTile;
 
+    public GameObject check;
 
     [Header("Cave-In Customization")]
     public float chancePerSecond;
@@ -85,6 +86,10 @@ public class CaveInManager : MonoBehaviour
 
         foreach (var gamepad in gamepadArray)
         {
+            if (gamepad == null)
+            {
+                continue;
+            }
             gamepad.SetMotorSpeeds(0.1f, 0.1f);
         }    
 
@@ -92,6 +97,10 @@ public class CaveInManager : MonoBehaviour
 
         foreach (var gamepad in gamepadArray)
         {
+            if (gamepad == null)
+            {
+                continue;
+            }
             gamepad.SetMotorSpeeds(0f, 0f);
         }
 
@@ -103,21 +112,23 @@ public class CaveInManager : MonoBehaviour
             var py = Random.Range(bounds.min.y, bounds.max.y);
             var pz = Random.Range(bounds.min.z, bounds.max.z);
             Vector3 pos = new Vector3(px, py + gemVeritcalOffest, pz);
+            
 
             //OLD
-            Collider[] hitblocks = Physics.OverlapSphere(pos, radius, terrainMask);
+            //Collider[] hitblocks = Physics.OverlapSphere(pos, radius, terrainMask);
 
             //NEW
             //start at pos, cast increasingly outwards
             StartCoroutine(terrainChunkSpawn(pos));
-            foreach(Collider col in hitblocks)
-            {     
-                         
-                if (col.gameObject.GetComponent<MeshRenderer>().enabled == false) //if the box is invisible
-                {
-                    col.gameObject.GetComponent<BlockDestroy>().enableCube();
-                }                 
-            }
+            //Instantiate(check, pos, Quaternion.identity);
+            //foreach(Collider col in hitblocks)
+            //{     
+
+            //    if (col.gameObject.GetComponent<MeshRenderer>().enabled == false) //if the box is invisible
+            //    {
+            //        col.gameObject.GetComponent<BlockDestroy>().enableCube();
+            //    }                 
+            //}
 
             //for(int y = 0; y <= gemSpawnAmt; y++)
             //{
@@ -151,7 +162,7 @@ public class CaveInManager : MonoBehaviour
                 {
                     //this is now the targeted tile co-ordinate
                     //wait a bit between each placement
-                    yield return new WaitForSeconds(Random.Range(0.001f, 0.002f));
+                   yield return new WaitForSeconds(0.0001f);
                     
                     //lower chance to spawn the greater you go out from the center
                     float terrainSpawnRand = Random.Range(0, 100);

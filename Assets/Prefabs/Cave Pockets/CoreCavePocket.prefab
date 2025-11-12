@@ -46,9 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 0.3
   maxRadius: 1
+  timeToScan: 0
+  elapsedTime: 0
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  sphereIterations: 1
+  sphereIncrease: 1.5
+  isFinishedClearing: 0
 --- !u!1 &3413732775380101390
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,9 +100,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 0.3
   maxRadius: 1
+  timeToScan: 0
+  elapsedTime: 0
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  sphereIterations: 1
+  sphereIncrease: 1.5
+  isFinishedClearing: 0
 --- !u!1 &3832181741272855735
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,9 +158,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 1
   maxRadius: 2
+  timeToScan: 0
+  elapsedTime: 0
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  sphereIterations: 1
+  sphereIncrease: 1.5
+  isFinishedClearing: 0
 --- !u!1 &7173752642024385654
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,9 +212,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 0.3
   maxRadius: 1
+  timeToScan: 0
+  elapsedTime: 0
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  sphereIterations: 1
+  sphereIncrease: 1.5
+  isFinishedClearing: 0
 --- !u!1 &8577765044603235500
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +266,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 0.3
   maxRadius: 1
+  timeToScan: 0
+  elapsedTime: 0
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
+  sphereIterations: 1
+  sphereIncrease: 1.5
+  isFinishedClearing: 0

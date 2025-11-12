@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6824643462245503608}
   - component: {fileID: 7159459928244446646}
   - component: {fileID: 3776326919249161405}
-  - component: {fileID: 5113139808443114226}
+  - component: {fileID: 3544318061555042981}
   m_Layer: 7
   m_Name: Terrain
   m_TagString: ActiveTerrain
@@ -136,8 +136,8 @@ MonoBehaviour:
   terrainTileMap: {fileID: 0}
   startingType: {fileID: 0}
   emptyType: {fileID: 2928529762848268004, guid: 226ec4ac22499bc41b3b9285b3ba8f2b, type: 3}
---- !u!64 &5113139808443114226
-MeshCollider:
+--- !u!65 &3544318061555042981
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,7 +154,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

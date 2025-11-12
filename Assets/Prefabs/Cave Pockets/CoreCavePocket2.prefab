@@ -51,5 +51,6 @@ MonoBehaviour:
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
-  sphereIterations: 10
-  sphereIncrease: 0.2
+  sphereIterations: 1
+  sphereIncrease: 3
+  isFinishedClearing: 0

@@ -20,6 +20,9 @@ public class RepoMoveSystem : MonoBehaviour
     public float raiseOffset;
     public float minOffDelay;
     public float maxOffDelay;
+    public float delayBeforeFirstActive;
+
+    public float elaspedTime;
 
     private Vector3 raisedPos;
     private float raiseLerpT;
@@ -49,7 +52,7 @@ public class RepoMoveSystem : MonoBehaviour
         repository.GetComponent<RepositoryLogic>().DisableRepo();
 
         //Find first spot
-        FindNewSpot();
+        Invoke("FindNewSpot", delayBeforeFirstActive);
     }
 
 
@@ -57,7 +60,9 @@ public class RepoMoveSystem : MonoBehaviour
     {
 
         // Lower Check //---------------------------------------------------------------------------------------
-        if (depositComplete)
+        elaspedTime += Time.deltaTime;
+
+        if (elaspedTime > activeDuration)
         {
             LowerRepo();
         }
@@ -65,12 +70,14 @@ public class RepoMoveSystem : MonoBehaviour
         {
             loweringElapsedTime = 0;
             lowerLerpT = 0;
+
         }
 
         // Raise Check //---------------------------------------------------------------------------------------
         if (isRaising)
         {
             RaiseRepo();
+            elaspedTime = 0;
         }
         else
         {
@@ -154,6 +161,7 @@ public class RepoMoveSystem : MonoBehaviour
         float offDelayDuration = Random.Range(minOffDelay, maxOffDelay);
         yield return new WaitForSeconds(offDelayDuration);
         FindNewSpot();
+        elaspedTime = 0;
 
     }
 

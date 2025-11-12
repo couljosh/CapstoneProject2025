@@ -20,9 +20,9 @@ MonoBehaviour:
   initialKickStrength: 55000
   cartForceMultiplier: 2.5
   rockForceMultiplier: 5
-  playerForceMultiplier: 0.2
+  playerForceMultiplier: 0.1
   maximumKickMultiplier: 4
-  timeToMaxStrength: 0.5
+  timeToMaxStrength: 0.65
   timeBeforePlayerSlowWhenCharge: 0.2
   maxPlayerChargeSlowdown: 1
   maxBombsHeld: 2
