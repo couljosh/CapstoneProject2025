@@ -52,6 +52,17 @@ public class CaveInManager : MonoBehaviour
                 GameObject.Instantiate(notificationPrefab, canvas.transform);
                 timeSinceLastCaveIn = 0;
                 StartCoroutine(spawnTerrain());
+                CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+                cameraShake.CallShake();
+
+                cameraShake.caveinVFX.enableEmission = true;
+                cameraShake.caveinVFX.Clear();
+                cameraShake.caveinVFX.Play();
+
+                cameraShake.caveinVFX.Clear();
+                cameraShake.caveinVFX.Play();
+                //Debug.Log("test");
+
             }
         }
     }
@@ -59,7 +70,9 @@ public class CaveInManager : MonoBehaviour
     // Cave-In Sequence 
     public IEnumerator spawnTerrain()
     {
-
+        CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+            cameraShake.CallShake();
+  
         foreach (var gamepad in gamepadArray)
         {
             gamepad.SetMotorSpeeds(0.1f, 0.1f);
