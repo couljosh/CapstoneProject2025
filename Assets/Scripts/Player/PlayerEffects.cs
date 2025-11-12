@@ -18,6 +18,8 @@ public class PlayerEffects : MonoBehaviour
     public float flashInterval;
     private bool flashOn = true;
 
+    public ParticleSystem chargeableKick;
+
 
     private void Start()
     {
@@ -28,6 +30,11 @@ public class PlayerEffects : MonoBehaviour
         //Set all bool animators to false
         copperAnimator.SetBool("isRunning", false);
         copperAnimator.SetBool("isCharging", false);
+        //disable particle system
+        chargeableKick.enableEmission = false;
+        chargeableKick.startSize = 0.5f;
+        chargeableKick.startSpeed = -9;
+
     }
     public void KickEffects(float currentRatio)
     {
@@ -36,16 +43,38 @@ public class PlayerEffects : MonoBehaviour
         if (playerMove.chargingKick && currentRatio >= 1)
         {
             chargingMaxKick = true;
+            //enable particle system
+           // chargeableKick.enableEmission = true;
+
         }
         else
         {
             chargingMaxKick = false;
-        }
+            //disable particle system
+            //chargeableKick.enableEmission = false;
 
+        }
     }
 
     private void Update()
     {
+
+        if (playerMove.chargingKick && chargingMaxKick == false)
+        {
+            chargeableKick.enableEmission = true;
+            chargeableKick.startSize = 0.5f;
+            chargeableKick.startSpeed = -9;
+        }
+        else if (chargingMaxKick == false)
+        {
+            chargeableKick.enableEmission = false;
+        }
+        else
+        {
+            chargeableKick.startSize = 2f;
+            chargeableKick.startSpeed = -18;
+        }
+
         //LIGHT FLASH AT FULL CHARGE
         if (chargingMaxKick)
         {

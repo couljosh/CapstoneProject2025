@@ -11,27 +11,28 @@ public class RepoMoveSystem : MonoBehaviour
 
     [Header("Repository Customization")]
     public float activeDuration;
-    public float elaspedTime;
     public float raisingElapsedTime;
     public float loweringElapsedTime;
 
-    public int randInd;
-
     //Movement
     public float raiseDuration;
-    public Vector3 raisedPos;
     public float raiseOffset;
+    public float minOffDelay;
+    public float maxOffDelay;
 
-    public float raiseLerpT;
-    public float lowerLerpT;
+    private Vector3 raisedPos;
+    private float raiseLerpT;
+    private float lowerLerpT;
+    private int randInd;
 
+    [Header("Repository Checks")]
     public bool isRaising;
     public bool isLowering;
     public bool isSwitching;
+    public bool depositComplete = false;
 
-    public float minOffDelay;
-    public float maxOffDelay;
-    public float offElapsedTime = 0;
+
+
 
 
 
@@ -51,10 +52,9 @@ public class RepoMoveSystem : MonoBehaviour
 
     private void Update()
     {
-        elaspedTime += Time.deltaTime;
 
         // Lower Check //---------------------------------------------------------------------------------------
-        if (elaspedTime > activeDuration)
+        if (depositComplete)
         {
             LowerRepo();
         }
@@ -68,7 +68,6 @@ public class RepoMoveSystem : MonoBehaviour
         if (isRaising)
         {
             RaiseRepo();
-            elaspedTime = 0;
         }
         else
         {
@@ -137,18 +136,18 @@ public class RepoMoveSystem : MonoBehaviour
         else if(!isSwitching)
         {
             isSwitching = true;
+            depositComplete = false;
             StartCoroutine(DelayedSwitch());
         }
     }
 
-    // Delay //---------------------------------------------------------------------------------------
+    // Delay //-------------------------------------------------------------------------------------------------------
     IEnumerator DelayedSwitch()
     {
 
         float offDelayDuration = Random.Range(minOffDelay, maxOffDelay);
         yield return new WaitForSeconds(offDelayDuration);
         FindNewSpot();
-        elaspedTime = 0;
 
     }
 }
