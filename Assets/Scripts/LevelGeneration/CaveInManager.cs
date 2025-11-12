@@ -107,7 +107,7 @@ public class CaveInManager : MonoBehaviour
             for(int y = 0; y <= gemSpawnAmt; y++)
             {
                 int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-                int randPiece = Random.Range(0, hitblocks.Length -1);
+                int randPiece = Random.Range(0, hitblocks.Length);
                 Instantiate(gemGenerationScript.clusterPrefabs[randIndex], hitblocks[randPiece].transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
 
             }

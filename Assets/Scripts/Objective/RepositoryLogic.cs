@@ -14,7 +14,7 @@ public class RepositoryLogic : MonoBehaviour
     [Header("Script References")]
     public SceneChange score;
     public PlayerDeath depositor;
-    public RepoMover repoMoverScript;
+    public RepoMoveSystem repoMoveSystemScript;
     public Outline outlineScript;
 
     [Header("UI References")]
@@ -70,14 +70,12 @@ public class RepositoryLogic : MonoBehaviour
     void Start()
     {
         dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
-        print(dynamicCamera);
         //Script References
-        repoMoverScript = GameObject.Find("RepoMover").GetComponent<RepoMover>();
+        repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
 
 
         //Start with default repository settings
-        timerProgress.fillAmount = repoMoverScript.switchInterval;
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
         ClearStartingArea();
@@ -96,7 +94,6 @@ public class RepositoryLogic : MonoBehaviour
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
         if(active)
-        timerProgress.fillAmount -= 1f / repoMoverScript.switchInterval * Time.deltaTime;
 
         instance.getPlaybackState(out playBackState);
 
@@ -108,10 +105,10 @@ public class RepositoryLogic : MonoBehaviour
         if (isEmpty)
         {
             //Reduces Progress
-            //if (depositProgress > 0)
-            //{
-            //    depositProgress -= Time.deltaTime * decreaseMult;
-            //}
+            if (depositProgress > 0)
+            {
+                depositProgress -= Time.deltaTime * decreaseMult;
+            }
 
             if (instance.isValid())
                 instance.setPaused(true);
@@ -184,7 +181,6 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Exited
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            print("player left zone");
             removeEnteredPlayer(other.gameObject);
         }
 
@@ -201,7 +197,7 @@ public class RepositoryLogic : MonoBehaviour
         if (enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
         {
             depositor = null;
-            depositProgress = 0;
+            //depositProgress = 0;  //TURN ON IF NOT USING DEPOSIT DECREASE WHEN EMPTY
             isEmpty = true;
         }
         else
@@ -310,8 +306,7 @@ public class RepositoryLogic : MonoBehaviour
         }
         largeGemsInRadius.Clear();
 
-
-        repoMoverScript.elaspedTime = repoMoverScript.switchInterval;
+        repoMoveSystemScript.depositComplete = true;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
@@ -361,7 +356,6 @@ public class RepositoryLogic : MonoBehaviour
         outlineScript.enabled = true;
         repoLight.enabled = true;
         timerProgress.enabled = true;
-        timerProgress.fillAmount = repoMoverScript.switchInterval;
         radiusImg.enabled = true;
         repoAlarm.SetActive(true);
         CheckWhenSetActive();

@@ -3337,21 +3337,16 @@ MonoBehaviour:
   repoSpawnNodes: []
   currentLoc: {fileID: 0}
   activeDuration: 25
-  elaspedTime: 0
   raisingElapsedTime: 0
   loweringElapsedTime: 0
-  randInd: 0
   raiseDuration: 2
-  raisedPos: {x: 0, y: 0, z: 0}
   raiseOffset: 3
-  raiseLerpT: 0
-  lowerLerpT: 0
+  minOffDelay: 3
+  maxOffDelay: 6
   isRaising: 0
   isLowering: 0
   isSwitching: 0
-  minOffDelay: 3
-  maxOffDelay: 6
-  offElapsedTime: 0
+  depositComplete: 0
 --- !u!4 &278442651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7856938320459481374, guid: 0badc303e438a684cb3f5554eeb7dc64, type: 3}
