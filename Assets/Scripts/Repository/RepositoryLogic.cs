@@ -1,0 +1,462 @@
+using FMOD;
+using FMOD.Studio;
+using FMODUnity;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.TerrainUtils;
+using UnityEngine.UI;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
+
+public class RepositoryLogic : MonoBehaviour
+{
+    [Header("Script References")]
+    public SceneChange score;
+    public PlayerDeath depositor;
+    public RepoMoveSystem repoMoveSystemScript;
+    public Outline outlineScript;
+
+    [Header("UI References")]
+    public Image progressBar;
+    public Image radiusImg;
+    public Image timerProgress;
+    public Light repoLight;
+
+    [Header("Object References")]
+    public GameObject repoAlarm;
+    public GameObject startingPocket;
+    private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
+    private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
+    public List<GameObject> allEnteredPlayers = new List<GameObject>();
+    public SphereCollider depositRadius;
+    public List<GameObject> largeGemsInRadius = new List<GameObject>();
+    public int largeGemValue;
+    public DynamicCamera dynamicCamera;
+
+    [Header("Deposit/Activity Checks")]
+    public bool isIncrease;
+    public bool depositAll = false;
+    public bool active;
+    public int teamlastDepo;
+    public int singleCheck;
+
+    [Header("Repository Customization")]
+    public float depositTime;
+    public float increaseMult;
+    public float decreaseMult; //If a progress reduction is added when the radius is empty
+    private float depositProgress;
+    public ParticleSystem depositParticles;
+
+    [Header("Color Customization")]
+    public Color originalColor;
+    public Color redTeamColor;
+    public Color blueTeamColor;
+
+    [Header("Repository State Checks")]
+    public bool teamOneCanDepo;
+    public bool teamTwoCanDepo;
+    public bool isContested;
+    public bool isEmpty;
+    public LayerMask player;
+    public LayerMask kickable;
+
+    [Header("Sound Variables")]
+    public EventReference depositRef;
+    private FMOD.Studio.EventInstance instance;
+    FMOD.Studio.PLAYBACK_STATE playBackState;
+
+
+    void Start()
+    {
+        dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
+        //Script References
+        repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
+        score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
+
+        timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
+
+        //Start with default repository settings
+        progressBar.fillAmount = 0;
+        repoLight.color = originalColor;
+        ClearStartingArea();
+
+        //Sound References
+        instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
+
+        depositParticles.enableEmission = false;
+    }
+
+
+    void Update()
+    {
+        print(timerProgress.fillAmount);
+
+        ConditionCheck();
+
+        // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
+        progressBar.fillAmount = depositProgress / depositTime;
+        
+        if(active)
+        timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
+
+        instance.getPlaybackState(out playBackState);
+
+        if (allEnteredPlayers.Count > 0)
+            depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
+
+
+        // EMPTY //--------------------------------------------------------------------------------------------------
+        if (isEmpty)
+        {
+            //Reduces Progress
+            //if (depositProgress > 0)
+            //{
+            //    depositProgress -= Time.deltaTime * decreaseMult;
+            //}
+
+            if (instance.isValid())
+                instance.setPaused(true);
+
+            //Resets last team checks
+            singleCheck = 0;
+            teamlastDepo = 0;
+
+        }
+
+        // CONTESTED //----------------------------------------------------------------------------------------------
+        if (isContested)
+        {
+
+        }
+
+
+        // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
+        if (teamOneCanDepo)
+        {
+            //Increase progress until full
+            depositProgress += Time.deltaTime;
+
+            //Team 1 Signifiers Active
+            progressBar.color = Color.red;
+
+            //Complete Deposit Check
+            if (depositProgress >= depositTime)
+            {
+                CompleteDeposit();
+            }
+        }
+
+
+        // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
+        if (teamTwoCanDepo)
+        {
+            //Increase progress until full
+            depositProgress += Time.deltaTime;
+
+            //Team 2 Signifiers Active
+            progressBar.color = Color.blue;
+
+            //Complete Deposit Check
+            if (depositProgress >= depositTime)
+            {
+                CompleteDeposit();
+            }
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Tracks Players Entered
+        if (other.gameObject.tag == "ObjectDestroyer" && active)
+        {
+            addEnteredPlayer(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "LargeGem" && active && other.gameObject.GetComponentInParent<LargeGem>().isReleased == true)
+        {
+            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = true;
+            largeGemsInRadius.Add(other.gameObject.transform.parent.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //Tracks Players Exited
+        if (other.gameObject.tag == "ObjectDestroyer" && active)
+        {
+            removeEnteredPlayer(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "LargeGem" && active)
+        {
+            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = false;
+            largeGemsInRadius.Remove(other.gameObject.transform.parent.gameObject);
+        }
+    }
+
+    public void ConditionCheck()
+    {
+        // EMPTY //--------------------------------------------------------------------------------------------------
+        if (enteredPlayersTeam1.Count <= 0 && enteredPlayersTeam2.Count <= 0)
+        {
+            depositor = null;
+            depositProgress = 0;  //TURN ON IF NOT USING DEPOSIT DECREASE WHEN EMPTY
+            isEmpty = true;
+        }
+        else
+        {
+            isEmpty = false;
+        }
+
+        // CONTESTED //----------------------------------------------------------------------------------------------
+        if (enteredPlayersTeam1.Count > 0 && enteredPlayersTeam2.Count > 0)
+        {
+            isContested = true;
+
+            //Saves last team to determine what happens when deposit sound is played again
+            instance.setPaused(true);
+            singleCheck = teamlastDepo;
+        }
+        else
+        {
+            isContested = false;
+        }
+
+        // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
+        if (enteredPlayersTeam1.Count >= 1 && enteredPlayersTeam2.Count < 1 && depositor.collectedGems.Count > 0)
+        {
+            teamOneCanDepo = true;
+
+            //Sets as last team 
+            if (teamlastDepo == 2)
+            {
+                depositProgress = 0;
+            }
+            teamlastDepo = 1;
+
+            //Deposit Sound Trigger
+            ConditionalSoundTrigger();
+        }
+        else
+        {
+            teamOneCanDepo = false;
+        }
+
+        // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
+        if (enteredPlayersTeam2.Count >= 1 && enteredPlayersTeam1.Count < 1 && depositor.collectedGems.Count > 0)
+        {
+            teamTwoCanDepo = true;
+
+            //Sets as last team 
+            if (teamlastDepo == 1)
+            {
+                depositProgress = 0;
+            }
+            teamlastDepo = 2;
+
+            //Deposit Sound Trigger
+            ConditionalSoundTrigger();
+        }
+        else
+        {
+            teamTwoCanDepo = false;
+        }
+    }
+
+
+    public void CompleteDeposit()
+    {
+        depositProgress = 0;
+
+        depositParticles.enableEmission = true;
+        depositParticles.Clear();
+        depositParticles.Play();
+
+
+        //Add Red Score
+        if (teamOneCanDepo)
+        {
+            score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+        }
+
+        //Add Blue Score
+        if (teamTwoCanDepo)
+        {
+            score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+        }
+
+        //Clear Inventory & Empty 
+        depositor.collectedGems.Clear();
+        depositor.gemCount = 0;
+
+        if (allEnteredPlayers.Count > 0)
+            allEnteredPlayers.RemoveAt(0);
+
+        //get rid of any large gems
+        foreach (GameObject largeGem in largeGemsInRadius)
+        {
+            Destroy(largeGem);
+        }
+        largeGemsInRadius.Clear();
+
+        repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
+
+        teamOneCanDepo = false;
+        teamTwoCanDepo = false;
+    }
+
+
+    public void DisableRepo()
+    {
+
+        outlineScript.enabled = false;
+
+        teamOneCanDepo = false;
+        teamTwoCanDepo = false;
+        isContested = false;
+        isEmpty = false;
+
+        depositor = null;
+        enteredPlayersTeam1.Clear();
+        enteredPlayersTeam2.Clear();
+        allEnteredPlayers.Clear();
+
+        singleCheck = 0;
+        teamlastDepo = 0;
+
+        timerProgress.enabled = false;
+        radiusImg.enabled = false;
+        repoLight.enabled = false;
+        depositProgress = 0;
+        repoLight.color = originalColor;
+        repoAlarm.SetActive(false);
+
+        //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
+        foreach (GameObject largeGem in largeGemsInRadius)
+        {
+            largeGem.GetComponentInParent<LargeGem>().isInDepositRadius = false;
+        }
+
+        largeGemsInRadius.Clear();
+
+        active = false;
+        //reset zoom state for dynamic camera
+        //dynamicCamera.ZoomOutTimer = 0;
+
+    }
+
+    public void ActivateRepo()
+    {
+        active = true;
+        timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
+        outlineScript.enabled = true;
+        repoLight.enabled = true;
+        timerProgress.enabled = true;
+        radiusImg.enabled = true;
+        repoAlarm.SetActive(true);
+        CheckWhenSetActive();
+    }
+
+
+    void ConditionalSoundTrigger()
+    {
+        bool isPaused;
+        RESULT r = instance.getPaused(out isPaused);
+        {
+            if (r == RESULT.OK)
+                //Sound for same team
+                if (isPaused && teamlastDepo == singleCheck)
+                {
+                    instance.setPaused(false);
+                }
+
+            //Sound for new team
+            if (teamlastDepo != singleCheck)
+            {
+                PlaySound();
+
+            }
+        }
+    }
+
+
+    void PlaySound()
+    {
+        instance.setPaused(false);
+        instance.start();
+    }
+
+
+    void ClearStartingArea()
+    {
+       // Instantiate(startingPocket, transform.position, Quaternion.identity);
+
+    }
+
+
+    void CheckWhenSetActive()
+    {
+        //check for players already in the radius
+        Collider[] playersHit = Physics.OverlapSphere(transform.position, depositRadius.radius, player, QueryTriggerInteraction.Ignore);
+
+        if (playersHit.Length > 0)
+        {
+            foreach (var detectedPlayer in playersHit)
+            {
+                if (detectedPlayer != null)
+                    addEnteredPlayer(detectedPlayer.gameObject);
+            }
+        }
+
+        //check for large gems already in the radius
+        Collider[] gemsHit = Physics.OverlapSphere(transform.position, depositRadius.radius, kickable, QueryTriggerInteraction.Ignore);
+
+        if (gemsHit.Length > 0)
+        {
+            foreach (var detectedGem in gemsHit)
+            {
+                if (detectedGem != null && detectedGem.tag == "LargeGem")
+                {
+                    largeGemsInRadius.Add(detectedGem.gameObject.transform.parent.gameObject);
+                    detectedGem.gameObject.GetComponentInParent<LargeGem>().isInDepositRadius = true;
+                }
+                    
+
+            }
+        }
+    }
+
+
+    void addEnteredPlayer(GameObject player)
+    {
+        allEnteredPlayers.Add(player);
+        //depositor != other.gameObject ||
+        if (depositor == null)
+        {
+            depositor = player.GetComponent<PlayerDeath>();
+        }
+
+        //Add to list of players currently in range based on their team affiliation
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Add(player.gameObject);
+        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Add(player.gameObject);
+    }
+
+
+    void removeEnteredPlayer(GameObject player)
+    {
+        allEnteredPlayers.Remove(player);
+
+        if (depositor != null && allEnteredPlayers.Count > 0)
+            depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
+
+        //remove leaving player from list
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+            enteredPlayersTeam1.Remove(player.gameObject);
+        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+            enteredPlayersTeam2.Remove(player.gameObject);
+    }
+}
