@@ -61,6 +61,7 @@ public class PlayerEffects : MonoBehaviour
 
         if (playerMove.chargingKick && chargingMaxKick == false)
         {
+            //schargeableKick.Play();
             chargeableKick.enableEmission = true;
             chargeableKick.startSize = 0.5f;
             chargeableKick.startSpeed = -9;
@@ -68,6 +69,7 @@ public class PlayerEffects : MonoBehaviour
         else if (chargingMaxKick == false)
         {
             chargeableKick.enableEmission = false;
+            //chargeableKick.Stop();
         }
         else
         {
