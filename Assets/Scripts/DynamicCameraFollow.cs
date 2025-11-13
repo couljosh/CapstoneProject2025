@@ -18,14 +18,18 @@ public class DynamicCameraFollow : MonoBehaviour
     public float verticalOffset = 0f;
     public float horizontalOffset = -3f;
 
+    [Header("Boundary")]
+    public BoxCollider boundaryCollider;
+
     void Awake()
     {
-        cam = GetComponent<Camera>();
+        cam = GetComponentInChildren<Camera>();
     }
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.2f); //this is to initiate it a little bit past runtime so the players are already spawned
+
+        yield return new WaitForSeconds(0.2f);
 
         for (int i = 1; i <= 4; i++)
         {
@@ -40,6 +44,7 @@ public class DynamicCameraFollow : MonoBehaviour
                 Debug.LogWarning($"{playerName} not found in scene.");
             }
         }
+
     }
 
     public void AddPlayer(Transform playerTransform)
@@ -58,7 +63,7 @@ public class DynamicCameraFollow : MonoBehaviour
 
     private void SnapToCenter()
     {
-        if (players.Count == 0) return;
+        if (players.Count == 0 || cam == null) return;
 
         Bounds bounds = GetPlayerBounds();
         float targetHeight = CalculateRequiredHeight(bounds);
@@ -69,33 +74,75 @@ public class DynamicCameraFollow : MonoBehaviour
             bounds.center.z
         );
 
+        // --- INITIAL POSITION CLAMPING ---
+        if (boundaryCollider != null)
+        {
+            Bounds mapBounds = boundaryCollider.bounds;
+            targetPosition.x = Mathf.Clamp(targetPosition.x, mapBounds.min.x, mapBounds.max.x);
+            targetPosition.z = Mathf.Clamp(targetPosition.z, mapBounds.min.z, mapBounds.max.z);
+        }
+        // --- END CLAMPING ---
+
         transform.position = targetPosition;
     }
 
     void LateUpdate()
     {
-        if (players.Count == 0) return;
+        if (players.Count == 0 || cam == null) return;
 
         Bounds bounds = GetPlayerBounds();
         float targetHeight = CalculateRequiredHeight(bounds);
 
-        Vector3 targetPosition = new Vector3(
-            bounds.center.x,
+        Vector3 desiredPosition = new Vector3(
+            bounds.center.x + horizontalOffset,
             targetHeight + verticalOffset,
             bounds.center.z + horizontalOffset
         );
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position,
-            targetPosition,
-            ref velocity,
+        if (boundaryCollider != null)
+        {
+            Bounds mapBounds = boundaryCollider.bounds;
+
+            desiredPosition.x = Mathf.Clamp(
+                desiredPosition.x,
+                mapBounds.min.x,
+                mapBounds.max.x
+            );
+
+            desiredPosition.z = Mathf.Clamp(
+                desiredPosition.z,
+                mapBounds.min.z,
+                mapBounds.max.z
+            );
+        }
+
+
+        float dampedX = Mathf.SmoothDamp(
+            transform.position.x,
+            desiredPosition.x,
+            ref velocity.x,
             smoothTime
         );
 
+        float dampedZ = Mathf.SmoothDamp(
+            transform.position.z,
+            desiredPosition.z,
+            ref velocity.z,
+            smoothTime
+        );
+
+        float dampedY = Mathf.SmoothDamp(
+            transform.position.y,
+            desiredPosition.y,
+            ref currentHeightVelocity,
+            smoothTime
+        );
+
+        //apply clamped position
         transform.position = new Vector3(
-            transform.position.x,
-            Mathf.SmoothDamp(transform.position.y, targetHeight + verticalOffset, ref currentHeightVelocity, smoothTime),
-            transform.position.z
+            dampedX,
+            dampedY,
+            dampedZ
         );
     }
 
@@ -117,6 +164,8 @@ public class DynamicCameraFollow : MonoBehaviour
 
     private float CalculateRequiredHeight(Bounds bounds)
     {
+        if (cam == null) return minHeight;
+
         float requiredWidth = bounds.extents.x * 2f + padding;
         float requiredDepth = bounds.extents.z * 2f + padding;
 
@@ -134,7 +183,8 @@ public class DynamicCameraFollow : MonoBehaviour
 
     public void RemovePlayer(Transform playerTransform)
     {
-        if (players.Contains(playerTransform)){
+        if (players.Contains(playerTransform))
+        {
 
             players.Remove(playerTransform);
         }

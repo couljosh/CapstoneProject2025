@@ -3,48 +3,40 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public bool start = false;
     public AnimationCurve curve;
-    public float duration;
+    public float duration = 1f;
+
 
     public ParticleSystem caveinVFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        caveinVFX.enableEmission = false;
-    }
+            caveinVFX.enableEmission = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-       if (start)
-       {
-            //start = false;
-           // StartCoroutine(Shaking());
-        }
+        //camera starts at 0,0,0 relative to parent
+        transform.localPosition = Vector3.zero;
     }
 
     public void CallShake()
     {
+        StopAllCoroutines();
         StartCoroutine(Shaking());
     }
 
-
-
     public IEnumerator Shaking()
     {
-
-        Vector3 startPosition = transform.position;
+        Vector3 startPositionLocal = Vector3.zero;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
             float strength = curve.Evaluate(elapsedTime / duration);
-            transform.position = startPosition + Random.insideUnitSphere * strength;
+            transform.localPosition = startPositionLocal + Random.insideUnitSphere * strength;
             yield return null;
         }
-        transform.position = startPosition;
+
+        transform.localPosition = startPositionLocal;
     }
 }

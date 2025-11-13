@@ -9,6 +9,7 @@ public class RepoMoveSystem : MonoBehaviour
     public GameObject[] repoSpawnNodes;
     public GameObject currentLoc;
     private TerrainBlast terrainBlastScript;
+    public DynamicCameraFollow dynamicCamera; //dynamic camera script ref for adding and removing repo from it
 
     [Header("Repository Customization")]
     public float activeDuration;
@@ -42,6 +43,8 @@ public class RepoMoveSystem : MonoBehaviour
 
     void Start()
     {
+        //dynamicCamera = Camera.main.GetComponent<DynamicCameraFollow>();
+
         // SYSTEM SETUP //---------------------------------------------------------------------------------------
         //Find All Nodes
         repoSpawnNodes = GameObject.FindGameObjectsWithTag("RepoSpawn");
@@ -126,6 +129,9 @@ public class RepoMoveSystem : MonoBehaviour
 
 
         }
+
+        //add as transform for dynamic camera
+        dynamicCamera.AddPlayer(repository.transform);
     }
 
 
@@ -152,6 +158,9 @@ public class RepoMoveSystem : MonoBehaviour
             depositComplete = false;
             StartCoroutine(DelayedSwitch());
         }
+
+        //Remove transform from dynamic camera
+        dynamicCamera.players.Remove(repository.transform);
     }
 
     // Delay //-------------------------------------------------------------------------------------------------------
