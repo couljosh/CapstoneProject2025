@@ -51,14 +51,20 @@ public class SceneChange : MonoBehaviour
     {
 
         //Show the score for both teams
-        redScore.text = redRoundTotal.ToString();
-        blueScore.text = blueRoundTotal.ToString();
+        if(redScore && blueScore != null)
+        {
+            redScore.text = redRoundTotal.ToString();
+            blueScore.text = blueRoundTotal.ToString();
+        }
+        
 
         //Timer Counts down
         roundTime -= Time.deltaTime;
 
         int min = Mathf.FloorToInt(roundTime / 60);
         int sec = Mathf.FloorToInt(roundTime % 60);
+
+        if(timerText != null)
         timerText.text = string.Format("{0:00}:{1:00}", min,sec);
 
         if(roundTime <= 20)
