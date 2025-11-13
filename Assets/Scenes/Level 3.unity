@@ -40260,12 +40260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  smoothTime: 0.5
-  minHeight: 15
+  smoothTime: 1
+  minHeight: 20
   maxHeight: 40
-  padding: 5
+  padding: 0
   verticalOffset: 0
-  horizontalOffset: -3
+  horizontalOffset: -5
   boundaryCollider: {fileID: 442179373}
 --- !u!1001 &1408987890
 PrefabInstance:
