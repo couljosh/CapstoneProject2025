@@ -30,6 +30,7 @@ public class CavePocket : MonoBehaviour
         if(!isFinishedClearing)
         {
             ClearTerrain();
+            
         }
 
     }
@@ -73,6 +74,9 @@ public class CavePocket : MonoBehaviour
         foreach (Collider collider in piecesToDestroy)
         {
             Destroy(collider.gameObject);
+
         }
+        Destroy(gameObject);
+
     }
 }

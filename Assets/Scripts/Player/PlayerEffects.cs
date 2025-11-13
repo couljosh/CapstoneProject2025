@@ -31,9 +31,9 @@ public class PlayerEffects : MonoBehaviour
         copperAnimator.SetBool("isRunning", false);
         copperAnimator.SetBool("isCharging", false);
         //disable particle system
-        chargeableKick.enableEmission = false;
-        chargeableKick.startSize = 0.5f;
-        chargeableKick.startSpeed = -9;
+        //chargeableKick.enableEmission = false;
+        //chargeableKick.startSize = 0.5f;
+        //chargeableKick.startSpeed = -9;
 
     }
     public void KickEffects(float currentRatio)
@@ -61,18 +61,18 @@ public class PlayerEffects : MonoBehaviour
 
         if (playerMove.chargingKick && chargingMaxKick == false)
         {
-            chargeableKick.enableEmission = true;
-            chargeableKick.startSize = 0.5f;
-            chargeableKick.startSpeed = -9;
+            //chargeableKick.enableEmission = true;
+            //chargeableKick.startSize = 0.5f;
+            //chargeableKick.startSpeed = -9;
         }
         else if (chargingMaxKick == false)
         {
-            chargeableKick.enableEmission = false;
+            //chargeableKick.enableEmission = false;
         }
         else
         {
-            chargeableKick.startSize = 2f;
-            chargeableKick.startSpeed = -18;
+            //chargeableKick.startSize = 2f;
+            //chargeableKick.startSpeed = -18;
         }
 
         //LIGHT FLASH AT FULL CHARGE

@@ -143,7 +143,7 @@ public class CaveInManager : MonoBehaviour
     public IEnumerator terrainChunkSpawn(Vector3 pos)
     {
         int gemSpawnAmt = 0;
-
+        print("calling chunk spawn");
         //find the origin
         Vector3Int tilePos = terrainTileMap.WorldToCell(pos);
 

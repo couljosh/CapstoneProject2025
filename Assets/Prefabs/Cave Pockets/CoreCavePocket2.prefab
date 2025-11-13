@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRadius: 1
   maxRadius: 2
-  timeToScan: 111
+  timeToScan: 0
   elapsedTime: 0
   terrainMask:
     serializedVersion: 2

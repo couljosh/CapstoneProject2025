@@ -7,7 +7,6 @@ using Unity.VisualScripting;
 
 public class SceneChange : MonoBehaviour
 {
-    //public int sceneNumber;
 
     [Header("Round Customization")]
     public float roundTime;
@@ -17,30 +16,17 @@ public class SceneChange : MonoBehaviour
     public int blueRoundTotal;
 
     [Header("Stored References")]
-    public GameObject redRepository;
-    public GameObject blueRepository;
-    public Scene scene;
 
     [Header("UI References")]
-    public GameObject teamOneWinText;
-    public GameObject teamTwoWinText;
     public TextMeshProUGUI redScore;
     public TextMeshProUGUI blueScore;
 
-    public GameObject drawText;
-    public GameObject tint;
     public TextMeshProUGUI timerText;
-
     public bool pointsAdded;
-
 
 
     void Start()
     {
-        teamOneWinText.SetActive(false);
-        teamTwoWinText.SetActive(false);
-        drawText.SetActive(false);
-        tint.SetActive(false);
 
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
