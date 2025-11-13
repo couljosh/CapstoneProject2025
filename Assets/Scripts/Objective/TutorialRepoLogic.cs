@@ -9,7 +9,7 @@ using UnityEngine.TerrainUtils;
 using UnityEngine.UI;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
-public class RepositoryLogic : MonoBehaviour
+public class TutorialRepoLogic : MonoBehaviour
 {
     [Header("Script References")]
     public SceneChange score;
@@ -33,6 +33,10 @@ public class RepositoryLogic : MonoBehaviour
     public List<GameObject> largeGemsInRadius = new List<GameObject>();
     public int largeGemValue;
     public DynamicCamera dynamicCamera;
+
+    //FOR TUTORIAL
+    private GameObject SceneManager;
+    private int playerNum;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -67,6 +71,13 @@ public class RepositoryLogic : MonoBehaviour
     FMOD.Studio.PLAYBACK_STATE playBackState;
 
 
+    /*
+     * DISCLAIMER!!!!!!!!!!!!
+     * this code is ass.
+     * 
+     */
+
+
     void Start()
     {
         dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
@@ -74,7 +85,9 @@ public class RepositoryLogic : MonoBehaviour
         repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
 
-        timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
+        SceneManager = GameObject.Find("SceneManager");
+
+        //timerProgress.fillAmount = repoMoveSystemScript.activeDuration;
 
         //Start with default repository settings
         progressBar.fillAmount = 0;
@@ -97,13 +110,18 @@ public class RepositoryLogic : MonoBehaviour
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
         
-        if(active)
-        timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
+        //if(active)
+        //timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
+        timerProgress.fillAmount = 0;
 
         instance.getPlaybackState(out playBackState);
 
         if (allEnteredPlayers.Count > 0)
+        {
             depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
+            playerNum = allEnteredPlayers[0].GetComponent<PlayerMove>().playerNum;
+        }
+            
 
 
         // EMPTY //--------------------------------------------------------------------------------------------------
@@ -274,6 +292,9 @@ public class RepositoryLogic : MonoBehaviour
         depositParticles.Clear();
         depositParticles.Play();
 
+        //FOR TUTORIAL
+        SceneManager.GetComponent<TutorialReadyManager>().ReadyUp(playerNum);
+
 
         //Add Red Score
         if (teamOneCanDepo)
@@ -301,7 +322,7 @@ public class RepositoryLogic : MonoBehaviour
         }
         largeGemsInRadius.Clear();
 
-        repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
+        //repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
