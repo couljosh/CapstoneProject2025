@@ -45472,19 +45472,19 @@ MonoBehaviour:
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
-  terrainTileMap: {fileID: 0}
-  terrainTile: {fileID: 0}
+  terrainTileMap: {fileID: 1179670999}
+  terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
   check: {fileID: 0}
-  chancePerSecond: 8
+  chancePerSecond: 12
   radius: 4
-  minTimeBetweenCaveIn: 20
-  terrainChunksToSpawn: 8
-  minCaveInTileRadius: 0
-  maxCaveInTileRadius: 0
-  chanceDecreasePerTileOutwards: 0
-  chanceToSpawnGemPerTile: 0
+  minTimeBetweenCaveIn: 17
+  terrainChunksToSpawn: 20
+  minCaveInTileRadius: 4
+  maxCaveInTileRadius: 6
+  chanceDecreasePerTileOutwards: 5
+  chanceToSpawnGemPerTile: 3
   gemVeritcalOffest: -2
-  gemSpawnLimit: 0
+  gemSpawnLimit: 2
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0
