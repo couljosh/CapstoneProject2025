@@ -412,7 +412,7 @@ public class TutorialRepoLogic : MonoBehaviour
 
     void ClearStartingArea()
     {
-        Instantiate(startingPocket, transform.position, Quaternion.identity);
+        //Instantiate(startingPocket, transform.position, Quaternion.identity);
 
     }
 
