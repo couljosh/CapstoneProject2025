@@ -693,9 +693,9 @@ MonoBehaviour:
   loweringElapsedTime: 0
   raiseDuration: 2
   raiseOffset: 3
-  minOffDelay: 3
-  maxOffDelay: 6
-  delayBeforeFirstActive: 0
+  minOffDelay: 6
+  maxOffDelay: 9
+  delayBeforeFirstActive: 15
   elaspedTime: 0
   isRaising: 0
   isLowering: 0

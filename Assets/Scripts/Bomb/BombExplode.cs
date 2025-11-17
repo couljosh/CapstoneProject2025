@@ -55,7 +55,6 @@ public class BombExplode : MonoBehaviour
 
         if(deleteTimer > 10) //destroy if alive for way too long
         {
-            print("Deleted bomb that was too old");
             Destroy(gameObject);
         }
 

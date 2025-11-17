@@ -24,7 +24,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject copperModel;
     public GameObject impactSphere;
     public List<GameObject> collectedGems = new List<GameObject>();
-    private DynamicCameraFollow dynamicCamera;
+     DynamicCameraFollow dynamicCamera;
 
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
@@ -47,7 +47,7 @@ public class PlayerDeath : MonoBehaviour
 
         playerGamepad = (Gamepad)playerInput.devices[0];
 
-        dynamicCamera = Camera.main.GetComponent<DynamicCameraFollow>();
+        dynamicCamera = Camera.main.GetComponentInParent<DynamicCameraFollow>();
     }
 
 
@@ -135,12 +135,13 @@ public class PlayerDeath : MonoBehaviour
     void DisablePlayer()
     {
         isPlayerDead = true;
-        //dynamicCamera.RemovePlayer(transform);
         playerMesh.enabled = false;
         copperModel.SetActive(false);
         //playerCollider.enabled = false;
 
         playerLight.gameObject.SetActive(false);
+
+        dynamicCamera.RemovePlayer(transform);
     }
 
 
@@ -151,7 +152,7 @@ public class PlayerDeath : MonoBehaviour
             gems.GetComponent<Collider>().enabled = true;
             gems.transform.position = transform.position;
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
-            Debug.Log(gems.transform.rotation);
+            //Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
             gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * playerStats.scatterForce);
         }
@@ -167,7 +168,7 @@ public class PlayerDeath : MonoBehaviour
         gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
 
         //add player back
-        //dynamicCamera.AddPlayer(transform);
+        dynamicCamera.AddPlayer(transform);
         isPlayerDead = false;
 
         playerMesh.enabled = true;
