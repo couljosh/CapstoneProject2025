@@ -2,7 +2,6 @@ using System.Collections;
 using Unity.Mathematics.Geometry;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
@@ -74,7 +73,7 @@ public class CaveInManager : MonoBehaviour
                 timeSinceLastCaveIn = 0;
                 StartCoroutine(ChooseLocations());
 
-                cameraShake.caveinVFX.emission.enabled = true;
+                emission.enabled = true;
                 cameraShake.CallShake();
 
                 //cameraShake.caveinVFX.enableEmission = true;
@@ -135,7 +134,7 @@ public class CaveInManager : MonoBehaviour
         yield return new WaitForSeconds(warningTime);
 
         int gemSpawnAmt = 0;
-        print("calling chunk spawn");
+        //print("calling chunk spawn");
         //find the origin
         Vector3Int tilePos = terrainTileMap.WorldToCell(pos);
 
