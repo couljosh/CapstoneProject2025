@@ -16,6 +16,8 @@ public class RepositoryLogic : MonoBehaviour
     public PlayerDeath depositor;
     public RepoMoveSystem repoMoveSystemScript;
     public Outline outlineScript;
+    public DynamicCamera dynamicCamera;
+    public DepositScoreDisplay scoreDisplay;
 
     [Header("UI References")]
     public Image progressBar;
@@ -32,7 +34,6 @@ public class RepositoryLogic : MonoBehaviour
     public SphereCollider depositRadius;
     public List<GameObject> largeGemsInRadius = new List<GameObject>();
     public int largeGemValue;
-    public DynamicCamera dynamicCamera;
 
     [Header("Deposit/Activity Checks")]
     public bool isIncrease;
@@ -84,6 +85,9 @@ public class RepositoryLogic : MonoBehaviour
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
 
+        //Deposit Display Reference
+        scoreDisplay = GetComponent<DepositScoreDisplay>();
+
         depositParticles.enableEmission = false;
     }
 
@@ -96,9 +100,9 @@ public class RepositoryLogic : MonoBehaviour
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;
-        
-        if(active)
-        timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
+
+        if (active)
+            timerProgress.fillAmount -= 1f / repoMoveSystemScript.activeDuration * Time.deltaTime;
 
         instance.getPlaybackState(out playBackState);
 
@@ -268,23 +272,32 @@ public class RepositoryLogic : MonoBehaviour
 
     public void CompleteDeposit()
     {
+        int depositScore = depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+
         depositProgress = 0;
 
         depositParticles.enableEmission = true;
         depositParticles.Clear();
         depositParticles.Play();
 
+        // Capture the Z position just before the repo might move/lower.
+        float currentRepoWorldZ = transform.position.z;
+
 
         //Add Red Score
         if (teamOneCanDepo)
         {
             score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            // PASS THE CURRENT WORLD Z POSITION
+            scoreDisplay.ShowScore(depositScore, redTeamColor, currentRepoWorldZ);
         }
 
         //Add Blue Score
         if (teamTwoCanDepo)
         {
             score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            // PASS THE CURRENT WORLD Z POSITION
+            scoreDisplay.ShowScore(depositScore, blueTeamColor, currentRepoWorldZ);
         }
 
         //Clear Inventory & Empty 
@@ -391,7 +404,7 @@ public class RepositoryLogic : MonoBehaviour
 
     void ClearStartingArea()
     {
-       // Instantiate(startingPocket, transform.position, Quaternion.identity);
+        // Instantiate(startingPocket, transform.position, Quaternion.identity);
 
     }
 
@@ -422,7 +435,7 @@ public class RepositoryLogic : MonoBehaviour
                     largeGemsInRadius.Add(detectedGem.gameObject.transform.parent.gameObject);
                     detectedGem.gameObject.GetComponentInParent<LargeGem>().isInDepositRadius = true;
                 }
-                    
+
 
             }
         }
