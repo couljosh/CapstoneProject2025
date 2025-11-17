@@ -1047,7 +1047,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   duration: 3.5
-  caveinVFX: {fileID: 0}
+  caveinVFX: {fileID: 1170122686}
 --- !u!1 &385141710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1716,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00762fa53812765498a5214f78edc241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &623210090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623210093}
+  - component: {fileID: 623210092}
+  - component: {fileID: 623210091}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &623210091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623210090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &623210092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623210090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &623210093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623210090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633275272
 GameObject:
   m_ObjectHideFlags: 0
@@ -12035,6 +12114,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3112984646558440795, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12702,6 +12785,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1170122686 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3112984646558440795, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+  m_PrefabInstance: {fileID: 769022403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1179670996
 GameObject:
   m_ObjectHideFlags: 0
@@ -44734,23 +44822,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 633275272}
   canvas: {fileID: 1442622622}
-  notificationPrefab: {fileID: 2498503887632607413, guid: 448a547ed29c52e418e38df33442f604, type: 3}
+  notificationPrefab: {fileID: 6935669812289168828, guid: 20905073e53a41b4a8842add8ec60916, type: 3}
   gemGenerationScript: {fileID: 964463807}
+  cameraShake: {fileID: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
   terrainTileMap: {fileID: 1179670999}
   terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
-  check: {fileID: 0}
+  warningTime: 3
   chancePerSecond: 12
   radius: 4
   minTimeBetweenCaveIn: 17
-  terrainChunksToSpawn: 20
-  minCaveInTileRadius: 4
-  maxCaveInTileRadius: 6
+  terrainChunksToSpawn: 5
+  minCaveInTileRadius: 8
+  maxCaveInTileRadius: 10
   chanceDecreasePerTileOutwards: 5
   chanceToSpawnGemPerTile: 3
-  gemVeritcalOffest: -2
+  gemVeritcalOffset: 0
   gemSpawnLimit: 2
 --- !u!4 &1670730268
 Transform:
@@ -45866,3 +45955,4 @@ SceneRoots:
   - {fileID: 894288544}
   - {fileID: 1032049573}
   - {fileID: 1190575248}
+  - {fileID: 623210093}

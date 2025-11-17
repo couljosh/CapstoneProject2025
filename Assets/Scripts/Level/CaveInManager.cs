@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.Mathematics.Geometry;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
@@ -14,6 +15,7 @@ public class CaveInManager : MonoBehaviour
     public GameObject canvas;
     public GameObject notificationPrefab;
     public GemGeneration gemGenerationScript;
+    public CameraShake cameraShake;
     public LayerMask terrainMask;
     public Tilemap terrainTileMap;
     public RuleTile terrainTile;
@@ -38,6 +40,8 @@ public class CaveInManager : MonoBehaviour
     public int gemVeritcalOffset;
     public int gemSpawnLimit;
 
+
+
     private ReadOnlyArray<Gamepad> gamepadArray;
 
 
@@ -45,6 +49,8 @@ public class CaveInManager : MonoBehaviour
         private void Start()
         {
            gamepadArray = Gamepad.all;
+           cameraShake = Camera.main.GetComponent<CameraShake>();
+
         }
 
     void Update()
@@ -63,10 +69,12 @@ public class CaveInManager : MonoBehaviour
             {
                 //GameObject.Instantiate(notificationPrefab, canvas.transform);
 
+                var emission = cameraShake.caveinVFX.emission;
+
                 timeSinceLastCaveIn = 0;
                 StartCoroutine(ChooseLocations());
 
-                CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+                emission.enabled = true;
                 cameraShake.CallShake();
 
                 //cameraShake.caveinVFX.enableEmission = true;

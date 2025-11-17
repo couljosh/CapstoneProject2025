@@ -17,4 +17,5 @@ public class TextNotification : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

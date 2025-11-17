@@ -12,7 +12,9 @@ public class CameraShake : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-            caveinVFX.enableEmission = false;
+
+        var emission = caveinVFX.emission;
+        emission.enabled = false;
 
         //camera starts at 0,0,0 relative to parent
         transform.localPosition = Vector3.zero;
