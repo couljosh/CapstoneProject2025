@@ -910,13 +910,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66854644, y: -0.0005834372, z: 0.0006489971, w: 0.7436699}
+  m_LocalRotation: {x: 0.6685467, y: 0, z: 0, w: 0.74367017}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1353471515}
-  m_LocalEulerAnglesHint: {x: 83.91, y: 0, z: 0.1}
+  m_LocalEulerAnglesHint: {x: 83.91, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15503,23 +15503,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 633275272}
   canvas: {fileID: 1377524169}
-  notificationPrefab: {fileID: 2498503887632607413, guid: 448a547ed29c52e418e38df33442f604, type: 3}
+  notificationPrefab: {fileID: 6935669812289168828, guid: 20905073e53a41b4a8842add8ec60916, type: 3}
   gemGenerationScript: {fileID: 964463807}
+  cameraShake: {fileID: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
   terrainTileMap: {fileID: 1960841326}
   terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
-  check: {fileID: 0}
+  warningTime: 3
   chancePerSecond: 12
   radius: 4
   minTimeBetweenCaveIn: 17
-  terrainChunksToSpawn: 20
-  minCaveInTileRadius: 4
-  maxCaveInTileRadius: 6
+  terrainChunksToSpawn: 5
+  minCaveInTileRadius: 8
+  maxCaveInTileRadius: 10
   chanceDecreasePerTileOutwards: 5
   chanceToSpawnGemPerTile: 3
-  gemVeritcalOffest: -2
+  gemVeritcalOffset: 0
   gemSpawnLimit: 2
 --- !u!4 &1670730268
 Transform:
@@ -15930,7 +15931,7 @@ PrefabInstance:
       objectReference: {fileID: 1948333217}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketHalfAmt
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketSpawnAmt

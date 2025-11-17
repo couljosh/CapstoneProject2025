@@ -74,7 +74,7 @@ public class CaveInManager : MonoBehaviour
                 timeSinceLastCaveIn = 0;
                 StartCoroutine(ChooseLocations());
 
-                emission.enabled = true;
+                cameraShake.caveinVFX.emission.enabled = true;
                 cameraShake.CallShake();
 
                 //cameraShake.caveinVFX.enableEmission = true;

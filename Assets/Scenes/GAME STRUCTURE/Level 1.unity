@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 4.46
+  m_AmbientIntensity: 6.11
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.3962264, g: 0.13269848, b: 0.13825868, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 07ae6735d2333cb43a01af9281c8cd30, type: 2}
@@ -1055,13 +1055,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.64857835, y: -0.0024019456, z: 0.002907051, w: 0.7611386}
+  m_LocalRotation: {x: 0.64858496, y: 0, z: 0, w: 0.76114225}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1888523393}
-  m_LocalEulerAnglesHint: {x: 80.87, y: 0.041, z: 0.473}
+  m_LocalEulerAnglesHint: {x: 80.87, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,7 +1600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11966,7 +11966,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12546,7 +12546,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16474,7 +16474,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16879,23 +16879,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 633275272}
   canvas: {fileID: 195050564}
-  notificationPrefab: {fileID: 2498503887632607413, guid: 448a547ed29c52e418e38df33442f604, type: 3}
+  notificationPrefab: {fileID: 6935669812289168828, guid: 20905073e53a41b4a8842add8ec60916, type: 3}
   gemGenerationScript: {fileID: 964463807}
+  cameraShake: {fileID: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
   terrainTileMap: {fileID: 2104523973}
   terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
-  check: {fileID: 0}
+  warningTime: 3
   chancePerSecond: 12
   radius: 4
   minTimeBetweenCaveIn: 17
-  terrainChunksToSpawn: 20
-  minCaveInTileRadius: 4
-  maxCaveInTileRadius: 6
+  terrainChunksToSpawn: 5
+  minCaveInTileRadius: 8
+  maxCaveInTileRadius: 10
   chanceDecreasePerTileOutwards: 5
   chanceToSpawnGemPerTile: 3
-  gemVeritcalOffest: -2
+  gemVeritcalOffset: 0
   gemSpawnLimit: 2
 --- !u!4 &1670730268
 Transform:
@@ -17206,7 +17207,7 @@ PrefabInstance:
       objectReference: {fileID: 1948333217}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketHalfAmt
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketSpawnAmt

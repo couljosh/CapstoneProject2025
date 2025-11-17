@@ -641,7 +641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12032,7 +12032,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12555,7 +12555,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45022,7 +45022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdf95f30c42b2054092f09279d4d7647, type: 2}
+  - {fileID: 2100000, guid: c98b299ee6f7e314e87aae69ed445495, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45191,7 +45191,7 @@ PrefabInstance:
       objectReference: {fileID: 1948333217}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketHalfAmt
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketSpawnAmt
