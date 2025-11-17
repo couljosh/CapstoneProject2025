@@ -18,7 +18,9 @@ public class CaveInManager : MonoBehaviour
     public Tilemap terrainTileMap;
     public RuleTile terrainTile;
 
-    public GameObject check;
+
+    public float warningTime;
+
 
     [Header("Cave-In Customization")]
     public float chancePerSecond;
@@ -33,7 +35,7 @@ public class CaveInManager : MonoBehaviour
     public float chanceDecreasePerTileOutwards;
     public float chanceToSpawnGemPerTile;
 
-    public float gemVeritcalOffest;
+    public int gemVeritcalOffset;
     public int gemSpawnLimit;
 
     private ReadOnlyArray<Gamepad> gamepadArray;
@@ -59,14 +61,15 @@ public class CaveInManager : MonoBehaviour
             //Trigger Cave-In Sequence & Notification
             if (randomNum < chancePerSecond && timeSinceLastCaveIn > minTimeBetweenCaveIn)
             {
-                GameObject.Instantiate(notificationPrefab, canvas.transform);
+                //GameObject.Instantiate(notificationPrefab, canvas.transform);
+
                 timeSinceLastCaveIn = 0;
-                StartCoroutine(spawnTerrain());
+                StartCoroutine(ChooseLocations());
 
                 CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
                 cameraShake.CallShake();
 
-                cameraShake.caveinVFX.enableEmission = true;
+                //cameraShake.caveinVFX.enableEmission = true;
                 cameraShake.caveinVFX.Clear();
                 cameraShake.caveinVFX.Play();
 
@@ -78,7 +81,7 @@ public class CaveInManager : MonoBehaviour
     }
 
     // Cave-In Sequence 
-    public IEnumerator spawnTerrain()
+    public IEnumerator ChooseLocations()
     {
         CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
         cameraShake.CallShake();
@@ -92,8 +95,6 @@ public class CaveInManager : MonoBehaviour
             }
             gamepad.SetMotorSpeeds(0.1f, 0.1f);
         }    
-
-        yield return new WaitForSeconds(3);
 
         foreach (var gamepad in gamepadArray)
         {
@@ -111,37 +112,20 @@ public class CaveInManager : MonoBehaviour
             var px = Random.Range(bounds.min.x, bounds.max.x);
             var py = Random.Range(bounds.min.y, bounds.max.y);
             var pz = Random.Range(bounds.min.z, bounds.max.z);
-            Vector3 pos = new Vector3(px, py + gemVeritcalOffest, pz);
-            
+            Vector3 pos = new Vector3(px, py, pz);
 
-            //OLD
-            //Collider[] hitblocks = Physics.OverlapSphere(pos, radius, terrainMask);
 
-            //NEW
-            //start at pos, cast increasingly outwards
+            GameObject.Instantiate(notificationPrefab, pos, Quaternion.identity);
+
             StartCoroutine(terrainChunkSpawn(pos));
-            //Instantiate(check, pos, Quaternion.identity);
-            //foreach(Collider col in hitblocks)
-            //{     
-
-            //    if (col.gameObject.GetComponent<MeshRenderer>().enabled == false) //if the box is invisible
-            //    {
-            //        col.gameObject.GetComponent<BlockDestroy>().enableCube();
-            //    }                 
-            //}
-
-            //for(int y = 0; y <= gemSpawnAmt; y++)
-            //{
-            //    int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-            //    int randPiece = Random.Range(0, hitblocks.Length -1);
-            //    Instantiate(gemGenerationScript.clusterPrefabs[randIndex], hitblocks[randPiece].transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
-
-            //}
+            yield return null;
         }
     }
 
     public IEnumerator terrainChunkSpawn(Vector3 pos)
     {
+        yield return new WaitForSeconds(warningTime);
+
         int gemSpawnAmt = 0;
         print("calling chunk spawn");
         //find the origin
@@ -177,7 +161,7 @@ public class CaveInManager : MonoBehaviour
                     if(gemSpawnRand <= chanceToSpawnGemPerTile && gemSpawnAmt <= gemSpawnLimit)
                     {
                         int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-                        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], terrainTileMap.CellToWorld(new Vector3Int (tilePos.x + x, tilePos.y + y)), Quaternion.Euler(0, Random.Range(0, 360), 0));
+                        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], terrainTileMap.CellToWorld(new Vector3Int (tilePos.x + x, tilePos.y + y + gemVeritcalOffset )), Quaternion.Euler(0, Random.Range(0, 360), 0));
                         gemSpawnAmt++;
                     }
 
