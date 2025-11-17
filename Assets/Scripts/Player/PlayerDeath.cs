@@ -20,7 +20,6 @@ public class PlayerDeath : MonoBehaviour
 
     public Collider playerCollider;
     public Light playerLight;
-    public GameObject bombText;
     private GameObject deathPos;
     public GameObject copperModel;
     public GameObject impactSphere;
@@ -142,7 +141,6 @@ public class PlayerDeath : MonoBehaviour
         //playerCollider.enabled = false;
 
         playerLight.gameObject.SetActive(false);
-        bombText.SetActive(false);
     }
 
 
@@ -177,7 +175,6 @@ public class PlayerDeath : MonoBehaviour
         //playerCollider.enabled = true;
 
         playerLight.gameObject.SetActive(true);
-        bombText.SetActive(true);
 
         isInvincible = true;
         invincibleTimer = 0;

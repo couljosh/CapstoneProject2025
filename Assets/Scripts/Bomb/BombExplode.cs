@@ -33,7 +33,6 @@ public class BombExplode : MonoBehaviour
     public float sphereIncrease;
     private bool isFinishedClearing = true;
     public float timeToScan;
-    private bool readyToDie = false;
     private float deleteTimer = 0;
 
     public GameObject bombModel; 
@@ -186,11 +185,6 @@ public class BombExplode : MonoBehaviour
         foreach (Collider collider in piecesToDestroy)
         {
             Destroy(collider.gameObject);
-        }
-
-        if(y >= sphereIterations)
-        {
-            readyToDie = true; 
         }
     }
 

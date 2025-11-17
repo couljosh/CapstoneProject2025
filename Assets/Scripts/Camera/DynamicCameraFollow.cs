@@ -41,7 +41,7 @@ public class DynamicCameraFollow : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"{playerName} not found in scene.");
+               // Debug.LogWarning($"{playerName} not found in scene.");
             }
         }
 

@@ -97,7 +97,7 @@ public class TutorialRepoLogic : MonoBehaviour
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
 
-        depositParticles.enableEmission = false;
+        //depositParticles.enableEmission = false;
     }
 
 
@@ -288,7 +288,7 @@ public class TutorialRepoLogic : MonoBehaviour
     {
         depositProgress = 0;
 
-        depositParticles.enableEmission = true;
+        //depositParticles.enableEmission = true;
         depositParticles.Clear();
         depositParticles.Play();
 

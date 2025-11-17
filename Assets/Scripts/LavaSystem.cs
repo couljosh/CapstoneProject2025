@@ -11,7 +11,7 @@ public class LavaSystem : MonoBehaviour
     private float elapsedTime;
     private Vector3 newLavaLocation;
     private Vector3 startingLavaLocation;
-    private bool doneMoving = false;
+    //private bool doneMoving = false;
     private bool goingUp = true;
     private float timer;
 
@@ -77,10 +77,10 @@ public class LavaSystem : MonoBehaviour
     private void LavaMove(Vector3 startingLocation, Vector3 newLocation)
     {
         print(elapsedTime);
-        doneMoving = false;
+        //doneMoving = false;
         elapsedTime += Time.deltaTime;
         transform.position = Vector3.Lerp(startingLocation, newLocation, elapsedTime / lavaRisingDuration);
-        doneMoving = true;
+       // doneMoving = true;
     }
 
     //IEnumerator LavaRise()

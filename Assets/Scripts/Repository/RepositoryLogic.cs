@@ -88,7 +88,7 @@ public class RepositoryLogic : MonoBehaviour
         //Deposit Display Reference
         scoreDisplay = GetComponent<DepositScoreDisplay>();
 
-        depositParticles.enableEmission = false;
+        //depositParticles.enableEmission = false;
     }
 
 
@@ -276,7 +276,7 @@ public class RepositoryLogic : MonoBehaviour
 
         depositProgress = 0;
 
-        depositParticles.enableEmission = true;
+        //depositParticles.enableEmission = true;
         depositParticles.Clear();
         depositParticles.Play();
 
