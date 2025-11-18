@@ -157,6 +157,8 @@ MonoBehaviour:
   timerProgress: {fileID: 71311517182912555}
   repoLight: {fileID: 5869905127202112930}
   repoAlarm: {fileID: 5172792121739064073}
+  repoAlarmLight: {fileID: 3127452777636138010}
+  repoAlarmLightTwo: {fileID: 7347771092422031800}
   startingPocket: {fileID: 3832181741272855735, guid: 6e74cc43181038744b4e2e08999a93eb, type: 3}
   allEnteredPlayers: []
   depositRadius: {fileID: 0}
@@ -674,7 +676,7 @@ GameObject:
   - component: {fileID: 3127452777636138010}
   - component: {fileID: 3331791069992224959}
   m_Layer: 14
-  m_Name: Spot Light
+  m_Name: RepoLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,7 +797,7 @@ GameObject:
   - component: {fileID: 7347771092422031800}
   - component: {fileID: 1676166758729688484}
   m_Layer: 14
-  m_Name: Spot Light (2)
+  m_Name: RepoLight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

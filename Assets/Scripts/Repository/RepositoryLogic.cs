@@ -27,6 +27,8 @@ public class RepositoryLogic : MonoBehaviour
 
     [Header("Object References")]
     public GameObject repoAlarm;
+    public Light repoAlarmLight;
+    public Light repoAlarmLightTwo;
     public GameObject startingPocket;
     private List<GameObject> enteredPlayersTeam1 = new List<GameObject>();
     private List<GameObject> enteredPlayersTeam2 = new List<GameObject>();
@@ -94,8 +96,6 @@ public class RepositoryLogic : MonoBehaviour
 
     void Update()
     {
-        //print(timerProgress.fillAmount);
-
         ConditionCheck();
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
@@ -113,6 +113,7 @@ public class RepositoryLogic : MonoBehaviour
         // EMPTY //--------------------------------------------------------------------------------------------------
         if (isEmpty)
         {
+            SetLightValues(Color.red, 200);
             //Reduces Progress
             //if (depositProgress > 0)
             //{
@@ -127,10 +128,15 @@ public class RepositoryLogic : MonoBehaviour
             teamlastDepo = 0;
 
         }
+       
 
         // CONTESTED //----------------------------------------------------------------------------------------------
         if (isContested)
         {
+            repoAlarmLight.color = Color.yellow;
+            float flickAmt = Mathf.PingPong(Time.time * 1000, 500);
+            SetLightValues(Color.yellow, flickAmt);
+
 
         }
 
@@ -138,11 +144,15 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 1 DEPOSITING //--------------------------------------------------------------------------------------
         if (teamOneCanDepo)
         {
+
             //Increase progress until full
             depositProgress += Time.deltaTime;
 
             //Team 1 Signifiers Active
             progressBar.color = Color.red;
+            SetLightValues(Color.green, 200);
+
+
 
             //Complete Deposit Check
             if (depositProgress >= depositTime)
@@ -160,6 +170,9 @@ public class RepositoryLogic : MonoBehaviour
 
             //Team 2 Signifiers Active
             progressBar.color = Color.blue;
+            SetLightValues(Color.green, 200);
+
+
 
             //Complete Deposit Check
             if (depositProgress >= depositTime)
@@ -472,4 +485,15 @@ public class RepositoryLogic : MonoBehaviour
         else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Remove(player.gameObject);
     }
+
+    void SetLightValues(Color color, float intensity)
+    {
+      
+    repoAlarmLight.color = color;
+    repoAlarmLight.intensity = intensity;
+
+    repoAlarmLightTwo.color = color;
+    repoAlarmLightTwo.intensity = intensity;
+    }
 }
+
