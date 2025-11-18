@@ -14,6 +14,8 @@ public class LavaSystem : MonoBehaviour
     //private bool doneMoving = false;
     private bool goingUp = true;
     private float timer;
+    private bool laveSafe;
+    public float lavaSafeLength;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,61 +44,39 @@ public class LavaSystem : MonoBehaviour
             }
         }
         
-        if (elapsedTime / lavaRisingDuration > 1)
+        if (elapsedTime / lavaRisingDuration > 1) //Finished Rising
         {
             goingUp = !goingUp;
             elapsedTime = 0;
             timer = 0;
         }
-       
 
+       
 
 
 
     }
 
-    //IEnumerator LavaMove2(Vector3 startingLocation, Vector3 newLocation)
-    //{
-        
-    //    while (!doneMoving)
-    //    {
-    //        print(elapsedTime);
-    //        elapsedTime += Time.deltaTime;
-    //        transform.position = Vector3.Lerp(startingLocation, newLocation, elapsedTime / lavaRisingDuration);
-    //        if (elapsedTime / lavaRisingDuration >= 1)
-    //        {
-    //            doneMoving = true;
 
-    //        }
-
-    //        yield return null;
-    //    }
-    //}
 
 
     private void LavaMove(Vector3 startingLocation, Vector3 newLocation)
     {
-        print(elapsedTime);
+        
         //doneMoving = false;
         elapsedTime += Time.deltaTime;
         transform.position = Vector3.Lerp(startingLocation, newLocation, elapsedTime / lavaRisingDuration);
        // doneMoving = true;
     }
 
-    //IEnumerator LavaRise()
-    //{
-    //    yield return new WaitForSeconds(lavaLinger);
-    //    print("Rise");
-        
-    //    yield return LavaMove2(startingLavaLocation, newLavaLocation);
+    private void OnTriggerEnter(Collider other)
+    {
 
-    //    yield return new WaitForSeconds(lavaLinger);
-    //    print("Decend");
-    //    doneMoving = false;
-    //    elapsedTime = 0;
-    //    yield return LavaMove2(newLavaLocation, startingLavaLocation);
-
-
-    //}
+        if (other.gameObject.tag == "ObjectDestroyer") //&& elapsedTime / lavaRisingDuration > lavaSafeLength)
+        {
+            
+            other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
+        }
+    }
 
 }
