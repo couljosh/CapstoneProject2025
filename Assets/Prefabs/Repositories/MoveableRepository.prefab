@@ -149,7 +149,7 @@ MonoBehaviour:
   score: {fileID: 0}
   depositor: {fileID: 0}
   repoMoveSystemScript: {fileID: 0}
-  outlineScript: {fileID: 6533998643502780190}
+  outlineScript: {fileID: 1816171927735737029}
   dynamicCamera: {fileID: 0}
   scoreDisplay: {fileID: 0}
   progressBar: {fileID: 1498521636583002264}
@@ -565,10 +565,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 3.08
+  m_Radius: 0.74
+  m_Height: 3.8281593
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.00000003973643, y: 0.3740797, z: -0.00000007947286}
 --- !u!114 &6533998643502780190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310186908320328164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -1310,7 +1310,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 201fa666fcbb2b0488828c0ce654e54d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3232915540051553555}
+    - targetCorrespondingSourceObject: {fileID: -2596029929923366692, guid: 201fa666fcbb2b0488828c0ce654e54d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1816171927735737029}
   m_SourcePrefab: {fileID: 100100000, guid: 201fa666fcbb2b0488828c0ce654e54d, type: 3}
+--- !u!1 &2144203601414147909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2596029929923366692, guid: 201fa666fcbb2b0488828c0ce654e54d, type: 3}
+  m_PrefabInstance: {fileID: 5059989176569954201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1816171927735737029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144203601414147909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &4733855116052437106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 201fa666fcbb2b0488828c0ce654e54d, type: 3}
