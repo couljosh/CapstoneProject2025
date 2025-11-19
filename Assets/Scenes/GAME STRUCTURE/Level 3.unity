@@ -838,8 +838,6 @@ MonoBehaviour:
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 1353471516}
   activeDuration: 25
-  raisingElapsedTime: 0
-  loweringElapsedTime: 0
   raiseDuration: 2
   raiseOffset: 4
   minOffDelay: 6

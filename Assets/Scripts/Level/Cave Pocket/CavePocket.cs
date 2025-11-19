@@ -48,6 +48,7 @@ public class CavePocket : MonoBehaviour
         isFinishedClearing = true;
     }
 
+    // Casts OverlapSphere 
     public IEnumerator SphereTrigger(int y)
     {
         yield return new WaitForSeconds(timeToScan * y);

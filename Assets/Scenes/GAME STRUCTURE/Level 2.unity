@@ -689,8 +689,6 @@ MonoBehaviour:
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 466598816}
   activeDuration: 25
-  raisingElapsedTime: 0
-  loweringElapsedTime: 0
   raiseDuration: 2
   raiseOffset: 4
   minOffDelay: 6
@@ -47494,7 +47492,7 @@ PrefabInstance:
       objectReference: {fileID: 684753064}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 150
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText

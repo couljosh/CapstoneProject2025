@@ -13,8 +13,8 @@ public class RepoMoveSystem : MonoBehaviour
 
     [Header("Repository Customization")]
     public float activeDuration;
-    public float raisingElapsedTime;
-    public float loweringElapsedTime;
+    private float raisingElapsedTime;
+    private float loweringElapsedTime;
 
     //Movement
     public float raiseDuration;
