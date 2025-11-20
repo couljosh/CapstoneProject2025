@@ -2,6 +2,7 @@ using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -18,6 +19,7 @@ public class RepositoryLogic : MonoBehaviour
     public Outline outlineScript;
     public DynamicCamera dynamicCamera;
     public DepositScoreDisplay scoreDisplay;
+    public Animator repoAnimation;
 
     [Header("UI References")]
     public Image progressBar;
@@ -73,6 +75,10 @@ public class RepositoryLogic : MonoBehaviour
     void Start()
     {
         dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
+
+        repoAnimation = GetComponentInChildren<Animator>();
+        repoAnimation.SetBool("Appear", false);
+        repoAnimation.SetBool("Retract", false );
         //Script References
         repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
@@ -336,7 +342,7 @@ public class RepositoryLogic : MonoBehaviour
 
     public void DisableRepo()
     {
-
+        UnityEngine.Debug.Log("disable repo");
         outlineScript.enabled = false;
 
         teamOneCanDepo = false;

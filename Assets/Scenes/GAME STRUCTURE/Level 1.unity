@@ -16819,6 +16819,10 @@ PrefabInstance:
       propertyPath: lengthInSec
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3112984646558440795, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17001,7 +17005,7 @@ MonoBehaviour:
   canvas: {fileID: 195050564}
   notificationPrefab: {fileID: 6935669812289168828, guid: 20905073e53a41b4a8842add8ec60916, type: 3}
   gemGenerationScript: {fileID: 964463807}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 330585550}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128

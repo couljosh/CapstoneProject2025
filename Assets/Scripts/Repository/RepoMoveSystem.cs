@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class RepoMoveSystem : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class RepoMoveSystem : MonoBehaviour
     public bool isLowering;
     public bool isSwitching;
     public bool depositComplete = false;
+    private bool retractStarted = false;
 
 
 
@@ -67,13 +69,39 @@ public class RepoMoveSystem : MonoBehaviour
 
         if (elaspedTime > activeDuration)
         {
-            LowerRepo();
+            Animator anim = repository.GetComponent<RepositoryLogic>().repoAnimation;
+
+            if (!retractStarted) //check to make sure retract anim has not started
+            {
+                Debug.Log("retract starting");
+                retractStarted = true;
+                anim.SetBool("Appear", false); //retract animation play
+                anim.SetBool("Retract", true);
+                
+            }
+
+
+            AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); //access current progress of repo animation
+
+            if (info.IsName("Repo Dissapear") && info.normalizedTime >= 1f)
+            {
+                Debug.Log("lower repo activate");
+                isLowering = true;
+            }
+
         }
         else
         {
             loweringElapsedTime = 0;
             lowerLerpT = 0;
+            retractStarted = false; //reset for next animation.
+            isLowering = false;
+        }
 
+        //after calculations are complete, lower if needed
+        if (isLowering)
+        {
+            LowerRepo();
         }
 
         // Raise Check //---------------------------------------------------------------------------------------
@@ -108,6 +136,9 @@ public class RepoMoveSystem : MonoBehaviour
     // Raising & Activating //---------------------------------------------------------------------------------------
     void RaiseRepo()
     {
+        repository.GetComponent<RepositoryLogic>().repoAnimation.SetBool("Appear", true);
+        repository.GetComponent<RepositoryLogic>().repoAnimation.SetBool("Retract", false);
+
         raisedPos = currentLoc.transform.position + new Vector3(0, raiseOffset, 0);
         //Raise Location
 
@@ -122,6 +153,7 @@ public class RepoMoveSystem : MonoBehaviour
         }
         else
         {
+
             raisingElapsedTime = 0;
             isRaising = false;
             terrainBlastScript.isFinishedClearing = false;
@@ -132,6 +164,7 @@ public class RepoMoveSystem : MonoBehaviour
 
         //add as transform for dynamic camera
         dynamicCamera.AddPlayer(repository.transform);
+
     }
 
 
@@ -146,9 +179,9 @@ public class RepoMoveSystem : MonoBehaviour
         {
             loweringElapsedTime += Time.deltaTime;
 
-
+            
             lowerLerpT = loweringElapsedTime / raiseDuration;
-
+            //print(loweringElapsedTime);
             repository.transform.position = Vector3.Lerp(raisedPos, currentLoc.transform.position, lowerLerpT);
 
         }

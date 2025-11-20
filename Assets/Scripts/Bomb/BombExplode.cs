@@ -15,7 +15,9 @@ public class BombExplode : MonoBehaviour
     public float forceStrengthCart;
     public float forceStrengthBomb;
     public float forceStrengthLargeGem;
-    public GameObject explosionParticle; 
+    public GameObject explosionParticle;
+    public ParticleSystem fireParticles;
+    public ParticleSystem smokeParticles;
 
     [Header("Layers to Detect")]
     public LayerMask terrainMask;
@@ -42,6 +44,12 @@ public class BombExplode : MonoBehaviour
         StartCoroutine(Explosion());
 
         radius = sphereIterations * sphereIncrease;
+
+        var emission = fireParticles.emission;
+        emission.enabled = true;
+
+        var smokeEmission = smokeParticles.emission;
+        smokeEmission.enabled = true;
     }
 
     private void Update()
@@ -77,6 +85,11 @@ public class BombExplode : MonoBehaviour
 
     public void Explode(Collider[] colliding)
     {
+        var emission = fireParticles.emission;
+        emission.enabled = false;
+
+        var smokeEmission = smokeParticles.emission;
+        smokeEmission.enabled = false;
 
         // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
         Collider[] interiorHits = Physics.OverlapSphere(transform.position, innerRadius, terrainMask);
