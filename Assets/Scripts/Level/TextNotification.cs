@@ -7,6 +7,15 @@ public class TextNotification : MonoBehaviour
     private float elapsedTime = 0;
     public float displayTime;
 
+    private Animator caveInAnimator;
+    public RuntimeAnimatorController caveInAnimControl;
+
+    private void Start()
+    {
+        caveInAnimator = GetComponent<Animator>();
+
+        caveInAnimator.runtimeAnimatorController = caveInAnimControl;
+    }
 
     // Notification Sequence
     void Update()
