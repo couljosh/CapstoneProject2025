@@ -147,13 +147,19 @@ public class CaveInManager : MonoBehaviour
         for(int i = 1; i <= magnitudeToCycle; i++)
         {
             //max and min bounds of that magnitude, cycle through every tile
-            for (int x = -i; x < i; x++)
+            for (int x = -i; x <= i; x++)
             {
-                for (int y = i; y > -i; y--)
+                for (int y = i; y >= -i; y--)
                 {
+                    //if this is a tile that was already calculated in the last magnitude (not in the outer layer)
+                    if((x != -i && x !=i ) && (y != i && y != -i))
+                    {
+                        break;
+                    }
+
                     //this is now the targeted tile co-ordinate
                     //wait a bit between each placement
-                   yield return new WaitForSeconds(0.0001f);
+                   yield return new WaitForSeconds(0.005f);
                     
                     //lower chance to spawn the greater you go out from the center
                     float terrainSpawnRand = Random.Range(0, 100);
