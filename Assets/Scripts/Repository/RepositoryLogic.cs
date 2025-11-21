@@ -20,6 +20,7 @@ public class RepositoryLogic : MonoBehaviour
     public DynamicCamera dynamicCamera;
     public DepositScoreDisplay scoreDisplay;
     public Animator repoAnimation;
+    private TerrainBlast terrainBlastScript;
 
     [Header("UI References")]
     public Image progressBar;
@@ -97,12 +98,22 @@ public class RepositoryLogic : MonoBehaviour
         scoreDisplay = GetComponent<DepositScoreDisplay>();
 
         //depositParticles.enableEmission = false;
+
+        //for keeping the repo terrain-free constantly
+        terrainBlastScript = gameObject.GetComponent<TerrainBlast>();
     }
 
 
     void Update()
     {
         ConditionCheck();
+
+        //terrain clearing
+        if(terrainBlastScript.isFinishedClearing == true)
+        {
+            //go again, keep the repo clear of terrain at all times
+            terrainBlastScript.isFinishedClearing = false;
+        }
 
         // SYSTEM STRUCTURE //---------------------------------------------------------------------------------------
         progressBar.fillAmount = depositProgress / depositTime;

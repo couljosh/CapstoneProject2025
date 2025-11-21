@@ -152,6 +152,7 @@ MonoBehaviour:
   outlineScript: {fileID: 1816171927735737029}
   dynamicCamera: {fileID: 0}
   scoreDisplay: {fileID: 0}
+  repoAnimation: {fileID: 0}
   progressBar: {fileID: 1498521636583002264}
   radiusImg: {fileID: 7245904694463923810}
   timerProgress: {fileID: 71311517182912555}
@@ -205,8 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f52bee1ba59714d924498a198bb4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereIterations: 10
-  sphereIncrease: 0.3
+  sphereIterations: 5
+  sphereIncrease: 0.4
   isFinishedClearing: 1
   timeToScan: 0.2
   terrainMask:
