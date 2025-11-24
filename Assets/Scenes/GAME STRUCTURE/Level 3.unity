@@ -837,13 +837,14 @@ MonoBehaviour:
   repoSpawnNodes: []
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 1353471516}
-  activeDuration: 25
+  activeDuration: 12
   raiseDuration: 2
   raiseOffset: 4
   minOffDelay: 6
   maxOffDelay: 9
   delayBeforeFirstActive: 15
   elaspedTime: 0
+  timeLeftWhenAlarm: 5
   isRaising: 0
   isLowering: 0
   isSwitching: 0
@@ -2751,6 +2752,28 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 1907758547899999935, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
   m_PrefabInstance: {fileID: 1038515582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038515587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4353380081627446914, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1038515582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1038515588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1038515582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1041902464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3155,6 +3178,17 @@ SphereCollider:
   m_CorrespondingSourceObject: {fileID: 2070841479835136182, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
   m_PrefabInstance: {fileID: 1258680107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1258680110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+  m_PrefabInstance: {fileID: 1258680107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258680108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9b683c87bf1c3468e56960c2967627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275845531
 GameObject:
   m_ObjectHideFlags: 0
@@ -16250,6 +16284,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBarL
+      value: 
+      objectReference: {fileID: 1038515588}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBarR
+      value: 
+      objectReference: {fileID: 1038515587}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: redRepository
       value: 
       objectReference: {fileID: 0}
@@ -16277,6 +16319,18 @@ PrefabInstance:
       propertyPath: endOfRoundDelay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeElapsed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeExeption
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: repoMoveSystemScript
+      value: 
+      objectReference: {fileID: 1258680110}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: m_Name
       value: SceneManager

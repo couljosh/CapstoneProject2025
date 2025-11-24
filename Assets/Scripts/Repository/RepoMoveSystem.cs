@@ -31,12 +31,15 @@ public class RepoMoveSystem : MonoBehaviour
     private float lowerLerpT;
     private int randInd;
 
+    public float timeLeftWhenAlarm;
+
     [Header("Repository Checks")]
     public bool isRaising;
     public bool isLowering;
     public bool isSwitching;
     public bool depositComplete = false;
     private bool retractStarted = false;
+
 
 
 
@@ -80,7 +83,6 @@ public class RepoMoveSystem : MonoBehaviour
                 
             }
 
-
             AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); //access current progress of repo animation
 
             if (info.IsName("Repo Dissapear") && info.normalizedTime >= 1f)
@@ -114,6 +116,13 @@ public class RepoMoveSystem : MonoBehaviour
             raisingElapsedTime = 0;
             raiseLerpT = 0;
         }
+
+        //if (elaspedTime >= (activeDuration - timeLeftWhenAlarm))
+        //{
+        //    repository.GetComponent<RepositoryLogic>().repoAlarm.SetActive(true);
+        //}
+
+
     }
 
 
@@ -157,7 +166,7 @@ public class RepoMoveSystem : MonoBehaviour
             isRaising = false;
             terrainBlastScript.isFinishedClearing = false;
             repository.GetComponent<RepositoryLogic>().ActivateRepo();
-
+            
 
         }
 

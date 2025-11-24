@@ -753,9 +753,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 186806170364418422, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1435544788643584507, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0031236163
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9999951
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180.358
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043526810079851794, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6504476196288718351, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_Pivot.x
@@ -1052,6 +1072,7 @@ MonoBehaviour:
   maxOffDelay: 9
   delayBeforeFirstActive: 15
   elaspedTime: 0
+  timeLeftWhenAlarm: 0
   isRaising: 0
   isLowering: 0
   isSwitching: 0
@@ -12331,6 +12352,17 @@ SphereCollider:
   m_CorrespondingSourceObject: {fileID: 2070841479835136182, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
   m_PrefabInstance: {fileID: 919039511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919039517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+  m_PrefabInstance: {fileID: 919039511}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919039512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9b683c87bf1c3468e56960c2967627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &947128681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17104,6 +17136,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782976273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4353380081627446914, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810318836
 GameObject:
   m_ObjectHideFlags: 0
@@ -17526,6 +17569,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBarL
+      value: 
+      objectReference: {fileID: 2014013611}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBarR
+      value: 
+      objectReference: {fileID: 1782976273}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: redRepository
       value: 
       objectReference: {fileID: 0}
@@ -17553,6 +17604,18 @@ PrefabInstance:
       propertyPath: endOfRoundDelay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeElapsed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeExeption
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: repoMoveSystemScript
+      value: 
+      objectReference: {fileID: 919039517}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -17889,6 +17952,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+--- !u!114 &2014013611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2021298381
 GameObject:
   m_ObjectHideFlags: 0

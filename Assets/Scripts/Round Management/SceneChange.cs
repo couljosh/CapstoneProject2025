@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Compilation;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.UI;
 
 
 public class SceneChange : MonoBehaviour
@@ -21,20 +24,35 @@ public class SceneChange : MonoBehaviour
     public TextMeshProUGUI redScore;
     public TextMeshProUGUI blueScore;
 
+    public Image overtimeBarL;
+    public Image overtimeBarR;
+
     public TextMeshProUGUI timerText;
     public bool pointsAdded;
+    public bool isTimeOut;
+    public bool isOvertime;
+    public float overtimeExeption;
+    public float overtimeElapsed;
+
+    public RepositoryLogic repoMoveSystemScript;
 
 
     void Start()
     {
-
+       
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
+
+        //  repoMoveSystemScript = GameObject.Find("MoveableRepository").GetComponent<RepositoryLogic>();
+
+        overtimeBarL.gameObject.SetActive(false);
+        overtimeBarR.gameObject.SetActive(false);
     }
 
 
     void Update()
     {
+
 
         //Show the score for both teams
         if(redScore && blueScore != null)
@@ -66,7 +84,46 @@ public class SceneChange : MonoBehaviour
 
         if (roundTime < 1 && !pointsAdded) //change this to when the game is finished.
         {
-            roundTime = 0;
+            isTimeOut = true;
+        }
+
+
+        if (isTimeOut)
+        {
+
+            if (repoMoveSystemScript.isEmpty && !isOvertime)
+            {
+                checkScore();
+
+            }
+
+            if (!repoMoveSystemScript.isEmpty && !isOvertime)
+            {
+                isOvertime = true;
+
+            } 
+            
+             if (repoMoveSystemScript.isEmpty && isOvertime)
+             {
+                overtimeElapsed -= Time.deltaTime;
+             }
+        }
+
+        if (isOvertime)
+        {
+            timerText.text = "OVERTIME";
+            timerText.color = Color.yellow;
+
+            overtimeBarL.gameObject.SetActive(true);
+            overtimeBarR.gameObject.SetActive(true);
+
+            overtimeBarL.fillAmount = overtimeElapsed / overtimeExeption;
+            overtimeBarR.fillAmount = overtimeElapsed / overtimeExeption;
+
+        }
+
+        if (overtimeElapsed <= 0)
+        {
             checkScore();
         }
     }
@@ -75,22 +132,7 @@ public class SceneChange : MonoBehaviour
     //Winning Team Display
     public void checkScore()
     {
-        //tint.SetActive(true);
-        //timerText.gameObject.SetActive(false);
 
-
-        //if (redRoundTotal > blueRoundTotal)
-        //{
-        //    teamOneWinText.SetActive(true);
-        //}
-        //else if (redRoundTotal < blueRoundTotal)
-        //{
-        //    teamTwoWinText.SetActive(true);
-        //}
-        //else
-        //{
-        //    drawText.SetActive(true);
-        //}
 
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;

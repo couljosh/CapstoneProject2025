@@ -2,6 +2,7 @@ using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections.Generic;
+using System.Collections;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
@@ -53,6 +54,7 @@ public class RepositoryLogic : MonoBehaviour
     public float decreaseMult; //If a progress reduction is added when the radius is empty
     private float depositProgress;
     public ParticleSystem depositParticles;
+    public float repoAlarmDuration;
 
     [Header("Color Customization")]
     public Color originalColor;
@@ -90,6 +92,7 @@ public class RepositoryLogic : MonoBehaviour
         progressBar.fillAmount = 0;
         repoLight.color = originalColor;
         ClearStartingArea();
+        repoAlarm.SetActive(false);
 
         //Sound References
         instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
@@ -130,7 +133,6 @@ public class RepositoryLogic : MonoBehaviour
         // EMPTY //--------------------------------------------------------------------------------------------------
         if (isEmpty)
         {
-            SetLightValues(Color.red, 200);
             //Reduces Progress
             //if (depositProgress > 0)
             //{
@@ -150,9 +152,8 @@ public class RepositoryLogic : MonoBehaviour
         // CONTESTED //----------------------------------------------------------------------------------------------
         if (isContested)
         {
-            repoAlarmLight.color = Color.yellow;
+            //repoAlarmLight.color = Color.yellow;
             float flickAmt = Mathf.PingPong(Time.time * 1000, 500);
-            SetLightValues(Color.yellow, flickAmt);
 
 
         }
@@ -167,7 +168,6 @@ public class RepositoryLogic : MonoBehaviour
 
             //Team 1 Signifiers Active
             progressBar.color = Color.red;
-            SetLightValues(Color.green, 200);
 
 
 
@@ -187,7 +187,6 @@ public class RepositoryLogic : MonoBehaviour
 
             //Team 2 Signifiers Active
             progressBar.color = Color.blue;
-            SetLightValues(Color.green, 200);
 
 
 
@@ -344,7 +343,16 @@ public class RepositoryLogic : MonoBehaviour
         }
         largeGemsInRadius.Clear();
 
-        repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
+        if (score.isOvertime)
+        {
+            score.checkScore();
+        }
+        else
+        {
+            repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
+
+        }
+
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
@@ -353,6 +361,7 @@ public class RepositoryLogic : MonoBehaviour
 
     public void DisableRepo()
     {
+
         outlineScript.enabled = false;
 
         teamOneCanDepo = false;
@@ -373,7 +382,6 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.enabled = false;
         depositProgress = 0;
         repoLight.color = originalColor;
-        repoAlarm.SetActive(false);
 
         //account for any large gems that were in the radius (because ontriggerexit isn't called when repos are disabled)
         foreach (GameObject largeGem in largeGemsInRadius)
@@ -397,8 +405,9 @@ public class RepositoryLogic : MonoBehaviour
         repoLight.enabled = true;
         timerProgress.enabled = true;
         radiusImg.enabled = true;
-        repoAlarm.SetActive(true);
         CheckWhenSetActive();
+
+       StartCoroutine(SetLightValues(repoAlarmDuration));
     }
 
 
@@ -502,14 +511,14 @@ public class RepositoryLogic : MonoBehaviour
             enteredPlayersTeam2.Remove(player.gameObject);
     }
 
-    void SetLightValues(Color color, float intensity)
+    IEnumerator SetLightValues(float alarmLength)
     {
-      
-    repoAlarmLight.color = color;
-    repoAlarmLight.intensity = intensity;
+        repoAlarm.SetActive(true);
 
-    repoAlarmLightTwo.color = color;
-    repoAlarmLightTwo.intensity = intensity;
+        yield return new WaitForSeconds(alarmLength);
+
+        repoAlarm.SetActive(false);
+
     }
 }
 
