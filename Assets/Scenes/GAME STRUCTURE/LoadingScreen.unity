@@ -482,6 +482,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingTime: 10
   countdownText: {fileID: 1083252606}
+  minInd: 3
+  maxInd: 3
 --- !u!4 &555857925
 Transform:
   m_ObjectHideFlags: 0

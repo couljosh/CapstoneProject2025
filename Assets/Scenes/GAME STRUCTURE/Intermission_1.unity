@@ -1280,6 +1280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingTime: 10
   countdownText: {fileID: 1890215223}
+  minInd: 5
+  maxInd: 5
 --- !u!1 &1440577466
 GameObject:
   m_ObjectHideFlags: 0

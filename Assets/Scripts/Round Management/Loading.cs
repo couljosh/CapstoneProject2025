@@ -11,6 +11,8 @@ public class Loading : MonoBehaviour
     private int currentScene;
     private int endMatchScene;
 
+    public int minInd;
+    public int maxInd;
 
     void Start()
     {
@@ -27,8 +29,11 @@ public class Loading : MonoBehaviour
 
     void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+        int chosenInt = Random.Range(minInd, maxInd);
+
+        SceneManager.LoadScene(chosenInt);
     }
 
     public void Timer()

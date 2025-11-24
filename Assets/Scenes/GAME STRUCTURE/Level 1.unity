@@ -17511,7 +17511,7 @@ PrefabInstance:
       objectReference: {fileID: 195050562}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 105
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText
