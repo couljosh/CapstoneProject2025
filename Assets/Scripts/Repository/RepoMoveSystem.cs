@@ -85,7 +85,6 @@ public class RepoMoveSystem : MonoBehaviour
 
             if (info.IsName("Repo Dissapear") && info.normalizedTime >= 1f)
             {
-                Debug.Log("lower repo activate");
                 isLowering = true;
             }
 

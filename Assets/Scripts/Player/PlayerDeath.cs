@@ -30,6 +30,7 @@ public class PlayerDeath : MonoBehaviour
     private bool isInvincible = false;
     private float invincibleTimer = 0;
     public float blinkInterval = 0.5f;
+    [HideInInspector] public float timeTouchingLava = 0f;
 
     [Header("Respawn Customizaiton/Check")]
     [HideInInspector] public bool isPlayerDead;

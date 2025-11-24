@@ -16,6 +16,7 @@ public class LavaSystem : MonoBehaviour
     private float timer;
     private bool laveSafe;
     public float lavaSafeLength;
+    //private float coyoteTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,15 +51,7 @@ public class LavaSystem : MonoBehaviour
             elapsedTime = 0;
             timer = 0;
         }
-
-       
-
-
-
     }
-
-
-
 
     private void LavaMove(Vector3 startingLocation, Vector3 newLocation)
     {
@@ -69,14 +62,27 @@ public class LavaSystem : MonoBehaviour
        // doneMoving = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-
         if (other.gameObject.tag == "ObjectDestroyer") //&& elapsedTime / lavaRisingDuration > lavaSafeLength)
         {
-            
-            other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
+            PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
+            playerDeath.timeTouchingLava += Time.deltaTime;
+
+            if(playerDeath.timeTouchingLava > lavaSafeLength)
+            {
+                playerDeath.timeTouchingLava = 0;
+                playerDeath.PlayerDie();
+            }
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "ObjectDestroyer")
+        {
+            PlayerDeath playerDeath = other.gameObject.GetComponent<PlayerDeath>();
+            playerDeath.timeTouchingLava = 0;
+        }
+    }
 }

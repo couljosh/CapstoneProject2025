@@ -1,6 +1,7 @@
 using FMODUnity;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
@@ -238,18 +239,37 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * playerStats.rotateSpeed);
 
         }
+        Debug.DrawLine(transform.localPosition, new Vector3(transform.localPosition.x, transform.localPosition.y - transform.localScale.y, transform.localPosition.z));
+        
+        //simulate gravity
 
-        //simulate gravity - if there is no floor under the CENTER of the player, to give a bit of leniency
-        if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+        //if there is no floor directly below
+        if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, transform.localScale.y, floor))
         {
-            coyoteTimer += Time.deltaTime;
-
-            if (coyoteTimer > playerStats.coyoteTimeThreshold)
+            //if there is no floor way below
+            if(!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
             {
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity, rb.linearVelocity.z);
+                //fall with coyote time
+                coyoteTimer += Time.deltaTime;
+
+                if (coyoteTimer > playerStats.coyoteTimeThreshold)
+                {
+                    rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity, rb.linearVelocity.z);
+                }
             }
+            else
+            {
+                //just fall regularly, as its just a terrain divot
+                coyoteTimer = 0;
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity * 3, rb.linearVelocity.z);
+            }
+
+            
         }
         else
+        {
             coyoteTimer = 0;
+        }
+        
     }
 }

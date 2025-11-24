@@ -15,7 +15,7 @@ MonoBehaviour:
   initialMoveSpeed: 5.35
   rotateSpeed: 10
   gravity: 12
-  coyoteTimeThreshold: 0.2
+  coyoteTimeThreshold: 0.25
   kickDectDist: 2
   initialKickStrength: 55000
   cartForceMultiplier: 2.5

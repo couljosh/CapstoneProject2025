@@ -1287,8 +1287,6 @@ MonoBehaviour:
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 1227933972}
   activeDuration: 25
-  raisingElapsedTime: 0
-  loweringElapsedTime: 0
   raiseDuration: 2
   raiseOffset: 3
   minOffDelay: 3
@@ -3373,7 +3371,7 @@ MonoBehaviour:
   lavaHeight: {fileID: 510327525}
   lavaLinger: 10
   lavaTimer: 3
-  lavaSafeLength: 0.2
+  lavaSafeLength: 0.3
 --- !u!1 &569951253
 GameObject:
   m_ObjectHideFlags: 0

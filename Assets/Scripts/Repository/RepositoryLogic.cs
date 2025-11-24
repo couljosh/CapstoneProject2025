@@ -353,7 +353,6 @@ public class RepositoryLogic : MonoBehaviour
 
     public void DisableRepo()
     {
-        UnityEngine.Debug.Log("disable repo");
         outlineScript.enabled = false;
 
         teamOneCanDepo = false;
