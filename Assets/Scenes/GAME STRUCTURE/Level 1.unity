@@ -1092,7 +1092,7 @@ MonoBehaviour:
   raiseOffset: 4
   minOffDelay: 6
   maxOffDelay: 9
-  delayBeforeFirstActive: 0
+  delayBeforeFirstActive: 10
   elaspedTime: 0
   timeLeftWhenAlarm: 0
   isRaising: 0
@@ -12212,7 +12212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &807655219
 Grid:
   m_ObjectHideFlags: 0
@@ -17584,7 +17584,7 @@ PrefabInstance:
       objectReference: {fileID: 195050562}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: roundTime
-      value: 20
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: timerText

@@ -18,7 +18,7 @@ MonoBehaviour:
   coyoteTimeThreshold: 0.25
   kickDectDist: 2
   initialKickStrength: 55000
-  cartForceMultiplier: 2.5
+  cartForceMultiplier: 3
   rockForceMultiplier: 5
   playerForceMultiplier: 0.4
   maximumKickMultiplier: 4

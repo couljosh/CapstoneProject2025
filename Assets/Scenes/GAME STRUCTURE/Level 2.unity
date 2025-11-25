@@ -46661,6 +46661,11 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 1907758547899999935, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
   m_PrefabInstance: {fileID: 1442622621}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1442622624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 784134274124607169, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1442622621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455361548
 GameObject:
   m_ObjectHideFlags: 0
@@ -47525,6 +47530,10 @@ PrefabInstance:
       propertyPath: elapsedTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBar
+      value: 
+      objectReference: {fileID: 1442622624}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: sceneNumber
       value: 0
