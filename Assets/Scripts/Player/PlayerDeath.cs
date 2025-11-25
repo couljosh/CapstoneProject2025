@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
+using UnityEngine.Rendering;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class PlayerDeath : MonoBehaviour
     [Header("Invinciblity Variables")]
     private bool isInvincible = false;
     private float invincibleTimer = 0;
-    public float blinkInterval = 0.5f;
+    private float timeSinceLastFlash = 0;
+    public float blinkInterval = 0.2f;
     [HideInInspector] public float timeTouchingLava = 0f;
 
     [Header("Respawn Customizaiton/Check")]
@@ -59,10 +61,12 @@ public class PlayerDeath : MonoBehaviour
         if (invincibleTimer < playerStats.invincibleDuration)
         {
             isInvincible = true;
+            PlayerFlash();
         }
         else
         {
             isInvincible = false;
+            copperModel.SetActive(true);
         }
 
         invincibleTimer += Time.deltaTime;
@@ -180,7 +184,16 @@ public class PlayerDeath : MonoBehaviour
 
         isInvincible = true;
         invincibleTimer = 0;
+    }
 
-        //re-enable tracking with dynamic camera
+    void PlayerFlash()
+    {
+        timeSinceLastFlash += Time.deltaTime;
+
+        if(timeSinceLastFlash > blinkInterval)
+        {
+            copperModel.SetActive(!copperModel.activeSelf);
+            timeSinceLastFlash = 0;
+        }
     }
 }

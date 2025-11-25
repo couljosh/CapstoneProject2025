@@ -753,7 +753,8 @@ MonoBehaviour:
   copperModel: {fileID: 573361045551215832}
   impactSphere: {fileID: 59901591000803067, guid: b70444a4991ba0d4f9c23cff19231d33, type: 3}
   collectedGems: []
-  blinkInterval: 0.5
+  blinkInterval: 0.01
+  timeTouchingLava: 0
   isPlayerDead: 0
   spawnNum: 2
   gemCount: 0
