@@ -47577,6 +47577,10 @@ PrefabInstance:
       propertyPath: repoMoveSystemScript
       value: 
       objectReference: {fileID: 2099684006}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: repositoryLogicScript
+      value: 
+      objectReference: {fileID: 2099684006}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: m_Name
       value: SceneManager
