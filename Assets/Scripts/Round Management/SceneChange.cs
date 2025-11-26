@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 //using UnityEditor.Compilation;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 
 public class SceneChange : MonoBehaviour
@@ -38,8 +39,10 @@ public class SceneChange : MonoBehaviour
     public RepositoryLogic repositoryLogicScript;
 
 
+
     void Start()
     {
+       
        
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;

@@ -51,6 +51,9 @@ public class PlayerDeath : MonoBehaviour
         playerGamepad = (Gamepad)playerInput.devices[0];
 
         dynamicCamera = Camera.main.GetComponentInParent<DynamicCameraFollow>();
+
+        //gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+        EnablePlayer();
     }
 
 
@@ -146,6 +149,7 @@ public class PlayerDeath : MonoBehaviour
 
         playerLight.gameObject.SetActive(false);
 
+        if(dynamicCamera)
         dynamicCamera.RemovePlayer(transform);
     }
 
@@ -167,13 +171,13 @@ public class PlayerDeath : MonoBehaviour
 
     }
 
-
     void EnablePlayer()
     {
-        gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
-
+        
         //add player back
+        if (dynamicCamera)
         dynamicCamera.AddPlayer(transform);
+
         isPlayerDead = false;
 
         playerMesh.enabled = true;
@@ -184,6 +188,10 @@ public class PlayerDeath : MonoBehaviour
 
         isInvincible = true;
         invincibleTimer = 0;
+
+        gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+        //playerInput.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
+        playerInput.GetComponent<Rigidbody>().position = GameObject.Find("Spawn" + spawnNum).transform.position;
     }
 
     void PlayerFlash()
