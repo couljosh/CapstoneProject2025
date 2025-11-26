@@ -7,10 +7,15 @@ using Unity.VisualScripting;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-
+using System.Runtime.CompilerServices;
 
 public class SceneChange : MonoBehaviour
 {
+    public static event System.Action OnGameStart;
+    private bool canRunTimer = false;
+
+    [Header("Countdown UI")]
+    public TextMeshProUGUI countdownText;
 
     [Header("Round Customization")]
     public float roundTime;
@@ -42,13 +47,44 @@ public class SceneChange : MonoBehaviour
 
     void Start()
     {
-      
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        int initialMin = Mathf.FloorToInt(roundTime / 60);
+        int initialSec = Mathf.FloorToInt(roundTime % 60);
+        if (timerText != null)
+            timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
+
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
 
+        StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
     }
 
+    IEnumerator CountdownRoutine()
+    {
+
+        int count = 3;
+        while (count > 0)
+        {
+            if (countdownText != null) countdownText.text = count.ToString();
+            yield return new WaitForSeconds(1f);
+            count--;
+        }
+
+        if (countdownText != null) countdownText.text = "GO!";
+
+        OnGameStart?.Invoke();
+        StartRoundTimer();
+
+        yield return new WaitForSeconds(0.7f);
+        countdownText.gameObject.SetActive(false);
+    }
+
+    private void StartRoundTimer()
+    {
+        canRunTimer = true;
+    }
 
     void Update()
     {
@@ -60,7 +96,7 @@ public class SceneChange : MonoBehaviour
             redScore.text = redRoundTotal.ToString();
             blueScore.text = blueRoundTotal.ToString();
         }
-        
+        if (!canRunTimer) return;
 
         //Timer Counts down
         roundTime -= Time.deltaTime;
