@@ -56,16 +56,6 @@ public class SpawnPlayers : MonoBehaviour
 
     public void initialSpawn()
     {
-        //reset arrays
-        //for (int g = 0; g < currentInputDevices.Length; g++)
-        //{
-        //    currentInputDevices[g] = null;
-        //}
-
-        //for (int g = 0; g < currentPlayers.Length; g++)
-        //{
-        //    currentPlayers[g] = null;
-        //}
         uiManager = Object.FindFirstObjectByType<PlayerUIManager>();
 
         int i = 0;
@@ -83,34 +73,12 @@ public class SpawnPlayers : MonoBehaviour
                 uiManager.RegisterPlayer(newPlayerInput.gameObject);
             }
 
-            //currentPlayers[i].transform.position = GameObject.Find("Spawn" + i).transform.position;
-
             i++;
         }
     }
 
     private void Update()
     {
-        //if(Gamepad.all.Count != currentPlayerCount)
-        //{
-            
-        //    //int i = currentPlayerCount;
-        //    //print(i);
-        //    //foreach (var gamePad in Gamepad.all)
-        //    //{
-        //    //    PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
-
-        //    //    if (uiManager != null)
-        //    //    {
-        //    //        uiManager.RegisterPlayer(newPlayerInput.gameObject);
-        //    //    }
-
-        //    //    i++;
-        //    //}
-
-        //    //currentPlayerCount = Gamepad.all.Count;
-        //}
-
         InputSystem.onDeviceChange +=
             (sender, args) =>
             {
@@ -129,7 +97,7 @@ public class SpawnPlayers : MonoBehaviour
                                 {
                                     //instantiate a new player
                                     PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: sender);
-
+                                    currentPlayers[i] = newPlayerInput.gameObject;
                                     if (uiManager != null)
                                     {
                                         uiManager.RegisterPlayer(newPlayerInput.gameObject);
@@ -151,6 +119,7 @@ public class SpawnPlayers : MonoBehaviour
                         {
                             if(currentInputDevices[i] == sender)
                             {
+                                
                                 currentInputDevices[i] = null;
                                 break;
                             }

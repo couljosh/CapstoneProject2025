@@ -42,12 +42,9 @@ public class SceneChange : MonoBehaviour
 
     void Start()
     {
-       
-       
+      
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
-
-        //  repoMoveSystemScript = GameObject.Find("MoveableRepository").GetComponent<RepositoryLogic>();
 
         overtimeBar.gameObject.SetActive(false);
     }
