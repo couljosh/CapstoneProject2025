@@ -4963,7 +4963,7 @@ MonoBehaviour:
   cookTime: 3
   innerRadius: 0.5
   forceStrengthGem: 15
-  forceStrengthCart: 4000
+  forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
   explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}

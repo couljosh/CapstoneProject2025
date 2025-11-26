@@ -72,6 +72,9 @@ public class RepoMoveSystem : MonoBehaviour
 
         if (elaspedTime > activeDuration)
         {
+
+            repository.GetComponent<RepositoryLogic>().DisableRepo();
+
             Animator anim = repository.GetComponent<RepositoryLogic>().repoAnimation;
 
             if (!retractStarted) //check to make sure retract anim has not started
@@ -165,8 +168,7 @@ public class RepoMoveSystem : MonoBehaviour
             raisingElapsedTime = 0;
             isRaising = false;
             terrainBlastScript.isFinishedClearing = false;
-            repository.GetComponent<RepositoryLogic>().ActivateRepo();
-            
+            repository.GetComponent<RepositoryLogic>().ActivateRepo();    
 
         }
 
@@ -180,7 +182,6 @@ public class RepoMoveSystem : MonoBehaviour
     void LowerRepo()
     {
         //Deactivate it 
-        repository.GetComponent<RepositoryLogic>().DisableRepo();
 
         //Raise Location
         if (loweringElapsedTime < raiseDuration)

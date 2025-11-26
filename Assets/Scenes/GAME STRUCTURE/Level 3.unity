@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21795997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 784134274124607169, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1038515582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &46005536
 GameObject:
   m_ObjectHideFlags: 0
@@ -15865,7 +15870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1751911426
 Grid:
   m_ObjectHideFlags: 0
@@ -16350,6 +16355,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBar
+      value: 
+      objectReference: {fileID: 21795997}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: sceneNumber
       value: 0
       objectReference: {fileID: 0}
@@ -16399,6 +16408,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: repoMoveSystemScript
+      value: 
+      objectReference: {fileID: 1258680110}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: repositoryLogicScript
       value: 
       objectReference: {fileID: 1258680110}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}

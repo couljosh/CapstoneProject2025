@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!23 &31945863 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8791793001650815472, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+  m_PrefabInstance: {fileID: 919039511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &46005536
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,15 +768,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0031236163
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9999951
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180.358
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4353380081627446914, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5043526810079851794, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -857,6 +866,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_FillOrigin
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -898,6 +915,11 @@ MonoBehaviour:
 --- !u!1 &195050564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435544788643584507, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &195050565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 784134274124607169, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
   m_PrefabInstance: {fileID: 195050560}
   m_PrefabAsset: {fileID: 0}
 --- !u!223 &195050570 stripped
@@ -1070,7 +1092,7 @@ MonoBehaviour:
   raiseOffset: 4
   minOffDelay: 6
   maxOffDelay: 9
-  delayBeforeFirstActive: 15
+  delayBeforeFirstActive: 10
   elaspedTime: 0
   timeLeftWhenAlarm: 0
   isRaising: 0
@@ -12326,9 +12348,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 31945863}
+    - target: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
       propertyPath: active
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+      propertyPath: repoMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f31d138efa3cd6458d685547feb39cb, type: 2}
     - target: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
       propertyPath: depositRadius
       value: 
@@ -17565,6 +17595,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: overtimeBar
+      value: 
+      objectReference: {fileID: 195050565}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: sceneNumber
       value: 0
       objectReference: {fileID: 0}
@@ -17606,14 +17640,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: overtimeElapsed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: overtimeExeption
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: repoMoveSystemScript
+      value: 
+      objectReference: {fileID: 919039517}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: repositoryLogicScript
       value: 
       objectReference: {fileID: 919039517}
     - target: {fileID: 8572955040075578291, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
@@ -47827,6 +47865,8 @@ SceneRoots:
   - {fileID: 1743174626}
   - {fileID: 195050560}
   - {fileID: 218569332}
+  - {fileID: 248346605}
+  - {fileID: 919039511}
   - {fileID: 1337573912}
   - {fileID: 1856189221}
   - {fileID: 1670730268}
@@ -47844,7 +47884,5 @@ SceneRoots:
   - {fileID: 1382573021}
   - {fileID: 1859049411}
   - {fileID: 807655220}
-  - {fileID: 248346605}
-  - {fileID: 919039511}
   - {fileID: 769641246}
   - {fileID: 1190575248}
