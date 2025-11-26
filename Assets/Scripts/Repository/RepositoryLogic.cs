@@ -10,6 +10,8 @@ using UnityEngine.Playables;
 using UnityEngine.TerrainUtils;
 using UnityEngine.UI;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
+using UnityEngine.ProBuilder.Shapes;
+using System;
 
 public class RepositoryLogic : MonoBehaviour
 {
@@ -74,9 +76,16 @@ public class RepositoryLogic : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     FMOD.Studio.PLAYBACK_STATE playBackState;
 
+    public Material repoMaterial;
+    public Material contestedMaterial;
+    public MeshRenderer mesh;
+
+    private MeshRenderer[] meshRenderers;
+
 
     void Start()
     {
+
         dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
 
         repoAnimation = GetComponentInChildren<Animator>();
@@ -104,6 +113,8 @@ public class RepositoryLogic : MonoBehaviour
 
         //for keeping the repo terrain-free constantly
         terrainBlastScript = gameObject.GetComponent<TerrainBlast>();
+
+        meshRenderers = GetComponentsInChildren<MeshRenderer>();
     }
 
 
@@ -155,7 +166,12 @@ public class RepositoryLogic : MonoBehaviour
             //repoAlarmLight.color = Color.yellow;
             float flickAmt = Mathf.PingPong(Time.time * 1000, 500);
 
+            ChangeRepoMesh(contestedMaterial);
 
+        }
+        else
+        {
+            ChangeRepoMesh(repoMaterial);
         }
 
 
@@ -520,5 +536,15 @@ public class RepositoryLogic : MonoBehaviour
         repoAlarm.SetActive(false);
 
     }
+
+    void ChangeRepoMesh(Material repoMaterial)
+    {
+        foreach(MeshRenderer renderer in meshRenderers)
+        {
+            renderer.material = repoMaterial;
+        }
+    }
+
+
 }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Compilation;
+//using UnityEditor.Compilation;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
@@ -24,6 +24,7 @@ public class SceneChange : MonoBehaviour
     public TextMeshProUGUI redScore;
     public TextMeshProUGUI blueScore;
 
+    public GameObject overtimeBar;
     public Image overtimeBarL;
     public Image overtimeBarR;
 
@@ -34,7 +35,7 @@ public class SceneChange : MonoBehaviour
     public float overtimeExeption;
     public float overtimeElapsed;
 
-    public RepositoryLogic repoMoveSystemScript;
+    public RepositoryLogic repositoryLogicScript;
 
 
     void Start()
@@ -45,8 +46,7 @@ public class SceneChange : MonoBehaviour
 
         //  repoMoveSystemScript = GameObject.Find("MoveableRepository").GetComponent<RepositoryLogic>();
 
-        overtimeBarL.gameObject.SetActive(false);
-        overtimeBarR.gameObject.SetActive(false);
+        overtimeBar.gameObject.SetActive(false);
     }
 
 
@@ -90,20 +90,21 @@ public class SceneChange : MonoBehaviour
 
         if (isTimeOut)
         {
+            roundTime = 0.1f;
 
-            if (repoMoveSystemScript.isEmpty && !isOvertime)
+            if (repositoryLogicScript.isEmpty && !isOvertime)
             {
                 checkScore();
 
             }
 
-            if (!repoMoveSystemScript.isEmpty && !isOvertime)
+            if (!repositoryLogicScript.isEmpty && !isOvertime)
             {
                 isOvertime = true;
 
             } 
             
-             if (repoMoveSystemScript.isEmpty && isOvertime)
+             if (repositoryLogicScript.isEmpty && isOvertime && repositoryLogicScript.active)
              {
                 overtimeElapsed -= Time.deltaTime;
              }
@@ -111,11 +112,7 @@ public class SceneChange : MonoBehaviour
 
         if (isOvertime)
         {
-            timerText.text = "OVERTIME";
-            timerText.color = Color.yellow;
-
-            overtimeBarL.gameObject.SetActive(true);
-            overtimeBarR.gameObject.SetActive(true);
+            overtimeBar.gameObject.SetActive(true);
 
             overtimeBarL.fillAmount = overtimeElapsed / overtimeExeption;
             overtimeBarR.fillAmount = overtimeElapsed / overtimeExeption;
@@ -138,11 +135,12 @@ public class SceneChange : MonoBehaviour
         pointsAdded = true;
 
 
-        LoadNextScene();
+       StartCoroutine(LoadNextScene());
     }
 
-    void LoadNextScene()
+    IEnumerator LoadNextScene()
     {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
