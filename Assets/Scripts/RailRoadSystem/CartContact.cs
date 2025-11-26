@@ -38,11 +38,9 @@ public class CartContact : MonoBehaviour
 
         if(collision.gameObject.tag == "ActiveTerrain" && rb.linearVelocity.magnitude > terrainThreshold)
         {
-            print("Hit Terrain");
             
             collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
             rb.linearVelocity = rb.linearVelocity * (1 - terrainSpeedReduction/100);
-            print(gameObject.name);
         }
 
         if (collision.gameObject.tag == "ObjectDestroyer" && rb.linearVelocity.magnitude > playerThreshold 
@@ -50,7 +48,6 @@ public class CartContact : MonoBehaviour
             || !isForwardOne && !minecartMovementScript.isForward)
             || collision.gameObject.tag == "ObjectDestroyer" && isPowered)
         {
-            print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
             
