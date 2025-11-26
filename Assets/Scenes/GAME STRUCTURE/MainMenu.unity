@@ -1734,6 +1734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GemsFallVFX
       objectReference: {fileID: 0}
+    - target: {fileID: 8148524289864351372, guid: 70193dde591518a4dbb761ea5f4f67d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
