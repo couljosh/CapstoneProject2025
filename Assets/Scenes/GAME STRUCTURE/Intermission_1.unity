@@ -1333,6 +1333,7 @@ MonoBehaviour:
   countdownText: {fileID: 1890215223}
   minInd: 5
   maxInd: 5
+  sceneListSO: {fileID: 11400000, guid: 311216408124f7e42b96e9bc5b0d377d, type: 2}
 --- !u!1001 &1262836554
 PrefabInstance:
   m_ObjectHideFlags: 0
