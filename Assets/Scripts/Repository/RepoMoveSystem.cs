@@ -46,6 +46,12 @@ public class RepoMoveSystem : MonoBehaviour
         SceneChange.OnGameStart += StartRepoSystem;
     }
 
+    private void OnDestroy()
+    {
+        //unsubscribe from the event to prevent missing exception error
+        SceneChange.OnGameStart -= StartRepoSystem;
+    }
+
     void Start()
     {
         //Find All Nodes
