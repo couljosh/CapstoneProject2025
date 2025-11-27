@@ -48,11 +48,15 @@ public class PlayerMove : MonoBehaviour
     private float normalizedRumble;
 
     private bool canAct = false;
+    public bool shouldCheck = true;
 
 
     private void Awake()
     {
-        SceneChange.OnGameStart += StartPlayerActions;
+
+        if (SceneChange.gameHasStarted)
+            canAct = true;
+        //SceneChange.OnGameStart += StartPlayerActions;
 
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
@@ -170,6 +174,13 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (SceneChange.gameHasStarted & shouldCheck)
+        {
+            canAct = true;
+            shouldCheck = false;
+        }
+
+
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
         Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
         Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
