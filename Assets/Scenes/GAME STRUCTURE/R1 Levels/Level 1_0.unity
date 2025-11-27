@@ -766,6 +766,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 7400000, guid: d11e43e98e1da2e48baed2b8cd9f4ca0, type: 2}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 790601752}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: d11e43e98e1da2e48baed2b8cd9f4ca0, type: 2}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: SceneChange
+      value: 
+      objectReference: {fileID: 1545435590}
     - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -873,6 +889,14 @@ PrefabInstance:
     - target: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_FillOrigin
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12207,6 +12231,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &790601752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &790601755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf04d9ce59bb734cb10ee9c5752406e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807655218
 GameObject:
   m_ObjectHideFlags: 0
@@ -16901,6 +16941,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+--- !u!114 &1545435590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+  m_PrefabInstance: {fileID: 1856189221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ac5745bfcd64c46b9bb7880ab79683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564692721
 GameObject:
   m_ObjectHideFlags: 0
@@ -17625,6 +17676,10 @@ PrefabInstance:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 783230690}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: dynamiteTimer
+      value: 
+      objectReference: {fileID: 790601755}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: redRepository
       value: 

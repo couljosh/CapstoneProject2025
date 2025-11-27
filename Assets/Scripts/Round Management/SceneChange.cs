@@ -8,11 +8,12 @@ using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 public class SceneChange : MonoBehaviour
 {
     public static event System.Action OnGameStart;
-    private bool canRunTimer = false;
+    public bool canRunTimer = false;
 
     [Header("Countdown UI")]
     public TextMeshProUGUI countdownText;
@@ -35,6 +36,7 @@ public class SceneChange : MonoBehaviour
     public Image overtimeBarR;
 
     public TextMeshProUGUI timerText;
+    public dynamiteTimer dynamiteTimer;
     public bool pointsAdded;
     public bool isTimeOut;
     public bool isOvertime;
@@ -84,6 +86,11 @@ public class SceneChange : MonoBehaviour
     private void StartRoundTimer()
     {
         canRunTimer = true;
+        if (dynamiteTimer != null)
+        {
+            dynamiteTimer.SendMessage("StartAnimation");
+        }
+
     }
 
     void Update()
