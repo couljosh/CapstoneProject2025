@@ -859,6 +859,17 @@ MonoBehaviour:
   isLowering: 0
   isSwitching: 0
   depositComplete: 0
+--- !u!114 &298601052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1038515582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf04d9ce59bb734cb10ee9c5752406e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &307677255
 GameObject:
   m_ObjectHideFlags: 0
@@ -16402,6 +16413,10 @@ PrefabInstance:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 444724499}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: dynamiteTimer
+      value: 
+      objectReference: {fileID: 298601052}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: redRepository
       value: 
