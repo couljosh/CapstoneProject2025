@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+  m_Color: {r: 0.08235294, g: 0.10980393, b: 0.19215688, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 06562b0cbfe6aba43bf373dfc06832a0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 7735928366055558715}
   - component: {fileID: 1273978887827975990}
   m_Layer: 5
-  m_Name: Charge Bar
+  m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ RectTransform:
   m_GameObject: {fileID: 4182484831465511952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.81640315, y: 0.835774, z: 0.6489858}
+  m_LocalScale: {x: 1.4330871, y: 0.8123401, z: 0.63078916}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1948727059195901974}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 883d4bcb51519e340bde783ad9fc203b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06562b0cbfe6aba43bf373dfc06832a0, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -201,6 +201,11 @@ MonoBehaviour:
   kickChargeBar: {fileID: 1273978887827975990}
   kickChargeIcon: {fileID: 7269011463583163240}
   kickChargeBackground: {fileID: 5648102207100243178}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  midColor: {r: 1, g: 0, b: 0, a: 1}
+  maxColorDark: {r: 0.6415094, g: 0.14827341, b: 0.14827341, a: 1}
+  maxChargeThreshold: 0.8
+  flashSpeed: 0.1
 --- !u!1 &5631727894549281406
 GameObject:
   m_ObjectHideFlags: 0

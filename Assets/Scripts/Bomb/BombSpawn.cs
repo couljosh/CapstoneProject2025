@@ -12,6 +12,9 @@ public class BombSpawn : MonoBehaviour
 
     public GameObject bombPrefab;
 
+    [Header("UI Reference")]
+    public BombAmmoBar bombAmmoBarUI;
+
     [Header("Bomb Variables")]
     public float regenTimer;
     public float bombRad;
@@ -29,7 +32,7 @@ public class BombSpawn : MonoBehaviour
         playerEffects = gameObject.GetComponent<PlayerEffects>();
         bombsHeld = 0;
         playerDeath = GetComponent<PlayerDeath>();
-       
+
     }
 
 
@@ -39,8 +42,10 @@ public class BombSpawn : MonoBehaviour
         {
             regenTimer += Time.deltaTime;
 
-            if (regenTimer > playerStats.bombRegenTime)
+            if (regenTimer >= playerStats.bombRegenTime)
             {
+                regenTimer = playerStats.bombRegenTime;
+
                 bombsHeld++;
                 regenTimer = 0;
             }
@@ -63,6 +68,8 @@ public class BombSpawn : MonoBehaviour
                 Instantiate(bombPrefab, transform.position + transform.forward, Quaternion.identity);
                 bombsHeld--;
 
+                NotifyBombPlaced();
+
                 if (bombsHeld < playerStats.maxBombsHeld && regenTimer == 0)
                 {
                     regenTimer = 0.001f;
@@ -72,6 +79,14 @@ public class BombSpawn : MonoBehaviour
             {
                 playerEffects.copperAnimator.ResetTrigger("Bomb");
             }
+        }
+    }
+
+    public void NotifyBombPlaced()
+    {
+        if (bombAmmoBarUI != null)
+        {
+            bombAmmoBarUI.StartUsedPopEffect();
         }
     }
 }

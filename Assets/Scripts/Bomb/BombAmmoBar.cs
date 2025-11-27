@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class BombAmmoBar : MonoBehaviour
 {
-    public List<Image> ammoSegments = new List<Image>(); //list of ammo bar segments to spawn and we can change this to add more or less if we want to balance
+    public List<Image> ammoSegments = new List<Image>();
     public Image regenerationFill;
 
     [Header("Visual Settings")]
@@ -15,9 +16,20 @@ public class BombAmmoBar : MonoBehaviour
     public float unchargedIntensity = 0.5f;
 
     [Tooltip("Alpha value (0.0 to 1.0) for segments that are not yet charged.")]
-    public float emptySegmentAlpha = 0.5f; //transparency in bar so its easier to see the loading bar.
+    public float emptySegmentAlpha = 0.5f;
+
+    [Header("Regen Pop Effect Settings")]
+    public RectTransform bombIconTransform;
+    public float regenPopScale = 1.3f;
+    public float regenPopDuration = 0.15f;
+
+    [Header("Bomb Used Effect Settings")]
+    public float usedPopScale = 0.8f;
+    public float usedPopDuration = 0.1f;
 
     private BombSpawn bombSpawn;
+    private bool popEffectActive = false;
+    private int lastKnownBombCount = 0;
 
     public void Initialize(BombSpawn spawnScript, float maxRegenTime)
     {
@@ -26,62 +38,145 @@ public class BombAmmoBar : MonoBehaviour
         {
             Debug.LogError("bomb ui player max bombs doesnt match ammo segments");
         }
-        UpdateUI(0, 0);
+        lastKnownBombCount = bombSpawn.CurrentBombsHeld;
+        UpdateUI(bombSpawn.CurrentBombsHeld, 0);
     }
 
     void Update()
     {
         if (bombSpawn != null)
         {
-            UpdateUI(bombSpawn.CurrentBombsHeld, bombSpawn.RegenerationProgress);
+            int currentBombs = bombSpawn.CurrentBombsHeld;
+
+            if (currentBombs > lastKnownBombCount)
+            {
+                if (!popEffectActive && bombIconTransform != null)
+                {
+                    StartRegenPopEffect();
+                }
+            }
+
+            UpdateUI(currentBombs, bombSpawn.RegenerationProgress);
+
+            lastKnownBombCount = currentBombs;
         }
     }
 
     private void UpdateUI(int currentBombs, float progress)
     {
-        int maxBombs = bombSpawn.playerStats.maxBombsHeld;
         int maxSegments = ammoSegments.Count;
 
-        //total charge progress
-        float totalMax = (float)maxBombs;
-        float totalChargeProgress = (currentBombs + progress) / totalMax;
-
-        //update ammo segments based on total charge
         for (int i = 0; i < maxSegments; i++)
         {
             Image segment = ammoSegments[i];
 
-            //percentage for segment to be on
-            float segmentThreshold = (float)(i + 1) / totalMax;
-
-            if (totalChargeProgress >= segmentThreshold)
+            if (i < currentBombs)
             {
-                //fully charged
                 segment.color = chargedColor;
+                segment.fillAmount = 1f;
                 segment.material.SetFloat("_EmissionIntensity", fullIntensity);
             }
-            else
-            { //not charged yet
-                Color dimmedColor = emptyColor;
-                dimmedColor.a = emptySegmentAlpha;
-                segment.color = dimmedColor;
 
+            else if (i == currentBombs && currentBombs < maxSegments)
+            {
+                if (progress >= 1f)
+                {
+                    segment.color = chargedColor;
+                    segment.fillAmount = 1f;
+                    segment.material.SetFloat("_EmissionIntensity", fullIntensity);
+                }
+                else
+                {
+                    segment.color = chargingColor;
+                    segment.fillAmount = progress;
+                    segment.material.SetFloat("_EmissionIntensity", unchargedIntensity);
+                }
+            }
+
+            else
+            {
+                Color dimmed = emptyColor;
+                dimmed.a = emptySegmentAlpha;
+
+                segment.color = dimmed;
+                segment.fillAmount = 0f;
                 segment.material.SetFloat("_EmissionIntensity", unchargedIntensity);
             }
         }
+    }
 
-        //update fill
-        if (maxBombs > 0)
+    private void StartRegenPopEffect()
+    {
+        if (bombIconTransform == null) return;
+        popEffectActive = true;
+        StartCoroutine(RegenPopAnimation());
+    }
+
+    private IEnumerator RegenPopAnimation()
+    {
+        Vector3 startScale = bombIconTransform.localScale;
+        Vector3 maxScale = startScale * regenPopScale;
+        float timer = 0f;
+
+        while (timer < regenPopDuration)
         {
-            //scale progress to fill the whole regenerationFill bar from 0 to 1
-            regenerationFill.color = chargingColor;
-            regenerationFill.fillAmount = totalChargeProgress;
-            regenerationFill.enabled = true;
+            timer += Time.deltaTime;
+            float t = timer / regenPopDuration;
+            bombIconTransform.localScale = Vector3.Lerp(startScale, maxScale, t);
+            yield return null;
+        }
+        bombIconTransform.localScale = maxScale;
+
+        timer = 0f;
+
+        while (timer < regenPopDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / regenPopDuration;
+            bombIconTransform.localScale = Vector3.Lerp(maxScale, startScale, t);
+            yield return null;
         }
 
-        if (totalChargeProgress >= 1.0f)
+        bombIconTransform.localScale = startScale;
+        popEffectActive = false;
+    }
+
+    public void StartUsedPopEffect()
+    {
+        if (bombIconTransform == null) return;
+        if (!popEffectActive)
         {
-            regenerationFill.enabled = false;
+            popEffectActive = true;
+            StartCoroutine(UsedPopAnimation());
         }
+    }
+
+    private IEnumerator UsedPopAnimation()
+    {
+        Vector3 startScale = bombIconTransform.localScale;
+        Vector3 maxScale = startScale * usedPopScale;
+        float timer = 0f;
+
+        while (timer < usedPopDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / usedPopDuration;
+            bombIconTransform.localScale = Vector3.Lerp(startScale, maxScale, t);
+            yield return null;
+        }
+        bombIconTransform.localScale = maxScale;
+
+        timer = 0f;
+
+        while (timer < usedPopDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / usedPopDuration;
+            bombIconTransform.localScale = Vector3.Lerp(maxScale, startScale, t);
+            yield return null;
+        }
+
+        bombIconTransform.localScale = startScale;
+        popEffectActive = false;
     }
 }
