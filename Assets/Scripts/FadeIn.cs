@@ -11,6 +11,8 @@ public class FadeIn : MonoBehaviour
     private Color startColor;         // Initial color with alpha set to 1
     private Color targetColor;        // Target color with alpha set to 0
 
+    public AnimationCurve fadeCurve;
+
     void Start()
     {
         // Get the Image component if not assigned
@@ -37,7 +39,11 @@ public class FadeIn : MonoBehaviour
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+
+            float normalizedTime = elapsedTime / fadeDuration;
+            float curvedT = fadeCurve.Evaluate(normalizedTime);
+
+            float alpha = Mathf.Lerp(1f, 0f, curvedT);
             image.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
             yield return null;
         }
