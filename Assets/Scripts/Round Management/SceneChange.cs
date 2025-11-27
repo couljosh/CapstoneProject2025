@@ -64,7 +64,7 @@ public class SceneChange : MonoBehaviour
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
 
-        print(gameHasStarted);
+        //print(gameHasStarted);
     }
 
     IEnumerator CountdownRoutine()
@@ -81,7 +81,7 @@ public class SceneChange : MonoBehaviour
         if (countdownText != null) countdownText.text = "GO!";
 
         gameHasStarted = true;
-        //OnGameStart?.Invoke();
+        OnGameStart?.Invoke();
         StartRoundTimer();
         print(gameHasStarted);
 
