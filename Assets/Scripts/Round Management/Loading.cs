@@ -1,4 +1,6 @@
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,9 +16,12 @@ public class Loading : MonoBehaviour
     public int minInd;
     public int maxInd;
 
+    public LevelRef sceneListSO;
+
+
+
     void Start()
     {
-
         currentScene = SceneManager.GetActiveScene().buildIndex;
         endMatchScene = SceneManager.GetSceneByName("End Match").buildIndex;
 
@@ -25,15 +30,6 @@ public class Loading : MonoBehaviour
     void Update()
     {
         Timer();
-    }
-
-    void LoadNextScene()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-        int chosenInt = Random.Range(minInd, maxInd);
-
-        SceneManager.LoadScene(chosenInt);
     }
 
     public void Timer()
@@ -46,13 +42,21 @@ public class Loading : MonoBehaviour
 
         if (loadingTime <= 0 && currentScene == endMatchScene)
             SceneManager.LoadScene(0);
-        
 
 
 
         if (loadingTime <= 0 && currentScene != endMatchScene)
-            LoadNextScene();
-        
+            LoadRandomScene();
+
+
 
     }
+
+    void LoadRandomScene()
+    {
+        int randInd = Random.Range(0, sceneListSO.sceneList.Count);
+        SceneManager.LoadScene(sceneListSO.sceneList[randInd]);
+    }
 }
+
+

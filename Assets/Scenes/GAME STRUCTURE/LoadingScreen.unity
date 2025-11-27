@@ -484,6 +484,7 @@ MonoBehaviour:
   countdownText: {fileID: 1083252606}
   minInd: 3
   maxInd: 3
+  sceneListSO: {fileID: 11400000, guid: 5cc53b1cfbbeed24f9fbed9e3e98fd50, type: 2}
 --- !u!4 &555857925
 Transform:
   m_ObjectHideFlags: 0
