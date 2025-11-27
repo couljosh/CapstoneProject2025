@@ -766,6 +766,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 7400000, guid: d11e43e98e1da2e48baed2b8cd9f4ca0, type: 2}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 790601752}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: d11e43e98e1da2e48baed2b8cd9f4ca0, type: 2}
+    - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: SceneChange
+      value: 
+      objectReference: {fileID: 1545435590}
     - target: {fileID: 3449333475103283619, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -784,6 +800,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5043526810079851794, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379936365431510490, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: fadeCurve.m_Curve.Array.data[1].tangentMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6504476196288718351, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
@@ -873,6 +949,14 @@ PrefabInstance:
     - target: {fileID: 7603673323010660363, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_FillOrigin
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12196,6 +12280,33 @@ Transform:
   - {fileID: 543464513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783230690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7894860089975858639, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &790601752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &790601755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 195050560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf04d9ce59bb734cb10ee9c5752406e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807655218
 GameObject:
   m_ObjectHideFlags: 0
@@ -16890,6 +17001,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+--- !u!114 &1545435590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+  m_PrefabInstance: {fileID: 1856189221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ac5745bfcd64c46b9bb7880ab79683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564692721
 GameObject:
   m_ObjectHideFlags: 0
@@ -17611,6 +17733,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1782976273}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: countdownText
+      value: 
+      objectReference: {fileID: 783230690}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: dynamiteTimer
+      value: 
+      objectReference: {fileID: 790601755}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: redRepository
       value: 
       objectReference: {fileID: 0}
@@ -17626,6 +17756,10 @@ PrefabInstance:
       propertyPath: blueRepository
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: countdownPanel
+      value: 
+      objectReference: {fileID: 195050564}
     - target: {fileID: 6713519523818572442, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: teamOneWinText
       value: 

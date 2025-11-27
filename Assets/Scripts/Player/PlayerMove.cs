@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     private PlayerDeath playerDeath;
     public int playerNum;
 
-    private KickChargeUI kickChargeUI; //ref to ui component for charge kick
+    private KickChargeUI kickChargeUI;
 
     [Header("Input Variables")]
     public InputActionAsset inputActions;
@@ -46,9 +47,16 @@ public class PlayerMove : MonoBehaviour
     [Header("Controller Variables")]
     private float normalizedRumble;
 
+    private bool canAct = false;
+    public bool shouldCheck = true;
+
 
     private void Awake()
     {
+
+        
+        //SceneChange.OnGameStart += StartPlayerActions;
+
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
         spawnBombAction = inputActions.FindActionMap("Player1").FindAction("Spawn Bomb");
         kickAction = inputActions.FindActionMap("Player1").FindAction("Kick");
@@ -56,8 +64,30 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerEffects = GetComponent<PlayerEffects>();
         playerDeath = GetComponent<PlayerDeath>();
+    }
 
-        // kickChargeBackground.enabled = false; 
+    private void Start()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "Tutorial") //stop player locking when were in tutorial since theres no countdown.
+        {
+            StartPlayerActions();
+            SceneChange.OnGameStart -= StartPlayerActions;
+        }
+
+        //for players spawned halfway into a round
+        if (SceneChange.gameHasStarted)
+            canAct = true;
+    }
+
+    private void OnDestroy()
+    {
+        SceneChange.OnGameStart -= StartPlayerActions;
+    }
+
+    private void StartPlayerActions()
+    {
+        canAct = true;
     }
 
     public void SetKickChargeUI(KickChargeUI ui)
@@ -68,14 +98,14 @@ public class PlayerMove : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (!canAct) { moveAmt = Vector3.zero; return; }
         moveAmt = context.ReadValue<Vector2>();
     }
 
 
-    //Called when the player presses down the kick button
     public void KickPerformed(InputAction.CallbackContext context)
     {
-        if (context.performed && !playerDeath.isPlayerDead)
+        if (context.performed && !playerDeath.isPlayerDead && canAct)
         {
             playerEffects.copperAnimator.SetBool("isCharging", false);
             playerEffects.copperAnimator.SetTrigger("Kick");
@@ -87,10 +117,8 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    //Called when the player releases the kick button
     private void KickCanceled(InputAction.CallbackContext context)
     {
-        //Gamepad.current.SetMotorSpeeds(0, 0);
         RaycastHit playerHit;
         if (Physics.Raycast(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, playerStats.kickDectDist, player, QueryTriggerInteraction.Ignore) ||
             Physics.Raycast(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward), out playerHit, playerStats.kickDectDist, player, QueryTriggerInteraction.Ignore) ||
@@ -130,11 +158,9 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        //reset to normal light length
         playerEffects.KickEffects(1);
         playerEffects.chargingMaxKick = false;
 
-        //reset charge tracking
         chargingKick = false;
         currentKickStrength = 0;
         kickStrengthTimer = 0;
@@ -151,27 +177,28 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (SceneChange.gameHasStarted & shouldCheck)
+        {
+            canAct = true;
+            shouldCheck = false;
+        }
+
+
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
         Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
         Debug.DrawRay(rayStartPosThree.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
 
         if (chargingKick)
         {
-            //kickChargeBackground.enabled = true; // Moved to KickChargeUI.UpdateChargeBar
-
             playerEffects.copperAnimator.SetBool("isCharging", true);
             kickStrengthTimer += Time.deltaTime;
             kickStrengthTimer = Mathf.Clamp(kickStrengthTimer, 0, playerStats.timeToMaxStrength);
 
-            //normalize charge for UI and strength
             float normalizedCharge = kickStrengthTimer / playerStats.timeToMaxStrength;
 
             currentKickStrength = playerStats.initialKickStrength * (playerStats.maximumKickMultiplier * normalizedCharge);
 
             playerEffects.KickEffects(normalizedCharge);
-
-            //normalizedRumble = ((currentKickStrength / 2 - 0) / ((initialKickStrength * maximumKickMultiplier) - 0)) / 10;
-            //Gamepad.current.SetMotorSpeeds(normalizedRumble, normalizedRumble);
 
             if (kickChargeUI != null)
             {
@@ -204,7 +231,7 @@ public class PlayerMove : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (!playerDeath.isPlayerDead)
+        if (!playerDeath.isPlayerDead && canAct)
         {
             Move(moveAmt);
         }
@@ -217,7 +244,6 @@ public class PlayerMove : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
-        //progressively dampen move speed by charging a kick
         if (kickStrengthTimer > playerStats.timeBeforePlayerSlowWhenCharge && chargingKick)
         {
             finalMoveSpeed = playerStats.initialMoveSpeed - (playerStats.initialMoveSpeed * (kickStrengthTimer / playerStats.timeToMaxStrength));
@@ -240,16 +266,11 @@ public class PlayerMove : MonoBehaviour
 
         }
         Debug.DrawLine(transform.localPosition, new Vector3(transform.localPosition.x, transform.localPosition.y - transform.localScale.y, transform.localPosition.z));
-        
-        //simulate gravity
 
-        //if there is no floor directly below
         if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, transform.localScale.y, floor))
         {
-            //if there is no floor way below
-            if(!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
+            if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
             {
-                //fall with coyote time
                 coyoteTimer += Time.deltaTime;
 
                 if (coyoteTimer > playerStats.coyoteTimeThreshold)
@@ -259,17 +280,16 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                //just fall regularly, as its just a terrain divot
                 coyoteTimer = 0;
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity * 3, rb.linearVelocity.z);
             }
 
-            
+
         }
         else
         {
             coyoteTimer = 0;
         }
-        
+
     }
 }

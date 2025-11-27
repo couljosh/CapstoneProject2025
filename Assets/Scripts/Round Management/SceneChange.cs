@@ -6,10 +6,19 @@ using Unity.VisualScripting;
 //using UnityEditor.Compilation;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 public class SceneChange : MonoBehaviour
 {
+    public static bool gameHasStarted;
+
+    public static event System.Action OnGameStart;
+    public bool canRunTimer = false;
+
+    [Header("Countdown UI")]
+    public TextMeshProUGUI countdownText;
 
     [Header("Round Customization")]
     public float roundTime;
@@ -29,6 +38,7 @@ public class SceneChange : MonoBehaviour
     public Image overtimeBarR;
 
     public TextMeshProUGUI timerText;
+    public dynamiteTimer dynamiteTimer;
     public bool pointsAdded;
     public bool isTimeOut;
     public bool isOvertime;
@@ -38,17 +48,63 @@ public class SceneChange : MonoBehaviour
     public RepositoryLogic repositoryLogicScript;
 
 
+    private void Awake()
+    {
+        //needs to be in awake, as players calculate if they can act on start
+        gameHasStarted = false;
+    }
+
     void Start()
     {
-       
+        
+
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        int initialMin = Mathf.FloorToInt(roundTime / 60);
+        int initialSec = Mathf.FloorToInt(roundTime % 60);
+        if (timerText != null)
+            timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
+
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
 
-        //  repoMoveSystemScript = GameObject.Find("MoveableRepository").GetComponent<RepositoryLogic>();
-
+        StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
+
+        //print(gameHasStarted);
     }
 
+    IEnumerator CountdownRoutine()
+    {
+
+        int count = 3;
+        while (count > 0)
+        {
+            if (countdownText != null) countdownText.text = count.ToString();
+            yield return new WaitForSeconds(1f);
+            count--;
+        }
+
+        if (countdownText != null) countdownText.text = "GO!";
+
+        gameHasStarted = true;
+        OnGameStart?.Invoke();
+        StartRoundTimer();
+
+
+        yield return new WaitForSeconds(0.7f);
+        countdownText.gameObject.SetActive(false);
+    }
+
+    private void StartRoundTimer()
+    {
+        canRunTimer = true;
+        if (dynamiteTimer != null)
+        {
+            dynamiteTimer.SendMessage("StartAnimation");
+        }
+
+    }
 
     void Update()
     {
@@ -60,7 +116,7 @@ public class SceneChange : MonoBehaviour
             redScore.text = redRoundTotal.ToString();
             blueScore.text = blueRoundTotal.ToString();
         }
-        
+        if (!canRunTimer) return;
 
         //Timer Counts down
         roundTime -= Time.deltaTime;
@@ -88,7 +144,7 @@ public class SceneChange : MonoBehaviour
         }
 
 
-        if (isTimeOut)
+        if (isTimeOut && !pointsAdded)
         {
             roundTime = 0.1f;
 
@@ -119,7 +175,7 @@ public class SceneChange : MonoBehaviour
 
         }
 
-        if (overtimeElapsed <= 0)
+        if (overtimeElapsed <= 0 && !pointsAdded)
         {
             checkScore();
         }

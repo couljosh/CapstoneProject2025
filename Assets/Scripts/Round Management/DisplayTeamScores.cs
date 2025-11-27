@@ -29,9 +29,6 @@ public class DisplayTeamScores : MonoBehaviour
         //USE IF SCORE SHOULD RESUME COUNTING INSTEAD OF STARTING AT 0 TO COUNT UP
         // countUpRed = GameScore.redScoreBeforeRound;
         // countUpBlue = GameScore.blueScoreBeforeRound;
-
-        print("higher score "+higherScore);
-        print("countupSpeed "+countUpSpeed);
     }
 
     private void Update()

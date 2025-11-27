@@ -28,6 +28,7 @@ public class CartContact : MonoBehaviour
 
     private void Start()
     {
+        
         Invoke("ClearStartingArea", 0.1f);
 
     }
@@ -37,6 +38,7 @@ public class CartContact : MonoBehaviour
 
         if(collision.gameObject.tag == "ActiveTerrain" && rb.linearVelocity.magnitude > terrainThreshold)
         {
+            
             collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
             rb.linearVelocity = rb.linearVelocity * (1 - terrainSpeedReduction/100);
         }
@@ -46,7 +48,6 @@ public class CartContact : MonoBehaviour
             || !isForwardOne && !minecartMovementScript.isForward)
             || collision.gameObject.tag == "ObjectDestroyer" && isPowered)
         {
-            print("HIT");
             collision.gameObject.GetComponent<PlayerDeath>().PlayerDie();
             rb.linearVelocity = rb.linearVelocity * (1 - playerSpeedReduction / 100);
             
@@ -55,6 +56,7 @@ public class CartContact : MonoBehaviour
 
     void ClearStartingArea()
     {
+        
         Instantiate(startingPocket, transform.position, Quaternion.identity);
 
     }

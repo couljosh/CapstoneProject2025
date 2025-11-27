@@ -10,7 +10,7 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject kickChargeUIPrefab;
 
     [Header("Bomb Ammo UI")]
-    public GameObject bombAmmoBarPrefab; //base prefab which has all the content of the ammo bar to instantiate on the player.
+    public GameObject bombAmmoBarPrefab;
 
     [Header("UI Canvas & Offset")]
     public Canvas mainCanvas;
@@ -53,9 +53,8 @@ public class PlayerUIManager : MonoBehaviour
                 Destroy(kickUIInstance);
             }
         }
-        //Debug.Log("test bomb")
 
-        //bomb ammo bar 
+        //bomb ammo bar
         if (bombAmmoBarPrefab != null && bombSpawn != null)
         {
             GameObject bombUIInstance = Instantiate(bombAmmoBarPrefab, mainCanvas.transform);
@@ -63,7 +62,9 @@ public class PlayerUIManager : MonoBehaviour
 
             if (ammoBar != null)
             {
+                //initialize the UI bar
                 ammoBar.Initialize(bombSpawn, bombSpawn.playerStats.bombRegenTime);
+                bombSpawn.bombAmmoBarUI = ammoBar;
 
                 SetupWorldToScreen(bombUIInstance, playerObject.transform, this.screenHeightOffsetValue + 0.03f);
             }

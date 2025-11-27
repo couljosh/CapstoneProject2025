@@ -10,7 +10,7 @@ public class RepoMoveSystem : MonoBehaviour
     public GameObject[] repoSpawnNodes;
     public GameObject currentLoc;
     private TerrainBlast terrainBlastScript;
-    public DynamicCameraFollow dynamicCamera; //dynamic camera script ref for adding and removing repo from it
+    public DynamicCameraFollow dynamicCamera;
 
     [Header("Repository Customization")]
     public float activeDuration;
@@ -39,33 +39,41 @@ public class RepoMoveSystem : MonoBehaviour
     public bool isSwitching;
     public bool depositComplete = false;
     private bool retractStarted = false;
+    private bool isGameActive = false;
 
+    private void Awake()
+    {
+        SceneChange.OnGameStart += StartRepoSystem;
+    }
 
-
-
-
-
+    private void OnDestroy()
+    {
+        //unsubscribe from the event to prevent missing exception error
+        SceneChange.OnGameStart -= StartRepoSystem;
+    }
 
     void Start()
     {
-        //dynamicCamera = Camera.main.GetComponent<DynamicCameraFollow>();
-
-        // SYSTEM SETUP //---------------------------------------------------------------------------------------
         //Find All Nodes
         repoSpawnNodes = GameObject.FindGameObjectsWithTag("RepoSpawn");
 
-        terrainBlastScript = repository.GetComponent<TerrainBlast>();  
+        terrainBlastScript = repository.GetComponent<TerrainBlast>();
 
         //Ensure repo disabled
         repository.GetComponent<RepositoryLogic>().DisableRepo();
+    }
 
-        //Find first spot
+    private void StartRepoSystem()
+    {
+        // This method is called when the countdown 
+        isGameActive = true;
         Invoke("FindNewSpot", delayBeforeFirstActive);
     }
 
 
     private void Update()
     {
+        if (!isGameActive) return; //pauses logic until the game starts
 
         // Lower Check //---------------------------------------------------------------------------------------
         elaspedTime += Time.deltaTime;
@@ -77,16 +85,16 @@ public class RepoMoveSystem : MonoBehaviour
 
             Animator anim = repository.GetComponent<RepositoryLogic>().repoAnimation;
 
-            if (!retractStarted) //check to make sure retract anim has not started
+            if (!retractStarted)
             {
                 Debug.Log("retract starting");
                 retractStarted = true;
-                anim.SetBool("Appear", false); //retract animation play
+                anim.SetBool("Appear", false);
                 anim.SetBool("Retract", true);
-                
+
             }
 
-            AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); //access current progress of repo animation
+            AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 
             if (info.IsName("Repo Dissapear") && info.normalizedTime >= 1f)
             {
@@ -98,7 +106,7 @@ public class RepoMoveSystem : MonoBehaviour
         {
             loweringElapsedTime = 0;
             lowerLerpT = 0;
-            retractStarted = false; //reset for next animation.
+            retractStarted = false;
             isLowering = false;
         }
 
@@ -119,13 +127,6 @@ public class RepoMoveSystem : MonoBehaviour
             raisingElapsedTime = 0;
             raiseLerpT = 0;
         }
-
-        //if (elaspedTime >= (activeDuration - timeLeftWhenAlarm))
-        //{
-        //    repository.GetComponent<RepositoryLogic>().repoAlarm.SetActive(true);
-        //}
-
-
     }
 
 
@@ -151,7 +152,6 @@ public class RepoMoveSystem : MonoBehaviour
         repository.GetComponent<RepositoryLogic>().repoAnimation.SetBool("Retract", false);
 
         raisedPos = currentLoc.transform.position + new Vector3(0, raiseOffset, 0);
-        //Raise Location
 
         if (raisingElapsedTime < raiseDuration)
         {
@@ -159,7 +159,7 @@ public class RepoMoveSystem : MonoBehaviour
 
             raiseLerpT = raisingElapsedTime / raiseDuration;
 
-           repository.transform.position = Vector3.Lerp(currentLoc.transform.position, raisedPos, raiseLerpT);
+            repository.transform.position = Vector3.Lerp(currentLoc.transform.position, raisedPos, raiseLerpT);
 
         }
         else
@@ -168,7 +168,7 @@ public class RepoMoveSystem : MonoBehaviour
             raisingElapsedTime = 0;
             isRaising = false;
             terrainBlastScript.isFinishedClearing = false;
-            repository.GetComponent<RepositoryLogic>().ActivateRepo();    
+            repository.GetComponent<RepositoryLogic>().ActivateRepo();
 
         }
 
@@ -181,20 +181,18 @@ public class RepoMoveSystem : MonoBehaviour
     // Lowering & Deactivating //---------------------------------------------------------------------------------------
     void LowerRepo()
     {
-        //Deactivate it 
 
         //Raise Location
         if (loweringElapsedTime < raiseDuration)
         {
             loweringElapsedTime += Time.deltaTime;
 
-            
+
             lowerLerpT = loweringElapsedTime / raiseDuration;
-            //print(loweringElapsedTime);
             repository.transform.position = Vector3.Lerp(raisedPos, currentLoc.transform.position, lowerLerpT);
 
         }
-        else if(!isSwitching)
+        else if (!isSwitching)
         {
             isSwitching = true;
             depositComplete = false;

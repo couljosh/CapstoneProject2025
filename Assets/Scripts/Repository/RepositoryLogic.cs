@@ -361,14 +361,16 @@ public class RepositoryLogic : MonoBehaviour
 
         if (score.isOvertime)
         {
-            score.checkScore();
+            if (!score.pointsAdded)
+            {
+                score.checkScore();
+            }
         }
         else
         {
             repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
         }
-
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
