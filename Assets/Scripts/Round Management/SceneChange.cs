@@ -90,7 +90,6 @@ public class SceneChange : MonoBehaviour
         gameHasStarted = true;
         OnGameStart?.Invoke();
         StartRoundTimer();
-        print(gameHasStarted);
 
 
         yield return new WaitForSeconds(0.7f);

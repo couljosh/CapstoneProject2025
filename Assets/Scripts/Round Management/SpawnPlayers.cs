@@ -29,7 +29,7 @@ public class SpawnPlayers : MonoBehaviour
             {
                 if (p.gameObject == this.gameObject)
                 {
-                    break;
+                    Destroy(this.gameObject);
                 }
                 else
                 {
@@ -39,8 +39,8 @@ public class SpawnPlayers : MonoBehaviour
                 }
                     
             }
- 
-            Destroy(this.gameObject);
+
+            
         }
             
         else //this is the only one, make it the main

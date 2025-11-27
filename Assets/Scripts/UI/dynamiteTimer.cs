@@ -18,10 +18,8 @@ public class dynamiteTimer : MonoBehaviour
         lengthOfAnim = clip.length;
         
         time = SceneChange.roundTime;
-        print(time);
 
         speedMulitplier =  lengthOfAnim / time;
-        print(speedMulitplier);
 
         animator.SetFloat("speedMulitplier", speedMulitplier);
     }
