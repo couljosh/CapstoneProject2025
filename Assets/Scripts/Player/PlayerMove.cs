@@ -54,8 +54,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
 
-        if (SceneChange.gameHasStarted)
-            canAct = true;
+        
         //SceneChange.OnGameStart += StartPlayerActions;
 
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
@@ -75,6 +74,10 @@ public class PlayerMove : MonoBehaviour
             StartPlayerActions();
             SceneChange.OnGameStart -= StartPlayerActions;
         }
+
+        //for players spawned halfway into a round
+        if (SceneChange.gameHasStarted)
+            canAct = true;
     }
 
     private void OnDestroy()

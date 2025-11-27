@@ -48,9 +48,16 @@ public class SceneChange : MonoBehaviour
     public RepositoryLogic repositoryLogicScript;
 
 
+    private void Awake()
+    {
+        //needs to be in awake, as players calculate if they can act on start
+        gameHasStarted = false;
+    }
 
     void Start()
     {
+        
+
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         int initialMin = Mathf.FloorToInt(roundTime / 60);
