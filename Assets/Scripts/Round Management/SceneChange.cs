@@ -131,7 +131,7 @@ public class SceneChange : MonoBehaviour
         }
 
 
-        if (isTimeOut)
+        if (isTimeOut && !pointsAdded)
         {
             roundTime = 0.1f;
 
@@ -162,7 +162,7 @@ public class SceneChange : MonoBehaviour
 
         }
 
-        if (overtimeElapsed <= 0)
+        if (overtimeElapsed <= 0 && !pointsAdded)
         {
             checkScore();
         }
