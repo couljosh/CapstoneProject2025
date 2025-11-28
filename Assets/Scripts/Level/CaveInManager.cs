@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.TerrainUtils;
 using UnityEngine.Tilemaps;
+using FMODUnity;
+
 public class CaveInManager : MonoBehaviour
 {
     [Header("References")]
@@ -39,7 +41,7 @@ public class CaveInManager : MonoBehaviour
     public int gemVeritcalOffset;
     public int gemSpawnLimit;
 
-
+    public EventReference caveInNotif;
 
     private ReadOnlyArray<Gamepad> gamepadArray;
 
@@ -75,6 +77,7 @@ public class CaveInManager : MonoBehaviour
 
                 emission.enabled = true;
                 cameraShake.CallShake();
+                RuntimeManager.PlayOneShot(caveInNotif);
 
                 //cameraShake.caveinVFX.enableEmission = true;
                 cameraShake.caveinVFX.Clear();

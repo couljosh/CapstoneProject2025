@@ -15790,6 +15790,13 @@ MonoBehaviour:
   chanceToSpawnGemPerTile: 3
   gemVeritcalOffset: 0
   gemSpawnLimit: 2
+  caveInNotif:
+    Guid:
+      Data1: -1205898802
+      Data2: 1166208915
+      Data3: 895209894
+      Data4: 1535286940
+    Path: event:/SFX_CaveIns/Cave-InsSignifier
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0
