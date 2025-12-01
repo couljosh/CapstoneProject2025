@@ -22,13 +22,13 @@ public class DisplayTeamScores : MonoBehaviour
         higherScore = Mathf.Max(GameScore.redTotalScore, GameScore.blueTotalScore);
         countUpSpeed = higherScore / (loadingScript.loadingTime - secAfterScoreFinishedCounting);
 
-        countUpRed = 0;
-        countUpBlue = 0;
+        //countUpRed = 0;
+        //countUpBlue = 0;
 
 
         //USE IF SCORE SHOULD RESUME COUNTING INSTEAD OF STARTING AT 0 TO COUNT UP
-        // countUpRed = GameScore.redScoreBeforeRound;
-        // countUpBlue = GameScore.blueScoreBeforeRound;
+         countUpRed = GameScore.redScoreBeforeRound;
+         countUpBlue = GameScore.blueScoreBeforeRound;
     }
 
     private void Update()
