@@ -72,7 +72,7 @@ public class RepositoryLogic : MonoBehaviour
     public LayerMask kickable;
 
     [Header("Sound Variables")]
-    public EventReference depositRef;
+    //public EventReference depositRef;
     private FMOD.Studio.EventInstance instance;
     FMOD.Studio.PLAYBACK_STATE playBackState;
 
@@ -104,7 +104,7 @@ public class RepositoryLogic : MonoBehaviour
         repoAlarm.SetActive(false);
 
         //Sound References
-        instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
+        //instance = FMODUnity.RuntimeManager.CreateInstance(depositRef);
 
         //Deposit Display Reference
         scoreDisplay = GetComponent<DepositScoreDisplay>();
@@ -286,7 +286,7 @@ public class RepositoryLogic : MonoBehaviour
             teamlastDepo = 1;
 
             //Deposit Sound Trigger
-            ConditionalSoundTrigger();
+            //ConditionalSoundTrigger();
         }
         else
         {
@@ -306,7 +306,7 @@ public class RepositoryLogic : MonoBehaviour
             teamlastDepo = 2;
 
             //Deposit Sound Trigger
-            ConditionalSoundTrigger();
+            //ConditionalSoundTrigger();
         }
         else
         {
@@ -377,6 +377,7 @@ public class RepositoryLogic : MonoBehaviour
 
         //play complete deposit noise
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Repository/Deposit", gameObject.transform.position);
+        print("reached");
 
     }
 
@@ -433,26 +434,26 @@ public class RepositoryLogic : MonoBehaviour
     }
 
 
-    void ConditionalSoundTrigger()
-    {
-        bool isPaused;
-        RESULT r = instance.getPaused(out isPaused);
-        {
-            if (r == RESULT.OK)
-                //Sound for same team
-                if (isPaused && teamlastDepo == singleCheck)
-                {
-                    instance.setPaused(false);
-                }
+    //void ConditionalSoundTrigger()
+    //{
+    //    bool isPaused;
+    //    RESULT r = instance.getPaused(out isPaused);
+    //    {
+    //        if (r == RESULT.OK)
+    //            //Sound for same team
+    //            if (isPaused && teamlastDepo == singleCheck)
+    //            {
+    //                instance.setPaused(false);
+    //            }
 
-            //Sound for new team
-            if (teamlastDepo != singleCheck)
-            {
-                PlaySound();
+    //        //Sound for new team
+    //        if (teamlastDepo != singleCheck)
+    //        {
+    //            PlaySound();
 
-            }
-        }
-    }
+    //        }
+    //    }
+    //}
 
 
     void PlaySound()
