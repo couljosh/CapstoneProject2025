@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class TutorialReadyManager : MonoBehaviour
@@ -21,8 +22,12 @@ public class TutorialReadyManager : MonoBehaviour
     private bool isPlayer3Ready;
     private bool isPlayer4Ready;
 
+    private int readyPlayers = 0;
+    private int playersConnected;
+
     public void ReadyUp(int playerNumber)
     {
+        //for displaying ready text
         switch (playerNumber)
         {
             case 1:
@@ -49,21 +54,20 @@ public class TutorialReadyManager : MonoBehaviour
                 isPlayer4Ready = true;
                 break;
         }
+
+        readyPlayers++;
     }
+
+
 
     private void Update()
     {
-        if (isPlayer1Ready && isPlayer2Ready && isPlayer3Ready && isPlayer4Ready)
+        playersConnected = Gamepad.all.Count;
+
+        if (readyPlayers >= playersConnected)
         {
             StartCoroutine(SceneChange());
         }
-
-        //testing
-        //if(isPlayer1Ready)
-        //{
-        //    StartCoroutine(SceneChange());
-        //}
-
     }
 
     public IEnumerator SceneChange()
