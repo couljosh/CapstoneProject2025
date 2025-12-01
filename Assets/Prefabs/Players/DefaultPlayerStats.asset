@@ -28,7 +28,7 @@ MonoBehaviour:
   maxBombsHeld: 2
   bombRegenTime: 4
   bombUseCooldown: 1
-  invincibleDuration: 6
+  invincibleDuration: 3
   respawnDelay: 3
   scatterForce: 1000
   gemDropDelay: 0.2
