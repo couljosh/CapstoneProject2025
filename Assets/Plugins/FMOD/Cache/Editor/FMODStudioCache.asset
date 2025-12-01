@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &-264101460343857691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Repository/ContestedDeposit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Repository/ContestedDeposit
+  Guid:
+    Data1: 1607309137
+    Data2: 1328155938
+    Data3: -1194546532
+    Data4: 1381449057
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 720
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,13 +122,14 @@ MonoBehaviour:
   - {fileID: 8836055996504602524}
   - {fileID: 7670074819231782021}
   - {fileID: 5631061487975166481}
+  - {fileID: -264101460343857691}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 639001999053053448
+  cacheTime: 639002102225154215
   SerializableEventsDict:
   - key: event:/SFX_Repository/Deposit
     index: 0
@@ -113,6 +141,8 @@ MonoBehaviour:
     index: 3
   - key: event:/Scores/Scores_Intermissions
     index: 4
+  - key: event:/SFX_Repository/ContestedDeposit
+    index: 5
 --- !u!114 &148110947907540480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,10 +158,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639001999053021902
+  lastModified: 639002102225129123
   FileSizes:
   - Name: Desktop
-    Value: 199680
+    Value: 209984
   Exists: 1
 --- !u!114 &1159516551155496074
 MonoBehaviour:
@@ -202,10 +232,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639001999053053448
+  lastModified: 639002102225154215
   FileSizes:
   - Name: Desktop
-    Value: 1020
+    Value: 1078
   Exists: 1
 --- !u!114 &7670074819231782021
 MonoBehaviour:

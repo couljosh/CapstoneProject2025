@@ -267,6 +267,10 @@ public class RepositoryLogic : MonoBehaviour
             //Saves last team to determine what happens when deposit sound is played again
             instance.setPaused(true);
             singleCheck = teamlastDepo;
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Repository/ContestedDeposit", gameObject.transform.position);
+
+
         }
         else
         {
