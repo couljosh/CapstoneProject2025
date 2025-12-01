@@ -385,7 +385,7 @@ public class RepositoryLogic : MonoBehaviour
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
         isContested = false;
-        isEmpty = false;
+        isEmpty = true;
 
         depositor = null;
         enteredPlayersTeam1.Clear();
