@@ -44,10 +44,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 20
-  m_Range: 5
+  m_Intensity: 100
+  m_Range: 2
   m_SpotAngle: 90.0395
-  m_InnerSpotAngle: 21.80208
+  m_InnerSpotAngle: 89.96088
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -701,6 +701,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   chargingKick: 0
+  shouldCheck: 1
 --- !u!114 &-8130815133573332991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
+  bombAmmoBarUI: {fileID: 0}
   regenTimer: 0
   bombRad: 0
   terrainMask:
