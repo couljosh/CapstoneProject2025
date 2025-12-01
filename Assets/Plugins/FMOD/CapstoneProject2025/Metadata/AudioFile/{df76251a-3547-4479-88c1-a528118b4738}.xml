@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{d983e984-25a7-4ec8-b8ee-fadb5090be73}">
+	<object class="AudioFile" id="{df76251a-3547-4479-88c1-a528118b4738}">
 		<property name="assetPath">
-			<value>Bombs/SXF_BombExplosion_OneShot.wav</value>
+			<value>Bombs/SFX_Explosion_OneShot.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.88922902494331069</value>
+			<value>1.1946485260770976</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{a1e3bdfc-6836-4ba6-a9b6-7be658ffccde}</destination>

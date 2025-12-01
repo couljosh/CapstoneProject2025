@@ -25,6 +25,12 @@ public class DisplayTeamScores : MonoBehaviour
         //countUpRed = 0;
         //countUpBlue = 0;
 
+        //play countdown noise
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Scores/Scores_Intermissions", gameObject.transform.position);
+
+
+
+
 
         //USE IF SCORE SHOULD RESUME COUNTING INSTEAD OF STARTING AT 0 TO COUNT UP
          countUpRed = GameScore.redScoreBeforeRound;

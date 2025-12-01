@@ -374,6 +374,10 @@ public class RepositoryLogic : MonoBehaviour
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
+
+        //play complete deposit noise
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Repository/Deposit", gameObject.transform.position);
+
     }
 
 

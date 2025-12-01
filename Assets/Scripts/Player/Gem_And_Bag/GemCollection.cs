@@ -82,6 +82,9 @@ public class GemCollection : MonoBehaviour
                 GemCollected();
                 isCollecting = false;
                 elapsedTime = 0;
+
+                //play gem collection noise
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Gems/GemsCollection", gameObject.transform.position );
             }
         }
     }

@@ -75,7 +75,7 @@ public class BombExplode : MonoBehaviour
         Collider[] objectsDec = Physics.OverlapSphere(transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
         Explode(objectsDec);
 
-        RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplode");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
 
         GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
         
