@@ -1414,8 +1414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingTime: 10
   countdownText: {fileID: 1298221073}
-  minInd: 7
-  maxInd: 7
   sceneListSO: {fileID: 11400000, guid: d2f44f92f72736b4caa1df2abd69dcb0, type: 2}
 --- !u!1 &1163414039 stripped
 GameObject:

@@ -7,6 +7,7 @@ public class GameScore : MonoBehaviour
 
     public static int redTotalScore;
     public static int blueTotalScore;
+
     public static int roundNum;
 
     public static int redScoreBeforeRound;
@@ -16,7 +17,6 @@ public class GameScore : MonoBehaviour
     {
         redTotalScore += AddedRedPoints;
         blueTotalScore += AddedBluePoints;
-        roundNum++;
     }
 
     public static void ResetScore()

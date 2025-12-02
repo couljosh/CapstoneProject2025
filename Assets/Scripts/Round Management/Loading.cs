@@ -13,12 +13,7 @@ public class Loading : MonoBehaviour
     private int currentScene;
     private int endMatchScene;
 
-    public int minInd;
-    public int maxInd;
-
     public LevelRef sceneListSO;
-
-
 
     void Start()
     {

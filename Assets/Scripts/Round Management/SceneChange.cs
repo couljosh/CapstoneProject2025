@@ -55,8 +55,14 @@ public class SceneChange : MonoBehaviour
     }
 
     void Start()
-    {
-        
+    {      
+        GameScore.redScoreBeforeRound = GameScore.redTotalScore;
+        GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
+
+        GameScore.roundNum++;
+
+        print("Red" + GameScore.redScoreBeforeRound);
+        print("Blue" + GameScore.blueScoreBeforeRound);
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -64,9 +70,7 @@ public class SceneChange : MonoBehaviour
         int initialSec = Mathf.FloorToInt(roundTime % 60);
         if (timerText != null)
             timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
-
-        GameScore.redScoreBeforeRound = GameScore.redTotalScore;
-        GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
+ 
 
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
@@ -197,7 +201,21 @@ public class SceneChange : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if(GameScore.roundNum == 1)
+        {
+            SceneManager.LoadScene("Intermission_1");
+
+        } else if(GameScore.roundNum == 2)
+        {
+            SceneManager.LoadScene("Intermission_2");
+        }
+        else if (GameScore.roundNum == 3)
+        {
+            SceneManager.LoadScene("End Match");
+        }
+
+
 
     }
 }
