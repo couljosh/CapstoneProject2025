@@ -9,8 +9,8 @@ public class SpawnPlayers : MonoBehaviour
     public InputActionAsset inputActions;
     public PlayerInputManager playerInputManager;
     public GameObject[] Players;
-    private InputDevice[] currentInputDevices = new InputDevice[3];
-    private GameObject[] currentPlayers = new GameObject[3];
+    private InputDevice[] currentInputDevices = new InputDevice[4];
+    private GameObject[] currentPlayers = new GameObject[4];
 
     public float respawnDelay;
 
@@ -62,10 +62,11 @@ public class SpawnPlayers : MonoBehaviour
         currentPlayerCount = Gamepad.all.Count;
         foreach (var gamePad in Gamepad.all)
         {
-            //print(i);
+
             PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
             currentInputDevices[i] = gamePad;
             currentPlayers[i] = newPlayerInput.gameObject;
+            print(currentPlayers[i].gameObject);
 
             if (uiManager != null)
             {
