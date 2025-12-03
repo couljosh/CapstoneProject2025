@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4568528c37858f247b83ae99b6d3f7bb
+guid: 599de2a449bd4924ca713279cb90758f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,183 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Controller_Ui_0
+      name: Joystick_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6207fbdc161a4414d87150bdafe3b725
+      internalID: -540227316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb520283006c1448b0c74897ac97ea5
+      internalID: -931914282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e497a5426f8d24c8c0a7d68e970834
+      internalID: -372380550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322967811d29eba4597dab7aff44a0a5
+      internalID: -1998604560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ab492b4a56a4a44b56f5b729f6febf
+      internalID: 1169953304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc927c5ea3596bc478477c33757f2808
+      internalID: -751740371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4328523d0e5594794013e5e9c9d246
+      internalID: 521062166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b42bb7ecb8eed14888f967df8af76be
+      internalID: -1770688847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joystick_8
       rect:
         serializedVersion: 2
         x: 0
@@ -138,14 +314,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af7d72f290f9f92469c7fe28523bb740
-      internalID: 1935273968
+      spriteID: 0a98f380544ed614bbf1fcd1618a9c54
+      internalID: -1095535036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Controller_Ui_1
+      name: Joystick_9
       rect:
         serializedVersion: 2
         x: 1920
@@ -160,74 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61934ac359cea748a291f87eba6cebb
-      internalID: 1855377905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Controller_Ui_2
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8254d748b6f8884eab837c1ac4ded37
-      internalID: -288189838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Controller_Ui_3
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 416f8776d35a97243ab3df2111b2879b
-      internalID: -1265604321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Controller_Ui_4
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80ccf16b6af48f14b99281360bf35888
-      internalID: -30385863
+      spriteID: 1e5abd895502eb74e9c943fb0744398c
+      internalID: 1774481790
       vertices: []
       indices: 
       edges: []
@@ -236,7 +346,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 40f3f8f54775d9542aabf68a27a7941f
+    spriteID: 5dfdeb839f738e542a1a1094a53382e9
     internalID: 0
     vertices: []
     indices: 
@@ -246,11 +356,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Controller_Ui_0: 1935273968
-      Controller_Ui_1: 1855377905
-      Controller_Ui_2: -288189838
-      Controller_Ui_3: -1265604321
-      Controller_Ui_4: -30385863
+      Joystick_0: -540227316
+      Joystick_1: -931914282
+      Joystick_2: -372380550
+      Joystick_3: -1998604560
+      Joystick_4: 1169953304
+      Joystick_5: -751740371
+      Joystick_6: 521062166
+      Joystick_7: -1770688847
+      Joystick_8: -1095535036
+      Joystick_9: 1774481790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
