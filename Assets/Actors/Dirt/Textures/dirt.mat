@@ -34,13 +34,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: dirt
-  m_Shader: {fileID: -6465566751694194690, guid: 5c42c2ae10c4d04408993ab15da9c222, type: 3}
+  m_Shader: {fileID: 4800000, guid: cf5b62ed8d6b8a84da84b77c581f6fd3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - NORMAL_MAP_ON
   - OCCLUSION_MAP_ON
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,6 +52,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AOTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 4f0bdb726e535e94f9cb0874e19d4098, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -101,7 +105,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3eb35242edfda2e458f4a87e4720d189, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -116,6 +120,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ReflectionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -125,6 +133,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -176,9 +188,11 @@ Material:
     - Vector1_e19bf69058e74e1f9a57f2f04a3a4fc6: 0.1
     - Vector1_e81e93dccf984c4ea733b396432756dd: 1
     - Vector1_fa9c479eb4544cceae07165a8a72b81b: 0.3
+    - _AOStrength: 0.5
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _AmbientIntensity: 1
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
@@ -200,6 +214,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HalfLambertBias: 0.455
+    - _HalfLambertScale: 0.63
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 9.46
@@ -208,15 +224,19 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionMaskWithRim: 0
+    - _RimPower: 5.18
     - _Rim_Intensity: 4.9
     - _Saturation: 0.41
     - _Smoothness: 0.28
     - _SmoothnessTextureChannel: 0
+    - _SpecIntensity: 0.18
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _UVSec: 0
+    - _WarpPower: 3.14
+    - _WarpWeight: 0.554
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -227,10 +247,12 @@ Material:
     - Color_C62668C6: {r: 0, g: 0, b: 0, a: 1}
     - Color_D6CD8104: {r: 1, g: 1, b: 1, a: 1}
     - Color_D9A456B0: {r: 0.9150943, g: 0.7985493, b: 0.80200815, a: 0}
+    - _AmbientColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
     - _BaseColor: {r: 0.5471698, g: 0.46715912, b: 0.46715912, a: 1}
-    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.6037736, g: 0.12815951, b: 0.18960702, a: 0.75}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
