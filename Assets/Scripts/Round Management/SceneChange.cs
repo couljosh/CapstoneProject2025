@@ -123,9 +123,16 @@ public class SceneChange : MonoBehaviour
         if (!canRunTimer) return;
 
         //Timer Counts down
-        roundTime -= Time.deltaTime;
+        if(roundTime > 0.1f)
+        {
+            roundTime -= Time.deltaTime;
+        }
+        else
+        {
+            roundTime = 0f;
+        }
 
-        int min = Mathf.FloorToInt(roundTime / 60);
+            int min = Mathf.FloorToInt(roundTime / 60);
         int sec = Mathf.FloorToInt(roundTime % 60);
 
         if(timerText != null)
@@ -141,8 +148,7 @@ public class SceneChange : MonoBehaviour
             timerText.color = Color.red;
         }
 
-
-        if (roundTime < 1 && !pointsAdded) //change this to when the game is finished.
+        if (roundTime == 0 && !pointsAdded) //change this to when the game is finished.
         {
             isTimeOut = true;
         }
@@ -150,7 +156,6 @@ public class SceneChange : MonoBehaviour
 
         if (isTimeOut && !pointsAdded)
         {
-            roundTime = 0.1f;
 
             if (repositoryLogicScript.isEmpty && !isOvertime)
             {
