@@ -1,4 +1,4 @@
-﻿Shader "Toon/TF2_URP_Illustrative_Fixed_Normal"
+﻿Shader "Toon/TF2_URP_Illustrative_Stylized"
 {
     Properties
     {
@@ -8,7 +8,6 @@
         _SpecGlossRimMask("Spec(R) Gloss(G) RimMask(B)", 2D) = "white" {}
         _AOMap("AO Map", 2D) = "white" {}
         _Ramp("Ramp (horizontal 1D)", 2D) = "gray" {}
-
         _NormalMap("Normal Map", 2D) = "bump" {}
 
         _AmbientIntensity("Ambient Intensity", Float) = 1.0
@@ -22,8 +21,9 @@
         _SpecularExponent("Specular Exponent", Float) = 64
 
         _RimColor("Rim Color", Color) = (1,1,1,1)
-        _RimPower("Rim Power", Range(0.1,8)) = 2.5
         _RimStrength("Rim Strength", Range(0,4)) = 1.0
+        _RimStart("Rim start (fresnel edge)", Range(0,1)) = 0.2
+        _RimEnd("Rim end (fresnel edge)", Range(0,1)) = 0.6
     }
 
     SubShader
@@ -64,8 +64,9 @@
                 float _SpecularExponent;
 
                 float4 _RimColor;
-                float _RimPower;
                 float _RimStrength;
+                float _RimStart;
+                float _RimEnd;
             CBUFFER_END
 
             struct Attributes
@@ -91,20 +92,22 @@
             Varyings vert(Attributes IN)
             {
                 Varyings OUT;
-
                 OUT.positionCS = TransformObjectToHClip(IN.positionOS);
                 OUT.positionWS = TransformObjectToWorld(IN.positionOS.xyz);
 
-                OUT.normalWS = normalize(TransformObjectToWorldNormal(IN.normalOS));
-                OUT.tangentWS = normalize(TransformObjectToWorldDir(IN.tangentOS.xyz));
-                OUT.bitangentWS = normalize(cross(OUT.normalWS, OUT.tangentWS) * IN.tangentOS.w);
+                // Stable orthonormal TBN
+                float3 Nw = normalize(TransformObjectToWorldNormal(IN.normalOS));
+                float3 Tw = normalize(TransformObjectToWorldDir(IN.tangentOS.xyz));
+                Tw = normalize(Tw - Nw * dot(Tw, Nw));
+                float3 Bw = normalize(cross(Nw, Tw)) * IN.tangentOS.w;
+
+                OUT.normalWS = Nw;
+                OUT.tangentWS = Tw;
+                OUT.bitangentWS = Bw;
 
                 OUT.uv = IN.uv;
                 OUT.viewDirWS = normalize(GetCameraPositionWS() - OUT.positionWS);
-
-                // shadow coord for main light
                 OUT.shadowCoord = TransformWorldToShadowCoord(OUT.positionWS);
-
                 return OUT;
             }
 
@@ -122,7 +125,6 @@
 
             float3 DirectionalAmbient(float3 N)
             {
-                // SH directional ambient (ambient cube feel)
                 return SampleSH(N) * _AmbientIntensity;
             }
 
@@ -130,8 +132,9 @@
             {
                 float3 H = normalize(V + L);
                 float nh = saturate(dot(N, H));
-                float exp = max(4.0, glossTex * exponentMax);
-                return pow(nh, exp);
+                float glossCurve = pow(glossTex, 0.5);
+                float exp = lerp(1.0, exponentMax, glossCurve);
+                return pow(nh, exp) * 2.0;
             }
 
             half4 frag(Varyings IN) : SV_Target
@@ -139,13 +142,12 @@
                 float3 baseColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, IN.uv).rgb * _Color.rgb;
                 float ao = SAMPLE_TEXTURE2D(_AOMap, sampler_AOMap, IN.uv).r;
 
-                // TBN normal
                 float3 tNormal = UnpackNormal(SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, IN.uv));
                 float3x3 TBN = float3x3(IN.tangentWS, IN.bitangentWS, IN.normalWS);
-                float3 N = normalize(mul(TBN, tNormal));
+                float3 N_map = normalize(mul(TBN, tNormal));
+                float3 N_geo = normalize(IN.normalWS);
                 float3 V = normalize(IN.viewDirWS);
 
-                // Masks
                 float3 sglr = SAMPLE_TEXTURE2D(_SpecGlossRimMask, sampler_SpecGlossRimMask, IN.uv).rgb;
                 float specMask = sglr.r;
                 float glossTex = sglr.g;
@@ -154,72 +156,36 @@
                 float3 lightAccum = 0.0;
                 float3 specAccum  = 0.0;
 
-                // Main light (zero-arg API)
-                {
-                    Light mainLight = GetMainLight();
-                    float3 L = normalize(mainLight.direction);
-                    float ndotl = saturate(dot(N, L));
+                Light mainLight = GetMainLight();
+                float3 L = normalize(mainLight.direction);
 
-                    float hl = HalfLambert(ndotl);
-                    float3 warpedDiffuse = SampleWarp(hl) * mainLight.color.rgb;
+                float ndotl = saturate(dot(N_map, L));
+                float hl = HalfLambert(ndotl);
+                float3 warpedDiffuse = SampleWarp(hl) * mainLight.color.rgb;
 
-                    #if defined(_MAIN_LIGHT_SHADOWS)
-                        float shadowAtten = MainLightRealtimeShadow(IN.shadowCoord);
-                        warpedDiffuse *= shadowAtten;
-                    #endif
-
-                    lightAccum += warpedDiffuse;
-
-                    float spec = SpecularTerm(N, V, L, glossTex, _SpecularExponent) * specMask;
-                    specAccum += spec * _SpecularColor.rgb * mainLight.color.rgb * _SpecularColor.a;
-                }
-
-                // Additional lights
-                #if defined(_ADDITIONAL_LIGHTS)
-                {
-                    uint lightCount = GetAdditionalLightsCount();
-                    for (uint i = 0u; i < lightCount; i++)
-                    {
-                        Light l = GetAdditionalLight(i, IN.positionWS);
-                        float3 L = normalize(l.direction);
-                        float ndotl = saturate(dot(N, L));
-
-                        float hl = HalfLambert(ndotl);
-                        float3 warpedDiffuse = SampleWarp(hl) * l.color.rgb;
-
-                        #if defined(_ADDITIONAL_LIGHT_SHADOWS)
-                            float shadowAtten = AdditionalLightRealtimeShadow(i, IN.positionWS);
-                            warpedDiffuse *= shadowAtten;
-                        #endif
-
-                        lightAccum += warpedDiffuse;
-
-                        float spec = SpecularTerm(N, V, L, glossTex, _SpecularExponent) * specMask;
-                        specAccum += spec * _SpecularColor.rgb * l.color.rgb * _SpecularColor.a;
-                    }
-                }
+                #if defined(_MAIN_LIGHT_SHADOWS)
+                    float shadowAtten = MainLightRealtimeShadow(IN.shadowCoord);
+                    warpedDiffuse *= shadowAtten;
                 #endif
 
-                // Directional ambient a(n), AO-gated
-                float3 ambientDir = DirectionalAmbient(N) * ao;
+                lightAccum += warpedDiffuse;
 
-                // Lighting first, then albedo
-                float3 litNoAlbedo = ambientDir + lightAccum;
-                float3 diffuseTerm = baseColor * litNoAlbedo;
+                float spec = SpecularTerm(N_map, V, L, glossTex, _SpecularExponent) * specMask;
+                specAccum += spec * _SpecularColor.rgb * mainLight.color.rgb * _SpecularColor.a;
 
-                // Rim on shadowed side, gated by main-light facing
-                Light rimLight = GetMainLight();
-                float lambertRaw = saturate(dot(N, normalize(rimLight.direction)));
-                float rimShape = pow(saturate(1.0 - dot(N, V)), _RimPower);
+                float3 ambientDir = DirectionalAmbient(N_map) * ao;
+                float3 diffuseTerm = baseColor * (ambientDir + lightAccum);
+
+                // Stable rim: geometric normal only
+                float vdotn = saturate(dot(N_geo, V));
+                float rimFresnel = smoothstep(_RimStart, _RimEnd, 1.0 - vdotn);
+                float lambertRaw = saturate(dot(N_geo, L));
                 float rimGate = saturate(1.0 - lambertRaw);
-                float rim = rimShape * rimGate * rimMask * _RimStrength;
-                float3 rimCol = rim * _RimColor.rgb;
+                float rim = rimFresnel * rimGate * ao * rimMask;
+                float3 rimCol = rim * _RimColor.rgb * _RimStrength;
 
-                // Specular additive, AO-gated
                 float3 specular = specAccum * ao;
-
                 float3 finalColor = diffuseTerm + specular + rimCol;
-
                 return half4(finalColor, 1.0);
             }
 
