@@ -21,6 +21,7 @@ public class GemCollection : MonoBehaviour
     public GameObject gemPrefab;
     public Rigidbody rb;
     public SphereCollider sphereCollider;
+    public GameObject collectionParticle;
 
     [Header("Layer To Detect")]
     public LayerMask terrainMask;
@@ -110,7 +111,14 @@ public class GemCollection : MonoBehaviour
     {
         Collecter.GetComponent<PlayerDeath>().collectedGems.Add(gemPrefab.gameObject);
         rb.useGravity = true;
+
+        GameObject particle = GameObject.Instantiate(collectionParticle, gameObject.transform.position, Quaternion.identity);
+        particle.transform.parent = Collecter.transform;
+        particle.GetComponent<ParticleSystem>().startColor = gameObject.GetComponent<MeshRenderer>().material.color;
+
         gameObject.SetActive(false);
+
+        
 
         //Collecter.GetComponentInChildren<BagSize>().changeBagSize();
     }
