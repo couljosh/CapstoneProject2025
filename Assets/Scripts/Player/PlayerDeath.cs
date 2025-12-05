@@ -112,7 +112,7 @@ public class PlayerDeath : MonoBehaviour
         DisablePlayer();
         DropGems();
 
-        //gameObject.GetComponent<Animator>().applyRootMotion = true;
+        gameObject.GetComponent<Animator>().applyRootMotion = true;
         
         //remove player
         transform.position = deathPos.transform.position;
@@ -127,7 +127,7 @@ public class PlayerDeath : MonoBehaviour
         yield return new WaitForSeconds(playerStats.respawnDelay);
         EnablePlayer();
         yield return new WaitForSeconds(0.1f);
-        //gameObject.GetComponent<Animator>().applyRootMotion = false;
+        gameObject.GetComponent<Animator>().applyRootMotion = false;
 
     }
 
