@@ -66,7 +66,6 @@ public class SpawnPlayers : MonoBehaviour
             PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: gamePad);
             currentInputDevices[i] = gamePad;
             currentPlayers[i] = newPlayerInput.gameObject;
-            print(currentPlayers[i].gameObject);
 
             if (uiManager != null)
             {
@@ -80,54 +79,62 @@ public class SpawnPlayers : MonoBehaviour
 
     private void Update()
     {
+        //this whole bird nest keeps parity between connected controllers and the players they controll using two arrays as its structure (currentinputdevices and currentplayers)
         InputSystem.onDeviceChange +=
             (sender, args) =>
             {
-                switch (args)
+                //only spawn a player if the game is running
+                if (Application.isPlaying)
                 {
-                    case InputDeviceChange.Added:
+                    switch (args)
+                    {
+                        //if a new input device has been added
+                        case InputDeviceChange.Added:
 
-                        //find newest player to add
-                        for (int i = 0; i <= currentInputDevices.Length; i++)
-                        {
-                            //first empty controller space
-                            if(currentInputDevices[i] == null)
+                            //find newest player to add
+                            for (int i = 0; i <= currentInputDevices.Length; i++)
                             {
-                                //if this player wasn't ingame already
-                                if(currentPlayers[i] == null)
+                                //first empty controller space
+                                if (currentInputDevices[i] == null)
                                 {
-                                    //instantiate a new player
-                                    PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: sender);
-                                    currentPlayers[i] = newPlayerInput.gameObject;
-                                    if (uiManager != null)
+                                    //if this player wasn't ingame already
+                                    if (currentPlayers[i] == null)
                                     {
-                                        uiManager.RegisterPlayer(newPlayerInput.gameObject);
+                                        //instantiate a new player
+                                        PlayerInput newPlayerInput = PlayerInput.Instantiate(Players[i], controlScheme: "Gamepad", pairWithDevice: sender);
+                                        currentPlayers[i] = newPlayerInput.gameObject;
+                                        if (uiManager != null)
+                                        {
+                                            uiManager.RegisterPlayer(newPlayerInput.gameObject);
+                                        }
                                     }
+
+                                    currentInputDevices[i] = sender;
+
+                                    break;
                                 }
-
-                                currentInputDevices[i] = sender;
-                                
-                                break;
                             }
-                        }
 
-                        break;
-
-                    case InputDeviceChange.Removed:
+                            break;
                         
-                        //find which input device it was
-                        for(int i = 0; i <= currentInputDevices.Length; i++)
-                        {
-                            if(currentInputDevices[i] == sender)
-                            {
-                                
-                                currentInputDevices[i] = null;
-                                break;
-                            }
-                        }
+                        //if an input device is removed
+                        case InputDeviceChange.Removed:
 
-                        break;
+                            //find which input device it was
+                            for (int i = 0; i <= currentInputDevices.Length; i++)
+                            {
+                                if (currentInputDevices[i] == sender)
+                                {
+
+                                    currentInputDevices[i] = null;
+                                    break;
+                                }
+                            }
+
+                            break;
+                    }
                 }
+                
             };
     }
 }
