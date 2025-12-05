@@ -175,9 +175,11 @@ MonoBehaviour:
   decreaseMult: 2
   depositParticles: {fileID: 7178863604228080952}
   repoAlarmDuration: 0
-  originalColor: {r: 1, g: 0.76862746, b: 0, a: 1}
-  redTeamColor: {r: 1, g: 0.42745098, b: 0.42745098, a: 1}
-  blueTeamColor: {r: 0, g: 0.94509804, b: 1, a: 1}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  yellowTeamColor: {r: 1, g: 0.86237514, b: 0.2688679, a: 1}
+  blueTeamColor: {r: 0.3915094, g: 0.53229743, b: 1, a: 1}
+  yellowProgressColor: {r: 1, g: 0.59607846, b: 0, a: 1}
+  blueProgressColor: {r: 0, g: 0.13166761, b: 1, a: 1}
   teamOneCanDepo: 0
   teamTwoCanDepo: 0
   isContested: 0
@@ -188,13 +190,6 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 64
-  depositRef:
-    Guid:
-      Data1: 894627605
-      Data2: 1255533337
-      Data3: -1397711480
-      Data4: 1785691742
-    Path: event:/SFX_Repository/Deposit
   repoMaterial: {fileID: 2100000, guid: 3f31d138efa3cd6458d685547feb39cb, type: 2}
   contestedMaterial: {fileID: 2100000, guid: 808b5c6f885c172449df81bee489b37c, type: 2}
   mesh: {fileID: 0}
@@ -377,8 +372,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e639e154c8d98b74caa41ffb667ec229, type: 2}
+  m_sharedMaterial: {fileID: -9046182613769290929, guid: e639e154c8d98b74caa41ffb667ec229, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

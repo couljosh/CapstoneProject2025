@@ -60,8 +60,10 @@ public class RepositoryLogic : MonoBehaviour
 
     [Header("Color Customization")]
     public Color originalColor;
-    public Color redTeamColor;
+    public Color yellowTeamColor;
     public Color blueTeamColor;
+    public Color yellowProgressColor;
+    public Color blueProgressColor;
 
     [Header("Repository State Checks")]
     public bool teamOneCanDepo;
@@ -183,7 +185,7 @@ public class RepositoryLogic : MonoBehaviour
             depositProgress += Time.deltaTime;
 
             //Team 1 Signifiers Active
-            progressBar.color = Color.red;
+            progressBar.color = yellowProgressColor;
 
 
 
@@ -202,7 +204,7 @@ public class RepositoryLogic : MonoBehaviour
             depositProgress += Time.deltaTime;
 
             //Team 2 Signifiers Active
-            progressBar.color = Color.blue;
+            progressBar.color = blueProgressColor;
 
 
 
@@ -338,7 +340,7 @@ public class RepositoryLogic : MonoBehaviour
         {
             score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
             // PASS THE CURRENT WORLD Z POSITION
-            scoreDisplay.ShowScore(depositScore, redTeamColor, currentRepoWorldZ);
+            scoreDisplay.ShowScore(depositScore, yellowTeamColor, currentRepoWorldZ);
         }
 
         //Add Blue Score
