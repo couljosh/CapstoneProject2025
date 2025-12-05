@@ -180,6 +180,7 @@ MonoBehaviour:
   gemPrefab: {fileID: 923427996337693031}
   rb: {fileID: 7920973721239813451}
   sphereCollider: {fileID: 1280339429974865943}
+  collectionParticle: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
