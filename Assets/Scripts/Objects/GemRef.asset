@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152fa20b135d0114db1f668f2b998cf0, type: 3}
+  m_Name: GemRef
+  m_EditorClassIdentifier: 
+  colors:
+  - serializedVersion: 2
+    rgba: 4294931917
+  - serializedVersion: 2
+    rgba: 4294473215
+  - serializedVersion: 2
+    rgba: 4287071231
+  - serializedVersion: 2
+    rgba: 4278255441
+  - serializedVersion: 2
+    rgba: 4294955264
+  emiColors:
+  - serializedVersion: 2
+    rgba: 4286578716
+  - serializedVersion: 2
+    rgba: 4282646656
+  - serializedVersion: 2
+    rgba: 4278190232
+  - serializedVersion: 2
+    rgba: 4278400771
+  - serializedVersion: 2
+    rgba: 4288431367
+  meshes:
+  - {fileID: 4702925393065980420, guid: febdc04a95d563b43a3c812f9d654762, type: 3}
+  - {fileID: 2401994324257950250, guid: febdc04a95d563b43a3c812f9d654762, type: 3}
+  - {fileID: 7740199877417058863, guid: febdc04a95d563b43a3c812f9d654762, type: 3}
+  - {fileID: 5869761508291144630, guid: febdc04a95d563b43a3c812f9d654762, type: 3}
+  - {fileID: 7549676233410476044, guid: febdc04a95d563b43a3c812f9d654762, type: 3}
+  scales:
+  - {x: 30, y: 30, z: 30}
+  - {x: 90, y: 90, z: 90}
+  - {x: 50, y: 50, z: 50}
+  - {x: 30, y: 30, z: 30}
+  - {x: 30, y: 30, z: 30}
+  materials:
+  - {fileID: 2100000, guid: a7699b6962e9c4045960daff3f4475d2, type: 2}
+  - {fileID: 2100000, guid: ab8df417b78e62a4d9121c7b63c72a88, type: 2}
+  - {fileID: 2100000, guid: 30c991f802f1dc647bc5f50dd0efc2df, type: 2}
+  - {fileID: 2100000, guid: e6ae988ed5efeb34aa2b5b13a9af8cfa, type: 2}
+  - {fileID: 2100000, guid: be58cc708bd52b64b8bc487c07a2a3d7, type: 2}
