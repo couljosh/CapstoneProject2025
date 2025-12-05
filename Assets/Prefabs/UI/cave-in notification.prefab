@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTime: 3
+  caveInAnimControl: {fileID: 9100000, guid: 2b90cdbeb6bbc5544816f00d8c5da989, type: 2}
 --- !u!114 &8008768259635059442
 MonoBehaviour:
   m_ObjectHideFlags: 0
