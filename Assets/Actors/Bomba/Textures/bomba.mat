@@ -57,11 +57,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AOMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 572390549fb1abe40893e6dbc9bd6e02, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AOTex:
-        m_Texture: {fileID: 2800000, guid: 572390549fb1abe40893e6dbc9bd6e02, type: 3}
+        m_Texture: {fileID: 2800000, guid: d0dc7c76c282a4847b7de8e6e8a23941, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -69,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: a48c0bf26fddf194ea17fbc3ed63e9ca, type: 3}
+        m_Texture: {fileID: 2800000, guid: effd488ff8105a240a3806c807681f53, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
@@ -121,7 +121,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a48c0bf26fddf194ea17fbc3ed63e9ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -133,11 +133,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 02277d0252989c540866a8b083869d4f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTex:
-        m_Texture: {fileID: 2800000, guid: bb632f82ffcaec5459c9213783763bf8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 02277d0252989c540866a8b083869d4f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionMap:
@@ -149,6 +149,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossRim:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossRimMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -204,8 +212,8 @@ Material:
     - Vector1_e19bf69058e74e1f9a57f2f04a3a4fc6: 0.1
     - Vector1_e81e93dccf984c4ea733b396432756dd: 1
     - Vector1_fa9c479eb4544cceae07165a8a72b81b: 0.3
-    - _AOIntensity: 1
-    - _AOStrength: 0.735
+    - _AOIntensity: 0.299
+    - _AOStrength: 0.587
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -231,30 +239,41 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HalfLambertBias: 0.875
-    - _HalfLambertScale: 1.3
+    - _HalfLambertBias: 0.512
+    - _HalfLambertScale: 0.459
     - _Metallic: 0.84
+    - _MinRimStrength: 0
     - _NormalStrength: 1
     - _OcclusionStrength: 1
+    - _OutlinePower: 0.1
+    - _OutlineStrength: 0
     - _Parallax: 0.005
     - _QueueControl: -1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionMaskWithRim: 0
-    - _RimIntensity: 1
-    - _RimPower: 4.61
+    - _RimEnd: 0.668
+    - _RimIntensity: 1.92
+    - _RimNormalMapInfluence: 0
+    - _RimPower: 3.4
+    - _RimStart: 0.471
+    - _RimStrength: 0.29
     - _Rim_Intensity: 1
     - _Saturation: 0.99
+    - _ShininessBoost: 1
     - _Smoothness: 0.73
     - _SmoothnessTextureChannel: 0
-    - _SpecIntensity: 0.82
-    - _SpecPower: 32
+    - _SpecIntensity: 0.97
+    - _SpecPower: 27
+    - _SpecularExponent: 40.6
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 0.44
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _WarpPower: 3.72
-    - _WarpWeight: 0.418
+    - _WarpFeather: 0.795
+    - _WarpPower: 0.49
+    - _WarpWeight: 0.246
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -265,13 +284,15 @@ Material:
     - Color_C62668C6: {r: 0, g: 0, b: 0, a: 1}
     - Color_D6CD8104: {r: 1, g: 1, b: 1, a: 1}
     - Color_D9A456B0: {r: 1, g: 0.8066038, b: 0.839819, a: 0}
-    - _AmbientColor: {r: 1, g: 0.8352941, b: 0.8352941, a: 1}
-    - _BaseColor: {r: 0.990566, g: 0.79814255, b: 0.7429245, a: 1}
-    - _Color: {r: 1, g: 0.9103774, b: 0.9103774, a: 1}
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.8820755, b: 0.8820755, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor2: {r: 1, g: 1, b: 1, a: 0}
-    - _RimColor: {r: 0.5754717, g: 0.43703276, b: 0.43703276, a: 0.75}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 0.75}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+    - _SpecularColor: {r: 0.24528301, g: 0.2233001, b: 0.2233001, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

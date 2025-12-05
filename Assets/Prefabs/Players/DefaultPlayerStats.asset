@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edccf601eac936e4f93a38573693920f, type: 3}
   m_Name: DefaultPlayerStats
   m_EditorClassIdentifier: 
-  initialMoveSpeed: 5.35
+  initialMoveSpeed: 5.92
   rotateSpeed: 10
   gravity: 12
   coyoteTimeThreshold: 0.25
