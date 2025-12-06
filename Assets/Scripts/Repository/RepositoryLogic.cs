@@ -12,6 +12,7 @@ using UnityEngine.UI;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 using UnityEngine.ProBuilder.Shapes;
 using System;
+using Unity.VisualScripting;
 
 public class RepositoryLogic : MonoBehaviour
 {
@@ -323,7 +324,7 @@ public class RepositoryLogic : MonoBehaviour
 
     public void CompleteDeposit()
     {
-        int depositScore = depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+        //int depositScore = depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
 
         depositProgress = 0;
 
@@ -338,7 +339,22 @@ public class RepositoryLogic : MonoBehaviour
         //Add Red Score
         if (teamOneCanDepo)
         {
-            score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            int depositScore = 0;
+
+            //score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            foreach (GameObject player in enteredPlayersTeam1)
+            {
+                PlayerDeath playerGems = player.GetComponent<PlayerDeath>();
+                //counter display
+                score.redRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+
+                //score display above repo
+                depositScore += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+
+                //clear gems
+                playerGems.collectedGems.Clear();
+                playerGems.gemCount = 0;
+            }
             // PASS THE CURRENT WORLD Z POSITION
             scoreDisplay.ShowScore(depositScore, yellowTeamColor, currentRepoWorldZ);
         }
@@ -346,7 +362,22 @@ public class RepositoryLogic : MonoBehaviour
         //Add Blue Score
         if (teamTwoCanDepo)
         {
-            score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            int depositScore = 0;
+
+            //score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+            foreach (GameObject player in enteredPlayersTeam2)
+            {
+                PlayerDeath playerGems = player.GetComponent<PlayerDeath>();
+                //counter display
+                score.redRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+
+                //score display above repo
+                depositScore += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+
+                //clear gems
+                playerGems.collectedGems.Clear();
+                playerGems.gemCount = 0;
+            }
             // PASS THE CURRENT WORLD Z POSITION
             scoreDisplay.ShowScore(depositScore, blueTeamColor, currentRepoWorldZ);
         }
