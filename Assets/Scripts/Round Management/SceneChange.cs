@@ -61,9 +61,6 @@ public class SceneChange : MonoBehaviour
 
         GameScore.roundNum++;
 
-        print("Red" + GameScore.redScoreBeforeRound);
-        print("Blue" + GameScore.blueScoreBeforeRound);
-
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         int initialMin = Mathf.FloorToInt(roundTime / 60);
@@ -74,8 +71,6 @@ public class SceneChange : MonoBehaviour
 
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
-
-        //print(gameHasStarted);
     }
 
     IEnumerator CountdownRoutine()

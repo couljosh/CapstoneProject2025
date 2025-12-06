@@ -114,12 +114,11 @@ public class GemCollection : MonoBehaviour
 
         GameObject particle = GameObject.Instantiate(collectionParticle, gameObject.transform.position, Quaternion.identity);
         particle.transform.parent = Collecter.transform;
-        particle.GetComponent<ParticleSystem>().startColor = gameObject.GetComponent<MeshRenderer>().material.color;
-
-        gameObject.SetActive(false);
-
         
-
-        //Collecter.GetComponentInChildren<BagSize>().changeBagSize();
+        //weird ass method thats REQUIRED in order to modify the start color of a particle without using deprecated functions
+        var ps = particle.GetComponent<ParticleSystem>().main;
+        ps.startColor = gameObject.GetComponent<MeshRenderer>().material.color;
+        
+        gameObject.SetActive(false);
     }
 }

@@ -17,11 +17,6 @@ public class TutorialReadyManager : MonoBehaviour
 
     public GameObject readySignifier;
 
-    private bool isPlayer1Ready;
-    private bool isPlayer2Ready;
-    private bool isPlayer3Ready;
-    private bool isPlayer4Ready;
-
     private int readyPlayers = 0;
     private int playersConnected;
 
@@ -32,26 +27,22 @@ public class TutorialReadyManager : MonoBehaviour
         {
             case 1:
                 GameObject.Instantiate(readySignifier, player1Spot);
-                isPlayer1Ready = true;
                 Destroy(player1Repo);
                 break;
 
             case 2:
                 GameObject.Instantiate(readySignifier, player2Spot);
                 Destroy(player2Repo);
-                isPlayer2Ready = true;
                 break;
 
             case 3:
                 GameObject.Instantiate(readySignifier, player3Spot);
                 Destroy(player3Repo);
-                isPlayer3Ready = true;
                 break;
 
             case 4:
                 GameObject.Instantiate(readySignifier, player4Spot);
                 Destroy(player4Repo);
-                isPlayer4Ready = true;
                 break;
         }
 
