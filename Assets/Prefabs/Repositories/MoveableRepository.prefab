@@ -225,9 +225,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositedText: {fileID: 2581203586098035791}
-  displayDuration: 1.5
+  holdDuration: 0.25
+  floatDuration: 1.25
   floatDistance: 1.2
   floatDepthOffset: 0.5
+  popInScale: 1.3
+  popInDuration: 0.12
+  popOutScale: 0.7
+  popOutDuration: 0.12
+  useOpacityCurve: 1
+  opacityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6462134
+      value: 0.988601
+      inSlope: -0.13056234
+      outSlope: -0.13056234
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.93043774
+    - serializedVersion: 3
+      time: 0.84732294
+      value: 0.81755155
+      inSlope: -0.87194955
+      outSlope: -0.87194955
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3450191
+      outWeight: 0.35304368
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1637537381716041779
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +379,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2982157853033842699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.87}
+  m_LocalPosition: {x: 0, y: 0, z: -4.09}
   m_LocalScale: {x: 0.020133333, y: 0.020133333, z: 0.020129995}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,9 +502,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositedText: {fileID: 2581203586098035791}
-  displayDuration: 1
+  holdDuration: 0.25
+  floatDuration: 1.25
   floatDistance: 1.5
   floatDepthOffset: 0.5
+  popInScale: 1.3
+  popInDuration: 0.12
+  popOutScale: 0.7
+  popOutDuration: 0.12
+  useOpacityCurve: 0
+  opacityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4310186908320328164
 GameObject:
   m_ObjectHideFlags: 0

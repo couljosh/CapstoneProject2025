@@ -8,12 +8,24 @@ public class DepositScoreDisplay : MonoBehaviour
     public TextMeshProUGUI depositedText;
 
     [Header("Display Settings")]
-    public float displayDuration = 1.5f;
+    public float holdDuration = 0.25f;
+    public float floatDuration = 1.25f;
     public float floatDistance = 1.2f;
     public float floatDepthOffset = 0.5f;
 
+    [Header("Pop Animations")]
+    public float popInScale = 1.3f;
+    public float popInDuration = 0.12f;
+    public float popOutScale = 0.7f;
+    public float popOutDuration = 0.12f;
+
+    [Header("Opacity Curve")]
+    public bool useOpacityCurve = false;
+    public AnimationCurve opacityCurve = AnimationCurve.Linear(0, 1, 1, 0);
+
     private Vector3 initialLocalPosition;
     private float initialWorldZ;
+    private Vector3 originalScale;
 
     void Awake()
     {
@@ -23,23 +35,20 @@ public class DepositScoreDisplay : MonoBehaviour
             enabled = false;
         }
 
-        //initial local position
         initialLocalPosition = depositedText.transform.localPosition;
+        originalScale = depositedText.transform.localScale;
         depositedText.enabled = false;
     }
 
     public void ShowScore(int scoreValue, Color teamColor, float repoInitialWorldZ)
     {
-        //stop any previous display coroutine
         StopAllCoroutines();
 
         depositedText.text = $"+{scoreValue}";
-
-        Color faceColor = teamColor;
-        faceColor.a = 1f;
-        depositedText.color = faceColor;
-
+        depositedText.color = new Color(teamColor.r, teamColor.g, teamColor.b, 1f);
         depositedText.transform.localPosition = initialLocalPosition;
+        depositedText.transform.localScale = originalScale;
+
         initialWorldZ = repoInitialWorldZ;
 
         StartCoroutine(DisplayScoreCoroutine());
@@ -48,49 +57,79 @@ public class DepositScoreDisplay : MonoBehaviour
     private IEnumerator DisplayScoreCoroutine()
     {
         depositedText.enabled = true;
-        float elapsedTime = 0f;
 
-        Vector3 targetLocalPosition = initialLocalPosition + new Vector3(0, floatDistance, floatDepthOffset);
+        yield return StartCoroutine(PopAnimation(originalScale, popInScale, popInDuration));
 
-        Transform repoTransform = transform.parent;
-        if (repoTransform == null)
+        yield return new WaitForSeconds(holdDuration);
+
+        Vector3 startPos = depositedText.transform.localPosition;
+
+        float elapsed = 0f;
+        Vector3 targetPos = startPos + new Vector3(0, floatDistance, floatDepthOffset);
+
+        Transform repoTransform = transform.parent != null ? transform.parent : transform;
+        float startLoopParentZ = repoTransform.position.z;
+
+        while (elapsed < floatDuration)
         {
-            repoTransform = transform;
-        }
+            elapsed += Time.deltaTime;
+            float t = elapsed / floatDuration;
 
+            Vector3 pos = Vector3.Lerp(startPos, targetPos, t);
 
-        while (elapsedTime < displayDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / displayDuration;
+            float currentRepoZ = repoTransform.position.z;
+            float zMovementSinceStart = currentRepoZ - startLoopParentZ;
+            pos.z -= zMovementSinceStart;
 
-            //get local pos for lerp
-            Vector3 animatedLocalPos = Vector3.Lerp(initialLocalPosition, targetLocalPosition, t);
+            depositedText.transform.localPosition = pos;
 
-            //counteract the lowering of the repository so the text doesnt go into the ground
-            float currentRepoWorldZ = repoTransform.position.z;
-            float zDifference = currentRepoWorldZ - initialWorldZ;
-            float zCorrection = -zDifference;
-            zCorrection += -3f;
+            var c = depositedText.color;
 
-            animatedLocalPos.z += zCorrection;
+            if (useOpacityCurve)
+                c.a = opacityCurve.Evaluate(t);
+            else
+                c.a = Mathf.Lerp(1f, 0f, t);
 
-            depositedText.transform.localPosition = animatedLocalPos;
-
-            //fade out text
-            Color color = depositedText.color;
-            color.a = Mathf.Lerp(1f, 0f, t);
-            depositedText.color = color;
+            depositedText.color = c;
 
             yield return null;
         }
 
-        depositedText.enabled = false;
+        yield return StartCoroutine(PopAnimation(originalScale, popOutScale, popOutDuration));
 
-        //restore opacity and pos
-        Color finalColor = depositedText.color;
-        finalColor.a = 1f;
-        depositedText.color = finalColor;
+        depositedText.enabled = false;
+        depositedText.transform.localScale = originalScale;
         depositedText.transform.localPosition = initialLocalPosition;
+
+        var resetCol = depositedText.color;
+        resetCol.a = 1f;
+        depositedText.color = resetCol;
+    }
+
+    private IEnumerator PopAnimation(Vector3 baseScale, float scaleMultiplier, float duration)
+    {
+        Vector3 start = baseScale;
+        Vector3 peak = baseScale * scaleMultiplier;
+
+        float time = 0f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float t = time / duration;
+            depositedText.transform.localScale = Vector3.Lerp(start, peak, t);
+            yield return null;
+        }
+
+        time = 0f;
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float t = time / duration;
+            depositedText.transform.localScale = Vector3.Lerp(peak, baseScale, t);
+            yield return null;
+        }
+
+        depositedText.transform.localScale = baseScale;
     }
 }
