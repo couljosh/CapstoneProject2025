@@ -762,17 +762,41 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1431189067102150335, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1435544788643584507, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_text
+      value: 00
       objectReference: {fileID: 0}
     - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_fontSize
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_fontSizeBase
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: clip
@@ -959,12 +983,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_text
+      value: 00
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_fontSize
       value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_fontSizeBase
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8669964771525881940, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_Enabled
@@ -12339,7 +12383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &807655219
 Grid:
   m_ObjectHideFlags: 0
@@ -17590,6 +17634,10 @@ PrefabInstance:
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketSpawnAmt
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
+      propertyPath: terrainMask.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2115062935216473557, guid: 5b466f000f1ea314dbc26a34b0d99dbf, type: 3}
       propertyPath: pocketPrefabs.Array.size

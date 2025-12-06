@@ -369,7 +369,7 @@ public class RepositoryLogic : MonoBehaviour
             {
                 PlayerDeath playerGems = player.GetComponent<PlayerDeath>();
                 //counter display
-                score.redRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+                score.blueRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
 
                 //score display above repo
                 depositScore += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);

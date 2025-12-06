@@ -3495,6 +3495,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615699727685117389, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 1779045260148249624, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: clip
       value: 
@@ -3586,6 +3606,26 @@ PrefabInstance:
     - target: {fileID: 6504476196288718351, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814831582276201061, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
