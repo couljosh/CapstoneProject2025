@@ -54,7 +54,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
 
-        
+
         //SceneChange.OnGameStart += StartPlayerActions;
 
         moveAction = inputActions.FindActionMap("Player1").FindAction("Move");
@@ -69,13 +69,12 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "Tutorial") //stop player locking when were in tutorial since theres no countdown.
+        if (currentSceneName == "Tutorial")
         {
             StartPlayerActions();
             SceneChange.OnGameStart -= StartPlayerActions;
         }
 
-        //for players spawned halfway into a round
         if (SceneChange.gameHasStarted)
             canAct = true;
     }
@@ -157,6 +156,12 @@ public class PlayerMove : MonoBehaviour
                 hit.collider.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * currentKickStrength * playerStats.rockForceMultiplier);
             }
         }
+
+        //kick intensity ref for vfx
+        float normalizedCharge = kickStrengthTimer / playerStats.timeToMaxStrength; 
+
+        //if kick 
+        playerEffects.PlayKickReleaseVFX(normalizedCharge);
 
         playerEffects.KickEffects(1);
         playerEffects.chargingMaxKick = false;
