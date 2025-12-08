@@ -15851,7 +15851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 633275272}
   canvas: {fileID: 1377524169}
-  notificationPrefab: {fileID: 6935669812289168828, guid: 20905073e53a41b4a8842add8ec60916, type: 3}
+  notificationPrefab: {fileID: 6935669812289168828, guid: 91511b138465c454faf4d953999ef7a0, type: 3}
   gemGenerationScript: {fileID: 964463807}
   cameraShake: {fileID: 0}
   terrainMask:
