@@ -12,7 +12,7 @@ public class DestroyAfterTime : MonoBehaviour
 
         if (timer > timeBeforeDestroy )
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
