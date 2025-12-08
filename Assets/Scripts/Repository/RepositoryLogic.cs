@@ -93,7 +93,7 @@ public class RepositoryLogic : MonoBehaviour
 
         repoAnimation = GetComponentInChildren<Animator>();
         repoAnimation.SetBool("Appear", false);
-        repoAnimation.SetBool("Retract", false );
+        repoAnimation.SetBool("Retract", false);
         //Script References
         repoMoveSystemScript = GameObject.Find("RepoMover").GetComponent<RepoMoveSystem>();
         score = GameObject.Find("SceneManager").GetComponent<SceneChange>();
@@ -126,7 +126,7 @@ public class RepositoryLogic : MonoBehaviour
         ConditionCheck();
 
         //terrain clearing
-        if(terrainBlastScript.isFinishedClearing == true)
+        if (terrainBlastScript.isFinishedClearing == true)
         {
             //go again, keep the repo clear of terrain at all times
             terrainBlastScript.isFinishedClearing = false;
@@ -161,7 +161,7 @@ public class RepositoryLogic : MonoBehaviour
             teamlastDepo = 0;
 
         }
-       
+
 
         // CONTESTED //----------------------------------------------------------------------------------------------
         if (isContested)
@@ -467,7 +467,7 @@ public class RepositoryLogic : MonoBehaviour
         radiusImg.enabled = true;
         CheckWhenSetActive();
 
-       StartCoroutine(SetLightValues(repoAlarmDuration));
+        StartCoroutine(SetLightValues(repoAlarmDuration));
     }
 
 
@@ -512,7 +512,7 @@ public class RepositoryLogic : MonoBehaviour
         //check for players already in the radius
         Collider[] playersHit = Physics.OverlapSphere(transform.position, depositRadius.radius, player, QueryTriggerInteraction.Ignore);
 
-        if (playersHit.Length > 0)
+        if (playersHit.Length > 0 && isEmpty)
         {
             foreach (var detectedPlayer in playersHit)
             {
@@ -542,7 +542,17 @@ public class RepositoryLogic : MonoBehaviour
 
     void addEnteredPlayer(GameObject player)
     {
+
+        foreach (var detectedPlayer in allEnteredPlayers)
+        {
+            if (player.gameObject == detectedPlayer)
+            {
+                return;
+            }
+        }
+
         allEnteredPlayers.Add(player);
+
         //depositor != other.gameObject ||
         if (depositor == null)
         {
@@ -554,6 +564,7 @@ public class RepositoryLogic : MonoBehaviour
             enteredPlayersTeam1.Add(player.gameObject);
         else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Add(player.gameObject);
+
     }
 
 
@@ -583,7 +594,7 @@ public class RepositoryLogic : MonoBehaviour
 
     void ChangeRepoMesh(Material repoMaterial)
     {
-        foreach(MeshRenderer renderer in meshRenderers)
+        foreach (MeshRenderer renderer in meshRenderers)
         {
             renderer.material = repoMaterial;
         }

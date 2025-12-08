@@ -55,7 +55,7 @@ public class SceneChange : MonoBehaviour
     }
 
     void Start()
-    {      
+    {
         GameScore.redScoreBeforeRound = GameScore.redTotalScore;
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
 
@@ -67,7 +67,7 @@ public class SceneChange : MonoBehaviour
         int initialSec = Mathf.FloorToInt(roundTime % 60);
         if (timerText != null)
             timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
- 
+
 
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
@@ -110,15 +110,17 @@ public class SceneChange : MonoBehaviour
 
 
         //Show the score for both teams
-        if(redScore && blueScore != null)
+        if (redScore && blueScore != null)
         {
             redScore.text = redRoundTotal.ToString();
             blueScore.text = blueRoundTotal.ToString();
         }
         if (!canRunTimer) return;
 
+
+        // DURING ROUND //-------------------------------------------------------------------------------------
         //Timer Counts down
-        if(roundTime > 0.1f)
+        if (roundTime > 0.1f)
         {
             roundTime -= Time.deltaTime;
         }
@@ -127,58 +129,61 @@ public class SceneChange : MonoBehaviour
             roundTime = 0f;
         }
 
-            int min = Mathf.FloorToInt(roundTime / 60);
+        int min = Mathf.FloorToInt(roundTime / 60);
         int sec = Mathf.FloorToInt(roundTime % 60);
 
-        if(timerText != null)
-        timerText.text = string.Format("{0:00}:{1:00}", min,sec);
+        if (timerText != null)
+            timerText.text = string.Format("{0:00}:{1:00}", min, sec);
 
-        if(roundTime <= 20)
+        //Countdown Text Coloring
+        if (roundTime <= 20)
         {
             timerText.color = Color.yellow;
-        } 
-        
-        if(roundTime <= 10)
+        }
+
+        if (roundTime <= 10)
         {
             timerText.color = Color.red;
         }
 
+        //Time hits 0
         if (roundTime == 0 && !pointsAdded) //change this to when the game is finished.
         {
             isTimeOut = true;
         }
 
-
+        // AFTER ROUND //-------------------------------------------------------------------------------------
         if (isTimeOut && !pointsAdded)
         {
-
+            //Instant End (no overtime)
             if (repositoryLogicScript.isEmpty && !isOvertime)
             {
                 checkScore();
 
             }
 
+            //Overtime Trigger
             if (!repositoryLogicScript.isEmpty && !isOvertime)
             {
                 isOvertime = true;
 
-            } 
-            
-             if (repositoryLogicScript.isEmpty && isOvertime && repositoryLogicScript.active)
-             {
-                overtimeElapsed -= Time.deltaTime;
-             }
+            }
         }
 
+        // OVERTIME //-------------------------------------------------------------------------------------
         if (isOvertime)
         {
             overtimeBar.gameObject.SetActive(true);
-
             overtimeBarL.fillAmount = overtimeElapsed / overtimeExeption;
             overtimeBarR.fillAmount = overtimeElapsed / overtimeExeption;
 
+            if (repositoryLogicScript.isEmpty && repositoryLogicScript.active)
+            {
+                overtimeElapsed -= Time.deltaTime;
+            }
         }
 
+        //Overtime Ended
         if (overtimeElapsed <= 0 && !pointsAdded)
         {
             checkScore();
@@ -195,18 +200,19 @@ public class SceneChange : MonoBehaviour
         pointsAdded = true;
 
 
-       StartCoroutine(LoadNextScene());
+        StartCoroutine(LoadNextScene());
     }
 
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1);
 
-        if(GameScore.roundNum == 1)
+        if (GameScore.roundNum == 1)
         {
             SceneManager.LoadScene("Intermission_1");
 
-        } else if(GameScore.roundNum == 2)
+        }
+        else if (GameScore.roundNum == 2)
         {
             SceneManager.LoadScene("Intermission_2");
         }
@@ -214,8 +220,5 @@ public class SceneChange : MonoBehaviour
         {
             SceneManager.LoadScene("End Match");
         }
-
-
-
     }
 }

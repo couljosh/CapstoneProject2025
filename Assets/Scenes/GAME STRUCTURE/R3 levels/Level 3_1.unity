@@ -711,7 +711,7 @@ MonoBehaviour:
   maxOffDelay: 9
   delayBeforeFirstActive: 15
   elaspedTime: 0
-  timeLeftWhenAlarm: 0
+  timeLeftWhenAlarm: 5
   isRaising: 0
   isLowering: 0
   isSwitching: 0
