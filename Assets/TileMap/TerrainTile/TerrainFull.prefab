@@ -137,6 +137,7 @@ MonoBehaviour:
   terrainTileMap: {fileID: 0}
   startingType: {fileID: 0}
   emptyType: {fileID: 2928529762848268004, guid: 226ec4ac22499bc41b3b9285b3ba8f2b, type: 3}
+  destructionVFX: {fileID: 2378126318017825737, guid: 701133e9f381dab4bb139473d7582b0d, type: 3}
 --- !u!65 &2564684893984959935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -262,6 +263,7 @@ MonoBehaviour:
   terrainTileMap: {fileID: 0}
   startingType: {fileID: 0}
   emptyType: {fileID: 2928529762848268004, guid: 226ec4ac22499bc41b3b9285b3ba8f2b, type: 3}
+  destructionVFX: {fileID: 0}
 --- !u!65 &3544318061555042981
 BoxCollider:
   m_ObjectHideFlags: 0
