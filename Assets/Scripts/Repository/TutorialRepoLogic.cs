@@ -54,7 +54,7 @@ public class TutorialRepoLogic : MonoBehaviour
 
     [Header("Color Customization")]
     public Color originalColor;
-    public Color redTeamColor;
+    public Color yellowTeamColor;
     public Color blueTeamColor;
 
     [Header("Repository State Checks")]
@@ -156,7 +156,7 @@ public class TutorialRepoLogic : MonoBehaviour
             depositProgress += Time.deltaTime;
 
             //Team 1 Signifiers Active
-            progressBar.color = Color.red;
+            progressBar.color = yellowTeamColor;
 
             //Complete Deposit Check
             if (depositProgress >= depositTime)
@@ -173,7 +173,7 @@ public class TutorialRepoLogic : MonoBehaviour
             depositProgress += Time.deltaTime;
 
             //Team 2 Signifiers Active
-            progressBar.color = Color.blue;
+            progressBar.color = blueTeamColor;
 
             //Complete Deposit Check
             if (depositProgress >= depositTime)
