@@ -30488,11 +30488,11 @@ MonoBehaviour:
   chancePerSecond: 8
   radius: 4
   minTimeBetweenCaveIn: 15
-  terrainChunksToSpawn: 20
-  minCaveInTileRadius: 7
+  terrainChunksToSpawn: 10
+  minCaveInTileRadius: 9
   maxCaveInTileRadius: 10
   chanceDecreasePerTileOutwards: 15
-  chanceToSpawnGemPerTile: 5
+  chanceToSpawnGemPerTile: 2
   gemVeritcalOffset: 0
   gemSpawnLimit: 5
   caveInNotif:
