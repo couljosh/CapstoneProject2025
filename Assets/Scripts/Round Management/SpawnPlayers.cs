@@ -83,8 +83,8 @@ public class SpawnPlayers : MonoBehaviour
         InputSystem.onDeviceChange +=
             (sender, args) =>
             {
-                //only spawn a player if the game is running
-                if (Application.isPlaying)
+                //only spawn a player if the game is running, and it can find a gameobject only present in every level (so intermissions dont spawn player)
+                if (Application.isPlaying && GameObject.Find("RepoMover"))
                 {
                     switch (args)
                     {
