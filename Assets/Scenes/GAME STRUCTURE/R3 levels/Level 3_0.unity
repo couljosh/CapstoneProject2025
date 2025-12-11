@@ -844,7 +844,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repository: {fileID: 1258680108}
-  repoSpawnNodes: []
+  repoSpawnNodes:
+  - {fileID: 1836809648}
+  - {fileID: 318216776}
+  - {fileID: 876185345}
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 1353471516}
   activeDuration: 25
@@ -958,6 +961,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+--- !u!1 &318216776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2808793544541211686, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+  m_PrefabInstance: {fileID: 318216775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2396,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+--- !u!1 &876185345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2808793544541211686, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+  m_PrefabInstance: {fileID: 876185344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &886376869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8449353252119293836, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
@@ -16336,6 +16349,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+--- !u!1 &1836809648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2808793544541211686, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
+  m_PrefabInstance: {fileID: 1836809647}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1856189221
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -199,14 +199,30 @@ public class SceneChange : MonoBehaviour
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
 
-
-        StartCoroutine(LoadNextScene());
+        Invoke("LoadNextScene", 1f);
     }
 
-    IEnumerator LoadNextScene()
-    {
-        yield return new WaitForSeconds(1);
+    //IEnumerator LoadNextScene()
+    //{
+    //    yield return new WaitForSeconds(1);
 
+    //    if (GameScore.roundNum == 1)
+    //    {
+    //        SceneManager.LoadScene("Intermission_1");
+
+    //    }
+    //    else if (GameScore.roundNum == 2)
+    //    {
+    //        SceneManager.LoadScene("Intermission_2");
+    //    }
+    //    else if (GameScore.roundNum == 3)
+    //    {
+    //        SceneManager.LoadScene("End Match");
+    //    }
+    //}
+
+    public void LoadNextScene()
+    {
         if (GameScore.roundNum == 1)
         {
             SceneManager.LoadScene("Intermission_1");
