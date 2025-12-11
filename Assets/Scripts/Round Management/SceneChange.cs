@@ -147,7 +147,7 @@ public class SceneChange : MonoBehaviour
         }
 
         //Time hits 0
-        if (roundTime == 0 && !pointsAdded) //change this to when the game is finished.
+        if (roundTime <= 0 && !pointsAdded) //change this to when the game is finished.
         {
             isTimeOut = true;
         }
