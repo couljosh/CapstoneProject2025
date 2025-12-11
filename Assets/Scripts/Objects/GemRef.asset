@@ -43,8 +43,8 @@ MonoBehaviour:
   scales:
   - {x: 30, y: 30, z: 30}
   - {x: 90, y: 90, z: 90}
-  - {x: 50, y: 50, z: 50}
   - {x: 30, y: 30, z: 30}
+  - {x: 20, y: 20, z: 20}
   - {x: 30, y: 30, z: 30}
   materials:
   - {fileID: 2100000, guid: a7699b6962e9c4045960daff3f4475d2, type: 2}
