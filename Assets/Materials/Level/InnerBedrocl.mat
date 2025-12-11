@@ -24,7 +24,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: bb78a5003c314894f9462f4b9365ee3a, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ENVIRONMENTREFLECTIONS_OFF
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -41,6 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Contrast: 0.98
+    - _EnvironmentReflections: 0
     - _OcclusionStrength: 1
     - _Saturation: 1.205
     m_Colors:
