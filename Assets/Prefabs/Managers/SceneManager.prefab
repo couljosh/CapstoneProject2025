@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6713519523818572442}
   - component: {fileID: 4230729663388130016}
   - component: {fileID: 2115062935216473557}
+  - component: {fileID: 7808315631770058831}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -46,18 +47,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ac5745bfcd64c46b9bb7880ab79683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene:
-    m_Handle: 0
-  sceneNumber: 1
+  canRunTimer: 0
+  countdownText: {fileID: 0}
   roundTime: 0
   endOfRoundDelay: 0
-  redRepository: {fileID: 0}
-  blueRepository: {fileID: 0}
-  teamOneWinText: {fileID: 0}
-  teamTwoWinText: {fileID: 0}
-  drawText: {fileID: 0}
-  tint: {fileID: 0}
+  redRoundTotal: 0
+  blueRoundTotal: 0
+  redScore: {fileID: 0}
+  blueScore: {fileID: 0}
+  overtimeBar: {fileID: 0}
+  overtimeBarL: {fileID: 0}
+  overtimeBarR: {fileID: 0}
   timerText: {fileID: 0}
+  dynamiteTimer: {fileID: 0}
+  pointsAdded: 0
+  isTimeOut: 0
+  isOvertime: 0
+  overtimeExeption: 0
+  overtimeElapsed: 0
+  repositoryLogicScript: {fileID: 0}
 --- !u!114 &4230729663388130016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,10 +79,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clusterPrefabs: []
-  spawnLocations: []
+  clusterHalfAmt: 0
   spawnedGems: []
+  spawnLocations: []
   terrainPieces: []
-  clusterSpawnAmt: 0
+  leftFloor: {fileID: 0}
+  rightFloor: {fileID: 0}
+  verticalOffset: 0
 --- !u!114 &2115062935216473557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +99,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pocketPrefabs: []
+  pocketHalfAmt: 0
   spawnLocations: []
   terrainPieces: []
-  pocketSpawnAmt: 0
+  leftFloor: {fileID: 0}
+  rightFloor: {fileID: 0}
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &7808315631770058831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572955040075578291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5a5117391a8a0418d9fcfcf1fd185a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

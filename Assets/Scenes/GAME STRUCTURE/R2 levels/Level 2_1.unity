@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 1, g: 0.14044955, b: 0, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 4.46
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.3962264, g: 0.13269848, b: 0.13825868, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 07ae6735d2333cb43a01af9281c8cd30, type: 2}
   m_HaloStrength: 0.5
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   smoothTime: 1
-  minHeight: 25
+  minHeight: 21
   maxHeight: 45
   padding: 2
   verticalOffset: 0

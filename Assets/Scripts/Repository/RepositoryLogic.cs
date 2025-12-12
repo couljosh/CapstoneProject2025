@@ -403,11 +403,8 @@ public class RepositoryLogic : MonoBehaviour
                 score.checkScore();
             }
         }
-        else
-        {
-            repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
-        }
+            repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;

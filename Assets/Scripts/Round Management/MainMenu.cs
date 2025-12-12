@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         GameScore.ResetScore();
+        GameScore.roundNum = 0;
     }
 
     //Enable Input for Active Controllers

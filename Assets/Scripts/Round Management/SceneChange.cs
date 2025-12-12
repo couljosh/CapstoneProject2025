@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
+using Unity.VisualScripting.Antlr3.Runtime;
 
 public class SceneChange : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class SceneChange : MonoBehaviour
         GameScore.blueScoreBeforeRound = GameScore.blueTotalScore;
 
         GameScore.roundNum++;
+        print(GameScore.roundNum);
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -147,7 +149,7 @@ public class SceneChange : MonoBehaviour
         }
 
         //Time hits 0
-        if (roundTime == 0 && !pointsAdded) //change this to when the game is finished.
+        if (roundTime <= 0 && !pointsAdded) //change this to when the game is finished.
         {
             isTimeOut = true;
         }
@@ -195,18 +197,33 @@ public class SceneChange : MonoBehaviour
     public void checkScore()
     {
 
-
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
 
-
-        StartCoroutine(LoadNextScene());
+        Invoke("LoadNextScene", 1f);
     }
 
-    IEnumerator LoadNextScene()
-    {
-        yield return new WaitForSeconds(1);
+    //IEnumerator LoadNextScene()
+    //{
+    //    yield return new WaitForSeconds(1);
 
+    //    if (GameScore.roundNum == 1)
+    //    {
+    //        SceneManager.LoadScene("Intermission_1");
+
+    //    }
+    //    else if (GameScore.roundNum == 2)
+    //    {
+    //        SceneManager.LoadScene("Intermission_2");
+    //    }
+    //    else if (GameScore.roundNum == 3)
+    //    {
+    //        SceneManager.LoadScene("End Match");
+    //    }
+    //}
+
+    public void LoadNextScene()
+    {
         if (GameScore.roundNum == 1)
         {
             SceneManager.LoadScene("Intermission_1");
@@ -219,6 +236,10 @@ public class SceneChange : MonoBehaviour
         else if (GameScore.roundNum == 3)
         {
             SceneManager.LoadScene("End Match");
+        }
+        else
+        {
+            print("failed to find scene");
         }
     }
 }
