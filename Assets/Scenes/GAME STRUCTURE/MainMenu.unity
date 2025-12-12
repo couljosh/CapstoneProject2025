@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CaveInVFX
       objectReference: {fileID: 0}
+    - target: {fileID: 419849602863464129, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1238152543720106944, guid: ffa8a56e4ca651d4dbf6997964b90f7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
