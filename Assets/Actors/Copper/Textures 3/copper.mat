@@ -505,7 +505,7 @@ Material:
     - _Is_LightColor_Base: 1
     - _Is_LightColor_HighColor: 1
     - _Is_LightColor_MatCap: 0
-    - _Is_LightColor_Outline: 0
+    - _Is_LightColor_Outline: 1
     - _Is_LightColor_RimLight: 1
     - _Is_NormalMapForMatCap: 0
     - _Is_NormalMapToBase: 1
@@ -558,8 +558,8 @@ Material:
     - _RimLightOverridden: 0
     - _RimLightVisible: 1
     - _RimLight_FeatherOff: 0
-    - _RimLight_InsideMask: 0.447
-    - _RimLight_Power: 0.632
+    - _RimLight_InsideMask: 0.486
+    - _RimLight_Power: 0.607
     - _RimNormalMapInfluence: 0
     - _RimPower: 3.4
     - _RimStart: 0.471

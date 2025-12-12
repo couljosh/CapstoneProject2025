@@ -294,7 +294,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 55ce8f5fc7ad68c4db6c7141a06e7a9f, type: 2}
@@ -989,6 +989,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bd26ba38030275f4dafe6622293eaa58, type: 2}
+    - target: {fileID: -4472979153375214842, guid: 47c590f8c90347a4e9129ccf364b8deb, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -4472979153375214842, guid: 47c590f8c90347a4e9129ccf364b8deb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

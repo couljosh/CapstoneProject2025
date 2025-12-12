@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.66
+    m_Value: 1.72
   intensity:
     m_OverrideState: 1
-    m_Value: 0.44
+    m_Value: 0.6
   scatter:
     m_OverrideState: 1
-    m_Value: 0.362
+    m_Value: 0.263
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06437c1ff663d574d9447842ba0a72e4, type: 3}
   m_Name: ScreenSpaceLensFlare
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 0
     m_Value: 14.7
@@ -175,7 +175,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
