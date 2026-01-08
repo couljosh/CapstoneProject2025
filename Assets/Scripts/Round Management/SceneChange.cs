@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using Unity.VisualScripting.Antlr3.Runtime;
+using System.Net.NetworkInformation;
 
 public class SceneChange : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class SceneChange : MonoBehaviour
 
     [Header("Countdown UI")]
     public TextMeshProUGUI countdownText;
+
+    [Header("Warning UI")]
+    public TextMeshProUGUI warningNumberText;
+    public TextMeshProUGUI warningWordText;
+    private bool warningActive = false;
 
     [Header("Round Customization")]
     public float roundTime;
@@ -77,24 +83,92 @@ public class SceneChange : MonoBehaviour
 
     IEnumerator CountdownRoutine()
     {
-
         int count = 3;
         while (count > 0)
         {
-            if (countdownText != null) countdownText.text = count.ToString();
+            if (countdownText != null)
+            {
+                countdownText.text = count.ToString();
+                StartCoroutine(PunchText(countdownText));
+            }
             yield return new WaitForSeconds(1f);
             count--;
         }
 
-        if (countdownText != null) countdownText.text = "GO!";
+        if (countdownText != null)
+        {
+            countdownText.text = "GO!";
+            StartCoroutine(PunchAndShakeText(countdownText, 0.7f));
+        }
 
         gameHasStarted = true;
         OnGameStart?.Invoke();
         StartRoundTimer();
 
-
         yield return new WaitForSeconds(0.7f);
         countdownText.gameObject.SetActive(false);
+    }
+    IEnumerator PunchAndShakeText(TextMeshProUGUI textElement, float totalDuration)
+    {
+        float elapsed = 0f;
+        Vector3 originalPos = textElement.transform.localPosition;
+
+        while (elapsed < totalDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / totalDuration;
+
+            // 1. "Throb" Scale - Pulse twice over the duration
+            float pulse = Mathf.Sin(t * Mathf.PI * 2.5f) * 0.2f;
+            textElement.transform.localScale = Vector3.one * (1.1f + pulse);
+
+            // 2. Shake - Subtle high-frequency vibration
+            float shakeIntensity = Mathf.Lerp(5f, 0f, t); // Fades out over time
+            Vector3 shakeOffset = new Vector3(
+                UnityEngine.Random.Range(-1f, 1f),
+                UnityEngine.Random.Range(-1f, 1f),
+                0) * shakeIntensity;
+
+            textElement.transform.localPosition = originalPos + shakeOffset;
+
+            // 3. Smooth Fade Out at the very end
+            if (t > 0.7f)
+            {
+                float alpha = Mathf.Lerp(1, 0, (t - 0.7f) / 0.3f);
+                textElement.canvasRenderer.SetAlpha(alpha);
+            }
+
+            yield return null;
+        }
+
+        // Reset
+        textElement.transform.localPosition = originalPos;
+        textElement.transform.localScale = Vector3.one;
+    }
+
+    // Helper coroutine for the punchy fade effect
+    IEnumerator PunchText(TextMeshProUGUI textElement)
+    {
+        float duration = 0.2f;
+        float elapsed = 0f;
+        Vector3 startScale = Vector3.one * 0.5f;
+        Vector3 punchScale = Vector3.one * 1.5f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            // Fade alpha in
+            textElement.canvasRenderer.SetAlpha(Mathf.Lerp(0, 1, t));
+            // Punch scale
+            textElement.transform.localScale = Vector3.Lerp(startScale, punchScale, Mathf.Sin(t * Mathf.PI));
+
+            yield return null;
+        }
+
+        textElement.transform.localScale = Vector3.one;
+        textElement.canvasRenderer.SetAlpha(1);
     }
 
     private void StartRoundTimer()
@@ -146,6 +220,12 @@ public class SceneChange : MonoBehaviour
         if (roundTime <= 10)
         {
             timerText.color = Color.red;
+        }
+
+        //Trigger warning at 30 seconds
+        if (roundTime <= 30f && roundTime > 25f && !warningActive)
+        {
+            StartCoroutine(PlayWarningSequence());
         }
 
         //Time hits 0
@@ -241,5 +321,81 @@ public class SceneChange : MonoBehaviour
         {
             print("failed to find scene");
         }
+    }
+
+    IEnumerator PlayWarningSequence() //plays the 30 second warning, and also has some text effects (found from a tutorial)
+    {
+        warningActive = true;
+
+        warningNumberText.gameObject.SetActive(true);
+        warningWordText.gameObject.SetActive(true);
+
+        warningNumberText.canvasRenderer.SetAlpha(0);
+        warningWordText.canvasRenderer.SetAlpha(0);
+
+        Vector3 startScale = Vector3.one * 0.4f;
+        Vector3 punchScale = Vector3.one * 1.2f;
+
+        warningNumberText.transform.localScale = startScale;
+        warningWordText.transform.localScale = startScale;
+
+        //colours for flashing
+        Color startColor = Color.white;
+        Color flashColor = new Color(1f, 0.15f, 0.15f);
+
+        float elapsed = 0;
+        float duration = 0.15f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float easedT = Mathf.Sin(t * Mathf.PI * 0.5f);
+
+            float alpha = Mathf.Lerp(0, 1, t);
+            warningNumberText.canvasRenderer.SetAlpha(alpha);
+            warningWordText.canvasRenderer.SetAlpha(alpha);
+
+            Vector3 currentScale = Vector3.Lerp(startScale, punchScale, easedT);
+            warningNumberText.transform.localScale = currentScale;
+            warningWordText.transform.localScale = currentScale;
+            yield return null;
+        }
+
+        warningNumberText.transform.localScale = Vector3.one;
+        warningWordText.transform.localScale = Vector3.one;
+
+        //countdown loop
+        while (roundTime > 25f)
+        {
+            warningNumberText.text = Mathf.CeilToInt(roundTime).ToString();
+            warningWordText.text = "Seconds\nLeft";
+
+            //PINGPONG CLUTCH
+            float flashLerp = Mathf.PingPong(Time.time * 2f, 1f);
+            warningNumberText.color = Color.Lerp(startColor, flashColor, flashLerp);
+
+            yield return null;
+        }
+
+        //fade out
+        elapsed = 0;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            float alpha = Mathf.Lerp(1, 0, t);
+            warningNumberText.canvasRenderer.SetAlpha(alpha);
+            warningWordText.canvasRenderer.SetAlpha(alpha);
+
+            warningNumberText.transform.localScale = Vector3.Lerp(Vector3.one, startScale, t);
+            warningWordText.transform.localScale = Vector3.Lerp(Vector3.one, startScale, t);
+            yield return null;
+        }
+
+        // Reset color and disable
+        warningNumberText.color = startColor;
+        warningNumberText.gameObject.SetActive(false);
+        warningWordText.gameObject.SetActive(false);
     }
 }
