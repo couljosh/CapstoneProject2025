@@ -51,7 +51,16 @@ public class LargeGem : MonoBehaviour
     }
 
 
+    //destroy terrain when kicked
+    private void OnTriggerStay(Collider collision)
+    {
 
+        //if the gem is touching terrain and the gem is moving fast enough
+        if (collision.gameObject.tag == "ActiveTerrain")
+        {
+            collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
+        }
+    }
 
     //Release Gem
     public void ReleaseGem()
