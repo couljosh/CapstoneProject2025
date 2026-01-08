@@ -80,7 +80,7 @@ public class SceneChange : MonoBehaviour
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
     }
-
+    // GAME START COUNTDOWN //-------------------------------------------------------------------------------------
     IEnumerator CountdownRoutine()
     {
         int count = 3;
@@ -108,7 +108,8 @@ public class SceneChange : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         countdownText.gameObject.SetActive(false);
     }
-    IEnumerator PunchAndShakeText(TextMeshProUGUI textElement, float totalDuration)
+    // COUNTDOWN SHAKE EFFECT //-------------------------------------------------------------------------------------
+    IEnumerator PunchAndShakeText(TextMeshProUGUI textElement, float totalDuration) // referenced from effect used in the deposit text animation
     {
         float elapsed = 0f;
         Vector3 originalPos = textElement.transform.localPosition;
@@ -118,12 +119,10 @@ public class SceneChange : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = elapsed / totalDuration;
 
-            // 1. "Throb" Scale - Pulse twice over the duration
             float pulse = Mathf.Sin(t * Mathf.PI * 2.5f) * 0.2f;
             textElement.transform.localScale = Vector3.one * (1.1f + pulse);
 
-            // 2. Shake - Subtle high-frequency vibration
-            float shakeIntensity = Mathf.Lerp(5f, 0f, t); // Fades out over time
+            float shakeIntensity = Mathf.Lerp(5f, 0f, t); //fades out over time
             Vector3 shakeOffset = new Vector3(
                 UnityEngine.Random.Range(-1f, 1f),
                 UnityEngine.Random.Range(-1f, 1f),
@@ -131,7 +130,7 @@ public class SceneChange : MonoBehaviour
 
             textElement.transform.localPosition = originalPos + shakeOffset;
 
-            // 3. Smooth Fade Out at the very end
+            //fade out
             if (t > 0.7f)
             {
                 float alpha = Mathf.Lerp(1, 0, (t - 0.7f) / 0.3f);
@@ -141,12 +140,11 @@ public class SceneChange : MonoBehaviour
             yield return null;
         }
 
-        // Reset
+        //reset
         textElement.transform.localPosition = originalPos;
         textElement.transform.localScale = Vector3.one;
     }
-
-    // Helper coroutine for the punchy fade effect
+    //coroutine for the punchy fade effect
     IEnumerator PunchText(TextMeshProUGUI textElement)
     {
         float duration = 0.2f;
@@ -159,9 +157,9 @@ public class SceneChange : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
 
-            // Fade alpha in
+            //fade alpha in
             textElement.canvasRenderer.SetAlpha(Mathf.Lerp(0, 1, t));
-            // Punch scale
+            //punch scale
             textElement.transform.localScale = Vector3.Lerp(startScale, punchScale, Mathf.Sin(t * Mathf.PI));
 
             yield return null;
@@ -177,6 +175,7 @@ public class SceneChange : MonoBehaviour
         if (dynamiteTimer != null)
         {
             dynamiteTimer.SendMessage("StartAnimation");
+            //while true ()
         }
 
     }
