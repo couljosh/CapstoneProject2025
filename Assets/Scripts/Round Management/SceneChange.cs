@@ -222,7 +222,7 @@ public class SceneChange : MonoBehaviour
         }
 
         //Trigger warning at 30 seconds
-        if (roundTime <= 30f && roundTime > 25f && !warningActive)
+        if (roundTime < 31f && roundTime > 27f && !warningActive)
         {
             StartCoroutine(PlayWarningSequence());
         }
@@ -329,8 +329,8 @@ public class SceneChange : MonoBehaviour
         warningNumberText.gameObject.SetActive(true);
         warningWordText.gameObject.SetActive(true);
 
-        warningNumberText.canvasRenderer.SetAlpha(0);
-        warningWordText.canvasRenderer.SetAlpha(0);
+        //warningNumberText.canvasRenderer.SetAlpha(100);
+        warningWordText.canvasRenderer.SetAlpha(100);
 
         Vector3 startScale = Vector3.one * 0.4f;
         Vector3 punchScale = Vector3.one * 1.2f;
@@ -351,7 +351,7 @@ public class SceneChange : MonoBehaviour
             float easedT = Mathf.Sin(t * Mathf.PI * 0.5f);
 
             float alpha = Mathf.Lerp(0, 1, t);
-            warningNumberText.canvasRenderer.SetAlpha(alpha);
+            //warningNumberText.canvasRenderer.SetAlpha(alpha);
             warningWordText.canvasRenderer.SetAlpha(alpha);
 
             Vector3 currentScale = Vector3.Lerp(startScale, punchScale, easedT);
@@ -364,9 +364,10 @@ public class SceneChange : MonoBehaviour
         warningWordText.transform.localScale = Vector3.one;
 
         //countdown loop
-        while (roundTime > 25f)
+        while (roundTime > 27f)
         {
-            warningNumberText.text = Mathf.CeilToInt(roundTime).ToString();
+
+            warningNumberText.text = Mathf.CeilToInt(roundTime - 1).ToString();
             warningWordText.text = "Seconds\nLeft";
 
             //PINGPONG CLUTCH
@@ -384,7 +385,7 @@ public class SceneChange : MonoBehaviour
             float t = elapsed / duration;
 
             float alpha = Mathf.Lerp(1, 0, t);
-            warningNumberText.canvasRenderer.SetAlpha(alpha);
+            //warningNumberText.canvasRenderer.SetAlpha(alpha);
             warningWordText.canvasRenderer.SetAlpha(alpha);
 
             warningNumberText.transform.localScale = Vector3.Lerp(Vector3.one, startScale, t);
