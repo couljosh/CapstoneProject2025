@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
 {
     [Header("Reference Reference")]
     public PlayerStats playerStats;
+
     private PlayerEffects playerEffects;
     private PlayerDeath playerDeath;
     public int playerNum;
@@ -47,13 +48,17 @@ public class PlayerMove : MonoBehaviour
     [Header("Controller Variables")]
     private float normalizedRumble;
 
-    private bool canAct = false;
+    public bool canAct = false;
     public bool shouldCheck = true;
+
+    [Header("Powerup Variables")]
+    public GameObject currentPowerUp;
+    public bool isDrill;
+    public PowerUpPickup powerUpPickupScript;
 
 
     private void Awake()
     {
-
 
         //SceneChange.OnGameStart += StartPlayerActions;
 
@@ -236,10 +241,20 @@ public class PlayerMove : MonoBehaviour
 
     public void FixedUpdate()
     {
+
         if (!playerDeath.isPlayerDead && canAct)
         {
-            Move(moveAmt);
-        }
+            if(powerUpPickupScript.activePowerup != null && powerUpPickupScript.activePowerup.tag == "Drill")
+            {
+                DrillMove(moveAmt);
+            }
+            else
+            {
+                Move(moveAmt);
+                print(playerNum + " " + moveAmt);
+
+            }
+        }   
         else
         {
             chargingKick = false;
@@ -289,12 +304,30 @@ public class PlayerMove : MonoBehaviour
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, -playerStats.gravity * 3, rb.linearVelocity.z);
             }
 
-
         }
         else
         {
             coyoteTimer = 0;
         }
 
+    }
+
+   public void DrillMove(Vector3 direction)
+   {
+
+       DrillLogic drillLogicScript = powerUpPickupScript.activePowerup.GetComponent<DrillLogic>();
+
+        if (drillLogicScript.isDrillMoving)
+        {       
+            rb.AddForce(gameObject.transform.forward * drillLogicScript.currentSpeed, ForceMode.VelocityChange);
+
+        }
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * drillLogicScript.currentTurn);
+
+        }
     }
 }

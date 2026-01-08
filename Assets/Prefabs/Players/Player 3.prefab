@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 4756858654633455137}
   - component: {fileID: 2955468753973523611}
   - component: {fileID: 2049695911356884222}
+  - component: {fileID: 1333721830936596880}
   m_Layer: 8
   m_Name: Player 3
   m_TagString: ObjectDestroyer
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -551,6 +552,9 @@ MonoBehaviour:
     m_Bits: 2048
   chargingKick: 0
   shouldCheck: 1
+  currentPowerUp: {fileID: 0}
+  isDrill: 0
+  powerUpPickupScript: {fileID: 1333721830936596880}
 --- !u!114 &8620095879880935457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +654,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1333721830936596880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887584843794151332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32070b1caa3e5a438efd39317449ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePowerup: {fileID: 0}
 --- !u!1 &5131605351460886873
 GameObject:
   m_ObjectHideFlags: 0

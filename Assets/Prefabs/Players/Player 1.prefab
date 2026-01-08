@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 2157015550122162584}
   - component: {fileID: 8212142854837358148}
   - component: {fileID: 8428711472210419056}
+  - component: {fileID: 1667230621083816999}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: ObjectDestroyer
@@ -596,6 +597,9 @@ MonoBehaviour:
     m_Bits: 2048
   chargingKick: 0
   shouldCheck: 1
+  currentPowerUp: {fileID: 0}
+  isDrill: 0
+  powerUpPickupScript: {fileID: 1667230621083816999}
 --- !u!114 &7976989412786637625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +714,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1667230621083816999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261414448945768688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32070b1caa3e5a438efd39317449ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePowerup: {fileID: 0}
 --- !u!1 &3346297267423927267
 GameObject:
   m_ObjectHideFlags: 0
