@@ -56,7 +56,7 @@ public class LargeGem : MonoBehaviour
     {
 
         //if the gem is touching terrain and the gem is moving fast enough
-        if (collision.gameObject.tag == "ActiveTerrain")
+        if (collision.gameObject.tag == "ActiveTerrain" && isReleased)
         {
             collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
