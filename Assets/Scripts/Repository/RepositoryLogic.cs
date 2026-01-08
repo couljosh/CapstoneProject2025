@@ -32,6 +32,19 @@ public class RepositoryLogic : MonoBehaviour
     public Image timerProgress;
     public Light repoLight;
 
+    [Header("Deposit Preview Text")]
+    public DepositPreviewWorldText previewText;
+    public int maxDepositCap = 100;
+    private int previewTarget;
+    private float previewValue;
+    public float previewDecrementDuration = 1.0f; //time to reach 0
+    public float baseScaleMultiplier = 0.5f;
+    public float punchIntensity = 0.15f;
+    private int lastPreviewInt;
+    private int cachedTargetCap;
+    private bool wasTeamOneLast;
+    private Color greyColor = new Color(0.5f, 0.5f, 0.5f);
+
     [Header("Object References")]
     public GameObject repoAlarm;
     public Light repoAlarmLight;
@@ -124,6 +137,7 @@ public class RepositoryLogic : MonoBehaviour
     void Update()
     {
         ConditionCheck();
+        UpdateDepositPreview();
 
         //terrain clearing
         if (terrainBlastScript.isFinishedClearing == true)
@@ -339,52 +353,103 @@ public class RepositoryLogic : MonoBehaviour
         //Add Red Score
         if (teamOneCanDepo)
         {
-            int depositScore = 0;
+            //calculate cap
+            int totalHeld = 0;
+            foreach (GameObject p in enteredPlayersTeam1)
+            {
+                if (p != null) totalHeld += p.GetComponent<PlayerDeath>().collectedGems.Count;
+            }
+
+            //cap small gems at 100
+            int smallGemsToDeposit = Mathf.Min(totalHeld, maxDepositCap);
+            int gemsLeftToTake = smallGemsToDeposit;
+
 
             //score.redRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
             foreach (GameObject player in enteredPlayersTeam1)
             {
                 PlayerDeath playerGems = player.GetComponent<PlayerDeath>();
-                //counter display
-                score.redRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
 
-                //score display above repo
-                depositScore += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+                int amountToTake = 0;
+                if (gemsLeftToTake > 0 && playerGems.collectedGems.Count > 0)
+                {
+                    amountToTake = Mathf.Min(playerGems.collectedGems.Count, gemsLeftToTake);
 
-                //clear gems
-                playerGems.collectedGems.Clear();
-                playerGems.gemCount = 0;
+                    if (amountToTake == playerGems.collectedGems.Count)
+                    {
+                        playerGems.collectedGems.Clear(); // clear all if taking all
+                    }
+                    else
+                    {
+                        playerGems.collectedGems.RemoveRange(0, amountToTake);
+                    }
+
+                    playerGems.gemCount -= amountToTake;
+                    gemsLeftToTake -= amountToTake;
+                }
+                // -----------------------------------------------------
             }
+
+            //calculate final score
+            int totalDepositScore = smallGemsToDeposit + (largeGemsInRadius.Count * largeGemValue);
+
+            //counter display
+            score.redRoundTotal += totalDepositScore;
+
             // PASS THE CURRENT WORLD Z POSITION
-            scoreDisplay.ShowScore(depositScore, yellowTeamColor, currentRepoWorldZ);
+            scoreDisplay.ShowScore(totalDepositScore, yellowTeamColor, currentRepoWorldZ);
         }
 
         //Add Blue Score
         if (teamTwoCanDepo)
         {
-            int depositScore = 0;
+            int totalHeld = 0;
+            foreach (GameObject p in enteredPlayersTeam2)
+            {
+                if (p != null) totalHeld += p.GetComponent<PlayerDeath>().collectedGems.Count;
+            }
+
+            //cap the small gems at 100
+            int smallGemsToDeposit = Mathf.Min(totalHeld, maxDepositCap);
+            int gemsLeftToTake = smallGemsToDeposit;
 
             //score.blueRoundTotal += depositor.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
             foreach (GameObject player in enteredPlayersTeam2)
             {
                 PlayerDeath playerGems = player.GetComponent<PlayerDeath>();
-                //counter display
-                score.blueRoundTotal += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
 
-                //score display above repo
-                depositScore += playerGems.collectedGems.Count + (largeGemsInRadius.Count * largeGemValue);
+                int amountToTake = 0;
+                if (gemsLeftToTake > 0 && playerGems.collectedGems.Count > 0)
+                {
+                    amountToTake = Mathf.Min(playerGems.collectedGems.Count, gemsLeftToTake);
 
-                //clear gems
-                playerGems.collectedGems.Clear();
-                playerGems.gemCount = 0;
+                    // Remove specific amount from inventory
+                    if (amountToTake == playerGems.collectedGems.Count)
+                    {
+                        playerGems.collectedGems.Clear();
+                    }
+                    else
+                    {
+                        playerGems.collectedGems.RemoveRange(0, amountToTake);
+                    }
+
+                    playerGems.gemCount -= amountToTake;
+                    gemsLeftToTake -= amountToTake;
+                }
             }
-            // PASS THE CURRENT WORLD Z POSITION
-            scoreDisplay.ShowScore(depositScore, blueTeamColor, currentRepoWorldZ);
+
+            int totalDepositScore = smallGemsToDeposit + (largeGemsInRadius.Count * largeGemValue);
+
+            //counter display
+            score.blueRoundTotal += totalDepositScore;
+
+            scoreDisplay.ShowScore(totalDepositScore, blueTeamColor, currentRepoWorldZ);
         }
 
-        //Clear Inventory & Empty 
-        depositor.collectedGems.Clear();
-        depositor.gemCount = 0;
+        if (depositor != null && depositor.collectedGems.Count == 0)
+        {
+            depositor.gemCount = 0;
+        }
 
         if (allEnteredPlayers.Count > 0)
             allEnteredPlayers.RemoveAt(0);
@@ -404,10 +469,13 @@ public class RepositoryLogic : MonoBehaviour
             }
         }
 
-            repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
+        repoMoveSystemScript.elaspedTime = repoMoveSystemScript.activeDuration;
 
         teamOneCanDepo = false;
         teamTwoCanDepo = false;
+
+        //reset preview text
+        previewValue = 0;
 
         //play complete deposit noise
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Repository/Deposit", gameObject.transform.position);
@@ -418,7 +486,6 @@ public class RepositoryLogic : MonoBehaviour
 
     public void DisableRepo()
     {
-
         outlineScript.enabled = false;
 
         teamOneCanDepo = false;
@@ -594,6 +661,82 @@ public class RepositoryLogic : MonoBehaviour
         foreach (MeshRenderer renderer in meshRenderers)
         {
             renderer.material = repoMaterial;
+        }
+    }
+
+    int CalculateSmallGemPreview(List<GameObject> players)
+    {
+        int total = 0;
+
+        foreach (GameObject p in players)
+        {
+            PlayerDeath pd = p.GetComponent<PlayerDeath>();
+            total += pd.collectedGems.Count;
+        }
+
+        return Mathf.Min(total, maxDepositCap);
+    }
+
+    void UpdateDepositPreview()
+    {
+        bool validDeposit = (teamOneCanDepo && !isContested) || (teamTwoCanDepo && !isContested);
+
+        if (validDeposit)
+        {
+            //calculate active team and total gems
+            List<GameObject> activeTeam = teamOneCanDepo ? enteredPlayersTeam1 : enteredPlayersTeam2;
+            wasTeamOneLast = teamOneCanDepo; //store team it was to display the colour.
+
+            int realTotalHeld = 0;
+            foreach (GameObject p in activeTeam)
+            {
+                if (p != null) realTotalHeld += p.GetComponent<PlayerDeath>().collectedGems.Count;
+            }
+
+            //updated cached values so it saves it for later.
+            cachedTargetCap = Mathf.Min(realTotalHeld, maxDepositCap);
+
+            float destinationValue = cachedTargetCap * (depositProgress / depositTime);
+            previewValue = Mathf.MoveTowards(previewValue, destinationValue, Time.deltaTime * 100f);
+        }
+        else
+        {
+            //countdown after player walks off
+            if (previewValue > 0)
+            {
+                //slow speed based on the cached total so it takes X seconds aka is normalized
+                float dropSpeed = Mathf.Max(cachedTargetCap / previewDecrementDuration, 15f);
+                previewValue = Mathf.MoveTowards(previewValue, 0f, Time.deltaTime * dropSpeed);
+            }
+        }
+
+        if (previewValue <= 0.05f && !validDeposit)
+        {
+            previewValue = 0;
+            previewText.SetVisible(false);
+            lastPreviewInt = 0;
+        }
+        else
+        {
+            previewText.SetVisible(true);
+            int currentInt = Mathf.RoundToInt(previewValue);
+            previewText.SetValue(currentInt, cachedTargetCap);
+
+            Color teamCol = wasTeamOneLast ? yellowTeamColor : blueTeamColor;
+            Color targetColor = validDeposit ? teamCol : greyColor;
+            previewText.SetColor(Color.Lerp(previewText.text.color, targetColor, Time.deltaTime * 10f));
+
+            //scaling
+            float visualRatio = cachedTargetCap > 0 ? (previewValue / cachedTargetCap) : 0;
+            float growScale = Mathf.Lerp(0.8f, 1.2f, visualRatio) * baseScaleMultiplier;
+
+            if (currentInt > lastPreviewInt && validDeposit)
+            {
+                previewText.transform.localScale = Vector3.one * (growScale + punchIntensity);
+                lastPreviewInt = currentInt;
+            }
+
+            previewText.transform.localScale = Vector3.Lerp(previewText.transform.localScale, Vector3.one * growScale, Time.deltaTime * 20f);
         }
     }
 
