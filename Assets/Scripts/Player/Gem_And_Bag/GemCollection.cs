@@ -109,16 +109,25 @@ public class GemCollection : MonoBehaviour
     //Gem Collected
     void GemCollected()
     {
-        Collecter.GetComponent<PlayerDeath>().collectedGems.Add(gemPrefab.gameObject);
+        PlayerDeath pd = Collecter.GetComponent<PlayerDeath>();
+
+        pd.collectedGems.Add(gemPrefab.gameObject);
         rb.useGravity = true;
 
-        GameObject particle = GameObject.Instantiate(collectionParticle, gameObject.transform.position, Quaternion.identity);
+        //update ui
+        if (pd.gemsHeldUI != null)
+        {
+            pd.gemsHeldUI.AnimateToValue(pd.collectedGems.Count);
+        }
+
+        GameObject particle = Instantiate(collectionParticle, transform.position, Quaternion.identity);
         particle.transform.parent = Collecter.transform;
-        
-        //weird ass method thats REQUIRED in order to modify the start color of a particle without using deprecated functions
+
         var ps = particle.GetComponent<ParticleSystem>().main;
         ps.startColor = gameObject.GetComponent<MeshRenderer>().material.color;
-        
+
         gameObject.SetActive(false);
     }
+
+
 }

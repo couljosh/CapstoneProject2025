@@ -1,0 +1,5778 @@
+fileFormatVersion: 2
+guid: 42bc22fdee52a8b469e43b4ae84ef502
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GemCollection_gif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffb148e920919840a1f3789fe75c77b
+      internalID: 2106256098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_1
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730742f13f952f04682432d9175a3840
+      internalID: -926465481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_2
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9023983aef1ab42b2f57ffe651b9b8
+      internalID: -1279481392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_3
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0b4ed2a2c50a24b971757dc55b469a
+      internalID: -1695607665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_4
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee131476952a124ca9f62a506eacb30
+      internalID: 165379460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_5
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc4bad6ef8a72640a51e34c649385d5
+      internalID: -1808736134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_6
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 9112
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e9002adcf10bb4cb3d01b380673b8a
+      internalID: 712183633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970eeb0fc7ea0e44e8e01c4fe297c002
+      internalID: 384052513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_8
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea122f6c4c6fd141b398423f98b7f67
+      internalID: -749218829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_9
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e96bba337c3f14f92cac4b857ea3b2
+      internalID: 1741161483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_10
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07863b26425306b4593a79c2e1127721
+      internalID: 340609347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_11
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2092f76b83568841b5aaa332a7aeaaa
+      internalID: -1930209034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_12
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f46a4e329667e4594d6c8b78b35094
+      internalID: 726777552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_13
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 8844
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa936c21779471c4cb467741ec208c76
+      internalID: -579637177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51516b98003108b4bb12444f91fd6470
+      internalID: -370359753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_15
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a1e61c149fcf54ba8f56750d5e48ce
+      internalID: 1280302790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_16
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60216bd29d6143745a4c84fea917c80d
+      internalID: 1194241708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_17
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3446b9a2cdef24099272c3f2ecfb18
+      internalID: 39208835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_18
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29a241fbf9a9be4aa5a04b858f9ac72
+      internalID: 1067206530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_19
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9c030fec02ef84580035aad13b86f7
+      internalID: -853966394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_20
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 8576
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac64b935c137934ab5c32b4575346b3
+      internalID: 491021397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e170041131cc1ea41824808667897752
+      internalID: 1780062502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_22
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4fe193ae83af14199261ee10eaac35
+      internalID: 879549329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_23
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea1850e50d6574cab3defa2f1368f6
+      internalID: 50795045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_24
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405e287e2ca36f94c8440780842ce37a
+      internalID: 1065796354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_25
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0f251188c81d64c8ed0872ac4828dd
+      internalID: 558664014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_26
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcad6123230bd274a9e20364bb4768a6
+      internalID: -1066134308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_27
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 8308
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90beddbaaf19b1241b4a1146f42494cb
+      internalID: 653453573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acdc77157883ad43b488c4c53408ade
+      internalID: 930470217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_29
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5753b95f451c59143985369f61aa3429
+      internalID: -226109092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_30
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dba333b52d05b41bbca8befce51b6e
+      internalID: 1635517821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_31
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fced0282a56ebf348af21e1017b16688
+      internalID: 462102328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_32
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8205a3ec9825f4ea8efc62f636a1e7
+      internalID: -1940048174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_33
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5540ffc3d5811047bf5e2fc9ffd1631
+      internalID: 1668525974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_34
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 8040
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd039d78e3536146a2a8d60e9e7648b
+      internalID: -16144201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08e2f4ba2e8e1f4397f75feda221439
+      internalID: -1556761053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_36
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69601e7d060e12a4bb8b33bec333d97c
+      internalID: -670085115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_37
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cd3cfeedd1a4d4d9216e0347f317c1
+      internalID: 1849451667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_38
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dec447cfa303841b2be103bdf2c3d9
+      internalID: -1562121954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_39
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c8e8a52b84c4d4ea1dfe8a462958b0
+      internalID: 2099511312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_40
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33493734b4805384787dcd1e2a271232
+      internalID: 1135969805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_41
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 7772
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757b247bf55561840b1b87e27df255b5
+      internalID: -1690126253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc60a87a0f90f4c4fac09467cff71b25
+      internalID: -39728757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_43
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01911c6878386f49b265fdc36ab323a
+      internalID: -731120201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_44
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ae638d7bb7b6740b8544c27fcbd4e1
+      internalID: -944744986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_45
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27087b617b03fc947a15c54c69e26d01
+      internalID: -195609104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_46
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831c4dc32f07592458cc2adad6572bcf
+      internalID: -1274719338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_47
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b474532b5f608b6458c463e1b7860d89
+      internalID: -464491408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_48
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 7504
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9124645dca7454593d30b82b30cb1c
+      internalID: -9233019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa8640616f4d01469cc516e34aecc9a
+      internalID: -1025180083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_50
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896e62720c71525449cc2514dfaa9573
+      internalID: 605835233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_51
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3613ae75b9b59488288320e31bf436
+      internalID: -1673238075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_52
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7222051e1ce754e84aa798b1161401
+      internalID: -323131156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_53
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04961dcccefa69c49b9ff068f8984e4a
+      internalID: 86960718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_54
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7865b4a9e1e34d34294586910559e2d8
+      internalID: 1843092135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_55
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 7236
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d494dc8f9a93284b9c52e045b4f0562
+      internalID: -363633408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2665ebce0d9d9c444973fd907e4347bf
+      internalID: -1651185447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_57
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21246dff99b5c884ab81c6ccd1c00444
+      internalID: -1866058860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_58
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c607ed4cbe7189e45990d80c5833244a
+      internalID: -1845338589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_59
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893de84dae7d2c24487cca67882bd83c
+      internalID: 1392339550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_60
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5f455a364b53a498bb2d4ceb714fa1
+      internalID: 854645433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_61
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7465d273d61858444a5c621f2c08e2ff
+      internalID: -1886315184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_62
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 6968
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36129037a73ec841a59a228f70d705c
+      internalID: -1753155170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96dfb7aba8d6624db67b1b8bf389567
+      internalID: 990963070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_64
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7339acae4483f64b92ab020914feaa7
+      internalID: 2128097155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_65
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f5ef204fcb03c4eb873d6a0811ef92
+      internalID: -713075556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_66
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8380db00ffb65564995d4e8a5dde0b06
+      internalID: -926991441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_67
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e23719a12a3a7d4e8bc67bee406aba9
+      internalID: 2024316024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_68
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4334d9ddf3b6b914e8ee4f32598d8ff0
+      internalID: -65284472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_69
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 6700
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294aaae36d529c641b2139f54a5f32e5
+      internalID: -454577347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93edd6e3a2bd5b47843f50d5004a9f8
+      internalID: -1191301583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_71
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4854d5d5113f94545bebafa69cffa02b
+      internalID: -1261822323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_72
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1649af430c85748aab69748440febe
+      internalID: -1373890760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_73
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f19f8170ec73846b231ac34ff8a449
+      internalID: -31984289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_74
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598b5110c714b234a88ebae8d474a030
+      internalID: 1133789546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_75
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c7b8a6bc44d2f46b0e615f9cf49293
+      internalID: 1056214422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_76
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 6432
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9fb5652b104364ca20033282f1f0b1
+      internalID: 342361702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b129379caa7d45947ae36e2bfd17ec93
+      internalID: -1023703295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_78
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171f37e5eb3c6b9468c2b416bab62ac4
+      internalID: -1910867962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_79
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaea23be23969e441a3c54528caec324
+      internalID: -324429575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_80
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c54b94a71a7cc4a9e7cd45a06cd2c1
+      internalID: -516623947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_81
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdd1fa8ad2788f44a8f0640701ab8a3
+      internalID: 1572886691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_82
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcd6b1eb8c3e4040a08eb80c7e9ac3c
+      internalID: 1651770998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_83
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 6164
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82114f5c5f44d9478d2c4bd0647b03b
+      internalID: -710071557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4fd35c2c9aca64697fbd2b97a181ea
+      internalID: 1511877531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_85
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976ef8fcb864edc4ca3603d158dbccb8
+      internalID: -21953225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_86
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a4ac298ee5df747ba07afba9493c24
+      internalID: 114202634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_87
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5af533275497345bde84a3ced56ef9
+      internalID: -1442830643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_88
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf6bfb534faad74f85db754424822bc
+      internalID: -1277248541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_89
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548b2c05693b357488a90cf041d5c395
+      internalID: 199664083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_90
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 5896
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0503dd6b73c664f8287c5a2684ddd6
+      internalID: -46523991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610c6b71d4f738f45af636a23de1ee81
+      internalID: -1550670023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_92
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14014557148420d4e8a95c77d35ce154
+      internalID: -346501033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_93
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237fe9012d97419479a7bad2164990d9
+      internalID: 88662466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_94
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a47bdb165f690742b4aff206a3ef756
+      internalID: 925575546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_95
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa21ed1dbf89fa043877892d7f541d61
+      internalID: 781423161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_96
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812857551e87c194ea1eca0e515154e1
+      internalID: 429380026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_97
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 5628
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be77b2121e4f1044b2eb1103dab69ca
+      internalID: -1467820576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ba4a6242fe00e4ea855bd1f440b343
+      internalID: -928400850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_99
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43890bcaebc7ba94588d7001997071e0
+      internalID: 1060443890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_100
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298f472eeebeb2347835ea9a7f587d35
+      internalID: 989758688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_101
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4a3085509517b42aaa89b14f7c4a0d
+      internalID: -11124226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_102
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d64c42feaad4644a890c79ffb68536
+      internalID: 1728805851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_103
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc333d606f386544970912cc2b0001d
+      internalID: -1283582215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_104
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 5360
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b79ac51de476874b8831416dd757974
+      internalID: -2009933758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6643e14910af94fb00766e63962962
+      internalID: 1286749992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_106
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347d949ee104a4c4cad4d90766a37079
+      internalID: -1331709165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_107
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acbdb994800bc14b9b7eb114a70154e
+      internalID: 990751212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_108
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f68531a0aaca04188273e55cbdc59c
+      internalID: -1097704477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_109
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864d87ebfa841444e8e71793fb3b93be
+      internalID: -215677426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_110
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c50856696dec8848af548e53cd0e946
+      internalID: -1141835741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_111
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 5092
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea6523182c40a243be963b5ae723524
+      internalID: -591931561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4713dd1093ba912448f5219bd229f0bf
+      internalID: -1779805516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_113
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfdf8c91498012448d1b78f024882e0
+      internalID: -1488475253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_114
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ffce2d39bfde041bac1083113166b7
+      internalID: -110903547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_115
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bba4d2972c75544aa2fdbc699ff44d
+      internalID: -577453023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_116
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4604a59645ebd47bdb32834c51b738
+      internalID: -796502102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_117
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb64ff72743b0545a158632ab91329d
+      internalID: 1344978742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_118
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 4824
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c0b507382e8da4f800d27a2df3773e
+      internalID: -1658518513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac53500a1cb706439ee89a0e6e9f8a6
+      internalID: -1049146293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_120
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cfa232b77109f418cb9e418b6480e3
+      internalID: -718427440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_121
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6d0705f8efae546b4ee1f352d42fae
+      internalID: 738509631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_122
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c0f8950ac37404db48ee82ddbf9e74
+      internalID: 856754618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_123
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7c463afc92aad4abad0cff0018b110
+      internalID: 1990392649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_124
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa05fc47d0e78e34ebddbaf5049a8312
+      internalID: 606415176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_125
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 4556
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad25d30aea0138644afb59aaff7cb906
+      internalID: 944708087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2d110fd6b8d32428ce46ae97916202
+      internalID: -1203729127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_127
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2923e228c0e63ab45968e3019a78420a
+      internalID: 1206239318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_128
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9a6d72902cacd4faa561553059b45f
+      internalID: -1550307094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_129
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c552bb1f7f8cd71438b286a5658b54ab
+      internalID: -1898938182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_130
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66508371b94256541949a601675ed54c
+      internalID: -1617429034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_131
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3527812241b7148901122b3c8ec97f
+      internalID: -1229411832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_132
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 4288
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672bae486c74e764ca430a69864367ec
+      internalID: -739917684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e27e2167e451c45b54ec8ac62a9527
+      internalID: -1491712573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_134
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8342bb4bd49fb43a6ad32f98c95bbb
+      internalID: -1057204133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_135
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea12860ae98f5544a91806967275add
+      internalID: 1958426027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_136
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48893f3a08d26a54980e2df98a921bb8
+      internalID: -2003914911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_137
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5576ae6a3980747a44693f88b28b07
+      internalID: -976434288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_138
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ae80cad08d36d4fba8ae096f278367
+      internalID: -118754587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_139
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 4020
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39fb25ba7dfd06418658f8eb877c88a
+      internalID: 344131375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c9494aa19299d47a0c65f59c9c3894
+      internalID: 1305029117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_141
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6df2aad13153984f885e116063fa977
+      internalID: -1133484924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_142
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01635857b4db5b4ea7e0d63f27f8129
+      internalID: -995002180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_143
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed28e999031f3a4ab18740a215f197b
+      internalID: 172729113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_144
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfcc5b80c1bab647b816f92e508e21a
+      internalID: 1530625457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_145
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98174e0c721d6343af3d4a8ac525628
+      internalID: 1017833674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_146
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 3752
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0e4f11f97933c4c8a06e89b4eccb79
+      internalID: 1467612193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71efd3031dda824da2cf323cc7e4316
+      internalID: -1092191377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_148
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fb82af94c9d08408b0024d61ef0713
+      internalID: -681277163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_149
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b2910a76714e04aaae1ee4c4f4da2d
+      internalID: -33771216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_150
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c27c4704598e254898fae03c2290164
+      internalID: -1308573836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_151
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a25fb9fbded4a42ab180d952fa06f5
+      internalID: 2005176699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_152
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b987380a15765374da17ea5f2c73a66a
+      internalID: 876374301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_153
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 3484
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46878573fbd28d247a8326ac089026f8
+      internalID: 145364072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54a1276e55ffb8478219c85891c0b56
+      internalID: -2003080079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_155
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ca1e79918582a40be930a2489e7b8f
+      internalID: -787193102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_156
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60b367ab6cc249459a2432672baf3d7
+      internalID: -238451522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_157
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9124a6de46762d642a88f464d346e64f
+      internalID: -1328560258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_158
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fe9331f79acdb4b9b2b88af7b668f0
+      internalID: -1174185745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_159
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a400f4af1ea76d49bc3ceae6046bf8b
+      internalID: -1116880177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_160
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 3216
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087d2ed238f2f494b8cd9827a4865ac1
+      internalID: -1071592842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_161
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f443b503ccdd02b479d19a68725f6211
+      internalID: -1785258461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_162
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0476f8a8cad9ce4e8c9b6d772ba7154
+      internalID: -1792430353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_163
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b4633843f11c34fb7053236bed3642
+      internalID: 581212989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_164
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24c3cb0423b9d24bb52102607e28707
+      internalID: 1202110458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_165
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106fddd14fef1b64fb5be8dccfc89ee6
+      internalID: -1813869138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_166
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c0609600566af45aaa4c41f70c98d3
+      internalID: 1465498244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_167
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2948
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9460a9b06a824849b48cb5d2ed0dff0
+      internalID: -1077724669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d9eea58560698409d79fb1f1a7a892
+      internalID: 2017770781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_169
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0924bce35906ba43a2c434badd28c0f
+      internalID: -541582195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_170
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6510478e3bfe1f24c9dc073299a23e9a
+      internalID: -677852408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_171
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086f5fa758bce074bace04f99d1476cb
+      internalID: 1943720891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_172
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cbbe4bb2af57e48a39c2f1aad37003
+      internalID: 162735180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_173
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46db56b3861ec6b4f8b4e0dfb026d69b
+      internalID: 1278616172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_174
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2680
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f158fff2e95b04ca367a4999a08124
+      internalID: -27334444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fa5816f8fce6048a47030364d595a4
+      internalID: -126021698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_176
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c543a875818322247888df33045fe25a
+      internalID: -1759138681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_177
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a158ccdba1dd547a509212641563c4
+      internalID: 349280103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_178
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbc9ecc53d731540af8874b08f09230
+      internalID: 924171296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_179
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12d0ecf612151644b769f27c90f27de
+      internalID: -1261035768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_180
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a5ac9ba5179704dab513fc1bdae586
+      internalID: -784111394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_181
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2412
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d8a73fc235bce48a396c820634e9e1
+      internalID: 108367482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23153c5d33f874408a96c451673a8e4
+      internalID: -1197593611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_183
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c4f815e5c914643905e69971257b20
+      internalID: 847772837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_184
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e9bbcf6bd99cf4790cf6dce0295c92
+      internalID: 117798911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_185
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e1dc3bf3b92d84ebaa8d9d868482c8
+      internalID: -741556964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_186
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380726216362b8849b7a4bc35c2cc669
+      internalID: -1720842415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_187
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18df681267b67c84eb5b6a0930793fb5
+      internalID: 503358862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_188
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2144
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107cb8382a1280c41a32b78780d1fb1a
+      internalID: 563535186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be5656c3bb804041a5c2e360588d867
+      internalID: 823821790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_190
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbca377de289a7441add13e26e67f8cc
+      internalID: -1321590882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_191
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d93ebdf7ce77646b920fc6fd4b390f
+      internalID: -288427363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_192
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040da4e8bb776b246960307e68168148
+      internalID: 1461311635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_193
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b2e9ee20bb4cd4781e8210df3ea1ae
+      internalID: -1444499523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_194
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d174c94d84bb04195bc39259e366ca
+      internalID: 767990325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_195
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1876
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936b34ff6baa535429152de4a1d3af9c
+      internalID: -210885381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80b4e0a4bce14f4b9124a85261d3938
+      internalID: 520667638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_197
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bde12d94ef15743b33a49d4ef2f3b9
+      internalID: -1596601037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_198
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b00b858df5b7d4c85276c4fa12120f
+      internalID: -1967004619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_199
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0872562b8b8ed4a8028fa2fc169f21
+      internalID: 1195892344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_200
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f18af8cfdaf9d46a5deb81595c3003
+      internalID: -240887133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_201
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e5f9d2e52846a4c93ea5e7858bf563
+      internalID: -303001367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_202
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1608
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1f562f64c40fa448835c801c5c36ef
+      internalID: 354022016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_203
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3207dabde6e6804aa6bf98632015aad
+      internalID: 349053791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_204
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b014297dbe6ff4142a94001b815d3f90
+      internalID: -822204762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_205
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904aefa6664c3cd46867098d34432667
+      internalID: -2115924610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_206
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a51234a47894a4a9bbb4e567253819
+      internalID: -442765748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_207
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f1d8d590c4d024bb6a85efbe6ac2d4
+      internalID: 1887172878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_208
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e589dad4647277d46b7ff812502dc41e
+      internalID: -1824042821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_209
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1340
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13814e23f9cb47a48b6feb19d0a6aed2
+      internalID: -2097244073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf7f87a312fa0446ac801722ecbcdb4
+      internalID: -2086691582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_211
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b78f1fee2fde54d8ac9bb8e9f5d46a
+      internalID: -1053566647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_212
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02b807fa7fdc9b4fb9aa2ab9a9fe393
+      internalID: 913758657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_213
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa67cb265c0c7c4db45c9d9d31ff16d
+      internalID: -882690318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_214
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e28a8f7dae8d6428030cb9ef581127
+      internalID: -1677971190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_215
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdb7866e52ca884081c20667fc5a7e8
+      internalID: -588814664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_216
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1072
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6a53baac5f49f4d8a4be97fd5e659b
+      internalID: -1801798751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_217
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ab35af7396cf847ac21ef718d71f7d
+      internalID: 1460385970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_218
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968b466cf54f4cf4dacd70035da4fd1d
+      internalID: -1734191690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_219
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046d88ffab5ae72408384497586ab8f7
+      internalID: 215578383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_220
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d72bbdf28ddccc40b493b297d3616d0
+      internalID: 1563556173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_221
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd72502d04fe3a246be75f760d545e45
+      internalID: -108362713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_222
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fe443bedf0c464081eba2b64ff95cd
+      internalID: 974729725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_223
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 804
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8301f42f5e0cd40439d0cbb9f3f5a812
+      internalID: 2074985405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e066efd219ecfa46a1cf88553f4bb04
+      internalID: 1959857252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_225
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a2df5ccb0aa344a916aa193e05a493
+      internalID: 1101060052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_226
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338b22d24a6078d4e910adca416adb89
+      internalID: 50582241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_227
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1752ecbdd6e5d4a9eebeace4877345
+      internalID: -744977861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_228
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8035e4e49d8444da370c97c016182a
+      internalID: -606399343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_229
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd161eb88e8369e43ae413fb10ca541a
+      internalID: -47757846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_230
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 536
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d23b5439694d949a7e75b1db92ea39
+      internalID: 692804780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_231
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c164b7f5357494a41bddef6f0fa44abc
+      internalID: 847552490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_232
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c5c6b0682413240aec0690bad8c0e9
+      internalID: 1286258142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_233
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fca02d4ec247c34bb260d667104fe23
+      internalID: 2073959659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_234
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7badb3b9d9def5d448b6cdeb091798f5
+      internalID: 218290562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_235
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdd26d0936a3114b8afa6c4ec255661
+      internalID: 841318885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_236
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdc7b4143983a74bb84d263ba084b23
+      internalID: 998389915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_237
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 268
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed52976ff263f864b98d98d630eb7a9f
+      internalID: 1128738805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5008fd20b5f2b645bf1bd5cb28089e1
+      internalID: 929319342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_239
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7af7c74c935bd4e97314aa5730fc61
+      internalID: 1853734470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_240
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef90c58030305ed4598c2b325b7e2a63
+      internalID: 1347984529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_241
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17457f46d79ee74288b6ef8897fe980
+      internalID: 361419327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_242
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfdc0e44b5a27a40894e10138a5484b
+      internalID: -1851603213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_243
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f716850b8cf36b428e7e66d7067f678
+      internalID: 183722781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemCollection_gif_244
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 0
+        width: 356
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d935236bfd15f924eb1b6211c6921ea2
+      internalID: 190043900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 54d5eeb5aa0e4fe48870e6071152c1f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GemCollection_gif_0: 2106256098
+      GemCollection_gif_1: -926465481
+      GemCollection_gif_10: 340609347
+      GemCollection_gif_100: 989758688
+      GemCollection_gif_101: -11124226
+      GemCollection_gif_102: 1728805851
+      GemCollection_gif_103: -1283582215
+      GemCollection_gif_104: -2009933758
+      GemCollection_gif_105: 1286749992
+      GemCollection_gif_106: -1331709165
+      GemCollection_gif_107: 990751212
+      GemCollection_gif_108: -1097704477
+      GemCollection_gif_109: -215677426
+      GemCollection_gif_11: -1930209034
+      GemCollection_gif_110: -1141835741
+      GemCollection_gif_111: -591931561
+      GemCollection_gif_112: -1779805516
+      GemCollection_gif_113: -1488475253
+      GemCollection_gif_114: -110903547
+      GemCollection_gif_115: -577453023
+      GemCollection_gif_116: -796502102
+      GemCollection_gif_117: 1344978742
+      GemCollection_gif_118: -1658518513
+      GemCollection_gif_119: -1049146293
+      GemCollection_gif_12: 726777552
+      GemCollection_gif_120: -718427440
+      GemCollection_gif_121: 738509631
+      GemCollection_gif_122: 856754618
+      GemCollection_gif_123: 1990392649
+      GemCollection_gif_124: 606415176
+      GemCollection_gif_125: 944708087
+      GemCollection_gif_126: -1203729127
+      GemCollection_gif_127: 1206239318
+      GemCollection_gif_128: -1550307094
+      GemCollection_gif_129: -1898938182
+      GemCollection_gif_13: -579637177
+      GemCollection_gif_130: -1617429034
+      GemCollection_gif_131: -1229411832
+      GemCollection_gif_132: -739917684
+      GemCollection_gif_133: -1491712573
+      GemCollection_gif_134: -1057204133
+      GemCollection_gif_135: 1958426027
+      GemCollection_gif_136: -2003914911
+      GemCollection_gif_137: -976434288
+      GemCollection_gif_138: -118754587
+      GemCollection_gif_139: 344131375
+      GemCollection_gif_14: -370359753
+      GemCollection_gif_140: 1305029117
+      GemCollection_gif_141: -1133484924
+      GemCollection_gif_142: -995002180
+      GemCollection_gif_143: 172729113
+      GemCollection_gif_144: 1530625457
+      GemCollection_gif_145: 1017833674
+      GemCollection_gif_146: 1467612193
+      GemCollection_gif_147: -1092191377
+      GemCollection_gif_148: -681277163
+      GemCollection_gif_149: -33771216
+      GemCollection_gif_15: 1280302790
+      GemCollection_gif_150: -1308573836
+      GemCollection_gif_151: 2005176699
+      GemCollection_gif_152: 876374301
+      GemCollection_gif_153: 145364072
+      GemCollection_gif_154: -2003080079
+      GemCollection_gif_155: -787193102
+      GemCollection_gif_156: -238451522
+      GemCollection_gif_157: -1328560258
+      GemCollection_gif_158: -1174185745
+      GemCollection_gif_159: -1116880177
+      GemCollection_gif_16: 1194241708
+      GemCollection_gif_160: -1071592842
+      GemCollection_gif_161: -1785258461
+      GemCollection_gif_162: -1792430353
+      GemCollection_gif_163: 581212989
+      GemCollection_gif_164: 1202110458
+      GemCollection_gif_165: -1813869138
+      GemCollection_gif_166: 1465498244
+      GemCollection_gif_167: -1077724669
+      GemCollection_gif_168: 2017770781
+      GemCollection_gif_169: -541582195
+      GemCollection_gif_17: 39208835
+      GemCollection_gif_170: -677852408
+      GemCollection_gif_171: 1943720891
+      GemCollection_gif_172: 162735180
+      GemCollection_gif_173: 1278616172
+      GemCollection_gif_174: -27334444
+      GemCollection_gif_175: -126021698
+      GemCollection_gif_176: -1759138681
+      GemCollection_gif_177: 349280103
+      GemCollection_gif_178: 924171296
+      GemCollection_gif_179: -1261035768
+      GemCollection_gif_18: 1067206530
+      GemCollection_gif_180: -784111394
+      GemCollection_gif_181: 108367482
+      GemCollection_gif_182: -1197593611
+      GemCollection_gif_183: 847772837
+      GemCollection_gif_184: 117798911
+      GemCollection_gif_185: -741556964
+      GemCollection_gif_186: -1720842415
+      GemCollection_gif_187: 503358862
+      GemCollection_gif_188: 563535186
+      GemCollection_gif_189: 823821790
+      GemCollection_gif_19: -853966394
+      GemCollection_gif_190: -1321590882
+      GemCollection_gif_191: -288427363
+      GemCollection_gif_192: 1461311635
+      GemCollection_gif_193: -1444499523
+      GemCollection_gif_194: 767990325
+      GemCollection_gif_195: -210885381
+      GemCollection_gif_196: 520667638
+      GemCollection_gif_197: -1596601037
+      GemCollection_gif_198: -1967004619
+      GemCollection_gif_199: 1195892344
+      GemCollection_gif_2: -1279481392
+      GemCollection_gif_20: 491021397
+      GemCollection_gif_200: -240887133
+      GemCollection_gif_201: -303001367
+      GemCollection_gif_202: 354022016
+      GemCollection_gif_203: 349053791
+      GemCollection_gif_204: -822204762
+      GemCollection_gif_205: -2115924610
+      GemCollection_gif_206: -442765748
+      GemCollection_gif_207: 1887172878
+      GemCollection_gif_208: -1824042821
+      GemCollection_gif_209: -2097244073
+      GemCollection_gif_21: 1780062502
+      GemCollection_gif_210: -2086691582
+      GemCollection_gif_211: -1053566647
+      GemCollection_gif_212: 913758657
+      GemCollection_gif_213: -882690318
+      GemCollection_gif_214: -1677971190
+      GemCollection_gif_215: -588814664
+      GemCollection_gif_216: -1801798751
+      GemCollection_gif_217: 1460385970
+      GemCollection_gif_218: -1734191690
+      GemCollection_gif_219: 215578383
+      GemCollection_gif_22: 879549329
+      GemCollection_gif_220: 1563556173
+      GemCollection_gif_221: -108362713
+      GemCollection_gif_222: 974729725
+      GemCollection_gif_223: 2074985405
+      GemCollection_gif_224: 1959857252
+      GemCollection_gif_225: 1101060052
+      GemCollection_gif_226: 50582241
+      GemCollection_gif_227: -744977861
+      GemCollection_gif_228: -606399343
+      GemCollection_gif_229: -47757846
+      GemCollection_gif_23: 50795045
+      GemCollection_gif_230: 692804780
+      GemCollection_gif_231: 847552490
+      GemCollection_gif_232: 1286258142
+      GemCollection_gif_233: 2073959659
+      GemCollection_gif_234: 218290562
+      GemCollection_gif_235: 841318885
+      GemCollection_gif_236: 998389915
+      GemCollection_gif_237: 1128738805
+      GemCollection_gif_238: 929319342
+      GemCollection_gif_239: 1853734470
+      GemCollection_gif_24: 1065796354
+      GemCollection_gif_240: 1347984529
+      GemCollection_gif_241: 361419327
+      GemCollection_gif_242: -1851603213
+      GemCollection_gif_243: 183722781
+      GemCollection_gif_244: 190043900
+      GemCollection_gif_25: 558664014
+      GemCollection_gif_26: -1066134308
+      GemCollection_gif_27: 653453573
+      GemCollection_gif_28: 930470217
+      GemCollection_gif_29: -226109092
+      GemCollection_gif_3: -1695607665
+      GemCollection_gif_30: 1635517821
+      GemCollection_gif_31: 462102328
+      GemCollection_gif_32: -1940048174
+      GemCollection_gif_33: 1668525974
+      GemCollection_gif_34: -16144201
+      GemCollection_gif_35: -1556761053
+      GemCollection_gif_36: -670085115
+      GemCollection_gif_37: 1849451667
+      GemCollection_gif_38: -1562121954
+      GemCollection_gif_39: 2099511312
+      GemCollection_gif_4: 165379460
+      GemCollection_gif_40: 1135969805
+      GemCollection_gif_41: -1690126253
+      GemCollection_gif_42: -39728757
+      GemCollection_gif_43: -731120201
+      GemCollection_gif_44: -944744986
+      GemCollection_gif_45: -195609104
+      GemCollection_gif_46: -1274719338
+      GemCollection_gif_47: -464491408
+      GemCollection_gif_48: -9233019
+      GemCollection_gif_49: -1025180083
+      GemCollection_gif_5: -1808736134
+      GemCollection_gif_50: 605835233
+      GemCollection_gif_51: -1673238075
+      GemCollection_gif_52: -323131156
+      GemCollection_gif_53: 86960718
+      GemCollection_gif_54: 1843092135
+      GemCollection_gif_55: -363633408
+      GemCollection_gif_56: -1651185447
+      GemCollection_gif_57: -1866058860
+      GemCollection_gif_58: -1845338589
+      GemCollection_gif_59: 1392339550
+      GemCollection_gif_6: 712183633
+      GemCollection_gif_60: 854645433
+      GemCollection_gif_61: -1886315184
+      GemCollection_gif_62: -1753155170
+      GemCollection_gif_63: 990963070
+      GemCollection_gif_64: 2128097155
+      GemCollection_gif_65: -713075556
+      GemCollection_gif_66: -926991441
+      GemCollection_gif_67: 2024316024
+      GemCollection_gif_68: -65284472
+      GemCollection_gif_69: -454577347
+      GemCollection_gif_7: 384052513
+      GemCollection_gif_70: -1191301583
+      GemCollection_gif_71: -1261822323
+      GemCollection_gif_72: -1373890760
+      GemCollection_gif_73: -31984289
+      GemCollection_gif_74: 1133789546
+      GemCollection_gif_75: 1056214422
+      GemCollection_gif_76: 342361702
+      GemCollection_gif_77: -1023703295
+      GemCollection_gif_78: -1910867962
+      GemCollection_gif_79: -324429575
+      GemCollection_gif_8: -749218829
+      GemCollection_gif_80: -516623947
+      GemCollection_gif_81: 1572886691
+      GemCollection_gif_82: 1651770998
+      GemCollection_gif_83: -710071557
+      GemCollection_gif_84: 1511877531
+      GemCollection_gif_85: -21953225
+      GemCollection_gif_86: 114202634
+      GemCollection_gif_87: -1442830643
+      GemCollection_gif_88: -1277248541
+      GemCollection_gif_89: 199664083
+      GemCollection_gif_9: 1741161483
+      GemCollection_gif_90: -46523991
+      GemCollection_gif_91: -1550670023
+      GemCollection_gif_92: -346501033
+      GemCollection_gif_93: 88662466
+      GemCollection_gif_94: 925575546
+      GemCollection_gif_95: 781423161
+      GemCollection_gif_96: 429380026
+      GemCollection_gif_97: -1467820576
+      GemCollection_gif_98: -928400850
+      GemCollection_gif_99: 1060443890
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

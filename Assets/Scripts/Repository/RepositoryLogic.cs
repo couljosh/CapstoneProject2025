@@ -44,6 +44,8 @@ public class RepositoryLogic : MonoBehaviour
     private int cachedTargetCap;
     private bool wasTeamOneLast;
     private Color greyColor = new Color(0.5f, 0.5f, 0.5f);
+    private bool wasPreviewContested;
+    public Color contestedPreviewColor = Color.red;
 
     [Header("Object References")]
     public GameObject repoAlarm;
@@ -681,35 +683,58 @@ public class RepositoryLogic : MonoBehaviour
     {
         bool validDeposit = (teamOneCanDepo && !isContested) || (teamTwoCanDepo && !isContested);
 
+        // ---------------- CONTESTED STATE ----------------
+        if (isContested)
+        {
+            //freeze deposit value where it was
+            previewText.SetVisible(previewValue > 0);
+
+            int frozenInt = Mathf.RoundToInt(previewValue);
+            previewText.SetValue(frozenInt, cachedTargetCap);
+
+            //override color to contested
+            previewText.SetColor(Color.Lerp(
+                previewText.text.color,
+                contestedPreviewColor,
+                Time.deltaTime * 10f
+            ));
+
+            wasPreviewContested = true;
+            return;
+        }
+        // --------------------------------------------------
+
+        wasPreviewContested = false;
+
+        // ---------------- ACTIVE DEPOSIT ----------------
         if (validDeposit)
         {
-            //calculate active team and total gems
             List<GameObject> activeTeam = teamOneCanDepo ? enteredPlayersTeam1 : enteredPlayersTeam2;
-            wasTeamOneLast = teamOneCanDepo; //store team it was to display the colour.
+            wasTeamOneLast = teamOneCanDepo;
 
             int realTotalHeld = 0;
             foreach (GameObject p in activeTeam)
             {
-                if (p != null) realTotalHeld += p.GetComponent<PlayerDeath>().collectedGems.Count;
+                if (p != null)
+                    realTotalHeld += p.GetComponent<PlayerDeath>().collectedGems.Count;
             }
 
-            //updated cached values so it saves it for later.
             cachedTargetCap = Mathf.Min(realTotalHeld, maxDepositCap);
 
             float destinationValue = cachedTargetCap * (depositProgress / depositTime);
             previewValue = Mathf.MoveTowards(previewValue, destinationValue, Time.deltaTime * 100f);
         }
+        // ---------------- WALK-OFF / EMPTY ----------------
         else
         {
-            //countdown after player walks off
             if (previewValue > 0)
             {
-                //slow speed based on the cached total so it takes X seconds aka is normalized
                 float dropSpeed = Mathf.Max(cachedTargetCap / previewDecrementDuration, 15f);
                 previewValue = Mathf.MoveTowards(previewValue, 0f, Time.deltaTime * dropSpeed);
             }
         }
 
+        // ---------------- VISIBILITY ----------------
         if (previewValue <= 0.05f && !validDeposit)
         {
             previewValue = 0;
@@ -719,24 +744,35 @@ public class RepositoryLogic : MonoBehaviour
         else
         {
             previewText.SetVisible(true);
+
             int currentInt = Mathf.RoundToInt(previewValue);
             previewText.SetValue(currentInt, cachedTargetCap);
 
             Color teamCol = wasTeamOneLast ? yellowTeamColor : blueTeamColor;
             Color targetColor = validDeposit ? teamCol : greyColor;
-            previewText.SetColor(Color.Lerp(previewText.text.color, targetColor, Time.deltaTime * 10f));
 
-            //scaling
+            previewText.SetColor(Color.Lerp(
+                previewText.text.color,
+                targetColor,
+                Time.deltaTime * 10f
+            ));
+
+            // scaling
             float visualRatio = cachedTargetCap > 0 ? (previewValue / cachedTargetCap) : 0;
             float growScale = Mathf.Lerp(0.8f, 1.2f, visualRatio) * baseScaleMultiplier;
 
             if (currentInt > lastPreviewInt && validDeposit)
             {
-                previewText.transform.localScale = Vector3.one * (growScale + punchIntensity);
+                previewText.transform.localScale =
+                    Vector3.one * (growScale + punchIntensity);
                 lastPreviewInt = currentInt;
             }
 
-            previewText.transform.localScale = Vector3.Lerp(previewText.transform.localScale, Vector3.one * growScale, Time.deltaTime * 20f);
+            previewText.transform.localScale = Vector3.Lerp(
+                previewText.transform.localScale,
+                Vector3.one * growScale,
+                Time.deltaTime * 20f
+            );
         }
     }
 

@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &-4126106969403851690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Drill/MotorStarting
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Drill/MotorStarting
+  Guid:
+    Data1: 1124658471
+    Data2: 1101422606
+    Data3: 583481248
+    Data4: -1835171174
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5149
 --- !u!114 &-1403963801764331317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,13 +150,15 @@ MonoBehaviour:
   - {fileID: 7670074819231782021}
   - {fileID: 5631061487975166481}
   - {fileID: -264101460343857691}
+  - {fileID: 218504140064292665}
+  - {fileID: -4126106969403851690}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 639010689390408783
+  cacheTime: 639035783643999854
   SerializableEventsDict:
   - key: event:/SFX_Repository/Deposit
     index: 0
@@ -158,11 +187,38 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639010689390408783
+  lastModified: 639035783643974741
   FileSizes:
   - Name: Desktop
-    Value: 209984
+    Value: 307360
   Exists: 1
+--- !u!114 &218504140064292665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_Drill/DrillMoving
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_Drill/DrillMoving
+  Guid:
+    Data1: 483723525
+    Data2: 1097911182
+    Data3: 1539409574
+    Data4: 888039031
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3955
 --- !u!114 &1159516551155496074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,10 +288,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639009860911322600
+  lastModified: 639035783643999854
   FileSizes:
   - Name: Desktop
-    Value: 1078
+    Value: 1182
   Exists: 1
 --- !u!114 &7670074819231782021
 MonoBehaviour:

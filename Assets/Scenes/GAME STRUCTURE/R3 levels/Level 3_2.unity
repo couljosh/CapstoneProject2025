@@ -3283,6 +3283,10 @@ PrefabInstance:
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 585258647}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: gemsHeldCounterPrefab
+      value: 
+      objectReference: {fileID: 6802103998379015569, guid: c3b49df178ab572439a8ba2e54015833, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30178,8 +30182,6 @@ Tilemap:
     m_Data: {fileID: 8188270782028997157, guid: fca8e941a697275488703154b133c009, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 8188270782028997157, guid: 35a54f18e28ec834997c151b87959fe2, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -16, y: -101, z: 0}

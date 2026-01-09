@@ -41,6 +41,9 @@ public class PlayerDeath : MonoBehaviour
     [Header("Gem Drop Customization/Check")]
     public int gemCount;
 
+    [Header("Gem Counter Checks UI")]
+    public GemsHeldUI gemsHeldUI;
+
 
     private void Start()
     {
@@ -111,6 +114,11 @@ public class PlayerDeath : MonoBehaviour
 
         DisablePlayer();
         DropGems();
+        //reset gem ui
+        if (gemsHeldUI != null)
+        {
+            gemsHeldUI.AnimateToValue(0);
+        }
 
         gameObject.GetComponent<Animator>().applyRootMotion = true;
         
@@ -161,14 +169,20 @@ public class PlayerDeath : MonoBehaviour
             gems.GetComponent<Collider>().enabled = true;
             gems.transform.position = transform.position;
             gems.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
-            //Debug.Log(gems.transform.rotation);
             gems.gameObject.SetActive(true);
-            gems.gameObject.GetComponent<Rigidbody>().AddForce(gems.transform.forward * playerStats.scatterForce);
+            gems.gameObject.GetComponent<Rigidbody>().AddForce(
+                gems.transform.forward * playerStats.scatterForce
+            );
         }
 
         collectedGems.Clear();
         gemCount = 0;
 
+        //reset gem ui
+        if (gemsHeldUI != null)
+        {
+            gemsHeldUI.AnimateToValue(0);
+        }
     }
 
     void EnablePlayer()

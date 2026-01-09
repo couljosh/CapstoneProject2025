@@ -46874,6 +46874,10 @@ PrefabInstance:
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 1038515586}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: gemsHeldCounterPrefab
+      value: 
+      objectReference: {fileID: 6802103998379015569, guid: c3b49df178ab572439a8ba2e54015833, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
