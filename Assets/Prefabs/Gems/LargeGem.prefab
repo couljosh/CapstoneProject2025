@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4881049840861052736}
   - component: {fileID: 5596824465492831227}
   - component: {fileID: 4578612392340483187}
-  - component: {fileID: 7645548110014292073}
+  - component: {fileID: 1595959236962474319}
   m_Layer: 6
   m_Name: LargeGem
   m_TagString: LargeGem
@@ -110,7 +110,7 @@ MonoBehaviour:
   outOfRadiusMaterial: {fileID: 2100000, guid: 618b736478baeab4fbc3aa29585d9d05, type: 2}
   inRadiusMaterial: {fileID: 2100000, guid: 76552ae813c694f4886f7ed9b30a1e03, type: 2}
   isInDepositRadius: 0
---- !u!114 &7645548110014292073
+--- !u!114 &1595959236962474319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

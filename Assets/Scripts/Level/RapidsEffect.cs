@@ -20,7 +20,12 @@ public class RapidsEffect : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        other.GetComponent<Rigidbody>().AddForce(transform.forward * rapidForce, ForceMode.VelocityChange);
+        
+        if(other.GetComponent<Rigidbody>() != null)
+        {
+             other.GetComponent<Rigidbody>().AddForce(transform.forward * rapidForce, ForceMode.VelocityChange);
+
+        }
 
         if (other.gameObject.tag == "Gem")
         {
