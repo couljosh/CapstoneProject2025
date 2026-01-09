@@ -596,6 +596,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   chargingKick: 0
+  canAct: 0
   shouldCheck: 1
   currentPowerUp: {fileID: 0}
   isDrill: 0

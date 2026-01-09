@@ -56,6 +56,9 @@ public class PlayerMove : MonoBehaviour
     public bool isDrill;
     public PowerUpPickup powerUpPickupScript;
 
+    [Header("Gems Held UI Refs")]
+    private GemsHeldUI gemsHeldUI;
+
 
     private void Awake()
     {
@@ -310,8 +313,21 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
+    public void SetGemsHeldUI(GemsHeldUI ui)
+    {
+        gemsHeldUI = ui;
+    }
 
-   public void DrillMove(Vector3 direction)
+    //called when gem count changes
+    public void OnGemsChanged(int newTotal)
+    {
+        if (gemsHeldUI != null)
+        {
+            gemsHeldUI.AnimateToValue(newTotal);
+        }
+    }
+
+    public void DrillMove(Vector3 direction)
    {
 
        DrillLogic drillLogicScript = powerUpPickupScript.activePowerup.GetComponent<DrillLogic>();
