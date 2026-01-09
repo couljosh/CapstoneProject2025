@@ -7,7 +7,7 @@ public class PowerUpPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Crate")
+        if (other.gameObject.tag == "Crate" && activePowerup == null)
         {
            CrateLogic crateData = other.gameObject.GetComponent<CrateLogic>();
            activePowerup = Instantiate(crateData.chosenPowerup, this.transform);

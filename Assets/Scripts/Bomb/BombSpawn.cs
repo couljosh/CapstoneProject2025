@@ -9,6 +9,7 @@ public class BombSpawn : MonoBehaviour
     public PlayerStats playerStats;
     private PlayerDeath playerDeath;
     private PlayerEffects playerEffects;
+    public PowerUpPickup powerUpPickupScript;
 
     public GameObject bombPrefab;
 
@@ -59,7 +60,7 @@ public class BombSpawn : MonoBehaviour
 
     public void OnSpawnBomb(InputAction.CallbackContext context)
     {
-        if (context.performed && !playerDeath.isPlayerDead)
+        if (context.performed && !playerDeath.isPlayerDead && powerUpPickupScript.activePowerup == null)
         {
             if (bombsHeld > 0)
             {

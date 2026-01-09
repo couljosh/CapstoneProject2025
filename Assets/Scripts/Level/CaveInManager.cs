@@ -21,6 +21,8 @@ public class CaveInManager : MonoBehaviour
     public Tilemap terrainTileMap;
     public RuleTile terrainTile;
 
+    public RepoMoveSystem repoMoveSystemScript;
+
 
     public float warningTime;
 
@@ -45,14 +47,20 @@ public class CaveInManager : MonoBehaviour
 
     private ReadOnlyArray<Gamepad> gamepadArray;
 
+    [Header("Power up Crate")]
+    public GameObject crate;
+    public int crateLimit;
+    public int crateAmt;
+
+    public int crateChance;
 
 
-        private void Start()
-        {
-           gamepadArray = Gamepad.all;
-           cameraShake = Camera.main.GetComponent<CameraShake>();
+    private void Start()
+    {
+        gamepadArray = Gamepad.all;
+        cameraShake = Camera.main.GetComponent<CameraShake>();
 
-        }
+    }
 
     void Update()
     {
@@ -60,7 +68,7 @@ public class CaveInManager : MonoBehaviour
         timeSinceLastCaveIn += Time.deltaTime;
 
         //Cave-In Chance Check
-        if(timer > 1f)
+        if (timer > 1f)
         {
             timer = 0;
             randomNum = Random.Range(0, 100);
@@ -86,6 +94,9 @@ public class CaveInManager : MonoBehaviour
                 cameraShake.caveinVFX.Clear();
                 cameraShake.caveinVFX.Play();
                 //Debug.Log("test");
+
+                SpawnPowerup();
+
             }
         }
     }
@@ -104,7 +115,7 @@ public class CaveInManager : MonoBehaviour
                 continue;
             }
             gamepad.SetMotorSpeeds(0.1f, 0.1f);
-        }    
+        }
 
         foreach (var gamepad in gamepadArray)
         {
@@ -128,6 +139,7 @@ public class CaveInManager : MonoBehaviour
             GameObject.Instantiate(notificationPrefab, pos, Quaternion.identity);
 
             StartCoroutine(terrainChunkSpawn(pos));
+
             yield return null;
         }
     }
@@ -143,11 +155,11 @@ public class CaveInManager : MonoBehaviour
 
         //determine the magnitude of blocks outwards - how many tiles outwards will this cave in reach?
         int magnitudeToCycle = Random.Range(minCaveInTileRadius, maxCaveInTileRadius);
-        
+
         //Tile testTile = terrainTileMap.
 
         //for each magnitude level
-        for(int i = 1; i <= magnitudeToCycle; i++)
+        for (int i = 1; i <= magnitudeToCycle; i++)
         {
             //max and min bounds of that magnitude, cycle through every tile
             for (int x = -i; x <= i; x++)
@@ -155,29 +167,29 @@ public class CaveInManager : MonoBehaviour
                 for (int y = i; y >= -i; y--)
                 {
                     //if this is a tile that was already calculated in the last magnitude (not in the outer layer)
-                    if((x != -i && x !=i ) && (y != i && y != -i))
+                    if ((x != -i && x != i) && (y != i && y != -i))
                     {
                         break;
                     }
 
                     //this is now the targeted tile co-ordinate
                     //wait a bit between each placement
-                   yield return new WaitForSeconds(0.005f);
-                    
+                    yield return new WaitForSeconds(0.005f);
+
                     //lower chance to spawn the greater you go out from the center
                     float terrainSpawnRand = Random.Range(0, 100);
 
                     //if it hits the random chance, and there is no terrain in the spot
                     if (terrainSpawnRand < 100 - (chanceDecreasePerTileOutwards * (i - 1)) && terrainTileMap.GetTile(new Vector3Int(tilePos.x + x, tilePos.y + y)) == null)
-                    //set the tile at that co-ordinate to terrain
-                    terrainTileMap.SetTile(new Vector3Int(tilePos.x + x, tilePos.y + y), terrainTile);
+                        //set the tile at that co-ordinate to terrain
+                        terrainTileMap.SetTile(new Vector3Int(tilePos.x + x, tilePos.y + y), terrainTile);
 
                     float gemSpawnRand = Random.Range(0, 100);
 
-                    if(gemSpawnRand <= chanceToSpawnGemPerTile && gemSpawnAmt <= gemSpawnLimit)
+                    if (gemSpawnRand <= chanceToSpawnGemPerTile && gemSpawnAmt <= gemSpawnLimit)
                     {
                         int randIndex = Random.Range(0, gemGenerationScript.clusterPrefabs.Count);
-                        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], terrainTileMap.CellToWorld(new Vector3Int (tilePos.x + x, tilePos.y + y + gemVeritcalOffset )), Quaternion.Euler(0, Random.Range(0, 360), 0));
+                        Instantiate(gemGenerationScript.clusterPrefabs[randIndex], terrainTileMap.CellToWorld(new Vector3Int(tilePos.x + x, tilePos.y + y + gemVeritcalOffset)), Quaternion.Euler(0, Random.Range(0, 360), 0));
                         gemSpawnAmt++;
                     }
 
@@ -186,5 +198,18 @@ public class CaveInManager : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    void SpawnPowerup()
+    {
+        Quaternion randRot = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        int randIdx = Random.Range(0, repoMoveSystemScript.repoSpawnNodes.Length);
+        GameObject chosenNode = repoMoveSystemScript.repoSpawnNodes[randIdx];
+
+        if(chosenNode != repoMoveSystemScript.currentLoc)
+        {
+            Instantiate(crate, chosenNode.transform.position + new Vector3(0,4.5f,0), randRot);
+
+        }
     }
 }

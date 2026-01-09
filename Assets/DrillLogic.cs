@@ -13,6 +13,8 @@ public class DrillLogic : MonoBehaviour
 
     public bool isDrillMoving = false;
 
+    public bool isDrill = true;
+
 
     public float maxSpeed;
     public float minTurn;

@@ -122,6 +122,7 @@ MonoBehaviour:
   forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
+  drillForceMultplier: 1
   drillLogicScript: {fileID: 9112477584150219545}
   explodePos: {fileID: 777213706852342900}
 --- !u!1 &5412180143354154128
@@ -309,6 +310,7 @@ GameObject:
   - component: {fileID: 3416487398098583108}
   - component: {fileID: 9112477584150219545}
   - component: {fileID: 1758681114900039375}
+  - component: {fileID: 4323845789496472614}
   m_Layer: 0
   m_Name: Drill
   m_TagString: Drill
@@ -400,12 +402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0317b9237fbdf4597184debe9ccd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDelay: 3
+  startDelay: 0.5
   explodeRad: 0
   movingElapsedTime: 0
   startElapsedTime: 0
   isDrillMoving: 0
-  maxSpeed: 4
+  isDrill: 1
+  maxSpeed: 5
   minTurn: 2
   timeToFullSpeed: 3
   currentSpeed: 0
@@ -464,3 +467,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.64, y: 1, z: 1.5073754}
   m_Center: {x: -6.805934e-14, y: 0, z: -0.25368655}
+--- !u!114 &4323845789496472614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308840516551796455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

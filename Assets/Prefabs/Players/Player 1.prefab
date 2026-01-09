@@ -596,9 +596,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   chargingKick: 0
+  canAct: 0
   shouldCheck: 1
   currentPowerUp: {fileID: 0}
-  isDrill: 0
   powerUpPickupScript: {fileID: 1667230621083816999}
 --- !u!114 &7976989412786637625
 MonoBehaviour:
@@ -626,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: cb3cca7c5a1cb2b4da9e0abdd7c7cb65, type: 2}
+  powerUpPickupScript: {fileID: 1667230621083816999}
   bombPrefab: {fileID: 2306722039232007320, guid: bd206571fc0080e488e6cb6d132cfdfa, type: 3}
   bombAmmoBarUI: {fileID: 0}
   regenTimer: 0

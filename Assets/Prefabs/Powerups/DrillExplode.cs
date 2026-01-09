@@ -29,6 +29,8 @@ public class DrillExplode : MonoBehaviour
     public float forceStrengthBomb;
     public float forceStrengthLargeGem;
 
+    public float drillForceMultplier;
+
     private PlayerMove playerMove;
     public DrillLogic drillLogicScript;
 
@@ -54,6 +56,7 @@ public class DrillExplode : MonoBehaviour
         }
     }
 
+    // Determines all interactions that happen when the driving drill hits something
     private void OnTriggerEnter(Collider other)
     {
         //NOTE: For reasons beyond me, the first explosion from the drill will NOT pick up any collisions whatsoever. Every subsequent one can, but the first cannot.
@@ -62,8 +65,7 @@ public class DrillExplode : MonoBehaviour
         if ((other.gameObject.tag == "Bedrock") && explosionCount < 2 && drillLogicScript.isDrillMoving)
         {
             explosionCount++;
-            Explosion();
-            
+            Explosion();    
 
         }
 
@@ -80,6 +82,14 @@ public class DrillExplode : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
         }
+
+        if (other.gameObject.tag == "Minecart")
+        {
+            Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
+            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplier, ForceMode.Impulse);
+        }
+
+       
     }
 
     public void Explosion()
@@ -237,7 +247,6 @@ public class DrillExplode : MonoBehaviour
 
         //reset to basic movement
         playerMove.powerUpPickupScript.activePowerup = null;
-
 
 
         //destroy drill object, so that you respawn normally

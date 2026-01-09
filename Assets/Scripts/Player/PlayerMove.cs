@@ -53,9 +53,8 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Powerup Variables")]
     public GameObject currentPowerUp;
-    public bool isDrill;
     public PowerUpPickup powerUpPickupScript;
-
+    static public bool isPoweredup;
 
     private void Awake()
     {
@@ -111,9 +110,13 @@ public class PlayerMove : MonoBehaviour
     {
         if (context.performed && !playerDeath.isPlayerDead && canAct)
         {
-            playerEffects.copperAnimator.SetBool("isCharging", false);
-            playerEffects.copperAnimator.SetTrigger("Kick");
-            chargingKick = true;
+            if (powerUpPickupScript.activePowerup == null)
+            {
+                playerEffects.copperAnimator.SetBool("isCharging", false);
+                playerEffects.copperAnimator.SetTrigger("Kick");
+                chargingKick = true;
+            }
+
         }
         else if (context.canceled)
         {
@@ -251,7 +254,6 @@ public class PlayerMove : MonoBehaviour
             else
             {
                 Move(moveAmt);
-
             }
         }   
         else
