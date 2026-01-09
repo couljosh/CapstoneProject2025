@@ -30,37 +30,49 @@ public class DrillExplode : MonoBehaviour
 
     private PlayerMove playerMove;
 
+    public GameObject explodePos;
+
+    private bool isExplodedOnce = false;
+
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        if (!isFinishedClearing)
+        {
+            print("ran");
+            ClearTerrain();
+
+            
+
+            StartCoroutine(destroyDrillAfterDelay(0.4f));
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bedrock")
         {
-            
-
-            StartCoroutine(Explosion());
-
-            
-            
-            //playerParent.isDrill = false;
-
+            StartCoroutine(Explosion());        
             radius = sphereIterations * sphereIncrease;
         }
     }
 
     IEnumerator Explosion()
     {
-
         playerMove = GetComponentInParent<PlayerMove>();
 
-        Collider[] objectsDec = Physics.OverlapSphere(transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
+        Collider[] objectsDec = Physics.OverlapSphere(explodePos.transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
         Explode(objectsDec);
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
 
         GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
 
-        //reset to basic movement
-        playerMove.powerUpPickupScript.activePowerup = null;
+
 
         yield return null;
     }
@@ -68,9 +80,9 @@ public class DrillExplode : MonoBehaviour
 
     public void Explode(Collider[] colliding)
     {
-
+        
         // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
-        Collider[] interiorHits = Physics.OverlapSphere(transform.position, innerRadius, terrainMask);
+        Collider[] interiorHits = Physics.OverlapSphere(explodePos.transform.position, innerRadius, terrainMask);
         Debug.DrawRay(transform.position, Vector3.forward * innerRadius, Color.red, 5);
 
         foreach (Collider innerHit in interiorHits)
@@ -133,6 +145,7 @@ public class DrillExplode : MonoBehaviour
                     //Look for Terrain
                     if (raycastHit.collider.tag == "ActiveTerrain")
                     {
+                        print("hit terrain");
                         isFinishedClearing = false;
 
                     }
@@ -147,24 +160,23 @@ public class DrillExplode : MonoBehaviour
         elapsedTime += Time.deltaTime;
 
 
-
         for (int i = 1; i <= sphereIterations; i++)
         {
             StartCoroutine(SphereTrigger(i));
+            print(i);
         }
-
+      
 
         isFinishedClearing = true;
-        //destroy drill object, so that you respawn normally
-        Destroy(gameObject.transform.parent.gameObject);
+
     }
 
     public IEnumerator SphereTrigger(int y)
     {
-
+        print("reached");
         yield return new WaitForSeconds(timeToScan * y);
 
-        Collider[] terrainPieces = Physics.OverlapSphere(transform.position, y * sphereIncrease, terrainMask);
+        Collider[] terrainPieces = Physics.OverlapSphere(explodePos.transform.position, y * sphereIncrease, terrainMask);
 
         foreach (Collider collider in terrainPieces)
         {
@@ -174,11 +186,25 @@ public class DrillExplode : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         //destroy leftovers
-        Collider[] piecesToDestroy = Physics.OverlapSphere(transform.position, (y * sphereIncrease) - 0.5f, terrainMask);
+        Collider[] piecesToDestroy = Physics.OverlapSphere(explodePos.transform.position, (y * sphereIncrease) - 0.5f, terrainMask);
         foreach (Collider collider in piecesToDestroy)
         {
             Destroy(collider.gameObject);
         }
+    }
+
+    public IEnumerator destroyDrillAfterDelay(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        
+        //reset to basic movement
+        playerMove.powerUpPickupScript.activePowerup = null;
+
+        //destroy drill object, so that you respawn normally
+        print("called destroy");
+        Destroy(gameObject.transform.parent.gameObject);
+
+        yield return null;
     }
 }
 

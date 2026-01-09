@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &777213706852342900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9217886286952576210}
+  m_Layer: 0
+  m_Name: ExplodePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9217886286952576210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777213706852342900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.0000029504295}
+  m_LocalPosition: {x: 0, y: 0, z: 0.187}
+  m_LocalScale: {x: 0.30108887, y: 0.5043196, z: 0.21176599}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1493879835205454874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2081886071116686364
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +122,7 @@ MonoBehaviour:
   forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
+  explodePos: {fileID: 777213706852342900}
 --- !u!1 &5412180143354154128
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +331,7 @@ Transform:
   - {fileID: 4598559316700613675}
   - {fileID: 7828415066207271697}
   - {fileID: 2036079387248566200}
+  - {fileID: 9217886286952576210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &1599874771787644895

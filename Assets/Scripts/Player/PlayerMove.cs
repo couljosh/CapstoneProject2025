@@ -251,7 +251,6 @@ public class PlayerMove : MonoBehaviour
             else
             {
                 Move(moveAmt);
-                print(playerNum + " " + moveAmt);
 
             }
         }   
