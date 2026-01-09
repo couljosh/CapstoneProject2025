@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9217886286952576210}
   m_Layer: 0
   m_Name: ExplodePos
-  m_TagString: Untagged
+  m_TagString: Drill
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 777213706852342900}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.0000029504295}
-  m_LocalPosition: {x: 0, y: 0, z: 0.187}
+  m_LocalPosition: {x: -0, y: 0, z: 0.064}
   m_LocalScale: {x: 0.30108887, y: 0.5043196, z: 0.21176599}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6984026076369287334}
   m_Layer: 0
   m_Name: ContactPoint
-  m_TagString: Untagged
+  m_TagString: Drill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,13 +115,14 @@ MonoBehaviour:
     m_Bits: 1024
   explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
   elapsedTime: 0
-  sphereIterations: 8
-  sphereIncrease: 0.33
+  sphereIterations: 5
+  sphereIncrease: 0.6
   timeToScan: 0.015
   forceStrengthGem: 1
   forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
+  drillLogicScript: {fileID: 9112477584150219545}
   explodePos: {fileID: 777213706852342900}
 --- !u!1 &5412180143354154128
 GameObject:
@@ -409,6 +410,39 @@ MonoBehaviour:
   timeToFullSpeed: 3
   currentSpeed: 0
   currentTurn: 0
+  speedUpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.2184968
+      value: 0.44036928
+      inSlope: 1.0306609
+      outSlope: 1.0306609
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.0106344
+      value: 1.0162423
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &1758681114900039375
 BoxCollider:
   m_ObjectHideFlags: 0

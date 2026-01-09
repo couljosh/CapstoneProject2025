@@ -30,6 +30,7 @@ public class DrillExplode : MonoBehaviour
     public float forceStrengthLargeGem;
 
     private PlayerMove playerMove;
+    public DrillLogic drillLogicScript;
 
     public GameObject explodePos;
 
@@ -37,7 +38,7 @@ public class DrillExplode : MonoBehaviour
 
     private void Start()
     {
-        
+        radius = sphereIterations * sphereIncrease;
     }
 
     private void Update()
@@ -47,9 +48,9 @@ public class DrillExplode : MonoBehaviour
             print("isFinishClearing is false!");
             ClearTerrain();
 
-            
 
-            StartCoroutine(destroyDrillAfterDelay(0.4f));
+
+
         }
     }
 
@@ -58,11 +59,26 @@ public class DrillExplode : MonoBehaviour
         //NOTE: For reasons beyond me, the first explosion from the drill will NOT pick up any collisions whatsoever. Every subsequent one can, but the first cannot.
         //Therefore, we must actually do two explosions in quick succession in order to actually pick up anything. The first explosion is REQUIRED for the second explosion to see anything
         //We do not know if this is a unity bug, or some huge oversight in what we're doing. God help us all. 
-        if (other.gameObject.tag == "Bedrock" && explosionCount < 2)
+        if ((other.gameObject.tag == "Bedrock") && explosionCount < 2 && drillLogicScript.isDrillMoving)
         {
             explosionCount++;
-            Explosion();       
-            radius = sphereIterations * sphereIncrease;
+            Explosion();
+            
+
+        }
+
+         if(other.gameObject.tag == "Repository" && explosionCount < 2 && drillLogicScript.isDrillMoving)
+        {
+            explosionCount++;
+
+            //Triggers the explosion twice to account for the issue where the first explosion doesnt detect anything 
+            Explosion();    
+            Explosion();
+        }
+
+        if (other.gameObject.tag == "ObjectDestroyer" && drillLogicScript.isDrillMoving)
+        {
+            other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
         }
     }
 
@@ -77,13 +93,15 @@ public class DrillExplode : MonoBehaviour
 
         //NOTE: Like the above note, since there are two explosions, we only want to be showing one effect and playing one noise. This code does so, as only one explosion will have happened when
         //this code fires. 
-        if(explosionCount < 2)
+        if (explosionCount < 2)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
 
             GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
+
+            StartCoroutine(destroyDrillAfterDelay(0.4f));
         }
-        
+
     }
 
 
@@ -97,7 +115,7 @@ public class DrillExplode : MonoBehaviour
 
         foreach (Collider innerHit in interiorHits)
         {
-            
+
             innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
         print(colliding.Length);
@@ -123,8 +141,8 @@ public class DrillExplode : MonoBehaviour
                     if (raycastHit.collider.tag == "ObjectDestroyer")
                     {
                         //avoid killing the player who is in the drill
-                        if(raycastHit.collider.gameObject != playerMove.gameObject)
-                        raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
+                        if (raycastHit.collider.gameObject != playerMove.gameObject)
+                            raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
                     }
 
                     if (raycastHit.collider.tag == "LargeGem")
@@ -178,7 +196,7 @@ public class DrillExplode : MonoBehaviour
         {
             StartCoroutine(SphereTrigger(i));
         }
-      
+
 
         isFinishedClearing = true;
 
@@ -209,13 +227,20 @@ public class DrillExplode : MonoBehaviour
     public IEnumerator destroyDrillAfterDelay(float waitTime)
     {
         print("DestroyDrillAfterDelay Called");
+        //do not move player until the delay ends
+        playerMove.canAct = false;
+
         yield return new WaitForSeconds(waitTime);
-        
+
+        //re-enable player movement when they're allowed to move again
+        playerMove.canAct = true;
+
         //reset to basic movement
         playerMove.powerUpPickupScript.activePowerup = null;
 
+
+
         //destroy drill object, so that you respawn normally
-        
         Destroy(gameObject.transform.parent.gameObject);
 
         yield return null;
