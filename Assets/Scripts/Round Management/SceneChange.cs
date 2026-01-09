@@ -169,6 +169,30 @@ public class SceneChange : MonoBehaviour
         textElement.canvasRenderer.SetAlpha(1);
     }
 
+    IEnumerator PunchTextSofter(TextMeshProUGUI textElement)
+    {
+        float duration = 0.12f;
+        float elapsed = 0f;
+        Vector3 startScale = Vector3.one * 0.8f;
+        Vector3 punchScale = Vector3.one * 1.2f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            //fade alpha in
+            textElement.canvasRenderer.SetAlpha(Mathf.Lerp(0, 1, t));
+            //punch scale
+            textElement.transform.localScale = Vector3.Lerp(startScale, punchScale, Mathf.Sin(t * Mathf.PI));
+
+            yield return null;
+        }
+
+        textElement.transform.localScale = Vector3.one;
+        textElement.canvasRenderer.SetAlpha(1);
+    }
+
     private void StartRoundTimer()
     {
         canRunTimer = true;
@@ -321,7 +345,6 @@ public class SceneChange : MonoBehaviour
             print("failed to find scene");
         }
     }
-
     IEnumerator PlayWarningSequence() //plays the 30 second warning, and also has some text effects (found from a tutorial)
     {
         warningActive = true;
@@ -363,11 +386,22 @@ public class SceneChange : MonoBehaviour
         warningNumberText.transform.localScale = Vector3.one;
         warningWordText.transform.localScale = Vector3.one;
 
+        //tracks it per second
+        int lastSec = -1;
+
         //countdown loop
         while (roundTime > 27f)
         {
+            int currentSec = Mathf.CeilToInt(roundTime - 1);
 
-            warningNumberText.text = Mathf.CeilToInt(roundTime - 1).ToString();
+            //if second has changed, update text and trigger punch
+            if (currentSec != lastSec)
+            {
+                lastSec = currentSec;
+                warningNumberText.text = currentSec.ToString();
+                StartCoroutine(PunchTextSofter(warningNumberText)); // Trigger punch on number change
+            }
+
             warningWordText.text = "Seconds\nLeft";
 
             //PINGPONG CLUTCH
@@ -393,7 +427,7 @@ public class SceneChange : MonoBehaviour
             yield return null;
         }
 
-        // Reset color and disable
+        //reset color and disable
         warningNumberText.color = startColor;
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
