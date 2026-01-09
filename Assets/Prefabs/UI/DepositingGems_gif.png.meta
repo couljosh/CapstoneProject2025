@@ -1,0 +1,6422 @@
+fileFormatVersion: 2
+guid: c1690abd536100d4abf244f7ce4b44f2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DepositingGems_gif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397b0eba31c493f47a488587b73cfa05
+      internalID: -540778132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0356fb2531a9e64aa75497d0eb18ce5
+      internalID: -1836342364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_2
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0233d0538246984f83bfe4287b55346
+      internalID: 1730870011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_3
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4900a5b522496ea4ead42893fa2922c2
+      internalID: -940371345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_4
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0031fc92a27d2148ba2728d82d510cd
+      internalID: -1289677469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_5
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaa1a6566276a8418bed001bc645297
+      internalID: -1275245002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_6
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 7448
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f6c6770a2d34844a5032352ddd21be
+      internalID: 508929320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c9331c736ec7c4fb79881606beb34d
+      internalID: 899863256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d3d3188842c584bbf79e902bc2f8c9
+      internalID: 294199071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbcbdfaba625d84d8b1963474539587
+      internalID: -1210129578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_10
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5920ff492b9ecdf4c81baf25a94fd37e
+      internalID: 109253077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_11
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0584fabcb36b1b641b1f973740f17457
+      internalID: 842430594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399b026e014116940a248bfd48f99302
+      internalID: -1775362085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_13
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 7252
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b6b9c562ba0a444894a39ad5b56163
+      internalID: 1533775410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b85b253f99909f479770d05dd5a6a1b
+      internalID: 363192208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4c1d0cad1131c46989b45e64fc3703
+      internalID: 816331778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_16
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6038c1e8125b84eaf9427a93db62a1
+      internalID: -1938488025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_17
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64fcd67823d36641b5ee51d5b87edb9
+      internalID: -28872990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_18
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b5c6d1a6739ea4f8cc67d7d555cd36
+      internalID: -1030313268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_19
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c4b3df59290814eb85d0efef11341c
+      internalID: -1039432391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_20
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 7056
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2293576c06aaedc45b6bbfe7d540db86
+      internalID: -773336666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf51de7444ee7b4d9c1fc698c9047a3
+      internalID: -867209687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_22
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e48b26bef6ef294b88b0930db3b4a29
+      internalID: -264461505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_23
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddf706f4a539d640b62734a3f0f043a
+      internalID: 10562993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_24
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2257c92e762b80d47999340e5241a3af
+      internalID: 162196339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_25
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463c41a15c9a9a246988196da10f7875
+      internalID: -1167530347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_26
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f6476ccaa13764fa798b9d175411ac
+      internalID: 7078472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_27
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 6860
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91588f3f778ab14fb6c3fcbb601370c
+      internalID: -745478717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c848ba09d8aba4a90addd24420058a
+      internalID: -1207196230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_29
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd342c1c9530a5947ab7a15fbc143e39
+      internalID: 1165380830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_30
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129f4ba7aa03cee429f96030b12ee464
+      internalID: -1434064978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_31
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a86f1e60bf1774297bc12f67767d61
+      internalID: 2117114110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_32
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b1733667755574ea3c746072c15a07
+      internalID: 364287498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_33
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5c4618027ff1642966ec75cba840bb
+      internalID: -214874636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_34
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 6664
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2887404843cb53342bef923cbc8c957d
+      internalID: 1320893407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecd841266d77274e83d6085484096a2
+      internalID: -956897855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_36
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bb597b44653424c8592ca98168ac56
+      internalID: -496288845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_37
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36037c975a80e9c4cb0220a108549b93
+      internalID: 1904391118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_38
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bba5329efe2be40a5001fac74b7473
+      internalID: 755436885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_39
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810c0eb889f969547b44ea3a9303e758
+      internalID: 601927698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_40
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bcaeeb6f40d3248aa8b681fe5e7173
+      internalID: -763254700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_41
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 6468
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93e03d4c79ac5742a9a5b48a3fe8c36
+      internalID: -2140034115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dcabb98dce355428b60ba6148f7c01
+      internalID: 633470011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_43
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5db80a0eb25d544968ebef7ab112dc
+      internalID: -373891856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_44
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199f8235f4fc3ed49b1e6eb753373276
+      internalID: -916079870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_45
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0753bd28eec848643af312c2f157a5cd
+      internalID: -1330633282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_46
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15125b0033ab10047b54de035e000d5e
+      internalID: 1485262472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_47
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7738dc11d0230408578263eee28e44
+      internalID: -1880249397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_48
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 6272
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a251fca06701814e99904e9dcd789f8
+      internalID: -755350703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1a1f377506fc84581edbb62d5c37ab
+      internalID: 1759746848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_50
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e97d382051e84947a4e42058ab3284b
+      internalID: 304590726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_51
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25331d73db482c74e8ba12f09d4053a8
+      internalID: -1278609864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_52
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a12821c72022674e89eab02c5ff1530
+      internalID: -1958778717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_53
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9804831ac7eeea41b069d970f659cc4
+      internalID: -1456426119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_54
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29254563c32a2e439186c457fe59368
+      internalID: -446121577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_55
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 6076
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63442f9dcb780894182cd5627f431129
+      internalID: -1185756760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a6d2d7e361b554dbcaadda4f79e475
+      internalID: -1535000614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_57
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba22423d8ca09c41a7ac881354ced0c
+      internalID: -1555584114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_58
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27baaa9ed373834990d5b0392194cfd
+      internalID: 859762301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_59
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17e04058ff3eb945a05a6762f3de787
+      internalID: -220825889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_60
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af86b3de58b79a4d93d1c2a5218c265
+      internalID: -2036538137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_61
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd3bf427463e9849b6b11eb7f8a0800
+      internalID: -482540043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_62
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5880
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107ae6f47d3c61b40929af61a6c19393
+      internalID: -1321360528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c79543e806c71040bf1426382e9527f
+      internalID: -46588449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_64
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54125c486dcb3e744bcec4ceb8c7985d
+      internalID: -1106362792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_65
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6e59cb5f16eeb4eab2798cd2494107
+      internalID: 473829707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_66
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad270e14a30eea418daa6f23cf04b37
+      internalID: -1494711919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_67
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53daae61e87112d4db67e162960efa93
+      internalID: -1675983265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_68
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aed0170630eff4585b4b5bea5903fe
+      internalID: -218810982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_69
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5684
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef810a31b6c18ce41bfe6276b46750c7
+      internalID: 1860831091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0165474d73911f84abf65e7f4c61c76c
+      internalID: 815358153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_71
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a0985582584f44496cc6bed4e9fc6c
+      internalID: -1894438695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_72
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b35d8dab1b158e4d97fd044fce1a560
+      internalID: -453492286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_73
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b399da292160e6243aeef6dd7c69af40
+      internalID: -638666139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_74
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227de39bc21b98f4081fddac12c96f12
+      internalID: 1716170151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_75
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff44da8ee7605c49b56e925fa3a28c3
+      internalID: -791041712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_76
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5488
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a785ff1822431545b959b5df4223c83
+      internalID: -1746269909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6a0f8e561b51240824ccc1a8867265
+      internalID: -1705021854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_78
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545d69a22ee5f8448812ee19604d7d5c
+      internalID: -381826875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_79
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addb800226b02d84884352ad7cb189d1
+      internalID: -475324385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_80
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a873cc0905c3904a80b955ef577dfc2
+      internalID: -590421519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_81
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03a17ccde52713459e08756abe053a5
+      internalID: -1466708604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_82
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7783271f2a4e8f419404e43fe817735
+      internalID: 507470779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_83
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5292
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cd84eb2e46e97429cbd312e3e85189
+      internalID: 450237853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a466a2c95f3f445b734c4ba27da358
+      internalID: 1608411364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_85
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e8ff979eb80ea46b9a8e37a6856a8f
+      internalID: -1866724220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_86
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1d44a1c82d86540ba0be2a5ffce7d1
+      internalID: -27975327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_87
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97837beb80a390240a996ad3bc4ef173
+      internalID: -923720290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_88
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2453b0526db5c4e8bc4747c6791791
+      internalID: 1346361547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_89
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f462d119c2c040749b10ddf5403e67a0
+      internalID: -1188696298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_90
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5096
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e485551352a967c44b4f4a931d8f216b
+      internalID: -438305546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ef768a685c674478dafd54c232c739
+      internalID: -1930333120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_92
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697c4a319b76dda418c13e394f38033c
+      internalID: 452680774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_93
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32277c0a8f9d1b4caf665f5bb2a6312
+      internalID: 1126522527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_94
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14e903a498e04147903e9c6ead26d87
+      internalID: -848365326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_95
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f0f831b753fec4c881ecbab724704e
+      internalID: -990153859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_96
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4beb95b535f0727479978d8013bba3c7
+      internalID: 22778205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_97
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 4900
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b567b897c157e44593071790deebc90
+      internalID: -1140486081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61db8ec43006ae746ab87368f5ad4700
+      internalID: 940149004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_99
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43744aefe60b447409410dcad7dfa304
+      internalID: 1555913943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_100
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60fbcfb1a6819d489e402891bf1402f
+      internalID: 674925483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_101
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c0cf89fc70c8944b6b52a63d190b51
+      internalID: -254773055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_102
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963730732f55c8446a0ff0496ef04384
+      internalID: 1768272223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_103
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9351e092b7a3c4a40a38acf7bdd0ec22
+      internalID: 156624181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_104
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 4704
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b7514581e5ae04eb4534a2022664cf
+      internalID: -696359585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762ccc9eabc19a44e9a6f613d4ad8d64
+      internalID: -399139014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_106
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f42f50830c284846ad87422383e2a1b
+      internalID: -527207564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_107
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4b59ab0d4e0814ea945399f16e11fd
+      internalID: 1800013224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_108
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65ab83522332d84181887dd75311961
+      internalID: -114252287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_109
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e729f0ae5d5c54ebcfd6835966611f
+      internalID: 1519695649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_110
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723dd0e1348ef824a924ae13a05730a9
+      internalID: -269024176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_111
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 4508
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263ca12c8c656924682feff9e49c5477
+      internalID: 254624978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524caac03539bf14bb98bbca221edaf4
+      internalID: -1508860705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_113
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2d48e773f37b84a9607c358f2fc315
+      internalID: -15534884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_114
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa68429a6aea1864fbfc3f58ca46dca8
+      internalID: 1214521226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_115
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb359407fb8f8e408e558f00ab6332e
+      internalID: 2141709821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_116
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc21b5c53c3c6a74fab665abf0d05323
+      internalID: -1772195028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_117
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96260b36c8c9e0740bfffed88cd11714
+      internalID: 1469224057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_118
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 4312
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94da1058b77895a40a2c336a09df6702
+      internalID: 183845326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acc7f5d31eb65245967b3c6861618c7
+      internalID: -2062993537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_120
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dc75cae0f5945419d6d525d16f3d6d
+      internalID: -1137453283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_121
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e70ad0422284146b556806b9797798
+      internalID: 722383196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_122
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52eb1539acd7e6f4ea95ac452a44b00b
+      internalID: -1125687633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_123
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc100fd5b4f52d54fb9b2abc40f4f0d6
+      internalID: 1676947525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_124
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1d87f3b232ad548a9f109e33899cb7
+      internalID: 863841277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_125
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 4116
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f076bc3ca3fddb448d630c8111c56b0
+      internalID: 662702702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea6b8880a09eaf48bc22b0b45c077dd
+      internalID: -1437018568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_127
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecd03f5e133c4748b51515cc5e072af
+      internalID: 1561236357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_128
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05709095885a6d47809a36dc6c96c48
+      internalID: 72115392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_129
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c215695000b8b0489645c74d465a6b4
+      internalID: -1378735845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_130
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d1f2061382c294bb07a08d277b6272
+      internalID: 1155428741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_131
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f946f445bec497c439adf0c4e8bba031
+      internalID: 1483602433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_132
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3920
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9af9f08349971d48a1f1eb512ec346d
+      internalID: 992199091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4298997248cf28c40adef1ace9610165
+      internalID: -644125842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_134
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09e986d2296ada449775bbf4e208dff
+      internalID: -393578560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_135
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8100db6f74fc99745b87b7ccaa3fc5a7
+      internalID: 1911832868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_136
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f168e5c4f2da6140979458ea371b0c0
+      internalID: -1234400365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_137
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9684ed65a1529347a8cefd0fc5e3fd6
+      internalID: -984130317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_138
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6951621bca2d6f945885ce582e9fa80e
+      internalID: 1318785697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_139
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3724
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e797564013b816f45829413a92ddf518
+      internalID: -736665409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30591f581ed7a0841adcc51bda817aac
+      internalID: 2043540814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_141
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ad8829f7b54c4e86b75737984847f
+      internalID: -1328263368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_142
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5090bbcbf7ebcba41838d753e62b5698
+      internalID: 407064853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_143
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdd43cadc01733489b7120606f448c7
+      internalID: -1794745490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_144
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e1f866d35969448b6e49a80bc2ae6b
+      internalID: 952356218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_145
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9269d60e4459648b450ba289e01264
+      internalID: -885432979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_146
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3528
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec1f5ffc602d594d9a0917c073a6e44
+      internalID: -2017189289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0120fc2ccd5fe469df79d0bacfb8d7
+      internalID: -558085206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_148
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ae1c2a92c07124cb20db888068fa69
+      internalID: -1344890566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_149
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de926ec2539860948a0d4ea9e0e2e986
+      internalID: -1049522726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_150
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7cdd400557b174980cf76269beb3cf
+      internalID: 2082503574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_151
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5651f18665d56147b3b64f876274786
+      internalID: 1338324630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_152
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c256f4c0117db5f4da4626469a865ea2
+      internalID: 339059389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_153
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3332
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11ecc1280bde9f46a0696a6ce460e4f
+      internalID: 1426313148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb56db80f90b25540ac824d7a73f45f9
+      internalID: -1103648773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_155
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd0cfdc17066f44889f0ba237720fe5
+      internalID: -244045801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_156
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59f75919223b214c99fb3311dfb0eb9
+      internalID: 1760922466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_157
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f5a61567a963a438ecfafc2c062c3a
+      internalID: 788545444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_158
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6832459671abf954ca6f5dd163632540
+      internalID: 1470547875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_159
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1958388f41c50a940b75d17031ac4f39
+      internalID: 1401874642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_160
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 3136
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7749e609beb834e8c1df8721bf42ed
+      internalID: 2120609727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_161
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ea49cdb72a46d48b7bb682897aca94
+      internalID: 1228742300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_162
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d898834aa5b5824d9c116d24159f730
+      internalID: 1294811694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_163
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ab1fb1ba2ac874386f1c3fe7a5ed64
+      internalID: -1566648250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_164
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252e85d37ed47ff4da76fcac892da496
+      internalID: -2008979988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_165
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6ec92441295d947b159d98a0cf1b01
+      internalID: -1217565107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_166
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e18bc7d914a754699270888735eb93
+      internalID: -591749487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_167
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2940
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c20d227099a4084494c61adfdafba4f
+      internalID: 1893275926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c54ef77432905489acfa4465a86862
+      internalID: 1635717571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_169
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b705e4e2debe6458d758efffea9b1c
+      internalID: -36438910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_170
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de3388cbe58fc64f8bfee13db1aabcb
+      internalID: 1182693325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_171
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532aec1ba13578f428503f019686306f
+      internalID: -859079264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_172
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbb4ee8b75d37847ba9e09494c31807
+      internalID: 116681476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_173
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f21b3bd70cde045a11c7a15be8dce1
+      internalID: -1429001938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_174
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2744
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca1d718a7e6bcc43b20bef50b181f12
+      internalID: -950765784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebb99e71160c16409bdc528626783eb
+      internalID: 264348117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_176
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9471a98913d253429c2b93315a8ca55
+      internalID: 746139862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_177
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1178d97809390b5459bf68792455f584
+      internalID: 2024391950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_178
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fb4e12765246e4b87e35e6fb07ec80
+      internalID: 698689484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_179
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57750b493f22e094bb695959cf9fb380
+      internalID: 1444273617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_180
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4f9fb1afa348547b24fd8a7c2f8eb1
+      internalID: -1756229671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_181
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2548
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dbab3e7ea87f944b033c9210f0b1c6
+      internalID: 509509056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd0dda34e4dce043917a4175f5a58b1
+      internalID: -1729163291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_183
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabefd48091fb9a4db84fbbde9da5515
+      internalID: 688593109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_184
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f843dbfb209a73946adcbff0b7b53cd1
+      internalID: 1534134548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_185
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a454458355108284bb471c3e427e96f0
+      internalID: -1652918156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_186
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80698045f06b72742886f39fba0a14d7
+      internalID: -876576818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_187
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dbf0a82fbab774caa10efb579582ad
+      internalID: -1026265140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_188
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2352
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf8192c368a63a41990476ca0d02e05
+      internalID: -350356429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1791672ba305c64c98b71e153eeffea
+      internalID: -494031152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_190
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdecda8005eb2747a960fd47784b389
+      internalID: -1900859804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_191
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef9c56dcd80774cb0432bf4a218786
+      internalID: 840881383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_192
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cd4101781a67042b74141142b80996
+      internalID: 875424961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_193
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82089ac33b72d04ebde3e7a0e017cc6
+      internalID: -380000810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_194
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a414f46ffd802ff4992da4b04c2ac7b6
+      internalID: 1677055780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_195
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2156
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd379ba15e7962a479a798d5b883259f
+      internalID: -291919823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bf9aff74c4445448d3dd8360c20bdf
+      internalID: -343331736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_197
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdd52a88e403ce40b1c8e21efcde809
+      internalID: 1431946944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_198
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c33779e0ddeff948b4964fed6bfbd15
+      internalID: -1942813126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_199
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a575db8d7af3d488ccfecc9b1939a4
+      internalID: 484860164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_200
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bf56f1353336a499bf34aea5d5cf8d
+      internalID: 1854262238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_201
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7362c920616778449a00c225c52fc99
+      internalID: -1922729513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_202
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1960
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6181253dcb6f8144bfbe112b142de8c
+      internalID: -664835493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_203
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1116c9042098c4d9d69de3c510690d
+      internalID: 1267245480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_204
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60906ccf720ff6840bac792cf80b0acf
+      internalID: -917719506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_205
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b376e255cd1ede418b2f1ff7aa31350
+      internalID: 1042791743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_206
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ff22546ceada646a1abf424275d087
+      internalID: 527850210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_207
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa267dca03b8f1047acf8e2612a7bc8b
+      internalID: 620412145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_208
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abff01fdf87a34b42b47d9ea41d668cd
+      internalID: 765954427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_209
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1764
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26932f5f93e610549986a39c966fc566
+      internalID: 1167675279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59d6ea7694cbcf4bae21ee64730eb6c
+      internalID: 1446349287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_211
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bf7b8e6181f78419afba01091cb02f
+      internalID: -852201165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_212
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482327cd4b5187349a2858d55701b8a7
+      internalID: 1107081056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_213
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbab07f13b0679469bf9977db7eee0f
+      internalID: -1866910874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_214
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caa7d4dca6d8314ab33c531cb558422
+      internalID: -956172740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_215
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd64669ee9f6ee45a80075e7875e3cc
+      internalID: 287653454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_216
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1568
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bc6a750ab72f3458b5ec91717eca04
+      internalID: 933429423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_217
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be3db0accf941d429dfe9ce7b7946c7
+      internalID: 1470482028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_218
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5996211ecc04eaf42ac88e1b4ebb7ba0
+      internalID: 725566523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_219
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1976610400bb66548af50e6d7cfb90de
+      internalID: 1262588058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_220
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850c071857f7ba74d92c37a9bb1f2b05
+      internalID: 441672095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_221
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2abf8cc86691d4fb80f6b1128bf39e
+      internalID: 397079852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_222
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65968292270b30843a45bcf1dcf4ecce
+      internalID: -95973538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_223
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1372
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec2d7abe29c5984fa50979de113df37
+      internalID: -1904223252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642793a88dc278448aeb1e15c504f687
+      internalID: 995562018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_225
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd496a926a9be544a8faa2191e09d02a
+      internalID: -1630730487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_226
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0960daf5dfc19e74681c570f682a8748
+      internalID: 1174522757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_227
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db50de75b5a456d4787d803ec89cbf3a
+      internalID: -2117890507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_228
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba22a094be0224449506f88a0a2ff78
+      internalID: 456322626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_229
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757bdf54c3148614f888aef11b9082d2
+      internalID: -1490715867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_230
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1176
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6d15e390f816e46ac658171eae479f
+      internalID: -579494340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_231
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f327d76163aa4384595314027e6a9b0d
+      internalID: -571672541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_232
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4089cf777a477b4b881d11e06001d6a
+      internalID: 1364332974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_233
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e432a9cca953af44aaeb61d344744eec
+      internalID: -284773990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_234
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de1295d3885a1a489affdfabadd7c85
+      internalID: -912913491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_235
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb3dea2af789534e8165ec40dcece6a
+      internalID: 1761757668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_236
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022cfff39b29b5f45be7e3bc01d7b032
+      internalID: 1442857888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_237
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 980
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce5ca89107fa5243a2905d02a82a3d0
+      internalID: 1141670477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273566015cabbbe419b8c5e1befaec49
+      internalID: -619525311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_239
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14c8f25e35809c48893bdbafe440cef
+      internalID: -719489246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_240
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a341f4f6d48f5644cb08fbd05be51886
+      internalID: 1788677238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_241
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f7b3ddb8881594cb1333d2f3a615b7
+      internalID: 981815098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_242
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef10049554afc84989e49626780d1e5
+      internalID: 304045076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_243
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bebd6c23f74644fa145cc867680f2c
+      internalID: 1046697926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_244
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 784
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a97056bbaa42041be81155e6423991
+      internalID: -1918255368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_245
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f859d22a6e1702749840eae04200c82c
+      internalID: 460558316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_246
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c31fb38fbf011b46ae318ba85cbc9bc
+      internalID: -1686338429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_247
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0aa77d47b868344aed5a019f0e250b
+      internalID: 1106668334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_248
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb55d78c919afa49bdb8754f37cc437
+      internalID: 1376742408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_249
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdbf163b0927344796d0bad0b649c6b
+      internalID: 1799800390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_250
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d40724cdaa4e0f4aba971c3992ba3f7
+      internalID: 1467420790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_251
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 588
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8ca5517db82454d97b5d449228ffb4
+      internalID: -494950251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_252
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba0bfe4d4f478c4e946e086c747132a
+      internalID: 997677920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_253
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80866dfc65741094d9da30c4bdcd1bbb
+      internalID: -1148219612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_254
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dd2aba3b1aa8b45a86123238d19164
+      internalID: 128460403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_255
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85e56fce95dcaa4bac1c58a4db27bd3
+      internalID: -1061285169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_256
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afdd57f0e390e1429ee50d95e5296b2
+      internalID: -1883310602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_257
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133175d749abb974c952653ea84e2034
+      internalID: -1338974017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_258
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 392
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71489a6f48c5d8b49adc4002c95bf9c6
+      internalID: 2056024414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_259
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd67f18da02e74247ad24b174f5732b7
+      internalID: 1241318734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_260
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1150462bf51aa489123d0d411e7c25
+      internalID: 2037610813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_261
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630da39a907076948984f86fa28ac464
+      internalID: 21500829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_262
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f2be07de753da418f4bb00880b9294
+      internalID: 1152714757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_263
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12507fced702a1419d01727eb8c08a2
+      internalID: 506404119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_264
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0e22eb184ede748840b9e5f1064eef
+      internalID: 1134061134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_265
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 196
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b8ae7605c7d614597b1a3e916139f0
+      internalID: -521879791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_266
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a55111cd8da497459c14248519a5621
+      internalID: -1451918372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_267
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4466097348a22024ab0beaa1fcbc7339
+      internalID: -1320377139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_268
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96308c6b6480f714c9dcfd9bd3b08588
+      internalID: -108366382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_269
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbdcd0bc021ce54c97b33e7ce6edc17
+      internalID: -1092206096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_270
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3c40457e46e1c45aa6647ddbae9494
+      internalID: 299480840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_271
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a260a271417d8647af59f10069e8fd6
+      internalID: -1948776616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DepositingGems_gif_272
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 280
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf37e3a1c2c3cd944b54c88be17954e8
+      internalID: -1706432806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b58850bbde1558946b0ba44ad53a0f79
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DepositingGems_gif_0: -540778132
+      DepositingGems_gif_1: -1836342364
+      DepositingGems_gif_10: 109253077
+      DepositingGems_gif_100: 674925483
+      DepositingGems_gif_101: -254773055
+      DepositingGems_gif_102: 1768272223
+      DepositingGems_gif_103: 156624181
+      DepositingGems_gif_104: -696359585
+      DepositingGems_gif_105: -399139014
+      DepositingGems_gif_106: -527207564
+      DepositingGems_gif_107: 1800013224
+      DepositingGems_gif_108: -114252287
+      DepositingGems_gif_109: 1519695649
+      DepositingGems_gif_11: 842430594
+      DepositingGems_gif_110: -269024176
+      DepositingGems_gif_111: 254624978
+      DepositingGems_gif_112: -1508860705
+      DepositingGems_gif_113: -15534884
+      DepositingGems_gif_114: 1214521226
+      DepositingGems_gif_115: 2141709821
+      DepositingGems_gif_116: -1772195028
+      DepositingGems_gif_117: 1469224057
+      DepositingGems_gif_118: 183845326
+      DepositingGems_gif_119: -2062993537
+      DepositingGems_gif_12: -1775362085
+      DepositingGems_gif_120: -1137453283
+      DepositingGems_gif_121: 722383196
+      DepositingGems_gif_122: -1125687633
+      DepositingGems_gif_123: 1676947525
+      DepositingGems_gif_124: 863841277
+      DepositingGems_gif_125: 662702702
+      DepositingGems_gif_126: -1437018568
+      DepositingGems_gif_127: 1561236357
+      DepositingGems_gif_128: 72115392
+      DepositingGems_gif_129: -1378735845
+      DepositingGems_gif_13: 1533775410
+      DepositingGems_gif_130: 1155428741
+      DepositingGems_gif_131: 1483602433
+      DepositingGems_gif_132: 992199091
+      DepositingGems_gif_133: -644125842
+      DepositingGems_gif_134: -393578560
+      DepositingGems_gif_135: 1911832868
+      DepositingGems_gif_136: -1234400365
+      DepositingGems_gif_137: -984130317
+      DepositingGems_gif_138: 1318785697
+      DepositingGems_gif_139: -736665409
+      DepositingGems_gif_14: 363192208
+      DepositingGems_gif_140: 2043540814
+      DepositingGems_gif_141: -1328263368
+      DepositingGems_gif_142: 407064853
+      DepositingGems_gif_143: -1794745490
+      DepositingGems_gif_144: 952356218
+      DepositingGems_gif_145: -885432979
+      DepositingGems_gif_146: -2017189289
+      DepositingGems_gif_147: -558085206
+      DepositingGems_gif_148: -1344890566
+      DepositingGems_gif_149: -1049522726
+      DepositingGems_gif_15: 816331778
+      DepositingGems_gif_150: 2082503574
+      DepositingGems_gif_151: 1338324630
+      DepositingGems_gif_152: 339059389
+      DepositingGems_gif_153: 1426313148
+      DepositingGems_gif_154: -1103648773
+      DepositingGems_gif_155: -244045801
+      DepositingGems_gif_156: 1760922466
+      DepositingGems_gif_157: 788545444
+      DepositingGems_gif_158: 1470547875
+      DepositingGems_gif_159: 1401874642
+      DepositingGems_gif_16: -1938488025
+      DepositingGems_gif_160: 2120609727
+      DepositingGems_gif_161: 1228742300
+      DepositingGems_gif_162: 1294811694
+      DepositingGems_gif_163: -1566648250
+      DepositingGems_gif_164: -2008979988
+      DepositingGems_gif_165: -1217565107
+      DepositingGems_gif_166: -591749487
+      DepositingGems_gif_167: 1893275926
+      DepositingGems_gif_168: 1635717571
+      DepositingGems_gif_169: -36438910
+      DepositingGems_gif_17: -28872990
+      DepositingGems_gif_170: 1182693325
+      DepositingGems_gif_171: -859079264
+      DepositingGems_gif_172: 116681476
+      DepositingGems_gif_173: -1429001938
+      DepositingGems_gif_174: -950765784
+      DepositingGems_gif_175: 264348117
+      DepositingGems_gif_176: 746139862
+      DepositingGems_gif_177: 2024391950
+      DepositingGems_gif_178: 698689484
+      DepositingGems_gif_179: 1444273617
+      DepositingGems_gif_18: -1030313268
+      DepositingGems_gif_180: -1756229671
+      DepositingGems_gif_181: 509509056
+      DepositingGems_gif_182: -1729163291
+      DepositingGems_gif_183: 688593109
+      DepositingGems_gif_184: 1534134548
+      DepositingGems_gif_185: -1652918156
+      DepositingGems_gif_186: -876576818
+      DepositingGems_gif_187: -1026265140
+      DepositingGems_gif_188: -350356429
+      DepositingGems_gif_189: -494031152
+      DepositingGems_gif_19: -1039432391
+      DepositingGems_gif_190: -1900859804
+      DepositingGems_gif_191: 840881383
+      DepositingGems_gif_192: 875424961
+      DepositingGems_gif_193: -380000810
+      DepositingGems_gif_194: 1677055780
+      DepositingGems_gif_195: -291919823
+      DepositingGems_gif_196: -343331736
+      DepositingGems_gif_197: 1431946944
+      DepositingGems_gif_198: -1942813126
+      DepositingGems_gif_199: 484860164
+      DepositingGems_gif_2: 1730870011
+      DepositingGems_gif_20: -773336666
+      DepositingGems_gif_200: 1854262238
+      DepositingGems_gif_201: -1922729513
+      DepositingGems_gif_202: -664835493
+      DepositingGems_gif_203: 1267245480
+      DepositingGems_gif_204: -917719506
+      DepositingGems_gif_205: 1042791743
+      DepositingGems_gif_206: 527850210
+      DepositingGems_gif_207: 620412145
+      DepositingGems_gif_208: 765954427
+      DepositingGems_gif_209: 1167675279
+      DepositingGems_gif_21: -867209687
+      DepositingGems_gif_210: 1446349287
+      DepositingGems_gif_211: -852201165
+      DepositingGems_gif_212: 1107081056
+      DepositingGems_gif_213: -1866910874
+      DepositingGems_gif_214: -956172740
+      DepositingGems_gif_215: 287653454
+      DepositingGems_gif_216: 933429423
+      DepositingGems_gif_217: 1470482028
+      DepositingGems_gif_218: 725566523
+      DepositingGems_gif_219: 1262588058
+      DepositingGems_gif_22: -264461505
+      DepositingGems_gif_220: 441672095
+      DepositingGems_gif_221: 397079852
+      DepositingGems_gif_222: -95973538
+      DepositingGems_gif_223: -1904223252
+      DepositingGems_gif_224: 995562018
+      DepositingGems_gif_225: -1630730487
+      DepositingGems_gif_226: 1174522757
+      DepositingGems_gif_227: -2117890507
+      DepositingGems_gif_228: 456322626
+      DepositingGems_gif_229: -1490715867
+      DepositingGems_gif_23: 10562993
+      DepositingGems_gif_230: -579494340
+      DepositingGems_gif_231: -571672541
+      DepositingGems_gif_232: 1364332974
+      DepositingGems_gif_233: -284773990
+      DepositingGems_gif_234: -912913491
+      DepositingGems_gif_235: 1761757668
+      DepositingGems_gif_236: 1442857888
+      DepositingGems_gif_237: 1141670477
+      DepositingGems_gif_238: -619525311
+      DepositingGems_gif_239: -719489246
+      DepositingGems_gif_24: 162196339
+      DepositingGems_gif_240: 1788677238
+      DepositingGems_gif_241: 981815098
+      DepositingGems_gif_242: 304045076
+      DepositingGems_gif_243: 1046697926
+      DepositingGems_gif_244: -1918255368
+      DepositingGems_gif_245: 460558316
+      DepositingGems_gif_246: -1686338429
+      DepositingGems_gif_247: 1106668334
+      DepositingGems_gif_248: 1376742408
+      DepositingGems_gif_249: 1799800390
+      DepositingGems_gif_25: -1167530347
+      DepositingGems_gif_250: 1467420790
+      DepositingGems_gif_251: -494950251
+      DepositingGems_gif_252: 997677920
+      DepositingGems_gif_253: -1148219612
+      DepositingGems_gif_254: 128460403
+      DepositingGems_gif_255: -1061285169
+      DepositingGems_gif_256: -1883310602
+      DepositingGems_gif_257: -1338974017
+      DepositingGems_gif_258: 2056024414
+      DepositingGems_gif_259: 1241318734
+      DepositingGems_gif_26: 7078472
+      DepositingGems_gif_260: 2037610813
+      DepositingGems_gif_261: 21500829
+      DepositingGems_gif_262: 1152714757
+      DepositingGems_gif_263: 506404119
+      DepositingGems_gif_264: 1134061134
+      DepositingGems_gif_265: -521879791
+      DepositingGems_gif_266: -1451918372
+      DepositingGems_gif_267: -1320377139
+      DepositingGems_gif_268: -108366382
+      DepositingGems_gif_269: -1092206096
+      DepositingGems_gif_27: -745478717
+      DepositingGems_gif_270: 299480840
+      DepositingGems_gif_271: -1948776616
+      DepositingGems_gif_272: -1706432806
+      DepositingGems_gif_28: -1207196230
+      DepositingGems_gif_29: 1165380830
+      DepositingGems_gif_3: -940371345
+      DepositingGems_gif_30: -1434064978
+      DepositingGems_gif_31: 2117114110
+      DepositingGems_gif_32: 364287498
+      DepositingGems_gif_33: -214874636
+      DepositingGems_gif_34: 1320893407
+      DepositingGems_gif_35: -956897855
+      DepositingGems_gif_36: -496288845
+      DepositingGems_gif_37: 1904391118
+      DepositingGems_gif_38: 755436885
+      DepositingGems_gif_39: 601927698
+      DepositingGems_gif_4: -1289677469
+      DepositingGems_gif_40: -763254700
+      DepositingGems_gif_41: -2140034115
+      DepositingGems_gif_42: 633470011
+      DepositingGems_gif_43: -373891856
+      DepositingGems_gif_44: -916079870
+      DepositingGems_gif_45: -1330633282
+      DepositingGems_gif_46: 1485262472
+      DepositingGems_gif_47: -1880249397
+      DepositingGems_gif_48: -755350703
+      DepositingGems_gif_49: 1759746848
+      DepositingGems_gif_5: -1275245002
+      DepositingGems_gif_50: 304590726
+      DepositingGems_gif_51: -1278609864
+      DepositingGems_gif_52: -1958778717
+      DepositingGems_gif_53: -1456426119
+      DepositingGems_gif_54: -446121577
+      DepositingGems_gif_55: -1185756760
+      DepositingGems_gif_56: -1535000614
+      DepositingGems_gif_57: -1555584114
+      DepositingGems_gif_58: 859762301
+      DepositingGems_gif_59: -220825889
+      DepositingGems_gif_6: 508929320
+      DepositingGems_gif_60: -2036538137
+      DepositingGems_gif_61: -482540043
+      DepositingGems_gif_62: -1321360528
+      DepositingGems_gif_63: -46588449
+      DepositingGems_gif_64: -1106362792
+      DepositingGems_gif_65: 473829707
+      DepositingGems_gif_66: -1494711919
+      DepositingGems_gif_67: -1675983265
+      DepositingGems_gif_68: -218810982
+      DepositingGems_gif_69: 1860831091
+      DepositingGems_gif_7: 899863256
+      DepositingGems_gif_70: 815358153
+      DepositingGems_gif_71: -1894438695
+      DepositingGems_gif_72: -453492286
+      DepositingGems_gif_73: -638666139
+      DepositingGems_gif_74: 1716170151
+      DepositingGems_gif_75: -791041712
+      DepositingGems_gif_76: -1746269909
+      DepositingGems_gif_77: -1705021854
+      DepositingGems_gif_78: -381826875
+      DepositingGems_gif_79: -475324385
+      DepositingGems_gif_8: 294199071
+      DepositingGems_gif_80: -590421519
+      DepositingGems_gif_81: -1466708604
+      DepositingGems_gif_82: 507470779
+      DepositingGems_gif_83: 450237853
+      DepositingGems_gif_84: 1608411364
+      DepositingGems_gif_85: -1866724220
+      DepositingGems_gif_86: -27975327
+      DepositingGems_gif_87: -923720290
+      DepositingGems_gif_88: 1346361547
+      DepositingGems_gif_89: -1188696298
+      DepositingGems_gif_9: -1210129578
+      DepositingGems_gif_90: -438305546
+      DepositingGems_gif_91: -1930333120
+      DepositingGems_gif_92: 452680774
+      DepositingGems_gif_93: 1126522527
+      DepositingGems_gif_94: -848365326
+      DepositingGems_gif_95: -990153859
+      DepositingGems_gif_96: 22778205
+      DepositingGems_gif_97: -1140486081
+      DepositingGems_gif_98: 940149004
+      DepositingGems_gif_99: 1555913943
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
