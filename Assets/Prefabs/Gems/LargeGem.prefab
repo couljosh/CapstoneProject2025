@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4881049840861052736}
   - component: {fileID: 5596824465492831227}
   - component: {fileID: 4578612392340483187}
+  - component: {fileID: 7645548110014292073}
   m_Layer: 6
   m_Name: LargeGem
   m_TagString: LargeGem
@@ -109,6 +110,21 @@ MonoBehaviour:
   outOfRadiusMaterial: {fileID: 2100000, guid: 618b736478baeab4fbc3aa29585d9d05, type: 2}
   inRadiusMaterial: {fileID: 2100000, guid: 76552ae813c694f4886f7ed9b30a1e03, type: 2}
   isInDepositRadius: 0
+--- !u!114 &7645548110014292073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122791135550930985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e5296d66927af4d883bb8d36bf3ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 923427996337693031, guid: 46daf5ad714838c419b9306f81accdc8, type: 3}
+  gemAmt: 25
+  scatterForce: 10000
 --- !u!1 &4509407780663519724
 GameObject:
   m_ObjectHideFlags: 0

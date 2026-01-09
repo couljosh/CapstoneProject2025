@@ -15,7 +15,8 @@ TagManager:
   - LargeGem
   - RockObstacle
   - RepoSpawn
-  - Water
+  - Crate
+  - Drill
   layers:
   - Default
   - TransparentFX
