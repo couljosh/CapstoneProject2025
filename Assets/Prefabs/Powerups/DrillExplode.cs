@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.TerrainUtils;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Internal.Filters;
 
 public class DrillExplode : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class DrillExplode : MonoBehaviour
 
     public GameObject explodePos;
 
-    private bool isExplodedOnce = false;
+    private float explosionCount = 0;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class DrillExplode : MonoBehaviour
     {
         if (!isFinishedClearing)
         {
-            print("ran");
+            print("isFinishClearing is false!");
             ClearTerrain();
 
             
@@ -54,51 +55,64 @@ public class DrillExplode : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bedrock")
+        //NOTE: For reasons beyond me, the first explosion from the drill will NOT pick up any collisions whatsoever. Every subsequent one can, but the first cannot.
+        //Therefore, we must actually do two explosions in quick succession in order to actually pick up anything. The first explosion is REQUIRED for the second explosion to see anything
+        //We do not know if this is a unity bug, or some huge oversight in what we're doing. God help us all. 
+        if (other.gameObject.tag == "Bedrock" && explosionCount < 2)
         {
-            StartCoroutine(Explosion());        
+            explosionCount++;
+            Explosion();       
             radius = sphereIterations * sphereIncrease;
         }
     }
 
-    IEnumerator Explosion()
+    public void Explosion()
     {
+        print("Explosion Called");
         playerMove = GetComponentInParent<PlayerMove>();
 
         Collider[] objectsDec = Physics.OverlapSphere(explodePos.transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
+        print(objectsDec.Length);
         Explode(objectsDec);
 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
+        //NOTE: Like the above note, since there are two explosions, we only want to be showing one effect and playing one noise. This code does so, as only one explosion will have happened when
+        //this code fires. 
+        if(explosionCount < 2)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
 
-        GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
-
-
-
-        yield return null;
+            GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
+        }
+        
     }
 
 
     public void Explode(Collider[] colliding)
     {
-        
+        print("Explode Called");
         // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
         Collider[] interiorHits = Physics.OverlapSphere(explodePos.transform.position, innerRadius, terrainMask);
+        print(interiorHits.Length);
         Debug.DrawRay(transform.position, Vector3.forward * innerRadius, Color.red, 5);
 
         foreach (Collider innerHit in interiorHits)
         {
+            
             innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
-
+        print(colliding.Length);
 
         //Bomb Detection
         foreach (Collider hit in colliding)
         {
+            print("checking collider hits");
             RaycastHit[] hits = Physics.RaycastAll(transform.position, hit.transform.position - transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
             foreach (RaycastHit raycastHit in hits)
             {
+                print("checking raycast hits");
                 if (raycastHit.collider.tag != null)
                 {
+                    print("raycast hit is not null");
                     Debug.DrawRay(transform.position, raycastHit.collider.gameObject.transform.position - transform.position, Color.green, 5);
                     if (raycastHit.collider.tag == "Bedrock" || raycastHit.collider.tag == "Repository")
                     {
@@ -145,7 +159,7 @@ public class DrillExplode : MonoBehaviour
                     //Look for Terrain
                     if (raycastHit.collider.tag == "ActiveTerrain")
                     {
-                        print("hit terrain");
+                        print("terrain seen");
                         isFinishedClearing = false;
 
                     }
@@ -158,12 +172,11 @@ public class DrillExplode : MonoBehaviour
     public void ClearTerrain()
     {
         elapsedTime += Time.deltaTime;
-
+        print("ClearTerrain Called");
 
         for (int i = 1; i <= sphereIterations; i++)
         {
             StartCoroutine(SphereTrigger(i));
-            print(i);
         }
       
 
@@ -173,7 +186,7 @@ public class DrillExplode : MonoBehaviour
 
     public IEnumerator SphereTrigger(int y)
     {
-        print("reached");
+        print("SphereTrigger Called");
         yield return new WaitForSeconds(timeToScan * y);
 
         Collider[] terrainPieces = Physics.OverlapSphere(explodePos.transform.position, y * sphereIncrease, terrainMask);
@@ -195,13 +208,14 @@ public class DrillExplode : MonoBehaviour
 
     public IEnumerator destroyDrillAfterDelay(float waitTime)
     {
+        print("DestroyDrillAfterDelay Called");
         yield return new WaitForSeconds(waitTime);
         
         //reset to basic movement
         playerMove.powerUpPickupScript.activePowerup = null;
 
         //destroy drill object, so that you respawn normally
-        print("called destroy");
+        
         Destroy(gameObject.transform.parent.gameObject);
 
         yield return null;
