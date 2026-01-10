@@ -89,6 +89,12 @@ public class RepositoryLogic : MonoBehaviour
     public LayerMask player;
     public LayerMask kickable;
 
+    [Header("Catch-Up Deposit Settings")]
+    [Range(0f, 1f)]
+    public float losingTeamDepositSpeedBonus = 0.10f; //10% faster
+    public int catchupDeficitThreshold = 75;
+
+
     [Header("Sound Variables")]
     //public EventReference depositRef;
     private FMOD.Studio.EventInstance instance;
@@ -198,8 +204,14 @@ public class RepositoryLogic : MonoBehaviour
         if (teamOneCanDepo)
         {
 
-            //Increase progress until full
-            depositProgress += Time.deltaTime;
+            //Increase progress until full (and with catch-up checks)
+            float speedMult = 1f;
+
+            if (CatchupActiveForTeam(isTeamOne: true))
+                speedMult += losingTeamDepositSpeedBonus;
+
+            depositProgress += Time.deltaTime * speedMult;
+
 
             //Team 1 Signifiers Active
             progressBar.color = yellowProgressColor;
@@ -217,8 +229,13 @@ public class RepositoryLogic : MonoBehaviour
         // TEAM 2 DEPOSITING //----------------------------------------------------------------------------------------
         if (teamTwoCanDepo)
         {
-            //Increase progress until full
-            depositProgress += Time.deltaTime;
+            //Increase progress until full (and with catch-up checks)
+            float speedMult = 1f;
+
+            if (CatchupActiveForTeam(isTeamOne: false))
+                speedMult += losingTeamDepositSpeedBonus;
+
+            depositProgress += Time.deltaTime * speedMult;
 
             //Team 2 Signifiers Active
             progressBar.color = blueProgressColor;
@@ -678,6 +695,35 @@ public class RepositoryLogic : MonoBehaviour
 
         return Mathf.Min(total, maxDepositCap);
     }
+
+    bool IsTeamLosing(bool isTeamOne)
+    {
+        if (score == null) return false;
+
+        int totalRed = GameScore.redTotalScore + score.redRoundTotal;
+        int totalBlue = GameScore.blueTotalScore + score.blueRoundTotal;
+
+        if (isTeamOne)
+            return totalRed < totalBlue;
+        else
+            return totalBlue < totalRed;
+    }
+
+    bool CatchupActiveForTeam(bool isTeamOne)
+    {
+        if (score == null) return false;
+
+        int totalRed = GameScore.redTotalScore + score.redRoundTotal;
+        int totalBlue = GameScore.blueTotalScore + score.blueRoundTotal;
+
+        int deficit = Mathf.Abs(totalRed - totalBlue);
+        if (deficit < catchupDeficitThreshold)
+            return false;
+
+        return IsTeamLosing(isTeamOne);
+    }
+
+
 
     void UpdateDepositPreview()
     {

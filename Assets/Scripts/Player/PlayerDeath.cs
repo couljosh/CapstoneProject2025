@@ -44,6 +44,10 @@ public class PlayerDeath : MonoBehaviour
     [Header("Gem Counter Checks UI")]
     public GemsHeldUI gemsHeldUI;
 
+    [Header("Team Settings for Catch-up")]
+    public bool isBlueTeam;
+    private SceneChange sceneChangeScript;
+
 
     private void Start()
     {
@@ -54,6 +58,8 @@ public class PlayerDeath : MonoBehaviour
         playerGamepad = (Gamepad)playerInput.devices[0];
 
         dynamicCamera = Camera.main.GetComponentInParent<DynamicCameraFollow>();
+
+        sceneChangeScript = FindFirstObjectByType<SceneChange>();
 
         //gameObject.transform.position = GameObject.Find("Spawn" + spawnNum).transform.position;
         EnablePlayer();
@@ -132,11 +138,57 @@ public class PlayerDeath : MonoBehaviour
             playerGamepad.SetMotorSpeeds(0f, 0f);
 
 
-        yield return new WaitForSeconds(playerStats.respawnDelay);
+        // catch-up logic
+        float currentRespawnTime = playerStats.respawnDelay;
+
+        if (sceneChangeScript == null)
+            sceneChangeScript = FindFirstObjectByType<SceneChange>();
+
+        if (sceneChangeScript != null)
+        {
+            int totalRed = GameScore.redTotalScore + sceneChangeScript.redRoundTotal;
+            int totalBlue = GameScore.blueTotalScore + sceneChangeScript.blueRoundTotal;
+
+            bool blueIsLosing = totalBlue < totalRed;
+            bool redIsLosing = totalRed < totalBlue;
+
+            int deficit = Mathf.Abs(totalRed - totalBlue);
+
+
+            if (deficit >= 75)
+            {
+                bool playerIsBlue = IsBlueTeam();
+                bool applyCatchup =
+                    (playerIsBlue && blueIsLosing) ||
+                    (!playerIsBlue && redIsLosing);
+
+                if (applyCatchup)
+                {
+                    currentRespawnTime = Mathf.Max(
+                        0.5f,
+                        currentRespawnTime - 1.0f
+                    );
+
+                }
+            }
+        }
+
+
+
+        yield return new WaitForSeconds(currentRespawnTime);
+
         EnablePlayer();
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<Animator>().applyRootMotion = false;
 
+    }
+
+    bool IsBlueTeam() //just for checking for catch-up mechanic faster respawn
+    {
+        PlayerMove pm = GetComponent<PlayerMove>();
+        if (pm == null) return false;
+
+        return pm.playerNum == 3 || pm.playerNum == 4;
     }
 
 

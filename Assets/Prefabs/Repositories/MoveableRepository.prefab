@@ -311,8 +311,10 @@ MonoBehaviour:
   repoLight: {fileID: 5869905127202112930}
   previewText: {fileID: 8284050528792443832}
   maxDepositCap: 100
+  previewDecrementDuration: 1
   baseScaleMultiplier: 0.017
   punchIntensity: 0.0035
+  contestedPreviewColor: {r: 1, g: 0, b: 0, a: 1}
   repoAlarm: {fileID: 5172792121739064073}
   repoAlarmLight: {fileID: 3127452777636138010}
   repoAlarmLightTwo: {fileID: 7347771092422031800}
@@ -346,6 +348,8 @@ MonoBehaviour:
   kickable:
     serializedVersion: 2
     m_Bits: 64
+  losingTeamDepositSpeedBonus: 0.3
+  catchupDeficitThreshold: 75
   repoMaterial: {fileID: 2100000, guid: 3f31d138efa3cd6458d685547feb39cb, type: 2}
   contestedMaterial: {fileID: 2100000, guid: 808b5c6f885c172449df81bee489b37c, type: 2}
   mesh: {fileID: 0}

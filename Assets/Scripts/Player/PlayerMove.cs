@@ -281,14 +281,22 @@ public class PlayerMove : MonoBehaviour
         }
 
         //player slower with more gems
+        //flat speed reduction
         if (playerDeath.gemCount > weightThreshold)
         {
             int excessGems = playerDeath.gemCount - weightThreshold;
-            float weightPenalty = 1.0f - (excessGems * slowdownPerGem); 
+
+
+            float totalPenalty = excessGems * 0.0016f;
+            float weightPenalty = 1.0f - totalPenalty;
+
+
             weightPenalty = Mathf.Max(weightPenalty, minSpeedMultiplier);
 
             finalMoveSpeed *= weightPenalty;
         }
+
+
 
 
         if (rb.linearVelocity.magnitude < finalMoveSpeed)
