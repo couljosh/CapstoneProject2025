@@ -248,6 +248,7 @@ public class DrillExplode : MonoBehaviour
         //reset to basic movement
         playerMove.powerUpPickupScript.activePowerup = null;
 
+        CaveInManager.isPowerupInPlay = false;
 
         //destroy drill object, so that you respawn normally
         Destroy(gameObject.transform.parent.gameObject);

@@ -51,8 +51,8 @@ public class CaveInManager : MonoBehaviour
     public GameObject crate;
     public int crateLimit;
     public int crateAmt;
+    static public bool isPowerupInPlay = false;
 
-    public int crateChance;
 
 
     private void Start()
@@ -64,6 +64,7 @@ public class CaveInManager : MonoBehaviour
 
     void Update()
     {
+        print(isPowerupInPlay);
         timer += Time.deltaTime;
         timeSinceLastCaveIn += Time.deltaTime;
 
@@ -95,6 +96,8 @@ public class CaveInManager : MonoBehaviour
                 cameraShake.caveinVFX.Play();
                 //Debug.Log("test");
 
+                //Spawns powerup if no powerup is already in play
+                if(!isPowerupInPlay)
                 SpawnPowerup();
 
             }
@@ -202,6 +205,8 @@ public class CaveInManager : MonoBehaviour
 
     void SpawnPowerup()
     {
+        isPowerupInPlay = true;
+
         Quaternion randRot = Quaternion.Euler(0, Random.Range(0, 360), 0);
         int randIdx = Random.Range(0, repoMoveSystemScript.repoSpawnNodes.Length);
         GameObject chosenNode = repoMoveSystemScript.repoSpawnNodes[randIdx];
