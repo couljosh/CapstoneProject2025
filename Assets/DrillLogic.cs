@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.TerrainUtils;
-
+using FMODUnity;
+using FMOD.Studio;
 
 public class DrillLogic : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class DrillLogic : MonoBehaviour
     [HideInInspector] public float currentSpeed;
     [HideInInspector] public float currentTurn;
 
+    public FMODUnity.EventReference drillEvent;
+    public EventInstance drillInstance;
+
+
     public AnimationCurve speedUpCurve;
     //public AnimationCurve slowTurnCurve; //if we want turn speed to gradually slow down
 
@@ -33,6 +38,9 @@ public class DrillLogic : MonoBehaviour
     void Start()
     {
         currentSpeed = 0;
+        drillInstance = RuntimeManager.CreateInstance(drillEvent);
+
+        Invoke("PlayDrillSound", 1f);
     }
 
     void Update()
@@ -44,7 +52,8 @@ public class DrillLogic : MonoBehaviour
         else
         {
             isDrillMoving = true;
-            movingElapsedTime += Time.deltaTime;
+            movingElapsedTime += Time.deltaTime;       
+
 
             currentSpeedUpProgress = movingElapsedTime / timeToFullSpeed;
             float curvedT = speedUpCurve.Evaluate(currentSpeedUpProgress);
@@ -55,7 +64,7 @@ public class DrillLogic : MonoBehaviour
 
         //turn starts immediately so players can turn before it starts moving
         currentTurn = Mathf.Lerp(10, minTurn, currentSpeedUpProgress);
-
+        
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -65,5 +74,11 @@ public class DrillLogic : MonoBehaviour
         {
             collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
+    }
+
+    void PlayDrillSound()
+    {
+        drillInstance.start();
+
     }
 }

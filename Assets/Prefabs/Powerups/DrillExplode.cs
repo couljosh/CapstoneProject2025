@@ -3,6 +3,8 @@ using UnityEngine.TerrainUtils;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework.Internal.Filters;
+using FMODUnity;
+using FMOD.Studio;
 
 public class DrillExplode : MonoBehaviour
 {
@@ -36,11 +38,18 @@ public class DrillExplode : MonoBehaviour
 
     public GameObject explodePos;
 
+    public FMODUnity.EventReference engineStartEvent;
+    private EventInstance engineStartInstance;
+
     private float explosionCount = 0;
+
 
     private void Start()
     {
         radius = sphereIterations * sphereIncrease;
+        engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);
+
+        engineStartInstance.start();
     }
 
     private void Update()
@@ -249,6 +258,8 @@ public class DrillExplode : MonoBehaviour
         playerMove.powerUpPickupScript.activePowerup = null;
 
         CaveInManager.isPowerupInPlay = false;
+        engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
         //destroy drill object, so that you respawn normally
         Destroy(gameObject.transform.parent.gameObject);

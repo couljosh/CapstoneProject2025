@@ -125,6 +125,13 @@ MonoBehaviour:
   drillForceMultplier: 1
   drillLogicScript: {fileID: 9112477584150219545}
   explodePos: {fileID: 777213706852342900}
+  engineStartEvent:
+    Guid:
+      Data1: 1124658471
+      Data2: 1101422606
+      Data3: 583481248
+      Data4: -1835171174
+    Path: event:/SFX_Drill/MotorStarting
 --- !u!1 &5412180143354154128
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +420,13 @@ MonoBehaviour:
   timeToFullSpeed: 3
   currentSpeed: 0
   currentTurn: 0
+  drillEvent:
+    Guid:
+      Data1: 483723525
+      Data2: 1097911182
+      Data3: 1539409574
+      Data4: 888039031
+    Path: event:/SFX_Drill/DrillMoving
   speedUpCurve:
     serializedVersion: 2
     m_Curve:
