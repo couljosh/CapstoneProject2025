@@ -5,34 +5,28 @@ using FMOD.Studio;
 
 public class DrillLogic : MonoBehaviour
 {
+    [Header("Variables")]
     public float startDelay;
-
-    public float explodeRad;
-
     public float movingElapsedTime;
     public float startElapsedTime;
-
-    public bool isDrillMoving = false;
-
-    public bool isDrill = true;
-
-
     public float maxSpeed;
     public float minTurn;
-
     public float timeToFullSpeed;
-
     private float currentSpeedUpProgress;
-
     [HideInInspector] public float currentSpeed;
     [HideInInspector] public float currentTurn;
 
-    public FMODUnity.EventReference drillEvent;
-    public EventInstance drillInstance;
+    [Header("Checks")]
+    public bool isDrillMoving = false;
+    public bool isDrill = true;
 
-
+    [Header("References")]
     public AnimationCurve speedUpCurve;
     //public AnimationCurve slowTurnCurve; //if we want turn speed to gradually slow down
+
+    [Header("Audio")]
+    public FMODUnity.EventReference drillEvent;
+    public EventInstance drillInstance;
 
 
     void Start()

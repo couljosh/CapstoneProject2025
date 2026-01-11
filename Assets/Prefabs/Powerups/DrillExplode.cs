@@ -8,18 +8,17 @@ using FMOD.Studio;
 
 public class DrillExplode : MonoBehaviour
 {
-    //explode Variables
-    private float radius;
-    public float innerRadius;
-
+    [Header("Layers To Detect")]
     public LayerMask terrainMask;
     public LayerMask kickableMask;
     public LayerMask playerMask;
     public LayerMask gemMask;
     public LayerMask bedrock;
 
-    public GameObject explosionParticle;
-
+    [Header("Explosion Variables")]
+    private float radius;
+    public float innerRadius;
+    private float explosionCount = 0;
     public float elapsedTime;
     public int sphereIterations;
     public float sphereIncrease;
@@ -32,16 +31,17 @@ public class DrillExplode : MonoBehaviour
     public float forceStrengthLargeGem;
 
     public float drillForceMultplier;
+    public float drillForceMultplierCart;
 
+    [Header("References")]
+    public GameObject explosionParticle;
     private PlayerMove playerMove;
     public DrillLogic drillLogicScript;
-
     public GameObject explodePos;
 
+    [Header("Audio")]
     public FMODUnity.EventReference engineStartEvent;
     private EventInstance engineStartInstance;
-
-    private float explosionCount = 0;
 
 
     private void Start()
@@ -58,9 +58,6 @@ public class DrillExplode : MonoBehaviour
         {
             print("isFinishClearing is false!");
             ClearTerrain();
-
-
-
 
         }
     }
@@ -92,13 +89,12 @@ public class DrillExplode : MonoBehaviour
             other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
         }
 
-        if (other.gameObject.tag == "Minecart")
+        if (other.gameObject.tag == "Cart")
         {
             Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
-            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplier, ForceMode.Impulse);
+            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplierCart, ForceMode.Impulse);
         }
-
-       
+   
     }
 
     public void Explosion()

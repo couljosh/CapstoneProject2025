@@ -123,6 +123,7 @@ MonoBehaviour:
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
   drillForceMultplier: 1
+  drillForceMultplierCart: 3
   drillLogicScript: {fileID: 9112477584150219545}
   explodePos: {fileID: 777213706852342900}
   engineStartEvent:
