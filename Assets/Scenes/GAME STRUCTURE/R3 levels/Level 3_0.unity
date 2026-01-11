@@ -6541,9 +6541,10 @@ MonoBehaviour:
   minHeight: 21
   maxHeight: 45
   padding: 2
-  verticalOffset: 0
-  horizontalOffset: -5
+  verticalOffset: -3
+  horizontalOffset: -1
   boundaryCollider: {fileID: 442179373}
+  playerBufferRadius: 2
 --- !u!1 &1377524169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1435544788643584507, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
@@ -15008,6 +15009,7 @@ MonoBehaviour:
     m_Bits: 128
   terrainTileMap: {fileID: 1960841326}
   terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
+  repoMoveSystemScript: {fileID: 0}
   warningTime: 3
   chancePerSecond: 12
   radius: 4
@@ -15026,6 +15028,9 @@ MonoBehaviour:
       Data3: 895209894
       Data4: 1535286940
     Path: event:/SFX_CaveIns/Cave-InsSignifier
+  crate: {fileID: 0}
+  crateLimit: 0
+  crateAmt: 0
 --- !u!4 &1670730268
 Transform:
   m_ObjectHideFlags: 0

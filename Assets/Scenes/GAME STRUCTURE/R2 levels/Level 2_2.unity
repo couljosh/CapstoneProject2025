@@ -848,9 +848,9 @@ MonoBehaviour:
   maxHeight: 45
   padding: 2
   verticalOffset: -5
-  horizontalOffset: -5
+  horizontalOffset: -0.7
   boundaryCollider: {fileID: 843179799}
-  playerBufferRadius: 1
+  playerBufferRadius: 3
 --- !u!1 &466814380
 GameObject:
   m_ObjectHideFlags: 0

@@ -147,7 +147,7 @@ public class DynamicCameraFollow : MonoBehaviour
 
         float halfFovRad = cam.fieldOfView * 0.5f * Mathf.Deg2Rad;
 
-        float heightByWidth = (requiredWidth / 2f) / Mathf.Tan(halfFovRad);
+        //fix for camera 80 degree tilt we have
         float heightByWidth = ((bounds.size.x + padding) * 0.5f) / (Mathf.Tan(halfFovRad) * cam.aspect);
 
         //height to fit Z (vertical depth)
