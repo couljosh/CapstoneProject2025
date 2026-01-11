@@ -87,7 +87,6 @@ public class RepoMoveSystem : MonoBehaviour
 
             if (!retractStarted)
             {
-                Debug.Log("retract starting");
                 retractStarted = true;
                 anim.SetBool("Appear", false);
                 anim.SetBool("Retract", true);

@@ -498,7 +498,6 @@ public class RepositoryLogic : MonoBehaviour
 
         //play complete deposit noise
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Repository/Deposit", gameObject.transform.position);
-        print("reached");
 
     }
 
