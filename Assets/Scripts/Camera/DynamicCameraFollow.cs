@@ -21,6 +21,9 @@ public class DynamicCameraFollow : MonoBehaviour
     [Header("Boundary")]
     public BoxCollider boundaryCollider;
 
+    [Header("Player Framing")]
+    public float playerBufferRadius = 1.5f; //sphere around each player
+
     void Awake()
     {
         cam = GetComponentInChildren<Camera>();
@@ -28,7 +31,6 @@ public class DynamicCameraFollow : MonoBehaviour
 
     private IEnumerator Start()
     {
-
         yield return new WaitForSeconds(0.2f);
 
         for (int i = 1; i <= 4; i++)
@@ -39,12 +41,7 @@ public class DynamicCameraFollow : MonoBehaviour
             {
                 AddPlayer(found.transform);
             }
-            else
-            {
-               // Debug.LogWarning($"{playerName} not found in scene.");
-            }
         }
-
     }
 
     public void AddPlayer(Transform playerTransform)
@@ -65,23 +62,21 @@ public class DynamicCameraFollow : MonoBehaviour
     {
         if (players.Count == 0 || cam == null) return;
 
-        Bounds bounds = GetPlayerBounds();
-        float targetHeight = CalculateRequiredHeight(bounds);
+        Bounds zoomBounds = GetPlayerBounds(true);
+        float targetHeight = CalculateRequiredHeight(zoomBounds);
 
         Vector3 targetPosition = new Vector3(
-            bounds.center.x + horizontalOffset,
+            zoomBounds.center.x + horizontalOffset,
             targetHeight + verticalOffset,
-            bounds.center.z
+            zoomBounds.center.z //center on z initially (middle of the screen)
         );
 
-        // --- INITIAL POSITION CLAMPING ---
         if (boundaryCollider != null)
         {
             Bounds mapBounds = boundaryCollider.bounds;
             targetPosition.x = Mathf.Clamp(targetPosition.x, mapBounds.min.x, mapBounds.max.x);
             targetPosition.z = Mathf.Clamp(targetPosition.z, mapBounds.min.z, mapBounds.max.z);
         }
-        // --- END CLAMPING ---
 
         transform.position = targetPosition;
     }
@@ -90,73 +85,57 @@ public class DynamicCameraFollow : MonoBehaviour
     {
         if (players.Count == 0 || cam == null) return;
 
-        Bounds bounds = GetPlayerBounds();
-        float targetHeight = CalculateRequiredHeight(bounds);
+        //get bounds area
+        Bounds zoomBounds = GetPlayerBounds(true);
 
+        float targetHeight = CalculateRequiredHeight(zoomBounds);
+
+        //offset postions
         Vector3 desiredPosition = new Vector3(
-            bounds.center.x + horizontalOffset,
-            targetHeight + verticalOffset,
-            bounds.center.z + horizontalOffset
+            zoomBounds.center.x + horizontalOffset,
+            targetHeight,
+            zoomBounds.center.z + verticalOffset
         );
 
+        //boundaries clamp
         if (boundaryCollider != null)
         {
             Bounds mapBounds = boundaryCollider.bounds;
-
-            desiredPosition.x = Mathf.Clamp(
-                desiredPosition.x,
-                mapBounds.min.x,
-                mapBounds.max.x
-            );
-
-            desiredPosition.z = Mathf.Clamp(
-                desiredPosition.z,
-                mapBounds.min.z,
-                mapBounds.max.z
-            );
+            desiredPosition.x = Mathf.Clamp(desiredPosition.x, mapBounds.min.x, mapBounds.max.x);
+            desiredPosition.z = Mathf.Clamp(desiredPosition.z, mapBounds.min.z, mapBounds.max.z);
+            //Debug.Log("testing");
         }
 
+        // 4. Smooth Damp X, Y, and Z separately as in your original
+        float dampedX = Mathf.SmoothDamp(transform.position.x, desiredPosition.x, ref velocity.x, smoothTime);
+        float dampedZ = Mathf.SmoothDamp(transform.position.z, desiredPosition.z, ref velocity.z, smoothTime);
+        float dampedY = Mathf.SmoothDamp(transform.position.y, desiredPosition.y, ref currentHeightVelocity, smoothTime);
 
-        float dampedX = Mathf.SmoothDamp(
-            transform.position.x,
-            desiredPosition.x,
-            ref velocity.x,
-            smoothTime
-        );
-
-        float dampedZ = Mathf.SmoothDamp(
-            transform.position.z,
-            desiredPosition.z,
-            ref velocity.z,
-            smoothTime
-        );
-
-        float dampedY = Mathf.SmoothDamp(
-            transform.position.y,
-            desiredPosition.y,
-            ref currentHeightVelocity,
-            smoothTime
-        );
-
-        //apply clamped position
-        transform.position = new Vector3(
-            dampedX,
-            dampedY,
-            dampedZ
-        );
+        transform.position = new Vector3(dampedX, dampedY, dampedZ);
     }
 
-    private Bounds GetPlayerBounds()
+    private Bounds GetPlayerBounds(bool includeBuffer)
     {
         if (players.Count == 0) return new Bounds(Vector3.zero, Vector3.zero);
 
         Bounds bounds = new Bounds(players[0].position, Vector3.zero);
 
-        for (int i = 1; i < players.Count; i++)
+        foreach (Transform t in players)
         {
-            if (players[i] != null)
+            if (t == null) continue;
+
+            if (includeBuffer)
             {
-                bounds.Encapsulate(players[i].position);
+                Vector3 pos = t.position;
+                //expand box distance around player
+                bounds.Encapsulate(new Vector3(pos.x + playerBufferRadius, pos.y, pos.z + playerBufferRadius));
+                bounds.Encapsulate(new Vector3(pos.x - playerBufferRadius, pos.y, pos.z - playerBufferRadius));
+                bounds.Encapsulate(new Vector3(pos.x + playerBufferRadius, pos.y, pos.z - playerBufferRadius));
+                bounds.Encapsulate(new Vector3(pos.x - playerBufferRadius, pos.y, pos.z + playerBufferRadius));
+            }
+            else
+            {
+                bounds.Encapsulate(t.position);
             }
         }
         return bounds;
@@ -166,27 +145,36 @@ public class DynamicCameraFollow : MonoBehaviour
     {
         if (cam == null) return minHeight;
 
-        float requiredWidth = bounds.extents.x * 2f + padding;
-        float requiredDepth = bounds.extents.z * 2f + padding;
-
         float halfFovRad = cam.fieldOfView * 0.5f * Mathf.Deg2Rad;
 
         float heightByWidth = (requiredWidth / 2f) / Mathf.Tan(halfFovRad);
+        float heightByWidth = ((bounds.size.x + padding) * 0.5f) / (Mathf.Tan(halfFovRad) * cam.aspect);
 
-        float aspect = cam.aspect;
-        float heightByDepth = (requiredDepth / 2f / aspect) / Mathf.Tan(halfFovRad);
+        //height to fit Z (vertical depth)
+        float heightByDepth = ((bounds.size.z + padding) * 0.5f) / Mathf.Tan(halfFovRad);
 
+        //use max of both to ensure none are cut off
         float requiredHeight = Mathf.Max(heightByWidth, heightByDepth);
 
         return Mathf.Clamp(requiredHeight, minHeight, maxHeight);
     }
+    //Debug.Log("test");
 
     public void RemovePlayer(Transform playerTransform)
     {
         if (players.Contains(playerTransform))
         {
-
             players.Remove(playerTransform);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (players.Count > 0)
+        {
+            Gizmos.color = Color.yellow;
+            Bounds b = GetPlayerBounds(true);
+            Gizmos.DrawWireCube(b.center, b.size);
         }
     }
 }

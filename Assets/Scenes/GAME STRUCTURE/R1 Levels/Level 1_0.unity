@@ -17659,9 +17659,10 @@ MonoBehaviour:
   minHeight: 21
   maxHeight: 45
   padding: 2
-  verticalOffset: 0
-  horizontalOffset: -5
+  verticalOffset: -4.2
+  horizontalOffset: -0.9
   boundaryCollider: {fileID: 1504064306}
+  playerBufferRadius: 3.4
 --- !u!4 &1890303081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8449353252119293836, guid: 76666e98a68f16f4e9621cc46d1e8a40, type: 3}
