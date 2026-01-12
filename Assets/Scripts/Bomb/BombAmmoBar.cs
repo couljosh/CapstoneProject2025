@@ -1,7 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using System.Collections;
 
 public class BombAmmoBar : MonoBehaviour
 {
@@ -9,14 +9,19 @@ public class BombAmmoBar : MonoBehaviour
     public Image regenerationFill;
 
     [Header("Visual Settings")]
-    public Color chargedColor = Color.yellow;
+    public Color chargedColorBlue = Color.blue;
+    public Color chargedColorYellow = Color.yellow;
     public Color chargingColor = Color.gray;
     public Color emptyColor = Color.black;
+
     public float fullIntensity = 1.0f;
     public float unchargedIntensity = 0.5f;
 
     [Tooltip("Alpha value (0.0 to 1.0) for segments that are not yet charged.")]
     public float emptySegmentAlpha = 0.5f;
+
+    //team variable
+    [HideInInspector] public bool isBlueTeam;
 
     [Header("Regen Pop Effect Settings")]
     public RectTransform bombIconTransform;
@@ -31,73 +36,74 @@ public class BombAmmoBar : MonoBehaviour
     private bool popEffectActive = false;
     private int lastKnownBombCount = 0;
 
-    public void Initialize(BombSpawn spawnScript, float maxRegenTime)
+    public void Initialize(BombSpawn spawnScript, bool playerIsBlueTeam)
     {
         bombSpawn = spawnScript;
+        isBlueTeam = playerIsBlueTeam;
+
+        // Make materials unique (prevents shared-material bugs)
+        foreach (var seg in ammoSegments)
+        {
+            if (seg.material != null)
+                seg.material = Instantiate(seg.material);
+        }
+
         if (ammoSegments.Count != bombSpawn.playerStats.maxBombsHeld)
         {
-            Debug.LogError("bomb ui player max bombs doesnt match ammo segments");
+            Debug.LogError("BombAmmoBar: ammo segments count mismatch");
         }
+
         lastKnownBombCount = bombSpawn.CurrentBombsHeld;
         UpdateUI(bombSpawn.CurrentBombsHeld, 0);
     }
 
     void Update()
     {
-        if (bombSpawn != null)
+        if (bombSpawn == null) return;
+
+        int currentBombs = bombSpawn.CurrentBombsHeld;
+
+        if (currentBombs > lastKnownBombCount &&
+            !popEffectActive &&
+            bombIconTransform != null)
         {
-            int currentBombs = bombSpawn.CurrentBombsHeld;
-
-            if (currentBombs > lastKnownBombCount)
-            {
-                if (!popEffectActive && bombIconTransform != null)
-                {
-                    StartRegenPopEffect();
-                }
-            }
-
-            UpdateUI(currentBombs, bombSpawn.RegenerationProgress);
-
-            lastKnownBombCount = currentBombs;
+            StartRegenPopEffect();
         }
+
+        UpdateUI(currentBombs, bombSpawn.RegenerationProgress);
+        lastKnownBombCount = currentBombs;
+    }
+
+    private Color GetChargedColor()
+    {
+        return isBlueTeam ? chargedColorBlue : chargedColorYellow;
     }
 
     private void UpdateUI(int currentBombs, float progress)
     {
-        int maxSegments = ammoSegments.Count;
-
-        for (int i = 0; i < maxSegments; i++)
+        for (int i = 0; i < ammoSegments.Count; i++)
         {
             Image segment = ammoSegments[i];
 
+            // Fully charged
             if (i < currentBombs)
             {
-                segment.color = chargedColor;
+                segment.color = GetChargedColor();
                 segment.fillAmount = 1f;
                 segment.material.SetFloat("_EmissionIntensity", fullIntensity);
             }
-
-            else if (i == currentBombs && currentBombs < maxSegments)
+            // Charging
+            else if (i == currentBombs && currentBombs < ammoSegments.Count)
             {
-                if (progress >= 1f)
-                {
-                    segment.color = chargedColor;
-                    segment.fillAmount = 1f;
-                    segment.material.SetFloat("_EmissionIntensity", fullIntensity);
-                }
-                else
-                {
-                    segment.color = chargingColor;
-                    segment.fillAmount = progress;
-                    segment.material.SetFloat("_EmissionIntensity", unchargedIntensity);
-                }
+                segment.color = chargingColor;
+                segment.fillAmount = progress;
+                segment.material.SetFloat("_EmissionIntensity", unchargedIntensity);
             }
-
+            // Empty
             else
             {
                 Color dimmed = emptyColor;
                 dimmed.a = emptySegmentAlpha;
-
                 segment.color = dimmed;
                 segment.fillAmount = 0f;
                 segment.material.SetFloat("_EmissionIntensity", unchargedIntensity);
@@ -105,13 +111,12 @@ public class BombAmmoBar : MonoBehaviour
         }
     }
 
+    //pop effects
     private void StartRegenPopEffect()
     {
-        if (bombIconTransform == null) return;
         popEffectActive = true;
         StartCoroutine(RegenPopAnimation());
     }
-
     private IEnumerator RegenPopAnimation()
     {
         Vector3 startScale = bombIconTransform.localScale;
@@ -121,19 +126,18 @@ public class BombAmmoBar : MonoBehaviour
         while (timer < regenPopDuration)
         {
             timer += Time.deltaTime;
-            float t = timer / regenPopDuration;
-            bombIconTransform.localScale = Vector3.Lerp(startScale, maxScale, t);
+            bombIconTransform.localScale =
+                Vector3.Lerp(startScale, maxScale, timer / regenPopDuration);
             yield return null;
         }
-        bombIconTransform.localScale = maxScale;
 
         timer = 0f;
 
         while (timer < regenPopDuration)
         {
             timer += Time.deltaTime;
-            float t = timer / regenPopDuration;
-            bombIconTransform.localScale = Vector3.Lerp(maxScale, startScale, t);
+            bombIconTransform.localScale =
+                Vector3.Lerp(maxScale, startScale, timer / regenPopDuration);
             yield return null;
         }
 
@@ -143,36 +147,31 @@ public class BombAmmoBar : MonoBehaviour
 
     public void StartUsedPopEffect()
     {
-        if (bombIconTransform == null) return;
         if (!popEffectActive)
-        {
-            popEffectActive = true;
             StartCoroutine(UsedPopAnimation());
-        }
     }
 
     private IEnumerator UsedPopAnimation()
     {
         Vector3 startScale = bombIconTransform.localScale;
-        Vector3 maxScale = startScale * usedPopScale;
+        Vector3 minScale = startScale * usedPopScale;
         float timer = 0f;
 
         while (timer < usedPopDuration)
         {
             timer += Time.deltaTime;
-            float t = timer / usedPopDuration;
-            bombIconTransform.localScale = Vector3.Lerp(startScale, maxScale, t);
+            bombIconTransform.localScale =
+                Vector3.Lerp(startScale, minScale, timer / usedPopDuration);
             yield return null;
         }
-        bombIconTransform.localScale = maxScale;
 
         timer = 0f;
 
         while (timer < usedPopDuration)
         {
             timer += Time.deltaTime;
-            float t = timer / usedPopDuration;
-            bombIconTransform.localScale = Vector3.Lerp(maxScale, startScale, t);
+            bombIconTransform.localScale =
+                Vector3.Lerp(minScale, startScale, timer / usedPopDuration);
             yield return null;
         }
 

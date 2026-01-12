@@ -432,12 +432,14 @@ MonoBehaviour:
   - {fileID: 7100773469266478427}
   - {fileID: 5824801529412427077}
   regenerationFill: {fileID: 1273978887827975990}
-  chargedColor: {r: 0.96470594, g: 0.46274513, b: 0.16470589, a: 1}
+  chargedColorBlue: {r: 0.3066038, g: 0.4727818, b: 1, a: 1}
+  chargedColorYellow: {r: 1, g: 0.6862745, b: 0, a: 1}
   chargingColor: {r: 0.46101815, g: 0.47783908, b: 0.5283019, a: 0.84313726}
   emptyColor: {r: 0.21960786, g: 0.21568629, b: 0.3254902, a: 1}
   fullIntensity: 1
   unchargedIntensity: 0.5
   emptySegmentAlpha: 0.5
+  isBlueTeam: 0
   bombIconTransform: {fileID: 7341373246871688116}
   regenPopScale: 1.6
   regenPopDuration: 0.1
