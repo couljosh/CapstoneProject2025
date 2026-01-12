@@ -1,0 +1,4973 @@
+fileFormatVersion: 2
+guid: 500d34c7fa14266418ef8cd1c5386f60
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlacingBombs_gif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3936c97e0ce2542bbc5697e7d304f9
+      internalID: 1745136374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fa710288cde4b4298fd00471e6d262
+      internalID: 1385549109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_2
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0182b0e904741a84ea1a30efa78cdf38
+      internalID: 705544348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_3
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af2cf943e1ff0d47bf38bc224ccc204
+      internalID: -1452445755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_4
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc101f5a23c88034696f7091b001cfc8
+      internalID: 153790718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_5
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625a3af0fd4f74b499929f01f01946a2
+      internalID: 169912091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_6
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 5220
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb212fdbfcc876d4ca9d536398f364d5
+      internalID: 2014551717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f9ae5867f9dae4597186dbcc9f51e9
+      internalID: -1515752614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_8
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dface53ae0037fe43b60be2dffd14ccc
+      internalID: 900772743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_9
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de9f35166229c941a668f1e951e3c30
+      internalID: 1933238154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_10
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70001bf767c1c14f8077bd973d40ba5
+      internalID: 1889487149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_11
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c202c6df3c8064eb641b304fdb5641
+      internalID: 1285322321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_12
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfabb0c1ae39da4a8410012a3cac3df
+      internalID: 1600995362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_13
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 5040
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b43a379cc5e4741a58dde71d7ba8a5
+      internalID: 377887499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d9cb49ae3378f4a9c6a6999a5b1c68
+      internalID: -2058589226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_15
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e0760149546914c917d36ab3809593
+      internalID: 1680837440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_16
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70656884c9b0c4049bc31d848695e100
+      internalID: 51374418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_17
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4f7ec775f497849b08ebae9799436d
+      internalID: -84939823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_18
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61b0368d43953942a0022bbd049b937
+      internalID: 2040603998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_19
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48987cb3032d6d4ca2b07c80cdf01ce
+      internalID: -1779641744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_20
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4860
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bcfa11b4f17e14da4d8ce61d3ff3f3
+      internalID: 918064174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6312ed418608443b7b9d0ec7cc8a6b
+      internalID: 1664072160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_22
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdc1c30e3eedb64ab70dfced0633198
+      internalID: -1890852602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_23
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3846164dac6804d835b8ca952f73de
+      internalID: 1982242822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_24
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4facf60113c55489a2f124844fab28
+      internalID: -2000877022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_25
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83a79cb795bd9941bd4365548adc97c
+      internalID: -859150360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_26
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58faabd72a199c4fb63b9634127c775
+      internalID: 1257433444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_27
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4680
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f480d9c537add40925dfc778564734
+      internalID: -1806252934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c14e37d7503d884ebfc31d7ecd9f5c7
+      internalID: 2098777905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_29
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365d0b97cb501ba43ba224b96e380817
+      internalID: 263291834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_30
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499b1a901f3091747a70089cbc2cbf46
+      internalID: 73700885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_31
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a674e0ea0a7be48a7caa1ecfc7452f
+      internalID: -1128704630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_32
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d0f9a942307544395eff6ab7a78090
+      internalID: 1870034569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_33
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdfaba6e20be0147a9722afb69b9382
+      internalID: 1246328538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_34
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4500
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4d3de0e27cf1a4e92277a418eca285
+      internalID: 759882799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c60f566f183274a9392c187fa5ee74
+      internalID: -1910094504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_36
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0bf908bbab0c649b03164a5edd0a1f
+      internalID: -1077150609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_37
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1942039a82c4dc24097b878d63f13c2f
+      internalID: -471927461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_38
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2442677b885fadb49bad232f10e5c5b6
+      internalID: -1708992138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_39
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf0b271b4ca1f449a86f129df172ee5
+      internalID: -1837914590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_40
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6965980cfb1a15940af5386ef7e4a7fc
+      internalID: 1688312278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_41
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4320
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d525f30d8f90894b81911f89da70bb7
+      internalID: 1085791595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efb8d3df2ee54c438bcc77b76ceb43d
+      internalID: -710846366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_43
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4bc81a88bc18945bdbcfe45808d46b
+      internalID: 55421303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_44
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8ec37a2f09ad543b9d022524a9ce34
+      internalID: 476032911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_45
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0939539788e5b41b6c0f53ff7d48fc
+      internalID: 1594877694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_46
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a0d9e9f371d0b4cbed4542a660f0f2
+      internalID: 1976980914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_47
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa276b61810d9949b598db70a41cdf2
+      internalID: 1942271899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_48
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4140
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e797647c69321d41b12ce8ab1488204
+      internalID: -1308777864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3885fcc0d5fb23248a0633fb9077d023
+      internalID: 1375548635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_50
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5034ca8001e34418ffb9a771ad9000
+      internalID: -1245165746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_51
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82531520648dbb4084756f16972cb82
+      internalID: 1123571620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_52
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb0368b4abd5fa46bb1d1b5be1c9b07
+      internalID: -320497826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_53
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74084b9d28ae7f942b9528a5e005c81c
+      internalID: 1608107781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_54
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89de0a5dab8450144944f632edef1cc2
+      internalID: 2143540712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_55
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3960
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fd76ee53d25a949ab57dd0d44a9513
+      internalID: 698204178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d9ce9864bc878419cea0c6d427df3f
+      internalID: 952373741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_57
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f946463959f5795408f32b0816a8b6e9
+      internalID: 1814817303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_58
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9adcdb933632ab42a85552650cd5bdd
+      internalID: 1026558086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_59
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ca9e28da120004d8e70ff061cc4a9e
+      internalID: 144492740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_60
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69699231941ef6d4e99c058eddb5edff
+      internalID: 484217644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_61
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12b9ded57de82644b623de8d1f55027
+      internalID: -1554553958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_62
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3780
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09829fae123ab84b943dc5dcad1d27d
+      internalID: -1234597337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8d8b96256023e4499469d7c868f917
+      internalID: -424106708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_64
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11248663a8f128f4a948f052a4959297
+      internalID: 355702007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_65
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82841d6200f98a40ac72b2ad2083e76
+      internalID: -1545780211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_66
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f8a1a845e425e44b0c134f4d53eb1a
+      internalID: -42073165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_67
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4571a89fccea4a3499478b54a9c4e5b3
+      internalID: 701109415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_68
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203437ec19bcbb54d8d69bf37d6f4ba2
+      internalID: 1942630093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_69
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3600
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6884c6fbbe3545f42a3fde75dc06bf8c
+      internalID: -1600162646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fe1dd81f8ab304e9efd61335ca6ed7
+      internalID: -1515313997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_71
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d095b3e7e1e0bd642a9766233ff65c31
+      internalID: -947887706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_72
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d671b12827b892844bea687206007f99
+      internalID: -1327184785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_73
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed58b5e49a032d46b576f0df6bcf5e5
+      internalID: -1843952102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_74
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e843a049a15c9b047999ea5c1d9f98f5
+      internalID: 2136263934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_75
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce111a7b4b6e4344194b3f76934aa519
+      internalID: -781332644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_76
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3420
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b3d5f2ae1af4e4793ad499ff0a2938
+      internalID: -379789460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027bf92cfa1f12340a77f5b22d5dfba2
+      internalID: 1702985429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_78
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e6e0b0d2c36b14bb1463f8da73a552
+      internalID: 331993108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_79
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ff2d13f7553a146a46e94f0990812b
+      internalID: 1353768915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_80
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8531826046bfe934a9af3267eecc36f4
+      internalID: -1114860912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_81
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab978c7ba1db1e14eaf46c106d2a9c1e
+      internalID: -1168228232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_82
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97b6c9ec23acdf4a89a37e2b24655ee
+      internalID: 1002031566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_83
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3240
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebc6fd0626d38f489729ff612585b43
+      internalID: 2061754135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866a702c078cebd49801bd0734229f05
+      internalID: -1866184482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_85
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b708dd1fe6a8f4f983461ab2c780b4
+      internalID: 1720476675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_86
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069116c3200807a42a66de3f791f2e78
+      internalID: 366313071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_87
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315e3a0755abfd84782c1fa44f14b1d6
+      internalID: 990298477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_88
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71d845fb43f84342b045a4f8236bbe4
+      internalID: 1906040528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_89
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a044ff993ccce41af1ca346a2fd8a7
+      internalID: 290758257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_90
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3060
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572a2721f9c435442a6acf97e950e866
+      internalID: 1884821690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb8fc2f6b1d8c748b5118685a9cd8ad
+      internalID: 1742322475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_92
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1d2784065e64343921d7166b033c19
+      internalID: 1011551351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_93
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886bd53ec9756d54a98b3e1c6e7ed41b
+      internalID: 1986733696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_94
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbda0e337cadbc24e84593d85a936b9a
+      internalID: -1625532677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_95
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e675fb0d38f13dc4c88f634729f34195
+      internalID: 316604779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_96
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd2e46cf45a6244aa989136cd4b170a
+      internalID: -1992660150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_97
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2880
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2861b7a302127fa4c8e9f01f8e1a6879
+      internalID: -221390834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf513bb4e5697a47a9f5d2ebf3de580
+      internalID: 1602798838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_99
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac389ba2d3a8b845b1174a45e04c59e
+      internalID: 936417305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_100
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ceb379eb81d0642891fa87344b5e8b
+      internalID: -148273465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_101
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4359837893379844eae02cd185a8d7ec
+      internalID: 1291652659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_102
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a617072b8b01645b9ff777ea682bb1
+      internalID: -405832291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_103
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5365d9979084c42ba8f749d3922a11
+      internalID: -1719260937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_104
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2700
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f888ba130be89c643be8986311e560d3
+      internalID: 1506704005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c1aff5e6732ca4f9d7e9a7625bf3b3
+      internalID: 1550370837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_106
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3866ab7551a4a8940b50a8ee5ba8cf0a
+      internalID: -1868903353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_107
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2ee2a43bf782d42bfef8b4ed3a6190
+      internalID: 41466437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_108
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6808f62c81d5da14c9a551b3bfc1627d
+      internalID: 122918305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_109
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46ee933d40d6d74e918520c622c53d0
+      internalID: 348341732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_110
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efee01447934554bb9b0f856484a62d
+      internalID: -1433015848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_111
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2520
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc382b1b1906614fbcff0ebf22e54eb
+      internalID: 545254288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b566bbb10a83f4884bd43a264d1058
+      internalID: 1037578989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_113
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e295a9e20c22fe04fa22aae7478f89ec
+      internalID: -1278341239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_114
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffd3752b0aa062449e91fe3abc0cad9
+      internalID: 1512739541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_115
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b6d5ad9df15e84e807bd5a26048b2e
+      internalID: -57150987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_116
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edadb649b98f4ee4aa7e0181ed04bdae
+      internalID: -1898784599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_117
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee12e0248e2afe43af4ace2c406bdb1
+      internalID: -2021644260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_118
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2340
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cb7b8784e5b9844b55afb859cb1315
+      internalID: -1120495627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0a5de93b7ff16468f86ec6408243fd
+      internalID: 1832979728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_120
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa4d2bd898bd4044910cd06f188db0f
+      internalID: -733536258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_121
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f089d5e5f832315448e4c78cea2d8bfd
+      internalID: -998334890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_122
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfafcd2bc737e1438aa83825985a2ba
+      internalID: 438241491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_123
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dcd729b17280b41a7aa3ff2cc0c738
+      internalID: -1454936597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_124
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e0908807f0e4348891b9f08a813484
+      internalID: 563414435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_125
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2160
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04839252e0d5a8d429fceedd54b3f301
+      internalID: -144553135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b0743fa0a34c7418cc5dd6220a38ab
+      internalID: -1153538950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_127
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1309f033366a85448e6c2b73d68206a
+      internalID: 1915445725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_128
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381d1a5f44eb5e749908a18004931d85
+      internalID: 1132363974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_129
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596218d7fea946b458ffd8f5872bebde
+      internalID: 353682175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_130
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaaa8e8f65214f41b8118676f45c354
+      internalID: 135959823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_131
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce7ba03f77accc4196b90e98c216aa5
+      internalID: 1702711319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_132
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1980
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e5c2abc07def744b77d1874a0996e7
+      internalID: 1520991005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6aad4a462db6a94998e5db3461f4297
+      internalID: 1189175021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_134
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb3195ed1ae9b9488b89a7df06665d7
+      internalID: 1384414024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_135
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bfc07f1298ef04dae3bf7f1050df94
+      internalID: 1018107360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_136
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3ce5fe7fcf80644999bdcb4fb021c3
+      internalID: -2125288132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_137
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5552bb78a20dba741ba50edd748458a3
+      internalID: 793607025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_138
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e6d1faefc1f2d41919ddb1638cb437
+      internalID: 2009737521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_139
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1800
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6ba7829efb7394ea753fd9b6828885
+      internalID: 1582749797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e099261d0d80a24688b9309026a61bf
+      internalID: 756535291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_141
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c57a0b0c8f489949abce99f40fda7fd
+      internalID: -1895693963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_142
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01251e62272aa74ab14d124ecf6854f
+      internalID: -1677683035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_143
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641facc514239bc47a6412307f12ed83
+      internalID: 892997027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_144
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72231c3e3c2d531448b72720713e9107
+      internalID: -95419333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_145
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dccd4122df8b64ebb4ddcb34aab4d5
+      internalID: -1856125163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_146
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1620
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978931b3eb799ee4a97081c9cd36bb9a
+      internalID: -2140881187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4518c572063995442ab14a05e8ebdabe
+      internalID: -2021412752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_148
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1054bbf2b7fa6494e9d665878bc33861
+      internalID: 547272408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_149
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47adf9773cc55b47876c6135b4d01f7
+      internalID: -1132974467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_150
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ae789de050b7b49ac2a3ee46d0a99a
+      internalID: -1105613164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_151
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bf51e8ecb84aa48ac3f95d50ce231d
+      internalID: 1726689177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_152
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8b69dfa75804846ab26180ede8b385
+      internalID: -310892653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_153
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1440
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a38c11b01fe94438404a672797694a
+      internalID: 629311862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7a676d33647b745af4034fe864d7c8
+      internalID: -1821632685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_155
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f280009c454c8748914ee416e226b02
+      internalID: -69417672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_156
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2618d6738730ee4d8550ea182557f0a
+      internalID: -405547861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_157
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36b4866e352f624a868e02c366516f0
+      internalID: 971398589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_158
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32284750dfbe5794a80fa3fbef0d2726
+      internalID: 1563521894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_159
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935c15748a8ab534a83ee88970dc7c83
+      internalID: -793308288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_160
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1260
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d97c461de9f3e458c079d3598bf184
+      internalID: -286249728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_161
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018c9c201eb3065449ef3aa86c5dc7ed
+      internalID: -1200041197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_162
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fabf85fcd0f5e4294cfa897b8aec06
+      internalID: 1164348087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_163
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e77123391550f64ebf73e5f279cb9d3
+      internalID: 653535961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_164
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f0d84ed4f59c84da7ddb7e92008533
+      internalID: 1683366501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_165
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3db179d325e25498bfc033d7f182e6
+      internalID: -408295999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_166
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a5de63deb1d564fba9088fe89e4e01
+      internalID: 1714954227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_167
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1080
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92df2df50028df4caeaf2ea551cd63b
+      internalID: -581283472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661d75945f6362f40ab9e22efcee5e70
+      internalID: -77335940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_169
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f938d9a6cf3654ba28d64371c56ef1
+      internalID: 122607335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_170
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb036b8690e5ba4baa2d04cf034d536
+      internalID: 1906144071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_171
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620fad2da190ab34f88958f7fd0d1dfb
+      internalID: 1048142256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_172
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6d580050cd6364a911b3cec8355726
+      internalID: 403330838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_173
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18de1b4c8e7bb3f46b5917fce632e189
+      internalID: -589251259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_174
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 900
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9723bf474768b94459ac2aed7505ac03
+      internalID: -839880769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef80847b921a184886af612962d4206
+      internalID: 2018787272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_176
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2106ac9fde5374eba44516050b1530
+      internalID: -1008334953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_177
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c90dea5bb5945d40a7244612e92e7cc
+      internalID: 1393818594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_178
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2643954725cfb741aab8c22406f9668
+      internalID: -1653624990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_179
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfac167633d73af4c85a2ca9fdb68f5a
+      internalID: 522792463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_180
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a91d852d08160479515acc7fdb6982
+      internalID: -1183925239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_181
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 720
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf764575a5c5b049ae934f49e158fd2
+      internalID: -369208281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c60d5c75233f26488964fe12552301c
+      internalID: 626704237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_183
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec50620322965846b3a939259bd74e9
+      internalID: -2095314262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_184
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5796422be21eaea40b45cad9ad229ded
+      internalID: -1120068387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_185
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4992b2c89049206488cbea18d3a77608
+      internalID: -1747094256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_186
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197667e64871cd444a25fd8e0b57743c
+      internalID: 1345333277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_187
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04a95cebe8a14448978249a75ca214d
+      internalID: 984021261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_188
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 540
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fec1d91d356034b9bb2eac970e2293
+      internalID: -1248632023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ff656516f86c54a876a632650d7fe8
+      internalID: -424364597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_190
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653cae37903b5ea46b6f12865e43f5fd
+      internalID: -1703589924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_191
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39e581435976af47a6b2c11ce692ca6
+      internalID: 589418546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_192
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d1a9f13a27ea94ab368bfa99437f95
+      internalID: 1164016997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_193
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2f731650ff8ef4485d424234f77683
+      internalID: -1098351274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_194
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254dfa81d88a4de4dbdc3addfa190a9a
+      internalID: -1447991007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_195
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 360
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7da1931bfd6974ab27f90175b8aedf
+      internalID: 1201542090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a9d96a0e77e424eab86e3bdeb56247
+      internalID: 1110134031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_197
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f761a491b4ff7543a414051fe2e8f1e
+      internalID: 956055878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_198
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec44afd297c57a54bbf4a34375cf2243
+      internalID: -1662087729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_199
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1713eb4ebc058244879174fe344e1d2
+      internalID: 333136744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_200
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8499e333565a647ada960b4a2885f4
+      internalID: -1844887721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_201
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2150c740a855a445b1ea16191f032ed
+      internalID: -2045582541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_202
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 180
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec2567941353aa45bb1cab60dd6f577
+      internalID: -539373486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_203
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108f22fcf5bd345448e88fa8234cf9ab
+      internalID: -1360961436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_204
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6a1f99d0886d44b97f1bfce43ba476
+      internalID: 222761714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_205
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1441553e5ee3d414b9becbb4da26e35d
+      internalID: -1119024038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_206
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55425e324ab6404b9e3e500ccd84255
+      internalID: 792634562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_207
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adb9f8109b340f46b936ef6ab0ec0e6
+      internalID: -1787306070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_208
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5c97b33bebd9c4587f8dd8f83d62f2
+      internalID: -2012711406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlacingBombs_gif_209
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 238
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d091eda056c040a439617fb5e827d0b6
+      internalID: -639010803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5731382ef09e0f84984efd070a05ac68
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlacingBombs_gif_0: 1745136374
+      PlacingBombs_gif_1: 1385549109
+      PlacingBombs_gif_10: 1889487149
+      PlacingBombs_gif_100: -148273465
+      PlacingBombs_gif_101: 1291652659
+      PlacingBombs_gif_102: -405832291
+      PlacingBombs_gif_103: -1719260937
+      PlacingBombs_gif_104: 1506704005
+      PlacingBombs_gif_105: 1550370837
+      PlacingBombs_gif_106: -1868903353
+      PlacingBombs_gif_107: 41466437
+      PlacingBombs_gif_108: 122918305
+      PlacingBombs_gif_109: 348341732
+      PlacingBombs_gif_11: 1285322321
+      PlacingBombs_gif_110: -1433015848
+      PlacingBombs_gif_111: 545254288
+      PlacingBombs_gif_112: 1037578989
+      PlacingBombs_gif_113: -1278341239
+      PlacingBombs_gif_114: 1512739541
+      PlacingBombs_gif_115: -57150987
+      PlacingBombs_gif_116: -1898784599
+      PlacingBombs_gif_117: -2021644260
+      PlacingBombs_gif_118: -1120495627
+      PlacingBombs_gif_119: 1832979728
+      PlacingBombs_gif_12: 1600995362
+      PlacingBombs_gif_120: -733536258
+      PlacingBombs_gif_121: -998334890
+      PlacingBombs_gif_122: 438241491
+      PlacingBombs_gif_123: -1454936597
+      PlacingBombs_gif_124: 563414435
+      PlacingBombs_gif_125: -144553135
+      PlacingBombs_gif_126: -1153538950
+      PlacingBombs_gif_127: 1915445725
+      PlacingBombs_gif_128: 1132363974
+      PlacingBombs_gif_129: 353682175
+      PlacingBombs_gif_13: 377887499
+      PlacingBombs_gif_130: 135959823
+      PlacingBombs_gif_131: 1702711319
+      PlacingBombs_gif_132: 1520991005
+      PlacingBombs_gif_133: 1189175021
+      PlacingBombs_gif_134: 1384414024
+      PlacingBombs_gif_135: 1018107360
+      PlacingBombs_gif_136: -2125288132
+      PlacingBombs_gif_137: 793607025
+      PlacingBombs_gif_138: 2009737521
+      PlacingBombs_gif_139: 1582749797
+      PlacingBombs_gif_14: -2058589226
+      PlacingBombs_gif_140: 756535291
+      PlacingBombs_gif_141: -1895693963
+      PlacingBombs_gif_142: -1677683035
+      PlacingBombs_gif_143: 892997027
+      PlacingBombs_gif_144: -95419333
+      PlacingBombs_gif_145: -1856125163
+      PlacingBombs_gif_146: -2140881187
+      PlacingBombs_gif_147: -2021412752
+      PlacingBombs_gif_148: 547272408
+      PlacingBombs_gif_149: -1132974467
+      PlacingBombs_gif_15: 1680837440
+      PlacingBombs_gif_150: -1105613164
+      PlacingBombs_gif_151: 1726689177
+      PlacingBombs_gif_152: -310892653
+      PlacingBombs_gif_153: 629311862
+      PlacingBombs_gif_154: -1821632685
+      PlacingBombs_gif_155: -69417672
+      PlacingBombs_gif_156: -405547861
+      PlacingBombs_gif_157: 971398589
+      PlacingBombs_gif_158: 1563521894
+      PlacingBombs_gif_159: -793308288
+      PlacingBombs_gif_16: 51374418
+      PlacingBombs_gif_160: -286249728
+      PlacingBombs_gif_161: -1200041197
+      PlacingBombs_gif_162: 1164348087
+      PlacingBombs_gif_163: 653535961
+      PlacingBombs_gif_164: 1683366501
+      PlacingBombs_gif_165: -408295999
+      PlacingBombs_gif_166: 1714954227
+      PlacingBombs_gif_167: -581283472
+      PlacingBombs_gif_168: -77335940
+      PlacingBombs_gif_169: 122607335
+      PlacingBombs_gif_17: -84939823
+      PlacingBombs_gif_170: 1906144071
+      PlacingBombs_gif_171: 1048142256
+      PlacingBombs_gif_172: 403330838
+      PlacingBombs_gif_173: -589251259
+      PlacingBombs_gif_174: -839880769
+      PlacingBombs_gif_175: 2018787272
+      PlacingBombs_gif_176: -1008334953
+      PlacingBombs_gif_177: 1393818594
+      PlacingBombs_gif_178: -1653624990
+      PlacingBombs_gif_179: 522792463
+      PlacingBombs_gif_18: 2040603998
+      PlacingBombs_gif_180: -1183925239
+      PlacingBombs_gif_181: -369208281
+      PlacingBombs_gif_182: 626704237
+      PlacingBombs_gif_183: -2095314262
+      PlacingBombs_gif_184: -1120068387
+      PlacingBombs_gif_185: -1747094256
+      PlacingBombs_gif_186: 1345333277
+      PlacingBombs_gif_187: 984021261
+      PlacingBombs_gif_188: -1248632023
+      PlacingBombs_gif_189: -424364597
+      PlacingBombs_gif_19: -1779641744
+      PlacingBombs_gif_190: -1703589924
+      PlacingBombs_gif_191: 589418546
+      PlacingBombs_gif_192: 1164016997
+      PlacingBombs_gif_193: -1098351274
+      PlacingBombs_gif_194: -1447991007
+      PlacingBombs_gif_195: 1201542090
+      PlacingBombs_gif_196: 1110134031
+      PlacingBombs_gif_197: 956055878
+      PlacingBombs_gif_198: -1662087729
+      PlacingBombs_gif_199: 333136744
+      PlacingBombs_gif_2: 705544348
+      PlacingBombs_gif_20: 918064174
+      PlacingBombs_gif_200: -1844887721
+      PlacingBombs_gif_201: -2045582541
+      PlacingBombs_gif_202: -539373486
+      PlacingBombs_gif_203: -1360961436
+      PlacingBombs_gif_204: 222761714
+      PlacingBombs_gif_205: -1119024038
+      PlacingBombs_gif_206: 792634562
+      PlacingBombs_gif_207: -1787306070
+      PlacingBombs_gif_208: -2012711406
+      PlacingBombs_gif_209: -639010803
+      PlacingBombs_gif_21: 1664072160
+      PlacingBombs_gif_22: -1890852602
+      PlacingBombs_gif_23: 1982242822
+      PlacingBombs_gif_24: -2000877022
+      PlacingBombs_gif_25: -859150360
+      PlacingBombs_gif_26: 1257433444
+      PlacingBombs_gif_27: -1806252934
+      PlacingBombs_gif_28: 2098777905
+      PlacingBombs_gif_29: 263291834
+      PlacingBombs_gif_3: -1452445755
+      PlacingBombs_gif_30: 73700885
+      PlacingBombs_gif_31: -1128704630
+      PlacingBombs_gif_32: 1870034569
+      PlacingBombs_gif_33: 1246328538
+      PlacingBombs_gif_34: 759882799
+      PlacingBombs_gif_35: -1910094504
+      PlacingBombs_gif_36: -1077150609
+      PlacingBombs_gif_37: -471927461
+      PlacingBombs_gif_38: -1708992138
+      PlacingBombs_gif_39: -1837914590
+      PlacingBombs_gif_4: 153790718
+      PlacingBombs_gif_40: 1688312278
+      PlacingBombs_gif_41: 1085791595
+      PlacingBombs_gif_42: -710846366
+      PlacingBombs_gif_43: 55421303
+      PlacingBombs_gif_44: 476032911
+      PlacingBombs_gif_45: 1594877694
+      PlacingBombs_gif_46: 1976980914
+      PlacingBombs_gif_47: 1942271899
+      PlacingBombs_gif_48: -1308777864
+      PlacingBombs_gif_49: 1375548635
+      PlacingBombs_gif_5: 169912091
+      PlacingBombs_gif_50: -1245165746
+      PlacingBombs_gif_51: 1123571620
+      PlacingBombs_gif_52: -320497826
+      PlacingBombs_gif_53: 1608107781
+      PlacingBombs_gif_54: 2143540712
+      PlacingBombs_gif_55: 698204178
+      PlacingBombs_gif_56: 952373741
+      PlacingBombs_gif_57: 1814817303
+      PlacingBombs_gif_58: 1026558086
+      PlacingBombs_gif_59: 144492740
+      PlacingBombs_gif_6: 2014551717
+      PlacingBombs_gif_60: 484217644
+      PlacingBombs_gif_61: -1554553958
+      PlacingBombs_gif_62: -1234597337
+      PlacingBombs_gif_63: -424106708
+      PlacingBombs_gif_64: 355702007
+      PlacingBombs_gif_65: -1545780211
+      PlacingBombs_gif_66: -42073165
+      PlacingBombs_gif_67: 701109415
+      PlacingBombs_gif_68: 1942630093
+      PlacingBombs_gif_69: -1600162646
+      PlacingBombs_gif_7: -1515752614
+      PlacingBombs_gif_70: -1515313997
+      PlacingBombs_gif_71: -947887706
+      PlacingBombs_gif_72: -1327184785
+      PlacingBombs_gif_73: -1843952102
+      PlacingBombs_gif_74: 2136263934
+      PlacingBombs_gif_75: -781332644
+      PlacingBombs_gif_76: -379789460
+      PlacingBombs_gif_77: 1702985429
+      PlacingBombs_gif_78: 331993108
+      PlacingBombs_gif_79: 1353768915
+      PlacingBombs_gif_8: 900772743
+      PlacingBombs_gif_80: -1114860912
+      PlacingBombs_gif_81: -1168228232
+      PlacingBombs_gif_82: 1002031566
+      PlacingBombs_gif_83: 2061754135
+      PlacingBombs_gif_84: -1866184482
+      PlacingBombs_gif_85: 1720476675
+      PlacingBombs_gif_86: 366313071
+      PlacingBombs_gif_87: 990298477
+      PlacingBombs_gif_88: 1906040528
+      PlacingBombs_gif_89: 290758257
+      PlacingBombs_gif_9: 1933238154
+      PlacingBombs_gif_90: 1884821690
+      PlacingBombs_gif_91: 1742322475
+      PlacingBombs_gif_92: 1011551351
+      PlacingBombs_gif_93: 1986733696
+      PlacingBombs_gif_94: -1625532677
+      PlacingBombs_gif_95: 316604779
+      PlacingBombs_gif_96: -1992660150
+      PlacingBombs_gif_97: -221390834
+      PlacingBombs_gif_98: 1602798838
+      PlacingBombs_gif_99: 936417305
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

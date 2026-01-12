@@ -1,0 +1,5456 @@
+fileFormatVersion: 2
+guid: 80c74efe8de7f2642a0ea2758db1f19a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChargeKick_gif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b523ef1e599a20047a50688e54238a29
+      internalID: -1209297244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e537976fe6465438c9542cc73141c0
+      internalID: -1638549490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9467cfbf331aa6a4397c361a481ef70f
+      internalID: 190205757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_3
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc6119f4e3e7fb4ab8665ea91cf6acb
+      internalID: -955330437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_4
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cdba3a6709f75478ae832afd229d76
+      internalID: 1993741663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_5
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04e915c86a231543a587f61b5db9930
+      internalID: -1921586745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_6
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4672
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054674fc7d636ca4eabbfa08c959fb7d
+      internalID: -1583381843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec64abdb0844f8f49b83ea636bbdd72b
+      internalID: -470504147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_8
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009bba28fc68c8e42945306b72a85085
+      internalID: 964904698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_9
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a41249cc3b3f8146b6f4bc44caf5e0e
+      internalID: 1527397901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_10
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8f9a92be6441d4fbb9b49ef618d002
+      internalID: 203896265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_11
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecac93652b221024b85506efb9f2925b
+      internalID: -357718936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_12
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ccdc48ad9237d4e8954f9905be336a
+      internalID: 1096336834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_13
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4526
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308c2ca56451a7e48894d7183758df59
+      internalID: -954465838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8819e60aa913e9641a5c4584bb276183
+      internalID: 1982762580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_15
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107cdb4cccf755f41aa3148d34c9d514
+      internalID: 1969150015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_16
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4491e4e5de59eee4880bf506c5878a6f
+      internalID: 693473717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_17
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a242426c906b14b90766349e684d8f
+      internalID: 1438608733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_18
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6a0e64deb278a4fa62e64753d111cc
+      internalID: 557050979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_19
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82d94fd9cf3a904e906909285438bdc
+      internalID: 638703240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_20
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4380
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2bf6df6569e344ea8a09a6cbd05a6f
+      internalID: 789968046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd78a18727cea841837c52753efa250
+      internalID: 176406803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_22
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd6af8c839d9994abe7263d828883e1
+      internalID: -1498398142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_23
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5a8c2cdd78e2a42b0bb5a4ebfe5a9c
+      internalID: 579343320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_24
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7391c4581f8355246a0566ccaf8dd523
+      internalID: -594177474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_25
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55dc6546d4bb4d4dbd9ff69eb17eb0b
+      internalID: -1924660725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_26
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d139e0bfb49f94ba8752dd55f5b17f
+      internalID: -1074518222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_27
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4234
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83723885fc1242a41a5e38e80bd3285b
+      internalID: 1077178418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ce2f84b12f1234284d6969a42bd651
+      internalID: 477886416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_29
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3380474c88b45e34f9b22e65030b3ee9
+      internalID: 2079905708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_30
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54b62e9b26a3604b95ee388bcf2a7a6
+      internalID: 1081686764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_31
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eaefc846802a443b30d80013a813ac
+      internalID: -438286423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_32
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14010ce2fe6bd374dacb832ebfacad79
+      internalID: 42674000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_33
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c58cc2bfe8facd4082a20fee35cca51
+      internalID: -2007175315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_34
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4088
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6ab493b7e43aa469da6134a4cee9e5
+      internalID: -2038659529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9345be4a7492c042ada0ec33a4d0cf7
+      internalID: -1445592124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_36
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69c9bd7adf1552419fcdbaac4805674
+      internalID: -2109760920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_37
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b8cea5f40b1cd4092123d6841387ec
+      internalID: 769361848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_38
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419d86a6b9fe942449af8f945689065f
+      internalID: -236280386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_39
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e21b4c7e287404aaa2514c17f5f4bb
+      internalID: 125969000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_40
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d126af294911634d9c0b181e628bdb9
+      internalID: 188874070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_41
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3942
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ff48a75c2b1c64a9fe6ff5aee1e1e7
+      internalID: 544111767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56dce8c194d388459e0c23c12ddc81c
+      internalID: -1369572190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_43
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc1c8a99c673c34cb64b16331a67733
+      internalID: 408309118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_44
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0da667cbde8a41488e2112adf39cd17
+      internalID: -625164659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_45
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d30504133f1f3f41b353df148ac7037
+      internalID: 1549680945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_46
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f061b1c76059a1146989e7c18093c575
+      internalID: -1938859997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_47
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c622981ca56a72f49919c53bcffad789
+      internalID: 973767543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_48
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3796
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b695a2a7c880145af46f940dc324b0
+      internalID: 1151541883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e9cd0e91396774fb20c6c13390724f
+      internalID: 1407144750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_50
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fb451682fcec8429ca6a13d721eb62
+      internalID: 682102554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_51
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2874bf6a96c41214a96a29eaf0334e57
+      internalID: -1508518298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_52
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fc004c5e239574c8af953cdfe779f0
+      internalID: -972234129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_53
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81e44d103b141c4c9b570cbd660947a
+      internalID: -255939352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_54
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871145a888ab7524ab6a928edc458862
+      internalID: 1073869871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_55
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3650
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896819bfcfbc4144384d737f77835fde
+      internalID: 48333436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf68ddc40d24e84382b858d89729a9c
+      internalID: -60057686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_57
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e50cb0e8e88efa43a8160776173ef1a
+      internalID: 575561049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_58
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56f8fa4f0c383f4bb0f3e7a01cf4b34
+      internalID: 1744326748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_59
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a99555cf7e6d9f459e81bf9a2ac93a3
+      internalID: 2003755741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_60
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27db1266c2e5ada4d864ef30ea1e0c33
+      internalID: 213912297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_61
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1133f27a52a362243b0410ef0110331e
+      internalID: -135626945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_62
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3504
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4a9ca1a5564244f87319d241c2c9f1
+      internalID: 1991733105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ea42a95d00d9543974525de59ecb4b
+      internalID: -961246644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_64
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a2012d6303fda4c9baa47f36943573
+      internalID: 1541217920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_65
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc05929be8e03cc40aa904d28b824b29
+      internalID: 1192803687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_66
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84f9758c5112aa40ba96a07f8a123bf
+      internalID: -691470811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_67
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bab5a0a06c2ec24181134fc93e8edfb
+      internalID: -263580124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_68
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5488c089a7671649b36ff0b03910d90
+      internalID: 901462590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_69
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3358
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece9d48d3f67b3c459230406974d7375
+      internalID: -2052954179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f501360d024b845b7107c0c46c3301
+      internalID: 2126117228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_71
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1108c921f60ac42a69fd539cd6af0b
+      internalID: 1898319757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_72
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8e0a20dcccf3a47b3c10eb419753ef
+      internalID: -389514438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_73
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbd614bc29674841aced07dba89597d
+      internalID: -160690266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_74
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e094da414d5604682d03b839562210
+      internalID: 404968516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_75
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba04183251e58f746a9f236da9ff6df5
+      internalID: -211737378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_76
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3212
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8d2d8aa9a74764c93e716623d307f1
+      internalID: -88780761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a009594832077d41896a523e6e53331
+      internalID: -1638207196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_78
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1f0c2266b21544cabf75de9ba2cf8c
+      internalID: -1286489978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_79
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780586affa35b4c40b1cf8d72291a3fc
+      internalID: 1819103462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_80
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2bbf82278a95e478332b03b7d3d1b5
+      internalID: -1473254760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_81
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baf529355310b64f992c93e1ee77d3d
+      internalID: -1355781394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_82
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e4b6a5b52dcad4db5fb84bea710374
+      internalID: -597438541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_83
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3066
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9634774cb7a3d924dbb9c40b7426da01
+      internalID: -2005976408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1ef2ad6c90fbc4ea0ea6a750ad9b86
+      internalID: 1690657265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_85
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1f92df74a933340b79f3c38ce9ecd8
+      internalID: 2107243290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_86
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d983aade64c326468191d0390f8ed0b
+      internalID: -215323709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_87
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3b8dadeb3fc99499a4303b2a009029
+      internalID: -1279157227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_88
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afdfa8542aae4347987b3511e347a5a
+      internalID: 387303345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_89
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbaa78b560c9f8409ff0c386b6bcadb
+      internalID: -418728360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_90
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2920
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dd2e363c9adb448a6d3c1855fb00a8
+      internalID: -582673100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1d04d47d3d1f84fa51774437acf33f
+      internalID: 1590615874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_92
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af65b3a05129ff54e851796f7d0d373e
+      internalID: -340573786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_93
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbef56c53fb89b48ad3e8fa493ea584
+      internalID: -1373560877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_94
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e64c5a1682875e4c9262479296a57bb
+      internalID: 308997144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_95
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa514878ea78d824c838680eb889113b
+      internalID: 1313218139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_96
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c939ee0b4b9106a4da69c13653ee8970
+      internalID: 1209298788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_97
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2774
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43db87c27abdfa541b93a420c1424186
+      internalID: -1678948094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd49fff094b055a428e58eddc89d97de
+      internalID: 1894513184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_99
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a14536f588a6924fbc4398c83ed2868
+      internalID: 266798269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_100
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b13eb242a77bf14283a871577b25b2a
+      internalID: 1753592966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_101
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003f42d58928d364aa37357163a61f90
+      internalID: 1582986460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_102
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c52598250130da4da057056424c5fd0
+      internalID: 1490618891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_103
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbac813070f60748b87031bc3e38813
+      internalID: 1999422602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_104
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2628
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0457415dc107d1145a040c76783bcce1
+      internalID: 1554642034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd19009211dae8b4eac0a1c1cd24f59a
+      internalID: 1108265522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_106
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b038697e4059d1143b6e85bbf6409253
+      internalID: 780512227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_107
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8e324bc36061148bf2d3929a8c60b4
+      internalID: -110393957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_108
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b8d6af109a0854dbddfa3858abcb73
+      internalID: -1887431274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_109
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8e2c0ac0c152645ac32463db3cbfec
+      internalID: 1904667945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_110
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7099f15382c0f41b60333128c34b47
+      internalID: 1620646039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_111
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2482
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17076aa5a42da794b9d6a8fdde27fae3
+      internalID: 412534333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc13a7563e07b5641bd187e321240087
+      internalID: 676951739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_113
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d830330cbfefe4b8d2295227879521
+      internalID: -134458147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_114
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2ff518d8c63474e99e4cafaafe1279
+      internalID: -344005887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_115
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ef067ff33a9614192641c1c93a9424
+      internalID: 461799076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_116
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4fb445563ba3541894f5c755f59986
+      internalID: 1479773739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_117
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdcfab010cca89448c3097d5d34f8d8
+      internalID: -1735602098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_118
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2336
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc1c32600f849945aa500c4604f670e
+      internalID: -1785027471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa2d23b98c20084cbffcfe21b05ba26
+      internalID: -1762566032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_120
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ef8f557fcb6ac469e34549e9dffdc9
+      internalID: -225025677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_121
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76080f165388b4d448db58158daa2600
+      internalID: -183948078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_122
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858b7b4e07cca2e4c8942ff21806e4ed
+      internalID: -1481601515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_123
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6332d64031599e445ae2b88e56ac50dc
+      internalID: 393547929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_124
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eef9c1fd1140af4c9d71a2eb8b45403
+      internalID: 1160181726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_125
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2190
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9dbb814b0adf042b13d5bed22ae178
+      internalID: 1544846312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362e102038c8cf349b8f4eb12c71cf65
+      internalID: -1767026581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_127
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e954a25631cfc44ba7854d9736bb945
+      internalID: 475084608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_128
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de8db5179ac11a4a80615ef51508933
+      internalID: -1059861577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_129
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99eedeab412562b4180a56024d2b71a6
+      internalID: 912076728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_130
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56205107ede64249be02a1d94c9bbc8
+      internalID: 984042551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_131
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0c7fd01d1c2694794cd3716ac5a02d
+      internalID: 2085284267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_132
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2044
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c555566dc28894395527b841cf37df
+      internalID: 1100075571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c0dd09df8f51b41aadb4392dafd4eb
+      internalID: 938074497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_134
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98cfd23fe243774682e469e6926a4e8
+      internalID: 398713531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_135
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9ff244acfebfd499586e560ae0d9ed
+      internalID: -1467280403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_136
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44eb1806d2acfe4787e55b00c5af326
+      internalID: 448385306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_137
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178fd8b1ed0b5fa48a0db5b1bebd53de
+      internalID: 1505678728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_138
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db68c6c661fec4945b8c170416dc2b4c
+      internalID: 95748383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_139
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1898
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ce9609083c0e4418c8bdd6c28e0ccd
+      internalID: 966731150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9530a80e9b731b4fade8aa9a3152378
+      internalID: -247251136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_141
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276f792b4694fc1419787f49fd47d8cf
+      internalID: 1246922180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_142
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe60784c9bedca40abb00946063ff96
+      internalID: 456544275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_143
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c8e7e340063444c9769da8b31ee6d2
+      internalID: 1394709570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_144
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdd4ef00b332fd48b986ee3e604a58e
+      internalID: 1427839527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_145
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06f41eb7374122439409872ac166b23
+      internalID: 1201396801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_146
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1752
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144fef98a2544964d917934974f742df
+      internalID: -934471639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adc84c755603ac498c54fc2f0580122
+      internalID: -998748486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_148
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae098a4ba30f6745a9855af54882488
+      internalID: 1322945790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_149
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5b93734f154704ebf7e0ded75c0fa0
+      internalID: -1287099962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_150
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebba1b3c16a75b4fb0055eab467c446
+      internalID: -310288390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_151
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a495d7bb74ad1674e92be28478e10b14
+      internalID: -1589238700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_152
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e479fdfcdaa4a9c45ae9822068c133f4
+      internalID: -1171361548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_153
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1606
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf64499cb3a91640be0da50b02acba4
+      internalID: 1990216443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0a4235364efc546a8d172469b33a45
+      internalID: -1161200299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_155
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9173ec638b8ecb43a5fd20fdc8f701c
+      internalID: -807510640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_156
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903087b86038e9346b63ebc7acd052a3
+      internalID: -11040089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_157
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54feafa931623b641a06e23991cd281a
+      internalID: -198146218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_158
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0020c5585671942924a80a8fefc72b
+      internalID: 2025712734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_159
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348997744e9f46d49b19ae11ea983553
+      internalID: -616891352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_160
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1460
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1530a0e28fefc014b9105fbb5eaf519e
+      internalID: 570836503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_161
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1100e09234c5c149bc71d105e647801
+      internalID: -1118761579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_162
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b05a6c4fee107045a46f839cc146ff8
+      internalID: 1863473847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_163
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fac5b8e8261fc74bb94a3bbbf9b53d8
+      internalID: -108103335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_164
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0e8afd6c4d6c849a01f1e2e6397674
+      internalID: -824208284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_165
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe21aea759dfe794e81ab828d658f273
+      internalID: -1522896355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_166
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2f0cf1492d92c4d95bf78e848eb6f4
+      internalID: 890096043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_167
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1314
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14793d0921a94ee419e958bd52f83434
+      internalID: 1114424703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39d017a3128e244e943a100126ae22d
+      internalID: -724477817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_169
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350caa845df96a0489505fc9fd8c8036
+      internalID: -974556635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_170
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573188191162b24419919cd46b95e444
+      internalID: -391533685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_171
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46227e614ffe88948b6a1ef3bca6f910
+      internalID: 1535137587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_172
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f188225a3bdc3be468d7d18b28f73f31
+      internalID: 121559788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_173
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b75186f836fb0144a8462a366a20f25
+      internalID: 1779999623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_174
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1168
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d46ac47580e8745aed7d8c87143fd5
+      internalID: -289218553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3418a50e2aebac143b17fa1c76412cf8
+      internalID: -1954130835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_176
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e86a652b5dcf334cac4d18459f76b6c
+      internalID: 612114338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_177
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f024e540a94e44dbe210bbeb86a325
+      internalID: 1239769587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_178
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9698d6fd411ece842bc9e06bfb340092
+      internalID: 597819340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_179
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45764703f4a96f1418cc173036dc4eeb
+      internalID: 2136101205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_180
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7736f7465720a143bd2fa254cece29f
+      internalID: 829648878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_181
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1022
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627e5091f528da14f82cac371bf3fd6d
+      internalID: 282883579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941e12cc0f92ff54b8f74e9a5f264dfd
+      internalID: -915401609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_183
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29574f93d0004f46927f0ed5518c8a6
+      internalID: 616178276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_184
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f587e18ff9b574887e7a2c38871e45
+      internalID: 1782713936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_185
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9806d798dd67ff64dbf2b70ca5f2aec4
+      internalID: -816242581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_186
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27904da3d6340204a8142bf36e86fa6f
+      internalID: -910162725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_187
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b5bc481dc427c409b7ae39fd949941
+      internalID: 1040370317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_188
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 876
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1221ebce2005614ea72dad321ee9545
+      internalID: -219133956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3248abacd28eb4a81e3ccb4d0986c0
+      internalID: -2112576288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_190
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f13c4fc787fbfd418998c043f129cc1
+      internalID: -626818514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_191
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83d92861a037da488c25d100ef57e35
+      internalID: 1011788327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_192
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34364ee41f8c4b544b8c5c97fa89a782
+      internalID: -685086963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_193
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c449abafcdb08148ae0c5a46c9bb2a6
+      internalID: -514325529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_194
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8937e74cd9a6a54882ead0e75eeeee1
+      internalID: 1611671304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_195
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 730
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840bc03623a98c54081ff0ebf81bdeb3
+      internalID: -137612123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4bd73cbe86eff46a6bac929be60b9b
+      internalID: -1650968428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_197
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b3dbe6da32e594bbc39f7eaae8eeb4
+      internalID: 1477099714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_198
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c066c4081a091704698da0eb48deae1c
+      internalID: 1654143175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_199
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654930c97cf5e1844973ad8f9bbd1e5e
+      internalID: -446870620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_200
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60601f557645c84489a01a9049d1da7f
+      internalID: 360975805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_201
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2d0e35ab816084991c4eec7456605a
+      internalID: 46684730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_202
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 584
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b72aa78586da1409ee344fe8f58e6d
+      internalID: -2126990308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_203
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb3d3c635da79849ae48c224744ce82
+      internalID: 1863365708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_204
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10be63102ae26345b4c42f4bf0b8dd4
+      internalID: -1470866936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_205
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080abb2cef80e5a47ac0d1b74637c8a1
+      internalID: 220598057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_206
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0679956afedb0b44c97e8b35cb7e633c
+      internalID: -1923755921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_207
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb227d00055acbf45ae8dfc565858d64
+      internalID: -1190208567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_208
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd25ddff33cc054391adf6f431e02c8
+      internalID: -925175716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_209
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 438
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e910ea7a9a34b4ba96f2d4dbee76d5
+      internalID: -203783491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94081c88998029428e7438a295c0d75
+      internalID: 240225595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_211
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadd51d6a019e074ca2a0b1fee7b91fd
+      internalID: -1159083189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_212
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96521a54fdf80540ae13345ab228a8e
+      internalID: 1831732056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_213
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8733686600fe92418739aef597a44b2
+      internalID: 1302589167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_214
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e71f85d17342dc45929c13c799e122f
+      internalID: 547203879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_215
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9b3dbef6ef72643bc4cd2dea06a9bd
+      internalID: -676147450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_216
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 292
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcedf96e23ec2a45963d3b09be8e7d5
+      internalID: 758505801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_217
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34357eb77e71b8b4992df1fb7aa03b8d
+      internalID: 1793811170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_218
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f0b7855e9e85447a07098d23cc8eb1
+      internalID: 1803107912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_219
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45cdaff8ae897a4dbf352c86013e9f6
+      internalID: -455080212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_220
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba5d8ccfb0f74f46a11e8e24e113bb9
+      internalID: -995519926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_221
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a71bee3681c3548b901713485a1e80
+      internalID: 1989361881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_222
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b9fa7a672625947a706137e90e5aa9
+      internalID: -1291542430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_223
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 146
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa0e92bd55f2904a9c6e38236233d31
+      internalID: -506230256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ec0c4a1330cee4eb1759d2528add5f
+      internalID: -1661719562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_225
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd263244963f17949a00c2e8b750da2f
+      internalID: -233764109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_226
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc723703f01d6174c84a722054ae21eb
+      internalID: -1154468038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_227
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190b5dc51fdb03645bbbb3b45674b8a8
+      internalID: -1093855984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_228
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7d2b1a45c6b1541927e62431913858
+      internalID: 1617649017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_229
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bad1a046fa0f8c43ae5ff1baeac6173
+      internalID: 1140871638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeKick_gif_230
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac5678924d138e479ff4705433c6b08
+      internalID: 625943878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cc0daf2944f74c442b736c2259617a89
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ChargeKick_gif_0: -1209297244
+      ChargeKick_gif_1: -1638549490
+      ChargeKick_gif_10: 203896265
+      ChargeKick_gif_100: 1753592966
+      ChargeKick_gif_101: 1582986460
+      ChargeKick_gif_102: 1490618891
+      ChargeKick_gif_103: 1999422602
+      ChargeKick_gif_104: 1554642034
+      ChargeKick_gif_105: 1108265522
+      ChargeKick_gif_106: 780512227
+      ChargeKick_gif_107: -110393957
+      ChargeKick_gif_108: -1887431274
+      ChargeKick_gif_109: 1904667945
+      ChargeKick_gif_11: -357718936
+      ChargeKick_gif_110: 1620646039
+      ChargeKick_gif_111: 412534333
+      ChargeKick_gif_112: 676951739
+      ChargeKick_gif_113: -134458147
+      ChargeKick_gif_114: -344005887
+      ChargeKick_gif_115: 461799076
+      ChargeKick_gif_116: 1479773739
+      ChargeKick_gif_117: -1735602098
+      ChargeKick_gif_118: -1785027471
+      ChargeKick_gif_119: -1762566032
+      ChargeKick_gif_12: 1096336834
+      ChargeKick_gif_120: -225025677
+      ChargeKick_gif_121: -183948078
+      ChargeKick_gif_122: -1481601515
+      ChargeKick_gif_123: 393547929
+      ChargeKick_gif_124: 1160181726
+      ChargeKick_gif_125: 1544846312
+      ChargeKick_gif_126: -1767026581
+      ChargeKick_gif_127: 475084608
+      ChargeKick_gif_128: -1059861577
+      ChargeKick_gif_129: 912076728
+      ChargeKick_gif_13: -954465838
+      ChargeKick_gif_130: 984042551
+      ChargeKick_gif_131: 2085284267
+      ChargeKick_gif_132: 1100075571
+      ChargeKick_gif_133: 938074497
+      ChargeKick_gif_134: 398713531
+      ChargeKick_gif_135: -1467280403
+      ChargeKick_gif_136: 448385306
+      ChargeKick_gif_137: 1505678728
+      ChargeKick_gif_138: 95748383
+      ChargeKick_gif_139: 966731150
+      ChargeKick_gif_14: 1982762580
+      ChargeKick_gif_140: -247251136
+      ChargeKick_gif_141: 1246922180
+      ChargeKick_gif_142: 456544275
+      ChargeKick_gif_143: 1394709570
+      ChargeKick_gif_144: 1427839527
+      ChargeKick_gif_145: 1201396801
+      ChargeKick_gif_146: -934471639
+      ChargeKick_gif_147: -998748486
+      ChargeKick_gif_148: 1322945790
+      ChargeKick_gif_149: -1287099962
+      ChargeKick_gif_15: 1969150015
+      ChargeKick_gif_150: -310288390
+      ChargeKick_gif_151: -1589238700
+      ChargeKick_gif_152: -1171361548
+      ChargeKick_gif_153: 1990216443
+      ChargeKick_gif_154: -1161200299
+      ChargeKick_gif_155: -807510640
+      ChargeKick_gif_156: -11040089
+      ChargeKick_gif_157: -198146218
+      ChargeKick_gif_158: 2025712734
+      ChargeKick_gif_159: -616891352
+      ChargeKick_gif_16: 693473717
+      ChargeKick_gif_160: 570836503
+      ChargeKick_gif_161: -1118761579
+      ChargeKick_gif_162: 1863473847
+      ChargeKick_gif_163: -108103335
+      ChargeKick_gif_164: -824208284
+      ChargeKick_gif_165: -1522896355
+      ChargeKick_gif_166: 890096043
+      ChargeKick_gif_167: 1114424703
+      ChargeKick_gif_168: -724477817
+      ChargeKick_gif_169: -974556635
+      ChargeKick_gif_17: 1438608733
+      ChargeKick_gif_170: -391533685
+      ChargeKick_gif_171: 1535137587
+      ChargeKick_gif_172: 121559788
+      ChargeKick_gif_173: 1779999623
+      ChargeKick_gif_174: -289218553
+      ChargeKick_gif_175: -1954130835
+      ChargeKick_gif_176: 612114338
+      ChargeKick_gif_177: 1239769587
+      ChargeKick_gif_178: 597819340
+      ChargeKick_gif_179: 2136101205
+      ChargeKick_gif_18: 557050979
+      ChargeKick_gif_180: 829648878
+      ChargeKick_gif_181: 282883579
+      ChargeKick_gif_182: -915401609
+      ChargeKick_gif_183: 616178276
+      ChargeKick_gif_184: 1782713936
+      ChargeKick_gif_185: -816242581
+      ChargeKick_gif_186: -910162725
+      ChargeKick_gif_187: 1040370317
+      ChargeKick_gif_188: -219133956
+      ChargeKick_gif_189: -2112576288
+      ChargeKick_gif_19: 638703240
+      ChargeKick_gif_190: -626818514
+      ChargeKick_gif_191: 1011788327
+      ChargeKick_gif_192: -685086963
+      ChargeKick_gif_193: -514325529
+      ChargeKick_gif_194: 1611671304
+      ChargeKick_gif_195: -137612123
+      ChargeKick_gif_196: -1650968428
+      ChargeKick_gif_197: 1477099714
+      ChargeKick_gif_198: 1654143175
+      ChargeKick_gif_199: -446870620
+      ChargeKick_gif_2: 190205757
+      ChargeKick_gif_20: 789968046
+      ChargeKick_gif_200: 360975805
+      ChargeKick_gif_201: 46684730
+      ChargeKick_gif_202: -2126990308
+      ChargeKick_gif_203: 1863365708
+      ChargeKick_gif_204: -1470866936
+      ChargeKick_gif_205: 220598057
+      ChargeKick_gif_206: -1923755921
+      ChargeKick_gif_207: -1190208567
+      ChargeKick_gif_208: -925175716
+      ChargeKick_gif_209: -203783491
+      ChargeKick_gif_21: 176406803
+      ChargeKick_gif_210: 240225595
+      ChargeKick_gif_211: -1159083189
+      ChargeKick_gif_212: 1831732056
+      ChargeKick_gif_213: 1302589167
+      ChargeKick_gif_214: 547203879
+      ChargeKick_gif_215: -676147450
+      ChargeKick_gif_216: 758505801
+      ChargeKick_gif_217: 1793811170
+      ChargeKick_gif_218: 1803107912
+      ChargeKick_gif_219: -455080212
+      ChargeKick_gif_22: -1498398142
+      ChargeKick_gif_220: -995519926
+      ChargeKick_gif_221: 1989361881
+      ChargeKick_gif_222: -1291542430
+      ChargeKick_gif_223: -506230256
+      ChargeKick_gif_224: -1661719562
+      ChargeKick_gif_225: -233764109
+      ChargeKick_gif_226: -1154468038
+      ChargeKick_gif_227: -1093855984
+      ChargeKick_gif_228: 1617649017
+      ChargeKick_gif_229: 1140871638
+      ChargeKick_gif_23: 579343320
+      ChargeKick_gif_230: 625943878
+      ChargeKick_gif_24: -594177474
+      ChargeKick_gif_25: -1924660725
+      ChargeKick_gif_26: -1074518222
+      ChargeKick_gif_27: 1077178418
+      ChargeKick_gif_28: 477886416
+      ChargeKick_gif_29: 2079905708
+      ChargeKick_gif_3: -955330437
+      ChargeKick_gif_30: 1081686764
+      ChargeKick_gif_31: -438286423
+      ChargeKick_gif_32: 42674000
+      ChargeKick_gif_33: -2007175315
+      ChargeKick_gif_34: -2038659529
+      ChargeKick_gif_35: -1445592124
+      ChargeKick_gif_36: -2109760920
+      ChargeKick_gif_37: 769361848
+      ChargeKick_gif_38: -236280386
+      ChargeKick_gif_39: 125969000
+      ChargeKick_gif_4: 1993741663
+      ChargeKick_gif_40: 188874070
+      ChargeKick_gif_41: 544111767
+      ChargeKick_gif_42: -1369572190
+      ChargeKick_gif_43: 408309118
+      ChargeKick_gif_44: -625164659
+      ChargeKick_gif_45: 1549680945
+      ChargeKick_gif_46: -1938859997
+      ChargeKick_gif_47: 973767543
+      ChargeKick_gif_48: 1151541883
+      ChargeKick_gif_49: 1407144750
+      ChargeKick_gif_5: -1921586745
+      ChargeKick_gif_50: 682102554
+      ChargeKick_gif_51: -1508518298
+      ChargeKick_gif_52: -972234129
+      ChargeKick_gif_53: -255939352
+      ChargeKick_gif_54: 1073869871
+      ChargeKick_gif_55: 48333436
+      ChargeKick_gif_56: -60057686
+      ChargeKick_gif_57: 575561049
+      ChargeKick_gif_58: 1744326748
+      ChargeKick_gif_59: 2003755741
+      ChargeKick_gif_6: -1583381843
+      ChargeKick_gif_60: 213912297
+      ChargeKick_gif_61: -135626945
+      ChargeKick_gif_62: 1991733105
+      ChargeKick_gif_63: -961246644
+      ChargeKick_gif_64: 1541217920
+      ChargeKick_gif_65: 1192803687
+      ChargeKick_gif_66: -691470811
+      ChargeKick_gif_67: -263580124
+      ChargeKick_gif_68: 901462590
+      ChargeKick_gif_69: -2052954179
+      ChargeKick_gif_7: -470504147
+      ChargeKick_gif_70: 2126117228
+      ChargeKick_gif_71: 1898319757
+      ChargeKick_gif_72: -389514438
+      ChargeKick_gif_73: -160690266
+      ChargeKick_gif_74: 404968516
+      ChargeKick_gif_75: -211737378
+      ChargeKick_gif_76: -88780761
+      ChargeKick_gif_77: -1638207196
+      ChargeKick_gif_78: -1286489978
+      ChargeKick_gif_79: 1819103462
+      ChargeKick_gif_8: 964904698
+      ChargeKick_gif_80: -1473254760
+      ChargeKick_gif_81: -1355781394
+      ChargeKick_gif_82: -597438541
+      ChargeKick_gif_83: -2005976408
+      ChargeKick_gif_84: 1690657265
+      ChargeKick_gif_85: 2107243290
+      ChargeKick_gif_86: -215323709
+      ChargeKick_gif_87: -1279157227
+      ChargeKick_gif_88: 387303345
+      ChargeKick_gif_89: -418728360
+      ChargeKick_gif_9: 1527397901
+      ChargeKick_gif_90: -582673100
+      ChargeKick_gif_91: 1590615874
+      ChargeKick_gif_92: -340573786
+      ChargeKick_gif_93: -1373560877
+      ChargeKick_gif_94: 308997144
+      ChargeKick_gif_95: 1313218139
+      ChargeKick_gif_96: 1209298788
+      ChargeKick_gif_97: -1678948094
+      ChargeKick_gif_98: 1894513184
+      ChargeKick_gif_99: 266798269
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
