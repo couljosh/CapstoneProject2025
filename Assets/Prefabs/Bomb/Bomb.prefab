@@ -4960,7 +4960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af134ea06070a004d91651f5a2494821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookTime: 3
+  cookTime: 2.3
   innerRadius: 0.5
   forceStrengthGem: 15
   forceStrengthCart: 5000
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2062d63c8b150934285c0910672f98d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuseTime: 3
+  fuseTime: 2.3
   expandDuration: 0.3
   maxScaleMultiplier: 1.7
   expandCurve:
