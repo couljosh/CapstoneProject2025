@@ -296,9 +296,6 @@ public class PlayerMove : MonoBehaviour
             finalMoveSpeed *= weightPenalty;
         }
 
-
-
-
         if (rb.linearVelocity.magnitude < finalMoveSpeed)
         {
             rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed, ForceMode.VelocityChange);
@@ -312,6 +309,35 @@ public class PlayerMove : MonoBehaviour
         }
         Debug.DrawLine(transform.localPosition, new Vector3(transform.localPosition.x, transform.localPosition.y - transform.localScale.y, transform.localPosition.z));
 
+        ApplyGravity();
+
+    }
+
+
+   public void DrillMove(Vector3 direction)
+   {
+
+       DrillLogic drillLogicScript = powerUpPickupScript.activePowerup.GetComponent<DrillLogic>();
+
+        if (drillLogicScript.isDrillMoving)
+        {       
+            rb.AddForce(gameObject.transform.forward * drillLogicScript.currentSpeed, ForceMode.VelocityChange);
+
+        }
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * drillLogicScript.currentTurn);
+
+        }
+
+        ApplyGravity();
+    }   
+    
+
+    public void ApplyGravity()
+    {
         if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, transform.localScale.y, floor))
         {
             if (!Physics.BoxCast(gameObject.transform.position, transform.localScale * 0.5f, Vector3.down, Quaternion.identity, 3, floor))
@@ -333,26 +359,6 @@ public class PlayerMove : MonoBehaviour
         else
         {
             coyoteTimer = 0;
-        }
-
-    }
-
-   public void DrillMove(Vector3 direction)
-   {
-
-       DrillLogic drillLogicScript = powerUpPickupScript.activePowerup.GetComponent<DrillLogic>();
-
-        if (drillLogicScript.isDrillMoving)
-        {       
-            rb.AddForce(gameObject.transform.forward * drillLogicScript.currentSpeed, ForceMode.VelocityChange);
-
-        }
-
-        if (direction != Vector3.zero)
-        {
-            Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * drillLogicScript.currentTurn);
-
         }
     }
 }
