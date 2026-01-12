@@ -45269,7 +45269,7 @@ MonoBehaviour:
     m_Bits: 128
   terrainTileMap: {fileID: 1179670999}
   terrainTile: {fileID: 11400000, guid: 9e051f14119354342a6790a4e81b40c7, type: 2}
-  repoMoveSystemScript: {fileID: 0}
+  repoMoveSystemScript: {fileID: 264620535}
   warningTime: 3
   chancePerSecond: 12
   radius: 4
@@ -45288,8 +45288,8 @@ MonoBehaviour:
       Data3: 895209894
       Data4: 1535286940
     Path: event:/SFX_CaveIns/Cave-InsSignifier
-  crate: {fileID: 0}
-  crateLimit: 0
+  crate: {fileID: 5429195990252968690, guid: 969958f8cde33d443a9a244a75511d4e, type: 3}
+  crateLimit: 2
   crateAmt: 0
 --- !u!4 &1670730268
 Transform:
