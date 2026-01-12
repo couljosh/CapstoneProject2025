@@ -250,6 +250,8 @@ MonoBehaviour:
   powerUps:
   - {fileID: 8308840516551796455, guid: f722e81014eb85d4c951a62342749cc1, type: 3}
   chosenPowerup: {fileID: 0}
+  dynamicCamera: {fileID: 0}
+  crate: {fileID: 5429195990252968690}
 --- !u!54 &7255459495870141411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -316,12 +318,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7078306072264021379}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2186
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.512
+      value: -0.758
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_LocalPosition.z
