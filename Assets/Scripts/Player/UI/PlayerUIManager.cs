@@ -108,8 +108,10 @@ public class PlayerUIManager : MonoBehaviour
 
             if (ammoBar != null)
             {
-                // initialize the UI bar
-                ammoBar.Initialize(bombSpawn, bombSpawn.playerStats.bombRegenTime);
+                PlayerMove pm = playerObject.GetComponent<PlayerMove>();
+                bool isBlueTeam = pm.playerNum == 3 || pm.playerNum == 4;
+
+                ammoBar.Initialize(bombSpawn, isBlueTeam);
                 bombSpawn.bombAmmoBarUI = ammoBar;
 
                 SetupWorldToScreen(bombUIInstance, playerObject.transform, screenHeightOffsetValue + 0.03f);
