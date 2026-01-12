@@ -7,6 +7,9 @@ public class GemExplode : MonoBehaviour
     public int gemAmt;
     public int scatterForce;
 
+    //prevent exploding into more than one set of gems
+    private bool hasExploded = false;
+
     private GameObject[] allGems;
 
     private void Start()
@@ -17,8 +20,9 @@ public class GemExplode : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Drill")
+        if (collision.gameObject.CompareTag("Drill") && hasExploded == false)
         {
+            hasExploded = true; 
             SpawnGems();
         }
 
@@ -30,9 +34,13 @@ public class GemExplode : MonoBehaviour
 
         for (i = 0; i < gemAmt; i++)
         {
-            randRot = Quaternion.Euler(Random.Range(0, 360), 0, Random.Range(0, 360));
+            
+            randRot = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
             GameObject spawnedGem = Instantiate(gemPrefab, gameObject.transform.position, randRot);
-            spawnedGem.gameObject.GetComponent<Rigidbody>().AddForce(spawnedGem.transform.forward * scatterForce);
+
+            //force gem to be kinematic so that forces can be applied to it
+            spawnedGem.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            spawnedGem.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(randRot.x, randRot.y, randRot.z) * scatterForce);
         }
 
         if(i == gemAmt)

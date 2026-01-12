@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e49579ea1fa0ba47b7880c504eb6f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  innerRadius: 0.5
   terrainMask:
     serializedVersion: 2
     m_Bits: 128
@@ -113,7 +112,7 @@ MonoBehaviour:
   bedrock:
     serializedVersion: 2
     m_Bits: 1024
-  explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
+  innerRadius: 0.5
   elapsedTime: 0
   sphereIterations: 5
   sphereIncrease: 0.6
@@ -124,6 +123,7 @@ MonoBehaviour:
   forceStrengthLargeGem: 1500
   drillForceMultplier: 1
   drillForceMultplierCart: 3
+  explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
   drillLogicScript: {fileID: 9112477584150219545}
   explodePos: {fileID: 777213706852342900}
   engineStartEvent:
@@ -133,6 +133,61 @@ MonoBehaviour:
       Data3: 583481248
       Data4: -1835171174
     Path: event:/SFX_Drill/MotorStarting
+--- !u!1 &4269956295923326070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4064715271931931375}
+  - component: {fileID: 8902687892582404718}
+  m_Layer: 0
+  m_Name: GemCollision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4064715271931931375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269956295923326070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -0, y: -0.27, z: -0.268}
+  m_LocalScale: {x: 0.30108887, y: 0.5043196, z: 0.21176599}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1493879835205454874}
+  m_LocalEulerAnglesHint: {x: 90, y: -180, z: 0}
+--- !u!136 &8902687892582404718
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269956295923326070}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 65023
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.64
+  m_Height: 2.91
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5412180143354154128
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +398,7 @@ Transform:
   - {fileID: 7828415066207271697}
   - {fileID: 2036079387248566200}
   - {fileID: 9217886286952576210}
+  - {fileID: 4064715271931931375}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &1599874771787644895
@@ -411,23 +467,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDelay: 0.5
-  explodeRad: 0
   movingElapsedTime: 0
   startElapsedTime: 0
-  isDrillMoving: 0
-  isDrill: 1
   maxSpeed: 5
   minTurn: 2
   timeToFullSpeed: 3
   currentSpeed: 0
   currentTurn: 0
-  drillEvent:
-    Guid:
-      Data1: 483723525
-      Data2: 1097911182
-      Data3: 1539409574
-      Data4: 888039031
-    Path: event:/SFX_Drill/DrillMoving
+  isDrillMoving: 0
+  isDrill: 1
   speedUpCurve:
     serializedVersion: 2
     m_Curve:
@@ -461,6 +509,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  drillEvent:
+    Guid:
+      Data1: 483723525
+      Data2: 1097911182
+      Data3: 1539409574
+      Data4: 888039031
+    Path: event:/SFX_Drill/DrillMoving
 --- !u!65 &1758681114900039375
 BoxCollider:
   m_ObjectHideFlags: 0

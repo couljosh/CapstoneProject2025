@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 923427996337693031, guid: 46daf5ad714838c419b9306f81accdc8, type: 3}
   gemAmt: 25
-  scatterForce: 10000
+  scatterForce: 2000
 --- !u!1 &4509407780663519724
 GameObject:
   m_ObjectHideFlags: 0

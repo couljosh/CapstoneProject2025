@@ -96,7 +96,8 @@ public class GemCollection : MonoBehaviour
     {
         if (isReleased)
         {
-            if (other.gameObject.tag == "ObjectDestroyer")
+            //if the object is a player and not in the drill (cannot find drill logic script)
+            if (other.gameObject.tag == "ObjectDestroyer" && !other.gameObject.GetComponentInChildren<DrillLogic>())
             {
                 collectedPos = gameObject.transform.position;
                 Collecter = other.gameObject;
