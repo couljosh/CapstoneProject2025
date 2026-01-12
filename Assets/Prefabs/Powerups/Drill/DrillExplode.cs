@@ -50,13 +50,14 @@ public class DrillExplode : MonoBehaviour
         engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);
 
         engineStartInstance.start();
+
+        playerMove = GetComponentInParent<PlayerMove>();
     }
 
     private void Update()
     {
         if (!isFinishedClearing)
         {
-            print("isFinishClearing is false!");
             ClearTerrain();
 
         }
@@ -99,11 +100,9 @@ public class DrillExplode : MonoBehaviour
 
     public void Explosion()
     {
-        print("Explosion Called");
-        playerMove = GetComponentInParent<PlayerMove>();
+        
 
         Collider[] objectsDec = Physics.OverlapSphere(explodePos.transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
-        print(objectsDec.Length);
         Explode(objectsDec);
 
         //NOTE: Like the above note, since there are two explosions, we only want to be showing one effect and playing one noise. This code does so, as only one explosion will have happened when
@@ -122,10 +121,8 @@ public class DrillExplode : MonoBehaviour
 
     public void Explode(Collider[] colliding)
     {
-        print("Explode Called");
         // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
         Collider[] interiorHits = Physics.OverlapSphere(explodePos.transform.position, innerRadius, terrainMask);
-        print(interiorHits.Length);
         Debug.DrawRay(transform.position, Vector3.forward * innerRadius, Color.red, 5);
 
         foreach (Collider innerHit in interiorHits)
@@ -133,19 +130,15 @@ public class DrillExplode : MonoBehaviour
 
             innerHit.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
-        print(colliding.Length);
 
         //Bomb Detection
         foreach (Collider hit in colliding)
         {
-            print("checking collider hits");
             RaycastHit[] hits = Physics.RaycastAll(transform.position, hit.transform.position - transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
             foreach (RaycastHit raycastHit in hits)
             {
-                print("checking raycast hits");
                 if (raycastHit.collider.tag != null)
                 {
-                    print("raycast hit is not null");
                     Debug.DrawRay(transform.position, raycastHit.collider.gameObject.transform.position - transform.position, Color.green, 5);
                     if (raycastHit.collider.tag == "Bedrock" || raycastHit.collider.tag == "Repository")
                     {
@@ -192,7 +185,6 @@ public class DrillExplode : MonoBehaviour
                     //Look for Terrain
                     if (raycastHit.collider.tag == "ActiveTerrain")
                     {
-                        print("terrain seen");
                         isFinishedClearing = false;
 
                     }
@@ -205,7 +197,6 @@ public class DrillExplode : MonoBehaviour
     public void ClearTerrain()
     {
         elapsedTime += Time.deltaTime;
-        print("ClearTerrain Called");
 
         for (int i = 1; i <= sphereIterations; i++)
         {
@@ -219,7 +210,6 @@ public class DrillExplode : MonoBehaviour
 
     public IEnumerator SphereTrigger(int y)
     {
-        print("SphereTrigger Called");
         yield return new WaitForSeconds(timeToScan * y);
 
         Collider[] terrainPieces = Physics.OverlapSphere(explodePos.transform.position, y * sphereIncrease, terrainMask);
@@ -239,9 +229,14 @@ public class DrillExplode : MonoBehaviour
         }
     }
 
+    //if other scripts need to destroy the drill (coroutines cannot be called from other scripts)
+    public void destroyDrillFromOtherScript(float waitTime)
+    {
+        StartCoroutine(destroyDrillAfterDelay(waitTime));
+    }
+
     public IEnumerator destroyDrillAfterDelay(float waitTime)
     {
-        print("DestroyDrillAfterDelay Called");
         //do not move player until the delay ends
         playerMove.canAct = false;
 

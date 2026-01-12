@@ -103,7 +103,15 @@ public class PlayerDeath : MonoBehaviour
     // Death Sequence //----------------------------------------------------------------------------------------
     public IEnumerator PlayerDeathSeq()
     {
+
+        //visual effects
         StartCoroutine(DeathEffect());
+
+        //remove drill powerup if applicable
+        if(gameObject.GetComponentInChildren<DrillExplode>())
+        {
+            gameObject.GetComponentInChildren<DrillExplode>().destroyDrillFromOtherScript(0);
+        }
 
 
         if (playerGamepad != null)

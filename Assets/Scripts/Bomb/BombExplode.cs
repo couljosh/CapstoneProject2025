@@ -118,6 +118,8 @@ public class BombExplode : MonoBehaviour
                     //Look for player
                     if (raycastHit.collider.tag == "ObjectDestroyer")
                     {
+                        //only kill player if not in the following powerups
+                        if (!raycastHit.collider.gameObject.GetComponentInChildren<DrillLogic>())
                         raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
                     }
 
