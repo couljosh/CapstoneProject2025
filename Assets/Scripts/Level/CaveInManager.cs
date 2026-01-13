@@ -60,10 +60,14 @@ public class CaveInManager : MonoBehaviour
         gamepadArray = Gamepad.all;
         cameraShake = Camera.main.GetComponent<CameraShake>();
 
+        isPowerupInPlay = false;
+
     }
 
     void Update()
     {
+
+        print(isPowerupInPlay);
         timer += Time.deltaTime;
         timeSinceLastCaveIn += Time.deltaTime;
 

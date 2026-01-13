@@ -27,6 +27,7 @@ public class CrateLogic : MonoBehaviour
     {
         if (other.CompareTag("Repository"))
         {
+            CaveInManager.isPowerupInPlay = false;
             Destroy(gameObject);
         }
 
