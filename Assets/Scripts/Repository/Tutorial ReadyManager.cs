@@ -20,6 +20,8 @@ public class TutorialReadyManager : MonoBehaviour
     private int readyPlayers = 0;
     private int playersConnected;
 
+    public LevelRef sceneListSO;
+
     public void ReadyUp(int playerNumber)
     {
         //for displaying ready text
@@ -64,8 +66,16 @@ public class TutorialReadyManager : MonoBehaviour
     public IEnumerator SceneChange()
     {
         yield return new WaitForSeconds(2.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LoadRandomScene();
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  //ONLY IF IT SHOULD LOAD NEXT SCENE, NOT RANDOM
 
         yield return null;
+    }
+
+    void LoadRandomScene()
+    {
+        int randInd = Random.Range(0, sceneListSO.sceneList.Count);
+        SceneManager.LoadScene(sceneListSO.sceneList[randInd]);
     }
 }
