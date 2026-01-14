@@ -121,7 +121,7 @@ MonoBehaviour:
   forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
-  drillForceMultplier: 1
+  drillForceMultplier: 2
   drillForceMultplierCart: 3
   explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
   drillLogicScript: {fileID: 9112477584150219545}
