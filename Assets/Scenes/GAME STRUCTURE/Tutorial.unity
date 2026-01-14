@@ -3134,6 +3134,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialRepo
       objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.g
+      value: 0.13333334
+      objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.487505
@@ -24520,6 +24544,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialRepo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.g
+      value: 0.13333334
+      objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.266649
@@ -25540,8 +25588,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4284481376
+  m_fontColor: {r: 0.37761828, g: 1, b: 0.3726415, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

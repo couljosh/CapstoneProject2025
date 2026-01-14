@@ -95,7 +95,13 @@ public class DrillExplode : MonoBehaviour
             Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
             other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplierCart, ForceMode.Impulse);
         }
-   
+
+        if (other.gameObject.tag == "Bomb")
+        {
+            Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
+            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplier, ForceMode.Impulse);
+        }
+
     }
 
     public void Explosion()
