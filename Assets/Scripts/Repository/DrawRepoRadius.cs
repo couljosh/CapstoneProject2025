@@ -20,14 +20,14 @@ public class DrawRepoRadius : MonoBehaviour
         
     }
 
-    
-       
 
-   //private void OnDrawGizmos()
-   //  {
-   //         Handles.color = Color.yellow;
-   //         Handles.DrawWireDisc(transform.position, Vector3.up, radius);
-   //  }
-    
+
+
+    private void OnDrawGizmos()
+    {
+        Handles.color = Color.yellow;
+        Handles.DrawWireDisc(transform.position, Vector3.up, radius);
+    }
+
 
 }
