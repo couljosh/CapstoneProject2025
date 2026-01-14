@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 2081886071116686364}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.0000029504295}
-  m_LocalPosition: {x: -4.54, y: 0.852, z: -0}
+  m_LocalPosition: {x: -4.17, y: 0.852, z: -0}
   m_LocalScale: {x: 0.30108887, y: 0.5043196, z: 0.21176599}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -391,7 +391,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77019, y: 0.77019, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8918320851110978082}
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0317b9237fbdf4597184debe9ccd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDelay: 0.5
+  startDelay: 2
   movingElapsedTime: 0
   startElapsedTime: 0
   maxSpeed: 5
@@ -490,8 +490,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1.2184968
-      value: 0.44036928
+      time: 0.2874117
+      value: 0.24457498
+      inSlope: 0.16874672
+      outSlope: 0.16874672
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.2091889
+      value: 0.54834044
       inSlope: 1.0306609
       outSlope: 1.0306609
       tangentMode: 0
@@ -536,7 +545,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.478486, y: 2.3792646, z: 5}
+  m_Size: {x: 9.478486, y: 2.3792646, z: 3.64}
   m_Center: {x: -1.8303814, y: 0.6896322, z: -1.8679329e-13}
 --- !u!114 &4323845789496472614
 MonoBehaviour:

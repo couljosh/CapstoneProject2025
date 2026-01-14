@@ -18,6 +18,10 @@ public class GemModelColorPick : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", gemRef.colors[rand]);
         gameObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", gemRef.emiColors[rand]);
 
+
+        //pick random rotation
+        gameObject.transform.rotation = Quaternion.Euler(Random.Range(0,360), Random.Range(0, 360), Random.Range(0, 360));
+
     }
     
 }

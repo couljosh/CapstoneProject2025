@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Gem Weight Settings")]
     public int weightThreshold = 65;     
-    public float slowdownPerGem = 0.011f;
+    public float slowdownPerGem = 0.016f;
     public float minSpeedMultiplier = 0.2f; //minimum speed it can affect
 
     private void Awake()
