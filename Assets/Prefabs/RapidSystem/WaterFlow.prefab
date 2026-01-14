@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rapidForce: 12
-  gemBob: 2
   gemForce: 6
+  largeGemForce: 10
   bombForce: 7

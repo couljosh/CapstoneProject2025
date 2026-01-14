@@ -33,7 +33,7 @@ public class RapidsEffect : MonoBehaviour
 
             else if (other.gameObject.tag == "LargeGem")
             {
-                other.GetComponent<Rigidbody>().AddForce(transform.forward * (largeGemForce / 100), ForceMode.VelocityChange);
+                other.GetComponent<Rigidbody>().AddForce(transform.forward * (largeGemForce / 1000), ForceMode.VelocityChange);
             }
 
 
