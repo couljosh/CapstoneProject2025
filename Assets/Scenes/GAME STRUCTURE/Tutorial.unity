@@ -3134,6 +3134,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialRepo
       objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.g
+      value: 0.13333334
+      objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.487505
@@ -24519,6 +24543,30 @@ PrefabInstance:
     - target: {fileID: 861299695240743266, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_Name
       value: TutorialRepo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.g
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: redTeamColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
+      propertyPath: blueTeamColor.g
+      value: 0.13333334
       objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
