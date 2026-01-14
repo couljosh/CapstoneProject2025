@@ -68,6 +68,13 @@ public class DrillLogic : MonoBehaviour
         {
             collision.gameObject.GetComponent<BlockDestroy>().disableCubeAfterDelay(0);
         }
+
+        //if it hits a bomb that is lodged (kinematic)
+        if(collision.gameObject.tag == "Bomb" && collision.gameObject.GetComponent<Rigidbody>().isKinematic == true)
+        {
+            //explode it instantly
+            collision.gameObject.GetComponent<BombExplode>().ExplodeWithoutDelay();
+        }
     }
 
     void PlayDrillSound()

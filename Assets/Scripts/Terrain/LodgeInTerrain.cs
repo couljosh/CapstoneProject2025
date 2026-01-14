@@ -19,6 +19,9 @@ public class LodgeInTerrain : MonoBehaviour
         if(interiorHits != null &&  interiorHits.Length > 5)
         {
             rb.isKinematic = true;
+
+            //check again to dislodge bomb if its not sufficiently in the wall
+            Lodge();
         }
         else
         {

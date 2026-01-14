@@ -68,6 +68,7 @@ public class BombExplode : MonoBehaviour
 
     }
 
+
     IEnumerator Explosion()
     {
         yield return new WaitForSeconds(cookTime);
@@ -82,6 +83,15 @@ public class BombExplode : MonoBehaviour
 
     }
 
+    public void ExplodeWithoutDelay()
+    {
+        Collider[] objectsDec = Physics.OverlapSphere(transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
+        Explode(objectsDec);
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_Bomb/BombExplosion", gameObject.transform.position);
+
+        GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
+    }
 
     public void Explode(Collider[] colliding)
     {
