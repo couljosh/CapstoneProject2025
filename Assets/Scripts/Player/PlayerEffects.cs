@@ -99,13 +99,13 @@ public class PlayerEffects : MonoBehaviour
         {
             flashOn = true;
         }
-        if (playerMove.moveAmt.magnitude > 0)
+
+        if (playerMove.moveAmt.magnitude > 0 && playerMove.powerUpPickupScript.activePowerup == null) //only animate movement normally if player is not in a powerup
         {
             copperAnimator.SetBool("isRunning", true);
         }
-        else if (playerMove.moveAmt.magnitude == 0)
+        else if (playerMove.moveAmt.magnitude == 0 || playerMove.powerUpPickupScript.activePowerup != null) //kill anim if powerup is entered
         {
-
             copperAnimator.SetBool("isRunning", false);
         }
 
