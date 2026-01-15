@@ -29,6 +29,7 @@ public class SceneChange : MonoBehaviour
 
     [Header("Round Customization")]
     public float roundTime;
+    public float roundTimeInt;
     public float endOfRoundDelay;
 
     public int redRoundTotal;
@@ -70,11 +71,13 @@ public class SceneChange : MonoBehaviour
 
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        int initialMin = Mathf.FloorToInt(roundTime / 60);
-        int initialSec = Mathf.FloorToInt(roundTime % 60);
-        if (timerText != null)
-            timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
+        //IF USING 00:00 FORMAT
+        // int initialMin = Mathf.FloorToInt(roundTime / 60);
+        //int initialSec = Mathf.FloorToInt(roundTime % 60);
+        //if (timerText != null)
+        //    timerText.text = string.Format("{0:00}:{1:00}", initialMin, initialSec);
 
+        timerText.text = Mathf.RoundToInt(roundTime).ToString();
 
         StartCoroutine(CountdownRoutine());
         overtimeBar.gameObject.SetActive(false);
@@ -227,11 +230,12 @@ public class SceneChange : MonoBehaviour
             roundTime = 0f;
         }
 
-        int min = Mathf.FloorToInt(roundTime / 60);
-        int sec = Mathf.FloorToInt(roundTime % 60);
+        int min = Mathf.RoundToInt(roundTime);
+        //int sec = Mathf.FloorToInt(roundTime % 60);
 
-        if (timerText != null)
-            timerText.text = string.Format("{0:00}:{1:00}", min, sec);
+        //if (timerText != null)
+        //    timerText.text = string.Format("{0:00}:{1:00}", min, sec);
+        timerText.text = min.ToString();
 
         //Countdown Text Coloring
         if (roundTime <= 20)
