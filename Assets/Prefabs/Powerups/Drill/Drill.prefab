@@ -4964,6 +4964,7 @@ MonoBehaviour:
   bedrock:
     serializedVersion: 2
     m_Bits: 1024
+  hasExploded: 0
   innerRadius: 0.5
   elapsedTime: 0
   sphereIterations: 5
@@ -34510,6 +34511,103 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  startupRumbleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0025100708
+      value: -0.0015487671
+      inSlope: 0.13684782
+      outSlope: 0.13684782
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.109381676
+      value: 0.01307638
+      inSlope: -0.20682152
+      outSlope: -0.20682152
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.16856988
+    - serializedVersion: 3
+      time: 0.3313563
+      value: -0.0014313692
+      inSlope: -0.0064008855
+      outSlope: -0.0064008855
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.43357924
+      value: 0.01700652
+      inSlope: -0.18770842
+      outSlope: -0.18770842
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11862596
+      outWeight: 0.09140831
+    - serializedVersion: 3
+      time: 0.59393954
+      value: -0.0019678236
+      inSlope: -0.08884976
+      outSlope: -0.08884976
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.686125
+      value: 0.018878637
+      inSlope: -0.03852017
+      outSlope: -0.03852017
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7522754
+      value: -0.0024522692
+      inSlope: -0.3787599
+      outSlope: -0.3787599
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5256216
+      outWeight: 0.14360067
+    - serializedVersion: 3
+      time: 0.8930513
+      value: 0.0173422
+      inSlope: 0.004536355
+      outSlope: 0.004536355
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0336233
+      value: 0.004930253
+      inSlope: -0.008782781
+      outSlope: -0.008782781
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.5610538
+      value: 0.0047823675
+      inSlope: -0.1482536
+      outSlope: -0.1482536
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.09499729
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  playerDeath: {fileID: 0}
   drillEvent:
     Guid:
       Data1: 483723525

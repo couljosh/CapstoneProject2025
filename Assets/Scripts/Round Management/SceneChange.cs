@@ -318,6 +318,12 @@ public class SceneChange : MonoBehaviour
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
 
+        foreach (var gamepad in Gamepad.all)
+        {
+            print("resetting gamepad rumble");
+            gamepad.SetMotorSpeeds(0f, 0f);
+        }
+
         Invoke("LoadNextScene", 1f);
     }
 

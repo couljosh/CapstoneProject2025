@@ -16,6 +16,7 @@ public class DrillExplode : MonoBehaviour
     public LayerMask bedrock;
 
     [Header("Explosion Variables")]
+    [HideInInspector] public bool hasExploded;
     private float radius;
     public float innerRadius;
     private float explosionCount = 0;
@@ -32,6 +33,9 @@ public class DrillExplode : MonoBehaviour
 
     public float drillForceMultplier;
     public float drillForceMultplierCart;
+
+    private bool hasInitialRumbled = false;
+    private bool isRumbling = false;
 
     [Header("References")]
     public GameObject explosionParticle;
@@ -72,6 +76,7 @@ public class DrillExplode : MonoBehaviour
         if ((other.gameObject.tag == "Bedrock") && explosionCount < 2 && drillLogicScript.isDrillMoving)
         {
             explosionCount++;
+            hasExploded = true; 
             Explosion();    
 
         }
@@ -104,9 +109,9 @@ public class DrillExplode : MonoBehaviour
 
     }
 
+
     public void Explosion()
     {
-        
 
         Collider[] objectsDec = Physics.OverlapSphere(explodePos.transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
         Explode(objectsDec);
@@ -263,6 +268,7 @@ public class DrillExplode : MonoBehaviour
 
         yield return null;
     }
+
 }
 
 
