@@ -428,7 +428,7 @@ Material:
     - _ComposerMaskMode: 0
     - _Contrast: 1.09
     - _Cull: 2
-    - _CullMode: 2
+    - _CullMode: 0
     - _CullModeForward: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1

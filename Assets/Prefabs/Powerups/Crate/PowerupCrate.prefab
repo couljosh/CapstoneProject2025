@@ -250,8 +250,6 @@ MonoBehaviour:
   powerUps:
   - {fileID: 8308840516551796455, guid: f722e81014eb85d4c951a62342749cc1, type: 3}
   chosenPowerup: {fileID: 0}
-  dynamicCamera: {fileID: 0}
-  crate: {fileID: 5429195990252968690}
 --- !u!54 &7255459495870141411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -361,6 +359,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7664728788398519507, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -7146521406498821007, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_TagString
       value: Crate
@@ -368,6 +374,22 @@ PrefabInstance:
     - target: {fileID: -2045257923548263128, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_TagString
       value: Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1120989108687609925, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -804731622281664130, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -678588488315902003, guid: 341e56d8102f086429db867136e3762c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 341e56d8102f086429db867136e3762c, type: 3}
       propertyPath: m_TagString
