@@ -34462,9 +34462,9 @@ MonoBehaviour:
   startDelay: 2
   movingElapsedTime: 0
   startElapsedTime: 0
-  maxSpeed: 7
-  startingTurn: 5
-  minTurn: 2
+  maxSpeed: 6
+  startingTurn: 4
+  minTurn: 0.8
   timeToFullSpeed: 3
   timeToSlowTurn: 10
   currentSpeed: 0
@@ -34525,6 +34525,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.53486735
+      value: 0.35686386
+      inSlope: 1.0402122
+      outSlope: 1.0402122
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
