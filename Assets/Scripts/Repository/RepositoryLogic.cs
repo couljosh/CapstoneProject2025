@@ -259,10 +259,10 @@ public class RepositoryLogic : MonoBehaviour
             addEnteredPlayer(other.gameObject);
         }
 
-        if (other.gameObject.tag == "LargeGem" && active && other.gameObject.GetComponentInParent<LargeGem>().isReleased == true)
+        if (other.gameObject.tag == "LargeGem" && active && other.gameObject.GetComponent<LargeGem>())
         {
-            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = true;
-            largeGemsInRadius.Add(other.gameObject.transform.parent.gameObject);
+            other.gameObject.GetComponent<LargeGem>().isInDepositRadius = true; 
+            largeGemsInRadius.Add(other.gameObject);
         }
     }
 
@@ -276,8 +276,13 @@ public class RepositoryLogic : MonoBehaviour
 
         if (other.gameObject.tag == "LargeGem" && active)
         {
-            other.gameObject.transform.parent.gameObject.GetComponent<LargeGem>().isInDepositRadius = false;
-            largeGemsInRadius.Remove(other.gameObject.transform.parent.gameObject);
+            //if its the collider child (more accurate hitbox)
+            if(other.gameObject.GetComponent<LargeGem>())
+            {
+                other.gameObject.GetComponent<LargeGem>().isInDepositRadius = false;
+                largeGemsInRadius.Remove(other.gameObject);
+            }
+            
         }
     }
 
