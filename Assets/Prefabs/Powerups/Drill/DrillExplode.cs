@@ -41,7 +41,7 @@ public class DrillExplode : MonoBehaviour
 
     [Header("Audio")]
     public FMODUnity.EventReference engineStartEvent;
-    private EventInstance engineStartInstance;
+    public EventInstance engineStartInstance;
 
 
     private void Start()
