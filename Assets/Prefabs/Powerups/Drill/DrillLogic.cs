@@ -107,7 +107,6 @@ public class DrillLogic : MonoBehaviour
 
     private void MovingRumble()
     {
-        print("invoking moving rumble");
         playerDeath.playerGamepad.SetMotorSpeeds(0.08f, 0.08f);
     }
 

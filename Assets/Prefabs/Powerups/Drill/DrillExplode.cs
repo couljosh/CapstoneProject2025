@@ -166,7 +166,6 @@ public class DrillExplode : MonoBehaviour
 
                     if (raycastHit.collider.tag == "LargeGem")
                     {
-                        print("hit large gem");
                         Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
                         raycastHit.collider.gameObject.gameObject.GetComponentInParent<Rigidbody>().AddForce(forceVector * forceStrengthLargeGem, ForceMode.Impulse);
                     }
