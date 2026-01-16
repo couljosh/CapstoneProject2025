@@ -66,8 +66,6 @@ public class CaveInManager : MonoBehaviour
 
     void Update()
     {
-
-        print(isPowerupInPlay);
         timer += Time.deltaTime;
         timeSinceLastCaveIn += Time.deltaTime;
 

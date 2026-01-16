@@ -16,6 +16,7 @@ public class DrillExplode : MonoBehaviour
     public LayerMask bedrock;
 
     [Header("Explosion Variables")]
+    [HideInInspector] public bool hasExploded;
     private float radius;
     public float innerRadius;
     private float explosionCount = 0;
@@ -32,6 +33,9 @@ public class DrillExplode : MonoBehaviour
 
     public float drillForceMultplier;
     public float drillForceMultplierCart;
+
+    private bool hasInitialRumbled = false;
+    private bool isRumbling = false;
 
     [Header("References")]
     public GameObject explosionParticle;
@@ -72,6 +76,7 @@ public class DrillExplode : MonoBehaviour
         if ((other.gameObject.tag == "Bedrock") && explosionCount < 2 && drillLogicScript.isDrillMoving)
         {
             explosionCount++;
+            hasExploded = true; 
             Explosion();    
 
         }
@@ -104,9 +109,9 @@ public class DrillExplode : MonoBehaviour
 
     }
 
+
     public void Explosion()
     {
-        
 
         Collider[] objectsDec = Physics.OverlapSphere(explodePos.transform.position, radius, terrainMask | bedrock | kickableMask | playerMask | gemMask, QueryTriggerInteraction.Ignore);
         Explode(objectsDec);
@@ -161,7 +166,6 @@ public class DrillExplode : MonoBehaviour
 
                     if (raycastHit.collider.tag == "LargeGem")
                     {
-                        print("hit large gem");
                         Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
                         raycastHit.collider.gameObject.gameObject.GetComponentInParent<Rigidbody>().AddForce(forceVector * forceStrengthLargeGem, ForceMode.Impulse);
                     }
@@ -263,6 +267,7 @@ public class DrillExplode : MonoBehaviour
 
         yield return null;
     }
+
 }
 
 

@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour
     [Header("References")]
     public PlayerStats playerStats;
     public PlayerInput playerInput;
-    private Gamepad playerGamepad;
+    [HideInInspector] public Gamepad playerGamepad;
 
     public MeshRenderer playerMesh;
     private MeshRenderer meshRenderer;
