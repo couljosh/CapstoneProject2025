@@ -216,7 +216,7 @@ public class CaveInManager : MonoBehaviour
 
         if(chosenNode != repoMoveSystemScript.currentLoc)
         {
-            Instantiate(crate, chosenNode.transform.position + new Vector3(0,4.5f,0), randRot);
+            Instantiate(crate, chosenNode.transform.position + new Vector3(0,5f,0), randRot);
 
         }
     }
