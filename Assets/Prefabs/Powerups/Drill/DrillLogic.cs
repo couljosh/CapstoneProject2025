@@ -13,9 +13,12 @@ public class DrillLogic : MonoBehaviour
     public float movingElapsedTime;
     public float startElapsedTime;
     public float maxSpeed;
+    public float startingTurn;
     public float minTurn;
     public float timeToFullSpeed;
+    public float timeToSlowTurn;
     private float currentSpeedUpProgress;
+    private float currentSlowTurnProgress;
     [HideInInspector] public float currentSpeed;
     [HideInInspector] public float currentTurn;
 
@@ -25,6 +28,7 @@ public class DrillLogic : MonoBehaviour
 
     [Header("References")]
     public AnimationCurve speedUpCurve;
+    public AnimationCurve slowDownCurve;
     public AnimationCurve startupRumbleCurve;
     private DrillExplode drillExplode;
     public PlayerDeath playerDeath;
@@ -74,11 +78,13 @@ public class DrillLogic : MonoBehaviour
             float curvedT = speedUpCurve.Evaluate(currentSpeedUpProgress);
 
             currentSpeed = Mathf.Lerp(0, maxSpeed, curvedT);
-
         }
 
+        currentSlowTurnProgress = movingElapsedTime / timeToSlowTurn;
+
         //turn starts immediately so players can turn before it starts moving
-        currentTurn = Mathf.Lerp(10, minTurn, currentSpeedUpProgress);
+        float curved = slowDownCurve.Evaluate(currentSlowTurnProgress);
+        currentTurn = Mathf.Lerp(startingTurn, minTurn, curved);
 
     }
 
