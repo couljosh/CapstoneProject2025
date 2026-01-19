@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TutorialReadyManager : MonoBehaviour
 {
+    public GameObject player1ReadyUI;
+    public GameObject player2ReadyUI;
+    public GameObject player3ReadyUI;
+    public GameObject player4ReadyUI;
+
     public Transform player1Spot;
     public Transform player2Spot;
     public Transform player3Spot;
@@ -22,28 +27,40 @@ public class TutorialReadyManager : MonoBehaviour
 
     public LevelRef sceneListSO;
 
+    private void Awake()
+    {
+        player1ReadyUI.SetActive(false);
+        player2ReadyUI.SetActive(false);
+        player3ReadyUI.SetActive(false);
+        player4ReadyUI.SetActive(false);
+    }
+
     public void ReadyUp(int playerNumber)
     {
         //for displaying ready text
         switch (playerNumber)
         {
             case 1:
-                GameObject.Instantiate(readySignifier, player1Spot);
+                player1ReadyUI.SetActive(true);
+                //GameObject.Instantiate(readySignifier, player1Spot);
                 Destroy(player1Repo);
                 break;
 
             case 2:
-                GameObject.Instantiate(readySignifier, player2Spot);
+                player2ReadyUI.SetActive(true);
+                //GameObject.Instantiate(readySignifier, player2Spot);
                 Destroy(player2Repo);
                 break;
 
             case 3:
-                GameObject.Instantiate(readySignifier, player3Spot);
+                player3ReadyUI.SetActive(true);
+                //GameObject.Instantiate(readySignifier, player3Spot);
                 Destroy(player3Repo);
                 break;
 
             case 4:
-                GameObject.Instantiate(readySignifier, player4Spot);
+                player4ReadyUI.SetActive(true);
+                //GameObject.Instantiate(readySignifier, player4Spot);
                 Destroy(player4Repo);
                 break;
         }
