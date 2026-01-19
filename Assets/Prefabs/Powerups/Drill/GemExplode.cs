@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class GemExplode : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GemExplode : MonoBehaviour
     //prevent exploding into more than one set of gems
     private bool hasExploded = false;
 
+    public GameObject gemSparkle;
+    public GemRef gemRef;
     private GameObject[] allGems;
 
     private void Start()
@@ -30,6 +33,9 @@ public class GemExplode : MonoBehaviour
 
     void SpawnGems()
     {
+        //explosion particle
+        GameObject particle = Instantiate(gemSparkle, transform.position, Quaternion.identity);
+
         int i;
 
         for (i = 0; i < gemAmt; i++)
@@ -41,6 +47,7 @@ public class GemExplode : MonoBehaviour
             //force gem to be kinematic so that forces can be applied to it
             spawnedGem.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             spawnedGem.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(randRot.x, randRot.y, randRot.z) * scatterForce);
+
         }
 
         if(i == gemAmt)
