@@ -262,13 +262,6 @@ public class SceneChange : MonoBehaviour
             isTimeOut = true;
 
 
-            //WHERE ALL POEWRUP SOUNDS WILL NEED TO BE STOPPED ON ROUND END
-            GameObject drill = GameObject.FindGameObjectWithTag("Drill");
-            if (drill != null)
-            {
-                drill.GetComponent<DrillLogic>().drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                drill.GetComponentInChildren<DrillExplode>().engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
 
         }
 
@@ -317,6 +310,8 @@ public class SceneChange : MonoBehaviour
 
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
+
+        StopPowerupSound();
 
         foreach (var gamepad in Gamepad.all)
         {
@@ -451,5 +446,16 @@ public class SceneChange : MonoBehaviour
         warningNumberText.color = startColor;
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
+    }
+
+    void StopPowerupSound()
+    {
+        //WHERE ALL POEWRUP SOUNDS WILL NEED TO BE STOPPED ON ROUND END
+        GameObject drill = GameObject.FindGameObjectWithTag("Drill");
+        if (drill != null)
+        {
+            drill.GetComponent<DrillLogic>().drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            drill.GetComponentInChildren<DrillExplode>().engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }
