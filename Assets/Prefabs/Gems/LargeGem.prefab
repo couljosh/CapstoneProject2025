@@ -125,6 +125,8 @@ MonoBehaviour:
   gemPrefab: {fileID: 923427996337693031, guid: 46daf5ad714838c419b9306f81accdc8, type: 3}
   gemAmt: 25
   scatterForce: 2000
+  gemSparkle: {fileID: 1102091221440142287, guid: c200e2e6c2f022b42a0680f32f09618e, type: 3}
+  gemRef: {fileID: 11400000, guid: 54a1dc93fe5858542b986609512ed468, type: 2}
 --- !u!1 &4509407780663519724
 GameObject:
   m_ObjectHideFlags: 0
