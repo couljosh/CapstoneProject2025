@@ -47,15 +47,15 @@ public class TutorialReadyManager : MonoBehaviour
                 break;
 
             case 2:
-                player2ReadyUI.SetActive(true);
+                player3ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player2Spot);
-                Destroy(player2Repo);
+                Destroy(player3Repo);
                 break;
 
             case 3:
-                player3ReadyUI.SetActive(true);
+                player2ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player3Spot);
-                Destroy(player3Repo);
+                Destroy(player2Repo);
                 break;
 
             case 4:

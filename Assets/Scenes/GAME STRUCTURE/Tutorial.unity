@@ -364,7 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52941952}
   m_Layer: 0
-  m_Name: ReadySpot2
+  m_Name: ReadySpot3
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3808,7 +3808,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861299695240743266, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_Name
-      value: TutorialRepo
+      value: TutorialRepoP1
       objectReference: {fileID: 0}
     - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: redTeamColor.a
@@ -16275,12 +16275,12 @@ MonoBehaviour:
   player3ReadyUI: {fileID: 1945171953}
   player4ReadyUI: {fileID: 1142605014}
   player1Spot: {fileID: 410988262}
-  player2Spot: {fileID: 52941952}
-  player3Spot: {fileID: 1344328028}
+  player2Spot: {fileID: 1344328028}
+  player3Spot: {fileID: 52941952}
   player4Spot: {fileID: 57982078}
   player1Repo: {fileID: 268733000}
-  player2Repo: {fileID: 524438865}
-  player3Repo: {fileID: 1790020385}
+  player2Repo: {fileID: 1790020385}
+  player3Repo: {fileID: 524438865}
   player4Repo: {fileID: 1644999729}
   readySignifier: {fileID: 3872051111287213030, guid: f85af3b34ae240644a02e86ee12bef10, type: 3}
   sceneListSO: {fileID: 11400000, guid: 5cc53b1cfbbeed24f9fbed9e3e98fd50, type: 2}
@@ -17921,7 +17921,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861299695240743266, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_Name
-      value: TutorialRepo (1)
+      value: TutorialRepoP2
       objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23161,7 +23161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344328028}
   m_Layer: 0
-  m_Name: ReadySpot3
+  m_Name: ReadySpot2
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -26568,7 +26568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861299695240743266, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_Name
-      value: TutorialRepo (3)
+      value: TutorialRepoP3
       objectReference: {fileID: 0}
     - target: {fileID: 1953078874706328719, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: redTeamColor.a
@@ -31950,7 +31950,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 861299695240743266, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_Name
-      value: TutorialRepo (2)
+      value: TutorialRepoP4
       objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ecdb3f4c94abba94d9282a7916f8b47b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32076,8 +32076,8 @@ SceneRoots:
   - {fileID: 1824564218}
   - {fileID: 466814381}
   - {fileID: 410988262}
-  - {fileID: 52941952}
   - {fileID: 1344328028}
+  - {fileID: 52941952}
   - {fileID: 57982078}
   - {fileID: 467998391}
   - {fileID: 1712126404}
@@ -32103,8 +32103,8 @@ SceneRoots:
   - {fileID: 1185315050}
   - {fileID: 528742959}
   - {fileID: 1195373920}
-  - {fileID: 2147020840}
   - {fileID: 1898855915}
+  - {fileID: 2147020840}
   - {fileID: 1464435018}
   - {fileID: 579610362}
   - {fileID: 6397212160938068723}
