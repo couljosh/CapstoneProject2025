@@ -73,6 +73,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -160,6 +164,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (14)
@@ -220,6 +228,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -307,6 +319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (3)
@@ -367,6 +383,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -454,6 +474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (17)
@@ -514,6 +538,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -601,6 +629,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (13)
@@ -661,6 +693,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -748,6 +784,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (18)
@@ -808,6 +848,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -895,6 +939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (6)
@@ -955,6 +1003,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1042,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (8)
@@ -1102,6 +1158,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1189,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (19)
@@ -1249,6 +1313,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1336,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (11)
@@ -1396,6 +1468,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1483,6 +1559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (15)
@@ -1543,6 +1623,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1630,6 +1714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle
@@ -1690,6 +1778,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1777,6 +1869,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (20)
@@ -1837,6 +1933,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -1924,6 +2024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (4)
@@ -1984,6 +2088,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2071,6 +2179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (9)
@@ -2131,6 +2243,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2218,6 +2334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (1)
@@ -2278,6 +2398,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2365,6 +2489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (2)
@@ -2425,6 +2553,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2512,6 +2644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (10)
@@ -2572,6 +2708,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2659,6 +2799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (12)
@@ -2719,6 +2863,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2806,6 +2954,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (7)
@@ -2866,6 +3018,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -2953,6 +3109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (5)
@@ -3013,6 +3173,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: ClampVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031596348825614363, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
@@ -3100,6 +3264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5206645950302194368, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b518d78a14585d345af4dad841e04bf2, type: 2}
     - target: {fileID: 5688541108355093561, guid: c1b3fc58ce835f643b841980ec1b08a2, type: 3}
       propertyPath: m_Name
       value: GemSparkle (16)
