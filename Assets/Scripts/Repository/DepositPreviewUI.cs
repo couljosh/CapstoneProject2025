@@ -16,16 +16,24 @@ public class DepositPreviewWorldText : MonoBehaviour
         SetVisible(false);
     }
 
-    public void SetValue(int current, int max)
+    //added largeBonus parameter and color
+    public void SetValue(int current, int max, int largeBonus)
     {
-        if (max <= 0)
-            return;
+        string smallGemText = $"{current}/{max}";
 
-        text.text = $"{current}/{max}";
+        if (largeBonus > 0)
+        {
+            text.text = $"{smallGemText} +{largeBonus}";
+        }
+        else
+        {
+            text.text = smallGemText;
+        }
     }
 
     public void SetColor(Color c)
     {
+        //turn the entire string to the target color
         text.color = c;
     }
 

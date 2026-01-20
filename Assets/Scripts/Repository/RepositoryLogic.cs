@@ -646,10 +646,12 @@ public class RepositoryLogic : MonoBehaviour
             depositor = player.GetComponent<PlayerDeath>();
         }
 
-        //Add to list of players currently in range based on their team affiliation
-        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+        //add player to list
+        //yellow team
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
             enteredPlayersTeam1.Add(player.gameObject);
-        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+        //blue team
+        else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Add(player.gameObject);
 
     }
@@ -663,9 +665,11 @@ public class RepositoryLogic : MonoBehaviour
             depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
 
         //remove leaving player from list
-        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+        //yellow team
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
             enteredPlayersTeam1.Remove(player.gameObject);
-        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+        //blue team
+        else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Remove(player.gameObject);
     }
 
@@ -733,16 +737,18 @@ public class RepositoryLogic : MonoBehaviour
     {
         bool validDeposit = (teamOneCanDepo && !isContested) || (teamTwoCanDepo && !isContested);
 
+        bool isPlayerPresent = allEnteredPlayers.Count > 0;
+        int currentLargeBonus = largeGemsInRadius.Count * largeGemValue;
+
         // ---------------- CONTESTED STATE ----------------
         if (isContested)
         {
-            //freeze deposit value where it was
-            previewText.SetVisible(previewValue > 0);
-
+            // freeze deposit value where it was - UPDATED: check large gems too
+            previewText.SetVisible(isPlayerPresent && (previewValue > 0 || currentLargeBonus > 0));
             int frozenInt = Mathf.RoundToInt(previewValue);
-            previewText.SetValue(frozenInt, cachedTargetCap);
+            previewText.SetValue(frozenInt, cachedTargetCap, currentLargeBonus);
 
-            //override color to contested
+            // override color to contested
             previewText.SetColor(Color.Lerp(
                 previewText.text.color,
                 contestedPreviewColor,
@@ -785,7 +791,10 @@ public class RepositoryLogic : MonoBehaviour
         }
 
         // ---------------- VISIBILITY ----------------
-        if (previewValue <= 0.05f && !validDeposit)
+        bool playerFacilitating = isPlayerPresent && (validDeposit || currentLargeBonus > 0);
+        bool isCurrentlyDraining = previewValue > 0.05f;
+
+        if (!playerFacilitating && !isCurrentlyDraining)
         {
             previewValue = 0;
             previewText.SetVisible(false);
@@ -796,7 +805,8 @@ public class RepositoryLogic : MonoBehaviour
             previewText.SetVisible(true);
 
             int currentInt = Mathf.RoundToInt(previewValue);
-            previewText.SetValue(currentInt, cachedTargetCap);
+            //pass the large bonus to the text component
+            previewText.SetValue(currentInt, cachedTargetCap, currentLargeBonus);
 
             Color teamCol = wasTeamOneLast ? yellowTeamColor : blueTeamColor;
             Color targetColor = validDeposit ? teamCol : greyColor;
