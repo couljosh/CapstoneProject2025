@@ -34,10 +34,16 @@ public class PlayerUIManager : MonoBehaviour
         }
     }
 
-    public void RegisterPlayer(GameObject playerObject)
+    public void RegisterPlayer(GameObject playerObject, int playerID)
     {
         PlayerMove playerMove = playerObject.GetComponent<PlayerMove>();
         BombSpawn bombSpawn = playerObject.GetComponent<BombSpawn>();
+
+
+        if (playerMove != null)
+        {
+            playerMove.playerNum = playerID;
+        }
 
         // ------------------ GEMS HELD COUNTER ------------------
         if (gemsHeldCounterPrefab != null)
@@ -108,10 +114,11 @@ public class PlayerUIManager : MonoBehaviour
 
             if (ammoBar != null)
             {
-                PlayerMove pm = playerObject.GetComponent<PlayerMove>();
-                bool isBlueTeam = pm.playerNum == 3 || pm.playerNum == 4;
+                //calculate team based on ID
+                bool isBlueTeam = playerID == 2 || playerID == 4;
 
-                ammoBar.Initialize(bombSpawn, isBlueTeam);
+                //pass player id to ammo bar
+                ammoBar.Initialize(bombSpawn, isBlueTeam, playerID);
                 bombSpawn.bombAmmoBarUI = ammoBar;
 
                 SetupWorldToScreen(bombUIInstance, playerObject.transform, screenHeightOffsetValue + 0.03f);

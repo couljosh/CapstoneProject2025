@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BombAmmoBar : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class BombAmmoBar : MonoBehaviour
     public Color chargedColorYellow = Color.yellow;
     public Color chargingColor = Color.gray;
     public Color emptyColor = Color.black;
+    public TextMeshProUGUI playerNumberText;
 
     public float fullIntensity = 1.0f;
     public float unchargedIntensity = 0.5f;
@@ -36,10 +38,15 @@ public class BombAmmoBar : MonoBehaviour
     private bool popEffectActive = false;
     private int lastKnownBombCount = 0;
 
-    public void Initialize(BombSpawn spawnScript, bool playerIsBlueTeam)
+    public void Initialize(BombSpawn spawnScript, bool playerIsBlueTeam, int playerNumber)
     {
         bombSpawn = spawnScript;
         isBlueTeam = playerIsBlueTeam;
+
+        if (playerNumberText != null)
+        {
+            playerNumberText.text = "P" + playerNumber.ToString();
+        }
 
         // Make materials unique (prevents shared-material bugs)
         foreach (var seg in ammoSegments)

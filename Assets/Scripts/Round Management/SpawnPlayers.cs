@@ -69,8 +69,8 @@ public class SpawnPlayers : MonoBehaviour
 
             if (uiManager != null)
             {
-                
-                uiManager.RegisterPlayer(newPlayerInput.gameObject);
+
+                uiManager.RegisterPlayer(newPlayerInput.gameObject, i + 1);
             }
 
             i++;
@@ -105,7 +105,7 @@ public class SpawnPlayers : MonoBehaviour
                                         currentPlayers[i] = newPlayerInput.gameObject;
                                         if (uiManager != null)
                                         {
-                                            uiManager.RegisterPlayer(newPlayerInput.gameObject);
+                                            uiManager.RegisterPlayer(newPlayerInput.gameObject, i + 1);
                                         }
                                     }
 

@@ -437,6 +437,7 @@ MonoBehaviour:
   chargedColorYellow: {r: 1, g: 0.6862745, b: 0, a: 1}
   chargingColor: {r: 0.46101815, g: 0.47783908, b: 0.5283019, a: 0.84313726}
   emptyColor: {r: 0.21960786, g: 0.21568629, b: 0.3254902, a: 1}
+  playerNumberText: {fileID: 4696702440411811829}
   fullIntensity: 1
   unchargedIntensity: 0.5
   emptySegmentAlpha: 0.5
@@ -480,8 +481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.0427, y: 19.3193}
-  m_SizeDelta: {x: 23.6147, y: 16.2338}
+  m_AnchoredPosition: {x: -35, y: 19.9}
+  m_SizeDelta: {x: 36.3125, y: 16.2338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &606185502834072530
 CanvasRenderer:
@@ -538,8 +539,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.84
-  m_fontSizeBase: 16.84
+  m_fontSize: 16.06
+  m_fontSizeBase: 16.06
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
