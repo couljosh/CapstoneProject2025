@@ -208,6 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemRef: {fileID: 11400000, guid: 54a1dc93fe5858542b986609512ed468, type: 2}
+  needsModel: 1
+  needsColor: 1
 --- !u!1001 &2251440726682021331
 PrefabInstance:
   m_ObjectHideFlags: 0
