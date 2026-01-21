@@ -20,6 +20,11 @@ public class TutorialReadyManager : MonoBehaviour
     public GameObject player3Repo;
     public GameObject player4Repo;
 
+    public GameObject player1Icon;
+    public GameObject player2Icon;
+    public GameObject player3Icon;
+    public GameObject player4Icon;
+
     public GameObject readySignifier;
 
     private int readyPlayers = 0;
@@ -41,24 +46,28 @@ public class TutorialReadyManager : MonoBehaviour
         switch (playerNumber)
         {
             case 1:
+                //player1Icon.SetActive(false);
                 player1ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player1Spot);
                 Destroy(player1Repo);
                 break;
 
             case 2:
+               // player3Icon.SetActive(false);
                 player3ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player2Spot);
                 Destroy(player3Repo);
                 break;
 
             case 3:
+              //  player2Icon.SetActive(false);
                 player2ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player3Spot);
                 Destroy(player2Repo);
                 break;
 
             case 4:
+             //   player4Icon.SetActive(false);
                 player4ReadyUI.SetActive(true);
                 //GameObject.Instantiate(readySignifier, player4Spot);
                 Destroy(player4Repo);

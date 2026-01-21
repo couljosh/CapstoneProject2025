@@ -460,9 +460,9 @@ public class TutorialRepoLogic : MonoBehaviour
         }
 
         //Add to list of players currently in range based on their team affiliation
-        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
             enteredPlayersTeam1.Add(player.gameObject);
-        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+        else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Add(player.gameObject);
     }
 
@@ -475,9 +475,9 @@ public class TutorialRepoLogic : MonoBehaviour
             depositor = allEnteredPlayers[0].GetComponent<PlayerDeath>();
 
         //remove leaving player from list
-        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 2)
+        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
             enteredPlayersTeam1.Remove(player.gameObject);
-        else if (player.GetComponent<PlayerMove>().playerNum == 3 || player.GetComponent<PlayerMove>().playerNum == 4)
+        else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
             enteredPlayersTeam2.Remove(player.gameObject);
     }
 }
