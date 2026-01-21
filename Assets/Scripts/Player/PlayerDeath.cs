@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -103,6 +104,11 @@ public class PlayerDeath : MonoBehaviour
     // Death Sequence //----------------------------------------------------------------------------------------
     public IEnumerator PlayerDeathSeq()
     {
+        //get current scene for telemetry log
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        //log death event, value: 1 can be used to count total deaths. and then currentscecne.
+        TelemetryManager.Instance.Log("player_death", 1.0f, "scene:" + currentScene);
 
         //visual effects
         StartCoroutine(DeathEffect());
