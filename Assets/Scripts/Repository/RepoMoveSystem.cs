@@ -11,6 +11,7 @@ public class RepoMoveSystem : MonoBehaviour
     public GameObject currentLoc;
     private TerrainBlast terrainBlastScript;
     public DynamicCameraFollow dynamicCamera;
+    [HideInInspector] SceneChange sceneChangeScript; 
 
     [Header("Repository Customization")]
     public float activeDuration;
@@ -61,6 +62,8 @@ public class RepoMoveSystem : MonoBehaviour
 
         //Ensure repo disabled
         repository.GetComponent<RepositoryLogic>().DisableRepo();
+
+        sceneChangeScript = GameObject.FindAnyObjectByType<SceneChange>();
     }
 
     private void StartRepoSystem()
@@ -207,6 +210,12 @@ public class RepoMoveSystem : MonoBehaviour
     {
 
         float offDelayDuration = Random.Range(minOffDelay, maxOffDelay);
+
+        if(sceneChangeScript.roundTime < 15)
+        {
+            offDelayDuration = 0;
+        }
+
         yield return new WaitForSeconds(offDelayDuration);
         FindNewSpot();
         elaspedTime = 0;
