@@ -11,7 +11,8 @@ public class RepoMoveSystem : MonoBehaviour
     public GameObject currentLoc;
     private TerrainBlast terrainBlastScript;
     public DynamicCameraFollow dynamicCamera;
-    [HideInInspector] SceneChange sceneChangeScript; 
+    [HideInInspector] SceneChange sceneChangeScript;
+    public GameObject lastSpawnNode;
 
     [Header("Repository Customization")]
     public float activeDuration;
@@ -137,7 +138,17 @@ public class RepoMoveSystem : MonoBehaviour
     {
         //Pick random starting spawn loc
         randInd = Random.Range(0, repoSpawnNodes.Length - 1);
+
+        //choose a new number until the chosen node is not the same as the last node
+        while(repoSpawnNodes[randInd] == lastSpawnNode)
+        {
+            randInd = Random.Range(0, repoSpawnNodes.Length - 1);
+        }
+
         currentLoc = repoSpawnNodes[randInd];
+        lastSpawnNode = repoSpawnNodes[randInd];
+
+
 
         //Moves Repo to that location
         repository.transform.position = currentLoc.transform.position;
