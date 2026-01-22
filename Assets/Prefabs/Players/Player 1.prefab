@@ -410,7 +410,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
@@ -600,6 +600,9 @@ MonoBehaviour:
   shouldCheck: 1
   currentPowerUp: {fileID: 0}
   powerUpPickupScript: {fileID: 1667230621083816999}
+  weightThreshold: 65
+  slowdownPerGem: 0.011
+  minSpeedMultiplier: 0.2
 --- !u!114 &7976989412786637625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +662,8 @@ MonoBehaviour:
   isPlayerDead: 0
   spawnNum: 1
   gemCount: 0
+  gemsHeldUI: {fileID: 0}
+  isBlueTeam: 0
 --- !u!114 &2157015550122162584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,9 +1183,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5151492872390713093, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
       propertyPath: m_Name
       value: Copper3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
       propertyPath: m_Avatar
@@ -1190,6 +1207,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 62a99616a0950c0409dcc0a2adca71ff, type: 2}
+    - target: {fileID: 6786320725658967303, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6786320725658967303, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 2
