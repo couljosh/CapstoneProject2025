@@ -40,12 +40,13 @@ public class DepositScoreDisplay : MonoBehaviour
         initialLocalPosition = depositedText.transform.localPosition;
         originalScale = depositedText.transform.localScale;
         depositedText.enabled = false;
-    }
 
-    private void Start()
-    {
-        gemIcon.enabled = false;
     }
+    private void Start()
+        {
+            gemIcon.enabled = false;
+        }
+
 
     public void ShowScore(int scoreValue, Color teamColor, float repoInitialWorldZ)
     {
