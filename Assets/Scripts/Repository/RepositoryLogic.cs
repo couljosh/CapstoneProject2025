@@ -46,6 +46,8 @@ public class RepositoryLogic : MonoBehaviour
     private Color greyColor = new Color(0.5f, 0.5f, 0.5f);
     private bool wasPreviewContested;
     public Color contestedPreviewColor = Color.red;
+    //public Image regularGemImage;
+    public Image largeGemImage;
 
     [Header("Object References")]
     public GameObject repoAlarm;
@@ -109,7 +111,8 @@ public class RepositoryLogic : MonoBehaviour
 
     void Start()
     {
-
+        //regularGemImage.enabled = false;
+        largeGemImage.enabled = false;
         dynamicCamera = GameObject.Find("Main Camera").GetComponent<DynamicCamera>();
 
         repoAnimation = GetComponentInChildren<Animator>();
@@ -798,11 +801,21 @@ public class RepositoryLogic : MonoBehaviour
         {
             previewValue = 0;
             previewText.SetVisible(false);
+            largeGemImage.enabled = false;
+            //regularGemImage.enabled = false;
+
             lastPreviewInt = 0;
         }
         else
         {
             previewText.SetVisible(true);
+            //regularGemImage.enabled = true;
+            largeGemImage.enabled = false;
+            if (currentLargeBonus >0)
+            {
+                largeGemImage.enabled = true;
+
+            }
 
             int currentInt = Mathf.RoundToInt(previewValue);
             //pass the large bonus to the text component
@@ -826,6 +839,7 @@ public class RepositoryLogic : MonoBehaviour
                 previewText.transform.localScale =
                     Vector3.one * (growScale + punchIntensity);
                 lastPreviewInt = currentInt;
+
             }
 
             previewText.transform.localScale = Vector3.Lerp(

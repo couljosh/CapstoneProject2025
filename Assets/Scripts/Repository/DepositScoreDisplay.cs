@@ -1,11 +1,13 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DepositScoreDisplay : MonoBehaviour
 {
     [Header("UI Reference")]
     public TextMeshProUGUI depositedText;
+    public Image gemIcon;
 
     [Header("Display Settings")]
     public float holdDuration = 0.25f;
@@ -40,6 +42,11 @@ public class DepositScoreDisplay : MonoBehaviour
         depositedText.enabled = false;
     }
 
+    private void Start()
+    {
+        gemIcon.enabled = false;
+    }
+
     public void ShowScore(int scoreValue, Color teamColor, float repoInitialWorldZ)
     {
         StopAllCoroutines();
@@ -57,6 +64,7 @@ public class DepositScoreDisplay : MonoBehaviour
     private IEnumerator DisplayScoreCoroutine()
     {
         depositedText.enabled = true;
+        gemIcon.enabled = true;
 
         yield return StartCoroutine(PopAnimation(originalScale, popInScale, popInDuration));
 
@@ -84,13 +92,21 @@ public class DepositScoreDisplay : MonoBehaviour
             depositedText.transform.localPosition = pos;
 
             var c = depositedText.color;
+            var a = gemIcon.color;
 
             if (useOpacityCurve)
+            {
                 c.a = opacityCurve.Evaluate(t);
+                a.a = opacityCurve.Evaluate(t);
+            }
             else
+            {
                 c.a = Mathf.Lerp(1f, 0f, t);
+                a.a = Mathf.Lerp(1f, 0f, t);
+            }
 
             depositedText.color = c;
+            gemIcon.color = a;
 
             yield return null;
         }
@@ -98,6 +114,7 @@ public class DepositScoreDisplay : MonoBehaviour
         yield return StartCoroutine(PopAnimation(originalScale, popOutScale, popOutDuration));
 
         depositedText.enabled = false;
+        gemIcon.enabled = false;
         depositedText.transform.localScale = originalScale;
         depositedText.transform.localPosition = initialLocalPosition;
 
