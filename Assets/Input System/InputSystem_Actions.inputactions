@@ -643,6 +643,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "f308150c-a008-4a91-bab3-0902839a2e60",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -967,6 +976,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0b0b0a5d-f583-44c2-839d-e88d1c720d63",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4faf7dc9-b979-4210-aa8c-e808e1ef89f5",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -1005,6 +1025,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "047d361d-c650-418a-9374-61bcfcb4d082",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1061,6 +1092,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09b28373-da46-438a-a306-d50329df10ec",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
