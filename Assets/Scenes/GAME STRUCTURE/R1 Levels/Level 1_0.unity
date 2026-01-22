@@ -942,6 +942,7 @@ MonoBehaviour:
   repoSpawnNodes: []
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 1888523394}
+  lastSpawnNode: {fileID: 0}
   activeDuration: 25
   raiseDuration: 2
   raiseOffset: 4
@@ -12003,6 +12004,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5612365964923803171, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255721005883220178, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8289031922613709137, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}

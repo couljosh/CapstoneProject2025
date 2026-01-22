@@ -242,8 +242,8 @@ GameObject:
   - component: {fileID: 4523866319423858330}
   - component: {fileID: 6375792539722515905}
   - component: {fileID: -6492875282590318157}
-  - component: {fileID: 2274250935700680953}
   - component: {fileID: 1075726550954711194}
+  - component: {fileID: 6600606908549864640}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: ObjectDestroyer
@@ -373,7 +373,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
@@ -563,6 +563,13 @@ MonoBehaviour:
   shouldCheck: 1
   currentPowerUp: {fileID: 0}
   powerUpPickupScript: {fileID: 1075726550954711194}
+  weightThreshold: 65
+<<<<<<< HEAD
+  slowdownPerGem: 0.016
+=======
+  slowdownPerGem: 0.011
+>>>>>>> 2eb3a4660337d09942ec043a9826e67b0c7a50cd
+  minSpeedMultiplier: 0.2
 --- !u!114 &-8130815133573332991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +629,8 @@ MonoBehaviour:
   isPlayerDead: 0
   spawnNum: 2
   gemCount: 0
+  gemsHeldUI: {fileID: 0}
+  isBlueTeam: 0
 --- !u!114 &-6492875282590318157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,28 +650,6 @@ MonoBehaviour:
   chargeableKick: {fileID: 6281385745620656928}
   releaseVFX1: {fileID: 896083317744800972}
   releaseVFX2: {fileID: 7742853780997916163}
---- !u!95 &2274250935700680953
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3118915545251881927}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5796ec6b0e7aac746a0e1229535f0bc4, type: 2}
-  m_Controller: {fileID: 9100000, guid: 62a99616a0950c0409dcc0a2adca71ff, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1075726550954711194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +663,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePowerup: {fileID: 0}
+--- !u!95 &6600606908549864640
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118915545251881927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
+  m_Controller: {fileID: 9100000, guid: 62a99616a0950c0409dcc0a2adca71ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4286716305031785844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1012,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8232326521861016112, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a42b941e68c47434ba841ea51d2c3b23, type: 2}
+    - target: {fileID: -8232326521861016112, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cf8a52a4503a67419eb6e571ee79555, type: 2}
     - target: {fileID: 194066933775411992, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1015,10 +1032,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cobalt
       objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 5796ec6b0e7aac746a0e1229535f0bc4, type: 2}
     - target: {fileID: 5866666021909216657, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
       propertyPath: m_Controller
       value: 

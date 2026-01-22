@@ -1,0 +1,153 @@
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class JackHammerLogic : MonoBehaviour
+{
+    public PlayerMove playerMoveScript;
+
+    public Collider playerCollider;
+    public List<GameObject> playerModel = new List<GameObject>();
+
+    public float startElapsedTime;
+    public float startDelay;
+    public float emergeTimeElapsed;
+    public float emergeDelay;
+    public bool isBurrowed = false;
+    public bool isMoving;
+
+    public float moveSpeedMultiplier;
+
+    private MeshRenderer dirtModel;
+
+
+    public Image emergeProgress;
+
+    public float timeUntilEmergeIsAllowed;
+    public float elapsedTimeBurrowed;
+    public bool allowedToEmerge = false;
+
+    void Start()
+    {
+        emergeProgress.fillAmount = 0;
+
+        playerMoveScript = GetComponentInParent<PlayerMove>();
+
+        dirtModel = gameObject.GetComponent<MeshRenderer>();
+        dirtModel.enabled = false; 
+
+        Transform playerParent = this.transform.parent;
+
+        playerCollider = gameObject.transform.parent.GetComponent<Collider>();
+        playerModel.Add(playerParent.GetComponentInChildren<BagSize>().gameObject); //gembag
+        playerModel.Add(playerParent.GetComponentInChildren<SkinnedMeshRenderer>().gameObject); //model
+
+    }
+
+    void Update()
+    {
+        //Burrow Startup
+        if (startElapsedTime < startDelay)
+        {
+            startElapsedTime += Time.deltaTime;
+
+        }
+        else //Triggering & During Burrow
+        {
+            if (!isBurrowed)
+            {
+                Burrow();
+            }
+
+            elapsedTimeBurrowed += Time.deltaTime;
+
+            // This delay was added to avoid players emerging right after burrowing because of how quick the emerge happens
+            if(elapsedTimeBurrowed > timeUntilEmergeIsAllowed)
+            {            
+                allowedToEmerge = true;
+            }
+
+
+        }
+
+        //Burrow Emerge Check
+        if (allowedToEmerge)
+        {
+            emergeProgress.fillAmount = emergeTimeElapsed / emergeDelay;
+
+            if (isMoving)
+            {
+                emergeTimeElapsed = 0;
+            }
+            else
+            {
+                emergeTimeElapsed += Time.deltaTime;
+            }
+
+            if (emergeTimeElapsed > emergeDelay)
+            {
+                Emerge();
+            }
+        }
+    }
+
+    void Burrow()
+    {
+        dirtModel.enabled = true;
+
+        foreach (GameObject piece in playerModel)
+        {
+            piece.SetActive(false);
+        }
+
+        playerCollider.enabled = false;
+        isBurrowed = true;
+    }
+
+    void Emerge()
+    {
+        foreach (GameObject piece in playerModel)
+        {
+            piece.SetActive(true);
+        }
+
+        playerCollider.enabled = true;
+        dirtModel.enabled = false;
+
+        StartCoroutine(destroyJackHammerAfterDelay(0.4f));
+
+
+    }
+
+    //if other scripts need to destroy the jackhammer (coroutines cannot be called from other scripts)
+    public void destroyJackHammerFromOtherScript(float waitTime)
+    {
+        StartCoroutine(destroyJackHammerAfterDelay(waitTime));
+    }
+
+    public IEnumerator destroyJackHammerAfterDelay(float waitTime)
+    {
+        //do not move player until the delay ends
+        //playerMoveScript.canAct = false;
+
+        //yield return new WaitForSeconds(waitTime);
+
+        //re-enable player movement when they're allowed to move again
+        //playerMoveScript.canAct = true;
+
+        //reset to basic movement
+        playerMoveScript.powerUpPickupScript.activePowerup = null;
+
+        CaveInManager.isPowerupInPlay = false;
+        //engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);                        //Re-add with jackhamemr sfx
+        //drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        //destroy powerup object, so that you respawn normally
+        Destroy(gameObject.gameObject);
+
+        yield return null;
+    }
+}

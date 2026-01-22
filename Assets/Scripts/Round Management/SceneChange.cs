@@ -454,7 +454,10 @@ public class SceneChange : MonoBehaviour
         GameObject drill = GameObject.FindGameObjectWithTag("Drill");
         if (drill != null)
         {
+            if(drill.GetComponent<DrillLogic>())
             drill.GetComponent<DrillLogic>().drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            if(drill.GetComponentInChildren<DrillExplode>())
             drill.GetComponentInChildren<DrillExplode>().engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }

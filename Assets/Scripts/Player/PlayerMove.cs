@@ -256,6 +256,10 @@ public class PlayerMove : MonoBehaviour
             {
                 DrillMove(moveAmt);
             }
+            else if(powerUpPickupScript.activePowerup != null && powerUpPickupScript.activePowerup.tag == "JackHammer")
+            {
+                JackHammerMove(moveAmt);
+            }
             else
             {
                 Move(moveAmt);
@@ -335,6 +339,35 @@ public class PlayerMove : MonoBehaviour
         ApplyGravity();
     }   
     
+
+    public void JackHammerMove(Vector3 direction)
+    {
+        JackHammerLogic jackHammerLogicScript = powerUpPickupScript.activePowerup.GetComponent<JackHammerLogic>();
+
+        if (rb.linearVelocity.magnitude < finalMoveSpeed && jackHammerLogicScript.isBurrowed)
+        {
+            rb.AddForce(new Vector3(direction.x, 0f, direction.y) * finalMoveSpeed * jackHammerLogicScript.moveSpeedMultiplier, ForceMode.VelocityChange);
+        }
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.y), Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * playerStats.rotateSpeed);
+
+        }
+
+        if (direction.magnitude == 0)
+        {
+            jackHammerLogicScript.isMoving = false;
+        }
+        else
+        {
+            jackHammerLogicScript.isMoving = true;
+        }
+        print(direction.magnitude);
+        
+    }
+
 
     public void ApplyGravity()
     {

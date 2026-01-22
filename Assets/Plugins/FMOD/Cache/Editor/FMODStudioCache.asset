@@ -158,7 +158,11 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 639038199019617249
+<<<<<<< HEAD
+  cacheTime: 639038412240976753
+=======
+  cacheTime: 639039812996560888
+>>>>>>> 2eb3a4660337d09942ec043a9826e67b0c7a50cd
   SerializableEventsDict:
   - key: event:/SFX_Repository/Deposit
     index: 0
@@ -191,7 +195,11 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639038199019617249
+<<<<<<< HEAD
+  lastModified: 639038412240956645
+=======
+  lastModified: 639039812996535673
+>>>>>>> 2eb3a4660337d09942ec043a9826e67b0c7a50cd
   FileSizes:
   - Name: Desktop
     Value: 307360
@@ -292,7 +300,11 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639035815570445497
+<<<<<<< HEAD
+  lastModified: 639038412240976753
+=======
+  lastModified: 639039812996560888
+>>>>>>> 2eb3a4660337d09942ec043a9826e67b0c7a50cd
   FileSizes:
   - Name: Desktop
     Value: 1182
