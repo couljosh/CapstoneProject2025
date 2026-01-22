@@ -140,7 +140,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GlowIntensity: 10
+    - _GlowIntensity: 1.19
     - _IOR: 2
     - _Metal: 0
     - _Metallic: 0
@@ -159,7 +159,7 @@ Material:
     - _SparkleScale: 1.58
     - _SparkleSpeed: 0
     - _SpecularHighlights: 1
-    - _SpecularStrength: 1.135
+    - _SpecularStrength: 1.18
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 1
