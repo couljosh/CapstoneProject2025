@@ -364,7 +364,6 @@ public class PlayerMove : MonoBehaviour
         {
             jackHammerLogicScript.isMoving = true;
         }
-        print(direction.magnitude);
         
     }
 

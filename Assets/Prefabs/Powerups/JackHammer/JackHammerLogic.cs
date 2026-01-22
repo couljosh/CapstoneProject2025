@@ -9,7 +9,8 @@ public class JackHammerLogic : MonoBehaviour
 {
     public PlayerMove playerMoveScript;
 
-    public Collider playerCollider;
+    public CapsuleCollider playerCollider;
+    public BoxCollider burrowCollider;
     public List<GameObject> playerModel = new List<GameObject>();
 
     public float startElapsedTime;
@@ -28,10 +29,16 @@ public class JackHammerLogic : MonoBehaviour
 
     public float timeUntilEmergeIsAllowed;
     public float elapsedTimeBurrowed;
-    public bool allowedToEmerge = false;
+    public bool emergeDelayPassed = false;
+
+    public GameObject underBedrockWarning;
+
+
+    public bool underBedrock;
 
     void Start()
     {
+        underBedrockWarning.SetActive(false);
         emergeProgress.fillAmount = 0;
 
         playerMoveScript = GetComponentInParent<PlayerMove>();
@@ -41,7 +48,9 @@ public class JackHammerLogic : MonoBehaviour
 
         Transform playerParent = this.transform.parent;
 
-        playerCollider = gameObject.transform.parent.GetComponent<Collider>();
+        playerCollider = gameObject.transform.parent.GetComponent<CapsuleCollider>();
+        burrowCollider = gameObject.transform.parent.GetComponent<BoxCollider>();
+
         playerModel.Add(playerParent.GetComponentInChildren<BagSize>().gameObject); //gembag
         playerModel.Add(playerParent.GetComponentInChildren<SkinnedMeshRenderer>().gameObject); //model
 
@@ -62,23 +71,20 @@ public class JackHammerLogic : MonoBehaviour
                 Burrow();
             }
 
+           // This delay was added to avoid players emerging right after burrowing because of how quick the emerge happen
             elapsedTimeBurrowed += Time.deltaTime;
-
-            // This delay was added to avoid players emerging right after burrowing because of how quick the emerge happens
             if(elapsedTimeBurrowed > timeUntilEmergeIsAllowed)
             {            
-                allowedToEmerge = true;
+                emergeDelayPassed = true;
             }
-
-
         }
 
         //Burrow Emerge Check
-        if (allowedToEmerge)
+        if (emergeDelayPassed)
         {
             emergeProgress.fillAmount = emergeTimeElapsed / emergeDelay;
 
-            if (isMoving)
+            if (isMoving || underBedrock)
             {
                 emergeTimeElapsed = 0;
             }
@@ -96,6 +102,7 @@ public class JackHammerLogic : MonoBehaviour
 
     void Burrow()
     {
+
         dirtModel.enabled = true;
 
         foreach (GameObject piece in playerModel)
@@ -104,7 +111,11 @@ public class JackHammerLogic : MonoBehaviour
         }
 
         playerCollider.enabled = false;
+        burrowCollider.enabled = true;
         isBurrowed = true;
+
+        //turn on special collider for burrow mode
+        
     }
 
     void Emerge()
@@ -114,6 +125,7 @@ public class JackHammerLogic : MonoBehaviour
             piece.SetActive(true);
         }
 
+        burrowCollider.enabled = false;
         playerCollider.enabled = true;
         dirtModel.enabled = false;
 
@@ -150,4 +162,26 @@ public class JackHammerLogic : MonoBehaviour
 
         yield return null;
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Bedrock")
+        {
+            underBedrock = true;
+            underBedrockWarning.SetActive(true);
+        }
+
+    }
+
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Bedrock")
+        {
+            underBedrock = false;
+            underBedrockWarning.SetActive(false);
+        }
+    }
+
 }

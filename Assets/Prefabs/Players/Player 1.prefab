@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 8212142854837358148}
   - component: {fileID: 8428711472210419056}
   - component: {fileID: 1667230621083816999}
+  - component: {fileID: 2962907382941545259}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: ObjectDestroyer
@@ -733,6 +734,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePowerup: {fileID: 0}
+--- !u!65 &2962907382941545259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3261414448945768688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 131072
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 131071
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3346297267423927267
 GameObject:
   m_ObjectHideFlags: 0
