@@ -46499,15 +46499,15 @@ PrefabInstance:
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[1]'
       value: 
-      objectReference: {fileID: 835950612}
+      objectReference: {fileID: 835950610}
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[2]'
       value: 
-      objectReference: {fileID: 835950609}
+      objectReference: {fileID: 835950612}
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[3]'
       value: 
-      objectReference: {fileID: 835950610}
+      objectReference: {fileID: 835950609}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

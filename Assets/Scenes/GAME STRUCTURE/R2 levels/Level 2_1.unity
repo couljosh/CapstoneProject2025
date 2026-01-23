@@ -48019,15 +48019,15 @@ PrefabInstance:
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[1]'
       value: 
-      objectReference: {fileID: 2103205278}
+      objectReference: {fileID: 745851276}
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[2]'
       value: 
-      objectReference: {fileID: 2017418404}
+      objectReference: {fileID: 2103205278}
     - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
       propertyPath: 'playerPortraits.Array.data[3]'
       value: 
-      objectReference: {fileID: 745851276}
+      objectReference: {fileID: 2017418404}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

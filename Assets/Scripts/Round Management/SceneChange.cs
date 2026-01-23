@@ -26,6 +26,8 @@ public class SceneChange : MonoBehaviour
     public TextMeshProUGUI warningNumberText;
     public TextMeshProUGUI warningWordText;
     private bool warningActive = false;
+    private int lastDisplayedSecond = -1;
+    private int currentSecond;
 
     [Header("Round Customization")]
     public float roundTime;
@@ -232,12 +234,6 @@ public class SceneChange : MonoBehaviour
             roundTime = 0f;
         }
 
-        int min = Mathf.RoundToInt(roundTime);
-        //int sec = Mathf.FloorToInt(roundTime % 60);
-
-        //if (timerText != null)
-        //    timerText.text = string.Format("{0:00}:{1:00}", min, sec);
-        timerText.text = min.ToString();
 
         //Countdown Text Coloring
         if (roundTime <= 20)
@@ -250,11 +246,20 @@ public class SceneChange : MonoBehaviour
             timerText.color = Color.red;
         }
 
-        //Trigger warning at 30 seconds
-        if (roundTime < 31f && roundTime > 27f && !warningActive)
+        currentSecond = Mathf.RoundToInt(roundTime);
+
+        if (currentSecond != lastDisplayedSecond)
         {
-            StartCoroutine(PlayWarningSequence());
+            lastDisplayedSecond = currentSecond;
+
+            if (currentSecond == 30)
+                StartCoroutine(PlayWarningSequence());
+
+            if (currentSecond == 10)
+                StartCoroutine(PlayTenSecondWarningSequence());
         }
+
+        timerText.text = currentSecond.ToString();
 
         //Time hits 0
         if (roundTime <= 0 && !pointsAdded) //change this to when the game is finished.
@@ -413,9 +418,9 @@ public class SceneChange : MonoBehaviour
         int lastSec = -1;
 
         //countdown loop
-        while (roundTime > 27f)
+        while (currentSecond > 27)
         {
-            int currentSec = Mathf.CeilToInt(roundTime - 1);
+            int currentSec = currentSecond;
 
             //if second has changed, update text and trigger punch
             if (currentSec != lastSec)
@@ -454,6 +459,97 @@ public class SceneChange : MonoBehaviour
         warningNumberText.color = startColor;
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
+
+        warningActive = false;
+    }
+
+    IEnumerator PlayTenSecondWarningSequence() //plays the 10 second warning
+    {
+        warningActive = true;
+
+        warningNumberText.gameObject.SetActive(true);
+        warningWordText.gameObject.SetActive(false);
+
+        //warningNumberText.canvasRenderer.SetAlpha(100);
+        warningWordText.canvasRenderer.SetAlpha(100);
+
+        Vector3 startScale = Vector3.one * 0.4f;
+        Vector3 punchScale = Vector3.one * 1.2f;
+
+        warningNumberText.transform.localScale = startScale;
+        warningWordText.transform.localScale = startScale;
+
+        //colours for flashing
+        Color startColor = Color.white;
+        Color flashColor = new Color(1f, 0.15f, 0.15f);
+
+        float elapsed = 0;
+        float duration = 0.15f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float easedT = Mathf.Sin(t * Mathf.PI * 1f);
+
+            float alpha = Mathf.Lerp(0, 1, t);
+            //warningNumberText.canvasRenderer.SetAlpha(alpha);
+            warningWordText.canvasRenderer.SetAlpha(alpha);
+
+            Vector3 currentScale = Vector3.Lerp(startScale, punchScale, easedT);
+            warningNumberText.transform.localScale = currentScale;
+            warningWordText.transform.localScale = currentScale;
+            yield return null;
+        }
+
+        warningNumberText.transform.localScale = Vector3.one;
+        warningWordText.transform.localScale = Vector3.one;
+
+        //tracks it per second
+        int lastSec = -1;
+
+        //countdown loop
+        while (currentSecond > 1)
+        {
+            int currentSec = currentSecond;
+
+            //if second has changed, update text and trigger punch
+            if (currentSec != lastSec)
+            {
+                lastSec = currentSec;
+                warningNumberText.text = currentSec.ToString();
+                StartCoroutine(PunchTextSofter(warningNumberText)); // Trigger punch on number change
+            }
+
+            //warningWordText.text = "Seconds\nLeft";
+
+            //PINGPONG CLUTCH
+            float flashLerp = Mathf.PingPong(Time.time * 2f, 1f);
+            warningNumberText.color = Color.Lerp(startColor, flashColor, flashLerp);
+
+            yield return null;
+        }
+
+        //fade out
+        elapsed = 0;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            float alpha = Mathf.Lerp(1, 0, t);
+            //warningNumberText.canvasRenderer.SetAlpha(alpha);
+            warningWordText.canvasRenderer.SetAlpha(alpha);
+
+            warningNumberText.transform.localScale = Vector3.Lerp(Vector3.one, startScale, t);
+            warningWordText.transform.localScale = Vector3.Lerp(Vector3.one, startScale, t);
+            yield return null;
+        }
+
+        //reset color and disable
+        warningNumberText.color = startColor;
+        warningNumberText.gameObject.SetActive(false);
+        warningWordText.gameObject.SetActive(false);
+        warningActive = false;
     }
 
     void StopPowerupSound()
