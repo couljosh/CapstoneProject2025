@@ -137,12 +137,12 @@ public class RepoMoveSystem : MonoBehaviour
     void FindNewSpot()
     {
         //Pick random starting spawn loc
-        randInd = Random.Range(0, repoSpawnNodes.Length - 1);
+        randInd = Random.Range(0, repoSpawnNodes.Length);
 
         //choose a new number until the chosen node is not the same as the last node
-        while(repoSpawnNodes[randInd] == lastSpawnNode)
+        while (repoSpawnNodes[randInd] == lastSpawnNode)
         {
-            randInd = Random.Range(0, repoSpawnNodes.Length - 1);
+            randInd = Random.Range(0, repoSpawnNodes.Length);
         }
 
         currentLoc = repoSpawnNodes[randInd];

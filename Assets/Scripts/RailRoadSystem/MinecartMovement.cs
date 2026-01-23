@@ -9,8 +9,9 @@ public class MinecartMovement : MonoBehaviour
     public Rigidbody rb;
     public Spline currentSpline;
     public bool isForward;
-
+    FMOD.Studio.EventInstance minecartmovement;
     public float maxVelocity;
+    private bool isCartSoundPlaying;
 
     void Start()
     {
@@ -18,6 +19,9 @@ public class MinecartMovement : MonoBehaviour
          track = FindAnyObjectByType<SplineContainer>();
          currentSpline = track.Splines[0];
 
+        minecartmovement = FMODUnity.RuntimeManager.CreateInstance("event:/Minecarts/Movement");
+
+        isCartSoundPlaying = false;
     }
 
     private void FixedUpdate()
@@ -39,10 +43,25 @@ public class MinecartMovement : MonoBehaviour
 
         // Rotate the cart to align with the spline
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-
+        print(rb.linearVelocity.magnitude);
         // Steer velocity toward spline direction without overriding it completely
         if (rb.linearVelocity.magnitude > 0.05f)
         {
+            if (rb.linearVelocity.magnitude > 0.1f)
+            {
+                if (isCartSoundPlaying == false)
+                {
+                    minecartmovement.start();
+                    isCartSoundPlaying = true;
+                }
+            }
+            else
+            {
+                
+                minecartmovement.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                isCartSoundPlaying = false;
+            }
+
             Vector3 forwardDir = transform.forward;
 
             // If the velocity is going the opposite direction, flip the forward
@@ -56,11 +75,14 @@ public class MinecartMovement : MonoBehaviour
                 isForward = true;
             }
 
-                // Gradually steer velocity toward the forward direction
-                Vector3 steeredVelocity = Vector3.Lerp(rb.linearVelocity, rb.linearVelocity.magnitude * forwardDir, 0.1f);
+            // Gradually steer velocity toward the forward direction
+            Vector3 steeredVelocity = Vector3.Lerp(rb.linearVelocity, rb.linearVelocity.magnitude * forwardDir, 0.1f);
             rb.linearVelocity = steeredVelocity;
 
             rb.maxLinearVelocity = maxVelocity;
+
+            minecartmovement.setParameterByName("Minecarts Movement", rb.linearVelocity.magnitude);
+
         }
 
     }
