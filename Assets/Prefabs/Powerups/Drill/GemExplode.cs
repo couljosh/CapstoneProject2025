@@ -37,6 +37,7 @@ public class GemExplode : MonoBehaviour
         {
             hasExploded = true;
             SpawnGems();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_BigGems/GemShattering");
         }
         
     }

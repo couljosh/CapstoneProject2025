@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8922746043385281059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_BigGems/GemShattering
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_BigGems/GemShattering
+  Guid:
+    Data1: -1983846138
+    Data2: 1125957723
+    Data3: -289282634
+    Data4: 633480432
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 599
 --- !u!114 &-6702105224433580417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,13 +208,14 @@ MonoBehaviour:
   - {fileID: 218504140064292665}
   - {fileID: -4126106969403851690}
   - {fileID: -4305384197119303457}
+  - {fileID: -8922746043385281059}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 639047802773348588
+  cacheTime: 639047901510496438
   SerializableEventsDict:
   - key: event:/SFX_Repository/Deposit
     index: 0
@@ -207,6 +235,8 @@ MonoBehaviour:
     index: 7
   - key: event:/Minecarts/Movement
     index: 8
+  - key: event:/SFX_BigGems/GemShattering
+    index: 9
 --- !u!114 &148110947907540480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,10 +252,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639047802773328616
+  lastModified: 639047901510464547
   FileSizes:
   - Name: Desktop
-    Value: 380416
+    Value: 401792
   Exists: 1
 --- !u!114 &218504140064292665
 MonoBehaviour:
@@ -323,10 +353,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639047802773348588
+  lastModified: 639047901510496438
   FileSizes:
   - Name: Desktop
-    Value: 1304
+    Value: 1366
   Exists: 1
 --- !u!114 &7670074819231782021
 MonoBehaviour:

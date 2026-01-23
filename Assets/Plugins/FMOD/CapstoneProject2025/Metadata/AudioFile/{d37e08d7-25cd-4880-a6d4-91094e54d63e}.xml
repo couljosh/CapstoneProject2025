@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d37e08d7-25cd-4880-a6d4-91094e54d63e}">
+		<property name="assetPath">
+			<value>BigGems/SFX_GemsShattering_OneShot.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4334693877551021</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1e3bdfc-6836-4ba6-a9b6-7be658ffccde}</destination>
+		</relationship>
+	</object>
+</objects>
