@@ -259,6 +259,8 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Entered
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
+            //make sure players arent in a powerup that we forbid
+            if(!(other.gameObject.GetComponentInChildren<DrillLogic>() || other.gameObject.GetComponentInChildren<JackHammerLogic>()))
             addEnteredPlayer(other.gameObject);
         }
 
