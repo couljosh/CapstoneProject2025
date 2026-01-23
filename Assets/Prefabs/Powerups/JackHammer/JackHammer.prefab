@@ -156,21 +156,21 @@ MonoBehaviour:
   playerMoveScript: {fileID: 0}
   playerCollider: {fileID: 0}
   burrowCollider: {fileID: 0}
-  playerModel: []
-  startElapsedTime: 0
-  startDelay: 1
-  emergeTimeElapsed: 0
-  emergeDelay: 1
-  isBurrowed: 0
-  isMoving: 0
-  moveSpeedMultiplier: 1.5
   dirtModel: {fileID: 1883804551406193088}
   emergeProgress: {fileID: 6313527916145624757}
-  timeUntilEmergeIsAllowed: 5
-  elapsedTimeBurrowed: 0
-  emergeDelayPassed: 0
-  hasEmerged: 0
   underBedrockWarning: {fileID: 5591688069538344969}
+  playerModel: []
+  moveSpeedMultiplier: 1.5
+  startElapsedTime: 0
+  startDelay: 1
+  isBurrowed: 0
+  emergeTimeElapsed: 0
+  emergeDelay: 1
+  hasEmerged: 0
+  timeUntilEmergeIsAllowed: 3
+  elapsedTimeBurrowed: 0
+  isMoving: 0
+  emergeDelayPassed: 0
   underBedrock: 0
 --- !u!114 &2184080785613952319
 MonoBehaviour:
@@ -199,22 +199,20 @@ MonoBehaviour:
   bedrock:
     serializedVersion: 2
     m_Bits: 1024
-  hasExploded: 0
   innerRadius: 0.5
   elapsedTime: 0
   sphereIterations: 5
   sphereIncrease: 0.6
   timeToScan: 0.015
+  hasExploded: 0
+  isDoneEmerging: 0
   forceStrengthGem: 1
   forceStrengthCart: 5000
   forceStrengthBomb: 3000
   forceStrengthLargeGem: 1500
-  drillForceMultplier: 2
-  drillForceMultplierCart: 3
   explosionParticle: {fileID: 2313014315097405824, guid: c926e9163ccc32d44b33a7c21d9deeb4, type: 3}
   jackHammerLogicScript: {fileID: 3314643484962085354}
   explodePos: {fileID: 6090439320584640733}
-  isDoneEmerging: 0
 --- !u!1 &3207254389827907950
 GameObject:
   m_ObjectHideFlags: 0

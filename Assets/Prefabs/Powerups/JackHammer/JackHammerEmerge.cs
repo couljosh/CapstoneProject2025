@@ -14,47 +14,45 @@ public class JackHammerEmerge : MonoBehaviour
     public LayerMask gemMask;
     public LayerMask bedrock;
 
-    [Header("Explosion Variables")]
-    [HideInInspector] public bool hasExploded;
-    private float radius;
+    [Header("Explosion Size/Checks")]
     public float innerRadius;
+    public float radius;
     private float explosionCount = 0;
-    public float elapsedTime;
+    private float elapsedTime;
     public int sphereIterations;
     public float sphereIncrease;
-    private bool isFinishedClearing = true;
     public float timeToScan;
+    private bool isFinishedClearing = true;
+    [HideInInspector] public bool hasExploded;
+    public bool isDoneEmerging = false;
 
+    [Header("Explosion Forces")]
     public float forceStrengthGem;
     public float forceStrengthCart;
     public float forceStrengthBomb;
     public float forceStrengthLargeGem;
 
-    public float drillForceMultplier;
-    public float drillForceMultplierCart;
-
+    //Rumble
     private bool hasInitialRumbled = false;
     private bool isRumbling = false;
-    
+
     [Header("References")]
     public GameObject explosionParticle;
     private PlayerMove playerMoveScript;
     public JackHammerLogic jackHammerLogicScript;
     public GameObject explodePos;
 
-    public bool isDoneEmerging = false;
 
     void Start()
     {
-        radius = sphereIterations * sphereIncrease;
-        //engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);  //sound 
+        playerMoveScript = GetComponentInParent<PlayerMove>();
 
+        radius = sphereIterations * sphereIncrease;
+
+        //engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);  //sound 
         //engineStartInstance.start();   //sound
 
-        playerMoveScript = GetComponentInParent<PlayerMove>();
     }
-
-
 
 
     void Update()
@@ -86,7 +84,7 @@ public class JackHammerEmerge : MonoBehaviour
 
             GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
 
-            StartCoroutine(destroyJackHammerAfterDelay(0.5f)); 
+            StartCoroutine(destroyJackHammerAfterDelay(0.5f));
         }
     }
 
@@ -224,7 +222,7 @@ public class JackHammerEmerge : MonoBehaviour
         CaveInManager.isPowerupInPlay = false;
         //engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);                        //Re-add with jackhamemr sfx
         //drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-      
+
         //destroy powerup object, so that you respawn normally
         Destroy(gameObject.gameObject);
 

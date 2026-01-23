@@ -8,54 +8,54 @@ using UnityEngine.UI;
 
 public class JackHammerLogic : MonoBehaviour
 {
+    [Header("References")]
     public PlayerMove playerMoveScript;
-
     public CapsuleCollider playerCollider;
     public BoxCollider burrowCollider;
+    public GameObject dirtModel;
+    public Image emergeProgress;
+    public GameObject underBedrockWarning;
+    private List<GameObject> playerModel = new List<GameObject>();
 
-    public List<GameObject> playerModel = new List<GameObject>();
-
-    public float startElapsedTime;
-    public float startDelay;
-    public float emergeTimeElapsed;
-    public float emergeDelay;
-    public bool isBurrowed = false;
-    public bool isMoving;
-
+    [Header("Burrow Values")]
     public float moveSpeedMultiplier;
 
-    public GameObject dirtModel;
+    [Header("Start Burrow")]
+    public float startDelay;
+    public bool isBurrowed = false;
+    private float startElapsedTime;
 
-    public Image emergeProgress;
-
-    public float timeUntilEmergeIsAllowed;
-    public float elapsedTimeBurrowed;
-    public bool emergeDelayPassed = false;
+    [Header("Start Emerge")]
+    public float emergeDelay;
     public bool hasEmerged = false;
+    private float emergeTimeElapsed;
 
-    public GameObject underBedrockWarning;
-
-
+    [Header("Delay Emerge")]
+    public float timeUntilEmergeIsAllowed;
+    public bool isMoving;
+    public bool emergeDelayPassed = false;
     public bool underBedrock;
+    private float elapsedTimeBurrowed;
 
     void Start()
     {
+        playerMoveScript = GetComponentInParent<PlayerMove>();
+
+        //Correct setting on start
+        dirtModel.SetActive(false);
         underBedrockWarning.SetActive(false);
         emergeProgress.fillAmount = 0;
 
-        playerMoveScript = GetComponentInParent<PlayerMove>();
-
-        dirtModel.SetActive(false); 
-
-        Transform playerParent = this.transform.parent;
-
+        //Collider switch
         playerCollider = gameObject.transform.parent.GetComponent<CapsuleCollider>();
         burrowCollider = gameObject.transform.parent.GetComponent<BoxCollider>();
 
-
+        //Turn off player elements
+        Transform playerParent = this.transform.parent;
         playerModel.Add(playerParent.GetComponentInChildren<BagSize>().gameObject); //gembag
         playerModel.Add(playerParent.GetComponentInChildren<SkinnedMeshRenderer>().gameObject); //model
         playerModel.Add(playerParent.GetComponentInChildren<Light>().gameObject); //spotlight
+        playerModel.Add(playerParent.GetComponentInChildren<ObjectID>().gameObject); //pickaxe
 
     }
 
@@ -105,18 +105,15 @@ public class JackHammerLogic : MonoBehaviour
 
     void Burrow()
     {
-        dirtModel.SetActive(true);
         foreach (GameObject piece in playerModel)
         {
             piece.SetActive(false);
         }
-
+        
+        dirtModel.SetActive(true);
         playerCollider.enabled = false;
         burrowCollider.enabled = true;
-        isBurrowed = true;
-
-        //turn on special collider for burrow mode
-        
+        isBurrowed = true;        
     }
 
     void Emerge()
@@ -133,6 +130,7 @@ public class JackHammerLogic : MonoBehaviour
         dirtModel.SetActive(false);
     }
 
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Bedrock")
@@ -140,7 +138,6 @@ public class JackHammerLogic : MonoBehaviour
             underBedrock = true;
             underBedrockWarning.SetActive(true);
         }
-
     }
 
 
@@ -152,5 +149,4 @@ public class JackHammerLogic : MonoBehaviour
             underBedrockWarning.SetActive(false);
         }
     }
-
 }
