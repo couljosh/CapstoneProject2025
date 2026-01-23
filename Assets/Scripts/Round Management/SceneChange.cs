@@ -246,7 +246,7 @@ public class SceneChange : MonoBehaviour
             timerText.color = Color.red;
         }
 
-        currentSecond = Mathf.RoundToInt(roundTime);
+        currentSecond = Mathf.CeilToInt(roundTime);
 
         if (currentSecond != lastDisplayedSecond)
         {
@@ -457,6 +457,7 @@ public class SceneChange : MonoBehaviour
 
         //reset color and disable
         warningNumberText.color = startColor;
+        warningNumberText.text = ""; //clear number text so when the 10 second timer appears it doesnt show "27" briefly
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
 
