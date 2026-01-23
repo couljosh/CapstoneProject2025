@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{c3b56b08-9f11-4762-b86e-100ce9f46e34}">
+		<property name="name">
+			<value>Minecarts Movement</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf972f30-6b6d-4afd-aa28-119f0501b55a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bd7aa780-6974-47e8-80a4-9829bd40ce4f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bd7aa780-6974-47e8-80a4-9829bd40ce4f}">
+		<property name="maximum">
+			<value>40</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

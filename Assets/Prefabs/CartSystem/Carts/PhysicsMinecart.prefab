@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 6215791676165355425}
   - component: {fileID: 2075033072666377267}
   - component: {fileID: 1044306632519966010}
+  - component: {fileID: 533872881163840403}
   m_Layer: 6
   m_Name: PhysicsMinecart
   m_TagString: Cart
@@ -557,6 +558,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   rb: {fileID: 6935507128066894879}
+--- !u!114 &533872881163840403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413094215018168897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1316708398
+      Data2: 1265332736
+      Data3: -1295309417
+      Data4: 1205058219
+    Path: event:/Minecarts/Movement
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8758155536088112359
 GameObject:
   m_ObjectHideFlags: 0
