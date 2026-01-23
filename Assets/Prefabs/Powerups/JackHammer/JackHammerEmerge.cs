@@ -221,7 +221,7 @@ public class JackHammerEmerge : MonoBehaviour
         //re-enable player movement when they're allowed to move again
         //playerMoveScript.canAct = true;
 
-        jackHammerLogicScript.Emerge();
+        jackHammerLogicScript.Emerge(Vector3.zero);
 
         //reset to basic movement
         playerMoveScript.powerUpPickupScript.activePowerup = null;

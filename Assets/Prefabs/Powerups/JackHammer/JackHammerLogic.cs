@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class JackHammerLogic : MonoBehaviour
@@ -16,6 +17,7 @@ public class JackHammerLogic : MonoBehaviour
     public Image emergeProgress;
     public GameObject underBedrockWarning;
     private List<GameObject> playerModel = new List<GameObject>();
+
 
     [Header("Burrow Values")]
     public float moveSpeedMultiplier;
@@ -98,7 +100,7 @@ public class JackHammerLogic : MonoBehaviour
 
             if (emergeTimeElapsed > emergeDelay)
             {
-                Emerge();
+                Emerge(Vector3.zero);
             }
         }
     }
@@ -116,18 +118,23 @@ public class JackHammerLogic : MonoBehaviour
         isBurrowed = true;        
     }
 
-    public void Emerge()
+    public void Emerge(Vector3 emergeOffset)
     {
+
         hasEmerged = true;
 
-        foreach (GameObject piece in playerModel)
-        {
-            piece.SetActive(true);
-        }
+            foreach (GameObject piece in playerModel)
+            {
+                piece.SetActive(true);
+            }
 
         burrowCollider.enabled = false;
         playerCollider.enabled = true;
         dirtModel.SetActive(false);
+
+        PlayerInput playerinputRef = gameObject.GetComponentInParent<PlayerInput>();
+        playerinputRef.GetComponent<Rigidbody>().position += emergeOffset;
+        playerinputRef.transform.position += emergeOffset;
     }
 
     private void OnTriggerStay(Collider other)
