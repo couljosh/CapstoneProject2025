@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 7255459495870141411}
   - component: {fileID: 578428128551793587}
   - component: {fileID: 5690714345032582352}
+  - component: {fileID: 6867098261134868548}
   m_Layer: 0
   m_Name: PowerupCrate
   m_TagString: Crate
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 3
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -308,6 +309,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873838d4fb2d8aa428be0980650c380e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6867098261134868548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429195990252968690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9507d5a58cedc924d9091f625b379f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.39664513, b: 0, a: 1}
+    key2: {r: 1, g: 0.9584457, b: 0, a: 0}
+    key3: {r: 0.25402117, g: 1, b: 0, a: 0}
+    key4: {r: 0, g: 0.6807933, b: 1, a: 0}
+    key5: {r: 0.7664647, g: 0, b: 1, a: 0}
+    key6: {r: 1, g: 0, b: 0.0094127655, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 8867
+    ctime2: 19661
+    ctime3: 30069
+    ctime4: 42212
+    ctime5: 53392
+    ctime6: 65535
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  timeToFullCycle: 2
 --- !u!1001 &8199597362660062831
 PrefabInstance:
   m_ObjectHideFlags: 0
