@@ -551,6 +551,9 @@ MonoBehaviour:
   floor:
     serializedVersion: 2
     m_Bits: 2048
+  terrain:
+    serializedVersion: 2
+    m_Bits: 128
   chargingKick: 0
   canAct: 0
   shouldCheck: 1

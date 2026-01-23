@@ -39,6 +39,7 @@ public class PlayerMove : MonoBehaviour
     public LayerMask kickable;
     public LayerMask player;
     public LayerMask floor;
+    public LayerMask terrain;
 
     private float currentKickStrength;
     private float kickStrengthTimer = 0;
@@ -201,6 +202,7 @@ public class PlayerMove : MonoBehaviour
             shouldCheck = false;
         }
 
+        HandleContactMiningAnimation();
 
         Debug.DrawRay(rayStartPosOne.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
         Debug.DrawRay(rayStartPosTwo.transform.position, transform.TransformDirection(Vector3.forward) * playerStats.kickDectDist, Color.red);
@@ -391,6 +393,36 @@ public class PlayerMove : MonoBehaviour
         else
         {
             coyoteTimer = 0;
+        }
+    }
+
+    private void HandleContactMiningAnimation()
+    {
+        //check if the player is moving or trying to move
+        bool isTryingToMove = moveAmt.sqrMagnitude > 0.01f;
+        bool isTouchingBlock = false;
+
+        if (isTryingToMove && canAct && !playerDeath.isPlayerDead)
+        {
+            //check direction player is trying to move in world space
+            Vector3 moveDirection = new Vector3(moveAmt.x, 0, moveAmt.y).normalized;
+
+            //touch distance, we can adjust if its too small or big
+            float touchDist = 0.7f;
+
+            //raycast in direction of movement
+            if (Physics.Raycast(rayStartPosOne.transform.position, moveDirection, touchDist, terrain) ||
+    Physics.Raycast(rayStartPosTwo.transform.position, moveDirection, touchDist, terrain) ||
+    Physics.Raycast(rayStartPosThree.transform.position, moveDirection, touchDist, terrain))
+            {
+                isTouchingBlock = true;
+            }
+        }
+
+        //checking for anything null just in case.
+        if (playerEffects != null && playerEffects.copperAnimator != null)
+        {
+            playerEffects.copperAnimator.SetBool("isMining", isTouchingBlock);
         }
     }
 }
