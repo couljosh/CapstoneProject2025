@@ -9998,6 +9998,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1018664272722485354, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2846467714329206788}
+    - targetCorrespondingSourceObject: {fileID: -1018664272722485354, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2919275649736113769}
   m_SourcePrefab: {fileID: 100100000, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
 --- !u!4 &2334072506942643698 stripped
 Transform:
@@ -10128,6 +10131,24 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 1a5d0224d7731d74789920ec3737419b, type: 2}
   bombRenderer: {fileID: 8089167957515607907}
   bombVisual: {fileID: 2334072506942643698}
+--- !u!114 &2919275649736113769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211037646128522639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 4.46
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &8089167957515607907 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6317578925029434746, guid: 86f8a0d0c085ef34c86e4007d6a0f81b, type: 3}
