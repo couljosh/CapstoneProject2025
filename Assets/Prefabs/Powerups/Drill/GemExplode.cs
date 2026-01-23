@@ -9,7 +9,8 @@ public class GemExplode : MonoBehaviour
     public int scatterForce;
 
     //prevent exploding into more than one set of gems
-    private bool hasExploded = false;
+    public bool hasExploded = false;
+
 
     public GameObject gemSparkle;
     public GemRef gemRef;
@@ -23,15 +24,24 @@ public class GemExplode : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Drill") && hasExploded == false)
+        if (collision.gameObject.CompareTag("Drill"))
         {
-            hasExploded = true; 
-            SpawnGems();
+            ExplodeSequence();
         }
 
     }
 
-    void SpawnGems()
+    public void ExplodeSequence()
+    {
+        if (!hasExploded)
+        {
+            hasExploded = true;
+            SpawnGems();
+        }
+        
+    }
+
+    public void SpawnGems()
     {
         //explosion particle
         GameObject particle = Instantiate(gemSparkle, transform.position, Quaternion.identity);

@@ -133,7 +133,7 @@ public class JackHammerLogic : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Bedrock")
+        if (other.gameObject.tag == "Bedrock" || other.gameObject.tag == "Repository")
         {
             underBedrock = true;
             underBedrockWarning.SetActive(true);
@@ -143,7 +143,7 @@ public class JackHammerLogic : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Bedrock")
+        if (other.gameObject.tag == "Bedrock" || other.gameObject.tag == "Repository")
         {
             underBedrock = false;
             underBedrockWarning.SetActive(false);

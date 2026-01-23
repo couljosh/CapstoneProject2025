@@ -159,16 +159,12 @@ MonoBehaviour:
   dirtModel: {fileID: 1883804551406193088}
   emergeProgress: {fileID: 6313527916145624757}
   underBedrockWarning: {fileID: 5591688069538344969}
-  playerModel: []
   moveSpeedMultiplier: 1.5
-  startElapsedTime: 0
   startDelay: 1
   isBurrowed: 0
-  emergeTimeElapsed: 0
-  emergeDelay: 1
+  emergeDelay: 1.25
   hasEmerged: 0
   timeUntilEmergeIsAllowed: 3
-  elapsedTimeBurrowed: 0
   isMoving: 0
   emergeDelayPassed: 0
   underBedrock: 0
@@ -200,8 +196,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   innerRadius: 0.5
-  elapsedTime: 0
-  sphereIterations: 5
+  radius: 0
+  sphereIterations: 6
   sphereIncrease: 0.6
   timeToScan: 0.015
   hasExploded: 0

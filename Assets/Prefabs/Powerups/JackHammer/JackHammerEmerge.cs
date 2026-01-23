@@ -127,8 +127,12 @@ public class JackHammerEmerge : MonoBehaviour
 
                     if (raycastHit.collider.tag == "LargeGem")
                     {
-                        Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
-                        raycastHit.collider.gameObject.gameObject.GetComponentInParent<Rigidbody>().AddForce(forceVector * forceStrengthLargeGem, ForceMode.Impulse);
+                        GemExplode largeGemFound  = raycastHit.collider.gameObject.GetComponentInParent<GemExplode>();
+                        largeGemFound.ExplodeSequence();
+
+
+                        //Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
+                        //raycastHit.collider.gameObject.gameObject.GetComponentInParent<Rigidbody>().AddForce(forceVector * forceStrengthLargeGem, ForceMode.Impulse);
                     }
 
                     //Loock for Gem
