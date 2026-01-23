@@ -67,10 +67,10 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 16
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ca7ae21e55839644bb20efaed3fc3815, type: 2}
+  - {fileID: 2100000, guid: 30c991f802f1dc647bc5f50dd0efc2df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
