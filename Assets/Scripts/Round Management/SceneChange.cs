@@ -509,7 +509,7 @@ public class SceneChange : MonoBehaviour
         int lastSec = -1;
 
         //countdown loop
-        while (currentSecond > 1)
+        while (currentSecond > 0)
         {
             int currentSec = currentSecond;
 
