@@ -113,6 +113,12 @@ public class PlayerDeath : MonoBehaviour
             gameObject.GetComponentInChildren<DrillExplode>().destroyDrillFromOtherScript(0);
         }
 
+        //remove jackhammer powerup if applicable
+        if (gameObject.GetComponentInChildren<JackHammerEmerge>())
+        {
+            gameObject.GetComponentInChildren<JackHammerEmerge>().destroyJackHammerFromOtherScript(0);
+        }
+
 
         if (playerGamepad != null)
             playerGamepad.SetMotorSpeeds(1f, 1f);

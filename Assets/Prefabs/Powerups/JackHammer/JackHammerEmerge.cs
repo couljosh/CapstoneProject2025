@@ -212,6 +212,7 @@ public class JackHammerEmerge : MonoBehaviour
 
     public IEnumerator destroyJackHammerAfterDelay(float waitTime)
     {
+
         //do not move player until the delay ends
         //playerMoveScript.canAct = false;
 
@@ -219,6 +220,8 @@ public class JackHammerEmerge : MonoBehaviour
 
         //re-enable player movement when they're allowed to move again
         //playerMoveScript.canAct = true;
+
+        jackHammerLogicScript.Emerge();
 
         //reset to basic movement
         playerMoveScript.powerUpPickupScript.activePowerup = null;

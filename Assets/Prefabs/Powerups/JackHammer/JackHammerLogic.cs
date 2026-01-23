@@ -116,7 +116,7 @@ public class JackHammerLogic : MonoBehaviour
         isBurrowed = true;        
     }
 
-    void Emerge()
+    public void Emerge()
     {
         hasEmerged = true;
 
@@ -129,7 +129,6 @@ public class JackHammerLogic : MonoBehaviour
         playerCollider.enabled = true;
         dirtModel.SetActive(false);
     }
-
 
     private void OnTriggerStay(Collider other)
     {
