@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UI;
 
 public class JackHammerLogic : MonoBehaviour
@@ -11,6 +12,7 @@ public class JackHammerLogic : MonoBehaviour
 
     public CapsuleCollider playerCollider;
     public BoxCollider burrowCollider;
+
     public List<GameObject> playerModel = new List<GameObject>();
 
     public float startElapsedTime;
@@ -22,14 +24,14 @@ public class JackHammerLogic : MonoBehaviour
 
     public float moveSpeedMultiplier;
 
-    private MeshRenderer dirtModel;
-
+    public GameObject dirtModel;
 
     public Image emergeProgress;
 
     public float timeUntilEmergeIsAllowed;
     public float elapsedTimeBurrowed;
     public bool emergeDelayPassed = false;
+    public bool hasEmerged = false;
 
     public GameObject underBedrockWarning;
 
@@ -43,16 +45,17 @@ public class JackHammerLogic : MonoBehaviour
 
         playerMoveScript = GetComponentInParent<PlayerMove>();
 
-        dirtModel = gameObject.GetComponent<MeshRenderer>();
-        dirtModel.enabled = false; 
+        dirtModel.SetActive(false); 
 
         Transform playerParent = this.transform.parent;
 
         playerCollider = gameObject.transform.parent.GetComponent<CapsuleCollider>();
         burrowCollider = gameObject.transform.parent.GetComponent<BoxCollider>();
 
+
         playerModel.Add(playerParent.GetComponentInChildren<BagSize>().gameObject); //gembag
         playerModel.Add(playerParent.GetComponentInChildren<SkinnedMeshRenderer>().gameObject); //model
+        playerModel.Add(playerParent.GetComponentInChildren<Light>().gameObject); //spotlight
 
     }
 
@@ -102,9 +105,7 @@ public class JackHammerLogic : MonoBehaviour
 
     void Burrow()
     {
-
-        dirtModel.enabled = true;
-
+        dirtModel.SetActive(true);
         foreach (GameObject piece in playerModel)
         {
             piece.SetActive(false);
@@ -120,6 +121,8 @@ public class JackHammerLogic : MonoBehaviour
 
     void Emerge()
     {
+        hasEmerged = true;
+
         foreach (GameObject piece in playerModel)
         {
             piece.SetActive(true);
@@ -127,40 +130,7 @@ public class JackHammerLogic : MonoBehaviour
 
         burrowCollider.enabled = false;
         playerCollider.enabled = true;
-        dirtModel.enabled = false;
-
-        StartCoroutine(destroyJackHammerAfterDelay(0.4f));
-
-
-    }
-
-    //if other scripts need to destroy the jackhammer (coroutines cannot be called from other scripts)
-    public void destroyJackHammerFromOtherScript(float waitTime)
-    {
-        StartCoroutine(destroyJackHammerAfterDelay(waitTime));
-    }
-
-    public IEnumerator destroyJackHammerAfterDelay(float waitTime)
-    {
-        //do not move player until the delay ends
-        //playerMoveScript.canAct = false;
-
-        //yield return new WaitForSeconds(waitTime);
-
-        //re-enable player movement when they're allowed to move again
-        //playerMoveScript.canAct = true;
-
-        //reset to basic movement
-        playerMoveScript.powerUpPickupScript.activePowerup = null;
-
-        CaveInManager.isPowerupInPlay = false;
-        //engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);                        //Re-add with jackhamemr sfx
-        //drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
-        //destroy powerup object, so that you respawn normally
-        Destroy(gameObject.gameObject);
-
-        yield return null;
+        dirtModel.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
@@ -172,7 +142,6 @@ public class JackHammerLogic : MonoBehaviour
         }
 
     }
-
 
 
     private void OnTriggerExit(Collider other)

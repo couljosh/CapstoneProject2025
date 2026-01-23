@@ -1,12 +1,11 @@
-using UnityEngine;
-using UnityEngine.TerrainUtils;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework.Internal.Filters;
-using FMODUnity;
-using FMOD.Studio;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.TerrainUtils;
 
-public class DrillExplode : MonoBehaviour
+public class JackHammerEmerge : MonoBehaviour
 {
     [Header("Layers To Detect")]
     public LayerMask terrainMask;
@@ -36,79 +35,42 @@ public class DrillExplode : MonoBehaviour
 
     private bool hasInitialRumbled = false;
     private bool isRumbling = false;
-
+    
     [Header("References")]
     public GameObject explosionParticle;
-    private PlayerMove playerMove;
-    public DrillLogic drillLogicScript;
+    private PlayerMove playerMoveScript;
+    public JackHammerLogic jackHammerLogicScript;
     public GameObject explodePos;
 
-    [Header("Audio")]
-    public FMODUnity.EventReference engineStartEvent;
-    public EventInstance engineStartInstance;
+    public bool isDoneEmerging = false;
 
-
-    private void Start()
+    void Start()
     {
         radius = sphereIterations * sphereIncrease;
-        engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);
+        //engineStartInstance = RuntimeManager.CreateInstance(engineStartEvent);  //sound 
 
-        engineStartInstance.start();
+        //engineStartInstance.start();   //sound
 
-        playerMove = GetComponentInParent<PlayerMove>();
+        playerMoveScript = GetComponentInParent<PlayerMove>();
     }
 
-    private void Update()
+
+
+
+    void Update()
     {
         if (!isFinishedClearing)
         {
             ClearTerrain();
 
         }
+
+        if (jackHammerLogicScript.hasEmerged && !isDoneEmerging)
+        {
+            Explosion();
+            isDoneEmerging = true;
+        }
     }
-
-    // Determines all interactions that happen when the driving drill hits something
-    private void OnTriggerEnter(Collider other)
-    {
-        //NOTE: For reasons beyond me, the first explosion from the drill will NOT pick up any collisions whatsoever. Every subsequent one can, but the first cannot.
-        //Therefore, we must actually do two explosions in quick succession in order to actually pick up anything. The first explosion is REQUIRED for the second explosion to see anything
-        //We do not know if this is a unity bug, or some huge oversight in what we're doing. God help us all. 
-        if ((other.gameObject.tag == "Bedrock") && explosionCount < 2 && drillLogicScript.isDrillMoving)
-        {
-            explosionCount++;
-            hasExploded = true; 
-            Explosion();    
-
-        }
-
-         if(other.gameObject.tag == "Repository" && explosionCount < 2 && drillLogicScript.isDrillMoving)
-        {
-            explosionCount++;
-
-            //Triggers the explosion twice to account for the issue where the first explosion doesnt detect anything 
-            Explosion();    
-            //Explosion();
-        }
-
-        if (other.gameObject.tag == "ObjectDestroyer" && drillLogicScript.isDrillMoving)
-        {
-            other.gameObject.GetComponent<PlayerDeath>().PlayerDie();
-        }
-
-        if (other.gameObject.tag == "Cart")
-        {
-            Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
-            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplierCart, ForceMode.Impulse);
-        }
-
-        if (other.gameObject.tag == "Bomb")
-        {
-            Vector3 forceVector = other.gameObject.gameObject.transform.position - transform.position;
-            other.gameObject.gameObject.GetComponent<Rigidbody>().AddForce((forceVector * forceStrengthBomb) * drillForceMultplier, ForceMode.Impulse);
-        }
-
-    }
-
 
     public void Explosion()
     {
@@ -124,14 +86,15 @@ public class DrillExplode : MonoBehaviour
 
             GameObject.Instantiate(explosionParticle, gameObject.transform.position, Quaternion.identity);
 
-            StartCoroutine(destroyDrillAfterDelay(0.4f));
+            StartCoroutine(destroyJackHammerAfterDelay(0.5f)); 
         }
-
     }
 
 
     public void Explode(Collider[] colliding)
     {
+
+
         // Interior Bomb Detection (avoids terrain inside the bomb from being missed)
         Collider[] interiorHits = Physics.OverlapSphere(explodePos.transform.position, innerRadius, terrainMask);
         Debug.DrawRay(transform.position, Vector3.forward * innerRadius, Color.red, 5);
@@ -160,7 +123,7 @@ public class DrillExplode : MonoBehaviour
                     if (raycastHit.collider.tag == "ObjectDestroyer")
                     {
                         //avoid killing the player who is in the drill
-                        if (raycastHit.collider.gameObject != playerMove.gameObject)
+                        if (raycastHit.collider.gameObject != playerMoveScript.gameObject)
                             raycastHit.collider.gameObject.GetComponent<PlayerDeath>().PlayerDie();
                     }
 
@@ -239,35 +202,32 @@ public class DrillExplode : MonoBehaviour
         }
     }
 
-    //if other scripts need to destroy the drill (coroutines cannot be called from other scripts)
-    public void destroyDrillFromOtherScript(float waitTime)
+    //if other scripts need to destroy the jackhammer (coroutines cannot be called from other scripts)
+    public void destroyJackHammerFromOtherScript(float waitTime)
     {
-        StartCoroutine(destroyDrillAfterDelay(waitTime));
+        StartCoroutine(destroyJackHammerAfterDelay(waitTime));
     }
 
-    public IEnumerator destroyDrillAfterDelay(float waitTime)
+    public IEnumerator destroyJackHammerAfterDelay(float waitTime)
     {
         //do not move player until the delay ends
-        playerMove.canAct = false;
+        //playerMoveScript.canAct = false;
 
         yield return new WaitForSeconds(waitTime);
 
         //re-enable player movement when they're allowed to move again
-        playerMove.canAct = true;
+        //playerMoveScript.canAct = true;
 
         //reset to basic movement
-        playerMove.powerUpPickupScript.activePowerup = null;
+        playerMoveScript.powerUpPickupScript.activePowerup = null;
 
         CaveInManager.isPowerupInPlay = false;
-        engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
-        //destroy drill object, so that you respawn normally
-        Destroy(gameObject.transform.parent.gameObject);
+        //engineStartInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);                        //Re-add with jackhamemr sfx
+        //drillLogicScript.drillInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+      
+        //destroy powerup object, so that you respawn normally
+        Destroy(gameObject.gameObject);
 
         yield return null;
     }
-
 }
-
-
