@@ -311,7 +311,15 @@ public class SceneChange : MonoBehaviour
         GameScore.AddScore(redRoundTotal, blueRoundTotal);
         pointsAdded = true;
 
-        StopPowerupSound();
+        try
+        {
+            StopPowerupSound();
+        }
+        catch
+        {
+            Debug.Log("Problem ending sounds in fmod"); 
+        }
+        
 
         foreach (var gamepad in Gamepad.all)
         {
