@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 3201843999811389706}
   - component: {fileID: 4368352519119216246}
   - component: {fileID: 7967715657535104749}
+  - component: {fileID: 5534607725999230429}
   m_Layer: 5
   m_Name: Copper Portrait
   m_TagString: Untagged
@@ -512,8 +513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.3, y: 158.211}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -13.3, y: 186.1}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4368352519119216246
 CanvasRenderer:
@@ -553,6 +554,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5534607725999230429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990507395453968469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitImage: {fileID: 7967715657535104749}
+  aliveColor: {r: 1, g: 1, b: 1, a: 1}
+  deadColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  popScale: 1.4
+  animDuration: 0.2
 --- !u!1 &2696408089917820650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1116,7 @@ GameObject:
   - component: {fileID: 9020359688644417566}
   - component: {fileID: 2223506340528208633}
   - component: {fileID: 7254193168390455651}
+  - component: {fileID: 4337314612743631127}
   m_Layer: 5
   m_Name: Bomba Portrait
   m_TagString: Untagged
@@ -1121,8 +1140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3529, y: 158.211}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 3529, y: 186.1}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2223506340528208633
 CanvasRenderer:
@@ -1162,6 +1181,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4337314612743631127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6355048693522383861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitImage: {fileID: 7254193168390455651}
+  aliveColor: {r: 1, g: 1, b: 1, a: 1}
+  deadColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  popScale: 1.4
+  animDuration: 0.2
 --- !u!1 &6442448224718525258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1420,7 @@ GameObject:
   - component: {fileID: 1312666376752327817}
   - component: {fileID: 8179885693772785537}
   - component: {fileID: 3927425740483012890}
+  - component: {fileID: 8960926097554745854}
   m_Layer: 5
   m_Name: Axle Portrait
   m_TagString: Untagged
@@ -1408,7 +1445,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3529, y: -56}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8179885693772785537
 CanvasRenderer:
@@ -1448,6 +1485,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8960926097554745854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640973494077005436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitImage: {fileID: 3927425740483012890}
+  aliveColor: {r: 1, g: 1, b: 1, a: 1}
+  deadColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  popScale: 1.4
+  animDuration: 0.2
 --- !u!1 &6663331794042867286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1649,7 @@ GameObject:
   - component: {fileID: 1085603572950137343}
   - component: {fileID: 8258634675146833993}
   - component: {fileID: 1510148462404692710}
+  - component: {fileID: 7729321175254877169}
   m_Layer: 5
   m_Name: Cobalt Portrait
   m_TagString: Untagged
@@ -1619,7 +1674,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -13.3, y: -56}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8258634675146833993
 CanvasRenderer:
@@ -1659,6 +1714,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7729321175254877169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814255987538447493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitImage: {fileID: 1510148462404692710}
+  aliveColor: {r: 1, g: 1, b: 1, a: 1}
+  deadColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+  popScale: 1.4
+  animDuration: 0.2
 --- !u!1 &8030442711272876829
 GameObject:
   m_ObjectHideFlags: 0

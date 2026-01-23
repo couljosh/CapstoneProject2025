@@ -20,6 +20,11 @@ public class PlayerUIManager : MonoBehaviour
     [Tooltip("Vertical offset of the UI bar, relative to screen height (0.01 = 1%)")]
     public float screenHeightOffsetValue = 0.04f;
 
+    [Header("Player Portraits")]
+    public PlayerPortraitUI[] playerPortraits;
+    private PlayerDeath[] trackedPlayers = new PlayerDeath[5];
+    private bool[] lastDeathState = new bool[5];
+
     private void Start()
     {
         if (mainCanvas == null)
@@ -34,11 +39,40 @@ public class PlayerUIManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+            if (trackedPlayers[i] != null)
+            {
+                bool currentState = trackedPlayers[i].isPlayerDead;
+
+                //if the state changed (died or respawned)
+                if (currentState != lastDeathState[i])
+                {
+                    //trigger the pop and color change on the portrait
+                    if (playerPortraits[i - 1] != null)
+                    {
+                        playerPortraits[i - 1].SetStatus(currentState);
+                    }
+                    lastDeathState[i] = currentState;
+                }
+            }
+        }
+    }
+
     public void RegisterPlayer(GameObject playerObject, int playerID)
     {
         PlayerMove playerMove = playerObject.GetComponent<PlayerMove>();
         BombSpawn bombSpawn = playerObject.GetComponent<BombSpawn>();
 
+        //setup for player portrait animation
+        PlayerDeath pd = playerObject.GetComponent<PlayerDeath>();
+        if (pd != null && playerID >= 1 && playerID <= 4)
+        {
+            trackedPlayers[playerID] = pd;
+            lastDeathState[playerID] = pd.isPlayerDead;
+        }
 
         if (playerMove != null)
         {

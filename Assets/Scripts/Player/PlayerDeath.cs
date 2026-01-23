@@ -117,8 +117,7 @@ public class PlayerDeath : MonoBehaviour
         if (playerGamepad != null)
             playerGamepad.SetMotorSpeeds(1f, 1f);
 
-        /* Switch rumble has to be set uniquely because poor Nintendo absolutely had to have some
-        proprietary bullshit on top of HID. Even then, it only works over Bluetooth.*/
+        /* Switch rumble has to be set uniquely*/
 
         if (playerGamepad is SwitchProControllerHID)
         {

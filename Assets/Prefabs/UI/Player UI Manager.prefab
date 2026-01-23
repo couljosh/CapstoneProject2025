@@ -46,5 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kickChargeUIPrefab: {fileID: 4527900770723067954, guid: 7383352d626bde64cbac763acc98a38a, type: 3}
   bombAmmoBarPrefab: {fileID: 4527900770723067954, guid: 4d6e865c54d164c42adb725d22be542a, type: 3}
+  gemsHeldCounterPrefab: {fileID: 0}
   mainCanvas: {fileID: 0}
   screenHeightOffsetValue: 0.04
+  playerPortraits: []
