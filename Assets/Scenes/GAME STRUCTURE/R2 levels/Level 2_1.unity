@@ -389,6 +389,7 @@ MonoBehaviour:
   repoSpawnNodes: []
   currentLoc: {fileID: 0}
   dynamicCamera: {fileID: 466598816}
+  lastSpawnNode: {fileID: 0}
   activeDuration: 25
   raiseDuration: 2
   raiseOffset: 4
@@ -11460,6 +11461,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &745851276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8960926097554745854, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1442622621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &769022403
@@ -47623,6 +47635,17 @@ Transform:
   - {fileID: 663182989}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894047541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5534607725999230429, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1442622621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1898855915
 GameObject:
   m_ObjectHideFlags: 0
@@ -47766,6 +47789,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1126091163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2017418404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4337314612743631127, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1442622621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2099684003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 861299695240743266, guid: ed529c009d8ef4c4a81cd1157d1c0c08, type: 3}
@@ -47780,6 +47814,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b9b683c87bf1c3468e56960c2967627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2103205278 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7729321175254877169, guid: 0bcfc0b3a33ca844192c9f53bf82f45b, type: 3}
+  m_PrefabInstance: {fileID: 1442622621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5b60154fed80a439c6bca3541d66c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2147020840
@@ -47963,6 +48008,26 @@ PrefabInstance:
       propertyPath: gemsHeldCounterPrefab
       value: 
       objectReference: {fileID: 6802103998379015569, guid: c3b49df178ab572439a8ba2e54015833, type: 3}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: playerPortraits.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: 'playerPortraits.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1894047541}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: 'playerPortraits.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2103205278}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: 'playerPortraits.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2017418404}
+    - target: {fileID: 3872777877434611786, guid: 7b0bdaf8de844554eab5bbf8ce727ea3, type: 3}
+      propertyPath: 'playerPortraits.Array.data[3]'
+      value: 
+      objectReference: {fileID: 745851276}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
