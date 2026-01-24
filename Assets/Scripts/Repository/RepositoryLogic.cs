@@ -259,8 +259,7 @@ public class RepositoryLogic : MonoBehaviour
         //Tracks Players Entered
         if (other.gameObject.tag == "ObjectDestroyer" && active)
         {
-            //make sure players arent in a powerup that we forbid
-            if(!(other.gameObject.GetComponentInChildren<DrillLogic>() || other.gameObject.GetComponentInChildren<JackHammerLogic>()))
+            
             addEnteredPlayer(other.gameObject);
         }
 
@@ -634,31 +633,33 @@ public class RepositoryLogic : MonoBehaviour
 
     void addEnteredPlayer(GameObject player)
     {
-
-        foreach (var detectedPlayer in allEnteredPlayers)
+        //make sure players arent in a powerup that we forbid
+        if (player.gameObject.GetComponentInChildren<DrillLogic>() || player.gameObject.GetComponentInChildren<JackHammerLogic>())
         {
-            if (player.gameObject == detectedPlayer)
+            foreach (var detectedPlayer in allEnteredPlayers)
             {
-                return;
+                if (player.gameObject == detectedPlayer)
+                {
+                    return;
+                }
             }
+
+            allEnteredPlayers.Add(player);
+
+            //depositor != other.gameObject ||
+            if (depositor == null)
+            {
+                depositor = player.GetComponent<PlayerDeath>();
+            }
+
+            //add player to list
+            //yellow team
+            if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
+                enteredPlayersTeam1.Add(player.gameObject);
+            //blue team
+            else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
+                enteredPlayersTeam2.Add(player.gameObject);
         }
-
-        allEnteredPlayers.Add(player);
-
-        //depositor != other.gameObject ||
-        if (depositor == null)
-        {
-            depositor = player.GetComponent<PlayerDeath>();
-        }
-
-        //add player to list
-        //yellow team
-        if (player.GetComponent<PlayerMove>().playerNum == 1 || player.GetComponent<PlayerMove>().playerNum == 3)
-            enteredPlayersTeam1.Add(player.gameObject);
-        //blue team
-        else if (player.GetComponent<PlayerMove>().playerNum == 2 || player.GetComponent<PlayerMove>().playerNum == 4)
-            enteredPlayersTeam2.Add(player.gameObject);
-
     }
 
 
