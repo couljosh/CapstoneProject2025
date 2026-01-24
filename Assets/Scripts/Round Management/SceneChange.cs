@@ -25,6 +25,7 @@ public class SceneChange : MonoBehaviour
     [Header("Warning UI")]
     public TextMeshProUGUI warningNumberText;
     public TextMeshProUGUI warningWordText;
+    public Image warningBG;
     private bool warningActive = false;
     private int lastDisplayedSecond = -1;
     private int currentSecond;
@@ -379,6 +380,7 @@ public class SceneChange : MonoBehaviour
 
         warningNumberText.gameObject.SetActive(true);
         warningWordText.gameObject.SetActive(true);
+        warningBG.gameObject.SetActive(true);
 
         //warningNumberText.canvasRenderer.SetAlpha(100);
         warningWordText.canvasRenderer.SetAlpha(100);
@@ -390,8 +392,8 @@ public class SceneChange : MonoBehaviour
         warningWordText.transform.localScale = startScale;
 
         //colours for flashing
-        Color startColor = Color.white;
-        Color flashColor = new Color(1f, 0.15f, 0.15f);
+        Color startColor = Color.red;
+        Color flashColor = new Color(1f, 0.9f, 0f);
 
         float elapsed = 0;
         float duration = 0.15f;
@@ -460,6 +462,7 @@ public class SceneChange : MonoBehaviour
         warningNumberText.text = ""; //clear number text so when the 10 second timer appears it doesnt show "27" briefly
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
+        warningBG.gameObject.SetActive(false);
 
         warningActive = false;
     }
@@ -470,6 +473,7 @@ public class SceneChange : MonoBehaviour
 
         warningNumberText.gameObject.SetActive(true);
         warningWordText.gameObject.SetActive(false);
+        warningBG.gameObject.SetActive(true);
 
         //warningNumberText.canvasRenderer.SetAlpha(100);
         warningWordText.canvasRenderer.SetAlpha(100);
@@ -481,8 +485,8 @@ public class SceneChange : MonoBehaviour
         warningWordText.transform.localScale = startScale;
 
         //colours for flashing
-        Color startColor = Color.white;
-        Color flashColor = new Color(1f, 0.15f, 0.15f);
+        Color startColor = Color.red;
+        Color flashColor = new Color(1f, 0.9f, 0);
 
         float elapsed = 0;
         float duration = 0.15f;
@@ -550,6 +554,7 @@ public class SceneChange : MonoBehaviour
         warningNumberText.color = startColor;
         warningNumberText.gameObject.SetActive(false);
         warningWordText.gameObject.SetActive(false);
+        warningBG.gameObject.SetActive(false);
         warningActive = false;
     }
 
