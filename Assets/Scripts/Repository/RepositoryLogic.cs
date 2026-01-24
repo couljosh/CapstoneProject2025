@@ -634,7 +634,7 @@ public class RepositoryLogic : MonoBehaviour
     void addEnteredPlayer(GameObject player)
     {
         //make sure players arent in a powerup that we forbid
-        if (player.gameObject.GetComponentInChildren<DrillLogic>() || player.gameObject.GetComponentInChildren<JackHammerLogic>())
+        if (!(player.gameObject.GetComponentInChildren<DrillLogic>() || player.gameObject.GetComponentInChildren<JackHammerLogic>()))
         {
             foreach (var detectedPlayer in allEnteredPlayers)
             {
