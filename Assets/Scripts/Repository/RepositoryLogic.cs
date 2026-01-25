@@ -185,6 +185,8 @@ public class RepositoryLogic : MonoBehaviour
             singleCheck = 0;
             teamlastDepo = 0;
 
+            //update repo outline color
+            outlineScript.OutlineColor = originalColor;
         }
 
 
@@ -226,6 +228,9 @@ public class RepositoryLogic : MonoBehaviour
             {
                 CompleteDeposit();
             }
+
+            //update repo outline color
+            outlineScript.OutlineColor = yellowTeamColor;
         }
 
 
@@ -250,6 +255,9 @@ public class RepositoryLogic : MonoBehaviour
             {
                 CompleteDeposit();
             }
+
+            //update repo outline color
+            outlineScript.OutlineColor = blueTeamColor;
         }
     }
 
