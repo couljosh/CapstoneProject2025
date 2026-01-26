@@ -212,10 +212,13 @@ public class CaveInManager : MonoBehaviour
         int randIdx = Random.Range(0, repoMoveSystemScript.repoSpawnNodes.Length);
         GameObject chosenNode = repoMoveSystemScript.repoSpawnNodes[randIdx];
 
-        if(chosenNode != repoMoveSystemScript.currentLoc)
+        //keep cycling until the powerup will spawn in a place where the repo is not
+        while (chosenNode == repoMoveSystemScript.currentLoc) 
         {
-            Instantiate(crate, chosenNode.transform.position + new Vector3(0,5f,0), randRot);
-
+            randIdx = Random.Range(0, repoMoveSystemScript.repoSpawnNodes.Length);
+            chosenNode = repoMoveSystemScript.repoSpawnNodes[randIdx];
         }
+        
+        Instantiate(crate, chosenNode.transform.position + new Vector3(0,5f,0), randRot);
     }
 }
