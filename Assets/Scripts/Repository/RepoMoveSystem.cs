@@ -222,7 +222,7 @@ public class RepoMoveSystem : MonoBehaviour
 
         float offDelayDuration = Random.Range(minOffDelay, maxOffDelay);
 
-        if(sceneChangeScript.roundTime < 15)
+        if(sceneChangeScript.roundTime < 15 && !sceneChangeScript.isOvertime)
         {
             offDelayDuration = 0;
         }
