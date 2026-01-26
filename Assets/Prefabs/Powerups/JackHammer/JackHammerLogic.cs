@@ -17,7 +17,12 @@ public class JackHammerLogic : MonoBehaviour
     public Image emergeProgress;
     public GameObject underBedrockWarning;
     private List<GameObject> playerModel = new List<GameObject>();
+    private Transform playerParent;
+    private string jackhammerLayer = "jackhammer";
+    private string playerLayer = "player";
 
+    private int jackhammerLayerInd;
+    private int playerLayerInd;
 
     [Header("Burrow Values")]
     public float moveSpeedMultiplier;
@@ -39,6 +44,7 @@ public class JackHammerLogic : MonoBehaviour
     public bool underBedrock;
     private float elapsedTimeBurrowed;
 
+
     void Start()
     {
         playerMoveScript = GetComponentInParent<PlayerMove>();
@@ -53,11 +59,16 @@ public class JackHammerLogic : MonoBehaviour
         burrowCollider = gameObject.transform.parent.GetComponent<BoxCollider>();
 
         //Turn off player elements
-        Transform playerParent = this.transform.parent;
+        playerParent = this.transform.parent;
         playerModel.Add(playerParent.GetComponentInChildren<BagSize>().gameObject); //gembag
         playerModel.Add(playerParent.GetComponentInChildren<SkinnedMeshRenderer>().gameObject); //model
         playerModel.Add(playerParent.GetComponentInChildren<Light>().gameObject); //spotlight
         playerModel.Add(playerParent.GetComponentInChildren<ObjectID>().gameObject); //pickaxe
+
+        jackhammerLayerInd = LayerMask.NameToLayer(jackhammerLayer); //to change layer while in powerup
+        playerLayerInd = LayerMask.NameToLayer(playerLayer); //to change back to player layer
+
+        playerParent.gameObject.layer = jackhammerLayerInd;
 
     }
 
@@ -128,6 +139,7 @@ public class JackHammerLogic : MonoBehaviour
                 piece.SetActive(true);
             }
 
+        playerParent.gameObject.layer = playerLayerInd;
         burrowCollider.enabled = false;
         playerCollider.enabled = true;
         dirtModel.SetActive(false);
