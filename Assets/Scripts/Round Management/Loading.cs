@@ -15,11 +15,16 @@ public class Loading : MonoBehaviour
 
     public LevelRef sceneListSO;
 
+    private void Awake()
+    {
+        //end all persistent sounds from previous round
+        FMODUnity.RuntimeManager.GetBus("bus:/").stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
         endMatchScene = SceneManager.GetSceneByName("End Match").buildIndex;
-
     }
 
     void Update()
