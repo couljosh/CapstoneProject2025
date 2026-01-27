@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8e635a319a79a4d4aacf35b2b5096a98, type: 2}
+    - target: {fileID: 5895697841857066043, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6786320725658967303, guid: f3dc2472e40630f41a83c362f3656001, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 5
@@ -7099,6 +7103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cobalt
       objectReference: {fileID: 0}
+    - target: {fileID: 2702729970604547021, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: d4456b73d11df0443bdc9580635267b7, type: 3}
       propertyPath: m_Controller
       value: 
@@ -7164,11 +7172,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.508
       objectReference: {fileID: 0}
+    - target: {fileID: -8535115944078428670, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bd26ba38030275f4dafe6622293eaa58, type: 2}
     - target: {fileID: -8155810372851787768, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8155810372851787768, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bd26ba38030275f4dafe6622293eaa58, type: 2}
+    - target: {fileID: -7390158966327988216, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bd26ba38030275f4dafe6622293eaa58, type: 2}
@@ -7180,6 +7196,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2e6e460dd476a12438c26344792c874f, type: 2}
+    - target: {fileID: -1232711531874231092, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bd26ba38030275f4dafe6622293eaa58, type: 2}
     - target: {fileID: 919132149155446097, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
       propertyPath: m_Name
       value: bomba
@@ -7188,6 +7208,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 62a99616a0950c0409dcc0a2adca71ff, type: 2}
+    - target: {fileID: 6671892758730555604, guid: fd43cdbfc043950488a0f3f2ca428dcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
