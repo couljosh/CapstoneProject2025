@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.29, y: 0.79, z: 6.71}
-  m_LocalScale: {x: 7, y: 0.8, z: 1}
+  m_LocalScale: {x: 9.85, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50191dd9416802d4b885c2fae2392b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rapidForce: 12
+  rapidForce: 10
   gemForce: 6
   largeGemForce: 10
   bombForce: 7

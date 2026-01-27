@@ -22,7 +22,7 @@ public class RapidGemRespawner : MonoBehaviour
     {
         if (other.GetComponent<Rigidbody>() != null)
         {
-            if (other.gameObject.tag == "Gem" || other.gameObject.tag == "LargeGem" || other.gameObject.tag == "Bombw")
+            if (other.gameObject.tag == "Gem" || other.gameObject.tag == "LargeGem" || other.gameObject.tag == "Bomb" || other.gameObject.tag == "ObjectDestroyer")
             {
                 other.gameObject.transform.position = startPos.position;
             }
