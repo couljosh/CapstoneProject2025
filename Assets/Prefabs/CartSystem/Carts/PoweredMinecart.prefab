@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1939087351631905109}
   - component: {fileID: 7569075203915312553}
   m_Layer: 6
-  m_Name: Spot Light (2)
+  m_Name: BackLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 496824899322376015}
   - component: {fileID: 7401601415006936179}
   m_Layer: 6
-  m_Name: Spot Light (1)
+  m_Name: FrontLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -612,8 +612,14 @@ MonoBehaviour:
     rgba: 4294967295
   highSpeedOutlineColor:
     serializedVersion: 2
-    rgba: 4278236927
+    rgba: 4278191615
   isPowered: 1
+  frontLight: {fileID: 496824899322376015}
+  backLight: {fileID: 1939087351631905109}
+  lowSpeedLight: {r: 1, g: 0.019607844, b: 0, a: 1}
+  highSpeedLight: {r: 1, g: 0.019607844, b: 0, a: 1}
+  lowSpeedIntensity: 75
+  highSpeedIntensity: 75
 --- !u!114 &7307863316880256640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 0.22352943, b: 0, a: 1}
+  outlineColor: {r: 1, g: 0.019607844, b: 0, a: 1}
   outlineWidth: 3.43
   precomputeOutline: 0
   bakeKeys: []
