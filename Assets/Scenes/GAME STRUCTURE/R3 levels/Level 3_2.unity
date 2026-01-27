@@ -35355,7 +35355,7 @@ MonoBehaviour:
   chanceDecreasePerTileOutwards: 15
   chanceToSpawnGemPerTile: 1
   gemVeritcalOffset: 0
-  gemSpawnLimit: 5
+  gemSpawnLimit: 2
   caveInNotif:
     Guid:
       Data1: -1205898802
