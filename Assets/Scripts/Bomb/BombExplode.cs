@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class BombExplode : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class BombExplode : MonoBehaviour
     [Header("Script References")]
     private BlockDestruction blockDestruction;
     private PlayerDeath playerDeathScript;
+    
 
     public float elapsedTime;
     public int sphereIterations;
@@ -152,6 +154,13 @@ public class BombExplode : MonoBehaviour
                     {
                         Vector3 forceVector = raycastHit.collider.gameObject.gameObject.transform.position - transform.position;
                         raycastHit.collider.gameObject.gameObject.GetComponent<Rigidbody>().AddForce(forceVector * forceStrengthBomb, ForceMode.Impulse);
+                    }
+
+                    if (raycastHit.collider.tag == "BridgeTrigger")
+                    {
+                        print("HIT");
+                        raycastHit.collider.gameObject.gameObject.GetComponent<BridgeTriggerSend>().BreakBridge();
+
                     }
 
 

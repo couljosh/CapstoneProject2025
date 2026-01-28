@@ -19,7 +19,8 @@ public class BridgeDestroyer : MonoBehaviour
     {
         if (breakBridge)
         {
-            BridgeFall();
+            //BridgeFall();
+            transform.position = Vector3.MoveTowards(transform.position, endPos.position, bridgeFallSpeed * Time.deltaTime);
         }
         if (Vector3.Distance(transform.position, endPos.position) < 0.1f)
         {
@@ -29,18 +30,19 @@ public class BridgeDestroyer : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(UnityEngine.Collider other)
-    {
-        if (other.gameObject.tag == "ObjectDestroyer")
-        {
-            
-            breakBridge = true;
-        }
-    }
+    //private void OnTriggerEnter(UnityEngine.Collider other)
+    //{
+    //    if (other.gameObject.tag == "ObjectDestroyer")
+    //    {
+
+    //        breakBridge = true;
+    //    }
+    //}
 
     public void BridgeFall()
     {
-        transform.position = Vector3.MoveTowards(transform.position, endPos.position, bridgeFallSpeed * Time.deltaTime);
+        breakBridge = true;
+        //transform.position = Vector3.MoveTowards(transform.position, endPos.position, bridgeFallSpeed * Time.deltaTime);
     }
 
 

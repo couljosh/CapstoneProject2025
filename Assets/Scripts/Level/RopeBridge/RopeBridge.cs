@@ -32,6 +32,9 @@ public class RopeBridge : MonoBehaviour
 
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
+
+
+
         if (other.gameObject.tag == "BridgeDestroyer")
         {
             
