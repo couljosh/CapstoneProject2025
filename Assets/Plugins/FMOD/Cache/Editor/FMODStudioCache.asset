@@ -209,13 +209,14 @@ MonoBehaviour:
   - {fileID: -4126106969403851690}
   - {fileID: -4305384197119303457}
   - {fileID: -8922746043385281059}
+  - {fileID: 1456954829262162490}
   EditorParameters: []
   MasterBanks:
   - {fileID: 148110947907540480}
   StringsBanks:
   - {fileID: 5976202062569123521}
   cacheVersion: 131849
-  cacheTime: 639051324404127314
+  cacheTime: 639052042936552095
   SerializableEventsDict:
   - key: event:/SFX_Repository/Deposit
     index: 0
@@ -252,10 +253,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639051324404105936
+  lastModified: 639052042936526915
   FileSizes:
   - Name: Desktop
-    Value: 401792
+    Value: 445920
   Exists: 1
 --- !u!114 &218504140064292665
 MonoBehaviour:
@@ -311,6 +312,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1514
+--- !u!114 &1456954829262162490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_30sSequence/AlarmSequence
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_30sSequence/AlarmSequence
+  Guid:
+    Data1: -631807168
+    Data2: 1190146609
+    Data3: 448366511
+    Data4: 1486368044
+  Banks:
+  - {fileID: 148110947907540480}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3562
 --- !u!114 &5631061487975166481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,10 +381,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/CapstoneProject2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639051324404127314
+  lastModified: 639052042936552095
   FileSizes:
   - Name: Desktop
-    Value: 1366
+    Value: 1422
   Exists: 1
 --- !u!114 &7670074819231782021
 MonoBehaviour:

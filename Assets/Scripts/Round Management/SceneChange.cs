@@ -376,6 +376,8 @@ public class SceneChange : MonoBehaviour
     }
     IEnumerator PlayWarningSequence() //plays the 30 second warning, and also has some text effects (found from a tutorial)
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX_30sSequence/AlarmSequence");
+        
         warningActive = true;
 
         warningNumberText.gameObject.SetActive(true);

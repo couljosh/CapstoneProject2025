@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{80e0fa84-f647-4db2-b624-1f30d43a0ca2}">
+		<property name="assetPath">
+			<value>30s Sequence/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1e3bdfc-6836-4ba6-a9b6-7be658ffccde}</destination>
+		</relationship>
+	</object>
+</objects>
